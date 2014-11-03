@@ -10,7 +10,9 @@
     xml:base="http://bibframe.org/vocab/">
  
     <!-- About this file -->
-    <owl:Ontology rdf:about="http://ld4l.library.cornell.edu/ontology/bibframe-properties#">
+    <!-- Temporarily rename the ontology with a .owl extension to see if that makes it  work.
+        We may need a redirect to be able to remove the extension. -->
+    <owl:Ontology rdf:about="http://ld4l.library.cornell.edu/ontology/bibframe-properties.owl#">
         <rdfs:label>Bibframe properties</rdfs:label>
         <rdfs:comment>Define symmetric and inverse bibframe properties</rdfs:comment>
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.2</owl:versionInfo>
