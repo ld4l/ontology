@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- 
-  These additions to the bibframe ontology are NOT vitro-specific, so they 
-  should be moved out of the application and retrieved from a URL at
-  http://ld4l.org/ontology/bibframe-owl
--->
+<!-- TODO: Move to ld4l.org domain -->
 
 <rdf:RDF 
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -338,7 +334,8 @@
         <owl:inverseOf rdf:resource="review"/>
     </rdf:Description>
     
-    <!-- NB In the bibframe rdf both summary and summaryOf have domain Summary
+    <!-- 
+        NB In the bibframe rdf both summary and summaryOf have domain Summary
         and range Resource, but based on the rdfs:comments, this seems to be an 
         error. Comment for summary: "Summary or abstract of the target work or 
         instance." Comment for summaryOf: "Resource to which the description
