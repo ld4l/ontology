@@ -11,14 +11,14 @@
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
     xmlns:owl="http://www.w3.org/2002/07/owl#" 
     xmlns:dcterms="http://purl.org/dc/terms/"
-    xmlns:bf-prop="http://ld4l.org/ontology/bibframe-properties#"
     xml:base="http://bibframe.org/vocab/">
  
     <!-- About this file -->
-    <owl:Ontology rdf:about="http://ld4l.org/ontology/bibframe-properties">
+    <owl:Ontology rdf:about="http://ld4l.library.cornell.edu/ontology/bibframe-properties#">
+        <rdfs:label>Bibframe Properties</rdfs:label>
         <rdfs:comment>Define symmetric and inverse bibframe properties</rdfs:comment>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1</owl:versionInfo>
-        <dcterms:modified>2014-11-01T21:00-0400</dcterms:modified>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.2</owl:versionInfo>
+        <dcterms:modified>2014-11-03T06:35-0500</dcterms:modified>
     </owl:Ontology>
     
     <!-- Symmetric properties -->
