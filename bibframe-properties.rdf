@@ -11,7 +11,7 @@
  
     <!-- About this file -->
     <owl:Ontology rdf:about="http://ld4l.library.cornell.edu/ontology/bibframe-properties#">
-        <rdfs:label>Bibframe Properties</rdfs:label>
+        <rdfs:label>Bibframe properties</rdfs:label>
         <rdfs:comment>Define symmetric and inverse bibframe properties</rdfs:comment>
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.2</owl:versionInfo>
         <dcterms:modified>2014-11-03T06:35-0500</dcterms:modified>
