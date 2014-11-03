@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+  These additions to the bibframe ontology are NOT vitro-specific, so they 
+  should be moved out of the application and retrieved from a URL at
+  http://ld4l.org/ontology/bibframe-owl
+-->
+
+<rdf:RDF 
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+    xmlns:owl="http://www.w3.org/2002/07/owl#" 
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:bf-prop="http://ld4l.org/ontology/bibframe-properties#"
+    xml:base="http://bibframe.org/vocab/">
+ 
+    <!-- About this file -->
+    <owl:Ontology rdf:about="http://ld4l.org/ontology/bibframe-properties">
+        <rdfs:comment>Define symmetric and inverse bibframe properties</rdfs:comment>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1</owl:versionInfo>
+        <dcterms:modified>2014-11-01T21:00-0400</dcterms:modified>
+    </owl:Ontology>
+    
+    <!-- Symmetric properties -->
+    <owl:SymmetricProperty rdf:ID="relatedTo">
+        <rdfs:domain rdf:resource="Resource"/>
+        <rdfs:range  rdf:resource="Resource"/>
+    </owl:SymmetricProperty>
+    
+    <owl:SymmetricProperty rdf:ID="relatedWork">
+        <rdfs:domain rdf:resource="Work"/>
+        <rdfs:range  rdf:resource="Work"/>
+    </owl:SymmetricProperty>
+    
+    <owl:SymmetricProperty rdf:ID="relatedInstance">
+        <rdfs:domain rdf:resource="Instance"/>
+        <rdfs:range  rdf:resource="Instance"/>
+    </owl:SymmetricProperty>
+
+    <owl:SymmetricProperty rdf:ID="hasEquivalent">
+        <rdfs:domain rdf:resource="Resource"/>
+        <rdfs:range  rdf:resource="Resource"/>
+    </owl:SymmetricProperty>
+    
+    <owl:SymmetricProperty rdf:ID="issuedWith">
+        <rdfs:domain rdf:resource="Instance"/>
+        <rdfs:range  rdf:resource="Instance"/>
+    </owl:SymmetricProperty>
+    
+    <owl:SymmetricProperty rdf:ID="otherPhysicalFormat">
+        <rdfs:domain rdf:resource="Instance"/>
+        <rdfs:range  rdf:resource="Instance"/>
+    </owl:SymmetricProperty>    
+    
+    <owl:SymmetricProperty rdf:ID="otherEdition">
+        <rdfs:domain rdf:resource="Work"/>
+        <rdfs:range  rdf:resource="Work"/>
+    </owl:SymmetricProperty>  
+    
+    <!-- Inverse properties not defined by Bibframe -->
+    <owl:ObjectProperty rdf:ID="contentCategoryOf">
+        <rdfs:domain rdf:resource="Category"/>
+        <rdfs:label>content category of</rdfs:label>
+        <rdfs:range rdf:resource="Work"/>
+        <rdfs:comment>Relates a Category to a Work of that content type.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="contentCategory"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:ID="mediaCategoryOf">
+        <rdfs:domain rdf:resource="Category"/>
+        <rdfs:label>media category of</rdfs:label>
+        <rdfs:range rdf:resource="Work"/>
+        <rdfs:comment>Relates a Category to a Work of that media type.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="mediaCategory"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:ID="carrierCategoryOf">
+        <rdfs:domain rdf:resource="Category"/>
+        <rdfs:label>carrier category of</rdfs:label>
+        <rdfs:range rdf:resource="Work"/>
+        <rdfs:comment>Relates a Category to a Work of that content type.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="carrierCategory"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:ID="genreOf">
+        <rdfs:domain rdf:resource="Category"/>
+        <rdfs:label>genre of</rdfs:label>
+        <rdfs:comment>Relates a Category to a Resource of that genre.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="genre"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:ID="musicMediumOf">
+        <rdfs:domain rdf:resource="Category"/>
+        <rdfs:label>music medium of</rdfs:label>
+        <rdfs:range rdf:resource="Resource"/>
+        <rdfs:comment>Relates a Category to a Resource of that music medium.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="musicMedium"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:ID="originPlaceOf">
+        <rdfs:domain rdf:resource="Place"/>
+        <rdfs:label>place of origin of</rdfs:label>
+        <rdfs:range rdf:resource="Work"/>
+        <rdfs:comment>Relates a place to a Work created there.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="originPlace"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:ID="dissertationInstitutionOf">
+        <rdfs:domain rdf:resource="Agent"/>
+        <rdfs:label>dissertation issued</rdfs:label>
+        <rdfs:range rdf:resource="Work"/>
+        <rdfs:comment>Relates an institution to a disseration issued there.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="dissertationInstitution"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:ID="languageOf">
+        <rdfs:domain rdf:resource="Language"/>
+        <rdfs:label>language of</rdfs:label>
+        <rdfs:range rdf:resource="Resource"/>
+        <rdfs:comment>Relates a Language to a Resource associated with that language.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="language"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:ID="languageOf">
+        <rdfs:domain rdf:resource="Language"/>
+        <rdfs:label>language of</rdfs:label>
+        <rdfs:range rdf:resource="Resource"/>
+        <rdfs:comment>Relates a Language to a Resource associated with that language.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="language"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:ID="arrangementOf">
+        <rdfs:domain rdf:resource="Arrangement"/>
+        <rdfs:label>arrangement of</rdfs:label>
+        <rdfs:range rdf:resource="Instance"/>
+        <rdfs:comment>Relates an Arrangement to an Instance it is an arrangement of.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="event"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:ID="eventAgentOf">
+        <rdfs:domain rdf:resource="Agent"/>
+        <rdfs:label>agent of</rdfs:label>
+        <rdfs:range rdf:resource="Event"/>
+        <rdfs:comment>Relates a Person or Organization to an Event associated with it.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="eventAgent"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:ID="eventPlaceOf">
+        <rdfs:domain rdf:resource="Place"/>
+        <rdfs:label>location of</rdfs:label>
+        <rdfs:range rdf:resource="Event"/>
+        <rdfs:comment>Relates a Place to an Event that took place there.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="eventPlace"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:ID="intendedAudienceOf">
+        <rdfs:domain rdf:resource="IntendedAudience"/>
+        <rdfs:label>intended audience of</rdfs:label>
+        <rdfs:range rdf:resource="Resource"/>
+        <rdfs:comment>Relates an IntendedAudience to Resources containing content considered appropriate for it.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="intendedAudience"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:ID="subjectOf">
+        <!-- Domain can be Work or Authority -->
+        <rdfs:domain rdf:resource="Resource"/> 
+        <rdfs:label>subject of</rdfs:label>
+        <rdfs:range rdf:resource="Work"/>
+        <rdfs:comment>Relates a subject (Work or Authority) to a Work it is the subject of.</rdfs:comment> 
+        <!-- Domain is Work, range is Work or Authority -->
+        <owl:inverseOf rdf:resource="subject"/>
+    </owl:ObjectProperty>
+ 
+    <!-- Inverse of reproduction could be originalVersion, but the former is an
+        Instance-to-Instance relation, the latter a Work-to-Work relation. It's
+        not clear why the domains and ranges are defined this way. -->
+    <owl:ObjectProperty rdf:ID="reproductionOf">
+        <rdfs:domain rdf:resource="Instance"/>
+        <rdfs:label>reproduction of</rdfs:label>
+        <rdfs:range rdf:resource="Instance"/>
+        <rdfs:comment>Relates a reproduction (Instance) to the original Instance.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="reproduction"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:ID="dataSourceFor">
+        <rdfs:domain rdf:resource="Work"/>
+        <rdfs:label>data source for</rdfs:label>
+        <rdfs:range rdf:resource="Work"/>
+        <rdfs:comment>Relates a Work to another Work for which it is the data source.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="dataSource"/>
+    </owl:ObjectProperty>
+
+    <!-- Inverse of originalVersion could be reproduction, but the former is a
+        Work-to-Work relation, the latter an Instance-to-Instance relation. It's
+        not clear why the domains and ranges are defined this way. -->
+    <owl:ObjectProperty rdf:ID="originalVersionOf">
+        <rdfs:domain rdf:resource="Work"/>
+        <rdfs:label>original version of</rdfs:label>
+        <rdfs:range rdf:resource="Work"/>
+        <rdfs:comment>Relates an original Work to a reproduction (Work).</rdfs:comment>       
+        <owl:inverseOf rdf:resource="originalVersion"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:ID="seriesOf">
+        <rdfs:domain rdf:resource="Work"/>
+        <rdfs:label>series of</rdfs:label>
+        <rdfs:range rdf:resource="Work"/>
+        <rdfs:comment>Relates a series (Work) to a member (Work).</rdfs:comment>       
+        <owl:inverseOf rdf:resource="hasSeries"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:ID="intendedAudienceOf">
+        <rdfs:domain rdf:resource="IntendedAudience"/>
+        <rdfs:label>Intended audience of</rdfs:label>
+        <rdfs:range rdf:resource="Resource"/>
+        <rdfs:comment>Relates an IntendedAudience to Resources it is considered appropriate for.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="intendedAudience"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:ID="intendedAudienceOf">
+        <rdfs:domain rdf:resource="IntendedAudience"/>
+        <rdfs:label>Intended audience of</rdfs:label>
+        <rdfs:range rdf:resource="Resource"/>
+        <rdfs:comment>Relates an IntendedAudience to Resources it is considered appropriate for.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="intendedAudience"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:ID="intendedAudienceOf">
+        <rdfs:domain rdf:resource="IntendedAudience"/>
+        <rdfs:label>Intended audience of</rdfs:label>
+        <rdfs:range rdf:resource="Resource"/>
+        <rdfs:comment>Relates an IntendedAudience to Resources it is considered appropriate for.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="intendedAudience"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:ID="intendedAudienceOf">
+        <rdfs:domain rdf:resource="IntendedAudience"/>
+        <rdfs:label>Intended audience of</rdfs:label>
+        <rdfs:range rdf:resource="Resource"/>
+        <rdfs:comment>Relates an IntendedAudience to Resources it is considered appropriate for.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="intendedAudience"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:ID="intendedAudienceOf">
+        <rdfs:domain rdf:resource="IntendedAudience"/>
+        <rdfs:label>Intended audience of</rdfs:label>
+        <rdfs:range rdf:resource="Resource"/>
+        <rdfs:comment>Relates an IntendedAudience to Resources it is considered appropriate for.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="intendedAudience"/>
+    </owl:ObjectProperty>
+ 
+    <owl:ObjectProperty rdf:ID="holding">
+        <rdfs:domain rdf:resource="Instance"/>
+        <rdfs:label>holding</rdfs:label>
+        <rdfs:range rdf:resource="HeldMaterial"/>
+        <rdfs:comment>Holding of an Instance.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="holdingFor"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:ID="electronicLocation">
+        <rdfs:domain rdf:resource="Resource"/>
+        <rdfs:label>electronic location</rdfs:label>
+        <rdfs:range rdf:resource="HeldMaterial"/>
+        <rdfs:comment>Electronic location of a Resource.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="electronicLocator"/>
+    </owl:ObjectProperty>   
+    
+    <owl:ObjectProperty rdf:ID="holds">
+        <rdfs:domain rdf:resource="Agent"/>
+        <rdfs:label>holds</rdfs:label>
+        <rdfs:range rdf:resource="HeldMaterial"/>
+        <rdfs:comment>Entity holding the item or from which it is available.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="holdingFor"/>
+    </owl:ObjectProperty>
+    
+    <!-- Inverse property assertions for properties defined by Bibframe -->
+    <rdf:Description rdf:about="instanceOf">
+        <owl:inverseOf rdf:resource="hasInstance"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="expressionOf">
+        <owl:inverseOf rdf:resource="hasExpression"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="accompaniedBy">
+        <owl:inverseOf rdf:resource="accompanies"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="derivativeOf">
+        <owl:inverseOf rdf:resource="hasDerivative"/>
+    </rdf:Description>
+   
+    <rdf:Description rdf:about="descriptionOf">
+        <owl:inverseOf rdf:resource="hasDescription"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="partOf">
+        <owl:inverseOf rdf:resource="hasPart"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="precededBy">
+        <owl:inverseOf rdf:resource="succeededBy"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="subseriesOf">
+        <owl:inverseOf rdf:resource="subseries"/>
+    </rdf:Description>  
+    
+    <rdf:Description rdf:about="supplementTo">
+        <owl:inverseOf rdf:resource="supplement"/>
+    </rdf:Description> 
+    
+    <rdf:Description rdf:about="translationOf">
+        <owl:inverseOf rdf:resource="translation"/>
+    </rdf:Description> 
+    
+    <rdf:Description rdf:about="absorbedBy">
+        <owl:inverseOf rdf:resource="absorbed"/>
+    </rdf:Description> 
+    
+    <rdf:Description rdf:about="absorbedinPartBy">
+        <owl:inverseOf rdf:resource="absorbedInPart"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="continuedBy">
+        <owl:inverseOf rdf:resource="continues"/>
+    </rdf:Description> 
+    
+    <rdf:Description rdf:about="continuedInPartBy">
+        <owl:inverseOf rdf:resource="continuesInPart"/>
+    </rdf:Description> 
+    
+    <rdf:Description rdf:about="hasAnnotation">
+        <owl:inverseOf rdf:resource="annotates"/>
+    </rdf:Description> 
+    
+    <rdf:Description rdf:about="reviewOf">
+        <owl:inverseOf rdf:resource="review"/>
+    </rdf:Description>
+    
+    <!-- NB In the bibframe rdf both summary and summaryOf have domain Summary
+        and range Resource, but based on the rdfs:comments, this seems to be an 
+        error. Comment for summary: "Summary or abstract of the target work or 
+        instance." Comment for summaryOf: "Resource to which the description
+        pertains." For now will assert the inverseOf relation and await further
+        clarification.
+    -->
+    <rdf:Description rdf:about="summaryOf">
+        <owl:inverseOf rdf:resource="summary"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="tableOfContentsFor">
+        <owl:inverseOf rdf:resource="tableOfContents"/>
+    </rdf:Description>    
+    
+</rdf:RDF>
