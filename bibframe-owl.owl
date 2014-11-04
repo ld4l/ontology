@@ -10,8 +10,6 @@
     xml:base="http://www.bibframe.org/vocab/">
   
   <!-- About this file -->
-  <!-- Temporarily rename the ontology with a .owl extension to see if that makes it  work.
-    We may need a redirect to be able to remove the extension. -->
   <owl:Ontology rdf:about="http://ld4l.library.cornell.edu/ontology/bibframe-owl#">
     <rdfs:label>Bibframe OWL</rdfs:label>
     <rdfs:comment>Declare bibframe classes to be owl classes, and bibframe properties to be owl datatype or object properties</rdfs:comment>
