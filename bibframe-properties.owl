@@ -266,7 +266,7 @@
         <rdfs:label>holds</rdfs:label>
         <rdfs:range rdf:resource="HeldMaterial"/>
         <rdfs:comment>Entity holding the item or from which it is available.</rdfs:comment>       
-        <owl:inverseOf rdf:resource="holdingFor"/>
+        <owl:inverseOf rdf:resource="heldBy"/>
     </owl:ObjectProperty>
     
     <!-- Inverse property assertions for properties defined by Bibframe -->
