@@ -197,14 +197,6 @@
         <owl:inverseOf rdf:resource="hasSeries"/>
     </owl:ObjectProperty>
 
-    <owl:ObjectProperty rdf:ID="seriesOf">
-        <rdfs:domain rdf:resource="Work"/>
-        <rdfs:label>series of</rdfs:label>
-        <rdfs:range rdf:resource="Work"/>
-        <rdfs:comment>Relates a series (Work) to a member (Work).</rdfs:comment>       
-        <owl:inverseOf rdf:resource="hasSeries"/>
-    </owl:ObjectProperty>
-
     <owl:ObjectProperty rdf:ID="agentOf">
         <rdfs:domain rdf:resource="Authority"/>
         <rdfs:label>agent of</rdfs:label>
