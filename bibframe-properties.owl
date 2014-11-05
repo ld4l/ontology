@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rdf:RDF 
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+    xmlns:owl="http://www.w3.org/2002/07/owl#"> 
+
+    <!-- Symmetric properties -->
+
+    <rdf:Description rdf:about="http://bibframe.org/vocab/relatedTo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain  rdf:resource="http://bibframe.org/vocab/Resource"/>
+        <rdfs:range  rdf:resource="http://bibframe.org/vocab/Resource"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://bibframe.org/vocab/relatedWork">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
+        <rdfs:range  rdf:resource="http://bibframe.org/vocab/Work"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://bibframe.org/vocab/relatedInstance">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
+        <rdfs:range  rdf:resource="http://bibframe.org/vocab/Instance"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://bibframe.org/vocab/hasEquivalent">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Resource"/>
+        <rdfs:range  rdf:resource="http://bibframe.org/vocab/Resource"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://bibframe.org/vocab/issuedWith">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
+        <rdfs:range  rdf:resource="http://bibframe.org/vocab/Instance"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://bibframe.org/vocab/otherPhysicalFormat">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
+        <rdfs:range  rdf:resource="http://bibframe.org/vocab/Instance"/>
+    </rdf:Description>    
+    
+    <rdf:Description rdf:about="http://bibframe.org/vocab/otherEdition">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
+        <rdfs:range  rdf:resource="http://bibframe.org/vocab/Work"/>
+    </rdf:Description>  
+    
+    <!-- Inverse properties not defined by Bibframe -->
+    
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/contentCategoryOf">
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Category"/>
+        <rdfs:label>content category of</rdfs:label>
+        <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
+        <rdfs:comment>Relates a Category to a Work of that content type.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/contentCategory"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/mediaCategoryOf">
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Category"/>
+        <rdfs:label>media category of</rdfs:label>
+        <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
+        <rdfs:comment>Relates a Category to a Work of that media type.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/mediaCategory"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/carrierCategoryOf">
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Category"/>
+        <rdfs:label>carrier category of</rdfs:label>
+        <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
+        <rdfs:comment>Relates a Category to a Work of that content type.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/carrierCategory"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/genreOf">
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Category"/>
+        <rdfs:label>genre of</rdfs:label>
+        <rdfs:comment>Relates a Category to a Resource of that genre.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/genre"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/musicMediumOf">
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Category"/>
+        <rdfs:label>music medium of</rdfs:label>
+        <rdfs:range rdf:resource="http://bibframe.org/vocab/Resource"/>
+        <rdfs:comment>Relates a Category to a Resource of that music medium.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/musicMedium"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/originPlaceOf">
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Place"/>
+        <rdfs:label>place of origin of</rdfs:label>
+        <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
+        <rdfs:comment>Relates a place to a Work created there.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/originPlace"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/dissertationInstitutionOf">
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Agent"/>
+        <rdfs:label>dissertation issued</rdfs:label>
+        <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
+        <rdfs:comment>Relates an institution to a disseration issued there.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/dissertationInstitution"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/arrangementOf">
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Arrangement"/>
+        <rdfs:label>arrangement of</rdfs:label>
+        <rdfs:range rdf:resource="http://bibframe.org/vocab/Instance"/>
+        <rdfs:comment>Relates an Arrangement to an Instance it is an arrangement of.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/event"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/eventOf">
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Event"/>
+        <rdfs:label>event of</rdfs:label>
+        <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
+        <rdfs:comment>Relates an Event to an associated Work.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/event"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/eventAgentOf">
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Agent"/>
+        <rdfs:label>event agent of</rdfs:label>
+        <rdfs:range rdf:resource="http://bibframe.org/vocab/Event"/>
+        <rdfs:comment>Relates a Person or Organization to an Event associated with it.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/eventAgent"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/eventPlaceOf">
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Place"/>
+        <rdfs:label>location of</rdfs:label>
+        <rdfs:range rdf:resource="http://bibframe.org/vocab/Event"/>
+        <rdfs:comment>Relates a Place to an Event that took place there.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/eventPlace"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/intendedAudienceOf">
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/IntendedAudience"/>
+        <rdfs:label>intended audience of</rdfs:label>
+        <rdfs:range rdf:resource="http://bibframe.org/vocab/Resource"/>
+        <rdfs:comment>Relates an IntendedAudience to Resources containing content considered appropriate for it.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/intendedAudience"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/subjectOf">
+        <!-- Domain can be Work or Authority -->
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Resource"/> 
+        <rdfs:label>subject of</rdfs:label>
+        <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
+        <rdfs:comment>Relates a subject (Work or Authority) to a Work it is the subject of.</rdfs:comment> 
+        <!-- Domain is Work, range is Work or Authority -->
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/subject"/>
+    </owl:ObjectProperty>
+ 
+    <!-- Inverse of reproduction could be originalVersion, but the former is an
+        Instance-to-Instance relation, the latter a Work-to-Work relation. It's
+        not clear why the domains and ranges are defined this way. -->
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/reproductionOf">
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
+        <rdfs:label>reproduction of</rdfs:label>
+        <rdfs:range rdf:resource="http://bibframe.org/vocab/Instance"/>
+        <rdfs:comment>Relates a reproduction (Instance) to the original Instance.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/reproduction"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/dataSourceFor">
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
+        <rdfs:label>data source for</rdfs:label>
+        <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
+        <rdfs:comment>Relates a Work to another Work for which it is the data source.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/dataSource"/>
+    </owl:ObjectProperty>
+
+    <!-- Inverse of originalVersion could be reproduction, but the former is a
+        Work-to-Work relation, the latter an Instance-to-Instance relation. It's
+        not clear why the domains and ranges are defined this way. -->
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/originalVersionOf">
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
+        <rdfs:label>original version of</rdfs:label>
+        <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
+        <rdfs:comment>Relates an original Work to a reproduction (Work).</rdfs:comment>       
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/originalVersion"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/seriesOf">
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
+        <rdfs:label>series of</rdfs:label>
+        <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
+        <rdfs:comment>Relates a series (Work) to a member (Work).</rdfs:comment>       
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/hasSeries"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/seriesOf">
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
+        <rdfs:label>series of</rdfs:label>
+        <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
+        <rdfs:comment>Relates a series (Work) to a member (Work).</rdfs:comment>       
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/hasSeries"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/agentOf">
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Authority"/>
+        <rdfs:label>agent of</rdfs:label>
+        <rdfs:range rdf:resource="http://bibframe.org/vocab/Resource"/>
+        <rdfs:comment>Relates an Authority to a Resource it is associated with.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/creator"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/creatorOf">
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Authority"/>
+        <rdfs:label>creator of</rdfs:label>
+        <rdfs:range rdf:resource="http://bibframe.org/vocab/Resource"/>
+        <rdfs:comment>Relates an Authority to a Resource it created.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/creator"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/contributorTo">
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Authority"/>
+        <rdfs:label>contributor to</rdfs:label>
+        <rdfs:range rdf:resource="http://bibframe.org/vocab/Resource"/>
+        <rdfs:comment>Relates an Authority to a Resource it contributed to.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/contributor"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/split">
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
+        <rdfs:label>holding</rdfs:label>
+        <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
+        <rdfs:comment>Earlier Work split to form two or more Works.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/splitInto"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/holding">
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
+        <rdfs:label>holding</rdfs:label>
+        <rdfs:range rdf:resource="http://bibframe.org/vocab/HeldMaterial"/>
+        <rdfs:comment>Holding of an Instance.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/holdingFor"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/electronicLocation">
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Resource"/>
+        <rdfs:label>electronic location</rdfs:label>
+        <rdfs:range rdf:resource="http://bibframe.org/vocab/HeldMaterial"/>
+        <rdfs:comment>Electronic location of a Resource.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/electronicLocator"/>
+    </owl:ObjectProperty>   
+    
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/holds">
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Agent"/>
+        <rdfs:label>holds</rdfs:label>
+        <rdfs:range rdf:resource="http://bibframe.org/vocab/HeldMaterial"/>
+        <rdfs:comment>Entity holding the item or from which it is available.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/heldBy"/>
+    </owl:ObjectProperty>
+    
+    <!-- Inverse property assertions for properties defined by Bibframe -->
+    
+    <rdf:Description rdf:about="http://bibframe.org/vocab/languageOfPartURI">
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/language"/>
+    </rdf:Description>   
+    
+    <rdf:Description rdf:about="http://bibframe.org/vocab/instanceOf">
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/hasInstance"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://bibframe.org/vocab/expressionOf">
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/hasExpression"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://bibframe.org/vocab/accompaniedBy">
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/accompanies"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://bibframe.org/vocab/derivativeOf">
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/hasDerivative"/>
+    </rdf:Description>
+   
+    <rdf:Description rdf:about="http://bibframe.org/vocab/descriptionOf">
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/hasDescription"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://bibframe.org/vocab/partOf">
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/hasPart"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://bibframe.org/vocab/precededBy">
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/succeededBy"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://bibframe.org/vocab/subseriesOf">
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/subseries"/>
+    </rdf:Description>  
+    
+    <rdf:Description rdf:about="http://bibframe.org/vocab/supplementTo">
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/supplement"/>
+    </rdf:Description> 
+    
+    <rdf:Description rdf:about="http://bibframe.org/vocab/translationOf">
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/translation"/>
+    </rdf:Description> 
+    
+    <rdf:Description rdf:about="http://bibframe.org/vocab/supersededBy">
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/supersedes"/>
+    </rdf:Description>     
+
+    <rdf:Description rdf:about="http://bibframe.org/vocab/supersededInPartBy">
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/supersedesInPart"/>
+    </rdf:Description>     
+    
+    <rdf:Description rdf:about="http://bibframe.org/vocab/absorbedBy">
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/absorbed"/>
+    </rdf:Description> 
+    
+    <rdf:Description rdf:about="http://bibframe.org/vocab/absorbedinPartBy">
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/absorbedInPart"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://bibframe.org/vocab/continuedBy">
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/continues"/>
+    </rdf:Description> 
+    
+    <rdf:Description rdf:about="http://bibframe.org/vocab/continuedInPartBy">
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/continuesInPart"/>
+    </rdf:Description> 
+
+    <rdf:Description rdf:about="http://bibframe.org/vocab/unionOf">
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/mergedToForm"/>
+    </rdf:Description> 
+    
+    <rdf:Description rdf:about="http://bibframe.org/vocab/hasAnnotation">
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/annotates"/>
+    </rdf:Description> 
+    
+    <rdf:Description rdf:about="http://bibframe.org/vocab/reviewOf">
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/review"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="http://bibframe.org/vocab/tableOfContentsFor">
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/tableOfContents"/>
+    </rdf:Description>    
+</rdf:RDF>

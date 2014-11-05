@@ -1,1014 +1,1003 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  
-<!-- TODO: Move to ld4l.org domain -->
 
 <rdf:RDF 
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
-    xmlns:owl="http://www.w3.org/2002/07/owl#" 
-    xmlns:dcterms="http://purl.org/dc/terms/"
-    xml:base="http://www.bibframe.org/vocab/">
-  
-  <!-- About this file -->
-  <owl:Ontology rdf:about="http://ld4l.library.cornell.edu/ontology/bibframe-owl#">
-    <rdfs:label>Bibframe OWL</rdfs:label>
-    <rdfs:comment>Declare bibframe classes to be owl classes, and bibframe properties to be owl datatype or object properties</rdfs:comment>
-    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.2</owl:versionInfo>
-    <dcterms:modified>2014-11-03T06:35-0500</dcterms:modified>
-  </owl:Ontology>
+    xmlns:owl="http://www.w3.org/2002/07/owl#"> 
   
   <!-- owl:Class assertions -->
-  <rdf:Description rdf:about="Agent">
+  
+  <rdf:Description rdf:about="http://bibframe.org/vocab/Agent">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="Annotation">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/Annotation">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="Archival">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/Archival">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="Arrangement">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/Arrangement">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="Audio">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/Audio">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="Authority">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/Authority">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="Cartography">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/Cartography">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="Category">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/Category">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="Classification">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/Classification">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="Collection">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/Collection">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="CoverArt">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/CoverArt">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="Dataset">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/Dataset">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="DescriptionAdminInfo">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/DescriptionAdminInfo">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="Electronic">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/Electronic">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="Event">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/Event">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="Family">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/Family">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="HeldItem">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/HeldItem">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="HeldMaterial">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/HeldMaterial">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="Identifier">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/Identifier">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="Instance">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/Instance">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="Integrating">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/Integrating">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="IntendedAudience">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/IntendedAudience">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="Jurisdiction">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/Jurisdiction">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="Language">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/Language">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="Manuscript">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/Manuscript">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="Meeting">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/Meeting">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="MixedMaterial">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/MixedMaterial">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="Monograph">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/Monograph">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="MovingImage">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/MovingImage">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="Multimedia">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/Multimedia">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="MultipartMonograph">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/MultipartMonograph">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="NotatedMovement">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/NotatedMovement">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="NotatedMusic">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/NotatedMusic">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="Organization">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/Organization">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="Person">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/Person">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="Place">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/Place">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="Print">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/Print">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="Provider">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/Provider">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <!-- Included in Bibframe documentation but not in rdf file
-  <rdf:Description rdf:about="Related">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/Related">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   -->
-  <rdf:Description rdf:about="Relator">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/Relator">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="Resource">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/Resource">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="Review">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/Review">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="Serial">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/Serial">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="StillImage">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/StillImage">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="Summary">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/Summary">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="TableOfContents">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/TableOfContents">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="Tactile">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/Tactile">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="Temporal">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/Temporal">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="Text">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/Text">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="ThreeDimensionalObject">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/ThreeDimensionalObject">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="Title">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/Title">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="Topic">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/Topic">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="Work">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/Work">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   
   <!-- owl:DatatypeProperty assertions -->
-  <rdf:Description rdf:about="label">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/label">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="authorizedAccessPoint">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>  
-  <rdf:Description rdf:about="title">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="titleStatement">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="titleType">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description> 
-  <rdf:Description rdf:about="titleValue">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="subtitle">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description> 
-  <rdf:Description rdf:about="partNumber">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="partTitle">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description> 
-  <rdf:Description rdf:about="titleQualifier">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="titleAttribute">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description> 
-  <rdf:Description rdf:about="formDesignation">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="titleVariationDate">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description> 
-  <rdf:Description rdf:about="titleSource">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="musicNumber">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description> 
-  <rdf:Description rdf:about="musicKey">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="musicVersion">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description> 
-  <rdf:Description rdf:about="musicMediumNote">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="treatySignator">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description> 
-  <rdf:Description rdf:about="legalDate">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="originDate">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description> 
-  <rdf:Description rdf:about="dimensions">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="edition">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description> 
-  <rdf:Description rdf:about="editionResponsibility">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="extent">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description> 
-  <rdf:Description rdf:about="format">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="frequency">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description> 
-  <rdf:Description rdf:about="modeOfIssuance">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="responsibilityStatement">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description> 
-  <rdf:Description rdf:about="serialFirstIssue">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="serialLastIssue">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description> 
-  <rdf:Description rdf:about="providerStatement">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="providerRole">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description> 
-  <rdf:Description rdf:about="providerDate">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="copyrightDate">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description> 
-  <rdf:Description rdf:about="identifierAssigner">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="identifierQualifier">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description> 
-  <rdf:Description rdf:about="identifierStatus">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="identifierValue">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description> 
-  <rdf:Description rdf:about="note">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="aspectRatio">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description> 
-  <rdf:Description rdf:about="awardNote">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="colorContent">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description> 
-  <rdf:Description rdf:about="contentAccessibility">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="contentsNote">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description> 
-  <rdf:Description rdf:about="creditsNote">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="custodialHistory">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/authorizedAccessPoint">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>  
-  <rdf:Description rdf:about="dissertationDegree">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/title">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="dissertationNote">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/titleStatement">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://bibframe.org/vocab/titleType">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description> 
-  <rdf:Description rdf:about="dissertationYear">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/titleValue">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="duration">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="findingAidNote">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/subtitle">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description> 
-  <rdf:Description rdf:about="formatOfMusic">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/partNumber">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="frequencyNote">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/partTitle">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description> 
-  <rdf:Description rdf:about="geographicCoverageNote">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/titleQualifier">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="graphicScaleNote">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/titleAttribute">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description> 
-  <rdf:Description rdf:about="illustrationNote">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/formDesignation">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="immediateAcquisition">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/titleVariationDate">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description> 
-  <rdf:Description rdf:about="languageNote">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/titleSource">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="notation">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/musicNumber">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description> 
-  <rdf:Description rdf:about="performerNote">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/musicKey">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="preferredCitation">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/musicVersion">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description> 
-  <rdf:Description rdf:about="soundContent">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/musicMediumNote">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="supplementaryContentNote">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/treatySignator">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description> 
-  <rdf:Description rdf:about="temporalCoverageNote">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/legalDate">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="languageOfPart">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/originDate">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description> 
-  <rdf:Description rdf:about="languageSource">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/dimensions">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="resourcePart">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/edition">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description> 
-  <rdf:Description rdf:about="materialArrangement">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/editionResponsibility">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="materialHierarchicalLevel">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/extent">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description> 
-  <rdf:Description rdf:about="materialOrganization">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/format">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="materialPart">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/frequency">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description> 
-  <rdf:Description rdf:about="eventDate">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/modeOfIssuance">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="cartographicAscensionAndDeclination">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/responsibilityStatement">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description> 
-  <rdf:Description rdf:about="cartographicCoordinates">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/serialFirstIssue">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="cartographicEquinox">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/serialLastIssue">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description> 
-  <rdf:Description rdf:about="cartographicExclusionGRing">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/providerStatement">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="cartographicOuterGRing">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/providerRole">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description> 
-  <rdf:Description rdf:about="cartographicProjection">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/providerDate">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="cartographicScale">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/copyrightDate">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description> 
-  <rdf:Description rdf:about="audience">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/identifierAssigner">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="audienceAssigner">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/identifierQualifier">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description> 
-  <rdf:Description rdf:about="classificationAssigner">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/identifierStatus">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="classificationDesignation">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/identifierValue">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description> 
-  <rdf:Description rdf:about="classificationEdition">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/note">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="classificationItem">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/aspectRatio">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description> 
-  <rdf:Description rdf:about="classificationNumber">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/awardNote">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="classificationScheme">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/colorContent">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description> 
-  <rdf:Description rdf:about="classificationSpanEnd">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/contentAccessibility">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="classificationStatus">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/contentsNote">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description> 
+  <rdf:Description rdf:about="http://bibframe.org/vocab/creditsNote">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="classificationTable">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="classificationTableSeq">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/custodialHistory">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>  
-  <rdf:Description rdf:about="relatorRole">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/dissertationDegree">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://bibframe.org/vocab/dissertationNote">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description> 
+  <rdf:Description rdf:about="http://bibframe.org/vocab/dissertationYear">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://bibframe.org/vocab/duration">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://bibframe.org/vocab/findingAidNote">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description> 
+  <rdf:Description rdf:about="http://bibframe.org/vocab/formatOfMusic">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://bibframe.org/vocab/frequencyNote">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description> 
+  <rdf:Description rdf:about="http://bibframe.org/vocab/geographicCoverageNote">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://bibframe.org/vocab/graphicScaleNote">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description> 
+  <rdf:Description rdf:about="http://bibframe.org/vocab/illustrationNote">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://bibframe.org/vocab/immediateAcquisition">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description> 
+  <rdf:Description rdf:about="http://bibframe.org/vocab/languageNote">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://bibframe.org/vocab/notation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description> 
+  <rdf:Description rdf:about="http://bibframe.org/vocab/performerNote">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://bibframe.org/vocab/preferredCitation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description> 
+  <rdf:Description rdf:about="http://bibframe.org/vocab/soundContent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://bibframe.org/vocab/supplementaryContentNote">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description> 
+  <rdf:Description rdf:about="http://bibframe.org/vocab/temporalCoverageNote">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://bibframe.org/vocab/languageOfPart">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description> 
+  <rdf:Description rdf:about="http://bibframe.org/vocab/languageSource">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://bibframe.org/vocab/resourcePart">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description> 
+  <rdf:Description rdf:about="http://bibframe.org/vocab/materialArrangement">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://bibframe.org/vocab/materialHierarchicalLevel">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description> 
+  <rdf:Description rdf:about="http://bibframe.org/vocab/materialOrganization">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://bibframe.org/vocab/materialPart">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description> 
+  <rdf:Description rdf:about="http://bibframe.org/vocab/eventDate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://bibframe.org/vocab/cartographicAscensionAndDeclination">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description> 
+  <rdf:Description rdf:about="http://bibframe.org/vocab/cartographicCoordinates">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://bibframe.org/vocab/cartographicEquinox">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description> 
+  <rdf:Description rdf:about="http://bibframe.org/vocab/cartographicExclusionGRing">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://bibframe.org/vocab/cartographicOuterGRing">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description> 
+  <rdf:Description rdf:about="http://bibframe.org/vocab/cartographicProjection">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://bibframe.org/vocab/cartographicScale">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description> 
+  <rdf:Description rdf:about="http://bibframe.org/vocab/audience">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://bibframe.org/vocab/audienceAssigner">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description> 
+  <rdf:Description rdf:about="http://bibframe.org/vocab/classificationAssigner">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://bibframe.org/vocab/classificationDesignation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description> 
+  <rdf:Description rdf:about="http://bibframe.org/vocab/classificationEdition">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://bibframe.org/vocab/classificationItem">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description> 
+  <rdf:Description rdf:about="http://bibframe.org/vocab/classificationNumber">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://bibframe.org/vocab/classificationScheme">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description> 
+  <rdf:Description rdf:about="http://bibframe.org/vocab/classificationSpanEnd">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://bibframe.org/vocab/classificationStatus">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://bibframe.org/vocab/classificationTable">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://bibframe.org/vocab/classificationTableSeq">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>  
-  <rdf:Description rdf:about="authoritySource">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="assertionDate">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="startOfReview">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="startOfSummary">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="enumerationAndChronology">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="subLocation">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="accessCondition">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="lendingPolicy">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="reproductionPolicy">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/relatorRole">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>  
-  <rdf:Description rdf:about="retentionPolicy">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/authoritySource">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://bibframe.org/vocab/assertionDate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://bibframe.org/vocab/startOfReview">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://bibframe.org/vocab/startOfSummary">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://bibframe.org/vocab/enumerationAndChronology">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://bibframe.org/vocab/subLocation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://bibframe.org/vocab/accessCondition">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://bibframe.org/vocab/lendingPolicy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://bibframe.org/vocab/reproductionPolicy">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>  
-  <rdf:Description rdf:about="shelfMark">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="shelfMarkDdc">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="shelfMarkLcc">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="shelfMarkNlm">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="shelfMarkScheme">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="shelfMarkUdc">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="barcode">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="circulationStatus">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/retentionPolicy">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>  
-  <rdf:Description rdf:about="copyNote">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/shelfMark">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="itemId">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/shelfMarkDdc">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://bibframe.org/vocab/shelfMarkLcc">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://bibframe.org/vocab/shelfMarkNlm">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://bibframe.org/vocab/shelfMarkScheme">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://bibframe.org/vocab/shelfMarkUdc">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://bibframe.org/vocab/barcode">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://bibframe.org/vocab/circulationStatus">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>  
+  <rdf:Description rdf:about="http://bibframe.org/vocab/copyNote">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://bibframe.org/vocab/itemId">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>    
-  <rdf:Description rdf:about="changeDate">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/changeDate">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>  
-  <rdf:Description rdf:about="creationDate">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/creationDate">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="descriptionAuthentication">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/descriptionAuthentication">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="descriptionStatus">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/descriptionStatus">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="generationDate">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/generationDate">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="generationProcess">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/generationProcess">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="categorySource">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/categorySource">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="categoryType">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/categoryType">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="categoryValue">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/categoryValue">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
   
   <!-- owl:ObjectProperty assertions -->
-  <rdf:Description rdf:about="musicMedium">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/musicMedium">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="originPlace">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/originPlace">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="provider">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/provider">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="distribution">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/distribution">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="manufacture">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/manufacture">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="production">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/production">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="publication">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/publication">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="providerPlace">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/providerPlace">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="providerName">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/providerName">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="ansi">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/ansi">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="coden">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/coden">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="doi">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/doi">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="ean">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/ean">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="fingerprint">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/fingerprint">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="hdl">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/hdl">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="identifierScheme">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/identifierScheme">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="isan">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/isan">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="isbn">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/isbn">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="isbn10">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/isbn10">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="isbn13">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/isbn13">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="ismn">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/ismn">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="iso">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/iso">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="issn">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/issn">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="issnL">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/issnL">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="issueNumber">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/issueNumber">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="istc">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/istc">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="iswc">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/iswc">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="lcOverseasAcq">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/lcOverseasAcq">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="lccn">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/lccn">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="legalDeposit">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/legalDeposit">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="local">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/local">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="matrixNumber">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/matrixNumber">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="musicPlate">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/musicPlate">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="musicPublisherNumber">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/musicPublisherNumber">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="nban">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/nban">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="nbn">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/nbn">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="postalRegistration">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/postalRegistration">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="publisherNumber">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/publisherNumber">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="reportNumber">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/reportNumber">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="sici">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/sici">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="stockNumber">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/stockNumber">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="strn">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/strn">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="studyNumber">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/studyNumber">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="systemNumber">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/systemNumber">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="upc">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/upc">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="uri">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/uri">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="urn">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/urn">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="videorecordingNumber">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/videorecordingNumber">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="dissertationIdentifier">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/dissertationIdentifier">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="dissertationInstitution">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/dissertationInstitution">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="language">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/language">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="languageOfPartUri">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/languageOfPartUri">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="arrangement">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/arrangement">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="event">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/event">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="eventAgent">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/eventAgent">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="eventPlace">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/eventPlace">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="cartography">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/cartography">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="intendedAudience">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/intendedAudience">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="classificationNumberUri">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/classificationNumberUri">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="subject">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/subject">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="relatedTo">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/relatedTo">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="relatedWork">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/relatedWork">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="relatedInstance">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/relatedInstance">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="hasInstance">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/hasInstance">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="instanceOf">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/instanceOf">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="hasExpression">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/hasExpression">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="expressionOf">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/expressionOf">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="accompaniedBy">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/accompaniedBy">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="accompanies">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/accompanies">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="derivativeOf">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/derivativeOf">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="descriptionOf">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/descriptionOf">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="hasDerivative">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/hasDerivative">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="hasDescription">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/hasDescription">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="hasEquivalent">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/hasEquivalent">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="hasPart">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/hasPart">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="partOf">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/partOf">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="precededBy">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/precededBy">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="succeededBy">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/succeededBy">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="issuedWith">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/issuedWith">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="otherPhysicalFormat">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/otherPhysicalFormat">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="reproduction">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/reproduction">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="dataSource">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/dataSource">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="findingAid">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/findingAid">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="index">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/index">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="originalVersion">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/originalVersion">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="otherEdition">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/otherEdition">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="series">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/series">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="subseries">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/subseries">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="subseriesOf">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/subseriesOf">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="supplement">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/supplement">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="supplementTo">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/supplementTo">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="translation">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/translation">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="translationOf">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/translationOf">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="absorbed">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/absorbed">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="absorbedInPart">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/absorbedInPart">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="continues">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/continues">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="continuesInPart">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/continuesInPart">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="separatedFrom">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/separatedFrom">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="supersedes">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/supersedes">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="supersedesInPart">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/supersedesInPart">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="unionOf">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/unionOf">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="absorbedBy">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/absorbedBy">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="absorbedInPartBy">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/absorbedInPartBy">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="continuedBy">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/continuedBy">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="continuedInPartBy">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/continuedInPartBy">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="mergedToForm">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/mergedToForm">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="splitInto">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/splitInto">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="supersededBy">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/supersededBy">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="supersededInPartBy">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/supersededInPartBy">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="agent">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/agent">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="creator">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/creator">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="contributor">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/contributor">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="relator">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/relator">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="hasAuthority">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/hasAuthority">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="referenceAuthority">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/referenceAuthority">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="authorityAssigner">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/authorityAssigner">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="hasAnnotation">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/hasAnnotation">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="annotates">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/annotates">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="annotationAssertedBy">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/annotationAssertedBy">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="annotationBody">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/annotationBody">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="annotationSource">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/annotationSource">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="coverArt">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/coverArt">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="coverArtFor">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/coverArtFor">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="coverArtThumb">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/coverArtThumb">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="review">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/review">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="reviewOf">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/reviewOf">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="summary">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/summary">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="summaryOf">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/summaryOf">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="tableOfContents">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/tableOfContents">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="tableOfContentsFor">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/tableOfContentsFor">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="holdingFor">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/holdingFor">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="electronicLocator">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/electronicLocator">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="heldBy">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/heldBy">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="componentOf">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/componentOf">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="derivedFrom">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/derivedFrom">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="descriptionConventions">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/descriptionConventions">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="descriptionLanguage">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/descriptionLanguage">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="descriptionModifier">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/descriptionModifier">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="descriptionSource">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/descriptionSource">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="identifier">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/identifier">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="contentCategory">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/contentCategory">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="mediaCategory">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/mediaCategory">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="carrierCategory">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/carrierCategory">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="genre">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/genre">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="workTitle">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/workTitle">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>  
-  <rdf:Description rdf:about="instanceTitle">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/instanceTitle">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>  
-  <rdf:Description rdf:about="keyTitle">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/keyTitle">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>  
-  <rdf:Description rdf:about="abbreviatedTitle">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/abbreviatedTitle">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>  
-  <rdf:Description rdf:about="titleVariation">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/titleVariation">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>  
-  <rdf:Description rdf:about="classification">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/classification">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="classificationDdc">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/classificationDdc">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="classificationLcc">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/classificationLcc">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="classificationNlm">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/classificationNlm">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="classificationUdc">
+  <rdf:Description rdf:about="http://bibframe.org/vocab/classificationUdc">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
 </rdf:RDF>
