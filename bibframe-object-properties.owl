@@ -108,23 +108,7 @@
         <rdfs:comment>Relates an institution to a disseration issued there.</rdfs:comment>       
         <owl:inverseOf rdf:resource="dissertationInstitution"/>
     </owl:ObjectProperty>
-    
-    <owl:ObjectProperty rdf:ID="languageOf">
-        <rdfs:domain rdf:resource="Language"/>
-        <rdfs:label>language of</rdfs:label>
-        <rdfs:range rdf:resource="Resource"/>
-        <rdfs:comment>Relates a Language to a Resource associated with that language.</rdfs:comment>       
-        <owl:inverseOf rdf:resource="language"/>
-    </owl:ObjectProperty>
 
-    <owl:ObjectProperty rdf:ID="languageOf">
-        <rdfs:domain rdf:resource="Language"/>
-        <rdfs:label>language of</rdfs:label>
-        <rdfs:range rdf:resource="Resource"/>
-        <rdfs:comment>Relates a Language to a Resource associated with that language.</rdfs:comment>       
-        <owl:inverseOf rdf:resource="language"/>
-    </owl:ObjectProperty>
-    
     <owl:ObjectProperty rdf:ID="arrangementOf">
         <rdfs:domain rdf:resource="Arrangement"/>
         <rdfs:label>arrangement of</rdfs:label>
@@ -133,9 +117,17 @@
         <owl:inverseOf rdf:resource="event"/>
     </owl:ObjectProperty>
     
+    <owl:ObjectProperty rdf:ID="eventOf">
+        <rdfs:domain rdf:resource="Event"/>
+        <rdfs:label>event of</rdfs:label>
+        <rdfs:range rdf:resource="Work"/>
+        <rdfs:comment>Relates an Event to an associated Work.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="event"/>
+    </owl:ObjectProperty>
+
     <owl:ObjectProperty rdf:ID="eventAgentOf">
         <rdfs:domain rdf:resource="Agent"/>
-        <rdfs:label>agent of</rdfs:label>
+        <rdfs:label>event agent of</rdfs:label>
         <rdfs:range rdf:resource="Event"/>
         <rdfs:comment>Relates a Person or Organization to an Event associated with it.</rdfs:comment>       
         <owl:inverseOf rdf:resource="eventAgent"/>
@@ -204,47 +196,47 @@
         <rdfs:comment>Relates a series (Work) to a member (Work).</rdfs:comment>       
         <owl:inverseOf rdf:resource="hasSeries"/>
     </owl:ObjectProperty>
-    
-    <owl:ObjectProperty rdf:ID="intendedAudienceOf">
-        <rdfs:domain rdf:resource="IntendedAudience"/>
-        <rdfs:label>Intended audience of</rdfs:label>
+
+    <owl:ObjectProperty rdf:ID="seriesOf">
+        <rdfs:domain rdf:resource="Work"/>
+        <rdfs:label>series of</rdfs:label>
+        <rdfs:range rdf:resource="Work"/>
+        <rdfs:comment>Relates a series (Work) to a member (Work).</rdfs:comment>       
+        <owl:inverseOf rdf:resource="hasSeries"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:ID="agentOf">
+        <rdfs:domain rdf:resource="Authority"/>
+        <rdfs:label>agent of</rdfs:label>
         <rdfs:range rdf:resource="Resource"/>
-        <rdfs:comment>Relates an IntendedAudience to Resources it is considered appropriate for.</rdfs:comment>       
-        <owl:inverseOf rdf:resource="intendedAudience"/>
+        <rdfs:comment>Relates an Authority to a Resource it is associated with.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="creator"/>
     </owl:ObjectProperty>
     
-    <owl:ObjectProperty rdf:ID="intendedAudienceOf">
-        <rdfs:domain rdf:resource="IntendedAudience"/>
-        <rdfs:label>Intended audience of</rdfs:label>
+    <owl:ObjectProperty rdf:ID="creatorOf">
+        <rdfs:domain rdf:resource="Authority"/>
+        <rdfs:label>creator of</rdfs:label>
         <rdfs:range rdf:resource="Resource"/>
-        <rdfs:comment>Relates an IntendedAudience to Resources it is considered appropriate for.</rdfs:comment>       
-        <owl:inverseOf rdf:resource="intendedAudience"/>
+        <rdfs:comment>Relates an Authority to a Resource it created.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="creator"/>
     </owl:ObjectProperty>
     
-    <owl:ObjectProperty rdf:ID="intendedAudienceOf">
-        <rdfs:domain rdf:resource="IntendedAudience"/>
-        <rdfs:label>Intended audience of</rdfs:label>
+    <owl:ObjectProperty rdf:ID="contributorTo">
+        <rdfs:domain rdf:resource="Authority"/>
+        <rdfs:label>contributor to</rdfs:label>
         <rdfs:range rdf:resource="Resource"/>
-        <rdfs:comment>Relates an IntendedAudience to Resources it is considered appropriate for.</rdfs:comment>       
-        <owl:inverseOf rdf:resource="intendedAudience"/>
+        <rdfs:comment>Relates an Authority to a Resource it contributed to.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="contributor"/>
     </owl:ObjectProperty>
     
-    <owl:ObjectProperty rdf:ID="intendedAudienceOf">
-        <rdfs:domain rdf:resource="IntendedAudience"/>
-        <rdfs:label>Intended audience of</rdfs:label>
-        <rdfs:range rdf:resource="Resource"/>
-        <rdfs:comment>Relates an IntendedAudience to Resources it is considered appropriate for.</rdfs:comment>       
-        <owl:inverseOf rdf:resource="intendedAudience"/>
+    <owl:ObjectProperty rdf:ID="split">
+        <rdfs:domain rdf:resource="Work"/>
+        <rdfs:label>holding</rdfs:label>
+        <rdfs:range rdf:resource="Work"/>
+        <rdfs:comment>Earlier Work split to form two or more Works.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="splitInto"/>
     </owl:ObjectProperty>
     
-    <owl:ObjectProperty rdf:ID="intendedAudienceOf">
-        <rdfs:domain rdf:resource="IntendedAudience"/>
-        <rdfs:label>Intended audience of</rdfs:label>
-        <rdfs:range rdf:resource="Resource"/>
-        <rdfs:comment>Relates an IntendedAudience to Resources it is considered appropriate for.</rdfs:comment>       
-        <owl:inverseOf rdf:resource="intendedAudience"/>
-    </owl:ObjectProperty>
- 
     <owl:ObjectProperty rdf:ID="holding">
         <rdfs:domain rdf:resource="Instance"/>
         <rdfs:label>holding</rdfs:label>
@@ -270,6 +262,11 @@
     </owl:ObjectProperty>
     
     <!-- Inverse property assertions for properties defined by Bibframe -->
+    
+    <rdf:Description rdf:about="languageOfPartURI">
+        <owl:inverseOf rdf:resource="language"/>
+    </rdf:Description>   
+    
     <rdf:Description rdf:about="instanceOf">
         <owl:inverseOf rdf:resource="hasInstance"/>
     </rdf:Description>
@@ -310,6 +307,14 @@
         <owl:inverseOf rdf:resource="translation"/>
     </rdf:Description> 
     
+    <rdf:Description rdf:about="supersededBy">
+        <owl:inverseOf rdf:resource="supersedes"/>
+    </rdf:Description>     
+
+    <rdf:Description rdf:about="supersededInPartBy">
+        <owl:inverseOf rdf:resource="supersedesInPart"/>
+    </rdf:Description>     
+    
     <rdf:Description rdf:about="absorbedBy">
         <owl:inverseOf rdf:resource="absorbed"/>
     </rdf:Description> 
@@ -325,6 +330,10 @@
     <rdf:Description rdf:about="continuedInPartBy">
         <owl:inverseOf rdf:resource="continuesInPart"/>
     </rdf:Description> 
+
+    <rdf:Description rdf:about="unionOf">
+        <owl:inverseOf rdf:resource="mergedToForm"/>
+    </rdf:Description> 
     
     <rdf:Description rdf:about="hasAnnotation">
         <owl:inverseOf rdf:resource="annotates"/>
@@ -332,18 +341,6 @@
     
     <rdf:Description rdf:about="reviewOf">
         <owl:inverseOf rdf:resource="review"/>
-    </rdf:Description>
-    
-    <!-- 
-        NB In the bibframe rdf both summary and summaryOf have domain Summary
-        and range Resource, but based on the rdfs:comments, this seems to be an 
-        error. Comment for summary: "Summary or abstract of the target work or 
-        instance." Comment for summaryOf: "Resource to which the description
-        pertains." For now will assert the inverseOf relation and await further
-        clarification.
-    -->
-    <rdf:Description rdf:about="summaryOf">
-        <owl:inverseOf rdf:resource="summary"/>
     </rdf:Description>
     
     <rdf:Description rdf:about="tableOfContentsFor">
