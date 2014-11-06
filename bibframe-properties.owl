@@ -111,7 +111,7 @@
         <rdfs:label>arrangement of</rdfs:label>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:comment>Relates an Arrangement to an Instance it is an arrangement of.</rdfs:comment>       
-        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/event"/>
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/arrangement"/>
     </owl:ObjectProperty>
     
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/eventOf">
@@ -194,20 +194,20 @@
         <owl:inverseOf rdf:resource="http://bibframe.org/vocab/hasSeries"/>
     </owl:ObjectProperty>
 
-    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/seriesOf">
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/split">
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
-        <rdfs:label>series of</rdfs:label>
+        <rdfs:label>holding</rdfs:label>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
-        <rdfs:comment>Relates a series (Work) to a member (Work).</rdfs:comment>       
-        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/hasSeries"/>
+        <rdfs:comment>Earlier Work split to form two or more Works.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/splitInto"/>
     </owl:ObjectProperty>
-
+    
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/agentOf">
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Authority"/>
         <rdfs:label>agent of</rdfs:label>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Resource"/>
         <rdfs:comment>Relates an Authority to a Resource it is associated with.</rdfs:comment>       
-        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/creator"/>
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/agent"/>
     </owl:ObjectProperty>
     
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/creatorOf">
@@ -225,15 +225,7 @@
         <rdfs:comment>Relates an Authority to a Resource it contributed to.</rdfs:comment>       
         <owl:inverseOf rdf:resource="http://bibframe.org/vocab/contributor"/>
     </owl:ObjectProperty>
-    
-    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/split">
-        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
-        <rdfs:label>holding</rdfs:label>
-        <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
-        <rdfs:comment>Earlier Work split to form two or more Works.</rdfs:comment>       
-        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/splitInto"/>
-    </owl:ObjectProperty>
-    
+  
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/holding">
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:label>holding</rdfs:label>
