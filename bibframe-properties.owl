@@ -51,7 +51,7 @@
     
     <!-- Inverse properties not defined by Bibframe -->
     
-    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/contentCategoryOf">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/core/contentCategoryOf">
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Category"/>
         <rdfs:label>content category of</rdfs:label>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
@@ -59,7 +59,7 @@
         <owl:inverseOf rdf:resource="http://bibframe.org/vocab/contentCategory"/>
     </owl:ObjectProperty>
 
-    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/mediaCategoryOf">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/core/mediaCategoryOf">
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Category"/>
         <rdfs:label>media category of</rdfs:label>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
@@ -67,7 +67,7 @@
         <owl:inverseOf rdf:resource="http://bibframe.org/vocab/mediaCategory"/>
     </owl:ObjectProperty>
     
-    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/carrierCategoryOf">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/core/carrierCategoryOf">
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Category"/>
         <rdfs:label>carrier category of</rdfs:label>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
@@ -75,14 +75,14 @@
         <owl:inverseOf rdf:resource="http://bibframe.org/vocab/carrierCategory"/>
     </owl:ObjectProperty>
     
-    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/genreOf">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/core/genreOf">
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Category"/>
         <rdfs:label>genre of</rdfs:label>
         <rdfs:comment>Relates a Category to a Resource of that genre.</rdfs:comment>       
         <owl:inverseOf rdf:resource="http://bibframe.org/vocab/genre"/>
     </owl:ObjectProperty>
     
-    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/musicMediumOf">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/core/musicMediumOf">
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Category"/>
         <rdfs:label>music medium of</rdfs:label>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Resource"/>
@@ -90,7 +90,7 @@
         <owl:inverseOf rdf:resource="http://bibframe.org/vocab/musicMedium"/>
     </owl:ObjectProperty>
     
-    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/originPlaceOf">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/core/originPlaceOf">
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Place"/>
         <rdfs:label>place of origin of</rdfs:label>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
@@ -98,7 +98,7 @@
         <owl:inverseOf rdf:resource="http://bibframe.org/vocab/originPlace"/>
     </owl:ObjectProperty>
     
-    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/dissertationInstitutionOf">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/core/dissertationInstitutionOf">
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Agent"/>
         <rdfs:label>dissertation issued</rdfs:label>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
@@ -106,7 +106,7 @@
         <owl:inverseOf rdf:resource="http://bibframe.org/vocab/dissertationInstitution"/>
     </owl:ObjectProperty>
 
-    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/arrangementOf">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/core/arrangementOf">
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Arrangement"/>
         <rdfs:label>arrangement of</rdfs:label>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Instance"/>
@@ -114,7 +114,7 @@
         <owl:inverseOf rdf:resource="http://bibframe.org/vocab/arrangement"/>
     </owl:ObjectProperty>
     
-    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/eventOf">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/core/eventOf">
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Event"/>
         <rdfs:label>event of</rdfs:label>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
@@ -122,7 +122,7 @@
         <owl:inverseOf rdf:resource="http://bibframe.org/vocab/event"/>
     </owl:ObjectProperty>
 
-    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/eventAgentOf">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/core/eventAgentOf">
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Agent"/>
         <rdfs:label>event agent of</rdfs:label>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Event"/>
@@ -130,7 +130,7 @@
         <owl:inverseOf rdf:resource="http://bibframe.org/vocab/eventAgent"/>
     </owl:ObjectProperty>
     
-    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/eventPlaceOf">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/core/eventPlaceOf">
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Place"/>
         <rdfs:label>location of</rdfs:label>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Event"/>
@@ -138,7 +138,7 @@
         <owl:inverseOf rdf:resource="http://bibframe.org/vocab/eventPlace"/>
     </owl:ObjectProperty>
     
-    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/intendedAudienceOf">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/core/intendedAudienceOf">
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/IntendedAudience"/>
         <rdfs:label>intended audience of</rdfs:label>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Resource"/>
@@ -146,7 +146,7 @@
         <owl:inverseOf rdf:resource="http://bibframe.org/vocab/intendedAudience"/>
     </owl:ObjectProperty>
     
-    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/subjectOf">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/core/subjectOf">
         <!-- Domain can be Work or Authority -->
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Resource"/> 
         <rdfs:label>subject of</rdfs:label>
@@ -159,7 +159,7 @@
     <!-- Inverse of reproduction could be originalVersion, but the former is an
         Instance-to-Instance relation, the latter a Work-to-Work relation. It's
         not clear why the domains and ranges are defined this way. -->
-    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/reproductionOf">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/core/reproductionOf">
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:label>reproduction of</rdfs:label>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Instance"/>
@@ -167,7 +167,7 @@
         <owl:inverseOf rdf:resource="http://bibframe.org/vocab/reproduction"/>
     </owl:ObjectProperty>
     
-    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/dataSourceFor">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/core/dataSourceFor">
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:label>data source for</rdfs:label>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
@@ -178,7 +178,7 @@
     <!-- Inverse of originalVersion could be reproduction, but the former is a
         Work-to-Work relation, the latter an Instance-to-Instance relation. It's
         not clear why the domains and ranges are defined this way. -->
-    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/originalVersionOf">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/core/originalVersionOf">
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:label>original version of</rdfs:label>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
@@ -186,7 +186,7 @@
         <owl:inverseOf rdf:resource="http://bibframe.org/vocab/originalVersion"/>
     </owl:ObjectProperty>
     
-    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/seriesOf">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/core/seriesOf">
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:label>series of</rdfs:label>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
@@ -194,7 +194,7 @@
         <owl:inverseOf rdf:resource="http://bibframe.org/vocab/hasSeries"/>
     </owl:ObjectProperty>
 
-    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/split">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/core/split">
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:label>holding</rdfs:label>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
@@ -202,7 +202,7 @@
         <owl:inverseOf rdf:resource="http://bibframe.org/vocab/splitInto"/>
     </owl:ObjectProperty>
     
-    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/agentOf">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/core/agentOf">
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Authority"/>
         <rdfs:label>agent of</rdfs:label>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Resource"/>
@@ -210,7 +210,7 @@
         <owl:inverseOf rdf:resource="http://bibframe.org/vocab/agent"/>
     </owl:ObjectProperty>
     
-    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/creatorOf">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/core/creatorOf">
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Authority"/>
         <rdfs:label>creator of</rdfs:label>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Resource"/>
@@ -218,7 +218,7 @@
         <owl:inverseOf rdf:resource="http://bibframe.org/vocab/creator"/>
     </owl:ObjectProperty>
     
-    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/contributorTo">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/core/contributorTo">
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Authority"/>
         <rdfs:label>contributor to</rdfs:label>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Resource"/>
@@ -226,7 +226,7 @@
         <owl:inverseOf rdf:resource="http://bibframe.org/vocab/contributor"/>
     </owl:ObjectProperty>
   
-    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/holding">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/core/holding">
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:label>holding</rdfs:label>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/HeldMaterial"/>
@@ -234,7 +234,7 @@
         <owl:inverseOf rdf:resource="http://bibframe.org/vocab/holdingFor"/>
     </owl:ObjectProperty>
     
-    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/electronicLocation">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/core/electronicLocation">
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Resource"/>
         <rdfs:label>electronic location</rdfs:label>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/HeldMaterial"/>
@@ -242,7 +242,7 @@
         <owl:inverseOf rdf:resource="http://bibframe.org/vocab/electronicLocator"/>
     </owl:ObjectProperty>   
     
-    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/holds">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/core/holds">
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Agent"/>
         <rdfs:label>holds</rdfs:label>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/HeldMaterial"/>
