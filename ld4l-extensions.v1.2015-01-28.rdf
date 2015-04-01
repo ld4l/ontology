@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rdf:RDF 
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xml:base="http://ld4l.org/ontology/ext#">
+    
+    <!-- Extensions of external ontologies within the ld4l.org namespace. -->
+    
+    <!-- 
+        INVERSE PROPERTIES
+        Declarations of new properties as inverses of properties in external
+        ontologies.
+        QUESTION: Should we first declare subproperties of the external 
+        property,and then an inverse of that, rather than a direct inverse of 
+        the external property?
+    -->   
+    
+    <!-- Inverses of Bibframe properties -->
+    
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/ext#contentCategoryOf">
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Category"/>
+        <rdfs:label>content category of</rdfs:label>
+        <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
+        <rdfs:comment>Relates a Category to a Work of that content type.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/contentCategory"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/ext#mediaCategoryOf">
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Category"/>
+        <rdfs:label>media category of</rdfs:label>
+        <rdfs:range rdf:resource="http://bibframe.org/vocab/Instance"/>
+        <rdfs:comment>Relates a Category to an Instance of that media type.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/mediaCategory"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/ext#carrierCategoryOf">
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Category"/>
+        <rdfs:label>carrier category of</rdfs:label>
+        <rdfs:range rdf:resource="http://bibframe.org/vocab/Instance"/>
+        <rdfs:comment>Relates a Category to an Instance of that content type.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/carrierCategory"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/ext#genreOf">
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Category"/>
+        <rdfs:label>genre of</rdfs:label>
+        <rdfs:comment>Relates a Category to a Resource of that genre.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/genre"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/ext#musicMediumOf">
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Resource"/>
+        <rdfs:label>music medium of</rdfs:label>
+        <rdfs:comment>Relates a music medium to a Resource.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/musicMedium"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/ext#originPlaceOf">
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Place"/>
+        <rdfs:label>place of origin of</rdfs:label>
+        <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
+        <rdfs:comment>Relates a place to a Work created there.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/originPlace"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/ext#dissertationInstitutionOf">
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Agent"/>
+        <rdfs:label>dissertation issued</rdfs:label>
+        <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
+        <rdfs:comment>Relates an institution to a disseration issued there.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/dissertationInstitution"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/ext#arrangementOf">
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Arrangement"/>
+        <rdfs:label>arrangement of</rdfs:label>
+        <rdfs:range rdf:resource="http://bibframe.org/vocab/Instance"/>
+        <rdfs:comment>Relates an Arrangement to an Instance it is an arrangement of.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/arrangement"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/ext#eventOf">
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Event"/>
+        <rdfs:label>event of</rdfs:label>
+        <rdfs:range rdf:resource="http://ld4l.org/ontology/ext#Work"/>
+        <rdfs:comment>Relates an Event to an associated Work.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/event"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/ext#eventAgentOf">
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Agent"/>
+        <rdfs:label>event agent of</rdfs:label>
+        <rdfs:range rdf:resource="http://bibframe.org/vocab/Event"/>
+        <rdfs:comment>Relates a Person or Organization to an Event associated with it.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/eventAgent"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/ext#eventPlaceOf">
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Place"/>
+        <rdfs:label>location of</rdfs:label>
+        <rdfs:range rdf:resource="http://bibframe.org/vocab/Event"/>
+        <rdfs:comment>Relates a Place to an Event that took place there.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/eventPlace"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/ext#intendedAudienceOf">
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/IntendedAudience"/>
+        <rdfs:label>intended audience of</rdfs:label>
+        <rdfs:comment>Relates an IntendedAudience to a Resource containing content considered appropriate for it.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/intendedAudience"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/ext#subjectOf">
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Authority"/> 
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/> 
+        <rdfs:label>subject of</rdfs:label>
+        <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
+        <rdfs:comment>Relates a subject to a Work it is the subject of.</rdfs:comment> 
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/subject"/>
+    </owl:ObjectProperty>
+    
+    <!-- Inverse of reproduction could be originalVersion, but the former is an
+        Instance-to-Instance relation, the latter a Work-to-Work relation. It's
+        not clear why the domains and ranges are defined this way. -->
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/ext#reproductionOf">
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
+        <rdfs:label>reproduction of</rdfs:label>
+        <rdfs:range rdf:resource="http://bibframe.org/vocab/Instance"/>
+        <rdfs:comment>Relates a reproduction (Instance) to the original Instance.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/reproduction"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/ext#dataSourceFor">
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
+        <rdfs:label>data source for</rdfs:label>
+        <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
+        <rdfs:comment>Relates a Work to another Work for which it is the data source.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/dataSource"/>
+    </owl:ObjectProperty>
+    
+    <!-- Inverse of originalVersion could be reproduction, but the former is a
+        Work-to-Work relation, the latter an Instance-to-Instance relation. It's
+        not clear why the domains and ranges are defined this way. -->
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/ext#originalVersionOf">
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
+        <rdfs:label>original version of</rdfs:label>
+        <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
+        <rdfs:comment>Relates an original Work to a reproduction (Work).</rdfs:comment>       
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/originalVersion"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/ext#seriesOf">
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
+        <rdfs:label>series of</rdfs:label>
+        <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
+        <rdfs:comment>Relates a series (Work) to a member (Work).</rdfs:comment>       
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/hasSeries"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/ext#split">
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
+        <rdfs:label>holding</rdfs:label>
+        <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
+        <rdfs:comment>Earlier Work split to form two or more Works.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/splitInto"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/ext#agentOf">
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Authority"/>
+        <rdfs:label>agent of</rdfs:label>
+        <rdfs:comment>Relates an Authority to a Resource it is associated with.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/agent"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/ext#creatorOf">
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Authority"/>
+        <rdfs:label>creator of</rdfs:label>
+        <rdfs:comment>Relates an Authority to a Resource it created.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/creator"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/ext#contributorTo">
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Authority"/>
+        <rdfs:label>contributor to</rdfs:label>
+        <rdfs:comment>Relates an Authority to a Resource it contributed to.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/contributor"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/ext#holding">
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
+        <rdfs:label>holding</rdfs:label>
+        <rdfs:range rdf:resource="http://bibframe.org/vocab/HeldMaterial"/>
+        <rdfs:comment>Holding of an Instance.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/holdingFor"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/ext#electronicLocation">
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Resource"/>
+        <rdfs:label>electronic location</rdfs:label>
+        <rdfs:range rdf:resource="http://bibframe.org/vocab/HeldMaterial"/>
+        <rdfs:comment>Electronic location of a Resource.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/electronicLocator"/>
+    </owl:ObjectProperty>   
+    
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/ext#holds">
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Agent"/>
+        <rdfs:label>holds</rdfs:label>
+        <rdfs:range rdf:resource="http://bibframe.org/vocab/HeldMaterial"/>
+        <rdfs:comment>Entity holding the item or from which it is available.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/heldBy"/>
+    </owl:ObjectProperty>
+    
+    <!-- 
+        ALTERNATIVE to hasGlobalAuthority / hasLocalAuthority defined in 
+        ld4l-core. 
+        2015-02-19 Commented those properties out of ld4l-core, since unused.
+     -->   
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/ext#authorityFor">
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Resource"/>
+        <rdfs:label>authority for</rdfs:label>
+        <rdfs:range rdf:resource="http://bibframe.org/vocab/Authority"/>
+        <rdfs:comment>Links an external Authority to a bf:Authority.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/hasAuthority"/>
+    </owl:ObjectProperty>        
+
+    
+    <!-- Inverses of PAV properties -->
+    
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/ext#authorOf">
+        <!-- 
+            No domain and range defined for pav:authoredBy, so omit them here.
+        -->
+        <rdfs:label>author of</rdfs:label>
+        <rdfs:comment>Author of a work.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="http://purl.org/pav/authoredBy"/>
+    </owl:ObjectProperty>
+    
+    
+    <!-- Inverse of relators:ths property -->
+
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/ext#advisorOfThesis">
+        <!-- 
+            No domain and range defined for relators:ths, so omit them here.
+            Implied domain is bf:Person, implied range is ld4l:Thesis or
+            bf:Work.
+        -->
+        <rdfs:label>advisor of thesis</rdfs:label>
+        <rdfs:comment>Advisor of a thesis.</rdfs:comment>       
+        <owl:inverseOf rdf:resource="http://id.loc.gov/vocabulary/relators/ths"/>
+    </owl:ObjectProperty>
+    
+    <rdf:Description rdf:about="http://id.loc.gov/vocabulary/relators/ths">
+        <rdfs:label>thesis advisor</rdfs:label>
+    </rdf:Description>
+    
+</rdf:RDF>

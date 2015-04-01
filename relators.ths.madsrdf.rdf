@@ -1,0 +1,32 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <madsrdf:Authority rdf:about="http://id.loc.gov/vocabulary/relators/ths" xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+    <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Topic"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <madsrdf:authoritativeLabel xml:lang="en">Thesis advisor</madsrdf:authoritativeLabel>
+    <madsrdf:isMemberOfMADSCollection rdf:resource="http://id.loc.gov/vocabulary/relators/collection_BIBFRAMEWork"/>
+    <rdfs:subPropertyOf rdf:resource="http://id.loc.gov/vocabulary/relators/role" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"/>
+	<madsrdf:hasVariant>
+      <madsrdf:Topic>
+	    <madsrdf:variantLabel xml:lang="en">Promoter</madsrdf:variantLabel>
+      </madsrdf:Topic>
+    </madsrdf:hasVariant>
+	<owl:sameAs rdf:resource="info:lc/vocabulary/relators/ths" xmlns:owl="http://www.w3.org/2002/07/owl#"/>
+	<madsrdf:code>ths</madsrdf:code>
+	<madsrdf:isMemberOfMADSScheme rdf:resource="http://id.loc.gov/vocabulary/relators"/>
+	<madsrdf:definitionNote>A person under whose supervision a degree candidate develops and presents a thesis, mémoire, or text of a dissertation</madsrdf:definitionNote>
+    <madsrdf:adminMetadata>
+      <ri:RecordInfo xmlns:ri="http://id.loc.gov/ontologies/RecordInfo#">
+	    <ri:recordStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">modified</ri:recordStatus>
+	    <ri:recordChangeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-05-15T00:00:00</ri:recordChangeDate>
+	    <ri:recordContentSource rdf:resource="http://id.loc.gov/vocabulary/organizations/dlcmrc"/>
+      </ri:RecordInfo>
+    </madsrdf:adminMetadata>
+    <madsrdf:adminMetadata>
+      <ri:RecordInfo xmlns:ri="http://id.loc.gov/ontologies/RecordInfo#">
+	    <ri:recordStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">new</ri:recordStatus>
+	    <ri:recordChangeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1970-01-01T00:00:00</ri:recordChangeDate>
+	    <ri:recordContentSource rdf:resource="http://id.loc.gov/vocabulary/organizations/dlcmrc"/>
+      </ri:RecordInfo>
+    </madsrdf:adminMetadata>
+  </madsrdf:Authority>
+</rdf:RDF>
