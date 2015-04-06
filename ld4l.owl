@@ -4,20 +4,39 @@
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
     xmlns:owl="http://www.w3.org/2002/07/owl#"
-    xml:base="http://ld4l.org/ontology/ext#">
+    xmlns:dcterms="http://purl.org/dc/terms/" 
+    xmlns:bf="http://bibframe.org/vocab/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
+    xmlns:pav="http://purl.org/pav/"
+    xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#"
+    xmlns:ore="http://www.openarchives.org/ore/terms/"
+    xml:base="http://ld4l.org/ontology#">
+
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo></owl:versionInfo>
+        <rdfs:comment>LD4L Ontology</rdfs:comment>
+        <owl:imports rdf:resource="http://bibframe.org/vocab/"/>
+        <owl:imports rdf:resource="http://www.w3.org/2006/vcard/ns#"/>
+        <owl:imports rdf:resource="http://purl.org/pav/"/>
+        <owl:imports rdf:resource="http://www.loc.gov/mads/rdf/v1#"/>
+        <owl:imports rdf:resource="http://xmlns.com/foaf/0.1/"/>
+        <owl:imports rdf:resource="http://www.openarchives.org/ore/terms/"/>
+        <owl:imports rdf:resource="http://purl.org/dc/terms/"/>        
+    </owl:Ontology>
     
-    <!-- Extensions of external ontologies within the ld4l.org namespace. -->
+    <owl:Class rdf:about="http://ld4l.org/ontology#Thesis">
+        <rdfs:label>Thesis</rdfs:label>
+        <rdfs:comment>A thesis written in fulfillment of a graduate degree.</rdfs:comment>
+        <!-- Allowing for non-Text theses (e.g., composition, performance) --> 
+        <!-- <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Text" /> -->
+        <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Work" />
+    </owl:Class>
     
     <!-- 
-        INVERSE PROPERTIES
-        Declarations of new properties as inverses of properties in external
-        ontologies.
-        QUESTION: Should we first declare subproperties of the external 
-        property,and then an inverse of that, rather than a direct inverse of 
-        the external property?
-    -->   
-    
-    <!-- Inverses of Bibframe properties -->
+        Inverses of BIBFRAME properties.
+        NB Many of these will be altered as we modify the bibframe ontology.
+    -->      
     
     <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/ext#contentCategoryOf">
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Category"/>
@@ -224,14 +243,11 @@
         <rdfs:comment>Links an external Authority to a bf:Authority.</rdfs:comment>       
         <owl:inverseOf rdf:resource="http://bibframe.org/vocab/hasAuthority"/>
     </owl:ObjectProperty>        
-
+    
     
     <!-- Inverses of PAV properties -->
     
     <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/ext#authorOf">
-        <!-- 
-            No domain and range defined for pav:authoredBy, so omit them here.
-        -->
         <rdfs:label>author of</rdfs:label>
         <rdfs:comment>Author of a work.</rdfs:comment>       
         <owl:inverseOf rdf:resource="http://purl.org/pav/authoredBy"/>
@@ -239,7 +255,7 @@
     
     
     <!-- Inverse of relators:ths property -->
-
+    
     <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/ext#advisorOfThesis">
         <!-- 
             No domain and range defined for relators:ths, so omit them here.
