@@ -11,10 +11,12 @@
     xmlns:pav="http://purl.org/pav/"
     xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#"
     xmlns:ore="http://www.openarchives.org/ore/terms/"
+    xmlns:relators="http://id.loc.gov/vocabulary/relators/"
+    xmlns:schema="http://schema.org/" 
     xml:base="http://ld4l.org/ontology#">
 
     <owl:Ontology rdf:about="">
-        <owl:versionInfo></owl:versionInfo>
+        <owl:versionInfo>0.1</owl:versionInfo>
         <rdfs:comment>LD4L Ontology</rdfs:comment>
         <owl:imports rdf:resource="http://bibframe.org/vocab/"/>
         <owl:imports rdf:resource="http://www.w3.org/2006/vcard/ns#"/>
@@ -22,7 +24,9 @@
         <owl:imports rdf:resource="http://www.loc.gov/mads/rdf/v1#"/>
         <owl:imports rdf:resource="http://xmlns.com/foaf/0.1/"/>
         <owl:imports rdf:resource="http://www.openarchives.org/ore/terms/"/>
-        <owl:imports rdf:resource="http://purl.org/dc/terms/"/>        
+        <owl:imports rdf:resource="http://purl.org/dc/terms/"/>      
+        <owl:imports rdf:resource="http://id.loc.gov/vocabulary/relators/"/>
+        <owl:imports rdf:resource="http://schema.org/"/>
     </owl:Ontology>
     
     <owl:Class rdf:about="http://ld4l.org/ontology#Thesis">
@@ -269,6 +273,13 @@
     
     <rdf:Description rdf:about="http://id.loc.gov/vocabulary/relators/ths">
         <rdfs:label>thesis advisor</rdfs:label>
+    </rdf:Description>
+    
+    
+    <!-- foaf:Person = schema:Person -->
+    
+    <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/">
+        <owl:equivalentClass rdf:resource="http://schema.org/Person"/>       
     </rdf:Description>
     
 </rdf:RDF>
