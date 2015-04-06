@@ -1675,11 +1675,13 @@
   
   <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/language">
     <rdfs:label>Language</rdfs:label>
+    <rdfs:domain rdf:resource="http://bibframe.org/vocab/Language"/>
     <rdfs:range rdf:resource="http://bibframe.org/vocab/Language"/>
     <rdfs:comment>Languages associated with a resource including those for multilingual resources and translated resources.</rdfs:comment>
   </owl:ObjectProperty>
   
   <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/languageOfPartUri">
+    <owl:inverseOf rdf:resource="http://bibframe.org/vocab/language"/>
     <rdfs:domain rdf:resource="http://bibframe.org/vocab/Language"/>
     <rdfs:label>Language of part URI</rdfs:label>
     <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
@@ -1784,6 +1786,7 @@
   </owl:ObjectProperty>
   
   <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/relatedTo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
     <rdfs:domain rdf:resource="http://bibframe.org/vocab/Resource"/>
     <rdfs:label>Related resource</rdfs:label>
     <rdfs:range rdf:resource="http://bibframe.org/vocab/Resource"/>
@@ -1792,6 +1795,7 @@
   </owl:ObjectProperty>
   
   <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/relatedWork">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
     <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
     <rdfs:label>Related Work</rdfs:label>
     <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
@@ -1800,6 +1804,7 @@
   </owl:ObjectProperty>
   
   <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/relatedInstance">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
     <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
     <rdfs:label>Related Instance</rdfs:label>
     <rdfs:range rdf:resource="http://bibframe.org/vocab/Instance"/>
@@ -1817,6 +1822,7 @@
   </owl:ObjectProperty>
   
   <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/instanceOf">
+    <owl:inverseOf rdf:resource="http://bibframe.org/vocab/hasInstance"/>
     <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
     <rdfs:label>Instance of</rdfs:label>
     <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
@@ -1835,6 +1841,7 @@
   </owl:ObjectProperty>
   
   <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/expressionOf">
+    <owl:inverseOf rdf:resource="http://bibframe.org/vocab/hasExpression"/>
     <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
     <rdfs:label>Expression of</rdfs:label>
     <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
@@ -1844,6 +1851,7 @@
   </owl:ObjectProperty>
   
   <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/accompaniedBy">
+    <owl:inverseOf rdf:resource="http://bibframe.org/vocab/accompanies"/>
     <rdfs:label>Accompanied by</rdfs:label>
     <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/relatedTo"/>
     <dcterms:modified>2014-04-10 (Range updated)</dcterms:modified>
@@ -1858,6 +1866,7 @@
   </owl:ObjectProperty>
   
   <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/derivativeOf">
+    <owl:inverseOf rdf:resource="http://bibframe.org/vocab/hasDerivative"/>
     <rdfs:label>Is derivative of</rdfs:label>
     <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/relatedTo"/>
     <dcterms:modified>2014-04-30 (New)</dcterms:modified>
@@ -1865,6 +1874,7 @@
   </owl:ObjectProperty>
   
   <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/descriptionOf">
+    <owl:inverseOf rdf:resource="http://bibframe.org/vocab/hasDescription"/>
     <rdfs:label>Is description of</rdfs:label>
     <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/relatedTo"/>
     <dcterms:modified>2014-04-30 (New)</dcterms:modified>
@@ -1886,6 +1896,7 @@
   </owl:ObjectProperty>
   
   <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasEquivalent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
     <rdfs:label>Equivalence</rdfs:label>
     <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/relatedTo"/>
     <dcterms:modified>2014-04-10 (Range updated)</dcterms:modified>
@@ -1900,6 +1911,7 @@
   </owl:ObjectProperty>
   
   <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/partOf">
+    <owl:inverseOf rdf:resource="http://bibframe.org/vocab/hasPart"/>
     <rdfs:label>Is part of</rdfs:label>
     <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/relatedTo"/>
     <dcterms:modified>2014-04-30 (New)</dcterms:modified>
@@ -1907,6 +1919,7 @@
   </owl:ObjectProperty>
   
   <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/precededBy">
+    <owl:inverseOf rdf:resource="http://bibframe.org/vocab/succeededBy"/>
     <rdfs:label>Preceded By</rdfs:label>
     <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/relatedTo"/>
     <dcterms:modified>2014-04-10 (Renamed)</dcterms:modified>
@@ -1921,6 +1934,7 @@
   </owl:ObjectProperty>
   
   <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/issuedWith">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
     <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
     <rdfs:label>Issued with</rdfs:label>
     <rdfs:range rdf:resource="http://bibframe.org/vocab/Instance"/>
@@ -1929,6 +1943,7 @@
   </owl:ObjectProperty>
   
   <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/otherPhysicalFormat">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
     <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
     <rdfs:label>Has other physical format</rdfs:label>
     <rdfs:range rdf:resource="http://bibframe.org/vocab/Instance"/>
@@ -1978,6 +1993,11 @@
   </owl:ObjectProperty>
   
   <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/otherEdition">
+    <!-- 
+      NB Not an owl:SymmetricProperty: see full description at
+      http://bibframe.org/vocab/otherEdition.html: "Work is a modification of a 
+      source work." 
+    --> 
     <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
     <rdfs:label>hasOtherEdition</rdfs:label>
     <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
@@ -2004,6 +2024,7 @@
   </owl:ObjectProperty>
   
   <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/subseriesOf">
+    <owl:inverseOf rdf:resource="http://bibframe.org/vocab/subseries"/>
     <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
     <rdfs:label>Subseries of</rdfs:label>
     <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
@@ -2021,6 +2042,7 @@
   </owl:ObjectProperty>
   
   <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/supplementTo">
+    <owl:inverseOf rdf:resource="http://bibframe.org/vocab/supplement"/>
     <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
     <rdfs:label>Supplement to</rdfs:label>
     <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
@@ -2037,6 +2059,7 @@
   </owl:ObjectProperty>
   
   <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/translationOf">
+    <owl:inverseOf rdf:resource="http://bibframe.org/vocab/translation"/>
     <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
     <rdfs:label>Translation of</rdfs:label>
     <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
@@ -2108,6 +2131,7 @@
   </owl:ObjectProperty>
   
   <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/unionOf">
+    <owl:inverseOf rdf:resource="http://bibframe.org/vocab/mergedToForm"/>
     <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
     <rdfs:label>Union of</rdfs:label>
     <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
@@ -2117,6 +2141,7 @@
   </owl:ObjectProperty>
   
   <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/absorbedBy">
+    <owl:inverseOf rdf:resource="http://bibframe.org/vocab/absorbed"/>
     <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
     <rdfs:label>Absorbed by</rdfs:label>
     <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
@@ -2126,6 +2151,7 @@
   </owl:ObjectProperty>
   
   <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/absorbedInPartBy">
+    <owl:inverseOf rdf:resource="http://bibframe.org/vocab/absorbedInPart"/>
     <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
     <rdfs:label>Absorbed in part by</rdfs:label>
     <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
@@ -2135,6 +2161,7 @@
   </owl:ObjectProperty>
   
   <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/continuedBy">
+    <owl:inverseOf rdf:resource="http://bibframe.org/vocab/continues"/>
     <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
     <rdfs:label>Continued by</rdfs:label>
     <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
@@ -2144,6 +2171,7 @@
   </owl:ObjectProperty>
   
   <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/continuedInPartBy">
+    <owl:inverseOf rdf:resource="http://bibframe.org/vocab/continuesInPart"/>
     <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
     <rdfs:label>Continued in part by</rdfs:label>
     <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
@@ -2171,6 +2199,7 @@
   </owl:ObjectProperty>
   
   <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/supersededBy">
+    <owl:inverseOf rdf:resource="http://bibframe.org/vocab/supersedes"/>
     <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
     <rdfs:label>Superseded by</rdfs:label>
     <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
@@ -2180,6 +2209,7 @@
   </owl:ObjectProperty>
   
   <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/supersededInPartBy">
+    <owl:inverseOf rdf:resource="http://bibframe.org/vocab/supersedesInPart"/>
     <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
     <rdfs:label>Superseded in part by</rdfs:label>
     <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
@@ -2237,6 +2267,7 @@
   </owl:ObjectProperty>
   
   <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasAnnotation">
+    <owl:inverseOf rdf:resource="http://bibframe.org/vocab/annotates"/>
     <rdfs:label>Has annotation</rdfs:label>
     <rdfs:range rdf:resource="http://bibframe.org/vocab/Annotation"/>
     <rdfs:comment>Resource has an annotation.</rdfs:comment>
@@ -2303,6 +2334,7 @@
   </owl:ObjectProperty>
   
   <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/reviewOf">
+    <owl:inverseOf rdf:resource="http://bibframe.org/vocab/review"/>
     <rdfs:domain rdf:resource="http://bibframe.org/vocab/Review"/>
     <rdfs:label>Resource reviewed</rdfs:label>
     <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
@@ -2334,6 +2366,7 @@
   </owl:ObjectProperty>
   
   <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/tableOfContentsFor">
+    <owl:inverseOf rdf:resource="http://bibframe.org/vocab/tableOfContents"/>
     <rdfs:domain rdf:resource="http://bibframe.org/vocab/TableOfContents"/>
     <rdfs:label>Table of contents of resource</rdfs:label>
     <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
