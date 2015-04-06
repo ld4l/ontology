@@ -319,13 +319,13 @@
   </owl:Class>
 
   <owl:Class rdf:about="http://bibframe.org/vocab/Monograph">
-    <rdfs:label>Single unit</rdfs:label>
+    <rdfs:label>Monograph</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Instance"/>
     <rdfs:comment>Single unit cataloging resource.</rdfs:comment>
   </owl:Class>
 
   <owl:Class rdf:about="http://bibframe.org/vocab/MultipartMonograph">
-    <rdfs:label>Multiple units</rdfs:label>
+    <rdfs:label>Multipart Monograph</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Instance"/>
     <rdfs:comment>Multiple unit cataloging resource that is complete or intended to be completed within a finite number of parts.</rdfs:comment>
   </owl:Class>
