@@ -5,6 +5,12 @@
      Attribution-Noncommercial-Share Alike 3.0 Unported License.
      http://creativecommons.org/licenses/by-sa/3.0/
 -->
+
+<!-- 
+  TODO Check with Lynette, Simeon, Naomi, Rob to see which terms they are
+  using for collections.
+-->
+  
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
          xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
          xmlns:owl="http://www.w3.org/2002/07/owl#"
