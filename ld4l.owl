@@ -27,6 +27,7 @@
         <owl:imports rdf:resource="http://purl.org/dc/terms/"/>      
         <owl:imports rdf:resource="http://id.loc.gov/vocabulary/relators/"/>
         <owl:imports rdf:resource="http://schema.org/"/>
+        <owl:imports rdf:resource="http://www.openarchives.org/ore/terms/"/>       
     </owl:Ontology>
     
     <owl:Class rdf:about="Thesis">
