@@ -26,6 +26,13 @@
     <owl:disjointWith rdf:resource="http://www.loc.gov/mads/rdf/v1#Variant"/>
   </owl:Class>
 
+  <owl:Class rdf:about="http://www.loc.gov/mads/rdf/v1#RWO">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A madsrdf:RWO is an abstract entity and identifies a Real World Object (RWO) identified by the label of a
+    madsrdf:Authority or madsrdf:DeprecatedAuthority.</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Real World Object</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  
   <rdf:Property rdf:about="http://www.loc.gov/mads/rdf/v1#identifiesRWO">
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
