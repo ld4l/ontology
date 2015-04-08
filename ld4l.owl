@@ -9,7 +9,6 @@
     xmlns:foaf="http://xmlns.com/foaf/0.1/"
     xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
     xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#"
-    xmlns:ore="http://www.openarchives.org/ore/terms/"
     xmlns:relators="http://id.loc.gov/vocabulary/relators/"
     xmlns:schema="http://schema.org/" 
     xml:base="http://ld4l.org/ontology#">
