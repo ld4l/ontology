@@ -11,6 +11,7 @@
     xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#"
     xmlns:relators="http://id.loc.gov/vocabulary/relators/"
     xmlns:schema="http://schema.org/" 
+    xmlns:oa="http://www.w3.org/ns/oa"
     xml:base="http://ld4l.org/ontology#">
 
     <owl:Ontology rdf:about="">
@@ -30,7 +31,7 @@
         <owl:imports rdf:resource="http://www.w3.org/ns/prov#"/>
         <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
         <owl:imports rdf:resource="http://www.lingvoj.org/ontology#"/>
-        <owl:imports rdf:resource="http://motools.sourceforge.net/event/event.html#"/>
+        <owl:imports rdf:resource="http://purl.org/NET/c4dm/event.owl#"/>
     </owl:Ontology>
     
     <owl:Class rdf:about="Thesis">
