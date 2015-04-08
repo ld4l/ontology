@@ -4,14 +4,6 @@
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
     xmlns:owl="http://www.w3.org/2002/07/owl#"
-    xmlns:dcterms="http://purl.org/dc/terms/" 
-    xmlns:bf="http://bibframe.org/vocab/"
-    xmlns:foaf="http://xmlns.com/foaf/0.1/"
-    xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
-    xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#"
-    xmlns:relators="http://id.loc.gov/vocabulary/relators/"
-    xmlns:schema="http://schema.org/" 
-    xmlns:oa="http://www.w3.org/ns/oa"
     xml:base="http://ld4l.org/ontology#">
 
     <owl:Ontology rdf:about="">
@@ -19,14 +11,11 @@
         <rdfs:comment>LD4L Ontology</rdfs:comment>
         <owl:imports rdf:resource="http://bibframe.org/vocab/"/>
         <owl:imports rdf:resource="http://www.w3.org/2006/vcard/ns#"/>
-        <owl:imports rdf:resource="http://purl.org/pav/"/>
         <owl:imports rdf:resource="http://www.loc.gov/mads/rdf/v1#"/>
         <owl:imports rdf:resource="http://xmlns.com/foaf/0.1/"/>
-        <owl:imports rdf:resource="http://www.openarchives.org/ore/terms/"/>
         <owl:imports rdf:resource="http://purl.org/dc/terms/"/>      
         <owl:imports rdf:resource="http://id.loc.gov/vocabulary/relators/"/>
         <owl:imports rdf:resource="http://schema.org/"/>
-        <owl:imports rdf:resource="http://www.openarchives.org/ore/terms/"/>  
         <owl:imports rdf:resource="http://www.w3.org/ns/oa#"/> 
         <owl:imports rdf:resource="http://www.w3.org/ns/prov#"/>
         <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
@@ -254,23 +243,9 @@
     </owl:ObjectProperty>        
     
     
-    <!-- Inverses of PAV properties -->
-    
-    <owl:ObjectProperty rdf:about="authorOf">
-        <rdfs:label>author of</rdfs:label>
-        <rdfs:comment>Author of a work.</rdfs:comment>       
-        <owl:inverseOf rdf:resource="http://purl.org/pav/authoredBy"/>
-    </owl:ObjectProperty>
-    
-    
-    <!-- Inverse of relators:ths property -->
+    <!-- Inverse of marcrel:ths property -->
     
     <owl:ObjectProperty rdf:about="advisorOfThesis">
-        <!-- 
-            No domain and range defined for relators:ths, so omit them here.
-            Implied domain is bf:Person, implied range is ld4l:Thesis or
-            bf:Work.
-        -->
         <rdfs:label>advisor of thesis</rdfs:label>
         <rdfs:comment>Advisor of a thesis.</rdfs:comment>       
         <owl:inverseOf rdf:resource="http://id.loc.gov/vocabulary/relators/ths"/>
