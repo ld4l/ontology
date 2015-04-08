@@ -22,6 +22,7 @@
     For the conditions listed above, rdfs:comments are used to indicate the conditions.
     
    -->
+  <!-- test commit -->
   <owl:Ontology rdf:about="http://www.w3.org/2004/02/skos/core">
     <dct:title xml:lang="en">SKOS Vocabulary</dct:title>
     <dct:contributor>Dave Beckett</dct:contributor>
