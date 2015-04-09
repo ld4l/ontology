@@ -52,6 +52,10 @@
     <owl:equivalentClass rdf:resource="http://purl.org/dc/terms/Agent"/>
 <!--    <rdfs:subClassOf><owl:Class rdf:about="http://xmlns.com/wordnet/1.6/Agent-3"/></rdfs:subClassOf> -->
   </rdfs:Class>
+  
+  <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Person">
+    <owl:equivalentClass rdf:resource="http://schema.org/Person"/>       
+  </rdf:Description>
 
 </rdf:RDF>
 
