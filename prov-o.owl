@@ -13,12 +13,6 @@
     rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
     rdfs:label "Activity" ;
     owl:disjointWith :Entity ;
-    :category "starting-point" ;
-    :component "entities-activities" ;
-    :constraints "http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#prov-dm-constraints-fig"^^xsd:anyURI ;
-    :definition "An activity is something that occurs over a period of time and acts upon or with entities; it may include consuming, processing, transforming, modifying, relocating, using, or generating entities." ;
-    :dm "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-Activity"^^xsd:anyURI ;
-    :n "http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-Activity"^^xsd:anyURI .
 
 :startedAtTime
     a owl:DatatypeProperty ;
@@ -27,8 +21,4 @@
     rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
     rdfs:label "startedAtTime" ;
     rdfs:range xsd:dateTime ;
-    :category "starting-point" ;
-    :component "entities-activities" ;
-    :editorialNote "It is the intent that the property chain holds: (prov:qualifiedStart o prov:atTime) rdfs:subPropertyOf prov:startedAtTime."@en ;
-    :qualifiedForm :Start, :atTime .
 
