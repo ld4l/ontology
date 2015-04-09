@@ -35,6 +35,14 @@
         <owl:imports rdf:resource="http://www.w3.org/2006/vcard/ns#"/>
     </owl:Ontology>
     
+    <owl:Class rdf:about="Thesis">
+        <rdfs:label>Thesis</rdfs:label>
+        <rdfs:comment>A thesis written in fulfillment of a graduate degree.</rdfs:comment>
+        <!-- Allowing for non-Text theses (e.g., composition, performance) --> 
+        <!-- <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Text" /> -->
+        <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Work" />
+    </owl:Class>
+    
     <!-- 
         Inverses of BIBFRAME properties.
         NB Many of these will be altered as we modify the bibframe ontology.
