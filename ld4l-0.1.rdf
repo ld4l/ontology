@@ -265,7 +265,7 @@
     
     <!-- foaf:Person = schema:Person -->
     
-    <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/">
+    <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Person">
         <owl:equivalentClass rdf:resource="http://schema.org/Person"/>       
     </rdf:Description>
     
