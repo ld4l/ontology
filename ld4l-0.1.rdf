@@ -241,11 +241,6 @@
         <owl:inverseOf rdf:resource="http://bibframe.org/vocab/heldBy"/>
     </owl:ObjectProperty>
     
-    <!-- 
-        ALTERNATIVE to hasGlobalAuthority / hasLocalAuthority defined in 
-        ld4l-core. 
-        2015-02-19 Commented those properties out of ld4l-core, since unused.
-     -->   
     <owl:ObjectProperty rdf:about="authorityFor">
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Resource"/>
         <rdfs:label>authority for</rdfs:label>
