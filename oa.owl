@@ -143,6 +143,13 @@ There is no OA class provided for &quot;Target&quot; as a target might be a body
 
     <!-- http://www.w3.org/ns/oa#motivatedBy -->
     
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/oa#motivatedBy">
+        <rdfs:label xml:lang="en">motivatedBy</rdfs:label>
+        <rdfs:comment xml:lang="en">The relationship between an Annotation and a Motivation, indicating the reasons why the Annotation was created. Each Annotation SHOULD have at least one oa:motivatedBy relationship, and MAY be more than 1.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/oa#"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/oa#Annotation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/oa#Motivation"/>
+    </owl:ObjectProperty>    
 
     <!-- http://www.w3.org/ns/oa#serializedBy -->
     
@@ -235,7 +242,13 @@ This &quot;aboutness&quot; may be further clarified or extended to notions such 
 
     <!-- http://www.w3.org/ns/oa#Motivation -->
     
-
+    <owl:Class rdf:about="http://www.w3.org/ns/oa#Motivation">
+        <rdfs:label xml:lang="en">Motivation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:comment xml:lang="en">The Motivation for creating an Annotation, indicated with oa:motivatedBy, is a reason for its creation, and might include things like oa:replying to another annotation, oa:commenting on a resource, or oa:linking to a related resource.Each Annotation SHOULD have at least one oa:motivatedBy relationship to an instance of oa:Motivation, which is a subClass of skos:Concept.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/oa#"/>
+    </owl:Class>
+    
     <!-- http://www.w3.org/ns/oa#Selector -->
     
 
