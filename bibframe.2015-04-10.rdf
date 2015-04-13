@@ -8,7 +8,7 @@
   xmlns:lvo="http://www.lingvoj.org/ontology#"
   xmlns:marcrel="http://id.loc.gov/vocabulary/relators/"
   xmlns:oa="http://www.w3.org/ns/oa#"
-  xmlns:prov="http://www.w3.org/ns/prov#"
+  xmlns:prov="http://www.w3.org/ns/prov-o#"
   xmlns:schema="http://schema.org/"
   xmlns:skos="http://www.w3.org/2004/02/skos/core"
   xmlns:owl="http://www.w3.org/2002/07/owl#" 
@@ -28,7 +28,7 @@
     <!-- <owl:imports rdf:resource="http://www.lingvoj.org/ontology#"/> -->
     <owl:imports rdf:resource="http://id.loc.gov/vocabulary/relators/"/>
     <owl:imports rdf:resource="http://www.w3.org/ns/oa#"/> 
-    <owl:imports rdf:resource="http://www.w3.org/ns/prov#"/>
+    <owl:imports rdf:resource="http://www.w3.org/ns/prov-o#"/>
     <owl:imports rdf:resource="http://schema.org/"/>
     <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
   </owl:Ontology>
