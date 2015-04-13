@@ -1887,28 +1887,6 @@
     
 
 
-    <!-- http://bibframe.org/vocab/eventAgent -->
-
-    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/eventAgent">
-        <rdfs:label>Agent for event</rdfs:label>
-        <dcterms:modified>2014-05-16 (Updated)</dcterms:modified>
-        <rdfs:comment>Person or organization associated with event.</rdfs:comment>
-        <rdfs:range rdf:resource="http://bibframe.org/vocab/Agent"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/eventAgentOf -->
-
-    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/eventAgentOf">
-        <rdfs:label>event agent of</rdfs:label>
-        <rdfs:comment>Relates a Person or Organization to an Event associated with it.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Agent"/>
-        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/eventAgent"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://bibframe.org/vocab/eventOf -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/eventOf">
@@ -1916,27 +1894,6 @@
         <rdfs:comment>Relates an Event to an associated Work.</rdfs:comment>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
         <owl:inverseOf rdf:resource="http://bibframe.org/vocab/event"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/eventPlace -->
-
-    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/eventPlace">
-        <rdfs:label>Place of event</rdfs:label>
-        <rdfs:comment>Geographic area associated with event.</rdfs:comment>
-        <rdfs:range rdf:resource="http://bibframe.org/vocab/Place"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/eventPlaceOf -->
-
-    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/eventPlaceOf">
-        <rdfs:label>location of</rdfs:label>
-        <rdfs:comment>Relates a Place to an Event that took place there.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Place"/>
-        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/eventPlace"/>
     </owl:ObjectProperty>
     
 
