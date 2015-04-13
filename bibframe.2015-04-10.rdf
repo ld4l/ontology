@@ -30,7 +30,7 @@
     <owl:imports rdf:resource="http://id.loc.gov/vocabulary/relators/ctb.madsrdf.rdf"/>
     <owl:imports rdf:resource="http://www.w3.org/ns/oa.owl"/> 
     <owl:imports rdf:resource="http://www.w3.org/ns/prov-o#"/>
-    <owl:imports rdf:resource="http://schema.rdfs.org/all.rdf "/>
+    <owl:imports rdf:resource="http://schema.rdfs.org/all.rdf"/>
     <owl:imports rdf:resource="http://www.w3.org/TR/skos-reference/skos.rdf"/>
   </owl:Ontology>
   
