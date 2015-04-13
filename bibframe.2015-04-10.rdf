@@ -8,7 +8,7 @@
   xmlns:lvo="http://www.lingvoj.org/ontology#"
   xmlns:marcrel="http://id.loc.gov/vocabulary/relators/"
   xmlns:oa="http://www.w3.org/ns/oa#"
-  xmlns:prov="http://www.w3.org/ns/prov-o#"
+  xmlns:prov-o="http://www.w3.org/ns/prov-o#"
   xmlns:schema="http://schema.org/"
   xmlns:skos="http://www.w3.org/2004/02/skos/core"
   xmlns:owl="http://www.w3.org/2002/07/owl#" 
@@ -21,7 +21,7 @@
   
   <owl:Ontology rdf:about="">
     <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Initially automatically generated.</owl:versionInfo>
-    <dcterms:modified>2014-12-10T20:23:05.638677Z</dcterms:modified>
+    <dcterms:modified>2015-04-10</dcterms:modified>
     <owl:imports rdf:resource="http://purl.org/dc/terms/"/>  
     <owl:imports rdf:resource="http://purl.org/NET/c4dm/event.owl#"/>
     <owl:imports rdf:resource="http://xmlns.com/foaf/0.1/"/>
