@@ -17,8 +17,7 @@
     <owl:imports rdf:resource="http://purl.org/dc/terms/"/>  
     <owl:imports rdf:resource="http://purl.org/NET/c4dm/event.owl#"/>
     <owl:imports rdf:resource="http://xmlns.com/foaf/0.1/"/>
-    <owl:imports rdf:resource="http://www.lingvoj.org/ontology#"/>
-    <owl:imports rdf:resource="http://www.loc.gov/mads/rdf/v1#"/>
+    <!-- <owl:imports rdf:resource="http://www.lingvoj.org/ontology#"/> -->
     <owl:imports rdf:resource="http://id.loc.gov/vocabulary/relators/"/>
     <owl:imports rdf:resource="http://www.w3.org/ns/oa#"/> 
     <owl:imports rdf:resource="http://www.w3.org/ns/prov#"/>
