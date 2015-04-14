@@ -3230,6 +3230,30 @@
                 <RecordInfo:recordContentSource rdf:resource="http://id.loc.gov/vocabulary/organizations/dlcmrc"/>
             </rdf:Description>
         </v1:adminMetadata>
+        <v1:adminMetadata>
+            <rdf:Description>
+                <rdf:type rdf:resource="&RecordInfo;RecordInfo"/>
+                <RecordInfo:recordContentSource rdf:resource="http://id.loc.gov/vocabulary/organizations/dlcmrc"/>
+            </rdf:Description>
+        </v1:adminMetadata>
+        <v1:adminMetadata>
+            <rdf:Description>
+                <rdf:type rdf:resource="&RecordInfo;RecordInfo"/>
+                <RecordInfo:recordContentSource rdf:resource="http://id.loc.gov/vocabulary/organizations/dlcmrc"/>
+            </rdf:Description>
+        </v1:adminMetadata>
+        <v1:adminMetadata>
+            <rdf:Description>
+                <rdf:type rdf:resource="&RecordInfo;RecordInfo"/>
+                <RecordInfo:recordContentSource rdf:resource="http://id.loc.gov/vocabulary/organizations/dlcmrc"/>
+            </rdf:Description>
+        </v1:adminMetadata>
+        <v1:adminMetadata>
+            <rdf:Description>
+                <rdf:type rdf:resource="&RecordInfo;RecordInfo"/>
+                <RecordInfo:recordContentSource rdf:resource="http://id.loc.gov/vocabulary/organizations/dlcmrc"/>
+            </rdf:Description>
+        </v1:adminMetadata>
     </owl:ObjectProperty>
     
 
@@ -3253,6 +3277,11 @@
                 <rdf:type rdf:resource="&v1;Topic"/>
             </rdf:Description>
         </v1:hasVariant>
+        <v1:hasVariant>
+            <rdf:Description>
+                <rdf:type rdf:resource="&v1;Topic"/>
+            </rdf:Description>
+        </v1:hasVariant>
         <v1:adminMetadata>
             <rdf:Description>
                 <rdf:type rdf:resource="&RecordInfo;RecordInfo"/>
@@ -3282,6 +3311,35 @@
                 <RecordInfo:recordContentSource rdf:resource="http://id.loc.gov/vocabulary/organizations/dlcmrc"/>
             </rdf:Description>
         </v1:adminMetadata>
+        <v1:adminMetadata>
+            <rdf:Description>
+                <rdf:type rdf:resource="&RecordInfo;RecordInfo"/>
+                <RecordInfo:recordContentSource rdf:resource="http://id.loc.gov/vocabulary/organizations/dlcmrc"/>
+            </rdf:Description>
+        </v1:adminMetadata>
+        <v1:adminMetadata>
+            <rdf:Description>
+                <rdf:type rdf:resource="&RecordInfo;RecordInfo"/>
+                <RecordInfo:recordContentSource rdf:resource="http://id.loc.gov/vocabulary/organizations/dlcmrc"/>
+            </rdf:Description>
+        </v1:adminMetadata>
+        <v1:adminMetadata>
+            <rdf:Description>
+                <rdf:type rdf:resource="&RecordInfo;RecordInfo"/>
+                <RecordInfo:recordContentSource rdf:resource="http://id.loc.gov/vocabulary/organizations/dlcmrc"/>
+            </rdf:Description>
+        </v1:adminMetadata>
+        <v1:adminMetadata>
+            <rdf:Description>
+                <rdf:type rdf:resource="&RecordInfo;RecordInfo"/>
+                <RecordInfo:recordContentSource rdf:resource="http://id.loc.gov/vocabulary/organizations/dlcmrc"/>
+            </rdf:Description>
+        </v1:adminMetadata>
+        <v1:hasVariant>
+            <rdf:Description>
+                <rdf:type rdf:resource="&v1;Topic"/>
+            </rdf:Description>
+        </v1:hasVariant>
     </owl:ObjectProperty>
     
 
@@ -5294,16 +5352,6 @@
     
 
 
-    <!-- http://bibframe.org/vocab/DescriptionAdminInfo -->
-
-    <owl:Class rdf:about="http://bibframe.org/vocab/DescriptionAdminInfo">
-        <rdfs:label>Administrative metadata</rdfs:label>
-        <dcterms:modified>2014-03-21 (Definition Updated)</dcterms:modified>
-        <rdfs:comment>Administrative metadata associated with the graph.</rdfs:comment>
-    </owl:Class>
-    
-
-
     <!-- http://bibframe.org/vocab/Electronic -->
 
     <owl:Class rdf:about="http://bibframe.org/vocab/Electronic">
@@ -5909,6 +5957,30 @@
                 <RecordInfo:recordContentSource rdf:resource="http://id.loc.gov/vocabulary/organizations/dlcmrc"/>
             </rdf:Description>
         </v1:adminMetadata>
+        <v1:adminMetadata>
+            <rdf:Description>
+                <rdf:type rdf:resource="&RecordInfo;RecordInfo"/>
+                <RecordInfo:recordContentSource rdf:resource="http://id.loc.gov/vocabulary/organizations/dlcmrc"/>
+            </rdf:Description>
+        </v1:adminMetadata>
+        <v1:adminMetadata>
+            <rdf:Description>
+                <rdf:type rdf:resource="&RecordInfo;RecordInfo"/>
+                <RecordInfo:recordContentSource rdf:resource="http://id.loc.gov/vocabulary/organizations/dlcmrc"/>
+            </rdf:Description>
+        </v1:adminMetadata>
+        <v1:adminMetadata>
+            <rdf:Description>
+                <rdf:type rdf:resource="&RecordInfo;RecordInfo"/>
+                <RecordInfo:recordContentSource rdf:resource="http://id.loc.gov/vocabulary/organizations/dlcmrc"/>
+            </rdf:Description>
+        </v1:adminMetadata>
+        <v1:adminMetadata>
+            <rdf:Description>
+                <rdf:type rdf:resource="&RecordInfo;RecordInfo"/>
+                <RecordInfo:recordContentSource rdf:resource="http://id.loc.gov/vocabulary/organizations/dlcmrc"/>
+            </rdf:Description>
+        </v1:adminMetadata>
     </owl:NamedIndividual>
     
 
@@ -5918,8 +5990,8 @@
     <owl:NamedIndividual rdf:about="&marcrel;ctb">
         <rdf:type rdf:resource="&v1;Authority"/>
         <rdf:type rdf:resource="&v1;Topic"/>
-        <v1:definitionNote>A person, family or organization responsible for making contributions to the resource. This includes those whose work has been contributed to a larger work, such as an anthology, serial publication, or other compilation of individual works. If a more specific role is available, prefer that, e.g. editor, compiler, illustrator</v1:definitionNote>
         <v1:editorialNote>Changed MARC def; Collaborator deprecated in MARC list and reference made</v1:editorialNote>
+        <v1:definitionNote>A person, family or organization responsible for making contributions to the resource. This includes those whose work has been contributed to a larger work, such as an anthology, serial publication, or other compilation of individual works. If a more specific role is available, prefer that, e.g. editor, compiler, illustrator</v1:definitionNote>
         <v1:code>ctb</v1:code>
         <v1:authoritativeLabel xml:lang="en">Contributor</v1:authoritativeLabel>
         <v1:isMemberOfMADSScheme rdf:resource="http://id.loc.gov/vocabulary/relators"/>
@@ -5933,6 +6005,17 @@
                 <rdf:type rdf:resource="&v1;Topic"/>
             </rdf:Description>
         </v1:hasVariant>
+        <v1:hasVariant>
+            <rdf:Description>
+                <rdf:type rdf:resource="&v1;Topic"/>
+            </rdf:Description>
+        </v1:hasVariant>
+        <v1:adminMetadata>
+            <rdf:Description>
+                <rdf:type rdf:resource="&RecordInfo;RecordInfo"/>
+                <RecordInfo:recordContentSource rdf:resource="http://id.loc.gov/vocabulary/organizations/dlcmrc"/>
+            </rdf:Description>
+        </v1:adminMetadata>
         <v1:adminMetadata>
             <rdf:Description>
                 <rdf:type rdf:resource="&RecordInfo;RecordInfo"/>
@@ -5956,6 +6039,29 @@
                 <rdf:type rdf:resource="&v1;Topic"/>
             </rdf:Description>
         </v1:hasVariant>
+        <v1:hasVariant>
+            <rdf:Description>
+                <rdf:type rdf:resource="&v1;Topic"/>
+            </rdf:Description>
+        </v1:hasVariant>
+        <v1:adminMetadata>
+            <rdf:Description>
+                <rdf:type rdf:resource="&RecordInfo;RecordInfo"/>
+                <RecordInfo:recordContentSource rdf:resource="http://id.loc.gov/vocabulary/organizations/dlcmrc"/>
+            </rdf:Description>
+        </v1:adminMetadata>
+        <v1:adminMetadata>
+            <rdf:Description>
+                <rdf:type rdf:resource="&RecordInfo;RecordInfo"/>
+                <RecordInfo:recordContentSource rdf:resource="http://id.loc.gov/vocabulary/organizations/dlcmrc"/>
+            </rdf:Description>
+        </v1:adminMetadata>
+        <v1:adminMetadata>
+            <rdf:Description>
+                <rdf:type rdf:resource="&RecordInfo;RecordInfo"/>
+                <RecordInfo:recordContentSource rdf:resource="http://id.loc.gov/vocabulary/organizations/dlcmrc"/>
+            </rdf:Description>
+        </v1:adminMetadata>
         <v1:adminMetadata>
             <rdf:Description>
                 <rdf:type rdf:resource="&RecordInfo;RecordInfo"/>
