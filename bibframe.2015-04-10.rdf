@@ -1876,7 +1876,7 @@
     <!-- http://bibframe.org/vocab/genre -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/genre">
-        <rdfs:label>Genre</rdfs:label>
+        <rdfs:label>hasGenre</rdfs:label>
         <rdfs:comment>Genre and other general characteristics associated with genre and form.</rdfs:comment>
         <dcterms:modified>2014-03-21 (New)</dcterms:modified>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Category"/>
@@ -1887,7 +1887,7 @@
     <!-- http://bibframe.org/vocab/genreOf -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/genreOf">
-        <rdfs:label>genre of</rdfs:label>
+        <rdfs:label>genreOf</rdfs:label>
         <rdfs:comment>Relates a Category to a Resource of that genre.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Category"/>
         <owl:inverseOf rdf:resource="http://bibframe.org/vocab/genre"/>
