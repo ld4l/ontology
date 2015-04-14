@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="User Entered Import Resolution" name="http://id.loc.gov/vocabulary/relators/" uri="marcrel.rdf"/>
+    <uri id="User Entered Import Resolution" name="http://bibframe.org/vocab/" uri="bibframe.2015-04-10.rdf"/>
+    <uri id="User Entered Import Resolution" name="http://purl.org/dc/terms/" uri="dcterms.2012-06-14.rdf"/>
+    <uri id="User Entered Import Resolution" name="http://motools.sourceforge.net/event/event.n3#" uri="event-1.01.rdf"/>
+    <uri id="User Entered Import Resolution" name="http://xmlns.com/foaf/0.1/" uri="foaf-0.1.rdf"/>
+    <uri id="User Entered Import Resolution" name="ttp://www.lingvoj.org/ontology#" uri="lingjov.ontology_v2.3.ttl"/>
+    <uri id="User Entered Import Resolution" name="http://www.w3.org/ns/oa#" uri="oa.2013-02-08.owl"/>
+    <uri id="User Entered Import Resolution" name="http://www.w3.org/ns/prov-o#" uri="oa.2013-02-08.owl"/> 
+    <uri id="User Entered Import Resolution" name="http://schema.org" uri="schema.org.rdf"/>
+    <uri id="User Entered Import Resolution" name="http://www.w3.org/TR/skos-reference/skos.rdf" uri="skos.2004-02.rdf"/> 
+</catalog>
+
