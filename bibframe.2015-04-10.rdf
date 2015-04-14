@@ -5328,6 +5328,7 @@
 
     <owl:Class rdf:about="http://bibframe.org/vocab/Instance">
         <rdfs:label>Instance</rdfs:label>
+        <owl:equivalentClass rdf:resource="http://www.rdaregistry.info/Elements/c/#C10007"/>
         <rdfs:comment>Resource reflecting an individual, material embodiment of the Work.</rdfs:comment>
     </owl:Class>
     
@@ -5847,6 +5848,15 @@
     <!-- http://www.loc.gov/mads/rdf/v1#Topic -->
 
     <owl:Class rdf:about="&v1;Topic"/>
+    
+
+
+    <!-- http://www.rdaregistry.info/Elements/c/#C10007 -->
+
+    <owl:Class rdf:about="http://www.rdaregistry.info/Elements/c/#C10007">
+        <rdfs:label rdf:datatype="&rdfs;Literal">Manifestation</rdfs:label>
+        <rdfs:comment rdf:datatype="&rdfs;Literal">The physical embodiment of an expression of a work.</rdfs:comment>
+    </owl:Class>
     
 
 
