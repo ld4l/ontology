@@ -4234,7 +4234,46 @@
         <rdfs:comment xml:lang="en">The file format, physical medium, or dimensions of the resource.</rdfs:comment>
         <dcterms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#formatT-001"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
-        <rdfs:range rdf:resource="&dcterms;MediaTypeOrExtent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/accessibilityFeature -->
+
+    <owl:ObjectProperty rdf:about="http://schema.org/accessibilityFeature">
+        <rdfs:label xml:lang="en">Accessibility Feature</rdfs:label>
+        <rdfs:comment xml:lang="en">Content features of the resource, such as accessible media, alternatives and supported enhancements for accessibility (WebSchemas wiki lists possible values).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/audience -->
+
+    <owl:ObjectProperty rdf:about="http://schema.org/audience">
+        <rdfs:label xml:lang="en">Audience</rdfs:label>
+        <rdfs:comment xml:lang="en">The intended audience of the item, i.e. the group for whom the item was created.</rdfs:comment>
+        <rdfs:range rdf:resource="http://schema.org/Audience"/>
+        <rdfs:isDefinedBy rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:isDefinedBy rdf:resource="http://schema.org/PlayAction"/>
+        <rdfs:isDefinedBy rdf:resource="http://schema.org/Product"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/permitAudience -->
+
+    <owl:ObjectProperty rdf:about="http://schema.org/permitAudience">
+        <rdfs:range rdf:resource="http://schema.org/Audience"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/serviceAudience -->
+
+    <owl:ObjectProperty rdf:about="http://schema.org/serviceAudience">
+        <rdfs:range rdf:resource="http://schema.org/Audience"/>
     </owl:ObjectProperty>
     
 
@@ -6028,15 +6067,67 @@
     
 
 
-    <!-- http://purl.org/dc/terms/MediaTypeOrExtent -->
+    <!-- http://schema.org/Audience -->
 
-    <owl:Class rdf:about="&dcterms;MediaTypeOrExtent"/>
+    <owl:Class rdf:about="http://schema.org/Audience">
+        <rdfs:label xml:lang="en">Audience</rdfs:label>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://schema.org/Audience"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/BusinessAudience -->
+
+    <owl:Class rdf:about="http://schema.org/BusinessAudience">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Audience"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/EducationalAudience -->
+
+    <owl:Class rdf:about="http://schema.org/EducationalAudience">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Audience"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/GovernmentOrganization -->
+
+    <owl:Class rdf:about="http://schema.org/GovernmentOrganization">
+        <rdfs:label xml:lang="en">Government Organization</rdfs:label>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://schema.org/GovernmentOrganization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/MedicalAudience -->
+
+    <owl:Class rdf:about="http://schema.org/MedicalAudience">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Audience"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/PeopleAudience -->
+
+    <owl:Class rdf:about="http://schema.org/PeopleAudience">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Audience"/>
+    </owl:Class>
     
 
 
     <!-- http://www.w3.org/2000/01/rdf-schema#Resource -->
 
     <owl:Class rdf:about="&rdfs;Resource"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#string -->
+
+    <owl:Class rdf:about="&xsd;string"/>
 </rdf:RDF>
 
 
