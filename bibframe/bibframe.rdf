@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 
+
 <!DOCTYPE rdf:RDF [
     <!ENTITY rda-fields "http://bibframe.org/rda/" >
     <!ENTITY marc-fields "http://bibframe.org/marc/" >
@@ -10,6 +11,7 @@
     <!ENTITY bfmain "http://bibframe.org/vocab/main" >
     <!ENTITY bframe "http://bibframe.org/vocab/frame" >
     <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY legacy "http://bibframe.org/vocab/legacy/" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY bf-abstract "http://bibframe.org/model-abstract/" >
     <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
@@ -33,10 +35,14 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:vocab="http://bibframe.org/vocab/"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:bframe="&vocab;frame">
+     xmlns:bframe="&vocab;frame"
+     xmlns:legacy="&vocab;legacy/">
     <owl:Ontology rdf:about="http://bibframe.org/vocab/">
+        <rdfs:label>MARC Legacy Terms</rdfs:label>
         <owl:versionInfo rdf:datatype="&xsd;string">Initially automatically generated.</owl:versionInfo>
         <dcterms:modified>2014-12-10T20:23:05.638677Z</dcterms:modified>
+        <dcterms:description>Legacy terms used to preserve MARC data in its existing form. Data will also be remodeled in the primary bibframe ontology, where possible.</dcterms:description>
+        <dcterms:title>MARC Legacy Terms</dcterms:title>
     </owl:Ontology>
     
 
@@ -1007,6 +1013,8 @@
         <rdfs:comment>Current or former publication frequency of a resource.</rdfs:comment>
         <rdfs:domain rdf:resource="&vocab;Instance"/>
     </owl:AnnotationProperty>
+    
+
 
     <!-- http://bibframe.org/vocab/hasAccompaniment -->
 
@@ -1513,6 +1521,7 @@
         <dcterms:modified>2014-04-10 (Updated subproperty)</dcterms:modified>
         <rdfs:subPropertyOf rdf:resource="&vocab;succeededBy"/>
     </owl:AnnotationProperty>
+    
 
 
     <!-- http://bibframe.org/vocab/musicPlate -->
@@ -1522,6 +1531,7 @@
         <rdfs:comment>Number assigned by a music publisher to a specific music publication.</rdfs:comment>
     </owl:AnnotationProperty>
     
+
 
     <!-- http://bibframe.org/vocab/musicPublisherNumber -->
 
@@ -2391,6 +2401,99 @@
     <owl:AnnotationProperty rdf:about="&vocab;workTitle">
         <rdfs:label>Work title</rdfs:label>
         <rdfs:comment>Title or form of title chosen to identify the work, such as a preferred title, preferred title with additions, uniform title, etc..</rdfs:comment>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://bibframe.org/vocab/legacy/duration -->
+
+    <owl:AnnotationProperty rdf:about="&vocab;legacy/duration">
+        <rdfs:label>Duration</rdfs:label>
+        <rdfs:comment>Information about the playing time or duration in an unstructured form, e.g., &quot;2 hours&quot;.</rdfs:comment>
+        <rdfs:domain rdf:resource="&vocab;Instance"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://bibframe.org/vocab/legacy/geographicCoverageNote -->
+
+    <owl:AnnotationProperty rdf:about="&vocab;legacy/geographicCoverageNote">
+        <rdfs:label>Geographic coverage</rdfs:label>
+        <rdfs:comment>Geographic entities covered by the resource.</rdfs:comment>
+        <rdfs:domain rdf:resource="&vocab;Work"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://bibframe.org/vocab/legacy/graphicScaleNote -->
+
+    <owl:AnnotationProperty rdf:about="&vocab;legacy/graphicScaleNote">
+        <rdfs:label>Graphic scale</rdfs:label>
+        <rdfs:comment>Textual information about scale, including the scale of graphic material item such as architectural drawings or three-dimensional artifacts.</rdfs:comment>
+        <rdfs:domain rdf:resource="&vocab;Instance"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://bibframe.org/vocab/legacy/languageNote -->
+
+    <owl:AnnotationProperty rdf:about="&vocab;legacy/languageNote">
+        <rdfs:label>Language note</rdfs:label>
+        <rdfs:comment>Note concerning the language of the material or its parts.</rdfs:comment>
+        <rdfs:domain rdf:resource="&vocab;Work"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://bibframe.org/vocab/legacy/modeOfIssuance -->
+
+    <owl:AnnotationProperty rdf:about="&vocab;legacy/modeOfIssuance">
+        <rdfs:label>Mode of issuance</rdfs:label>
+        <rdfs:comment>Categorization reflecting whether a resource is issued in one or more parts, the way it is updated, and its intended termination.</rdfs:comment>
+        <rdfs:domain rdf:resource="&vocab;Instance"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://bibframe.org/vocab/legacy/notation -->
+
+    <owl:AnnotationProperty rdf:about="&vocab;legacy/notation">
+        <rdfs:label>Notation system</rdfs:label>
+        <rdfs:comment>Information on the alphabet, script, or symbol system used to convey the content of the resource, including specialized scripts, typefaces, tactile notation, and musical notation.</rdfs:comment>
+        <rdfs:domain rdf:resource="&vocab;Instance"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://bibframe.org/vocab/legacy/providerStatement -->
+
+    <owl:AnnotationProperty rdf:about="&vocab;legacy/providerStatement">
+        <rdfs:label>Provider statement</rdfs:label>
+        <rdfs:comment>Transcribed provider statement</rdfs:comment>
+        <rdfs:domain rdf:resource="&vocab;Instance"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://bibframe.org/vocab/legacy/supplementaryContentNote -->
+
+    <owl:AnnotationProperty rdf:about="&vocab;legacy/supplementaryContentNote">
+        <rdfs:label>Supplementary content note</rdfs:label>
+        <rdfs:comment>Information on the presence of one or more bibliographies, discographies, filmographies, and/or other bibliographic references in a described resource or in accompanying material.</rdfs:comment>
+        <rdfs:domain rdf:resource="&vocab;Instance"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://bibframe.org/vocab/legacy/temporalCoverageNote -->
+
+    <owl:AnnotationProperty rdf:about="&vocab;legacy/temporalCoverageNote">
+        <rdfs:label>Temporal coverage</rdfs:label>
+        <rdfs:comment>Time period covered by the resource.</rdfs:comment>
+        <rdfs:domain rdf:resource="&vocab;Work"/>
     </owl:AnnotationProperty>
     
 
@@ -4327,11 +4430,11 @@ There is no OA class provided for &quot;Target&quot; as a target might be a body
     <owl:ObjectProperty rdf:about="&prov;atLocation">
         <rdfs:label>atLocation</rdfs:label>
         <prov:category>expanded</prov:category>
+        <rdfs:comment xml:lang="en">The Location of any resource.</rdfs:comment>
         <rdfs:comment>This property has multiple RDFS domains to suit multiple OWL Profiles. See &lt;a href=&quot;#owl-profile&quot;&gt;PROV-O OWL Profile&lt;/a&gt;.</rdfs:comment>
         <prov:editorialNote xml:lang="en">The naming of prov:atLocation parallels prov:atTime, and is not named prov:hadLocation to avoid conflicting with the convention that prov:had* properties are used on prov:Influence classes.</prov:editorialNote>
         <prov:editorialNote xml:lang="en">This property is not functional because the many values could be at a variety of granularies (In this building, in this room, in that chair).</prov:editorialNote>
         <prov:inverse>locationOf</prov:inverse>
-        <rdfs:comment xml:lang="en">The Location of any resource.</rdfs:comment>
         <rdfs:range rdf:resource="&prov;Location"/>
         <prov:sharesDefinitionWith rdf:resource="&prov;Location"/>
         <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
@@ -4743,7 +4846,7 @@ There is no OA class provided for &quot;Target&quot; as a target might be a body
         <rdfs:comment>Date or date and time on which the original metadata first created.</rdfs:comment>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- http://bibframe.org/vocab/custodialHistory -->
@@ -4818,8 +4921,6 @@ There is no OA class provided for &quot;Target&quot; as a target might be a body
     
 
 
-
-
     <!-- http://bibframe.org/vocab/edition -->
 
     <owl:DatatypeProperty rdf:about="&vocab;edition">
@@ -4868,8 +4969,6 @@ There is no OA class provided for &quot;Target&quot; as a target might be a body
         <rdfs:comment>Number and type of units and/or subunits making up a resource.</rdfs:comment>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
-    
-
     
 
 
@@ -4954,6 +5053,7 @@ There is no OA class provided for &quot;Target&quot; as a target might be a body
         <rdfs:comment>Geographic entities covered by the resource.</rdfs:comment>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
+    
 
 
     <!-- http://bibframe.org/vocab/identifierAssigner -->
@@ -5036,9 +5136,6 @@ There is no OA class provided for &quot;Target&quot; as a target might be a body
     
 
 
-    
-
-
     <!-- http://bibframe.org/vocab/languageOfPart -->
 
     <owl:DatatypeProperty rdf:about="&vocab;languageOfPart">
@@ -5056,10 +5153,6 @@ There is no OA class provided for &quot;Target&quot; as a target might be a body
         <rdfs:comment>Language code or name list from which value is taken.</rdfs:comment>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
-    
-
-
-
     
 
 
@@ -5121,7 +5214,6 @@ There is no OA class provided for &quot;Target&quot; as a target might be a body
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
-
 
 
     <!-- http://bibframe.org/vocab/musicNumber -->
@@ -5197,10 +5289,6 @@ There is no OA class provided for &quot;Target&quot; as a target might be a body
     
 
 
-
-    
-
-
     <!-- http://bibframe.org/vocab/preferredCitation -->
 
     <owl:DatatypeProperty rdf:about="&vocab;preferredCitation">
@@ -5228,7 +5316,6 @@ There is no OA class provided for &quot;Target&quot; as a target might be a body
         <rdfs:comment>The type of role played by the provider of an instance, e.g. production, publication, manufacture, distribution.</rdfs:comment>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
-
     
 
 
@@ -5416,14 +5503,6 @@ There is no OA class provided for &quot;Target&quot; as a target might be a body
     
 
 
-
-    
-
-
-
-    
-
-
     <!-- http://bibframe.org/vocab/title -->
 
     <owl:DatatypeProperty rdf:about="&vocab;title">
@@ -5503,7 +5582,142 @@ There is no OA class provided for &quot;Target&quot; as a target might be a body
         <rdfs:comment>Date or sequential designation of title variation.</rdfs:comment>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
+    
 
+
+    <!-- http://bibframe.org/vocab/legacy/creditsNote -->
+
+    <owl:DatatypeProperty rdf:about="&vocab;legacy/creditsNote">
+        <rdfs:label>Credits note</rdfs:label>
+        <rdfs:comment>Credits for persons or organizations, other than members of the cast, who have participated in the creation and/or production of the.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&vocab;note"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://bibframe.org/vocab/legacy/duration -->
+
+    <owl:DatatypeProperty rdf:about="&vocab;legacy/duration">
+        <rdfs:label>Duration</rdfs:label>
+        <rdfs:comment>Information about the playing time or duration in an unstructured form, e.g., &quot;2 hours&quot;.</rdfs:comment>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://bibframe.org/vocab/legacy/findingAidNote -->
+
+    <owl:DatatypeProperty rdf:about="&vocab;legacy/findingAidNote">
+        <rdfs:label>Index or finding aid note</rdfs:label>
+        <rdfs:comment>Note about availability of an index or finding aid.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&vocab;note"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://bibframe.org/vocab/legacy/graphicScaleNote -->
+
+    <owl:DatatypeProperty rdf:about="&vocab;legacy/graphicScaleNote">
+        <rdfs:label>Graphic scale</rdfs:label>
+        <rdfs:comment>Textual information about scale, including the scale of graphic material item such as architectural drawings or three-dimensional artifacts.</rdfs:comment>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://bibframe.org/vocab/legacy/languageNote -->
+
+    <owl:DatatypeProperty rdf:about="&vocab;legacy/languageNote">
+        <rdfs:label>Language note</rdfs:label>
+        <rdfs:comment>Note concerning the language of the material or its parts.</rdfs:comment>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://bibframe.org/vocab/legacy/legalDate -->
+
+    <owl:DatatypeProperty rdf:about="&vocab;legacy/legalDate">
+        <rdfs:label>Date of legal work</rdfs:label>
+        <rdfs:comment>Date of legal work, or promulgation of a law, or signing of a treaty.</rdfs:comment>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://bibframe.org/vocab/legacy/musicKey -->
+
+    <owl:DatatypeProperty rdf:about="&vocab;legacy/musicKey">
+        <rdfs:label>Music Key</rdfs:label>
+        <rdfs:comment>Pitch and mode for music.</rdfs:comment>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://bibframe.org/vocab/legacy/musicMediumNote -->
+
+    <owl:DatatypeProperty rdf:about="&vocab;legacy/musicMediumNote">
+        <rdfs:label>Music medium note</rdfs:label>
+        <rdfs:comment>Instrumental, vocal, and/or other medium of performance for which a musical resource was originally conceived, written or performed.</rdfs:comment>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://bibframe.org/vocab/legacy/performerNote -->
+
+    <owl:DatatypeProperty rdf:about="&vocab;legacy/performerNote">
+        <rdfs:label>Performer note</rdfs:label>
+        <rdfs:comment>Information about the participants, players, narrators, presenters, or performers.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&vocab;note"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://bibframe.org/vocab/legacy/providerStatement -->
+
+    <owl:DatatypeProperty rdf:about="&vocab;legacy/providerStatement">
+        <rdfs:label>Provider statement</rdfs:label>
+        <rdfs:comment>Transcribed provider statement</rdfs:comment>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://bibframe.org/vocab/legacy/supplementaryContentNote -->
+
+    <owl:DatatypeProperty rdf:about="&vocab;legacy/supplementaryContentNote">
+        <rdfs:label>Supplementary content note</rdfs:label>
+        <rdfs:comment>Information on the presence of one or more bibliographies, discographies, filmographies, and/or other bibliographic references in a described resource or in accompanying material.</rdfs:comment>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://bibframe.org/vocab/legacy/temporalCoverageNote -->
+
+    <owl:DatatypeProperty rdf:about="&vocab;legacy/temporalCoverageNote">
+        <rdfs:label>Temporal coverage</rdfs:label>
+        <rdfs:comment>Time period covered by the resource.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&vocab;note"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://bibframe.org/vocab/legacy/treatySignator -->
+
+    <owl:DatatypeProperty rdf:about="&vocab;legacy/treatySignator">
+        <rdfs:label>Signatory to a treaty</rdfs:label>
+        <rdfs:comment>Government of other party that has formally signed a treaty.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&vocab;note"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
 
 
     <!-- http://www.w3.org/ns/oa#annotatedAt -->
@@ -5545,6 +5759,7 @@ There SHOULD be exactly 1 oa:annotatedAt property per Annotation, and MUST NOT b
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
 
 
     <!-- http://bibframe.org/vocab/Agent -->
