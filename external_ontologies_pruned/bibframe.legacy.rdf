@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF 
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#" 
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+    xmlns:dcterms="http://purl.org/dc/terms/" 
+    xmlns:owl="http://www.w3.org/2002/07/owl#" 
+    xmlns:marc-fields="http://bibframe.org/marc/" 
+    xmlns:rda-fields="http://bibframe.org/rda/" 
+    xmlns:bf-abstract="http://bibframe.org/model-abstract/" 
+    xmlns:bframe="http://bibframe.org/vocab/frame" 
+    xmlns:bfmain="http://bibframe.org/vocab/main" 
+    xmlns:bf="http://bibframe.org/vocab/"
+    xml:base="http://bibframe.org/vocab/legacy/">
+
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></owl:versionInfo>
+        <dcterms:modified></dcterms:modified>
+        <dcterms:title>MARC Legacy</dcterms:title>
+        <dcterms:description>Legacy terms used to preserve MARC data in its existing form. Data will also be remodeled in the primary bibframe ontology, where possible.</dcterms:description>
+    </owl:Ontology>
+</rdf:RDF>
