@@ -129,7 +129,7 @@
         <rdfs:label>Index or finding aid note</rdfs:label>
         <rdfs:comment>Note about availability of an index or finding aid.</rdfs:comment>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
-        <rdfs:subClassOf rdf:resource="&bf;note"/>
+        <rdfs:subPropertyOf rdf:resource="&bf;note"/>
     </owl:DatatypeProperty>
 
     <!-- http://bibframe.org/vocab/legacy/legalDate -->
@@ -149,7 +149,7 @@
         <rdfs:label>Credits note</rdfs:label>
         <rdfs:comment>Credits for persons or organizations, other than members of the cast, who have participated in the creation and/or production of the.</rdfs:comment>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
-        <rdfs:subClassOf rdf:resource="&bf;note"/>
+        <rdfs:subPropertyOf rdf:resource="&bf;note"/>
     </owl:DatatypeProperty>
     
 
@@ -160,7 +160,7 @@
         <rdfs:comment>Time period covered by the resource.</rdfs:comment>
         <rdfs:domain rdf:resource="&bf;Work"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
-        <rdfs:subClassOf rdf:resource="&bf;note"/>
+        <rdfs:subPropertyOf rdf:resource="&bf;note"/>
     </owl:DatatypeProperty>
 
     <!-- http://bibframe.org/vocab/legacy/performerNote -->
@@ -169,7 +169,7 @@
         <rdfs:label>Performer note</rdfs:label>
         <rdfs:comment>Information about the participants, players, narrators, presenters, or performers.</rdfs:comment>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
-        <rdfs:subClassOf rdf:resource="&bf;note"/>
+        <rdfs:subPropertyOf rdf:resource="&bf;note"/>
     </owl:DatatypeProperty>
 
 
@@ -179,7 +179,7 @@
         <rdfs:label>Signatory to a treaty</rdfs:label>
         <rdfs:comment>Government of other party that has formally signed a treaty.</rdfs:comment>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
-        <rdfs:subClassOf rdf:resource="&bf;note"/>
+        <rdfs:subPropertyOf rdf:resource="&bf;note"/>
     </owl:DatatypeProperty>
     
 </rdf:RDF>
