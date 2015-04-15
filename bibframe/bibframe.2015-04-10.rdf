@@ -78,64 +78,10 @@
 
     
 
-
-    <!-- http://id.loc.gov/ontologies/RecordInfo#recordContentSource -->
-
-    <owl:AnnotationProperty rdf:about="&RecordInfo;recordContentSource"/>
-    
-
     <!-- http://purl.org/dc/elements/1.1/relation -->
 
     <owl:ObjectProperty rdf:about="&dc;relation"/>
    
-    
-
-
-    <!-- http://www.loc.gov/mads/rdf/v1#adminMetadata -->
-
-    <owl:AnnotationProperty rdf:about="&v1;adminMetadata"/>
-    
-
-
-    <!-- http://www.loc.gov/mads/rdf/v1#authoritativeLabel -->
-
-    <owl:AnnotationProperty rdf:about="&v1;authoritativeLabel"/>
-    
-
-
-    <!-- http://www.loc.gov/mads/rdf/v1#code -->
-
-    <owl:AnnotationProperty rdf:about="&v1;code"/>
-    
-
-
-    <!-- http://www.loc.gov/mads/rdf/v1#definitionNote -->
-
-    <owl:AnnotationProperty rdf:about="&v1;definitionNote"/>
-    
-
-
-    <!-- http://www.loc.gov/mads/rdf/v1#editorialNote -->
-
-    <owl:AnnotationProperty rdf:about="&v1;editorialNote"/>
-    
-
-
-    <!-- http://www.loc.gov/mads/rdf/v1#hasVariant -->
-
-    <owl:AnnotationProperty rdf:about="&v1;hasVariant"/>
-    
-
-
-    <!-- http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection -->
-
-    <owl:AnnotationProperty rdf:about="&v1;isMemberOfMADSCollection"/>
-    
-
-
-    <!-- http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme -->
-
-    <owl:AnnotationProperty rdf:about="&v1;isMemberOfMADSScheme"/>
     
 
 
