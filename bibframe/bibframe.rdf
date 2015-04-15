@@ -5,6 +5,7 @@
     <!ENTITY rda-fields "http://bibframe.org/rda/" >
     <!ENTITY marc-fields "http://bibframe.org/marc/" >
     <!ENTITY dcterms "http://purl.org/dc/terms/" >
+    <!ENTITY prov "http://www.w3.org/ns/prov#" >
     <!ENTITY vocab "http://bibframe.org/vocab/" >
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY bfmain "http://bibframe.org/vocab/main" >
@@ -21,6 +22,7 @@
 <rdf:RDF xmlns="http://bibframe.org/vocab/"
      xml:base="http://bibframe.org/vocab/"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:bf-abstract="http://bibframe.org/model-abstract/"
      xmlns:bfmain="&vocab;main"
      xmlns:dcterms="http://purl.org/dc/terms/"
@@ -2549,6 +2551,42 @@
     
 
 
+    <!-- http://www.w3.org/ns/prov#category -->
+
+    <owl:AnnotationProperty rdf:about="&prov;category"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#component -->
+
+    <owl:AnnotationProperty rdf:about="&prov;component"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#editorialNote -->
+
+    <owl:AnnotationProperty rdf:about="&prov;editorialNote"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#inverse -->
+
+    <owl:AnnotationProperty rdf:about="&prov;inverse"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#qualifiedForm -->
+
+    <owl:AnnotationProperty rdf:about="&prov;qualifiedForm"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#sharesDefinitionWith -->
+
+    <owl:AnnotationProperty rdf:about="&prov;sharesDefinitionWith"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -4278,6 +4316,41 @@
     
 
 
+    <!-- http://www.w3.org/ns/prov#atLocation -->
+
+    <owl:ObjectProperty rdf:about="&prov;atLocation">
+        <rdfs:label>atLocation</rdfs:label>
+        <prov:category>expanded</prov:category>
+        <rdfs:comment xml:lang="en">The Location of any resource.</rdfs:comment>
+        <rdfs:comment>This property has multiple RDFS domains to suit multiple OWL Profiles. See &lt;a href=&quot;#owl-profile&quot;&gt;PROV-O OWL Profile&lt;/a&gt;.</rdfs:comment>
+        <prov:editorialNote xml:lang="en">The naming of prov:atLocation parallels prov:atTime, and is not named prov:hadLocation to avoid conflicting with the convention that prov:had* properties are used on prov:Influence classes.</prov:editorialNote>
+        <prov:editorialNote xml:lang="en">This property is not functional because the many values could be at a variety of granularies (In this building, in this room, in that chair).</prov:editorialNote>
+        <prov:inverse>locationOf</prov:inverse>
+        <rdfs:range rdf:resource="&prov;Location"/>
+        <prov:sharesDefinitionWith rdf:resource="&prov;Location"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&prov;Activity"/>
+                    <rdf:Description rdf:about="&prov;Agent"/>
+                    <rdf:Description rdf:about="&prov;Entity"/>
+                    <rdf:Description rdf:about="&prov;InstantaneousEvent"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#locationOf -->
+
+    <owl:ObjectProperty rdf:about="&prov;locationOf">
+        <owl:inverseOf rdf:resource="&prov;atLocation"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -5528,6 +5601,23 @@
     
 
 
+    <!-- http://www.w3.org/ns/prov#startedAtTime -->
+
+    <owl:DatatypeProperty rdf:about="&prov;startedAtTime">
+        <rdfs:label>startedAtTime</rdfs:label>
+        <prov:editorialNote xml:lang="en">It is the intent that the property chain holds: (prov:qualifiedStart o prov:atTime) rdfs:subPropertyOf prov:startedAtTime.</prov:editorialNote>
+        <rdfs:comment xml:lang="en">The time at which an activity started. See also prov:endedAtTime.</rdfs:comment>
+        <prov:component>entities-activities</prov:component>
+        <prov:category>starting-point</prov:category>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+        <rdfs:domain rdf:resource="&prov;Activity"/>
+        <prov:qualifiedForm rdf:resource="&prov;Start"/>
+        <prov:qualifiedForm rdf:resource="&prov;atTime"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -6128,6 +6218,36 @@
     <!-- http://www.w3.org/2001/XMLSchema#string -->
 
     <owl:Class rdf:about="&xsd;string"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#Activity -->
+
+    <owl:Class rdf:about="&prov;Activity"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#Agent -->
+
+    <owl:Class rdf:about="&prov;Agent"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#Entity -->
+
+    <owl:Class rdf:about="&prov;Entity"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#InstantaneousEvent -->
+
+    <owl:Class rdf:about="&prov;InstantaneousEvent"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#Location -->
+
+    <owl:Class rdf:about="&prov;Location"/>
 </rdf:RDF>
 
 
