@@ -129,7 +129,7 @@
 
     <!-- http://purl.org/dc/elements/1.1/relation -->
 
-    <owl:AnnotationProperty rdf:about="&dc;relation"/>
+    <owl:ObjectProperty rdf:about="&dc;relation"/>
     
 
 
