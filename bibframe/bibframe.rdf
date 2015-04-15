@@ -9,8 +9,10 @@
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY bfmain "http://bibframe.org/vocab/main" >
     <!ENTITY bframe "http://bibframe.org/vocab/frame" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY bf-abstract "http://bibframe.org/model-abstract/" >
+    <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
 ]>
@@ -18,17 +20,19 @@
 
 <rdf:RDF xmlns="http://bibframe.org/vocab/"
      xml:base="http://bibframe.org/vocab/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:bf-abstract="http://bibframe.org/model-abstract/"
+     xmlns:bfmain="&vocab;main"
+     xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:rda-fields="http://bibframe.org/rda/"
      xmlns:marc-fields="http://bibframe.org/marc/"
-     xmlns:bf-abstract="http://bibframe.org/model-abstract/"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:bfmain="&vocab;main"
      xmlns:vocab="http://bibframe.org/vocab/"
-     xmlns:bframe="&vocab;frame"
-     xmlns:dcterms="http://purl.org/dc/terms/">
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:bframe="&vocab;frame">
     <owl:Ontology rdf:about="http://bibframe.org/vocab/">
         <owl:versionInfo rdf:datatype="&xsd;string">Initially automatically generated.</owl:versionInfo>
         <dcterms:modified>2014-12-10T20:23:05.638677Z</dcterms:modified>
@@ -52,8 +56,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;abbreviatedTitle">
         <rdfs:label>Abbreviated title</rdfs:label>
         <rdfs:comment>Title as abbreviated for indexing or identification.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Instance"/>
-        <rdfs:subPropertyOf rdf:resource="&vocab;instanceTitle"/>
     </owl:AnnotationProperty>
     
 
@@ -64,7 +66,6 @@
         <rdfs:label>Absorbed</rdfs:label>
         <rdfs:comment>Work that has been incorporated into another Work</rdfs:comment>
         <dcterms:modified>2014-04-10 (Updated subproperty)</dcterms:modified>
-        <rdfs:domain rdf:resource="&vocab;Work"/>
         <rdfs:subPropertyOf rdf:resource="&vocab;precededBy"/>
     </owl:AnnotationProperty>
     
@@ -76,7 +77,6 @@
         <rdfs:label>Absorbed by</rdfs:label>
         <dcterms:modified>2014-04-10 (Updated subproperty)</dcterms:modified>
         <rdfs:comment>Work that incorporates another work.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Work"/>
         <rdfs:subPropertyOf rdf:resource="&vocab;succeededBy"/>
     </owl:AnnotationProperty>
     
@@ -88,7 +88,6 @@
         <rdfs:label>Absorbed in part</rdfs:label>
         <rdfs:comment>Work that has been partially incorporated into another work.</rdfs:comment>
         <dcterms:modified>2014-04-10 (Updated subproperty)</dcterms:modified>
-        <rdfs:domain rdf:resource="&vocab;Work"/>
         <rdfs:subPropertyOf rdf:resource="&vocab;precededBy"/>
     </owl:AnnotationProperty>
     
@@ -100,7 +99,6 @@
         <rdfs:label>Absorbed in part by</rdfs:label>
         <dcterms:modified>2014-04-10 (Updated subproperty)</dcterms:modified>
         <rdfs:comment>Work that incorporates part of the content of another work.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Work"/>
         <rdfs:subPropertyOf rdf:resource="&vocab;succeededBy"/>
     </owl:AnnotationProperty>
     
@@ -143,7 +141,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;annotates">
         <rdfs:label>Target of Annotation</rdfs:label>
         <rdfs:comment>Resource to which the annotation relates.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Annotation"/>
     </owl:AnnotationProperty>
     
 
@@ -153,7 +150,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;annotationAssertedBy">
         <rdfs:label>Annotation asserted by</rdfs:label>
         <rdfs:comment>Annotation was asserted by the given entity.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Annotation"/>
     </owl:AnnotationProperty>
     
 
@@ -163,7 +159,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;annotationBody">
         <rdfs:label>Annotation Body</rdfs:label>
         <rdfs:comment>Content of the annotation about the resource.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Annotation"/>
     </owl:AnnotationProperty>
     
 
@@ -173,7 +168,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;annotationSource">
         <rdfs:label>Annotation Source</rdfs:label>
         <rdfs:comment>Source of the annotation.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Annotation"/>
     </owl:AnnotationProperty>
     
 
@@ -183,8 +177,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;ansi">
         <rdfs:label>ANSI number</rdfs:label>
         <rdfs:comment>American National Standards Institute identifier.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Instance"/>
-        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:AnnotationProperty>
     
 
@@ -194,7 +186,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;arrangement">
         <rdfs:label>Organization and Arrangement</rdfs:label>
         <rdfs:comment>Information about the organization and arrangement of a collection of resources.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Instance"/>
     </owl:AnnotationProperty>
     
 
@@ -244,7 +235,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;authorityAssigner">
         <rdfs:label>Authority assigner</rdfs:label>
         <rdfs:comment>Entity that assigned the information.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Authority"/>
     </owl:AnnotationProperty>
     
 
@@ -294,7 +284,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;carrierCategory">
         <rdfs:label>Carrier type</rdfs:label>
         <rdfs:comment>Categorization reflecting the format of the storage medium and housing of a carrier.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Instance"/>
     </owl:AnnotationProperty>
     
 
@@ -414,7 +403,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;classification">
         <rdfs:label>Classification</rdfs:label>
         <rdfs:comment>Classification number in any scheme.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Work"/>
     </owl:AnnotationProperty>
     
 
@@ -434,8 +422,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;classificationDdc">
         <rdfs:label>DDC Classification</rdfs:label>
         <rdfs:comment>Dewey Decimal Classification number used for subject access.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Work"/>
-        <rdfs:subPropertyOf rdf:resource="&vocab;classification"/>
     </owl:AnnotationProperty>
     
 
@@ -476,8 +462,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;classificationLcc">
         <rdfs:label>LCC Classification</rdfs:label>
         <rdfs:comment>Library of Congress Classification number used for subject access.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Work"/>
-        <rdfs:subPropertyOf rdf:resource="&vocab;classification"/>
     </owl:AnnotationProperty>
     
 
@@ -487,8 +471,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;classificationNlm">
         <rdfs:label>NLM classification</rdfs:label>
         <rdfs:comment>National Library of Medicine Classification number used for subject access</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Work"/>
-        <rdfs:subPropertyOf rdf:resource="&vocab;classification"/>
     </owl:AnnotationProperty>
     
 
@@ -508,7 +490,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;classificationNumberUri">
         <rdfs:label>Classification number URI</rdfs:label>
         <rdfs:comment>Classification number represented as a URI.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Classification"/>
     </owl:AnnotationProperty>
     
 
@@ -568,8 +549,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;classificationUdc">
         <rdfs:label>UDC Classification</rdfs:label>
         <rdfs:comment>Universal Decimal Classification number used for subject access.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Work"/>
-        <rdfs:subPropertyOf rdf:resource="&vocab;classification"/>
     </owl:AnnotationProperty>
     
 
@@ -579,8 +558,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;coden">
         <rdfs:label>CODEN</rdfs:label>
         <rdfs:comment>Identifier for scientific and technical periodical titles assigned by the International CODEN Section of Chemical Abstracts Service.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Instance"/>
-        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:AnnotationProperty>
     
 
@@ -601,7 +578,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;componentOf">
         <rdfs:label>Held item</rdfs:label>
         <rdfs:comment>Link to held material</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;HeldItem"/>
     </owl:AnnotationProperty>
     
 
@@ -621,7 +597,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;contentCategory">
         <rdfs:label>Content type</rdfs:label>
         <rdfs:comment>Categorization reflecting the fundamental form of communication in which the content is expressed and the human sense through which it is intended to be perceived.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Work"/>
     </owl:AnnotationProperty>
     
 
@@ -642,7 +617,6 @@
         <rdfs:label>Continued by</rdfs:label>
         <dcterms:modified>2014-04-10 (Updated subproperty)</dcterms:modified>
         <rdfs:comment>Work whose content continues an earlier work under a new title.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Work"/>
         <rdfs:subPropertyOf rdf:resource="&vocab;succeededBy"/>
     </owl:AnnotationProperty>
     
@@ -654,7 +628,6 @@
         <rdfs:label>Continued in part by</rdfs:label>
         <rdfs:comment>Work part of whose content separated from an earlier work to form a new work.</rdfs:comment>
         <dcterms:modified>2014-04-10 (Updated subproperty)</dcterms:modified>
-        <rdfs:domain rdf:resource="&vocab;Work"/>
         <rdfs:subPropertyOf rdf:resource="&vocab;succeededBy"/>
     </owl:AnnotationProperty>
     
@@ -666,7 +639,6 @@
         <rdfs:label>Continues</rdfs:label>
         <rdfs:comment>Work that is continued by the content of a later work under a new title.</rdfs:comment>
         <dcterms:modified>2014-04-10 (Updated subproperty)</dcterms:modified>
-        <rdfs:domain rdf:resource="&vocab;Work"/>
         <rdfs:subPropertyOf rdf:resource="&vocab;precededBy"/>
     </owl:AnnotationProperty>
     
@@ -678,7 +650,6 @@
         <rdfs:label>Continues in part</rdfs:label>
         <rdfs:comment>Work that split into two or more separate works with new titles.</rdfs:comment>
         <dcterms:modified>2014-04-10 (Updated subproperty)</dcterms:modified>
-        <rdfs:domain rdf:resource="&vocab;Work"/>
         <rdfs:subPropertyOf rdf:resource="&vocab;precededBy"/>
     </owl:AnnotationProperty>
     
@@ -709,8 +680,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;coverArt">
         <rdfs:label>Cover art</rdfs:label>
         <rdfs:comment>Cover art image.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;CoverArt"/>
-        <rdfs:subPropertyOf rdf:resource="&vocab;annotationBody"/>
     </owl:AnnotationProperty>
     
 
@@ -720,8 +689,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;coverArtFor">
         <rdfs:label>Cover art of instance</rdfs:label>
         <rdfs:comment>Resource to which the cover art pertains.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;CoverArt"/>
-        <rdfs:subPropertyOf rdf:resource="&vocab;annotates"/>
     </owl:AnnotationProperty>
     
 
@@ -731,8 +698,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;coverArtThumb">
         <rdfs:label>Thumbnail of cover art</rdfs:label>
         <rdfs:comment>Thumbnail version of cover art image.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;CoverArt"/>
-        <rdfs:subPropertyOf rdf:resource="&vocab;annotationBody"/>
     </owl:AnnotationProperty>
     
 
@@ -752,8 +717,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;dataSource">
         <rdfs:label>Has data source</rdfs:label>
         <rdfs:comment>Work that is a data source to which the described resource is related. It may contain information about other files, printed sources, or collection procedures.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Work"/>
-        <rdfs:subPropertyOf rdf:resource="&vocab;relatedTo"/>
     </owl:AnnotationProperty>
     
 
@@ -805,8 +768,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;dissertationIdentifier">
         <rdfs:label>Dissertation identifier</rdfs:label>
         <rdfs:comment>Identifier assigned to a dissertation for identification purposes .</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Work"/>
-        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:AnnotationProperty>
     
 
@@ -816,7 +777,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;dissertationInstitution">
         <rdfs:label>Degree issuing institution</rdfs:label>
         <rdfs:comment>Name of degree granting institution.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Work"/>
     </owl:AnnotationProperty>
     
 
@@ -846,8 +806,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;distribution">
         <rdfs:label>Distribution event</rdfs:label>
         <rdfs:comment>Information relating to distribution of an instance.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Instance"/>
-        <rdfs:subPropertyOf rdf:resource="&vocab;provider"/>
     </owl:AnnotationProperty>
     
 
@@ -857,8 +815,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;doi">
         <rdfs:label>DOI</rdfs:label>
         <rdfs:comment>Digital Object Identifier.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Instance"/>
-        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:AnnotationProperty>
     
 
@@ -878,8 +834,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;ean">
         <rdfs:label>EAN</rdfs:label>
         <rdfs:comment>International Article Identifier.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Instance"/>
-        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:AnnotationProperty>
     
 
@@ -910,7 +864,6 @@
         <rdfs:label>Electronic location</rdfs:label>
         <dcterms:modified>2014-04-28 (New)</dcterms:modified>
         <rdfs:comment>Electronic location from which the resource is available.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;HeldMaterial"/>
     </owl:AnnotationProperty>
     
 
@@ -931,7 +884,6 @@
         <rdfs:label>Event associated with content</rdfs:label>
         <rdfs:comment>Information about the geographic area/or time period covered by an event (e.g., a report).</rdfs:comment>
         <dcterms:modified>2014-05-16 (Updated)</dcterms:modified>
-        <rdfs:domain rdf:resource="&vocab;Work"/>
     </owl:AnnotationProperty>
     
 
@@ -942,7 +894,6 @@
         <rdfs:label>Agent for event</rdfs:label>
         <dcterms:modified>2014-05-16 (Updated)</dcterms:modified>
         <rdfs:comment>Person or organization associated with event.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Event"/>
     </owl:AnnotationProperty>
     
 
@@ -963,7 +914,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;eventPlace">
         <rdfs:label>Place of event</rdfs:label>
         <rdfs:comment>Geographic area associated with event.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Event"/>
     </owl:AnnotationProperty>
     
 
@@ -974,8 +924,6 @@
         <rdfs:label>Expression of</rdfs:label>
         <dcterms:modified>2014-04-10 (Updated subproperty)</dcterms:modified>
         <rdfs:comment>Expression has a related work. For use to connect Works under FRBR/RDA rules.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Work"/>
-        <rdfs:subPropertyOf rdf:resource="&vocab;relatedTo"/>
     </owl:AnnotationProperty>
     
 
@@ -995,7 +943,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;findingAid">
         <rdfs:label>Has finding aid</rdfs:label>
         <rdfs:comment>Relationship is to a finding aid or similar control materials for archival, visual, and manuscript resources.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Work"/>
         <rdfs:subPropertyOf rdf:resource="&vocab;accompaniedBy"/>
     </owl:AnnotationProperty>
     
@@ -1006,8 +953,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;fingerprint">
         <rdfs:label>Fingerprint identifier</rdfs:label>
         <rdfs:comment>Identifier that is used to assist in the identification of antiquarian books by recording information comprising groups of characters taken from specified positions on specified pages of the book.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Instance"/>
-        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:AnnotationProperty>
     
 
@@ -1096,7 +1041,6 @@
         <rdfs:label>Authority information</rdfs:label>
         <rdfs:comment>Link to controlled form of name or subject and other information about.</rdfs:comment>
         <dcterms:modified>2014-04-10 (Updated range)</dcterms:modified>
-        <rdfs:domain rdf:resource="&vocab;Authority"/>
     </owl:AnnotationProperty>
     
 
@@ -1140,8 +1084,6 @@
         <rdfs:label>Expressed as</rdfs:label>
         <rdfs:comment>Work has a related expression. For use to connect Works under FRBR/RDA rules.</rdfs:comment>
         <dcterms:modified>2014-04-10 (Updated subproperty)</dcterms:modified>
-        <rdfs:domain rdf:resource="&vocab;Work"/>
-        <rdfs:subPropertyOf rdf:resource="&vocab;relatedTo"/>
     </owl:AnnotationProperty>
     
 
@@ -1152,8 +1094,6 @@
         <rdfs:label>Instance of Work</rdfs:label>
         <rdfs:comment>Work has a related Instance/manifestation. For use to connect Works to Instances in the BIBFRAME structure.</rdfs:comment>
         <dcterms:modified>2014--03-21 (Updated definition)</dcterms:modified>
-        <rdfs:domain rdf:resource="&vocab;Work"/>
-        <rdfs:subPropertyOf rdf:resource="&vocab;relatedTo"/>
     </owl:AnnotationProperty>
     
 
@@ -1174,8 +1114,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;hdl">
         <rdfs:label>Handle</rdfs:label>
         <rdfs:comment>Unique and persistent identifier for digital objects developed by the Corporation for National Research Initiatives.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Instance"/>
-        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:AnnotationProperty>
     
 
@@ -1185,7 +1123,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;heldBy">
         <rdfs:label>Held by</rdfs:label>
         <rdfs:comment>Entity holding the item or from which it is available</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;HeldMaterial"/>
     </owl:AnnotationProperty>
     
 
@@ -1195,8 +1132,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;holdingFor">
         <rdfs:label>Holding for</rdfs:label>
         <rdfs:comment>Instance for which holding is reported</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;HeldMaterial"/>
-        <rdfs:subPropertyOf rdf:resource="&vocab;annotates"/>
     </owl:AnnotationProperty>
     
 
@@ -1206,7 +1141,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;identifier">
         <rdfs:label>Identifier</rdfs:label>
         <rdfs:comment>Number or code that uniquely identifies an entity.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Resource"/>
     </owl:AnnotationProperty>
     
 
@@ -1238,7 +1172,6 @@
         <rdfs:comment>Scheme within which the identifier is unique.</rdfs:comment>
         <dcterms:modified>2014-06-04 (Updated mapping)</dcterms:modified>
         <dcterms:modified>&apos;2014-06-04 (Updated range)</dcterms:modified>
-        <rdfs:domain rdf:resource="&vocab;Identifier"/>
     </owl:AnnotationProperty>
     
 
@@ -1278,7 +1211,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;index">
         <rdfs:label>Index</rdfs:label>
         <rdfs:comment>Work has an accompanying index</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Work"/>
         <rdfs:subPropertyOf rdf:resource="&vocab;accompaniedBy"/>
     </owl:AnnotationProperty>
     
@@ -1290,8 +1222,6 @@
         <rdfs:label>Instance of</rdfs:label>
         <rdfs:comment>Work this resource instantiates or manifests. For use to connect Instances to Works in the BIBFRAME structure.</rdfs:comment>
         <dcterms:modified>2014--03-21 (Updated definition)</dcterms:modified>
-        <rdfs:domain rdf:resource="&vocab;Instance"/>
-        <rdfs:subPropertyOf rdf:resource="&vocab;relatedTo"/>
     </owl:AnnotationProperty>
     
 
@@ -1301,7 +1231,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;instanceTitle">
         <rdfs:label>Instance title</rdfs:label>
         <rdfs:comment>Word, character, or group of words and/or characters that is the main name of an instance.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Instance"/>
     </owl:AnnotationProperty>
     
 
@@ -1311,8 +1240,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;isan">
         <rdfs:label>ISAN</rdfs:label>
         <rdfs:comment>International Standard Audiovisual Number.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Work"/>
-        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:AnnotationProperty>
     
 
@@ -1322,8 +1249,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;isbn">
         <rdfs:label>ISBN</rdfs:label>
         <rdfs:comment>International Standard Book Number.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Instance"/>
-        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:AnnotationProperty>
     
 
@@ -1333,8 +1258,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;isbn10">
         <rdfs:label>ISBN-10</rdfs:label>
         <rdfs:comment>10 digit version of the International Standard Book Number.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Instance"/>
-        <rdfs:subPropertyOf rdf:resource="&vocab;isbn"/>
     </owl:AnnotationProperty>
     
 
@@ -1344,8 +1267,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;isbn13">
         <rdfs:label>ISBN-13</rdfs:label>
         <rdfs:comment>13 digit version of the International Standard Book Number.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Instance"/>
-        <rdfs:subPropertyOf rdf:resource="&vocab;isbn"/>
     </owl:AnnotationProperty>
     
 
@@ -1355,8 +1276,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;ismn">
         <rdfs:label>ISMN</rdfs:label>
         <rdfs:comment>International Standard Music Number.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Instance"/>
-        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:AnnotationProperty>
     
 
@@ -1366,8 +1285,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;iso">
         <rdfs:label>ISO number</rdfs:label>
         <rdfs:comment>International Organization for Standardization standard number.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Instance"/>
-        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:AnnotationProperty>
     
 
@@ -1377,8 +1294,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;issn">
         <rdfs:label>ISSN</rdfs:label>
         <rdfs:comment>International Standard Serial Number identifier.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Instance"/>
-        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:AnnotationProperty>
     
 
@@ -1388,8 +1303,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;issnL">
         <rdfs:label>ISSN-L</rdfs:label>
         <rdfs:comment>International Standard Serial Number that links together various media versions of a continuing resource.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Work"/>
-        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:AnnotationProperty>
     
 
@@ -1399,8 +1312,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;issueNumber">
         <rdfs:label>Audio issue number</rdfs:label>
         <rdfs:comment>Number used to identify the issue designation, or serial identification, assigned by a publisher to a sound recording.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Instance"/>
-        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:AnnotationProperty>
     
 
@@ -1410,7 +1321,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;issuedWith">
         <rdfs:label>Issued with</rdfs:label>
         <rdfs:comment>Instance that is issued on the same carrier as the manifestation being described.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Instance"/>
         <rdfs:subPropertyOf rdf:resource="&vocab;hasAccompaniment"/>
     </owl:AnnotationProperty>
     
@@ -1422,8 +1332,6 @@
         <rdfs:label>ISTC</rdfs:label>
         <rdfs:comment>International Standard Text code, a numbering system developed to enable the unique identification of textual works.</rdfs:comment>
         <dcterms:modified>a,z</dcterms:modified>
-        <rdfs:domain rdf:resource="&vocab;Work"/>
-        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:AnnotationProperty>
     
 
@@ -1433,8 +1341,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;iswc">
         <rdfs:label>ISWC</rdfs:label>
         <rdfs:comment>International Standard Musical Work Code, a unique, persistent reference number for the identification of musical works.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Work"/>
-        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:AnnotationProperty>
     
 
@@ -1454,8 +1360,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;keyTitle">
         <rdfs:label>Key title</rdfs:label>
         <rdfs:comment>Unique title for a continuing resource that is assigned by the ISSN International Center in conjunction with an ISSN.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Instance"/>
-        <rdfs:subPropertyOf rdf:resource="&vocab;instanceTitle"/>
     </owl:AnnotationProperty>
     
 
@@ -1495,7 +1399,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;languageOfPartUri">
         <rdfs:label>Language of part URI</rdfs:label>
         <rdfs:comment>Language or notation system used to convey the content of the resource (associated with part or all of a resource).</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Language"/>
     </owl:AnnotationProperty>
     
 
@@ -1515,8 +1418,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;lcOverseasAcq">
         <rdfs:label>LC acquisition program</rdfs:label>
         <rdfs:comment>Identification number assigned by the Library of Congress to works acquired through one of its overseas acquisition programs.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Instance"/>
-        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:AnnotationProperty>
     
 
@@ -1526,8 +1427,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;lccn">
         <rdfs:label>LCCN</rdfs:label>
         <rdfs:comment>Library of Congress Control Number, which identifies the resource description.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Instance"/>
-        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:AnnotationProperty>
     
 
@@ -1537,8 +1436,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;legalDeposit">
         <rdfs:label>Copyright number</rdfs:label>
         <rdfs:comment>Number assigned to a copyright or legal deposit, which Identifies a resource description.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Instance"/>
-        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:AnnotationProperty>
     
 
@@ -1558,7 +1455,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;local">
         <rdfs:label>Local identifier</rdfs:label>
         <rdfs:comment>Identifier established locally and not a standard number.</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:AnnotationProperty>
     
 
@@ -1568,8 +1464,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;manufacture">
         <rdfs:label>Manufacture event</rdfs:label>
         <rdfs:comment>Information relating to manufacture of an instance.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Instance"/>
-        <rdfs:subPropertyOf rdf:resource="&vocab;provider"/>
     </owl:AnnotationProperty>
     
 
@@ -1619,8 +1513,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;matrixNumber">
         <rdfs:label>Audio matrix number</rdfs:label>
         <rdfs:comment>Matrix number from the master from which a specific sound recording was pressed.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Instance"/>
-        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:AnnotationProperty>
     
 
@@ -1630,7 +1522,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;mediaCategory">
         <rdfs:label>Media type</rdfs:label>
         <rdfs:comment>Categorization reflecting the general type of intermediation device required to view, play, run, etc., the content of a resource.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Instance"/>
     </owl:AnnotationProperty>
     
 
@@ -1641,7 +1532,6 @@
         <rdfs:label>Merged to form</rdfs:label>
         <rdfs:comment>One of two or more works that come together to form a new work.</rdfs:comment>
         <dcterms:modified>2014-04-10 (Updated subproperty)</dcterms:modified>
-        <rdfs:domain rdf:resource="&vocab;Work"/>
         <rdfs:subPropertyOf rdf:resource="&vocab;succeededBy"/>
     </owl:AnnotationProperty>
     
@@ -1662,8 +1552,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;musicPlate">
         <rdfs:label>Music plate number</rdfs:label>
         <rdfs:comment>Number assigned by a music publisher to a specific music publication.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Instance"/>
-        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:AnnotationProperty>
     
 
@@ -1673,8 +1561,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;musicPublisherNumber">
         <rdfs:label>Music publisher number</rdfs:label>
         <rdfs:comment>Number assigned to a music publication other than an issue, matrix, or plate number.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Instance"/>
-        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:AnnotationProperty>
     
 
@@ -1684,8 +1570,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;nban">
         <rdfs:label>NBAN</rdfs:label>
         <rdfs:comment>National Bibliography Agency Number, which identifies the resource description.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Instance"/>
-        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:AnnotationProperty>
     
 
@@ -1695,8 +1579,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;nbn">
         <rdfs:label>NBN</rdfs:label>
         <rdfs:comment>National Bibliography Number, which identifies the resource description.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Instance"/>
-        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:AnnotationProperty>
     
 
@@ -1727,7 +1609,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;originPlace">
         <rdfs:label>Associated title place</rdfs:label>
         <rdfs:comment>Place from which the creation of the work originated.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Work"/>
     </owl:AnnotationProperty>
     
 
@@ -1737,7 +1618,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;originalVersion">
         <rdfs:label>Has original version</rdfs:label>
         <rdfs:comment>Instance is the original version of which this resource is a reproduction.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Work"/>
         <rdfs:subPropertyOf rdf:resource="&vocab;derivativeOf"/>
     </owl:AnnotationProperty>
     
@@ -1748,7 +1628,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;otherEdition">
         <rdfs:label>hasOtherEdition</rdfs:label>
         <rdfs:comment>Resource has other available editions, for example simultaneously published language editions or reprints.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Work"/>
         <rdfs:subPropertyOf rdf:resource="&vocab;derivativeOf"/>
     </owl:AnnotationProperty>
     
@@ -1760,7 +1639,6 @@
         <rdfs:label>Has other physical format</rdfs:label>
         <dcterms:modified>2014-10-14 (Updated)</dcterms:modified>
         <rdfs:comment>Resource that is manifested in another physical carrier.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Instance"/>
         <rdfs:subPropertyOf rdf:resource="&vocab;hasEquivalent"/>
     </owl:AnnotationProperty>
     
@@ -1802,8 +1680,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;postalRegistration">
         <rdfs:label>Postal registration number</rdfs:label>
         <rdfs:comment>Number assigned to a publication for which the specified postal service permits the use of a special mailing class privilege.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Instance"/>
-        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:AnnotationProperty>
     
 
@@ -1834,8 +1710,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;production">
         <rdfs:label>Production event</rdfs:label>
         <rdfs:comment>Information relating to production of an instance.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Instance"/>
-        <rdfs:subPropertyOf rdf:resource="&vocab;provider"/>
     </owl:AnnotationProperty>
     
 
@@ -1845,7 +1719,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;provider">
         <rdfs:label>Provider</rdfs:label>
         <rdfs:comment>Place, name, and/or date information relating to the publication, printing, distribution, issue, release, or production instance.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Instance"/>
     </owl:AnnotationProperty>
     
 
@@ -1865,7 +1738,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;providerName">
         <rdfs:label>Provider name</rdfs:label>
         <rdfs:comment>Name of the entity responsible for the publication, printing, distribution, issue, release or production of the instance.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Provider"/>
     </owl:AnnotationProperty>
     
 
@@ -1875,7 +1747,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;providerPlace">
         <rdfs:label>Provider place</rdfs:label>
         <rdfs:comment>Place associated with the publication, printing, distribution, issue, release or production of the instance.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Provider"/>
     </owl:AnnotationProperty>
     
 
@@ -1905,8 +1776,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;publication">
         <rdfs:label>Publication event</rdfs:label>
         <rdfs:comment>Information relating to publication of an instance.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Instance"/>
-        <rdfs:subPropertyOf rdf:resource="&vocab;provider"/>
     </owl:AnnotationProperty>
     
 
@@ -1916,8 +1785,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;publisherNumber">
         <rdfs:label>Other publisher number</rdfs:label>
         <rdfs:comment>Number assigned by a publisher that is not one of the specific defined types.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Instance"/>
-        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:AnnotationProperty>
     
 
@@ -1928,7 +1795,6 @@
         <rdfs:label>Other authority information</rdfs:label>
         <rdfs:comment>Link to authority information</rdfs:comment>
         <dcterms:modified>2014-03-27 (Updated)</dcterms:modified>
-        <rdfs:domain rdf:resource="&vocab;Authority"/>
     </owl:AnnotationProperty>
     
 
@@ -1938,8 +1804,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;relatedInstance">
         <rdfs:label>Related Instance</rdfs:label>
         <rdfs:comment>General instance to instance relationship.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Instance"/>
-        <rdfs:subPropertyOf rdf:resource="&vocab;relatedTo"/>
     </owl:AnnotationProperty>
     
 
@@ -1950,7 +1814,6 @@
         <rdfs:label>Related resource</rdfs:label>
         <rdfs:comment>Any relationship between work or instance resources.</rdfs:comment>
         <dcterms:modified>2014-04-10 (Range updated)</dcterms:modified>
-        <rdfs:domain rdf:resource="&vocab;Resource"/>
     </owl:AnnotationProperty>
     
 
@@ -1960,8 +1823,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;relatedWork">
         <rdfs:label>Related Work</rdfs:label>
         <rdfs:comment>General work to work relationship.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Work"/>
-        <rdfs:subPropertyOf rdf:resource="&vocab;relatedTo"/>
     </owl:AnnotationProperty>
     
 
@@ -1982,8 +1843,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;reportNumber">
         <rdfs:label>Technical report number</rdfs:label>
         <rdfs:comment>Identification number of a report that is not a Standard Technical Report Number.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Instance"/>
-        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:AnnotationProperty>
     
 
@@ -1993,7 +1852,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;reproduction">
         <rdfs:label>Has reproduction</rdfs:label>
         <rdfs:comment>Instance that reproduces another Instance embodying the same work.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Instance"/>
         <rdfs:subPropertyOf rdf:resource="&vocab;hasEquivalent"/>
     </owl:AnnotationProperty>
     
@@ -2046,8 +1904,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;review">
         <rdfs:label>Review content</rdfs:label>
         <rdfs:comment>Review content.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Review"/>
-        <rdfs:subPropertyOf rdf:resource="&vocab;annotationBody"/>
     </owl:AnnotationProperty>
     
 
@@ -2057,8 +1913,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;reviewOf">
         <rdfs:label>Resource reviewed</rdfs:label>
         <rdfs:comment>Resource to which the review pertains.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Review"/>
-        <rdfs:subPropertyOf rdf:resource="&vocab;annotates"/>
     </owl:AnnotationProperty>
     
 
@@ -2069,7 +1923,6 @@
         <rdfs:label>Separated from</rdfs:label>
         <rdfs:comment>Work that spun off a part of its content to form a new work.</rdfs:comment>
         <dcterms:modified>2014-04-10 (Updated subproperty)</dcterms:modified>
-        <rdfs:domain rdf:resource="&vocab;Work"/>
         <rdfs:subPropertyOf rdf:resource="&vocab;precededBy"/>
     </owl:AnnotationProperty>
     
@@ -2101,7 +1954,6 @@
         <rdfs:label>Has series</rdfs:label>
         <rdfs:comment>Work in which the part has been issued; the title of the larger work appears on the part.</rdfs:comment>
         <dcterms:modified>2014-10-14 (Updated)</dcterms:modified>
-        <rdfs:domain rdf:resource="&vocab;Work"/>
         <rdfs:subPropertyOf rdf:resource="&vocab;partOf"/>
     </owl:AnnotationProperty>
     
@@ -2172,8 +2024,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;sici">
         <rdfs:label>SICI</rdfs:label>
         <rdfs:comment>Serial Item and Contribution Identifier.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Instance"/>
-        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:AnnotationProperty>
     
 
@@ -2194,7 +2044,6 @@
         <rdfs:label>Split into</rdfs:label>
         <dcterms:modified>2014-04-10 (Updated subproperty)</dcterms:modified>
         <rdfs:comment>One of two or more works resulting from the division of an earlier work into separate works.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Work"/>
         <rdfs:subPropertyOf rdf:resource="&vocab;succeededBy"/>
     </owl:AnnotationProperty>
     
@@ -2225,8 +2074,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;stockNumber">
         <rdfs:label>Stock number</rdfs:label>
         <rdfs:comment>Identification number such as distributor, publisher, or vendor number.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Instance"/>
-        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:AnnotationProperty>
     
 
@@ -2236,8 +2083,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;strn">
         <rdfs:label>STRN</rdfs:label>
         <rdfs:comment>Standard Technical Report Number.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Instance"/>
-        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:AnnotationProperty>
     
 
@@ -2247,8 +2092,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;studyNumber">
         <rdfs:label>Study number</rdfs:label>
         <rdfs:comment>Identification number for a computer data file.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Instance"/>
-        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:AnnotationProperty>
     
 
@@ -2269,7 +2112,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;subject">
         <rdfs:label>Subject</rdfs:label>
         <rdfs:comment>Subject term(s) describing a resource.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Work"/>
     </owl:AnnotationProperty>
     
 
@@ -2280,7 +2122,6 @@
         <rdfs:label>Has subseries</rdfs:label>
         <rdfs:comment>Work, which is part of another series, in which the part has been issued.</rdfs:comment>
         <dcterms:modified>2014-10-14 (Updated)</dcterms:modified>
-        <rdfs:domain rdf:resource="&vocab;Work"/>
         <rdfs:subPropertyOf rdf:resource="&vocab;hasPart"/>
     </owl:AnnotationProperty>
     
@@ -2292,7 +2133,6 @@
         <rdfs:label>Subseries of</rdfs:label>
         <rdfs:comment>Work in which the part consistently appears; the title of the larger work appears on all issues or parts of the subseries).</rdfs:comment>
         <dcterms:modified>2014-10-14 (Updated)</dcterms:modified>
-        <rdfs:domain rdf:resource="&vocab;Work"/>
         <rdfs:subPropertyOf rdf:resource="&vocab;partOf"/>
     </owl:AnnotationProperty>
     
@@ -2324,8 +2164,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;summary">
         <rdfs:label>Summary content</rdfs:label>
         <rdfs:comment>Summary or abstract of the target work or instance.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Summary"/>
-        <rdfs:subPropertyOf rdf:resource="&vocab;annotationBody"/>
     </owl:AnnotationProperty>
     
 
@@ -2347,7 +2185,6 @@
         <rdfs:label>Superseded by</rdfs:label>
         <dcterms:modified>2014-04-10 (Updated subproperty)</dcterms:modified>
         <rdfs:comment>Later Work used in place of an earlier work, usually because the later work contains updated or new information.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Work"/>
         <rdfs:subPropertyOf rdf:resource="&vocab;succeededBy"/>
     </owl:AnnotationProperty>
     
@@ -2359,7 +2196,6 @@
         <rdfs:label>Superseded in part by</rdfs:label>
         <rdfs:comment>Later Work used in part in place of an earlier work, usually because the later work contains updated or new information.</rdfs:comment>
         <dcterms:modified>2014-04-10 (Updated subproperty)</dcterms:modified>
-        <rdfs:domain rdf:resource="&vocab;Work"/>
         <rdfs:subPropertyOf rdf:resource="&vocab;succeededBy"/>
     </owl:AnnotationProperty>
     
@@ -2371,7 +2207,6 @@
         <rdfs:label>Supersedes</rdfs:label>
         <dcterms:modified>2014-04-10 (Updated subproperty)</dcterms:modified>
         <rdfs:comment>Earlier work whose content has been replaced by a later work, usually because the later work contains updated or new information.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Work"/>
         <rdfs:subPropertyOf rdf:resource="&vocab;precededBy"/>
     </owl:AnnotationProperty>
     
@@ -2383,7 +2218,6 @@
         <rdfs:label>Supersedes in part</rdfs:label>
         <dcterms:modified>2014-04-10 (Updated subproperty)</dcterms:modified>
         <rdfs:comment>Earlier work whose content has been partially replaced by a later work, usually because the later work contains updated or new information.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Work"/>
         <rdfs:subPropertyOf rdf:resource="&vocab;precededBy"/>
     </owl:AnnotationProperty>
     
@@ -2394,7 +2228,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;supplement">
         <rdfs:label>Has supplement</rdfs:label>
         <rdfs:comment>Work that updates or otherwise complements the predominant work.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Work"/>
         <rdfs:subPropertyOf rdf:resource="&vocab;accompaniedBy"/>
     </owl:AnnotationProperty>
     
@@ -2405,7 +2238,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;supplementTo">
         <rdfs:label>Supplement to</rdfs:label>
         <rdfs:comment>Work that is updated or otherwise complemented by the augmenting work.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Work"/>
         <rdfs:subPropertyOf rdf:resource="&vocab;accompanies"/>
     </owl:AnnotationProperty>
     
@@ -2426,7 +2258,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;systemNumber">
         <rdfs:label>System control number</rdfs:label>
         <rdfs:comment>Control number of a system other than LCCN or NBAN, which Identifies a resource description.</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:AnnotationProperty>
     
 
@@ -2436,8 +2267,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;tableOfContents">
         <rdfs:label>Table of contents content</rdfs:label>
         <rdfs:comment>Table of contents of the target work or instance.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;TableOfContents"/>
-        <rdfs:subPropertyOf rdf:resource="&vocab;annotationBody"/>
     </owl:AnnotationProperty>
     
 
@@ -2447,8 +2276,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;tableOfContentsFor">
         <rdfs:label>Table of contents of resource</rdfs:label>
         <rdfs:comment>Resource to which the table of contents pertains.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;TableOfContents"/>
-        <rdfs:subPropertyOf rdf:resource="&vocab;annotates"/>
     </owl:AnnotationProperty>
     
 
@@ -2540,7 +2367,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;translation">
         <rdfs:label>Has translation</rdfs:label>
         <rdfs:comment>Work that translates the text of the source entity into a language different from that of the original.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Work"/>
         <rdfs:subPropertyOf rdf:resource="&vocab;derivativeOf"/>
     </owl:AnnotationProperty>
     
@@ -2551,7 +2377,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;translationOf">
         <rdfs:label>Translation of</rdfs:label>
         <rdfs:comment>Work that has been translated, i.e., the text expressed in a language different from that of the original work).</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Work"/>
         <rdfs:subPropertyOf rdf:resource="&vocab;hasDerivative"/>
     </owl:AnnotationProperty>
     
@@ -2563,7 +2388,6 @@
         <rdfs:label>Union of</rdfs:label>
         <dcterms:modified>2014-04-10 (Updated subproperty)</dcterms:modified>
         <rdfs:comment>One of two or more works which came together to form a new work.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Work"/>
         <rdfs:subPropertyOf rdf:resource="&vocab;precededBy"/>
     </owl:AnnotationProperty>
     
@@ -2574,8 +2398,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;upc">
         <rdfs:label>UPC</rdfs:label>
         <rdfs:comment>Universal Product Code.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Instance"/>
-        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:AnnotationProperty>
     
 
@@ -2585,7 +2407,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;uri">
         <rdfs:label>URI</rdfs:label>
         <rdfs:comment>Uniform Resource Identifier.</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:AnnotationProperty>
     
 
@@ -2595,8 +2416,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;urn">
         <rdfs:label>URN</rdfs:label>
         <rdfs:comment>Uniform Resource Number.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Instance"/>
-        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:AnnotationProperty>
     
 
@@ -2606,8 +2425,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;videorecordingNumber">
         <rdfs:label>Videorecording number</rdfs:label>
         <rdfs:comment>Number assigned by a publisher to a videorecording.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Instance"/>
-        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:AnnotationProperty>
     
 
@@ -2617,14 +2434,135 @@
     <owl:AnnotationProperty rdf:about="&vocab;workTitle">
         <rdfs:label>Work title</rdfs:label>
         <rdfs:comment>Title or form of title chosen to identify the work, such as a preferred title, preferred title with additions, uniform title, etc..</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Work"/>
     </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/date -->
+
+    <owl:AnnotationProperty rdf:about="&dc;date"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/relation -->
+
+    <owl:AnnotationProperty rdf:about="&dc;relation"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+    <owl:AnnotationProperty rdf:about="&dcterms;created">
+        <rdfs:label xml:lang="en">Date Created</rdfs:label>
+        <dcterms:issued rdf:datatype="&xsd;date">2000-07-11</dcterms:issued>
+        <dcterms:modified rdf:datatype="&xsd;date">2008-01-14</dcterms:modified>
+        <rdfs:comment xml:lang="en">Date of creation of the resource.</rdfs:comment>
+        <dcterms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#created-003"/>
+        <rdfs:subPropertyOf rdf:resource="&dc;date"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:subPropertyOf rdf:resource="&dcterms;date"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/date -->
+
+    <owl:AnnotationProperty rdf:about="&dcterms;date"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="&dcterms;description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/hasPart -->
+
+    <owl:AnnotationProperty rdf:about="&dcterms;hasPart">
+        <rdfs:label xml:lang="en">Has Part</rdfs:label>
+        <dcterms:issued rdf:datatype="&xsd;date">2000-07-11</dcterms:issued>
+        <dcterms:modified rdf:datatype="&xsd;date">2008-01-14</dcterms:modified>
+        <rdfs:comment xml:lang="en">A related resource that is included either physically or logically in the described resource.</rdfs:comment>
+        <skos:note xml:lang="en">This term is intended to be used with non-literal values as defined in the DCMI Abstract Model (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to express this intention with a formal range declaration.</skos:note>
+        <dcterms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#hasPart-003"/>
+        <rdfs:subPropertyOf rdf:resource="&dc;relation"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:subPropertyOf rdf:resource="&dcterms;relation"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/hasVersion -->
+
+    <owl:AnnotationProperty rdf:about="&dcterms;hasVersion"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/isPartOf -->
+
+    <owl:AnnotationProperty rdf:about="&dcterms;isPartOf">
+        <rdfs:label xml:lang="en">Is Part Of</rdfs:label>
+        <dcterms:issued rdf:datatype="&xsd;date">2000-07-11</dcterms:issued>
+        <dcterms:modified rdf:datatype="&xsd;date">2008-01-14</dcterms:modified>
+        <rdfs:comment xml:lang="en">A related resource in which the described resource is physically or logically included.</rdfs:comment>
+        <skos:note xml:lang="en">This term is intended to be used with non-literal values as defined in the DCMI Abstract Model (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to express this intention with a formal range declaration.</skos:note>
+        <dcterms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#isPartOf-003"/>
+        <rdfs:subPropertyOf rdf:resource="&dc;relation"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:subPropertyOf rdf:resource="&dcterms;relation"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+    <owl:AnnotationProperty rdf:about="&dcterms;issued"/>
     
 
 
     <!-- http://purl.org/dc/terms/modified -->
 
     <owl:AnnotationProperty rdf:about="&dcterms;modified"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/relation -->
+
+    <owl:AnnotationProperty rdf:about="&dcterms;relation">
+        <rdfs:label xml:lang="en">Relation</rdfs:label>
+        <dcterms:issued rdf:datatype="&xsd;date">2008-01-14</dcterms:issued>
+        <dcterms:modified rdf:datatype="&xsd;date">2008-01-14</dcterms:modified>
+        <rdfs:comment xml:lang="en">A related resource.</rdfs:comment>
+        <dcterms:description xml:lang="en">Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system. </dcterms:description>
+        <skos:note xml:lang="en">This term is intended to be used with non-literal values as defined in the DCMI Abstract Model (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to express this intention with a formal range declaration.</skos:note>
+        <dcterms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#relationT-001"/>
+        <rdfs:subPropertyOf rdf:resource="&dc;relation"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#note -->
+
+    <owl:AnnotationProperty rdf:about="&skos;note"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="&xsd;date"/>
     
 
 
@@ -2644,7 +2582,9 @@
     <owl:ObjectProperty rdf:about="&vocab;abbreviatedTitle">
         <rdfs:label>Abbreviated title</rdfs:label>
         <rdfs:comment>Title as abbreviated for indexing or identification.</rdfs:comment>
+        <rdfs:domain rdf:resource="&vocab;Instance"/>
         <rdfs:range rdf:resource="&vocab;Title"/>
+        <rdfs:subPropertyOf rdf:resource="&vocab;instanceTitle"/>
     </owl:ObjectProperty>
     
 
@@ -2656,6 +2596,7 @@
         <rdfs:comment>Work that has been incorporated into another Work</rdfs:comment>
         <dcterms:modified>2014-04-10 (Updated subproperty)</dcterms:modified>
         <rdfs:range rdf:resource="&vocab;Work"/>
+        <rdfs:domain rdf:resource="&vocab;Work"/>
     </owl:ObjectProperty>
     
 
@@ -2667,6 +2608,7 @@
         <dcterms:modified>2014-04-10 (Updated subproperty)</dcterms:modified>
         <rdfs:comment>Work that incorporates another work.</rdfs:comment>
         <rdfs:range rdf:resource="&vocab;Work"/>
+        <rdfs:domain rdf:resource="&vocab;Work"/>
     </owl:ObjectProperty>
     
 
@@ -2678,6 +2620,7 @@
         <rdfs:comment>Work that has been partially incorporated into another work.</rdfs:comment>
         <dcterms:modified>2014-04-10 (Updated subproperty)</dcterms:modified>
         <rdfs:range rdf:resource="&vocab;Work"/>
+        <rdfs:domain rdf:resource="&vocab;Work"/>
     </owl:ObjectProperty>
     
 
@@ -2688,6 +2631,7 @@
         <rdfs:label>Absorbed in part by</rdfs:label>
         <dcterms:modified>2014-04-10 (Updated subproperty)</dcterms:modified>
         <rdfs:comment>Work that incorporates part of the content of another work.</rdfs:comment>
+        <rdfs:domain rdf:resource="&vocab;Work"/>
         <rdfs:range rdf:resource="&vocab;Work"/>
     </owl:ObjectProperty>
     
@@ -2708,6 +2652,7 @@
     <owl:ObjectProperty rdf:about="&vocab;annotates">
         <rdfs:label>Target of Annotation</rdfs:label>
         <rdfs:comment>Resource to which the annotation relates.</rdfs:comment>
+        <rdfs:domain rdf:resource="&vocab;Annotation"/>
         <rdfs:range rdf:resource="&rdfs;Resource"/>
     </owl:ObjectProperty>
     
@@ -2719,6 +2664,7 @@
         <rdfs:label>Annotation asserted by</rdfs:label>
         <rdfs:comment>Annotation was asserted by the given entity.</rdfs:comment>
         <rdfs:range rdf:resource="&vocab;Agent"/>
+        <rdfs:domain rdf:resource="&vocab;Annotation"/>
     </owl:ObjectProperty>
     
 
@@ -2728,6 +2674,7 @@
     <owl:ObjectProperty rdf:about="&vocab;annotationBody">
         <rdfs:label>Annotation Body</rdfs:label>
         <rdfs:comment>Content of the annotation about the resource.</rdfs:comment>
+        <rdfs:domain rdf:resource="&vocab;Annotation"/>
         <rdfs:range rdf:resource="&rdfs;Resource"/>
     </owl:ObjectProperty>
     
@@ -2739,6 +2686,7 @@
         <rdfs:label>Annotation Source</rdfs:label>
         <rdfs:comment>Source of the annotation.</rdfs:comment>
         <rdfs:range rdf:resource="&vocab;Agent"/>
+        <rdfs:domain rdf:resource="&vocab;Annotation"/>
     </owl:ObjectProperty>
     
 
@@ -2749,6 +2697,8 @@
         <rdfs:label>ANSI number</rdfs:label>
         <rdfs:comment>American National Standards Institute identifier.</rdfs:comment>
         <rdfs:range rdf:resource="&vocab;Identifier"/>
+        <rdfs:domain rdf:resource="&vocab;Instance"/>
+        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:ObjectProperty>
     
 
@@ -2759,6 +2709,7 @@
         <rdfs:label>Organization and Arrangement</rdfs:label>
         <rdfs:comment>Information about the organization and arrangement of a collection of resources.</rdfs:comment>
         <rdfs:range rdf:resource="&vocab;Arrangement"/>
+        <rdfs:domain rdf:resource="&vocab;Instance"/>
     </owl:ObjectProperty>
     
 
@@ -2769,6 +2720,7 @@
         <rdfs:label>Authority assigner</rdfs:label>
         <rdfs:comment>Entity that assigned the information.</rdfs:comment>
         <rdfs:range rdf:resource="&vocab;Agent"/>
+        <rdfs:domain rdf:resource="&vocab;Authority"/>
     </owl:ObjectProperty>
     
 
@@ -2779,6 +2731,7 @@
         <rdfs:label>Carrier type</rdfs:label>
         <rdfs:comment>Categorization reflecting the format of the storage medium and housing of a carrier.</rdfs:comment>
         <rdfs:range rdf:resource="&vocab;Category"/>
+        <rdfs:domain rdf:resource="&vocab;Instance"/>
     </owl:ObjectProperty>
     
 
@@ -2800,6 +2753,7 @@
         <rdfs:label>Classification</rdfs:label>
         <rdfs:comment>Classification number in any scheme.</rdfs:comment>
         <rdfs:range rdf:resource="&vocab;Classification"/>
+        <rdfs:domain rdf:resource="&vocab;Work"/>
     </owl:ObjectProperty>
     
 
@@ -2810,6 +2764,8 @@
         <rdfs:label>DDC Classification</rdfs:label>
         <rdfs:comment>Dewey Decimal Classification number used for subject access.</rdfs:comment>
         <rdfs:range rdf:resource="&vocab;Classification"/>
+        <rdfs:domain rdf:resource="&vocab;Work"/>
+        <rdfs:subPropertyOf rdf:resource="&vocab;classification"/>
     </owl:ObjectProperty>
     
 
@@ -2820,6 +2776,8 @@
         <rdfs:label>LCC Classification</rdfs:label>
         <rdfs:comment>Library of Congress Classification number used for subject access.</rdfs:comment>
         <rdfs:range rdf:resource="&vocab;Classification"/>
+        <rdfs:domain rdf:resource="&vocab;Work"/>
+        <rdfs:subPropertyOf rdf:resource="&vocab;classification"/>
     </owl:ObjectProperty>
     
 
@@ -2830,6 +2788,8 @@
         <rdfs:label>NLM classification</rdfs:label>
         <rdfs:comment>National Library of Medicine Classification number used for subject access</rdfs:comment>
         <rdfs:range rdf:resource="&vocab;Classification"/>
+        <rdfs:domain rdf:resource="&vocab;Work"/>
+        <rdfs:subPropertyOf rdf:resource="&vocab;classification"/>
     </owl:ObjectProperty>
     
 
@@ -2839,6 +2799,7 @@
     <owl:ObjectProperty rdf:about="&vocab;classificationNumberUri">
         <rdfs:label>Classification number URI</rdfs:label>
         <rdfs:comment>Classification number represented as a URI.</rdfs:comment>
+        <rdfs:domain rdf:resource="&vocab;Classification"/>
         <rdfs:range rdf:resource="&rdfs;Resource"/>
     </owl:ObjectProperty>
     
@@ -2850,6 +2811,8 @@
         <rdfs:label>UDC Classification</rdfs:label>
         <rdfs:comment>Universal Decimal Classification number used for subject access.</rdfs:comment>
         <rdfs:range rdf:resource="&vocab;Classification"/>
+        <rdfs:domain rdf:resource="&vocab;Work"/>
+        <rdfs:subPropertyOf rdf:resource="&vocab;classification"/>
     </owl:ObjectProperty>
     
 
@@ -2860,6 +2823,8 @@
         <rdfs:label>CODEN</rdfs:label>
         <rdfs:comment>Identifier for scientific and technical periodical titles assigned by the International CODEN Section of Chemical Abstracts Service.</rdfs:comment>
         <rdfs:range rdf:resource="&vocab;Identifier"/>
+        <rdfs:domain rdf:resource="&vocab;Instance"/>
+        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:ObjectProperty>
     
 
@@ -2869,6 +2834,7 @@
     <owl:ObjectProperty rdf:about="&vocab;componentOf">
         <rdfs:label>Held item</rdfs:label>
         <rdfs:comment>Link to held material</rdfs:comment>
+        <rdfs:domain rdf:resource="&vocab;HeldItem"/>
         <rdfs:range rdf:resource="&vocab;HeldMaterial"/>
     </owl:ObjectProperty>
     
@@ -2880,6 +2846,7 @@
         <rdfs:label>Content type</rdfs:label>
         <rdfs:comment>Categorization reflecting the fundamental form of communication in which the content is expressed and the human sense through which it is intended to be perceived.</rdfs:comment>
         <rdfs:range rdf:resource="&vocab;Category"/>
+        <rdfs:domain rdf:resource="&vocab;Work"/>
     </owl:ObjectProperty>
     
 
@@ -2890,6 +2857,7 @@
         <rdfs:label>Continued by</rdfs:label>
         <dcterms:modified>2014-04-10 (Updated subproperty)</dcterms:modified>
         <rdfs:comment>Work whose content continues an earlier work under a new title.</rdfs:comment>
+        <rdfs:domain rdf:resource="&vocab;Work"/>
         <rdfs:range rdf:resource="&vocab;Work"/>
     </owl:ObjectProperty>
     
@@ -2901,6 +2869,7 @@
         <rdfs:label>Continued in part by</rdfs:label>
         <rdfs:comment>Work part of whose content separated from an earlier work to form a new work.</rdfs:comment>
         <dcterms:modified>2014-04-10 (Updated subproperty)</dcterms:modified>
+        <rdfs:domain rdf:resource="&vocab;Work"/>
         <rdfs:range rdf:resource="&vocab;Work"/>
     </owl:ObjectProperty>
     
@@ -2912,6 +2881,7 @@
         <rdfs:label>Continues</rdfs:label>
         <rdfs:comment>Work that is continued by the content of a later work under a new title.</rdfs:comment>
         <dcterms:modified>2014-04-10 (Updated subproperty)</dcterms:modified>
+        <rdfs:domain rdf:resource="&vocab;Work"/>
         <rdfs:range rdf:resource="&vocab;Work"/>
     </owl:ObjectProperty>
     
@@ -2923,6 +2893,7 @@
         <rdfs:label>Continues in part</rdfs:label>
         <rdfs:comment>Work that split into two or more separate works with new titles.</rdfs:comment>
         <dcterms:modified>2014-04-10 (Updated subproperty)</dcterms:modified>
+        <rdfs:domain rdf:resource="&vocab;Work"/>
         <rdfs:range rdf:resource="&vocab;Work"/>
     </owl:ObjectProperty>
     
@@ -2943,6 +2914,8 @@
     <owl:ObjectProperty rdf:about="&vocab;coverArt">
         <rdfs:label>Cover art</rdfs:label>
         <rdfs:comment>Cover art image.</rdfs:comment>
+        <rdfs:domain rdf:resource="&vocab;CoverArt"/>
+        <rdfs:subPropertyOf rdf:resource="&vocab;annotationBody"/>
         <rdfs:range rdf:resource="&rdfs;Resource"/>
     </owl:ObjectProperty>
     
@@ -2953,7 +2926,9 @@
     <owl:ObjectProperty rdf:about="&vocab;coverArtFor">
         <rdfs:label>Cover art of instance</rdfs:label>
         <rdfs:comment>Resource to which the cover art pertains.</rdfs:comment>
+        <rdfs:domain rdf:resource="&vocab;CoverArt"/>
         <rdfs:range rdf:resource="&vocab;Instance"/>
+        <rdfs:subPropertyOf rdf:resource="&vocab;annotates"/>
     </owl:ObjectProperty>
     
 
@@ -2963,6 +2938,8 @@
     <owl:ObjectProperty rdf:about="&vocab;coverArtThumb">
         <rdfs:label>Thumbnail of cover art</rdfs:label>
         <rdfs:comment>Thumbnail version of cover art image.</rdfs:comment>
+        <rdfs:domain rdf:resource="&vocab;CoverArt"/>
+        <rdfs:subPropertyOf rdf:resource="&vocab;annotationBody"/>
         <rdfs:range rdf:resource="&rdfs;Resource"/>
     </owl:ObjectProperty>
     
@@ -2984,6 +2961,8 @@
         <rdfs:label>Has data source</rdfs:label>
         <rdfs:comment>Work that is a data source to which the described resource is related. It may contain information about other files, printed sources, or collection procedures.</rdfs:comment>
         <rdfs:range rdf:resource="&vocab;Work"/>
+        <rdfs:domain rdf:resource="&vocab;Work"/>
+        <rdfs:subPropertyOf rdf:resource="&vocab;relatedTo"/>
     </owl:ObjectProperty>
     
 
@@ -3046,6 +3025,8 @@
         <rdfs:label>Dissertation identifier</rdfs:label>
         <rdfs:comment>Identifier assigned to a dissertation for identification purposes .</rdfs:comment>
         <rdfs:range rdf:resource="&vocab;Identifier"/>
+        <rdfs:domain rdf:resource="&vocab;Work"/>
+        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:ObjectProperty>
     
 
@@ -3056,6 +3037,7 @@
         <rdfs:label>Degree issuing institution</rdfs:label>
         <rdfs:comment>Name of degree granting institution.</rdfs:comment>
         <rdfs:range rdf:resource="&vocab;Agent"/>
+        <rdfs:domain rdf:resource="&vocab;Work"/>
     </owl:ObjectProperty>
     
 
@@ -3065,7 +3047,9 @@
     <owl:ObjectProperty rdf:about="&vocab;distribution">
         <rdfs:label>Distribution event</rdfs:label>
         <rdfs:comment>Information relating to distribution of an instance.</rdfs:comment>
+        <rdfs:domain rdf:resource="&vocab;Instance"/>
         <rdfs:range rdf:resource="&vocab;Provider"/>
+        <rdfs:subPropertyOf rdf:resource="&vocab;provider"/>
     </owl:ObjectProperty>
     
 
@@ -3076,6 +3060,8 @@
         <rdfs:label>DOI</rdfs:label>
         <rdfs:comment>Digital Object Identifier.</rdfs:comment>
         <rdfs:range rdf:resource="&vocab;Identifier"/>
+        <rdfs:domain rdf:resource="&vocab;Instance"/>
+        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:ObjectProperty>
     
 
@@ -3086,6 +3072,8 @@
         <rdfs:label>EAN</rdfs:label>
         <rdfs:comment>International Article Identifier.</rdfs:comment>
         <rdfs:range rdf:resource="&vocab;Identifier"/>
+        <rdfs:domain rdf:resource="&vocab;Instance"/>
+        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:ObjectProperty>
     
 
@@ -3096,6 +3084,7 @@
         <rdfs:label>Electronic location</rdfs:label>
         <dcterms:modified>2014-04-28 (New)</dcterms:modified>
         <rdfs:comment>Electronic location from which the resource is available.</rdfs:comment>
+        <rdfs:domain rdf:resource="&vocab;HeldMaterial"/>
         <rdfs:range rdf:resource="&rdfs;Resource"/>
     </owl:ObjectProperty>
     
@@ -3108,6 +3097,7 @@
         <rdfs:comment>Information about the geographic area/or time period covered by an event (e.g., a report).</rdfs:comment>
         <dcterms:modified>2014-05-16 (Updated)</dcterms:modified>
         <rdfs:range rdf:resource="&vocab;Event"/>
+        <rdfs:domain rdf:resource="&vocab;Work"/>
     </owl:ObjectProperty>
     
 
@@ -3119,6 +3109,7 @@
         <dcterms:modified>2014-05-16 (Updated)</dcterms:modified>
         <rdfs:comment>Person or organization associated with event.</rdfs:comment>
         <rdfs:range rdf:resource="&vocab;Agent"/>
+        <rdfs:domain rdf:resource="&vocab;Event"/>
     </owl:ObjectProperty>
     
 
@@ -3128,6 +3119,7 @@
     <owl:ObjectProperty rdf:about="&vocab;eventPlace">
         <rdfs:label>Place of event</rdfs:label>
         <rdfs:comment>Geographic area associated with event.</rdfs:comment>
+        <rdfs:domain rdf:resource="&vocab;Event"/>
         <rdfs:range rdf:resource="&vocab;Place"/>
     </owl:ObjectProperty>
     
@@ -3140,6 +3132,8 @@
         <dcterms:modified>2014-04-10 (Updated subproperty)</dcterms:modified>
         <rdfs:comment>Expression has a related work. For use to connect Works under FRBR/RDA rules.</rdfs:comment>
         <rdfs:range rdf:resource="&vocab;Work"/>
+        <rdfs:domain rdf:resource="&vocab;Work"/>
+        <rdfs:subPropertyOf rdf:resource="&vocab;relatedTo"/>
     </owl:ObjectProperty>
     
 
@@ -3150,6 +3144,7 @@
         <rdfs:label>Has finding aid</rdfs:label>
         <rdfs:comment>Relationship is to a finding aid or similar control materials for archival, visual, and manuscript resources.</rdfs:comment>
         <rdfs:range rdf:resource="&vocab;Work"/>
+        <rdfs:domain rdf:resource="&vocab;Work"/>
     </owl:ObjectProperty>
     
 
@@ -3160,6 +3155,8 @@
         <rdfs:label>Fingerprint identifier</rdfs:label>
         <rdfs:comment>Identifier that is used to assist in the identification of antiquarian books by recording information comprising groups of characters taken from specified positions on specified pages of the book.</rdfs:comment>
         <rdfs:range rdf:resource="&vocab;Identifier"/>
+        <rdfs:domain rdf:resource="&vocab;Instance"/>
+        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:ObjectProperty>
     
 
@@ -3191,6 +3188,7 @@
         <rdfs:label>Authority information</rdfs:label>
         <rdfs:comment>Link to controlled form of name or subject and other information about.</rdfs:comment>
         <dcterms:modified>2014-04-10 (Updated range)</dcterms:modified>
+        <rdfs:domain rdf:resource="&vocab;Authority"/>
         <rdfs:range rdf:resource="&vocab;Resource"/>
     </owl:ObjectProperty>
     
@@ -3202,7 +3200,9 @@
         <rdfs:label>Expressed as</rdfs:label>
         <rdfs:comment>Work has a related expression. For use to connect Works under FRBR/RDA rules.</rdfs:comment>
         <dcterms:modified>2014-04-10 (Updated subproperty)</dcterms:modified>
+        <rdfs:domain rdf:resource="&vocab;Work"/>
         <rdfs:range rdf:resource="&vocab;Work"/>
+        <rdfs:subPropertyOf rdf:resource="&vocab;relatedTo"/>
     </owl:ObjectProperty>
     
 
@@ -3214,6 +3214,8 @@
         <rdfs:comment>Work has a related Instance/manifestation. For use to connect Works to Instances in the BIBFRAME structure.</rdfs:comment>
         <dcterms:modified>2014--03-21 (Updated definition)</dcterms:modified>
         <rdfs:range rdf:resource="&vocab;Instance"/>
+        <rdfs:domain rdf:resource="&vocab;Work"/>
+        <rdfs:subPropertyOf rdf:resource="&vocab;relatedTo"/>
     </owl:ObjectProperty>
     
 
@@ -3224,6 +3226,8 @@
         <rdfs:label>Handle</rdfs:label>
         <rdfs:comment>Unique and persistent identifier for digital objects developed by the Corporation for National Research Initiatives.</rdfs:comment>
         <rdfs:range rdf:resource="&vocab;Identifier"/>
+        <rdfs:domain rdf:resource="&vocab;Instance"/>
+        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:ObjectProperty>
     
 
@@ -3234,6 +3238,7 @@
         <rdfs:label>Held by</rdfs:label>
         <rdfs:comment>Entity holding the item or from which it is available</rdfs:comment>
         <rdfs:range rdf:resource="&vocab;Agent"/>
+        <rdfs:domain rdf:resource="&vocab;HeldMaterial"/>
     </owl:ObjectProperty>
     
 
@@ -3243,7 +3248,9 @@
     <owl:ObjectProperty rdf:about="&vocab;holdingFor">
         <rdfs:label>Holding for</rdfs:label>
         <rdfs:comment>Instance for which holding is reported</rdfs:comment>
+        <rdfs:domain rdf:resource="&vocab;HeldMaterial"/>
         <rdfs:range rdf:resource="&vocab;Instance"/>
+        <rdfs:subPropertyOf rdf:resource="&vocab;annotates"/>
     </owl:ObjectProperty>
     
 
@@ -3254,6 +3261,7 @@
         <rdfs:label>Identifier</rdfs:label>
         <rdfs:comment>Number or code that uniquely identifies an entity.</rdfs:comment>
         <rdfs:range rdf:resource="&vocab;Identifier"/>
+        <rdfs:domain rdf:resource="&vocab;Resource"/>
     </owl:ObjectProperty>
     
 
@@ -3265,6 +3273,7 @@
         <rdfs:comment>Scheme within which the identifier is unique.</rdfs:comment>
         <dcterms:modified>2014-06-04 (Updated mapping)</dcterms:modified>
         <dcterms:modified>&apos;2014-06-04 (Updated range)</dcterms:modified>
+        <rdfs:domain rdf:resource="&vocab;Identifier"/>
         <rdfs:range rdf:resource="&rdfs;Resource"/>
     </owl:ObjectProperty>
     
@@ -3275,6 +3284,7 @@
     <owl:ObjectProperty rdf:about="&vocab;index">
         <rdfs:label>Index</rdfs:label>
         <rdfs:comment>Work has an accompanying index</rdfs:comment>
+        <rdfs:domain rdf:resource="&vocab;Work"/>
         <rdfs:range rdf:resource="&vocab;Work"/>
     </owl:ObjectProperty>
     
@@ -3286,7 +3296,9 @@
         <rdfs:label>Instance of</rdfs:label>
         <rdfs:comment>Work this resource instantiates or manifests. For use to connect Instances to Works in the BIBFRAME structure.</rdfs:comment>
         <dcterms:modified>2014--03-21 (Updated definition)</dcterms:modified>
+        <rdfs:domain rdf:resource="&vocab;Instance"/>
         <rdfs:range rdf:resource="&vocab;Work"/>
+        <rdfs:subPropertyOf rdf:resource="&vocab;relatedTo"/>
     </owl:ObjectProperty>
     
 
@@ -3296,6 +3308,7 @@
     <owl:ObjectProperty rdf:about="&vocab;instanceTitle">
         <rdfs:label>Instance title</rdfs:label>
         <rdfs:comment>Word, character, or group of words and/or characters that is the main name of an instance.</rdfs:comment>
+        <rdfs:domain rdf:resource="&vocab;Instance"/>
         <rdfs:range rdf:resource="&vocab;Title"/>
     </owl:ObjectProperty>
     
@@ -3317,6 +3330,8 @@
         <rdfs:label>ISAN</rdfs:label>
         <rdfs:comment>International Standard Audiovisual Number.</rdfs:comment>
         <rdfs:range rdf:resource="&vocab;Identifier"/>
+        <rdfs:domain rdf:resource="&vocab;Work"/>
+        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:ObjectProperty>
     
 
@@ -3327,6 +3342,8 @@
         <rdfs:label>ISBN</rdfs:label>
         <rdfs:comment>International Standard Book Number.</rdfs:comment>
         <rdfs:range rdf:resource="&vocab;Identifier"/>
+        <rdfs:domain rdf:resource="&vocab;Instance"/>
+        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:ObjectProperty>
     
 
@@ -3337,6 +3354,8 @@
         <rdfs:label>ISBN-10</rdfs:label>
         <rdfs:comment>10 digit version of the International Standard Book Number.</rdfs:comment>
         <rdfs:range rdf:resource="&vocab;Identifier"/>
+        <rdfs:domain rdf:resource="&vocab;Instance"/>
+        <rdfs:subPropertyOf rdf:resource="&vocab;isbn"/>
     </owl:ObjectProperty>
     
 
@@ -3347,6 +3366,8 @@
         <rdfs:label>ISBN-13</rdfs:label>
         <rdfs:comment>13 digit version of the International Standard Book Number.</rdfs:comment>
         <rdfs:range rdf:resource="&vocab;Identifier"/>
+        <rdfs:domain rdf:resource="&vocab;Instance"/>
+        <rdfs:subPropertyOf rdf:resource="&vocab;isbn"/>
     </owl:ObjectProperty>
     
 
@@ -3357,6 +3378,8 @@
         <rdfs:label>ISMN</rdfs:label>
         <rdfs:comment>International Standard Music Number.</rdfs:comment>
         <rdfs:range rdf:resource="&vocab;Identifier"/>
+        <rdfs:domain rdf:resource="&vocab;Instance"/>
+        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:ObjectProperty>
     
 
@@ -3367,6 +3390,8 @@
         <rdfs:label>ISO number</rdfs:label>
         <rdfs:comment>International Organization for Standardization standard number.</rdfs:comment>
         <rdfs:range rdf:resource="&vocab;Identifier"/>
+        <rdfs:domain rdf:resource="&vocab;Instance"/>
+        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:ObjectProperty>
     
 
@@ -3377,6 +3402,8 @@
         <rdfs:label>ISSN</rdfs:label>
         <rdfs:comment>International Standard Serial Number identifier.</rdfs:comment>
         <rdfs:range rdf:resource="&vocab;Identifier"/>
+        <rdfs:domain rdf:resource="&vocab;Instance"/>
+        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:ObjectProperty>
     
 
@@ -3387,6 +3414,8 @@
         <rdfs:label>ISSN-L</rdfs:label>
         <rdfs:comment>International Standard Serial Number that links together various media versions of a continuing resource.</rdfs:comment>
         <rdfs:range rdf:resource="&vocab;Identifier"/>
+        <rdfs:domain rdf:resource="&vocab;Work"/>
+        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:ObjectProperty>
     
 
@@ -3397,6 +3426,8 @@
         <rdfs:label>Audio issue number</rdfs:label>
         <rdfs:comment>Number used to identify the issue designation, or serial identification, assigned by a publisher to a sound recording.</rdfs:comment>
         <rdfs:range rdf:resource="&vocab;Identifier"/>
+        <rdfs:domain rdf:resource="&vocab;Instance"/>
+        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:ObjectProperty>
     
 
@@ -3407,6 +3438,7 @@
         <rdfs:label>Issued with</rdfs:label>
         <rdfs:comment>Instance that is issued on the same carrier as the manifestation being described.</rdfs:comment>
         <rdfs:range rdf:resource="&vocab;Instance"/>
+        <rdfs:domain rdf:resource="&vocab;Instance"/>
     </owl:ObjectProperty>
     
 
@@ -3418,6 +3450,8 @@
         <rdfs:comment>International Standard Text code, a numbering system developed to enable the unique identification of textual works.</rdfs:comment>
         <dcterms:modified>a,z</dcterms:modified>
         <rdfs:range rdf:resource="&vocab;Identifier"/>
+        <rdfs:domain rdf:resource="&vocab;Work"/>
+        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:ObjectProperty>
     
 
@@ -3428,6 +3462,8 @@
         <rdfs:label>ISWC</rdfs:label>
         <rdfs:comment>International Standard Musical Work Code, a unique, persistent reference number for the identification of musical works.</rdfs:comment>
         <rdfs:range rdf:resource="&vocab;Identifier"/>
+        <rdfs:domain rdf:resource="&vocab;Work"/>
+        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:ObjectProperty>
     
 
@@ -3437,7 +3473,9 @@
     <owl:ObjectProperty rdf:about="&vocab;keyTitle">
         <rdfs:label>Key title</rdfs:label>
         <rdfs:comment>Unique title for a continuing resource that is assigned by the ISSN International Center in conjunction with an ISSN.</rdfs:comment>
+        <rdfs:domain rdf:resource="&vocab;Instance"/>
         <rdfs:range rdf:resource="&vocab;Title"/>
+        <rdfs:subPropertyOf rdf:resource="&vocab;instanceTitle"/>
     </owl:ObjectProperty>
     
 
@@ -3457,6 +3495,7 @@
     <owl:ObjectProperty rdf:about="&vocab;languageOfPartUri">
         <rdfs:label>Language of part URI</rdfs:label>
         <rdfs:comment>Language or notation system used to convey the content of the resource (associated with part or all of a resource).</rdfs:comment>
+        <rdfs:domain rdf:resource="&vocab;Language"/>
         <rdfs:range rdf:resource="&rdfs;Resource"/>
     </owl:ObjectProperty>
     
@@ -3468,6 +3507,8 @@
         <rdfs:label>LC acquisition program</rdfs:label>
         <rdfs:comment>Identification number assigned by the Library of Congress to works acquired through one of its overseas acquisition programs.</rdfs:comment>
         <rdfs:range rdf:resource="&vocab;Identifier"/>
+        <rdfs:domain rdf:resource="&vocab;Instance"/>
+        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:ObjectProperty>
     
 
@@ -3478,6 +3519,8 @@
         <rdfs:label>LCCN</rdfs:label>
         <rdfs:comment>Library of Congress Control Number, which identifies the resource description.</rdfs:comment>
         <rdfs:range rdf:resource="&vocab;Identifier"/>
+        <rdfs:domain rdf:resource="&vocab;Instance"/>
+        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:ObjectProperty>
     
 
@@ -3488,6 +3531,8 @@
         <rdfs:label>Copyright number</rdfs:label>
         <rdfs:comment>Number assigned to a copyright or legal deposit, which Identifies a resource description.</rdfs:comment>
         <rdfs:range rdf:resource="&vocab;Identifier"/>
+        <rdfs:domain rdf:resource="&vocab;Instance"/>
+        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:ObjectProperty>
     
 
@@ -3498,6 +3543,7 @@
         <rdfs:label>Local identifier</rdfs:label>
         <rdfs:comment>Identifier established locally and not a standard number.</rdfs:comment>
         <rdfs:range rdf:resource="&vocab;Identifier"/>
+        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:ObjectProperty>
     
 
@@ -3507,7 +3553,9 @@
     <owl:ObjectProperty rdf:about="&vocab;manufacture">
         <rdfs:label>Manufacture event</rdfs:label>
         <rdfs:comment>Information relating to manufacture of an instance.</rdfs:comment>
+        <rdfs:domain rdf:resource="&vocab;Instance"/>
         <rdfs:range rdf:resource="&vocab;Provider"/>
+        <rdfs:subPropertyOf rdf:resource="&vocab;provider"/>
     </owl:ObjectProperty>
     
 
@@ -3518,6 +3566,8 @@
         <rdfs:label>Audio matrix number</rdfs:label>
         <rdfs:comment>Matrix number from the master from which a specific sound recording was pressed.</rdfs:comment>
         <rdfs:range rdf:resource="&vocab;Identifier"/>
+        <rdfs:domain rdf:resource="&vocab;Instance"/>
+        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:ObjectProperty>
     
 
@@ -3528,6 +3578,7 @@
         <rdfs:label>Media type</rdfs:label>
         <rdfs:comment>Categorization reflecting the general type of intermediation device required to view, play, run, etc., the content of a resource.</rdfs:comment>
         <rdfs:range rdf:resource="&vocab;Category"/>
+        <rdfs:domain rdf:resource="&vocab;Instance"/>
     </owl:ObjectProperty>
     
 
@@ -3538,6 +3589,7 @@
         <rdfs:label>Merged to form</rdfs:label>
         <rdfs:comment>One of two or more works that come together to form a new work.</rdfs:comment>
         <dcterms:modified>2014-04-10 (Updated subproperty)</dcterms:modified>
+        <rdfs:domain rdf:resource="&vocab;Work"/>
         <rdfs:range rdf:resource="&vocab;Work"/>
     </owl:ObjectProperty>
     
@@ -3559,6 +3611,8 @@
         <rdfs:label>Music plate number</rdfs:label>
         <rdfs:comment>Number assigned by a music publisher to a specific music publication.</rdfs:comment>
         <rdfs:range rdf:resource="&vocab;Identifier"/>
+        <rdfs:domain rdf:resource="&vocab;Instance"/>
+        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:ObjectProperty>
     
 
@@ -3569,6 +3623,8 @@
         <rdfs:label>Music publisher number</rdfs:label>
         <rdfs:comment>Number assigned to a music publication other than an issue, matrix, or plate number.</rdfs:comment>
         <rdfs:range rdf:resource="&vocab;Identifier"/>
+        <rdfs:domain rdf:resource="&vocab;Instance"/>
+        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:ObjectProperty>
     
 
@@ -3579,6 +3635,8 @@
         <rdfs:label>NBAN</rdfs:label>
         <rdfs:comment>National Bibliography Agency Number, which identifies the resource description.</rdfs:comment>
         <rdfs:range rdf:resource="&vocab;Identifier"/>
+        <rdfs:domain rdf:resource="&vocab;Instance"/>
+        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:ObjectProperty>
     
 
@@ -3589,6 +3647,8 @@
         <rdfs:label>NBN</rdfs:label>
         <rdfs:comment>National Bibliography Number, which identifies the resource description.</rdfs:comment>
         <rdfs:range rdf:resource="&vocab;Identifier"/>
+        <rdfs:domain rdf:resource="&vocab;Instance"/>
+        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:ObjectProperty>
     
 
@@ -3599,6 +3659,7 @@
         <rdfs:label>Associated title place</rdfs:label>
         <rdfs:comment>Place from which the creation of the work originated.</rdfs:comment>
         <rdfs:range rdf:resource="&vocab;Place"/>
+        <rdfs:domain rdf:resource="&vocab;Work"/>
     </owl:ObjectProperty>
     
 
@@ -3608,6 +3669,7 @@
     <owl:ObjectProperty rdf:about="&vocab;originalVersion">
         <rdfs:label>Has original version</rdfs:label>
         <rdfs:comment>Instance is the original version of which this resource is a reproduction.</rdfs:comment>
+        <rdfs:domain rdf:resource="&vocab;Work"/>
         <rdfs:range rdf:resource="&vocab;Work"/>
     </owl:ObjectProperty>
     
@@ -3618,6 +3680,7 @@
     <owl:ObjectProperty rdf:about="&vocab;otherEdition">
         <rdfs:label>hasOtherEdition</rdfs:label>
         <rdfs:comment>Resource has other available editions, for example simultaneously published language editions or reprints.</rdfs:comment>
+        <rdfs:domain rdf:resource="&vocab;Work"/>
         <rdfs:range rdf:resource="&vocab;Work"/>
     </owl:ObjectProperty>
     
@@ -3629,6 +3692,7 @@
         <rdfs:label>Has other physical format</rdfs:label>
         <dcterms:modified>2014-10-14 (Updated)</dcterms:modified>
         <rdfs:comment>Resource that is manifested in another physical carrier.</rdfs:comment>
+        <rdfs:domain rdf:resource="&vocab;Instance"/>
         <rdfs:range rdf:resource="&vocab;Instance"/>
     </owl:ObjectProperty>
     
@@ -3640,6 +3704,8 @@
         <rdfs:label>Postal registration number</rdfs:label>
         <rdfs:comment>Number assigned to a publication for which the specified postal service permits the use of a special mailing class privilege.</rdfs:comment>
         <rdfs:range rdf:resource="&vocab;Identifier"/>
+        <rdfs:domain rdf:resource="&vocab;Instance"/>
+        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:ObjectProperty>
     
 
@@ -3649,7 +3715,9 @@
     <owl:ObjectProperty rdf:about="&vocab;production">
         <rdfs:label>Production event</rdfs:label>
         <rdfs:comment>Information relating to production of an instance.</rdfs:comment>
+        <rdfs:domain rdf:resource="&vocab;Instance"/>
         <rdfs:range rdf:resource="&vocab;Provider"/>
+        <rdfs:subPropertyOf rdf:resource="&vocab;provider"/>
     </owl:ObjectProperty>
     
 
@@ -3659,6 +3727,7 @@
     <owl:ObjectProperty rdf:about="&vocab;provider">
         <rdfs:label>Provider</rdfs:label>
         <rdfs:comment>Place, name, and/or date information relating to the publication, printing, distribution, issue, release, or production instance.</rdfs:comment>
+        <rdfs:domain rdf:resource="&vocab;Instance"/>
         <rdfs:range rdf:resource="&vocab;Provider"/>
     </owl:ObjectProperty>
     
@@ -3670,6 +3739,7 @@
         <rdfs:label>Provider name</rdfs:label>
         <rdfs:comment>Name of the entity responsible for the publication, printing, distribution, issue, release or production of the instance.</rdfs:comment>
         <rdfs:range rdf:resource="&vocab;Agent"/>
+        <rdfs:domain rdf:resource="&vocab;Provider"/>
     </owl:ObjectProperty>
     
 
@@ -3680,6 +3750,7 @@
         <rdfs:label>Provider place</rdfs:label>
         <rdfs:comment>Place associated with the publication, printing, distribution, issue, release or production of the instance.</rdfs:comment>
         <rdfs:range rdf:resource="&vocab;Place"/>
+        <rdfs:domain rdf:resource="&vocab;Provider"/>
     </owl:ObjectProperty>
     
 
@@ -3689,7 +3760,9 @@
     <owl:ObjectProperty rdf:about="&vocab;publication">
         <rdfs:label>Publication event</rdfs:label>
         <rdfs:comment>Information relating to publication of an instance.</rdfs:comment>
+        <rdfs:domain rdf:resource="&vocab;Instance"/>
         <rdfs:range rdf:resource="&vocab;Provider"/>
+        <rdfs:subPropertyOf rdf:resource="&vocab;provider"/>
     </owl:ObjectProperty>
     
 
@@ -3700,6 +3773,8 @@
         <rdfs:label>Other publisher number</rdfs:label>
         <rdfs:comment>Number assigned by a publisher that is not one of the specific defined types.</rdfs:comment>
         <rdfs:range rdf:resource="&vocab;Identifier"/>
+        <rdfs:domain rdf:resource="&vocab;Instance"/>
+        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:ObjectProperty>
     
 
@@ -3710,6 +3785,7 @@
         <rdfs:label>Other authority information</rdfs:label>
         <rdfs:comment>Link to authority information</rdfs:comment>
         <dcterms:modified>2014-03-27 (Updated)</dcterms:modified>
+        <rdfs:domain rdf:resource="&vocab;Authority"/>
         <rdfs:range rdf:resource="&vocab;Resource"/>
     </owl:ObjectProperty>
     
@@ -3721,6 +3797,8 @@
         <rdfs:label>Related Instance</rdfs:label>
         <rdfs:comment>General instance to instance relationship.</rdfs:comment>
         <rdfs:range rdf:resource="&vocab;Instance"/>
+        <rdfs:domain rdf:resource="&vocab;Instance"/>
+        <rdfs:subPropertyOf rdf:resource="&vocab;relatedTo"/>
     </owl:ObjectProperty>
     
 
@@ -3731,6 +3809,7 @@
         <rdfs:label>Related resource</rdfs:label>
         <rdfs:comment>Any relationship between work or instance resources.</rdfs:comment>
         <dcterms:modified>2014-04-10 (Range updated)</dcterms:modified>
+        <rdfs:domain rdf:resource="&vocab;Resource"/>
         <rdfs:range rdf:resource="&vocab;Resource"/>
     </owl:ObjectProperty>
     
@@ -3741,7 +3820,9 @@
     <owl:ObjectProperty rdf:about="&vocab;relatedWork">
         <rdfs:label>Related Work</rdfs:label>
         <rdfs:comment>General work to work relationship.</rdfs:comment>
+        <rdfs:domain rdf:resource="&vocab;Work"/>
         <rdfs:range rdf:resource="&vocab;Work"/>
+        <rdfs:subPropertyOf rdf:resource="&vocab;relatedTo"/>
     </owl:ObjectProperty>
     
 
@@ -3763,6 +3844,8 @@
         <rdfs:label>Technical report number</rdfs:label>
         <rdfs:comment>Identification number of a report that is not a Standard Technical Report Number.</rdfs:comment>
         <rdfs:range rdf:resource="&vocab;Identifier"/>
+        <rdfs:domain rdf:resource="&vocab;Instance"/>
+        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:ObjectProperty>
     
 
@@ -3773,6 +3856,7 @@
         <rdfs:label>Has reproduction</rdfs:label>
         <rdfs:comment>Instance that reproduces another Instance embodying the same work.</rdfs:comment>
         <rdfs:range rdf:resource="&vocab;Instance"/>
+        <rdfs:domain rdf:resource="&vocab;Instance"/>
     </owl:ObjectProperty>
     
 
@@ -3782,6 +3866,8 @@
     <owl:ObjectProperty rdf:about="&vocab;review">
         <rdfs:label>Review content</rdfs:label>
         <rdfs:comment>Review content.</rdfs:comment>
+        <rdfs:domain rdf:resource="&vocab;Review"/>
+        <rdfs:subPropertyOf rdf:resource="&vocab;annotationBody"/>
         <rdfs:range rdf:resource="&rdfs;Resource"/>
     </owl:ObjectProperty>
     
@@ -3792,7 +3878,9 @@
     <owl:ObjectProperty rdf:about="&vocab;reviewOf">
         <rdfs:label>Resource reviewed</rdfs:label>
         <rdfs:comment>Resource to which the review pertains.</rdfs:comment>
+        <rdfs:domain rdf:resource="&vocab;Review"/>
         <rdfs:range rdf:resource="&vocab;Work"/>
+        <rdfs:subPropertyOf rdf:resource="&vocab;annotates"/>
     </owl:ObjectProperty>
     
 
@@ -3803,6 +3891,7 @@
         <rdfs:label>Separated from</rdfs:label>
         <rdfs:comment>Work that spun off a part of its content to form a new work.</rdfs:comment>
         <dcterms:modified>2014-04-10 (Updated subproperty)</dcterms:modified>
+        <rdfs:domain rdf:resource="&vocab;Work"/>
         <rdfs:range rdf:resource="&vocab;Work"/>
     </owl:ObjectProperty>
     
@@ -3815,6 +3904,7 @@
         <rdfs:comment>Work in which the part has been issued; the title of the larger work appears on the part.</rdfs:comment>
         <dcterms:modified>2014-10-14 (Updated)</dcterms:modified>
         <rdfs:range rdf:resource="&vocab;Work"/>
+        <rdfs:domain rdf:resource="&vocab;Work"/>
     </owl:ObjectProperty>
     
 
@@ -3825,6 +3915,8 @@
         <rdfs:label>SICI</rdfs:label>
         <rdfs:comment>Serial Item and Contribution Identifier.</rdfs:comment>
         <rdfs:range rdf:resource="&vocab;Identifier"/>
+        <rdfs:domain rdf:resource="&vocab;Instance"/>
+        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:ObjectProperty>
     
 
@@ -3835,6 +3927,7 @@
         <rdfs:label>Split into</rdfs:label>
         <dcterms:modified>2014-04-10 (Updated subproperty)</dcterms:modified>
         <rdfs:comment>One of two or more works resulting from the division of an earlier work into separate works.</rdfs:comment>
+        <rdfs:domain rdf:resource="&vocab;Work"/>
         <rdfs:range rdf:resource="&vocab;Work"/>
     </owl:ObjectProperty>
     
@@ -3846,6 +3939,8 @@
         <rdfs:label>Stock number</rdfs:label>
         <rdfs:comment>Identification number such as distributor, publisher, or vendor number.</rdfs:comment>
         <rdfs:range rdf:resource="&vocab;Identifier"/>
+        <rdfs:domain rdf:resource="&vocab;Instance"/>
+        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:ObjectProperty>
     
 
@@ -3856,6 +3951,8 @@
         <rdfs:label>STRN</rdfs:label>
         <rdfs:comment>Standard Technical Report Number.</rdfs:comment>
         <rdfs:range rdf:resource="&vocab;Identifier"/>
+        <rdfs:domain rdf:resource="&vocab;Instance"/>
+        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:ObjectProperty>
     
 
@@ -3866,6 +3963,8 @@
         <rdfs:label>Study number</rdfs:label>
         <rdfs:comment>Identification number for a computer data file.</rdfs:comment>
         <rdfs:range rdf:resource="&vocab;Identifier"/>
+        <rdfs:domain rdf:resource="&vocab;Instance"/>
+        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:ObjectProperty>
     
 
@@ -3877,6 +3976,7 @@
         <rdfs:comment>Subject term(s) describing a resource.</rdfs:comment>
         <rdfs:range rdf:resource="&vocab;Authority"/>
         <rdfs:range rdf:resource="&vocab;Work"/>
+        <rdfs:domain rdf:resource="&vocab;Work"/>
     </owl:ObjectProperty>
     
 
@@ -3887,6 +3987,7 @@
         <rdfs:label>Has subseries</rdfs:label>
         <rdfs:comment>Work, which is part of another series, in which the part has been issued.</rdfs:comment>
         <dcterms:modified>2014-10-14 (Updated)</dcterms:modified>
+        <rdfs:domain rdf:resource="&vocab;Work"/>
         <rdfs:range rdf:resource="&vocab;Work"/>
     </owl:ObjectProperty>
     
@@ -3898,6 +3999,7 @@
         <rdfs:label>Subseries of</rdfs:label>
         <rdfs:comment>Work in which the part consistently appears; the title of the larger work appears on all issues or parts of the subseries).</rdfs:comment>
         <dcterms:modified>2014-10-14 (Updated)</dcterms:modified>
+        <rdfs:domain rdf:resource="&vocab;Work"/>
         <rdfs:range rdf:resource="&vocab;Work"/>
     </owl:ObjectProperty>
     
@@ -3908,6 +4010,8 @@
     <owl:ObjectProperty rdf:about="&vocab;summary">
         <rdfs:label>Summary content</rdfs:label>
         <rdfs:comment>Summary or abstract of the target work or instance.</rdfs:comment>
+        <rdfs:domain rdf:resource="&vocab;Summary"/>
+        <rdfs:subPropertyOf rdf:resource="&vocab;annotationBody"/>
         <rdfs:range rdf:resource="&rdfs;Resource"/>
     </owl:ObjectProperty>
     
@@ -3919,6 +4023,7 @@
         <rdfs:label>Superseded by</rdfs:label>
         <dcterms:modified>2014-04-10 (Updated subproperty)</dcterms:modified>
         <rdfs:comment>Later Work used in place of an earlier work, usually because the later work contains updated or new information.</rdfs:comment>
+        <rdfs:domain rdf:resource="&vocab;Work"/>
         <rdfs:range rdf:resource="&vocab;Work"/>
     </owl:ObjectProperty>
     
@@ -3930,6 +4035,7 @@
         <rdfs:label>Superseded in part by</rdfs:label>
         <rdfs:comment>Later Work used in part in place of an earlier work, usually because the later work contains updated or new information.</rdfs:comment>
         <dcterms:modified>2014-04-10 (Updated subproperty)</dcterms:modified>
+        <rdfs:domain rdf:resource="&vocab;Work"/>
         <rdfs:range rdf:resource="&vocab;Work"/>
     </owl:ObjectProperty>
     
@@ -3941,6 +4047,7 @@
         <rdfs:label>Supersedes</rdfs:label>
         <dcterms:modified>2014-04-10 (Updated subproperty)</dcterms:modified>
         <rdfs:comment>Earlier work whose content has been replaced by a later work, usually because the later work contains updated or new information.</rdfs:comment>
+        <rdfs:domain rdf:resource="&vocab;Work"/>
         <rdfs:range rdf:resource="&vocab;Work"/>
     </owl:ObjectProperty>
     
@@ -3952,6 +4059,7 @@
         <rdfs:label>Supersedes in part</rdfs:label>
         <dcterms:modified>2014-04-10 (Updated subproperty)</dcterms:modified>
         <rdfs:comment>Earlier work whose content has been partially replaced by a later work, usually because the later work contains updated or new information.</rdfs:comment>
+        <rdfs:domain rdf:resource="&vocab;Work"/>
         <rdfs:range rdf:resource="&vocab;Work"/>
     </owl:ObjectProperty>
     
@@ -3963,6 +4071,7 @@
         <rdfs:label>Has supplement</rdfs:label>
         <rdfs:comment>Work that updates or otherwise complements the predominant work.</rdfs:comment>
         <rdfs:range rdf:resource="&vocab;Work"/>
+        <rdfs:domain rdf:resource="&vocab;Work"/>
     </owl:ObjectProperty>
     
 
@@ -3973,6 +4082,7 @@
         <rdfs:label>Supplement to</rdfs:label>
         <rdfs:comment>Work that is updated or otherwise complemented by the augmenting work.</rdfs:comment>
         <rdfs:range rdf:resource="&vocab;Work"/>
+        <rdfs:domain rdf:resource="&vocab;Work"/>
     </owl:ObjectProperty>
     
 
@@ -3983,6 +4093,7 @@
         <rdfs:label>System control number</rdfs:label>
         <rdfs:comment>Control number of a system other than LCCN or NBAN, which Identifies a resource description.</rdfs:comment>
         <rdfs:range rdf:resource="&vocab;Identifier"/>
+        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:ObjectProperty>
     
 
@@ -3992,6 +4103,8 @@
     <owl:ObjectProperty rdf:about="&vocab;tableOfContents">
         <rdfs:label>Table of contents content</rdfs:label>
         <rdfs:comment>Table of contents of the target work or instance.</rdfs:comment>
+        <rdfs:domain rdf:resource="&vocab;TableOfContents"/>
+        <rdfs:subPropertyOf rdf:resource="&vocab;annotationBody"/>
         <rdfs:range rdf:resource="&rdfs;Resource"/>
     </owl:ObjectProperty>
     
@@ -4002,6 +4115,8 @@
     <owl:ObjectProperty rdf:about="&vocab;tableOfContentsFor">
         <rdfs:label>Table of contents of resource</rdfs:label>
         <rdfs:comment>Resource to which the table of contents pertains.</rdfs:comment>
+        <rdfs:domain rdf:resource="&vocab;TableOfContents"/>
+        <rdfs:subPropertyOf rdf:resource="&vocab;annotates"/>
         <rdfs:range rdf:resource="&rdfs;Resource"/>
     </owl:ObjectProperty>
     
@@ -4023,6 +4138,7 @@
         <rdfs:label>Has translation</rdfs:label>
         <rdfs:comment>Work that translates the text of the source entity into a language different from that of the original.</rdfs:comment>
         <rdfs:range rdf:resource="&vocab;Work"/>
+        <rdfs:domain rdf:resource="&vocab;Work"/>
     </owl:ObjectProperty>
     
 
@@ -4033,6 +4149,7 @@
         <rdfs:label>Translation of</rdfs:label>
         <rdfs:comment>Work that has been translated, i.e., the text expressed in a language different from that of the original work).</rdfs:comment>
         <rdfs:range rdf:resource="&vocab;Work"/>
+        <rdfs:domain rdf:resource="&vocab;Work"/>
     </owl:ObjectProperty>
     
 
@@ -4043,6 +4160,7 @@
         <rdfs:label>Union of</rdfs:label>
         <dcterms:modified>2014-04-10 (Updated subproperty)</dcterms:modified>
         <rdfs:comment>One of two or more works which came together to form a new work.</rdfs:comment>
+        <rdfs:domain rdf:resource="&vocab;Work"/>
         <rdfs:range rdf:resource="&vocab;Work"/>
     </owl:ObjectProperty>
     
@@ -4054,6 +4172,8 @@
         <rdfs:label>UPC</rdfs:label>
         <rdfs:comment>Universal Product Code.</rdfs:comment>
         <rdfs:range rdf:resource="&vocab;Identifier"/>
+        <rdfs:domain rdf:resource="&vocab;Instance"/>
+        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:ObjectProperty>
     
 
@@ -4064,6 +4184,7 @@
         <rdfs:label>URI</rdfs:label>
         <rdfs:comment>Uniform Resource Identifier.</rdfs:comment>
         <rdfs:range rdf:resource="&vocab;Identifier"/>
+        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:ObjectProperty>
     
 
@@ -4074,6 +4195,8 @@
         <rdfs:label>URN</rdfs:label>
         <rdfs:comment>Uniform Resource Number.</rdfs:comment>
         <rdfs:range rdf:resource="&vocab;Identifier"/>
+        <rdfs:domain rdf:resource="&vocab;Instance"/>
+        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:ObjectProperty>
     
 
@@ -4084,6 +4207,8 @@
         <rdfs:label>Videorecording number</rdfs:label>
         <rdfs:comment>Number assigned by a publisher to a videorecording.</rdfs:comment>
         <rdfs:range rdf:resource="&vocab;Identifier"/>
+        <rdfs:domain rdf:resource="&vocab;Instance"/>
+        <rdfs:subPropertyOf rdf:resource="&vocab;identifier"/>
     </owl:ObjectProperty>
     
 
@@ -4094,6 +4219,22 @@
         <rdfs:label>Work title</rdfs:label>
         <rdfs:comment>Title or form of title chosen to identify the work, such as a preferred title, preferred title with additions, uniform title, etc..</rdfs:comment>
         <rdfs:range rdf:resource="&vocab;Title"/>
+        <rdfs:domain rdf:resource="&vocab;Work"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/format -->
+
+    <owl:ObjectProperty rdf:about="&dcterms;format">
+        <rdfs:label xml:lang="en">Format</rdfs:label>
+        <dcterms:modified rdf:datatype="&xsd;date">2008-01-14</dcterms:modified>
+        <dcterms:issued rdf:datatype="&xsd;date">2008-01-14</dcterms:issued>
+        <dcterms:description xml:lang="en">Examples of dimensions include size and duration. Recommended best practice is to use a controlled vocabulary such as the list of Internet Media Types [MIME].</dcterms:description>
+        <rdfs:comment xml:lang="en">The file format, physical medium, or dimensions of the resource.</rdfs:comment>
+        <dcterms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#formatT-001"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:range rdf:resource="&dcterms;MediaTypeOrExtent"/>
     </owl:ObjectProperty>
     
 
@@ -5884,6 +6025,12 @@
         <rdfs:subClassOf rdf:resource="&vocab;Resource"/>
         <rdfs:comment>Resource reflecting a conceptual essence of the cataloging resource.</rdfs:comment>
     </owl:Class>
+    
+
+
+    <!-- http://purl.org/dc/terms/MediaTypeOrExtent -->
+
+    <owl:Class rdf:about="&dcterms;MediaTypeOrExtent"/>
     
 
 
