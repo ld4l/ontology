@@ -54,6 +54,7 @@
     <owl:Ontology rdf:about="http://bibframe.org/vocab/">
         <owl:versionInfo rdf:datatype="&xsd;string">Initially automatically generated.</owl:versionInfo>
         <dcterms:modified>2015-04-10</dcterms:modified>
+        <!--
         <owl:imports rdf:resource="http://motools.sourceforge.net/event/event.n3#"/>
         <owl:imports rdf:resource="http://schema.rdfs.org/all.rdf"/>
         <owl:imports rdf:resource="http://www.lingvoj.org/ontology_v2.3.ttl"/>
@@ -61,6 +62,7 @@
         <owl:imports rdf:resource="http://www.w3.org/ns/oa.owl"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/prov-o#"/>
         <owl:imports rdf:resource="http://xmlns.com/foaf/spec/index.rdf"/>
+        -->
     </owl:Ontology>
     
 
