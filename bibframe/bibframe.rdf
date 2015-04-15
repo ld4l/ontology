@@ -1,6 +1,5 @@
 <?xml version="1.0"?>
 
-
 <!DOCTYPE rdf:RDF [
     <!ENTITY rda-fields "http://bibframe.org/rda/" >
     <!ENTITY marc-fields "http://bibframe.org/marc/" >
@@ -1008,28 +1007,6 @@
         <rdfs:comment>Current or former publication frequency of a resource.</rdfs:comment>
         <rdfs:domain rdf:resource="&vocab;Instance"/>
     </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/geographicCoverageNote -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;geographicCoverageNote">
-        <rdfs:label>Geographic coverage</rdfs:label>
-        <rdfs:comment>Geographic entities covered by the resource.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Work"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/graphicScaleNote -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;graphicScaleNote">
-        <rdfs:label>Graphic scale</rdfs:label>
-        <rdfs:comment>Textual information about scale, including the scale of graphic material item such as architectural drawings or three-dimensional artifacts.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Instance"/>
-    </owl:AnnotationProperty>
-    
-
 
     <!-- http://bibframe.org/vocab/hasAccompaniment -->
 
@@ -1536,17 +1513,6 @@
         <dcterms:modified>2014-04-10 (Updated subproperty)</dcterms:modified>
         <rdfs:subPropertyOf rdf:resource="&vocab;succeededBy"/>
     </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/modeOfIssuance -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;modeOfIssuance">
-        <rdfs:label>Mode of issuance</rdfs:label>
-        <rdfs:comment>Categorization reflecting whether a resource is issued in one or more parts, the way it is updated, and its intended termination.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Instance"/>
-    </owl:AnnotationProperty>
-    
 
 
     <!-- http://bibframe.org/vocab/musicPlate -->
@@ -1556,7 +1522,6 @@
         <rdfs:comment>Number assigned by a music publisher to a specific music publication.</rdfs:comment>
     </owl:AnnotationProperty>
     
-
 
     <!-- http://bibframe.org/vocab/musicPublisherNumber -->
 
@@ -1581,16 +1546,6 @@
     <owl:AnnotationProperty rdf:about="&vocab;nbn">
         <rdfs:label>NBN</rdfs:label>
         <rdfs:comment>National Bibliography Number, which identifies the resource description.</rdfs:comment>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/notation -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;notation">
-        <rdfs:label>Notation system</rdfs:label>
-        <rdfs:comment>Information on the alphabet, script, or symbol system used to convey the content of the resource, including specialized scripts, typefaces, tactile notation, and musical notation.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Instance"/>
     </owl:AnnotationProperty>
     
 
@@ -4731,17 +4686,7 @@
         <rdfs:comment>Date or date and time on which the original metadata first created.</rdfs:comment>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
-    
 
-
-    <!-- http://bibframe.org/vocab/creditsNote -->
-
-    <owl:DatatypeProperty rdf:about="&vocab;creditsNote">
-        <rdfs:label>Credits note</rdfs:label>
-        <rdfs:comment>Credits for persons or organizations, other than members of the cast, who have participated in the creation and/or production of the.</rdfs:comment>
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
-    </owl:DatatypeProperty>
-    
 
 
     <!-- http://bibframe.org/vocab/custodialHistory -->
@@ -4816,14 +4761,6 @@
     
 
 
-    <!-- http://bibframe.org/vocab/duration -->
-
-    <owl:DatatypeProperty rdf:about="&vocab;duration">
-        <rdfs:label>Duration</rdfs:label>
-        <rdfs:comment>Information about the playing time or duration in an unstructured form, e.g., &quot;2 hours&quot;.</rdfs:comment>
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
-    </owl:DatatypeProperty>
-    
 
 
     <!-- http://bibframe.org/vocab/edition -->
@@ -4876,14 +4813,6 @@
     </owl:DatatypeProperty>
     
 
-
-    <!-- http://bibframe.org/vocab/findingAidNote -->
-
-    <owl:DatatypeProperty rdf:about="&vocab;findingAidNote">
-        <rdfs:label>Index or finding aid note</rdfs:label>
-        <rdfs:comment>Note about availability of an index or finding aid.</rdfs:comment>
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
-    </owl:DatatypeProperty>
     
 
 
@@ -4968,17 +4897,6 @@
         <rdfs:comment>Geographic entities covered by the resource.</rdfs:comment>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/graphicScaleNote -->
-
-    <owl:DatatypeProperty rdf:about="&vocab;graphicScaleNote">
-        <rdfs:label>Graphic scale</rdfs:label>
-        <rdfs:comment>Textual information about scale, including the scale of graphic material item such as architectural drawings or three-dimensional artifacts.</rdfs:comment>
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
-    </owl:DatatypeProperty>
-    
 
 
     <!-- http://bibframe.org/vocab/identifierAssigner -->
@@ -5061,13 +4979,6 @@
     
 
 
-    <!-- http://bibframe.org/vocab/languageNote -->
-
-    <owl:DatatypeProperty rdf:about="&vocab;languageNote">
-        <rdfs:label>Language note</rdfs:label>
-        <rdfs:comment>Note concerning the language of the material or its parts.</rdfs:comment>
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
-    </owl:DatatypeProperty>
     
 
 
@@ -5091,13 +5002,7 @@
     
 
 
-    <!-- http://bibframe.org/vocab/legalDate -->
 
-    <owl:DatatypeProperty rdf:about="&vocab;legalDate">
-        <rdfs:label>Date of legal work</rdfs:label>
-        <rdfs:comment>Date of legal work, or promulgation of a law, or signing of a treaty.</rdfs:comment>
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
-    </owl:DatatypeProperty>
     
 
 
@@ -5160,25 +5065,6 @@
     </owl:DatatypeProperty>
     
 
-
-    <!-- http://bibframe.org/vocab/musicKey -->
-
-    <owl:DatatypeProperty rdf:about="&vocab;musicKey">
-        <rdfs:label>Music Key</rdfs:label>
-        <rdfs:comment>Pitch and mode for music.</rdfs:comment>
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/musicMediumNote -->
-
-    <owl:DatatypeProperty rdf:about="&vocab;musicMediumNote">
-        <rdfs:label>Music medium note</rdfs:label>
-        <rdfs:comment>Instrumental, vocal, and/or other medium of performance for which a musical resource was originally conceived, written or performed.</rdfs:comment>
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
-    </owl:DatatypeProperty>
-    
 
 
     <!-- http://bibframe.org/vocab/musicNumber -->
@@ -5254,13 +5140,7 @@
     
 
 
-    <!-- http://bibframe.org/vocab/performerNote -->
 
-    <owl:DatatypeProperty rdf:about="&vocab;performerNote">
-        <rdfs:label>Performer note</rdfs:label>
-        <rdfs:comment>Information about the participants, players, narrators, presenters, or performers.</rdfs:comment>
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
-    </owl:DatatypeProperty>
     
 
 
@@ -5291,16 +5171,7 @@
         <rdfs:comment>The type of role played by the provider of an instance, e.g. production, publication, manufacture, distribution.</rdfs:comment>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
-    
 
-
-    <!-- http://bibframe.org/vocab/providerStatement -->
-
-    <owl:DatatypeProperty rdf:about="&vocab;providerStatement">
-        <rdfs:label>Provider statement</rdfs:label>
-        <rdfs:comment>Transcribed provider statement</rdfs:comment>
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
-    </owl:DatatypeProperty>
     
 
 
@@ -5488,23 +5359,11 @@
     
 
 
-    <!-- http://bibframe.org/vocab/supplementaryContentNote -->
 
-    <owl:DatatypeProperty rdf:about="&vocab;supplementaryContentNote">
-        <rdfs:label>Supplementary content note</rdfs:label>
-        <rdfs:comment>Information on the presence of one or more bibliographies, discographies, filmographies, and/or other bibliographic references in a described resource or in accompanying material.</rdfs:comment>
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
-    </owl:DatatypeProperty>
     
 
 
-    <!-- http://bibframe.org/vocab/temporalCoverageNote -->
 
-    <owl:DatatypeProperty rdf:about="&vocab;temporalCoverageNote">
-        <rdfs:label>Temporal coverage</rdfs:label>
-        <rdfs:comment>Time period covered by the resource.</rdfs:comment>
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
-    </owl:DatatypeProperty>
     
 
 
@@ -5587,18 +5446,7 @@
         <rdfs:comment>Date or sequential designation of title variation.</rdfs:comment>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
-    
 
-
-    <!-- http://bibframe.org/vocab/treatySignator -->
-
-    <owl:DatatypeProperty rdf:about="&vocab;treatySignator">
-        <rdfs:label>Signatory to a treaty</rdfs:label>
-        <rdfs:comment>Government of other party that has formally signed a treaty.</rdfs:comment>
-        <dcterms:modified>2014-03-21 (Range updated)</dcterms:modified>
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
-    </owl:DatatypeProperty>
-    
 
 
     <!-- http://www.w3.org/ns/prov#startedAtTime -->
@@ -5626,7 +5474,6 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
 
 
     <!-- http://bibframe.org/vocab/Agent -->
