@@ -32,6 +32,7 @@
      xmlns:v1="http://www.loc.gov/mads/rdf/v1#"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:marcrel="http://id.loc.gov/vocabulary/relators/"
+     xmlns:legacy="http://bibframe.org/vocab/legacy/"
      xmlns:prov-o="http://www.w3.org/ns/prov-o#"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:lingvoj="http://www.lingvoj.org/ontology#"
