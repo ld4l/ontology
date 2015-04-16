@@ -70,1642 +70,158 @@
         <rdfs:subPropertyOf rdf:resource="&vocab;relatedTo"/>
         <rdfs:domain rdf:resource="&vocab;Work"/>
         <rdfs:range rdf:resource="&vocab;Work"/>
+        <owl:inverseOf rdf:resource="&vocab;hasDerivative" />
     </owl:ObjectProperty>
     
 
 
     <!-- http://bibframe.org/vocab/descriptionOf -->
 
-    <owl:AnnotationProperty rdf:about="&vocab;descriptionOf">
+    <owl:ObjectProperty rdf:about="&vocab;descriptionOf">
         <rdfs:label>Is description of</rdfs:label>
         <rdfs:comment>Related resource that is analyzed, commented upon, critiqued, evaluated, reviewed, or otherwise described by the resource.</rdfs:comment>
         <dcterms:modified>2014-04-30 (New)</dcterms:modified>
         <rdfs:subPropertyOf rdf:resource="&vocab;relatedTo"/>
-    </owl:AnnotationProperty>
-    
+        <owl:inverseOf rdf:resouorce="&vocab;hasDescription" />
+    </owl:ObjectProperty>
 
 
-    <!-- http://bibframe.org/vocab/dimensions -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;dimensions">
-        <rdfs:label>Dimensions</rdfs:label>
-        <rdfs:comment>Measurements of the carrier or carriers and/or the container of a resource.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Instance"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/dissertationDegree -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;dissertationDegree">
-        <rdfs:label>Degree</rdfs:label>
-        <rdfs:comment>Degree for which author was a candidate.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Work"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/dissertationIdentifier -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;dissertationIdentifier">
-        <rdfs:label>Dissertation identifier</rdfs:label>
-        <rdfs:comment>Identifier assigned to a dissertation for identification purposes .</rdfs:comment>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/dissertationInstitution -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;dissertationInstitution">
-        <rdfs:label>Degree issuing institution</rdfs:label>
-        <rdfs:comment>Name of degree granting institution.</rdfs:comment>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/dissertationNote -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;dissertationNote">
-        <rdfs:label>Dissertation note</rdfs:label>
-        <rdfs:comment>Textual information about the dissertation.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Work"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/dissertationYear -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;dissertationYear">
-        <rdfs:label>Year degree awarded</rdfs:label>
-        <rdfs:comment>Year degree awarded.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Work"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/distribution -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;distribution">
-        <rdfs:label>Distribution event</rdfs:label>
-        <rdfs:comment>Information relating to distribution of an instance.</rdfs:comment>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/doi -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;doi">
-        <rdfs:label>DOI</rdfs:label>
-        <rdfs:comment>Digital Object Identifier.</rdfs:comment>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/duration -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;duration">
-        <rdfs:label>Duration</rdfs:label>
-        <rdfs:comment>Information about the playing time or duration in an unstructured form, e.g., &quot;2 hours&quot;.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Instance"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/ean -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;ean">
-        <rdfs:label>EAN</rdfs:label>
-        <rdfs:comment>International Article Identifier.</rdfs:comment>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/edition -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;edition">
-        <rdfs:label>Edition statement</rdfs:label>
-        <rdfs:comment>Information identifying the edition or version of the resource.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Instance"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/editionResponsibility -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;editionResponsibility">
-        <rdfs:label>Edition responsibility</rdfs:label>
-        <rdfs:comment>Statement relating to the identification of any persons, families, or corporate bodies responsible for the edition being described.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Instance"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/electronicLocator -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;electronicLocator">
-        <rdfs:label>Electronic location</rdfs:label>
-        <dcterms:modified>2014-04-28 (New)</dcterms:modified>
-        <rdfs:comment>Electronic location from which the resource is available.</rdfs:comment>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/enumerationAndChronology -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;enumerationAndChronology">
-        <rdfs:label>Enumeration and chronology</rdfs:label>
-        <rdfs:comment>Numbering and dates of holding.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;HeldMaterial"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/event -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;event">
-        <rdfs:label>Event associated with content</rdfs:label>
-        <rdfs:comment>Information about the geographic area/or time period covered by an event (e.g., a report).</rdfs:comment>
-        <dcterms:modified>2014-05-16 (Updated)</dcterms:modified>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/eventAgent -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;eventAgent">
-        <rdfs:label>Agent for event</rdfs:label>
-        <dcterms:modified>2014-05-16 (Updated)</dcterms:modified>
-        <rdfs:comment>Person or organization associated with event.</rdfs:comment>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/eventDate -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;eventDate">
-        <rdfs:label>Date(s) of event</rdfs:label>
-        <rdfs:comment>Date, time or period of event.</rdfs:comment>
-        <dcterms:modified>2014-05-16 (Updated)</dcterms:modified>
-        <rdfs:domain rdf:resource="&vocab;Event"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/eventPlace -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;eventPlace">
-        <rdfs:label>Place of event</rdfs:label>
-        <rdfs:comment>Geographic area associated with event.</rdfs:comment>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/expressionOf -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;expressionOf">
-        <rdfs:label>Expression of</rdfs:label>
-        <dcterms:modified>2014-04-10 (Updated subproperty)</dcterms:modified>
-        <rdfs:comment>Expression has a related work. For use to connect Works under FRBR/RDA rules.</rdfs:comment>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/extent -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;extent">
-        <rdfs:label>Extent</rdfs:label>
-        <rdfs:comment>Number and type of units and/or subunits making up a resource.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Instance"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/findingAid -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;findingAid">
-        <rdfs:label>Has finding aid</rdfs:label>
-        <rdfs:comment>Relationship is to a finding aid or similar control materials for archival, visual, and manuscript resources.</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="&vocab;accompaniedBy"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/fingerprint -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;fingerprint">
-        <rdfs:label>Fingerprint identifier</rdfs:label>
-        <rdfs:comment>Identifier that is used to assist in the identification of antiquarian books by recording information comprising groups of characters taken from specified positions on specified pages of the book.</rdfs:comment>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/formDesignation -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;formDesignation">
-        <rdfs:label>Form designation</rdfs:label>
-        <rdfs:comment>Class or genre to which a Work or Instance belongs.</rdfs:comment>
-        <dcterms:modified>2014-03-21 (Range updated)</dcterms:modified>
-        <rdfs:domain rdf:resource="&vocab;Title"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/format -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;format">
-        <rdfs:label>Format</rdfs:label>
-        <dcterms:modified>2014-10-27 (Updated)</dcterms:modified>
-        <rdfs:comment>File format or physical medium of an instance.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Instance"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/formatOfMusic -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;formatOfMusic">
-        <rdfs:label>Format of music</rdfs:label>
-        <rdfs:comment>Format of a musical composition, e.g. full score, condensed score, vocal score, etc.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Instance"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/frequency -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;frequency">
-        <rdfs:label>Frequency</rdfs:label>
-        <rdfs:comment>Intervals at which the issues or parts of a serial or the updates to an integrating resource are issued.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Instance"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/frequencyNote -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;frequencyNote">
-        <rdfs:label>Frequency note</rdfs:label>
-        <rdfs:comment>Current or former publication frequency of a resource.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Instance"/>
-    </owl:AnnotationProperty>
-    
 
 
     <!-- http://bibframe.org/vocab/hasAccompaniment -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;hasAccompaniment"/>
+    <!-- 
+        Bibframe fails to define hasAccompaniment, though it is asserted to be
+        the superproperty of issuedWith. Should we omit the subproperty 
+        assertion, or add the superproperty?
+    -->    
+       
+    <owl:ObjectProperty rdf:about="&vocab;hasAccompaniment"/>
     
-
-
-    <!-- http://bibframe.org/vocab/hasAuthority -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;hasAuthority">
-        <rdfs:label>Authority information</rdfs:label>
-        <rdfs:comment>Link to controlled form of name or subject and other information about.</rdfs:comment>
-        <dcterms:modified>2014-04-10 (Updated range)</dcterms:modified>
-    </owl:AnnotationProperty>
-    
-
 
     <!-- http://bibframe.org/vocab/hasDerivative -->
 
-    <owl:AnnotationProperty rdf:about="&vocab;hasDerivative">
+    <owl:ObjectProperty rdf:about="&vocab;hasDerivative">
         <rdfs:label>Has derivative</rdfs:label>
         <rdfs:comment>Work has a modification for which it is the source.</rdfs:comment>
         <dcterms:modified>2014-04-10 (Range updated)</dcterms:modified>
         <rdfs:subPropertyOf rdf:resource="&vocab;relatedTo"/>
-    </owl:AnnotationProperty>
+        <rdfs:domain rdf:resource="&vocab;Work"/>
+        <rdfs:range rdf:resource="&vocab;Work"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://bibframe.org/vocab/hasDescription -->
 
-    <owl:AnnotationProperty rdf:about="&vocab;hasDescription">
+    <owl:ObjectProperty rdf:about="&vocab;hasDescription">
         <rdfs:label>Has description</rdfs:label>
         <rdfs:comment>Related resource that analyzes, comments on, critiques, evaluates, reviews, or otherwise describes the resource.</rdfs:comment>
         <dcterms:modified>2014-04-10 (Range updated)</dcterms:modified>
         <rdfs:subPropertyOf rdf:resource="&vocab;relatedTo"/>
-    </owl:AnnotationProperty>
+    </owl:ObjectProperty>
     
 
 
-    <!-- http://bibframe.org/vocab/hasEquivalent -->
+    <!-- http://bibframe.org/vocab/equivalentTo -->
 
-    <owl:AnnotationProperty rdf:about="&vocab;hasEquivalent">
+    <owl:ObjectProperty rdf:about="&vocab;equivalentTo">
         <rdfs:label>Equivalence</rdfs:label>
         <rdfs:comment>Instance embodies the same expression of a work as the resource being described.</rdfs:comment>
         <dcterms:modified>2014-04-10 (Range updated)</dcterms:modified>
         <rdfs:subPropertyOf rdf:resource="&vocab;relatedTo"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/hasExpression -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;hasExpression">
-        <rdfs:label>Expressed as</rdfs:label>
-        <rdfs:comment>Work has a related expression. For use to connect Works under FRBR/RDA rules.</rdfs:comment>
-        <dcterms:modified>2014-04-10 (Updated subproperty)</dcterms:modified>
-    </owl:AnnotationProperty>
+        <rdf:domain rdf:resource="&vocab;Instance"/>
+        <rdf:range rdf:resource="&vocab;Instance"/>
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://bibframe.org/vocab/hasInstance -->
 
-    <owl:AnnotationProperty rdf:about="&vocab;hasInstance">
+    <owl:ObjectProperty rdf:about="&vocab;hasInstance">
         <rdfs:label>Instance of Work</rdfs:label>
         <rdfs:comment>Work has a related Instance/manifestation. For use to connect Works to Instances in the BIBFRAME structure.</rdfs:comment>
         <dcterms:modified>2014--03-21 (Updated definition)</dcterms:modified>
-    </owl:AnnotationProperty>
+        <rdf:domain rdf:resource="&vocab;Work"/>
+        <rdf:range rdf:resource="&vocab;Instance"/>
+        <rdfs:subPropertyOf rdf:resource="&vocab;relatedTo"/>
+    </owl:ObjectProperty>
     
 
+    
 
     <!-- http://bibframe.org/vocab/hasPart -->
 
-    <owl:AnnotationProperty rdf:about="&vocab;hasPart">
+    <owl:ObjectProperty rdf:about="&vocab;hasPart">
         <rdfs:label>Has part</rdfs:label>
         <rdfs:comment>Resource that is included either physically or logically contained in the described resource</rdfs:comment>
         <dcterms:modified>2014-04-10 (Range updated)</dcterms:modified>
         <rdfs:subPropertyOf rdf:resource="&vocab;relatedTo"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/hdl -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;hdl">
-        <rdfs:label>Handle</rdfs:label>
-        <rdfs:comment>Unique and persistent identifier for digital objects developed by the Corporation for National Research Initiatives.</rdfs:comment>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/heldBy -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;heldBy">
-        <rdfs:label>Held by</rdfs:label>
-        <rdfs:comment>Entity holding the item or from which it is available</rdfs:comment>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/holdingFor -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;holdingFor">
-        <rdfs:label>Holding for</rdfs:label>
-        <rdfs:comment>Instance for which holding is reported</rdfs:comment>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/identifier -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;identifier">
-        <rdfs:label>Identifier</rdfs:label>
-        <rdfs:comment>Number or code that uniquely identifies an entity.</rdfs:comment>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/identifierAssigner -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;identifierAssigner">
-        <rdfs:label>Identifier assigner</rdfs:label>
-        <rdfs:comment>Entity that assigned the identifier.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Identifier"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/identifierQualifier -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;identifierQualifier">
-        <rdfs:label>Identifier qualifier</rdfs:label>
-        <rdfs:comment>Qualifying information associated with the identifier, e.g. specifying its applicability.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Identifier"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/identifierScheme -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;identifierScheme">
-        <rdfs:label>Identifier scheme</rdfs:label>
-        <rdfs:comment>Scheme within which the identifier is unique.</rdfs:comment>
-        <dcterms:modified>2014-06-04 (Updated mapping)</dcterms:modified>
-        <dcterms:modified>&apos;2014-06-04 (Updated range)</dcterms:modified>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/identifierStatus -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;identifierStatus">
-        <rdfs:label>Identifier status</rdfs:label>
-        <rdfs:comment>Indication of whether the identifier is canceled or invalid.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Identifier"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/identifierValue -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;identifierValue">
-        <rdfs:label>Identifier value</rdfs:label>
-        <rdfs:comment>Value of the identifier.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Identifier"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/illustrationNote -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;illustrationNote">
-        <rdfs:label>Illustrative content note</rdfs:label>
-        <rdfs:comment>Information about illustrative material in the resource.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Instance"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/index -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;index">
-        <rdfs:label>Index</rdfs:label>
-        <rdfs:comment>Work has an accompanying index</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="&vocab;accompaniedBy"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/instanceOf -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;instanceOf">
-        <rdfs:label>Instance of</rdfs:label>
-        <rdfs:comment>Work this resource instantiates or manifests. For use to connect Instances to Works in the BIBFRAME structure.</rdfs:comment>
-        <dcterms:modified>2014--03-21 (Updated definition)</dcterms:modified>
-    </owl:AnnotationProperty>
-    
-
-
-
-    <!-- http://bibframe.org/vocab/isan -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;isan">
-        <rdfs:label>ISAN</rdfs:label>
-        <rdfs:comment>International Standard Audiovisual Number.</rdfs:comment>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/isbn -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;isbn">
-        <rdfs:label>ISBN</rdfs:label>
-        <rdfs:comment>International Standard Book Number.</rdfs:comment>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/isbn10 -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;isbn10">
-        <rdfs:label>ISBN-10</rdfs:label>
-        <rdfs:comment>10 digit version of the International Standard Book Number.</rdfs:comment>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/isbn13 -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;isbn13">
-        <rdfs:label>ISBN-13</rdfs:label>
-        <rdfs:comment>13 digit version of the International Standard Book Number.</rdfs:comment>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/ismn -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;ismn">
-        <rdfs:label>ISMN</rdfs:label>
-        <rdfs:comment>International Standard Music Number.</rdfs:comment>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/iso -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;iso">
-        <rdfs:label>ISO number</rdfs:label>
-        <rdfs:comment>International Organization for Standardization standard number.</rdfs:comment>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/issn -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;issn">
-        <rdfs:label>ISSN</rdfs:label>
-        <rdfs:comment>International Standard Serial Number identifier.</rdfs:comment>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/issnL -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;issnL">
-        <rdfs:label>ISSN-L</rdfs:label>
-        <rdfs:comment>International Standard Serial Number that links together various media versions of a continuing resource.</rdfs:comment>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/issueNumber -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;issueNumber">
-        <rdfs:label>Audio issue number</rdfs:label>
-        <rdfs:comment>Number used to identify the issue designation, or serial identification, assigned by a publisher to a sound recording.</rdfs:comment>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/issuedWith -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;issuedWith">
-        <rdfs:label>Issued with</rdfs:label>
-        <rdfs:comment>Instance that is issued on the same carrier as the manifestation being described.</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="&vocab;hasAccompaniment"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/istc -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;istc">
-        <rdfs:label>ISTC</rdfs:label>
-        <rdfs:comment>International Standard Text code, a numbering system developed to enable the unique identification of textual works.</rdfs:comment>
-        <dcterms:modified>a,z</dcterms:modified>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/iswc -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;iswc">
-        <rdfs:label>ISWC</rdfs:label>
-        <rdfs:comment>International Standard Musical Work Code, a unique, persistent reference number for the identification of musical works.</rdfs:comment>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/itemId -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;itemId">
-        <rdfs:label>System item identifier</rdfs:label>
-        <rdfs:comment>Identification number assigned to data about one item held.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;HeldItem"/>
-    </owl:AnnotationProperty>
-    
-    
-
-
-    <!-- http://bibframe.org/vocab/label -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;label">
-        <rdfs:label>Label</rdfs:label>
-        <rdfs:comment>Text string expressing the property value.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Resource"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/languageNote -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;languageNote">
-        <rdfs:label>Language note</rdfs:label>
-        <rdfs:comment>Note concerning the language of the material or its parts.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Work"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/languageOfPart -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;languageOfPart">
-        <rdfs:label>Language of part</rdfs:label>
-        <rdfs:comment>Language or notation system used to convey the content of the resource (associated with part or all of a resource).</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Language"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/languageOfPartUri -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;languageOfPartUri">
-        <rdfs:label>Language of part URI</rdfs:label>
-        <rdfs:comment>Language or notation system used to convey the content of the resource (associated with part or all of a resource).</rdfs:comment>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/languageSource -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;languageSource">
-        <rdfs:label>Language source</rdfs:label>
-        <rdfs:comment>Language code or name list from which value is taken.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Language"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/lcOverseasAcq -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;lcOverseasAcq">
-        <rdfs:label>LC acquisition program</rdfs:label>
-        <rdfs:comment>Identification number assigned by the Library of Congress to works acquired through one of its overseas acquisition programs.</rdfs:comment>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/lccn -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;lccn">
-        <rdfs:label>LCCN</rdfs:label>
-        <rdfs:comment>Library of Congress Control Number, which identifies the resource description.</rdfs:comment>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/legalDeposit -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;legalDeposit">
-        <rdfs:label>Copyright number</rdfs:label>
-        <rdfs:comment>Number assigned to a copyright or legal deposit, which Identifies a resource description.</rdfs:comment>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/lendingPolicy -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;lendingPolicy">
-        <rdfs:label>Lending policy</rdfs:label>
-        <rdfs:comment>Policy statement about whether and with what restrictions the holding may be lent</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;HeldMaterial"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/local -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;local">
-        <rdfs:label>Local identifier</rdfs:label>
-        <rdfs:comment>Identifier established locally and not a standard number.</rdfs:comment>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/manufacture -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;manufacture">
-        <rdfs:label>Manufacture event</rdfs:label>
-        <rdfs:comment>Information relating to manufacture of an instance.</rdfs:comment>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/materialArrangement -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;materialArrangement">
-        <rdfs:label>Arrangement of material</rdfs:label>
-        <rdfs:comment>Pattern of arrangement of materials within a unit.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Arrangement"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/materialHierarchicalLevel -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;materialHierarchicalLevel">
-        <rdfs:label>Hierarchical level of material</rdfs:label>
-        <rdfs:comment>Hierarchical position of the described materials relative to other material from the same source.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Arrangement"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/materialOrganization -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;materialOrganization">
-        <rdfs:label>Organization of material</rdfs:label>
-        <rdfs:comment>Manner in which resource is divided into smaller units.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Arrangement"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/materialPart -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;materialPart">
-        <rdfs:label>Part of material</rdfs:label>
-        <rdfs:comment>Part of the resource to which information applies.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Arrangement"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/matrixNumber -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;matrixNumber">
-        <rdfs:label>Audio matrix number</rdfs:label>
-        <rdfs:comment>Matrix number from the master from which a specific sound recording was pressed.</rdfs:comment>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/mediaCategory -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;mediaCategory">
-        <rdfs:label>Media type</rdfs:label>
-        <rdfs:comment>Categorization reflecting the general type of intermediation device required to view, play, run, etc., the content of a resource.</rdfs:comment>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/mergedToForm -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;mergedToForm">
-        <rdfs:label>Merged to form</rdfs:label>
-        <rdfs:comment>One of two or more works that come together to form a new work.</rdfs:comment>
-        <dcterms:modified>2014-04-10 (Updated subproperty)</dcterms:modified>
-        <rdfs:subPropertyOf rdf:resource="&vocab;succeededBy"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/musicPlate -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;musicPlate">
-        <rdfs:label>Music plate number</rdfs:label>
-        <rdfs:comment>Number assigned by a music publisher to a specific music publication.</rdfs:comment>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/musicPublisherNumber -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;musicPublisherNumber">
-        <rdfs:label>Music publisher number</rdfs:label>
-        <rdfs:comment>Number assigned to a music publication other than an issue, matrix, or plate number.</rdfs:comment>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/nban -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;nban">
-        <rdfs:label>NBAN</rdfs:label>
-        <rdfs:comment>National Bibliography Agency Number, which identifies the resource description.</rdfs:comment>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/nbn -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;nbn">
-        <rdfs:label>NBN</rdfs:label>
-        <rdfs:comment>National Bibliography Number, which identifies the resource description.</rdfs:comment>
-    </owl:AnnotationProperty>
-    
-
-
-
-
-    <!-- http://bibframe.org/vocab/originPlace -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;originPlace">
-        <rdfs:label>Associated title place</rdfs:label>
-        <rdfs:comment>Place from which the creation of the work originated.</rdfs:comment>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/originalVersion -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;originalVersion">
-        <rdfs:label>Has original version</rdfs:label>
-        <rdfs:comment>Instance is the original version of which this resource is a reproduction.</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="&vocab;derivativeOf"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/otherEdition -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;otherEdition">
-        <rdfs:label>hasOtherEdition</rdfs:label>
-        <rdfs:comment>Resource has other available editions, for example simultaneously published language editions or reprints.</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="&vocab;derivativeOf"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/otherPhysicalFormat -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;otherPhysicalFormat">
-        <rdfs:label>Has other physical format</rdfs:label>
-        <dcterms:modified>2014-10-14 (Updated)</dcterms:modified>
-        <rdfs:comment>Resource that is manifested in another physical carrier.</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="&vocab;hasEquivalent"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/partNumber -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;partNumber">
-        <rdfs:label>Part number</rdfs:label>
-        <rdfs:comment>Part or section number of a title.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Title"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/partOf -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;partOf">
-        <rdfs:label>Is part of</rdfs:label>
-        <rdfs:comment>Resource in which the described resource is physically or logically contained.</rdfs:comment>
-        <dcterms:modified>2014-04-30 (New)</dcterms:modified>
-        <rdfs:subPropertyOf rdf:resource="&vocab;relatedTo"/>
-    </owl:AnnotationProperty>
- 
-
-    <!-- http://bibframe.org/vocab/postalRegistration -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;postalRegistration">
-        <rdfs:label>Postal registration number</rdfs:label>
-        <rdfs:comment>Number assigned to a publication for which the specified postal service permits the use of a special mailing class privilege.</rdfs:comment>
-    </owl:AnnotationProperty>
-    
+    </owl:ObjectProperty>
 
 
     <!-- http://bibframe.org/vocab/precededBy -->
 
-    <owl:AnnotationProperty rdf:about="&vocab;precededBy">
+    <owl:ObjectProperty rdf:about="&vocab;precededBy">
         <rdfs:label>Preceded By</rdfs:label>
         <dcterms:modified>2014-04-10 (Renamed)</dcterms:modified>
         <rdfs:comment>Resource that precedes the resource being described (e.g., is earlier in time or before in narrative).</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="&vocab;relatedTo"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/preferredCitation -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;preferredCitation">
-        <rdfs:label>Preferred citation</rdfs:label>
-        <rdfs:comment>Citation to the resource preferred by its custodian.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Instance"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/production -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;production">
-        <rdfs:label>Production event</rdfs:label>
-        <rdfs:comment>Information relating to production of an instance.</rdfs:comment>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/provider -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;provider">
-        <rdfs:label>Provider</rdfs:label>
-        <rdfs:comment>Place, name, and/or date information relating to the publication, printing, distribution, issue, release, or production instance.</rdfs:comment>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/providerDate -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;providerDate">
-        <rdfs:label>Provider date</rdfs:label>
-        <rdfs:comment>Date associated with the publication, printing, distribution, issue, release or production of the instance.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Provider"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/providerName -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;providerName">
-        <rdfs:label>Provider name</rdfs:label>
-        <rdfs:comment>Name of the entity responsible for the publication, printing, distribution, issue, release or production of the instance.</rdfs:comment>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/providerPlace -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;providerPlace">
-        <rdfs:label>Provider place</rdfs:label>
-        <rdfs:comment>Place associated with the publication, printing, distribution, issue, release or production of the instance.</rdfs:comment>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/providerRole -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;providerRole">
-        <rdfs:label>Provider role</rdfs:label>
-        <rdfs:comment>The type of role played by the provider of an instance, e.g. production, publication, manufacture, distribution.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Provider"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/providerStatement -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;providerStatement">
-        <rdfs:label>Provider statement</rdfs:label>
-        <rdfs:comment>Transcribed provider statement</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Instance"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/publication -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;publication">
-        <rdfs:label>Publication event</rdfs:label>
-        <rdfs:comment>Information relating to publication of an instance.</rdfs:comment>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/publisherNumber -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;publisherNumber">
-        <rdfs:label>Other publisher number</rdfs:label>
-        <rdfs:comment>Number assigned by a publisher that is not one of the specific defined types.</rdfs:comment>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/referenceAuthority -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;referenceAuthority">
-        <rdfs:label>Other authority information</rdfs:label>
-        <rdfs:comment>Link to authority information</rdfs:comment>
-        <dcterms:modified>2014-03-27 (Updated)</dcterms:modified>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/relatedInstance -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;relatedInstance">
-        <rdfs:label>Related Instance</rdfs:label>
-        <rdfs:comment>General instance to instance relationship.</rdfs:comment>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/relatedTo -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;relatedTo">
-        <rdfs:label>Related resource</rdfs:label>
-        <rdfs:comment>Any relationship between work or instance resources.</rdfs:comment>
-        <dcterms:modified>2014-04-10 (Range updated)</dcterms:modified>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/relatedWork -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;relatedWork">
-        <rdfs:label>Related Work</rdfs:label>
-        <rdfs:comment>General work to work relationship.</rdfs:comment>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/relatorRole -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;relatorRole">
-        <rdfs:label>Agent role</rdfs:label>
-        <rdfs:comment>Specific role of agent.</rdfs:comment>
-        <dcterms:modified>2014-04-30 (New)</dcterms:modified>
-        <rdfs:domain rdf:resource="&vocab;Relator"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/reportNumber -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;reportNumber">
-        <rdfs:label>Technical report number</rdfs:label>
-        <rdfs:comment>Identification number of a report that is not a Standard Technical Report Number.</rdfs:comment>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/reproduction -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;reproduction">
-        <rdfs:label>Has reproduction</rdfs:label>
-        <rdfs:comment>Instance that reproduces another Instance embodying the same work.</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="&vocab;hasEquivalent"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/reproductionPolicy -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;reproductionPolicy">
-        <rdfs:label>Reproduction policy</rdfs:label>
-        <rdfs:comment>Policy statement about whether reproductions of the holding can be made</rdfs:comment>
-        <dcterms:modified>2014-10-21 (Added)</dcterms:modified>
-        <rdfs:domain rdf:resource="&vocab;HeldMaterial"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/resourcePart -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;resourcePart">
-        <rdfs:label>Resource part</rdfs:label>
-        <rdfs:comment>Part of a resource for which language is being indicated.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Language"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/responsibilityStatement -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;responsibilityStatement">
-        <rdfs:label>Edition responsibility</rdfs:label>
-        <rdfs:comment>Statement relating to the identification and/or function of any persons, families, or corporate bodies responsible for the creation of, or contributing to the content of a resource.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Instance"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/retentionPolicy -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;retentionPolicy">
-        <rdfs:label>Retention policy</rdfs:label>
-        <rdfs:comment>Policy statement about how many and/or how long the holdings are retained</rdfs:comment>
-        <dcterms:modified>2014-10-21 (Added)</dcterms:modified>
-        <rdfs:domain rdf:resource="&vocab;HeldMaterial"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/review -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;review">
-        <rdfs:label>Review content</rdfs:label>
-        <rdfs:comment>Review content.</rdfs:comment>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/reviewOf -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;reviewOf">
-        <rdfs:label>Resource reviewed</rdfs:label>
-        <rdfs:comment>Resource to which the review pertains.</rdfs:comment>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/separatedFrom -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;separatedFrom">
-        <rdfs:label>Separated from</rdfs:label>
-        <rdfs:comment>Work that spun off a part of its content to form a new work.</rdfs:comment>
-        <dcterms:modified>2014-04-10 (Updated subproperty)</dcterms:modified>
-        <rdfs:subPropertyOf rdf:resource="&vocab;precededBy"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/serialFirstIssue -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;serialFirstIssue">
-        <rdfs:label>Serial first issue</rdfs:label>
-        <rdfs:comment>Beginning date of an instance and/or the sequential designations.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Instance"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/serialLastIssue -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;serialLastIssue">
-        <rdfs:label>Serial last issue</rdfs:label>
-        <rdfs:comment>Ending date of an instance and/or the sequential designations.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Instance"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/series -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;series">
-        <rdfs:label>Has series</rdfs:label>
-        <rdfs:comment>Work in which the part has been issued; the title of the larger work appears on the part.</rdfs:comment>
-        <dcterms:modified>2014-10-14 (Updated)</dcterms:modified>
-        <rdfs:subPropertyOf rdf:resource="&vocab;partOf"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/shelfMark -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;shelfMark">
-        <rdfs:label>Shelf Location</rdfs:label>
-        <rdfs:comment>Physical location, such as a call number or a special shelf/location indicator.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;HeldItem"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/shelfMarkDdc -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;shelfMarkDdc">
-        <rdfs:label>DDC call number</rdfs:label>
-        <rdfs:comment>Shelf mark based on Dewey Decimal Classification.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;HeldItem"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/shelfMarkLcc -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;shelfMarkLcc">
-        <rdfs:label>LCC call number</rdfs:label>
-        <rdfs:comment>Shelf mark based on Library of Congress Classification.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;HeldItem"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/shelfMarkNlm -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;shelfMarkNlm">
-        <rdfs:label>NLM call number</rdfs:label>
-        <rdfs:comment>Shelf mark based on National Library of Medicine Classification.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;HeldItem"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/shelfMarkScheme -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;shelfMarkScheme">
-        <rdfs:label>Shelf mark scheme</rdfs:label>
-        <rdfs:comment>Scheme from which a shelf mark is taken.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;HeldItem"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/shelfMarkUdc -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;shelfMarkUdc">
-        <rdfs:label>UDC call number</rdfs:label>
-        <rdfs:comment>Shelf mark based on Universal Decimal Classification.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;HeldItem"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/sici -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;sici">
-        <rdfs:label>SICI</rdfs:label>
-        <rdfs:comment>Serial Item and Contribution Identifier.</rdfs:comment>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/soundContent -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;soundContent">
-        <rdfs:label>Sound content</rdfs:label>
-        <rdfs:comment>Indication of whether the production of sound is an integral part of the resource.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Instance"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/splitInto -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;splitInto">
-        <rdfs:label>Split into</rdfs:label>
-        <dcterms:modified>2014-04-10 (Updated subproperty)</dcterms:modified>
-        <rdfs:comment>One of two or more works resulting from the division of an earlier work into separate works.</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="&vocab;succeededBy"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/startOfReview -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;startOfReview">
-        <rdfs:label>Review beginning</rdfs:label>
-        <rdfs:comment>First part of review.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Review"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/startOfSummary -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;startOfSummary">
-        <rdfs:label>Summary beginning</rdfs:label>
-        <rdfs:comment>First part of description.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Summary"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/stockNumber -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;stockNumber">
-        <rdfs:label>Stock number</rdfs:label>
-        <rdfs:comment>Identification number such as distributor, publisher, or vendor number.</rdfs:comment>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/strn -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;strn">
-        <rdfs:label>STRN</rdfs:label>
-        <rdfs:comment>Standard Technical Report Number.</rdfs:comment>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/studyNumber -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;studyNumber">
-        <rdfs:label>Study number</rdfs:label>
-        <rdfs:comment>Identification number for a computer data file.</rdfs:comment>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/subLocation -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;subLocation">
-        <rdfs:label>Held in sublocation</rdfs:label>
-        <dcterms:modified>2014-04-28 (Updated Mapping)</dcterms:modified>
-        <rdfs:comment>Specific place within the holding entity where the item is located or made available</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;HeldMaterial"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/subject -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;subject">
-        <rdfs:label>Subject</rdfs:label>
-        <rdfs:comment>Subject term(s) describing a resource.</rdfs:comment>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/subseries -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;subseries">
-        <rdfs:label>Has subseries</rdfs:label>
-        <rdfs:comment>Work, which is part of another series, in which the part has been issued.</rdfs:comment>
-        <dcterms:modified>2014-10-14 (Updated)</dcterms:modified>
-        <rdfs:subPropertyOf rdf:resource="&vocab;hasPart"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/subseriesOf -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;subseriesOf">
-        <rdfs:label>Subseries of</rdfs:label>
-        <rdfs:comment>Work in which the part consistently appears; the title of the larger work appears on all issues or parts of the subseries).</rdfs:comment>
-        <dcterms:modified>2014-10-14 (Updated)</dcterms:modified>
-        <rdfs:subPropertyOf rdf:resource="&vocab;partOf"/>
-    </owl:AnnotationProperty>
-    
-
+    </owl:ObjectProperty>
 
 
 
     <!-- http://bibframe.org/vocab/succeededBy -->
 
-    <owl:AnnotationProperty rdf:about="&vocab;succeededBy">
+    <owl:ObjectProperty rdf:about="&vocab;succeededBy">
         <rdfs:label>Succeeded By</rdfs:label>
         <dcterms:modified>2014-04-10 (Renamed)</dcterms:modified>
         <rdfs:comment>Resource that succeeds the resource being described (e.g., later in time or after in a narrative).</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="&vocab;relatedTo"/>
-    </owl:AnnotationProperty>
+    </owl:ObjectProperty>
     
 
 
-    <!-- http://bibframe.org/vocab/summary -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;summary">
-        <rdfs:label>Summary content</rdfs:label>
-        <rdfs:comment>Summary or abstract of the target work or instance.</rdfs:comment>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/summaryOf -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;summaryOf">
-        <rdfs:label>Resource summarized</rdfs:label>
-        <rdfs:comment>Resource to which the description pertains.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Summary"/>
-        <rdfs:subPropertyOf rdf:resource="&vocab;annotates"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/supersededBy -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;supersededBy">
-        <rdfs:label>Superseded by</rdfs:label>
-        <dcterms:modified>2014-04-10 (Updated subproperty)</dcterms:modified>
-        <rdfs:comment>Later Work used in place of an earlier work, usually because the later work contains updated or new information.</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="&vocab;succeededBy"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/supersededInPartBy -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;supersededInPartBy">
-        <rdfs:label>Superseded in part by</rdfs:label>
-        <rdfs:comment>Later Work used in part in place of an earlier work, usually because the later work contains updated or new information.</rdfs:comment>
-        <dcterms:modified>2014-04-10 (Updated subproperty)</dcterms:modified>
-        <rdfs:subPropertyOf rdf:resource="&vocab;succeededBy"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/supersedes -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;supersedes">
-        <rdfs:label>Supersedes</rdfs:label>
-        <dcterms:modified>2014-04-10 (Updated subproperty)</dcterms:modified>
-        <rdfs:comment>Earlier work whose content has been replaced by a later work, usually because the later work contains updated or new information.</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="&vocab;precededBy"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/supersedesInPart -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;supersedesInPart">
-        <rdfs:label>Supersedes in part</rdfs:label>
-        <dcterms:modified>2014-04-10 (Updated subproperty)</dcterms:modified>
-        <rdfs:comment>Earlier work whose content has been partially replaced by a later work, usually because the later work contains updated or new information.</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="&vocab;precededBy"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/supplement -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;supplement">
-        <rdfs:label>Has supplement</rdfs:label>
-        <rdfs:comment>Work that updates or otherwise complements the predominant work.</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="&vocab;accompaniedBy"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/supplementTo -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;supplementTo">
-        <rdfs:label>Supplement to</rdfs:label>
-        <rdfs:comment>Work that is updated or otherwise complemented by the augmenting work.</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="&vocab;accompanies"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/supplementaryContentNote -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;supplementaryContentNote">
-        <rdfs:label>Supplementary content note</rdfs:label>
-        <rdfs:comment>Information on the presence of one or more bibliographies, discographies, filmographies, and/or other bibliographic references in a described resource or in accompanying material.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Instance"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/systemNumber -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;systemNumber">
-        <rdfs:label>System control number</rdfs:label>
-        <rdfs:comment>Control number of a system other than LCCN or NBAN, which Identifies a resource description.</rdfs:comment>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/tableOfContents -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;tableOfContents">
-        <rdfs:label>Table of contents content</rdfs:label>
-        <rdfs:comment>Table of contents of the target work or instance.</rdfs:comment>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/tableOfContentsFor -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;tableOfContentsFor">
-        <rdfs:label>Table of contents of resource</rdfs:label>
-        <rdfs:comment>Resource to which the table of contents pertains.</rdfs:comment>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/temporalCoverageNote -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;temporalCoverageNote">
-        <rdfs:label>Temporal coverage</rdfs:label>
-        <rdfs:comment>Time period covered by the resource.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Work"/>
-    </owl:AnnotationProperty>
-
-
-
-
-    <!-- http://bibframe.org/vocab/translation -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;translation">
-        <rdfs:label>Has translation</rdfs:label>
-        <rdfs:comment>Work that translates the text of the source entity into a language different from that of the original.</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="&vocab;derivativeOf"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/translationOf -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;translationOf">
-        <rdfs:label>Translation of</rdfs:label>
-        <rdfs:comment>Work that has been translated, i.e., the text expressed in a language different from that of the original work).</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="&vocab;hasDerivative"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/unionOf -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;unionOf">
-        <rdfs:label>Union of</rdfs:label>
-        <dcterms:modified>2014-04-10 (Updated subproperty)</dcterms:modified>
-        <rdfs:comment>One of two or more works which came together to form a new work.</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="&vocab;precededBy"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/upc -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;upc">
-        <rdfs:label>UPC</rdfs:label>
-        <rdfs:comment>Universal Product Code.</rdfs:comment>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/uri -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;uri">
-        <rdfs:label>URI</rdfs:label>
-        <rdfs:comment>Uniform Resource Identifier.</rdfs:comment>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/urn -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;urn">
-        <rdfs:label>URN</rdfs:label>
-        <rdfs:comment>Uniform Resource Number.</rdfs:comment>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/videorecordingNumber -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;videorecordingNumber">
-        <rdfs:label>Videorecording number</rdfs:label>
-        <rdfs:comment>Number assigned by a publisher to a videorecording.</rdfs:comment>
-    </owl:AnnotationProperty>
-
-
-
-    <!-- http://bibframe.org/vocab/legacy/duration -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;legacy/duration">
-        <rdfs:label>Duration</rdfs:label>
-        <rdfs:comment>Information about the playing time or duration in an unstructured form, e.g., &quot;2 hours&quot;.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Instance"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/legacy/geographicCoverageNote -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;legacy/geographicCoverageNote">
-        <rdfs:label>Geographic coverage</rdfs:label>
-        <rdfs:comment>Geographic entities covered by the resource.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Work"/>
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/legacy/graphicScaleNote -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;legacy/graphicScaleNote">
-        <rdfs:label>Graphic scale</rdfs:label>
-        <rdfs:comment>Textual information about scale, including the scale of graphic material item such as architectural drawings or three-dimensional artifacts.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Instance"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/legacy/languageNote -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;legacy/languageNote">
-        <rdfs:label>Language note</rdfs:label>
-        <rdfs:comment>Note concerning the language of the material or its parts.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Work"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/legacy/modeOfIssuance -->
-
-    <owl:AnnotationProperty rdf:about="&vocab;legacy/modeOfIssuance">
-        <rdfs:label>Mode of issuance</rdfs:label>
-        <rdfs:comment>Categorization reflecting whether a resource is issued in one or more parts, the way it is updated, and its intended termination.</rdfs:comment>
-        <rdfs:domain rdf:resource="&vocab;Instance"/>
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
-    </owl:AnnotationProperty>
-    
 
 
     <!-- http://bibframe.org/vocab/legacy/notation -->
 
-    <owl:AnnotationProperty rdf:about="&vocab;legacy/notation">
+    <owl:DatatypeProperty rdf:about="&vocab;legacy/notation">
         <rdfs:label>Notation system</rdfs:label>
         <rdfs:comment>Information on the alphabet, script, or symbol system used to convey the content of the resource, including specialized scripts, typefaces, tactile notation, and musical notation.</rdfs:comment>
         <rdfs:domain rdf:resource="&vocab;Instance"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
-    </owl:AnnotationProperty>
+    </owl:DatatypeProperty>
     
 
 
     <!-- http://bibframe.org/vocab/legacy/providerStatement -->
 
-    <owl:AnnotationProperty rdf:about="&vocab;legacy/providerStatement">
+    <owl:DatatypeProperty rdf:about="&vocab;legacy/providerStatement">
         <rdfs:label>Provider statement</rdfs:label>
         <rdfs:comment>Transcribed provider statement</rdfs:comment>
         <rdfs:domain rdf:resource="&vocab;Instance"/>
-    </owl:AnnotationProperty>
+    </owl:DatatypeProperty>
     
 
 
     <!-- http://bibframe.org/vocab/legacy/supplementaryContentNote -->
 
-    <owl:AnnotationProperty rdf:about="&vocab;legacy/supplementaryContentNote">
+    <owl:DatatypeProperty rdf:about="&vocab;legacy/supplementaryContentNote">
         <rdfs:label>Supplementary content note</rdfs:label>
         <rdfs:comment>Information on the presence of one or more bibliographies, discographies, filmographies, and/or other bibliographic references in a described resource or in accompanying material.</rdfs:comment>
         <rdfs:domain rdf:resource="&vocab;Instance"/>
-    </owl:AnnotationProperty>
+    </owl:DatatypeProperty>
     
 
 
     <!-- http://bibframe.org/vocab/legacy/temporalCoverageNote -->
 
-    <owl:AnnotationProperty rdf:about="&vocab;legacy/temporalCoverageNote">
+    <owl:DatatypeProperty rdf:about="&vocab;legacy/temporalCoverageNote">
         <rdfs:label>Temporal coverage</rdfs:label>
         <rdfs:comment>Time period covered by the resource.</rdfs:comment>
         <rdfs:domain rdf:resource="&vocab;Work"/>
-    </owl:AnnotationProperty>
+    </owl:DatatypeProperty>
     
 
     <!-- http://purl.org/dc/elements/1.1/date -->
@@ -2531,17 +1047,6 @@
     
 
 
-    <!-- http://bibframe.org/vocab/hasInstance -->
-
-    <owl:ObjectProperty rdf:about="&vocab;hasInstance">
-        <rdfs:label>Instance of Work</rdfs:label>
-        <rdfs:comment>Work has a related Instance/manifestation. For use to connect Works to Instances in the BIBFRAME structure.</rdfs:comment>
-        <dcterms:modified>2014--03-21 (Updated definition)</dcterms:modified>
-        <rdfs:range rdf:resource="&vocab;Instance"/>
-        <rdfs:domain rdf:resource="&vocab;Work"/>
-        <rdfs:subPropertyOf rdf:resource="&vocab;relatedTo"/>
-    </owl:ObjectProperty>
-    
 
 
     <!-- http://bibframe.org/vocab/hdl -->
@@ -3282,14 +1787,15 @@
     
 
 
-    <!-- http://bibframe.org/vocab/subseries -->
+    <!-- http://bibframe.org/vocab/hasSubseries -->
 
-    <owl:ObjectProperty rdf:about="&vocab;subseries">
+    <owl:ObjectProperty rdf:about="&vocab;hasSubseries">
         <rdfs:label>Has subseries</rdfs:label>
         <rdfs:comment>Work, which is part of another series, in which the part has been issued.</rdfs:comment>
         <dcterms:modified>2014-10-14 (Updated)</dcterms:modified>
         <rdfs:domain rdf:resource="&vocab;Work"/>
         <rdfs:range rdf:resource="&vocab;Work"/>
+        <owl:subClassOf rdf:resource="&vocab;hasPart"/>
     </owl:ObjectProperty>
     
 
@@ -3302,6 +1808,8 @@
         <dcterms:modified>2014-10-14 (Updated)</dcterms:modified>
         <rdfs:domain rdf:resource="&vocab;Work"/>
         <rdfs:range rdf:resource="&vocab;Work"/>
+        <owl:subClassOf rdf:resource="&dcterms;isPartOf"/>
+        <owl:inverseOf rdf:resource="&vocab;hasSubseries"/>
     </owl:ObjectProperty>
     
 
@@ -4199,14 +2707,6 @@ There is no OA class provided for &quot;Target&quot; as a target might be a body
     
 
 
-    <!-- http://bibframe.org/vocab/enumerationAndChronology -->
-
-    <owl:DatatypeProperty rdf:about="&vocab;enumerationAndChronology">
-        <rdfs:label>Enumeration and chronology</rdfs:label>
-        <rdfs:comment>Numbering and dates of holding.</rdfs:comment>
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
-    </owl:DatatypeProperty>
-    
 
 
     <!-- http://bibframe.org/vocab/eventDate -->
@@ -4382,17 +2882,6 @@ There is no OA class provided for &quot;Target&quot; as a target might be a body
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
-
-
-    <!-- http://bibframe.org/vocab/label -->
-
-    <owl:DatatypeProperty rdf:about="&vocab;label">
-        <rdfs:label>Label</rdfs:label>
-        <rdfs:comment>Text string expressing the property value.</rdfs:comment>
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
-    </owl:DatatypeProperty>
-    
-
 
     <!-- http://bibframe.org/vocab/languageOfPart -->
 
