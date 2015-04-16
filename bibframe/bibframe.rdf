@@ -6,7 +6,9 @@
     <!ENTITY marc-fields "http://bibframe.org/marc/" >
     <!ENTITY dcterms "http://purl.org/dc/terms/" >
     <!ENTITY prov "http://www.w3.org/ns/prov#" >
+    <!ENTITY ontology "http://lexvo.org/ontology#" >
     <!ENTITY vocab "http://bibframe.org/vocab/" >
+    <!ENTITY vann "http://purl.org/vocab/vann/" >
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY bfmain "http://bibframe.org/vocab/main" >
     <!ENTITY bframe "http://bibframe.org/vocab/frame" >
@@ -28,7 +30,9 @@
      xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
      xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:bf-abstract="http://bibframe.org/model-abstract/"
+     xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:bfmain="&vocab;main"
+     xmlns:ontology="http://lexvo.org/ontology#"
      xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:rda-fields="http://bibframe.org/rda/"
@@ -2502,6 +2506,12 @@
     
 
 
+    <!-- http://lexvo.org/ontology#somewhatSameAs -->
+
+    <owl:AnnotationProperty rdf:about="&ontology;somewhatSameAs"/>
+    
+
+
     <!-- http://purl.org/dc/elements/1.1/date -->
 
     <owl:AnnotationProperty rdf:about="&dc;date"/>
@@ -2604,6 +2614,12 @@
         <rdfs:subPropertyOf rdf:resource="&dc;relation"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
     </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/vocab/vann/example -->
+
+    <owl:AnnotationProperty rdf:about="&vann;example"/>
     
 
 
@@ -6377,6 +6393,14 @@ There SHOULD be exactly 1 oa:annotatedAt property per Annotation, and MUST NOT b
     
 
 
+    <!-- http://d-nb.info/standards/elementset/gnd#Language -->
+
+    <owl:Class rdf:about="http://d-nb.info/standards/elementset/gnd#Language">
+        <owl:equivalentClass rdf:resource="http://www.lingvoj.org/ontology#Lingvo"/>
+    </owl:Class>
+    
+
+
     <!-- http://geovocab.org/spatial#Feature -->
 
     <owl:Class rdf:about="http://geovocab.org/spatial#Feature">
@@ -6389,6 +6413,20 @@ There SHOULD be exactly 1 oa:annotatedAt property per Annotation, and MUST NOT b
 
     <owl:Class rdf:about="&dcterms;Agent">
         <owl:equivalentClass rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dc/terms/LinguisticSystem -->
+
+    <owl:Class rdf:about="&dcterms;LinguisticSystem"/>
+    
+
+
+    <!-- http://purl.org/linguistics/gold/Language -->
+
+    <owl:Class rdf:about="http://purl.org/linguistics/gold/Language">
+        <owl:equivalentClass rdf:resource="http://www.lingvoj.org/ontology#Lingvo"/>
     </owl:Class>
     
 
@@ -6425,6 +6463,14 @@ There SHOULD be exactly 1 oa:annotatedAt property per Annotation, and MUST NOT b
         <rdfs:label xml:lang="en">Government Organization</rdfs:label>
         <rdfs:comment xml:lang="en"></rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://schema.org/GovernmentOrganization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Language -->
+
+    <owl:Class rdf:about="http://schema.org/Language">
+        <owl:equivalentClass rdf:resource="http://www.lingvoj.org/ontology#Lingvo"/>
     </owl:Class>
     
 
@@ -6473,9 +6519,54 @@ There SHOULD be exactly 1 oa:annotatedAt property per Annotation, and MUST NOT b
     
 
 
+    <!-- http://www.lingvoj.org/ontology#Lingvo -->
+
+    <owl:Class rdf:about="http://www.lingvoj.org/ontology#Lingvo">
+        <rdfs:label xml:lang="de">Sprache</rdfs:label>
+        <rdfs:label xml:lang="en">Language</rdfs:label>
+        <rdfs:label xml:lang="eo">Lingvo</rdfs:label>
+        <rdfs:label xml:lang="es">Lenguaje</rdfs:label>
+        <rdfs:label xml:lang="fi">Kieli</rdfs:label>
+        <rdfs:label xml:lang="fr">Langue</rdfs:label>
+        <rdfs:label xml:lang="it">Linguaggio</rdfs:label>
+        <rdfs:label xml:lang="ja">言語</rdfs:label>
+        <rdfs:label xml:lang="nl">Taal</rdfs:label>
+        <rdfs:label xml:lang="no">Språk</rdfs:label>
+        <rdfs:label xml:lang="pl">Jezyk</rdfs:label>
+        <rdfs:label xml:lang="pt">Língua</rdfs:label>
+        <rdfs:label xml:lang="ru">Язык</rdfs:label>
+        <rdfs:label xml:lang="sv">Språk</rdfs:label>
+        <rdfs:label xml:lang="tr">Dil</rdfs:label>
+        <rdfs:label xml:lang="zh">语言</rdfs:label>
+        <owl:equivalentClass rdf:resource="http://www.ontotext.com/proton/protontop#Language"/>
+        <rdfs:subClassOf rdf:resource="&dcterms;LinguisticSystem"/>
+        <rdfs:subClassOf rdf:resource="http://www.loc.gov/mads/rdf/v1#Language"/>
+        <rdfs:comment xml:lang="en">A language used in spoken or written human communication, or in which a resource is written or recorded. It is recommended to use instances defined on the basis of ISO 639 codes, such as those in examples</rdfs:comment>
+        <rdfs:comment xml:lang="es">Una lengua utilizada en la comunicación oral o escrita entre personas, o en la que se escribe o graba un recurso. Se recomienda el uso de las instancias definidas según los códigos ISO 639, como los que aparecen en los ejemplos</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Une langue utilisée dans la communication orale ou écrite entre humains, ou dans laquelle une ressource est écrite ou enregistrée. Il est recommandé d&apos;utiliser des instances définies sur la base d&apos;un code ISO 639, comme dans les exemples</rdfs:comment>
+        <rdfs:comment xml:lang="nl">Een taal gebruikt in geschreven of gesproken communicatie tussen mensen of in welke een bron is geschreven of opgenomen. Het is aan te raden instanties te gebruiken gedefinieerd op basis van de ISO 630 codes, zoals in deze voorbeelden</rdfs:comment>
+        <vann:example rdf:resource="http://id.loc.gov/vocabulary/iso639-1/ja"/>
+        <vann:example rdf:resource="http://lexvo.org/id/iso639-3/fra"/>
+        <ontology:somewhatSameAs rdf:resource="&ontology;Language"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.loc.gov/mads/rdf/v1#Language -->
+
+    <owl:Class rdf:about="http://www.loc.gov/mads/rdf/v1#Language"/>
+    
+
+
     <!-- http://www.mindswap.org/2003/owl/geo/geoFeatures20040307.owl#GeographicFeature -->
 
     <owl:Class rdf:about="http://www.mindswap.org/2003/owl/geo/geoFeatures20040307.owl#GeographicFeature"/>
+    
+
+
+    <!-- http://www.ontotext.com/proton/protontop#Language -->
+
+    <owl:Class rdf:about="http://www.ontotext.com/proton/protontop#Language"/>
     
 
 
