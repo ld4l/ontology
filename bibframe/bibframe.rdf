@@ -2070,16 +2070,6 @@ There is no OA class provided for &quot;Target&quot; as a target might be a body
         <rdfs:range rdf:resource="&prov;Location"/>
         <prov:sharesDefinitionWith rdf:resource="&prov;Location"/>
         <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&prov;Activity"/>
-                    <rdf:Description rdf:about="&prov;Agent"/>
-                    <rdf:Description rdf:about="&prov;Entity"/>
-                    <rdf:Description rdf:about="&prov;InstantaneousEvent"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -3831,13 +3821,6 @@ There SHOULD be exactly 1 oa:annotatedAt property per Annotation, and MUST NOT b
         <owl:equivalentClass rdf:resource="http://www.geonames.org/ontology#Feature"/>
     </owl:Class>
     
-
-
-    <!-- http://purl.org/dc/terms/Agent -->
-
-    <owl:Class rdf:about="&dcterms;Agent">
-        <owl:equivalentClass rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
-    </owl:Class>
     
 
 
@@ -4043,17 +4026,11 @@ This &quot;aboutness&quot; may be further clarified or extended to notions such 
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/10/swap/pim/contact#Person"/>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
         <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
-        <owl:disjointWith rdf:resource="http://xmlns.com/foaf/0.1/Project"/>
         <rdfs:comment>A person.</rdfs:comment>
         <ns:term_status>stable</ns:term_status>
         <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
     </owl:Class>
     
-
-
-    <!-- http://xmlns.com/foaf/0.1/Project -->
-
-    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Project"/>
 </rdf:RDF>
 
 
