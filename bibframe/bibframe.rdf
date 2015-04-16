@@ -17,6 +17,7 @@
     <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY ns "http://www.w3.org/2003/06/sw-vocab-status/ns#" >
     <!ENTITY vitro "http://vitro.mannlib.cornell.edu/ns/vitro/0.7#" >
 ]>
 
@@ -24,6 +25,7 @@
 <rdf:RDF xmlns="http://bibframe.org/vocab/"
      xml:base="http://bibframe.org/vocab/"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
      xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:bf-abstract="http://bibframe.org/model-abstract/"
      xmlns:bfmain="&vocab;main"
@@ -32,8 +34,8 @@
      xmlns:rda-fields="http://bibframe.org/rda/"
      xmlns:marc-fields="http://bibframe.org/marc/"
      xmlns:vitro="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:vocab="http://bibframe.org/vocab/"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
@@ -2608,6 +2610,12 @@
     <!-- http://vitro.mannlib.cornell.edu/ns/vitro/0.7#shortDef -->
 
     <owl:AnnotationProperty rdf:about="&vitro;shortDef"/>
+    
+
+
+    <!-- http://www.w3.org/2003/06/sw-vocab-status/ns#term_status -->
+
+    <owl:AnnotationProperty rdf:about="&ns;term_status"/>
     
 
 
@@ -6363,6 +6371,14 @@ There SHOULD be exactly 1 oa:annotatedAt property per Annotation, and MUST NOT b
     
 
 
+    <!-- http://purl.org/dc/terms/Agent -->
+
+    <owl:Class rdf:about="&dcterms;Agent">
+        <owl:equivalentClass rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    </owl:Class>
+    
+
+
     <!-- http://schema.org/Audience -->
 
     <owl:Class rdf:about="http://schema.org/Audience">
@@ -6430,9 +6446,21 @@ There SHOULD be exactly 1 oa:annotatedAt property per Annotation, and MUST NOT b
     
 
 
+    <!-- http://www.w3.org/2000/10/swap/pim/contact#Person -->
+
+    <owl:Class rdf:about="http://www.w3.org/2000/10/swap/pim/contact#Person"/>
+    
+
+
     <!-- http://www.w3.org/2001/XMLSchema#string -->
 
     <owl:Class rdf:about="&xsd;string"/>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing -->
+
+    <owl:Class rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
     
 
 
@@ -6500,6 +6528,58 @@ This &quot;aboutness&quot; may be further clarified or extended to notions such 
     <!-- http://www.w3.org/ns/prov#Location -->
 
     <owl:Class rdf:about="&prov;Location"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Agent -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Agent">
+        <rdfs:label>Agent</rdfs:label>
+        <rdfs:comment>An agent (eg. person, group, software or physical artifact).</rdfs:comment>
+        <ns:term_status>stable</ns:term_status>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Document -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Document">
+        <owl:disjointWith rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Organization -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Organization">
+        <rdfs:label>Organization</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <owl:disjointWith rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:comment>An organization.</rdfs:comment>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Person -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person">
+        <rdfs:label>Person</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/10/swap/pim/contact#Person"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <owl:disjointWith rdf:resource="http://xmlns.com/foaf/0.1/Project"/>
+        <rdfs:comment>A person.</rdfs:comment>
+        <ns:term_status>stable</ns:term_status>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Project -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Project"/>
 </rdf:RDF>
 
 
