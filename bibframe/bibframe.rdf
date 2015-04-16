@@ -2625,6 +2625,12 @@
     
 
 
+    <!-- http://www.w3.org/2004/02/skos/core#historyNote -->
+
+    <owl:AnnotationProperty rdf:about="&skos;historyNote"/>
+    
+
+
     <!-- http://www.w3.org/2004/02/skos/core#note -->
 
     <owl:AnnotationProperty rdf:about="&skos;note"/>
@@ -4511,11 +4517,11 @@ There is no OA class provided for &quot;Target&quot; as a target might be a body
     <owl:ObjectProperty rdf:about="&prov;atLocation">
         <rdfs:label>atLocation</rdfs:label>
         <prov:category>expanded</prov:category>
+        <rdfs:comment xml:lang="en">The Location of any resource.</rdfs:comment>
         <rdfs:comment>This property has multiple RDFS domains to suit multiple OWL Profiles. See &lt;a href=&quot;#owl-profile&quot;&gt;PROV-O OWL Profile&lt;/a&gt;.</rdfs:comment>
         <prov:editorialNote xml:lang="en">The naming of prov:atLocation parallels prov:atTime, and is not named prov:hadLocation to avoid conflicting with the convention that prov:had* properties are used on prov:Influence classes.</prov:editorialNote>
         <prov:editorialNote xml:lang="en">This property is not functional because the many values could be at a variety of granularies (In this building, in this room, in that chair).</prov:editorialNote>
         <prov:inverse>locationOf</prov:inverse>
-        <rdfs:comment xml:lang="en">The Location of any resource.</rdfs:comment>
         <rdfs:range rdf:resource="&prov;Location"/>
         <prov:sharesDefinitionWith rdf:resource="&prov;Location"/>
         <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
@@ -6371,6 +6377,14 @@ There SHOULD be exactly 1 oa:annotatedAt property per Annotation, and MUST NOT b
     
 
 
+    <!-- http://geovocab.org/spatial#Feature -->
+
+    <owl:Class rdf:about="http://geovocab.org/spatial#Feature">
+        <owl:equivalentClass rdf:resource="http://www.geonames.org/ontology#Feature"/>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/dc/terms/Agent -->
 
     <owl:Class rdf:about="&dcterms;Agent">
@@ -6431,12 +6445,37 @@ There SHOULD be exactly 1 oa:annotatedAt property per Annotation, and MUST NOT b
     
 
 
+    <!-- http://schema.org/Place -->
+
+    <owl:Class rdf:about="http://schema.org/Place"/>
+    
+
+
     <!-- http://vivoweb.org/ontology/core#Meeting -->
 
     <owl:Class rdf:about="http://vivoweb.org/ontology/core#Meeting">
         <rdfs:label xml:lang="en-us">Meeting</rdfs:label>
         <vitro:shortDef rdf:datatype="&xsd;string">A gathering of people for a defined purpose, not necessarily public or announced</vitro:shortDef>
     </owl:Class>
+    
+
+
+    <!-- http://www.geonames.org/ontology#Feature -->
+
+    <owl:Class rdf:about="http://www.geonames.org/ontology#Feature">
+        <rdfs:label xml:lang="en">Feature</rdfs:label>
+        <owl:equivalentClass rdf:resource="http://www.mindswap.org/2003/owl/geo/geoFeatures20040307.owl#GeographicFeature"/>
+        <rdfs:subClassOf rdf:resource="http://schema.org/Place"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+        <rdfs:comment xml:lang="en">A geographical feature</rdfs:comment>
+        <skos:historyNote xml:lang="en">Modified in version 3.1 : The cardinality constraints on feature code, feature class are relaxed on this class, and put on the specific subclass Geonames Feature. This class and attached properties can therefore be used for features not necessarily identified in the Geoanmes data base</skos:historyNote>
+    </owl:Class>
+    
+
+
+    <!-- http://www.mindswap.org/2003/owl/geo/geoFeatures20040307.owl#GeographicFeature -->
+
+    <owl:Class rdf:about="http://www.mindswap.org/2003/owl/geo/geoFeatures20040307.owl#GeographicFeature"/>
     
 
 
