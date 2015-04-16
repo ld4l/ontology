@@ -5647,30 +5647,6 @@ This &quot;aboutness&quot; may be further clarified or extended to notions such 
     
 
 
-    <!-- http://www.w3.org/ns/prov#Agent -->
-
-    <owl:Class rdf:about="&prov;Agent"/>
-    
-
-
-    <!-- http://www.w3.org/ns/prov#Entity -->
-
-    <owl:Class rdf:about="&prov;Entity"/>
-    
-
-
-    <!-- http://www.w3.org/ns/prov#InstantaneousEvent -->
-
-    <owl:Class rdf:about="&prov;InstantaneousEvent"/>
-    
-
-
-    <!-- http://www.w3.org/ns/prov#Location -->
-
-    <owl:Class rdf:about="&prov;Location"/>
-    
-
-
     <!-- http://xmlns.com/foaf/0.1/Agent -->
 
     <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Agent">
