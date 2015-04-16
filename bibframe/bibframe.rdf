@@ -17,6 +17,7 @@
     <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY vitro "http://vitro.mannlib.cornell.edu/ns/vitro/0.7#" >
 ]>
 
 
@@ -30,6 +31,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:rda-fields="http://bibframe.org/rda/"
      xmlns:marc-fields="http://bibframe.org/marc/"
+     xmlns:vitro="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -2603,6 +2605,12 @@
     
 
 
+    <!-- http://vitro.mannlib.cornell.edu/ns/vitro/0.7#shortDef -->
+
+    <owl:AnnotationProperty rdf:about="&vitro;shortDef"/>
+    
+
+
     <!-- http://www.w3.org/2004/02/skos/core#definition -->
 
     <owl:AnnotationProperty rdf:about="&skos;definition"/>
@@ -4495,11 +4503,11 @@ There is no OA class provided for &quot;Target&quot; as a target might be a body
     <owl:ObjectProperty rdf:about="&prov;atLocation">
         <rdfs:label>atLocation</rdfs:label>
         <prov:category>expanded</prov:category>
-        <rdfs:comment xml:lang="en">The Location of any resource.</rdfs:comment>
         <rdfs:comment>This property has multiple RDFS domains to suit multiple OWL Profiles. See &lt;a href=&quot;#owl-profile&quot;&gt;PROV-O OWL Profile&lt;/a&gt;.</rdfs:comment>
         <prov:editorialNote xml:lang="en">The naming of prov:atLocation parallels prov:atTime, and is not named prov:hadLocation to avoid conflicting with the convention that prov:had* properties are used on prov:Influence classes.</prov:editorialNote>
         <prov:editorialNote xml:lang="en">This property is not functional because the many values could be at a variety of granularies (In this building, in this room, in that chair).</prov:editorialNote>
         <prov:inverse>locationOf</prov:inverse>
+        <rdfs:comment xml:lang="en">The Location of any resource.</rdfs:comment>
         <rdfs:range rdf:resource="&prov;Location"/>
         <prov:sharesDefinitionWith rdf:resource="&prov;Location"/>
         <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
@@ -6403,6 +6411,15 @@ There SHOULD be exactly 1 oa:annotatedAt property per Annotation, and MUST NOT b
 
     <owl:Class rdf:about="http://schema.org/PeopleAudience">
         <rdfs:subClassOf rdf:resource="http://schema.org/Audience"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core#Meeting -->
+
+    <owl:Class rdf:about="http://vivoweb.org/ontology/core#Meeting">
+        <rdfs:label xml:lang="en-us">Meeting</rdfs:label>
+        <vitro:shortDef rdf:datatype="&xsd;string">A gathering of people for a defined purpose, not necessarily public or announced</vitro:shortDef>
     </owl:Class>
     
 
