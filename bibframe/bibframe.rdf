@@ -5699,14 +5699,6 @@ This &quot;aboutness&quot; may be further clarified or extended to notions such 
     
 
 
-    <!-- http://xmlns.com/foaf/0.1/Document -->
-
-    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Document">
-        <owl:disjointWith rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
-    </owl:Class>
-    
-
-
     <!-- http://xmlns.com/foaf/0.1/Organization -->
 
     <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Organization">
