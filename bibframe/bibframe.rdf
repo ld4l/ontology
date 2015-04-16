@@ -3590,18 +3590,7 @@
     
 
 
-    <!-- http://www.w3.org/2004/02/skos/core#member -->
-
-    <owl:ObjectProperty rdf:about="&skos;member">
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&skos;Collection"/>
-                    <rdf:Description rdf:about="&skos;Concept"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
-    </owl:ObjectProperty>
+ 
     
 
 
@@ -5620,13 +5609,6 @@ There SHOULD be exactly 1 oa:annotatedAt property per Annotation, and MUST NOT b
 
     <owl:Class rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
     
-
-
-    <!-- http://www.w3.org/2004/02/skos/core#Collection -->
-
-    <owl:Class rdf:about="&skos;Collection">
-        <owl:disjointWith rdf:resource="&skos;Concept"/>
-    </owl:Class>
     
 
 
