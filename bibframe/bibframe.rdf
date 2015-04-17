@@ -503,6 +503,18 @@
     
 
 
+    <!-- http://bibframe.org/vocab/hasIndex -->
+
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasIndex">
+        <rdfs:label xml:lang="en">Has Index</rdfs:label>
+        <rdfs:comment>Work has an accompanying index</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/AccompaniedBy"/>
+        <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://bibframe.org/vocab/hasInstance -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasInstance">
@@ -594,17 +606,6 @@
         <rdfs:comment>Scheme within which the identifier is unique.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Identifier"/>
         <rdfs:range rdf:resource="&rdfs;Resource"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/index -->
-
-    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/index">
-        <rdfs:label>Index</rdfs:label>
-        <rdfs:comment>Work has an accompanying index</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
-        <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
     </owl:ObjectProperty>
     
 
@@ -823,13 +824,14 @@
     
 
 
-    <!-- http://bibframe.org/vocab/reproduction -->
+    <!-- http://bibframe.org/vocab/reproductionOf -->
 
-    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/reproduction">
-        <rdfs:label>Has reproduction</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/reproductionOf">
+        <rdfs:label xml:lang="en">Reproduction of</rdfs:label>
         <rdfs:comment>Instance that reproduces another Instance embodying the same work.</rdfs:comment>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
+        <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/equivalentTo"/>
     </owl:ObjectProperty>
     
 
