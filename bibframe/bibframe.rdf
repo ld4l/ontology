@@ -349,7 +349,7 @@
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/describedBy">
         <rdfs:label>Described by</rdfs:label>
         <rdfs:comment>Related resource that analyzes, comments on, critiques, evaluates, reviews, or otherwise describes the resource.</rdfs:comment>
-        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/isDescriptionOf"/>
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/descriptionOf"/>
         <rdfs:subPropertyOf rdf:resource="&terms;relation"/>
     </owl:ObjectProperty>
     
@@ -361,6 +361,17 @@
         <rdfs:label>Description modifier</rdfs:label>
         <rdfs:comment>Agency that modified a description.</rdfs:comment>
         <rdfs:range rdf:resource="&rdfs;Resource"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bibframe.org/vocab/descriptionOf -->
+
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/descriptionOf">
+        <rdfs:label>Description of</rdfs:label>
+        <rdfs:comment>Related resource that is analyzed, commented upon, critiqued, evaluated, reviewed, or otherwise described by the resource.</rdfs:comment>
+        <owl:inverseOf></owl:inverseOf>
+        <rdfs:subPropertyOf rdf:resource="&terms;relation"/>
     </owl:ObjectProperty>
     
 
@@ -624,17 +635,6 @@
         <rdfs:label>Intended audience</rdfs:label>
         <rdfs:comment>Information that identifies the specific audience or intellectual level for which the content of the resource is considered appropriate.</rdfs:comment>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/IntendedAudience"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/isDescriptionOf -->
-
-    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/isDescriptionOf">
-        <rdfs:label>Is description of</rdfs:label>
-        <owl:inverseOf></owl:inverseOf>
-        <rdfs:comment>Related resource that is analyzed, commented upon, critiqued, evaluated, reviewed, or otherwise described by the resource.</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="&terms;relation"/>
     </owl:ObjectProperty>
     
 
@@ -2266,7 +2266,7 @@ There SHOULD be exactly 1 oa:annotatedAt property per Annotation, and MUST NOT b
     <!-- http://bibframe.org/vocab/Monograph -->
 
     <owl:Class rdf:about="http://bibframe.org/vocab/Monograph">
-        <rdfs:label>Single unit</rdfs:label>
+        <rdfs:label>Monograph</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:comment>Single unit cataloging resource.</rdfs:comment>
     </owl:Class>
@@ -2286,7 +2286,7 @@ There SHOULD be exactly 1 oa:annotatedAt property per Annotation, and MUST NOT b
     <!-- http://bibframe.org/vocab/Multimedia -->
 
     <owl:Class rdf:about="http://bibframe.org/vocab/Multimedia">
-        <rdfs:label>Software or Multimedia</rdfs:label>
+        <rdfs:label>Software or software-driven multimedia</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:comment>Electronic resource that is a computer program (i.e. digitally encoded instructions intended to be processed and performed by a computer) or which consist of multiple media types that are software driven. Examples include videogames and websites.</rdfs:comment>
     </owl:Class>
@@ -2296,7 +2296,7 @@ There SHOULD be exactly 1 oa:annotatedAt property per Annotation, and MUST NOT b
     <!-- http://bibframe.org/vocab/MultipartMonograph -->
 
     <owl:Class rdf:about="http://bibframe.org/vocab/MultipartMonograph">
-        <rdfs:label>Multiple units</rdfs:label>
+        <rdfs:label>Multipart monograph</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:comment>Multiple unit cataloging resource that is complete or intended to be completed within a finite number of parts.</rdfs:comment>
     </owl:Class>
@@ -2344,7 +2344,7 @@ There SHOULD be exactly 1 oa:annotatedAt property per Annotation, and MUST NOT b
     <!-- http://bibframe.org/vocab/Print -->
 
     <owl:Class rdf:about="http://bibframe.org/vocab/Print">
-        <rdfs:label>Printed</rdfs:label>
+        <rdfs:label>Print material</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:comment>Resource that is printed.</rdfs:comment>
     </owl:Class>
