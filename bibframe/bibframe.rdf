@@ -390,6 +390,8 @@
         <rdf:type rdf:resource="&owl;SymmetricProperty"/>
         <rdfs:label>Equivalence</rdfs:label>
         <rdfs:comment>Instance embodies the same expression of a work as the resource being described.</rdfs:comment>
+        <rdfs:range rdf:resource="http://bibframe.org/vocab/Instance"/>
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/relatedTo"/>
     </owl:ObjectProperty>
     
@@ -570,6 +572,16 @@
         <rdfs:comment>Instance for which holding is reported</rdfs:comment>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/annotates"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bibframe.org/vocab/identifiedBy -->
+
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/identifiedBy">
+        <rdfs:label>Identifier for Held Item</rdfs:label>
+        <rdfs:comment>Identification number assigned to data about one item held.</rdfs:comment>
+        <rdfs:range rdf:resource="http://bibframe.org/vocab/Identifier"/>
     </owl:ObjectProperty>
     
 
