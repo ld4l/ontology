@@ -580,6 +580,7 @@
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/identifiedBy">
         <rdfs:label>Identifier for Held Item</rdfs:label>
+        <rdfs:comment>Add domain HeldItem?</rdfs:comment>
         <rdfs:comment>Identification number assigned to data about one item held.</rdfs:comment>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Identifier"/>
     </owl:ObjectProperty>
@@ -1444,16 +1445,6 @@ There is no OA class provided for &quot;Target&quot; as a target might be a body
     
 
 
-    <!-- http://bibframe.org/vocab/copyNote -->
-
-    <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/copyNote">
-        <rdfs:label>Copy note</rdfs:label>
-        <rdfs:comment>Information about this copy.</rdfs:comment>
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://bibframe.org/vocab/copyrightDate -->
 
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/copyrightDate">
@@ -1565,6 +1556,17 @@ There is no OA class provided for &quot;Target&quot; as a target might be a body
     
 
 
+    <!-- http://bibframe.org/vocab/extraValue -->
+
+    <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/extraValue">
+        <rdfs:label>Other title attribute</rdfs:label>
+        <rdfs:comment>Other distinguishing characteristic of a work, such as version, etc..</rdfs:comment>
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Title"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://bibframe.org/vocab/formDesignation -->
 
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/formDesignation">
@@ -1621,39 +1623,6 @@ There is no OA class provided for &quot;Target&quot; as a target might be a body
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/geographicCoverageNote">
         <rdfs:label>Geographic coverage</rdfs:label>
         <rdfs:comment>Geographic entities covered by the resource.</rdfs:comment>
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/hasExtraValue -->
-
-    <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/hasExtraValue">
-        <rdfs:label>Other title attribute</rdfs:label>
-        <rdfs:comment>Other distinguishing characteristic of a work, such as version, etc..</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Title"/>
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/hasSubtitle -->
-
-    <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/hasSubtitle">
-        <rdfs:label>Subtitle</rdfs:label>
-        <rdfs:comment>Word, character, or group of words and/or characters that contains the remainder of the title information after the main title.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Title"/>
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/identifiedBy -->
-
-    <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/identifiedBy">
-        <rdfs:label>Identifier for Held Item</rdfs:label>
-        <rdfs:comment>Identification number assigned to data about one item held.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bibframe.org/vocab/HeldItem"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
@@ -1826,6 +1795,17 @@ There is no OA class provided for &quot;Target&quot; as a target might be a body
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/soundContent">
         <rdfs:label>Sound content</rdfs:label>
         <rdfs:comment>Indication of whether the production of sound is an integral part of the resource.</rdfs:comment>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://bibframe.org/vocab/subtitle -->
+
+    <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/subtitle">
+        <rdfs:label>Subtitle</rdfs:label>
+        <rdfs:comment>Word, character, or group of words and/or characters that contains the remainder of the title information after the main title.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Title"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
