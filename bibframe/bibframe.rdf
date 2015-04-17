@@ -229,7 +229,6 @@
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/componentOf">
         <rdfs:label>Held item</rdfs:label>
         <rdfs:comment>Link to held material</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bibframe.org/vocab/HeldItem"/>
     </owl:ObjectProperty>
     
 
@@ -1460,7 +1459,9 @@ There is no OA class provided for &quot;Target&quot; as a target might be a body
 
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/custodialHistory">
         <rdfs:label>Custodial history</rdfs:label>
+        <rdfs:comment>Added domain bf:HeldItem.</rdfs:comment>
         <rdfs:comment>Information about the provenance, such as origin, ownership and custodial history (chain of custody), of a resource.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Item"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
@@ -1521,16 +1522,6 @@ There is no OA class provided for &quot;Target&quot; as a target might be a body
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/dissertationYear">
         <rdfs:label>Year degree awarded</rdfs:label>
         <rdfs:comment>Year degree awarded.</rdfs:comment>
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/edition -->
-
-    <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/edition">
-        <rdfs:label>Edition statement</rdfs:label>
-        <rdfs:comment>Information identifying the edition or version of the resource.</rdfs:comment>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
@@ -2193,15 +2184,6 @@ There SHOULD be exactly 1 oa:annotatedAt property per Annotation, and MUST NOT b
         <rdfs:label>Family</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Agent"/>
         <rdfs:comment>Two or more persons related by birth, marriage, adoption, civil union, or similar legal status, or who otherwise present themselves as a family.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://bibframe.org/vocab/HeldItem -->
-
-    <owl:Class rdf:about="http://bibframe.org/vocab/HeldItem">
-        <rdfs:label>Item held</rdfs:label>
-        <rdfs:comment>Item holding information.</rdfs:comment>
     </owl:Class>
     
 
