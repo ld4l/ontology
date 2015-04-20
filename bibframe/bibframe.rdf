@@ -408,8 +408,6 @@
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/eventPlace">
         <rdfs:label>Place of event</rdfs:label>
         <rdfs:comment>Geographic area associated with event.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Event"/>
-        <rdfs:range rdf:resource="http://bibframe.org/vocab/Place"/>
     </owl:ObjectProperty>
     
 
@@ -733,7 +731,6 @@
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/originPlace">
         <rdfs:label>Associated title place</rdfs:label>
         <rdfs:comment>Place from which the creation of the work originated.</rdfs:comment>
-        <rdfs:range rdf:resource="http://bibframe.org/vocab/Place"/>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
     </owl:ObjectProperty>
     
@@ -807,7 +804,6 @@
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/providerPlace">
         <rdfs:label>Provider place</rdfs:label>
         <rdfs:comment>Place associated with the publication, printing, distribution, issue, release or production of the instance.</rdfs:comment>
-        <rdfs:range rdf:resource="http://bibframe.org/vocab/Place"/>
     </owl:ObjectProperty>
     
 
@@ -2326,16 +2322,6 @@ There SHOULD be exactly 1 oa:annotatedAt property per Annotation, and MUST NOT b
         <rdfs:comment>Graphic, non-realized representations of musical works intended to be perceived visually.</rdfs:comment>
     </owl:Class>
     
-
-
-    <!-- http://bibframe.org/vocab/Place -->
-
-    <owl:Class rdf:about="http://bibframe.org/vocab/Place">
-        <rdfs:label>Place</rdfs:label>
-        <rdfs:comment>Geographic location.</rdfs:comment>
-    </owl:Class>
-    
-
 
     <!-- http://bibframe.org/vocab/PolicySet -->
 
