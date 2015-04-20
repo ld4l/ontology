@@ -196,7 +196,6 @@
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/annotates">
         <rdfs:label>Target of Annotation</rdfs:label>
         <rdfs:comment>Resource to which the annotation relates.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Annotation"/>
         <rdfs:range rdf:resource="&rdfs;Resource"/>
     </owl:ObjectProperty>
     
@@ -207,7 +206,6 @@
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/annotationAssertedBy">
         <rdfs:label>Annotation asserted by</rdfs:label>
         <rdfs:comment>Annotation was asserted by the given entity.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Annotation"/>
     </owl:ObjectProperty>
     
 
@@ -217,7 +215,6 @@
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/annotationBody">
         <rdfs:label>Annotation Body</rdfs:label>
         <rdfs:comment>Content of the annotation about the resource.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Annotation"/>
         <rdfs:range rdf:resource="&rdfs;Resource"/>
     </owl:ObjectProperty>
     
@@ -2096,15 +2093,6 @@ There SHOULD be exactly 1 oa:annotatedAt property per Annotation, and MUST NOT b
     
 
 
-    <!-- http://bibframe.org/vocab/Annotation -->
-
-    <owl:Class rdf:about="http://bibframe.org/vocab/Annotation">
-        <rdfs:label>Annotation</rdfs:label>
-        <rdfs:comment>Resource that asserts additional information about other BIBFRAME resource.</rdfs:comment>
-    </owl:Class>
-    
-
-
     <!-- http://bibframe.org/vocab/Arrangement -->
 
     <owl:Class rdf:about="http://bibframe.org/vocab/Arrangement">
@@ -2323,6 +2311,7 @@ There SHOULD be exactly 1 oa:annotatedAt property per Annotation, and MUST NOT b
     </owl:Class>
     
 
+
     <!-- http://bibframe.org/vocab/PolicySet -->
 
     <owl:Class rdf:about="http://bibframe.org/vocab/PolicySet">
@@ -2407,6 +2396,7 @@ There SHOULD be exactly 1 oa:annotatedAt property per Annotation, and MUST NOT b
         <rdfs:label>Title</rdfs:label>
         <rdfs:comment>Title information relating to a resource: title proper, translated title, or variant form of title.</rdfs:comment>
     </owl:Class>
+    
 
 
     <!-- http://bibframe.org/vocab/Work -->
@@ -2462,6 +2452,7 @@ There SHOULD be exactly 1 oa:annotatedAt property per Annotation, and MUST NOT b
 
     <owl:Class rdf:about="http://schema.org/GovernmentOrganization">
         <rdfs:label xml:lang="en">Government Organization</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
         <rdfs:comment xml:lang="en"></rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://schema.org/GovernmentOrganization"/>
     </owl:Class>
