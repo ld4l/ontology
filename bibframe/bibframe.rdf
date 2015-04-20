@@ -691,7 +691,6 @@
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/language">
         <rdfs:label>Language</rdfs:label>
         <rdfs:comment>Languages associated with a resource including those for multilingual resources and translated resources.</rdfs:comment>
-        <rdfs:range rdf:resource="http://bibframe.org/vocab/Language"/>
     </owl:ObjectProperty>
     
 
@@ -2255,15 +2254,6 @@ There SHOULD be exactly 1 oa:annotatedAt property per Annotation, and MUST NOT b
         <rdfs:label>Key title</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Title"/>
         <rdfs:comment>Unique title for a continuing resource that is assigned by the ISSN International Center in conjunction with an ISSN.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://bibframe.org/vocab/Language -->
-
-    <owl:Class rdf:about="http://bibframe.org/vocab/Language">
-        <rdfs:label>Language Entity</rdfs:label>
-        <rdfs:comment>Language entity.</rdfs:comment>
     </owl:Class>
     
 
