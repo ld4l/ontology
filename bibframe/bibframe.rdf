@@ -36,6 +36,21 @@
     
 
 
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#inverseOf -->
+
+    <owl:AnnotationProperty rdf:about="&owl;inverseOf"/>
+    
 
 
     <!-- 
@@ -86,7 +101,6 @@
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/accompaniedBy">
         <rdfs:label>Accompanied by</rdfs:label>
-        <rdfs:subPropertyOf rdf:resource="&terms;relation"/>
     </owl:ObjectProperty>
     
 
@@ -95,7 +109,6 @@
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/accompanies">
         <rdfs:label>Accompanies</rdfs:label>
-        <rdfs:subPropertyOf rdf:resource="&terms;relation"/>
     </owl:ObjectProperty>
     
 
@@ -228,7 +241,6 @@
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
         <owl:inverseOf rdf:resource="http://bibframe.org/vocab/hasDerivative"/>
-        <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/relatedTo"/>
     </owl:ObjectProperty>
     
 
@@ -259,7 +271,6 @@
         <rdfs:label>Is description of</rdfs:label>
         <rdfs:comment>Related resource that is analyzed, commented upon, critiqued, evaluated, reviewed, or otherwise described by the resource.</rdfs:comment>
         <owl:inverseOf></owl:inverseOf>
-        <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/relatedTo"/>
     </owl:ObjectProperty>
     
 
@@ -303,7 +314,6 @@
         <rdfs:comment>Instance embodies the same expression of a work as the resource being described.</rdfs:comment>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
-        <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/relatedTo"/>
     </owl:ObjectProperty>
     
 
@@ -334,7 +344,6 @@
         <rdfs:comment>Expression has a related work. For use to connect Works under FRBR/RDA rules.</rdfs:comment>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
-        <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/relatedTo"/>
     </owl:ObjectProperty>
     
 
@@ -363,7 +372,6 @@
         <rdfs:comment>Work that is a data source to which the described resource is related. It may contain information about other files, printed sources, or collection procedures.</rdfs:comment>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
-        <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/relatedTo"/>
     </owl:ObjectProperty>
     
 
@@ -375,7 +383,6 @@
         <rdfs:comment>Work has a modification for which it is the source.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
-        <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/relatedTo"/>
     </owl:ObjectProperty>
     
 
@@ -385,7 +392,6 @@
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasDescription">
         <rdfs:label>Has description</rdfs:label>
         <rdfs:comment>Related resource that analyzes, comments on, critiques, evaluates, reviews, or otherwise describes the resource.</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/relatedTo"/>
     </owl:ObjectProperty>
     
 
@@ -397,7 +403,6 @@
         <rdfs:comment>Work has a related expression. For use to connect Works under FRBR/RDA rules.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
-        <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/relatedTo"/>
     </owl:ObjectProperty>
     
 
@@ -441,7 +446,6 @@
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasInstance">
         <rdfs:label>Instance of Work</rdfs:label>
         <rdfs:comment>Work has a related Instance/manifestation. For use to connect Works to Instances in the BIBFRAME structure.</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/relatedTo"/>
     </owl:ObjectProperty>
     
 
@@ -463,7 +467,6 @@
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasPart">
         <rdfs:label>Has part</rdfs:label>
         <rdfs:comment>Resource that is included either physically or logically contained in the described resource</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/relatedTo"/>
     </owl:ObjectProperty>
     
 
@@ -573,7 +576,6 @@
         <rdfs:comment>Work this resource instantiates or manifests. For use to connect Instances to Works in the BIBFRAME structure.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
-        <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/relatedTo"/>
     </owl:ObjectProperty>
     
 
@@ -678,7 +680,6 @@
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/precededBy">
         <rdfs:label>Preceded By</rdfs:label>
         <rdfs:comment>Resource that precedes the resource being described (e.g., is earlier in time or before in narrative).</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/relatedTo"/>
     </owl:ObjectProperty>
     
 
@@ -742,16 +743,6 @@
         <rdfs:comment>General instance to instance relationship.</rdfs:comment>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
-        <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/relatedTo"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/relatedTo -->
-
-    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/relatedTo">
-        <rdfs:label>Related resource</rdfs:label>
-        <rdfs:comment>Any relationship between work or instance resources.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -763,7 +754,6 @@
         <rdfs:comment>General work to work relationship.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
-        <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/relatedTo"/>
     </owl:ObjectProperty>
     
 
@@ -854,7 +844,6 @@
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/succeededBy">
         <rdfs:label>Succeeded By</rdfs:label>
         <rdfs:comment>Resource that succeeds the resource being described (e.g., later in time or after in a narrative).</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/relatedTo"/>
     </owl:ObjectProperty>
     
 
@@ -981,7 +970,6 @@
         <rdfs:label xml:lang="en">Has Part</rdfs:label>
         <rdfs:comment xml:lang="en">A related resource that is included either physically or logically in the described resource.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
-        <rdfs:subPropertyOf rdf:resource="&terms;relation"/>
     </owl:ObjectProperty>
     
 
@@ -993,7 +981,6 @@
         <rdfs:comment xml:lang="en">A related resource in which the described resource is physically or logically included.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <owl:inverseOf rdf:resource="&terms;hasPart"/>
-        <rdfs:subPropertyOf rdf:resource="&terms;relation"/>
     </owl:ObjectProperty>
     
 
@@ -1140,7 +1127,7 @@ There is no OA class provided for &quot;Target&quot; as a target might be a body
     <owl:ObjectProperty rdf:about="&prov;atLocation">
         <rdfs:label>atLocation</rdfs:label>
         <rdfs:comment xml:lang="en">The Location of any resource.</rdfs:comment>
-        <rdfs:comment>This property has multiple RDFS domains to suit multiple OWL Profiles. See &lt;a href=&quot;#owl-profile&quot;&gt;PROV-O OWL Profile&lt;/a&gt;.</rdfs:comment>       
+        <rdfs:comment>This property has multiple RDFS domains to suit multiple OWL Profiles. See &lt;a href=&quot;#owl-profile&quot;&gt;PROV-O OWL Profile&lt;/a&gt;.</rdfs:comment>
         <rdfs:range rdf:resource="&prov;Location"/>
         <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
     </owl:ObjectProperty>
