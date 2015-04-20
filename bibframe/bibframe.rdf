@@ -2407,16 +2407,6 @@ There SHOULD be exactly 1 oa:annotatedAt property per Annotation, and MUST NOT b
         <rdfs:label>Title</rdfs:label>
         <rdfs:comment>Title information relating to a resource: title proper, translated title, or variant form of title.</rdfs:comment>
     </owl:Class>
-    
-
-
-    <!-- http://bibframe.org/vocab/Topic -->
-
-    <owl:Class rdf:about="http://bibframe.org/vocab/Topic">
-        <rdfs:label>Topic</rdfs:label>
-        <rdfs:comment>Concept or area of knowledge.</rdfs:comment>
-    </owl:Class>
-    
 
 
     <!-- http://bibframe.org/vocab/Work -->
