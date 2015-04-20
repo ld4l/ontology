@@ -2249,16 +2249,6 @@ There SHOULD be exactly 1 oa:annotatedAt property per Annotation, and MUST NOT b
     
 
 
-    <!-- http://bibframe.org/vocab/Jurisdiction -->
-
-    <owl:Class rdf:about="http://bibframe.org/vocab/Jurisdiction">
-        <rdfs:label>Jurisdiction</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
-        <rdfs:comment>Legal or political unit administering a geographic area.</rdfs:comment>
-    </owl:Class>
-    
-
-
     <!-- http://bibframe.org/vocab/KeyTitle -->
 
     <owl:Class rdf:about="http://bibframe.org/vocab/KeyTitle">
@@ -2284,16 +2274,6 @@ There SHOULD be exactly 1 oa:annotatedAt property per Annotation, and MUST NOT b
         <rdfs:label>Manuscript</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:comment>Resource that is written in handwriting or typescript. These are generally unique resources.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://bibframe.org/vocab/Meeting -->
-
-    <owl:Class rdf:about="http://bibframe.org/vocab/Meeting">
-        <rdfs:label>Meeting</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
-        <rdfs:comment>Gathering of individuals or representatives of various bodies for the purpose of discussing and/or acting on topics of common interest.</rdfs:comment>
     </owl:Class>
     
 
