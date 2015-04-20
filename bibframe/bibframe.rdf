@@ -146,7 +146,7 @@
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/AccompaniedBy">
         <rdfs:label>Accompanied by</rdfs:label>
-        <rdfs:subPropertyOf rdf:resource="&dc;relation"/>
+        <rdfs:subPropertyOf rdf:resource="&terms;relation"/>
     </owl:ObjectProperty>
     
 
@@ -177,7 +177,7 @@
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/accompanies">
         <rdfs:label>Accompanies</rdfs:label>
-        <rdfs:subPropertyOf rdf:resource="&dc;relation"/>
+        <rdfs:subPropertyOf rdf:resource="&terms;relation"/>
     </owl:ObjectProperty>
     
 
@@ -1078,7 +1078,6 @@
         <rdfs:comment xml:lang="en">A related resource that is included either physically or logically in the described resource.</rdfs:comment>
         <skos:note xml:lang="en">This term is intended to be used with non-literal values as defined in the DCMI Abstract Model (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to express this intention with a formal range declaration.</skos:note>
         <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#hasPart-003"/>
-        <rdfs:subPropertyOf rdf:resource="&dc;relation"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <rdfs:subPropertyOf rdf:resource="&terms;relation"/>
     </owl:ObjectProperty>
@@ -1092,7 +1091,6 @@
         <rdfs:comment xml:lang="en">A related resource in which the described resource is physically or logically included.</rdfs:comment>
         <skos:note xml:lang="en">This term is intended to be used with non-literal values as defined in the DCMI Abstract Model (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to express this intention with a formal range declaration.</skos:note>
         <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#isPartOf-003"/>
-        <rdfs:subPropertyOf rdf:resource="&dc;relation"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <owl:inverseOf rdf:resource="&terms;hasPart"/>
         <rdfs:subPropertyOf rdf:resource="&terms;relation"/>
@@ -2151,6 +2149,12 @@ There SHOULD be exactly 1 oa:annotatedAt property per Annotation, and MUST NOT b
         <rdfs:label>Category</rdfs:label>
         <rdfs:comment>Generic list of values information.</rdfs:comment>
     </owl:Class>
+    
+
+
+    <!-- http://bibframe.org/vocab/CirculationStatus -->
+
+    <owl:Class rdf:about="http://bibframe.org/vocab/CirculationStatus"/>
     
 
 
