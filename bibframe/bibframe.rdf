@@ -678,6 +678,7 @@
         <rdfs:comment>One of two or more works that come together to form a new work.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
+        <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/succeededBy"/>
     </owl:ObjectProperty>
     
 
@@ -863,6 +864,7 @@
         <rdfs:comment>Work that spun off a part of its content to form a new work.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
+        <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/precededBy"/>
     </owl:ObjectProperty>
     
 
@@ -908,6 +910,7 @@
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
         <owl:inverseOf rdf:resource="http://bibframe.org/vocab/hasSubseries"/>
+        <rdfs:subPropertyOf rdf:resource="&terms;isPartOf"/>
     </owl:ObjectProperty>
     
 
@@ -1073,6 +1076,7 @@
         <skos:note xml:lang="en">This term is intended to be used with non-literal values as defined in the DCMI Abstract Model (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to express this intention with a formal range declaration.</skos:note>
         <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#isPartOf-003"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <owl:inverseOf rdf:resource="&terms;hasPart"/>
         <rdfs:subPropertyOf rdf:resource="&terms;relation"/>
     </owl:ObjectProperty>
     
@@ -2321,8 +2325,7 @@ There SHOULD be exactly 1 oa:annotatedAt property per Annotation, and MUST NOT b
         <rdfs:comment>Graphic, non-realized representations of musical works intended to be perceived visually.</rdfs:comment>
     </owl:Class>
     
-
-
+    
     <!-- http://bibframe.org/vocab/Place -->
 
     <owl:Class rdf:about="http://bibframe.org/vocab/Place">
@@ -2413,7 +2416,7 @@ There SHOULD be exactly 1 oa:annotatedAt property per Annotation, and MUST NOT b
     <!-- http://bibframe.org/vocab/Title -->
 
     <owl:Class rdf:about="http://bibframe.org/vocab/Title">
-        <rdfs:label>Title entity</rdfs:label>
+        <rdfs:label>Title</rdfs:label>
         <rdfs:comment>Title information relating to a resource: title proper, translated title, or variant form of title.</rdfs:comment>
     </owl:Class>
     
