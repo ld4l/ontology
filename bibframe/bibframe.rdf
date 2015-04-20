@@ -2,7 +2,7 @@
 
 
 <!DOCTYPE rdf:RDF [
-    <!ENTITY terms "http://purl.org/dc/terms/" >
+    <!ENTITY dcterms "http://purl.org/dc/terms/" >
     <!ENTITY prov "http://www.w3.org/ns/prov#" >
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
@@ -12,6 +12,7 @@
     <!ENTITY webprotege "http://protege.stanford.edu/webprotege/" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
     <!ENTITY bf "http://bibframe.org/vocab/" >
+    <!ENTITY foaf "http://xmlns.com/foaf/0.1/" >
 ]>
 
 
@@ -19,14 +20,14 @@
      xml:base="http://bibframe.org/vocab/"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
      xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:webprotege="http://protege.stanford.edu/webprotege/"
-     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/">
     <owl:Ontology rdf:about="http://bibframe.org/vocab/">
         <rdfs:label>Bibframe Ontology Proposal</rdfs:label>
         <owl:versionInfo rdf:datatype="&xsd;string">Initially automatically generated.</owl:versionInfo>
@@ -376,6 +377,7 @@
         <rdfs:comment>Work has a related expression. For use to connect Works under FRBR/RDA rules.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
+        <rdfs:subPropertyOf rdf:resource="&dcterms;relation"></rdfs:subPropertyOf>
     </owl:ObjectProperty>
     
 
@@ -419,6 +421,8 @@
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasInstance">
         <rdfs:label>Instance of Work</rdfs:label>
         <rdfs:comment>Work has a related Instance/manifestation. For use to connect Works to Instances in the BIBFRAME structure.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
+        <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>        
     </owl:ObjectProperty>
     
 
@@ -451,7 +455,7 @@
         <rdfs:comment>Work in which the part has been issued; the title of the larger work appears on the part.</rdfs:comment>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
-        <rdfs:subPropertyOf rdf:resource="&terms;isPartOf"/>
+        <rdfs:subPropertyOf rdf:resource="&dcterms;isPartOf"/>
     </owl:ObjectProperty>
     
 
@@ -505,6 +509,8 @@
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/heldBy">
         <rdfs:label>Held by</rdfs:label>
         <rdfs:comment>Entity holding the item or from which it is available</rdfs:comment>
+        <rdfs:domain rdf:resource="&bf;Item" />
+        <rdfs:range rdf:resource="&foaf;Agent"/>
     </owl:ObjectProperty>
     
 
@@ -549,6 +555,7 @@
         <rdfs:comment>Work this resource instantiates or manifests. For use to connect Instances to Works in the BIBFRAME structure.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/hasInstance"/>
     </owl:ObjectProperty>
     
 
@@ -807,7 +814,7 @@
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
         <owl:inverseOf rdf:resource="http://bibframe.org/vocab/hasSubseries"/>
-        <rdfs:subPropertyOf rdf:resource="&terms;isPartOf"/>
+        <rdfs:subPropertyOf rdf:resource="&dcterms;isPartOf"/>
     </owl:ObjectProperty>
     
 
@@ -930,7 +937,7 @@
 
     <!-- http://purl.org/dc/terms/format -->
 
-    <owl:ObjectProperty rdf:about="&terms;format">
+    <owl:ObjectProperty rdf:about="&dcterms;format">
         <rdfs:label xml:lang="en">Format</rdfs:label>
         <rdfs:comment xml:lang="en">The file format, physical medium, or dimensions of the resource.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
@@ -940,7 +947,7 @@
 
     <!-- http://purl.org/dc/terms/hasPart -->
 
-    <owl:ObjectProperty rdf:about="&terms;hasPart">
+    <owl:ObjectProperty rdf:about="&dcterms;hasPart">
         <rdfs:label xml:lang="en">Has Part</rdfs:label>
         <rdfs:comment xml:lang="en">A related resource that is included either physically or logically in the described resource.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
@@ -950,18 +957,18 @@
 
     <!-- http://purl.org/dc/terms/isPartOf -->
 
-    <owl:ObjectProperty rdf:about="&terms;isPartOf">
+    <owl:ObjectProperty rdf:about="&dcterms;isPartOf">
         <rdfs:label xml:lang="en">Is Part Of</rdfs:label>
         <rdfs:comment xml:lang="en">A related resource in which the described resource is physically or logically included.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
-        <owl:inverseOf rdf:resource="&terms;hasPart"/>
+        <owl:inverseOf rdf:resource="&dcterms;hasPart"/>
     </owl:ObjectProperty>
     
 
 
     <!-- http://purl.org/dc/terms/relation -->
 
-    <owl:ObjectProperty rdf:about="&terms;relation">
+    <owl:ObjectProperty rdf:about="&dcterms;relation">
         <rdfs:label xml:lang="en">Relation</rdfs:label>
         <rdfs:comment xml:lang="en">A related resource.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="&dc;relation"/>
@@ -1175,6 +1182,7 @@ There is no OA class provided for &quot;Target&quot; as a target might be a body
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/barcode">
         <rdfs:label>Barcode</rdfs:label>
         <rdfs:comment>Identification number of the physical item.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Item"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
@@ -1389,6 +1397,7 @@ There is no OA class provided for &quot;Target&quot; as a target might be a body
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/extent">
         <rdfs:label>Extent</rdfs:label>
         <rdfs:comment>Number and type of units and/or subunits making up a resource.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
@@ -1472,6 +1481,7 @@ There is no OA class provided for &quot;Target&quot; as a target might be a body
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/illustrationNote">
         <rdfs:label>Illustrative content note</rdfs:label>
         <rdfs:comment>Information about illustrative material in the resource.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
@@ -1542,6 +1552,7 @@ There is no OA class provided for &quot;Target&quot; as a target might be a body
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/preferredCitation">
         <rdfs:label>Preferred citation</rdfs:label>
         <rdfs:comment>Citation to the resource preferred by its custodian.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
@@ -1829,19 +1840,19 @@ There is no OA class provided for &quot;Target&quot; as a target might be a body
 
     <!-- http://purl.org/dc/terms/created -->
 
-    <owl:DatatypeProperty rdf:about="&terms;created">
+    <owl:DatatypeProperty rdf:about="&dcterms;created">
         <rdfs:label xml:lang="en">Date Created</rdfs:label>
         <rdfs:comment xml:lang="en">Date of creation of the resource.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="&dc;date"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
-        <rdfs:subPropertyOf rdf:resource="&terms;date"/>
+        <rdfs:subPropertyOf rdf:resource="&dcterms;date"/>
     </owl:DatatypeProperty>
     
 
 
     <!-- http://purl.org/dc/terms/date -->
 
-    <owl:DatatypeProperty rdf:about="&terms;date"/>
+    <owl:DatatypeProperty rdf:about="&dcterms;date"/>
     
 
 
@@ -2067,7 +2078,7 @@ There SHOULD be exactly 1 oa:annotatedAt property per Annotation, and MUST NOT b
     <!-- http://bibframe.org/vocab/MultipartMonograph -->
 
     <owl:Class rdf:about="http://bibframe.org/vocab/MultipartMonograph">
-        <rdfs:label>Multiple units</rdfs:label>
+        <rdfs:label>Multipart Monograph</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:comment>Multiple unit cataloging resource that is complete or intended to be completed within a finite number of parts.</rdfs:comment>
     </owl:Class>
@@ -2106,7 +2117,7 @@ There SHOULD be exactly 1 oa:annotatedAt property per Annotation, and MUST NOT b
     <!-- http://bibframe.org/vocab/Print -->
 
     <owl:Class rdf:about="http://bibframe.org/vocab/Print">
-        <rdfs:label>Printed</rdfs:label>
+        <rdfs:label>Print Material</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:comment>Resource that is printed.</rdfs:comment>
     </owl:Class>
@@ -2191,7 +2202,7 @@ There SHOULD be exactly 1 oa:annotatedAt property per Annotation, and MUST NOT b
 
     <!-- http://purl.org/dc/terms/LinguisticSystem -->
 
-    <owl:Class rdf:about="&terms;LinguisticSystem"/>
+    <owl:Class rdf:about="&dcterms;LinguisticSystem"/>
     
 
 
@@ -2293,7 +2304,7 @@ There SHOULD be exactly 1 oa:annotatedAt property per Annotation, and MUST NOT b
         <rdfs:label xml:lang="sv">Språk</rdfs:label>
         <rdfs:label xml:lang="tr">Dil</rdfs:label>
         <rdfs:label xml:lang="zh">语言</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&terms;LinguisticSystem"/>
+        <rdfs:subClassOf rdf:resource="&dcterms;LinguisticSystem"/>
         <rdfs:subClassOf rdf:resource="http://www.loc.gov/mads/rdf/v1#Language"/>
         <rdfs:comment xml:lang="en">A language used in spoken or written human communication, or in which a resource is written or recorded. It is recommended to use instances defined on the basis of ISO 639 codes, such as those in examples</rdfs:comment>
         <rdfs:comment xml:lang="es">Una lengua utilizada en la comunicación oral o escrita entre personas, o en la que se escribe o graba un recurso. Se recomienda el uso de las instancias definidas según los códigos ISO 639, como los que aparecen en los ejemplos</rdfs:comment>
