@@ -33,8 +33,7 @@
     <owl:Ontology rdf:about="http://bibframe.org/vocab/">
         <rdfs:label>Bibframe Ontology Proposal</rdfs:label>
         <owl:versionInfo rdf:datatype="&xsd;string">Initially automatically generated.</owl:versionInfo>
-        <rdfs:comment rdf:datatype="&xsd;string">Proposed Bibframe ontology based on Rob Sanderson&apos;s recommendations</rdfs:comment>
-        <rdfs:comment rdf:datatype="&xsd;string">This ontology was generated from an ontology revision in WebProtege http://webprotege.stanford.edu</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Proposed Bibframe ontology based on LD4L recommendations</rdfs:comment>
     </owl:Ontology>
     
 
