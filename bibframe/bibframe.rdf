@@ -1113,8 +1113,8 @@
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <owl:Class rdf:about="&owl;Instance" />
-                    <owl:Class rdf:about="&owl;Item" />
+                    <owl:Class rdf:about="&bf;Instance" />
+                    <owl:Class rdf:about="&bf;Item" />
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
