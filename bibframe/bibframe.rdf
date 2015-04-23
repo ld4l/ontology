@@ -1638,8 +1638,28 @@
         <rdfs:comment>Title as abbreviated for indexing or identification.</rdfs:comment>
     </owl:Class>
     
-
-
+    <!-- http://bibframe.org/vocab/KeyTitle -->
+    
+    <owl:Class rdf:about="http://bibframe.org/vocab/KeyTitle">
+        <rdfs:label>Key title</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Title"/>
+        <rdfs:comment>Unique title for a continuing resource that is assigned by the ISSN International Center in conjunction with an ISSN.</rdfs:comment>
+    </owl:Class>
+    
+    <!--
+    <owl:Class rdf:about="http://bibframe.org/vocab/TranscribedTitle">
+        <rdfs:label>Transcribed title</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Title"/>
+        <rdfs:comment>Transcription of the title of the original work.</rdfs:comment>
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://bibframe.org/vocab/TranslatedTitle">
+        <rdfs:label>Translated title</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Title"/>
+        <rdfs:comment>Translation of the title of the original work.</rdfs:comment>
+    </owl:Class>
+    -->
+    
     <!-- http://bibframe.org/vocab/Audio -->
 
     <owl:Class rdf:about="http://bibframe.org/vocab/Audio">
@@ -1744,13 +1764,7 @@
     
 
 
-    <!-- http://bibframe.org/vocab/KeyTitle -->
 
-    <owl:Class rdf:about="http://bibframe.org/vocab/KeyTitle">
-        <rdfs:label>Key title</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Title"/>
-        <rdfs:comment>Unique title for a continuing resource that is assigned by the ISSN International Center in conjunction with an ISSN.</rdfs:comment>
-    </owl:Class>
     
 
 
