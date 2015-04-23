@@ -567,13 +567,47 @@
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/mergedToForm">
         <rdfs:label>Merged to form</rdfs:label>
-        <rdfs:comment>One of two or more works that come together to form a new work.</rdfs:comment>
+        <rdfs:comment>The work being described is one of two or more works that came together to form a new work.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/succeededBy"/>
+        <owl:inverseOf rdf:resource="&bf;isUnionOf" />
     </owl:ObjectProperty>
     
-
+    <!-- http://bibframe.org/vocab/isUnionOf -->
+    
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/isUnionOf">
+        <rdfs:label>Is union of</rdfs:label>
+        <rdfs:comment>The work being described was formed from two or more works that come together to form a new work.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
+        <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
+        <rdfs:subPropertyOf rdf:resource="&bf;precededBy"/>
+        <owl:inverseOf rdf:resource="&bf;mergedToForm" />
+    </owl:ObjectProperty>
+    
+    <!-- http://bibframe.org/vocab/separatedFrom -->
+    
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/separatedFrom">
+        <rdfs:label>Separated from</rdfs:label>
+        <rdfs:comment>The work being described was formed from part of the content of a preceding work.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
+        <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
+        <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/precededBy"/>
+        <owl:inverseOf rdf:resource="&bf;splitInto"/>
+    </owl:ObjectProperty>
+    
+    
+    <!-- http://bibframe.org/vocab/splitInto -->
+    
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/splitInto">
+        <rdfs:label>Split into</rdfs:label>
+        <rdfs:comment>The work being described split its content into two or more separate works.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
+        <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
+        <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/succeededBy"/>
+        <owl:inverseOf rdf:resource="&bf;separatedFrom"/>
+    </owl:ObjectProperty>
+    
 
     <!-- http://bibframe.org/vocab/musicMedium -->
 
@@ -677,27 +711,7 @@
 
 
 
-    <!-- http://bibframe.org/vocab/separatedFrom -->
 
-    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/separatedFrom">
-        <rdfs:label>Separated from</rdfs:label>
-        <rdfs:comment>Work that spun off a part of its content to form a new work.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
-        <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
-        <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/precededBy"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/splitInto -->
-
-    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/splitInto">
-        <rdfs:label>Split into</rdfs:label>
-        <rdfs:comment>One of two or more works resulting from the division of an earlier work into separate works.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
-        <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
-    </owl:ObjectProperty>
-    
 
 
 
@@ -827,14 +841,7 @@
     
 
 
-    <!-- http://bibframe.org/vocab/unionOf -->
-
-    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/unionOf">
-        <rdfs:label>Union of</rdfs:label>
-        <rdfs:comment>One of two or more works which came together to form a new work.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
-        <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
-    </owl:ObjectProperty>
+>
  
 
     <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/hasFormat">
