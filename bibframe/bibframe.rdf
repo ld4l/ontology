@@ -138,7 +138,7 @@
         <rdfs:label>Classified as</rdfs:label>
         <rdfs:comment>Classification number in any scheme.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="&dcterms;subject"/>
-        <rdfs:range rdf:resource="skos;Concept"/>
+        <rdfs:range rdf:resource="&skos;Concept"/>
     </owl:ObjectProperty>
     
 
