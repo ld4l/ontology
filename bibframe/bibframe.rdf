@@ -558,7 +558,8 @@
         <rdfs:label>Manufactured by</rdfs:label>
         <rdfs:comment>Information relating to the manufacture of an instance.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
-        <rdfs:subPropertyOf rdf:resource="&prov;Activity"/>
+        <rdfs:subPropertyOf rdf:resource="&bf;providedBy"/>
+        <rdfs:range rdf:resource="&prov;Activity"/>
     </owl:ObjectProperty>
     
 
@@ -792,7 +793,7 @@
     <!-- http://bibframe.org/vocab/hasTableOfContents -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasTableOfContents">
-        <rdfs:label>Table of contents content</rdfs:label>
+        <rdfs:label>Has table of contents</rdfs:label>
         <rdfs:comment>Table of contents of the target work or instance.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="&oa;hasBody"/>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance" />
