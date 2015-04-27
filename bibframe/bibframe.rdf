@@ -223,7 +223,6 @@
         <rdfs:label>Produced at</rdfs:label>
         <rdfs:comment></rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>       
-        <rdfs:range rdf:resource="&foaf;Agent"/>
     </owl:ObjectProperty>
     
 
@@ -236,16 +235,6 @@
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:range rdf:resource="&prov;Activity"/>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/providedBy"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/locatedAt -->
-
-    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/locatedAt">
-        <rdfs:label>Located at</rdfs:label>
-        <rdfs:comment>Location (physical or electronic) from which the resource is available. </rdfs:comment>
-        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Item"/> 
     </owl:ObjectProperty>
     
 
@@ -667,7 +656,7 @@
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/providedBy">
         <rdfs:label>Provided by</rdfs:label>
-        <rdfs:comment>Place, name, and/or date information relating to the publication, printing, distribution, issue, release, or production instance.</rdfs:comment>
+        <rdfs:comment>Activity relating to the publication, printing, distribution, issue, release, or production instance.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:range rdf:resource="&prov;Activity"/>
     </owl:ObjectProperty>
@@ -946,6 +935,7 @@
     <owl:ObjectProperty rdf:about="&prov;atLocation">
         <rdfs:label>At location</rdfs:label>
         <rdfs:comment xml:lang="en">The location of any resource.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Can include electronic locator.</rdfs:comment>
         <rdfs:range rdf:resource="&prov;Location"/>
         <owl:inverseOf rdf:resource="&prov;locationOf"/>
     </owl:ObjectProperty>
@@ -1924,7 +1914,12 @@
         <rdfs:comment>Resource in a form intended to be perceived visually in three-dimensions.Includes man-made objects such as models, sculptures, clothing, and toys, as well as naturally occurring objects such as specimens mounted for viewing.</rdfs:comment>
     </owl:Class>
     
-
+    <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/legacy/aspectRatio">
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
+        <rdfs:label>Aspect ratio</rdfs:label>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment>Proportional relationship between an image's width and its height.</rdfs:comment>
+    </owl:DatatypeProperty>
 
     <!-- http://bibframe.org/vocab/Title -->
 
