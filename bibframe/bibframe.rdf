@@ -880,6 +880,7 @@
 
     <owl:ObjectProperty rdf:about="&skos;inScheme">
         <rdfs:label xml:lang="en">In scheme</rdfs:label>
+        <rdfs:comment>Relates a resource (for example a concept) to a concept scheme in which it is included.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -897,7 +898,6 @@
             
             It is RECOMMENDED to use these and other FOAF terms to describe agents: foaf:Person, prov:SoftwareAgent, foaf:Organization, foaf:name, foaf:mbox, foaf:openid, foaf:homepage</rdfs:comment>
         <rdfs:domain rdf:resource="http://www.w3.org/ns/oa#Annotation"/>
-        <owl:inverseOf rdf:resource="&oa;hasTarget" />
     </owl:ObjectProperty>
     
 
@@ -935,6 +935,11 @@
     </owl:ObjectProperty>
     
 
+    <owl:ObjectProperty rdf:aboout="http://bibframe.org/vocab/hasAnnotation">
+        <rdfs:label>Has annotation</rdfs:label>
+        <rdfs:comment>The subject resource is annotated by the object Annotation.</rdfs:comment>
+        <owl:inverseOf rdf:resource="&oa;hasTarget" />
+    </owl:ObjectProperty>
 
     <!-- http://www.w3.org/ns/prov#atLocation -->
 
