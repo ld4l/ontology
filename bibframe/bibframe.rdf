@@ -895,7 +895,11 @@
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/ns/oa#annotatedBy">
         <rdfs:label xml:lang="en">Annotated by</rdfs:label>
-        <rdfs:comment xml:lang="en">The object of the relationship is a resource that identifies the agent responsible for creating the Annotation.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The object of the relationship is a resource that identifies the agent responsible for creating the Annotation. This may be either a human or software agent. 
+            
+            There SHOULD be exactly 1 oa:annotatedBy relationship per Annotation, but MAY be 0 or more than 1, as the Annotation may be anonymous, or multiple agents may have worked together on it.
+            
+            It is RECOMMENDED to use these and other FOAF terms to describe agents: foaf:Person, prov:SoftwareAgent, foaf:Organization, foaf:name, foaf:mbox, foaf:openid, foaf:homepage</rdfs:comment>
         <rdfs:domain rdf:resource="http://www.w3.org/ns/oa#Annotation"/>
         <owl:inverseOf rdf:resource="&oa;hasTarget" />
     </owl:ObjectProperty>
@@ -906,7 +910,14 @@
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/ns/oa#hasBody">
         <rdfs:label xml:lang="en">Has body</rdfs:label>
-        <rdfs:comment xml:lang="en">The relationship between oa:Annotation and body.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The relationship between oa:Annotation and body. The body is somehow &quot;about&quot; the oa:hasTarget of the annotation.
+            
+            The Body may be of any media type, and contain any type of content. The Body SHOULD be identified by HTTP URIs unless they are embedded within the Annotation.
+            
+            Embedded bodies SHOULD be instances of cnt:ContentAsText and embed their content with cnt:chars. They SHOULD declare their media type with dc:format, and MAY indicate their language using dc:language and a RFC-3066 language tag. 
+            
+            There is no OA class provided for &quot;Body&quot; as a body might be a target of a different annotation. However, there SHOULD be 1 or more content-based classes associated with the body resources of an Annotation, and the dctypes: vocabulary is recommended for this purpose, for instance dctypes:Text to declare textual content.
+        </rdfs:comment>
         <rdfs:domain rdf:resource="http://www.w3.org/ns/oa#Annotation"/>
     </owl:ObjectProperty>
     
@@ -916,7 +927,13 @@
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/ns/oa#hasTarget">
         <rdfs:label xml:lang="en">Has target</rdfs:label>
-        <rdfs:comment xml:lang="en">The relationship between oa:Annotation and target.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The relationship between oa:Annotation and target. The target resource is what the oa:hasBody is somewhat &quot;about&quot;.
+            
+            The target may be of any media type, and contain any type of content. The target SHOULD be identified by HTTP URIs unless they are embedded within the Annotation.
+            
+            Embedded targets SHOULD be instances of cnt:ContentAsText and embed their content with cnt:chars. They SHOULD declare their media type with dc:format, and MAY indicate their language using dc:language and a RFC-3066 language tag. 
+            
+            There is no OA class provided for &quot;Target&quot; as a target might be a body in a different annotation. However, there SHOULD be 1 or more content-based classes associated with the target resources of an Annotation, and the dctypes: vocabulary is recommended for this purpose, for instance dctypes:Text to declare textual content.</rdfs:comment>
         <rdfs:domain rdf:resource="http://www.w3.org/ns/oa#Annotation"/>
         <owl:inverseOf rdf:resource="&oa;annotatedBy"/>
     </owl:ObjectProperty>
