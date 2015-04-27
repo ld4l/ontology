@@ -186,7 +186,6 @@
         <rdfs:label>Has cover art</rdfs:label>
         <rdfs:comment>Cover art image.</rdfs:comment>
         <rdfs:domain rdf:resource="&bf;Instance"/>       
-        <rdfs:range rdf:resource="&rdfs;Resource"/>
     </owl:ObjectProperty>
 
     
@@ -615,7 +614,6 @@
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/musicMedium">
         <rdfs:label>Music medium</rdfs:label>
         <rdfs:comment>Instrumental, vocal, and/or other medium of performance for which a musical resource was originally conceived, written or performed.</rdfs:comment>
-        <rdfs:range rdf:resource="&rdfs;Resource"/>
     </owl:ObjectProperty>
     
 
@@ -797,7 +795,6 @@
         <rdfs:comment>Table of contents of the target work or instance.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="&oa;hasBody"/>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance" />
-        <rdfs:range rdf:resource="&rdfs;Resource"/>
         <owl:inverseOf rdf:resource="&bf;isTableOfContentsFor" />
     </owl:ObjectProperty>
     
@@ -809,8 +806,7 @@
         <rdfs:label>Is table of contents for</rdfs:label>
         <rdfs:comment>Table of contents for a resource.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="&oa;hasTarget"/>
-        <rdfs:range rdf:resource="&rdfs;Resource"/>
-        <rdfs:domain rdf:resource="&bf;Instance"/>
+        <rdfs:range rdf:resource="&bf;Instance"/>
         <owl:inverseOf rdf:resource="&bf;hasTableOfContents" />
     </owl:ObjectProperty>
     
