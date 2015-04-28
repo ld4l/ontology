@@ -446,9 +446,9 @@
     
 
 
-    <!-- http://bibframe.org/vocab/hasVariant -->
+    <!-- http://bibframe.org/vocab/hasTitleVariant -->
 
-    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasVariant">
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasTitleVariant">
         <rdfs:label>Has variant</rdfs:label>
         <rdfs:comment>Title associated with the resource that is different from the main title.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Title"/>
@@ -1166,6 +1166,7 @@
         <rdfs:range rdf:resource="&rdfs;Literal"/>
         <rdfs:domain rdf:resource="&bf;Work"/>
         <rdfs:subPropertyOf rdf:resource="&bf;note"/>
+        <skos:editorialNote>Include dissertation note as a literal when it can't be parsed into dissertationYear, dissertationDegree, etc.</skos:editorialNote>
     </owl:DatatypeProperty>
     
 
@@ -1194,11 +1195,11 @@
     
 
 
-    <!-- http://bibframe.org/vocab/extraValue -->
+    <!-- http://bibframe.org/vocab/extraTitleValue -->
 
-    <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/extraValue">
+    <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/extraTitleValue">
         <rdfs:label>Extra value</rdfs:label>
-        <rdfs:comment>Other distinguishing characteristic of a work, such as version, etc..</rdfs:comment>
+        <rdfs:comment>Other distinguishing characteristic of a work, such as version, etc.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Title"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
