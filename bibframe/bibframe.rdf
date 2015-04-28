@@ -49,8 +49,6 @@
      -->
 
     
-
-
     <!-- http://www.w3.org/2002/07/owl#inverseOf -->
 
     <owl:AnnotationProperty rdf:about="&owl;inverseOf"/>
@@ -475,9 +473,16 @@
         <rdfs:comment>Instance for which holding is reported</rdfs:comment>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:domain rdf:resource="&bf;Item"/>
+        <owl:inverseOf rdf:resource="&bf;hasHolding"/>       
     </owl:ObjectProperty>
     
-
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasHolding">
+        <rdfs:label>Holding for</rdfs:label>
+        <rdfs:comment>Instance for which holding is reported</rdfs:comment>
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
+        <rdfs:range rdf:resource="&bf;Item"/>
+        <owl:inverseOf rdf:resource="&bf;holdingFor"/>
+    </owl:ObjectProperty>
 
     <!-- http://bibframe.org/vocab/identifiedBy -->
 
