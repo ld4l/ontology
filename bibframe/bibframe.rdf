@@ -714,7 +714,7 @@
 
     <!-- http://bibframe.org/vocab/reproduces -->
 
-        <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/reproduces">
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/reproduces">
         <rdfs:label xml:lang="en">Reproduces</rdfs:label>
         <rdfs:comment>Instance that reproduces another Instance embodying the same work.</rdfs:comment>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Instance"/>
@@ -723,12 +723,6 @@
         <owl:inverseOf rdf:resource="&bf;hasReproduction" />
     </owl:ObjectProperty>
     
-
-
-
-
-
-
 
 
     <!-- http://bibframe.org/vocab/isSubseriesOf -->
@@ -793,7 +787,7 @@
 
     <!-- http://bibframe.org/vocab/isSupplementTo -->
 
-        <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/isSupplementTo">
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/isSupplementTo">
         <rdfs:label>Is supplement to</rdfs:label>
         <rdfs:comment>Work that is updated or otherwise complemented by the augmenting work.</rdfs:comment>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
@@ -1705,19 +1699,7 @@
         <rdfs:comment>Unique title for a continuing resource that is assigned by the ISSN International Center in conjunction with an ISSN.</rdfs:comment>
     </owl:Class>
     
-    <!--
-    <owl:Class rdf:about="http://bibframe.org/vocab/TranscribedTitle">
-        <rdfs:label>Transcribed title</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Title"/>
-        <rdfs:comment>Transcription of the title of the original work.</rdfs:comment>
-    </owl:Class>
-    
-    <owl:Class rdf:about="http://bibframe.org/vocab/TranslatedTitle">
-        <rdfs:label>Translated title</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Title"/>
-        <rdfs:comment>Translation of the title of the original work.</rdfs:comment>
-    </owl:Class>
-    -->
+
     
     <!-- http://bibframe.org/vocab/Audio -->
 
@@ -1789,11 +1771,233 @@
 
     <owl:Class rdf:about="http://bibframe.org/vocab/Identifier">
         <rdfs:label>Identifier</rdfs:label>
-        <rdfs:comment>Token or name that is associated with a resource, such as a URI, or an ISBN, etc..</rdfs:comment>
+        <rdfs:comment>Token or name that is associated with a resource, such as a URI, or an ISBN, etc.</rdfs:comment>
     </owl:Class>
     
+    <owl:Class rdf:about="http://bibframe.org/vocab/MatrixNumber">
+        <rdfs:label>Matrix number</rdfs:label>
+        <rdfs:comment>Matrix number from the master from which a specific sound recording was pressed.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="&bf;Identifier" />
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://bibframe.org/vocab/MusicPlate">
+        <rdfs:label>Music plate</rdfs:label>
+        <rdfs:comment>Number assigned by a music publisher to a specific music publication.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="&bf;Identifier" />
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://bibframe.org/vocab/MusicPublisherNumber">
+        <rdfs:label>Music publisher number</rdfs:label>
+        <rdfs:comment>Number assigned to a music publication other than an issue, matrix, or plate number</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="&bf;Identifier" />
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://bibframe.org/vocab/Nban">
+        <rdfs:label>NBAN</rdfs:label>
+        <rdfs:comment>National Bibliography Agency Number, which identifies the resource description.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="&bf;Identifier" />
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://bibframe.org/vocab/Nbn">
+        <rdfs:label>NBN</rdfs:label>
+        <rdfs:comment>National Bibliography Number, which identifies the resource description.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="&bf;Identifier" />
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://bibframe.org/vocab/PostalRegistrationNumber">
+        <rdfs:label>Postal registration number</rdfs:label>
+        <rdfs:comment>Number assigned to a publication for which the specified postal service permits the use of a special mailing class privilege. </rdfs:comment>
+        <rdfs:subClassOf rdf:resource="&bf;Identifier" />
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://bibframe.org/vocab/PublisherNumber">
+        <rdfs:label>Publisher number</rdfs:label>
+        <rdfs:comment>Number assigned by a publisher that is not one of the specific defined types.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="&bf;Identifier" />
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://bibframe.org/vocab/TechnicalReportNumber">
+        <rdfs:label>Technical report number</rdfs:label>
+        <rdfs:comment>Identification number of a report that is not a Standard Technical Report Number.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="&bf;Identifier" />
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://bibframe.org/vocab/Sici">
+        <rdfs:label>SICI</rdfs:label>
+        <rdfs:comment>Serial Item and Contribution Identifier.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="&bf;Identifier" />
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://bibframe.org/vocab/StockNumber">
+        <rdfs:label>Stock number</rdfs:label>
+        <rdfs:comment>Identification number such as distributor, publisher, or vendor number.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="&bf;Identifier" />
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://bibframe.org/vocab/Strn">
+        <rdfs:label>STRN</rdfs:label>
+        <rdfs:comment>Standard Technical Report Number.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="&bf;Identifier" />
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://bibframe.org/vocab/StudyNumber">
+        <rdfs:label>Study number</rdfs:label>
+        <rdfs:comment>Identification number for a computer data file.</rdfs:comment>
+        <skos:editorialNote>If "study number" is not a standard term for this, change to DataFileNumber.</skos:editorialNote>
+        <rdfs:subClassOf rdf:resource="&bf;Identifier" />
+    </owl:Class>
+        
+    <owl:Class rdf:about="http://bibframe.org/vocab/SystemNumber">
+        <rdfs:label>System number</rdfs:label>
+        <rdfs:comment>Control number of a system other than LCCN or NBAN, which Identifies a resource description.</rdfs:comment>        
+        <rdfs:subClassOf rdf:resource="&bf;Identifier" />
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://bibframe.org/vocab/Upc">
+        <rdfs:label>UPC</rdfs:label>
+        <rdfs:comment>Universal Product Code.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="&bf;Identifier" />
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://bibframe.org/vocab/VideoRecordingNumber">
+        <rdfs:label>Video recording number</rdfs:label>
+        <rdfs:comment>Number assigned by a publisher to a videorecording.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="&bf;Identifier" />
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://bibframe.org/vocab/DissertationIdentifier">
+        <rdfs:label>Dissertation identifier</rdfs:label>
+        <rdfs:comment>Identifier assigned to a dissertation for identification purposes .</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="&bf;Identifier" />
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://bibframe.org/vocab/Isan">
+        <rdfs:label>ISAN</rdfs:label>
+        <rdfs:comment>International Standard Audiovisual Number.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="&bf;Identifier" />
+    </owl:Class>
 
+    <owl:Class rdf:about="http://bibframe.org/vocab/Isbn">
+        <rdfs:label>ISBN</rdfs:label>
+        <rdfs:comment>International Standard Book Number.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="&bf;Identifier" />
+    </owl:Class>
+        
+    <owl:Class rdf:about="http://bibframe.org/vocab/Ansi">
+        <rdfs:label>ANSI</rdfs:label>
+        <rdfs:comment>American National Standards Institute identifier.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="&bf;Identifier" />
+    </owl:Class>
+        
+    <owl:Class rdf:about="http://bibframe.org/vocab/Coden">
+        <rdfs:label>CODEN</rdfs:label>
+        <rdfs:comment>Identifier for scientific and technical periodical titles assigned by the International CODEN Section of Chemical Abstracts Service.</rdfs:comment>        
+        <rdfs:subClassOf rdf:resource="&bf;Identifier" />
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://bibframe.org/vocab/Doi">
+        <rdfs:label>DOI</rdfs:label>
+        <rdfs:comment>Digital Object Identifier.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="&bf;Identifier" />
+    </owl:Class>
+        
+    <owl:Class rdf:about="http://bibframe.org/vocab/Ean">
+        <rdfs:label>EAN</rdfs:label>
+        <rdfs:comment>International Article Number.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="&bf;Identifier" />
+    </owl:Class>
 
+    <owl:Class rdf:about="http://bibframe.org/vocab/Fingerprint">
+        <rdfs:label>Fingerprint</rdfs:label>
+        <rdfs:comment>Identifier that is used to assist in the identification of antiquarian books by recording information comprising groups of characters taken from specified positions on specified pages of the book.</rdfs:comment>        
+        <rdfs:subClassOf rdf:resource="&bf;Identifier" />
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://bibframe.org/vocab/Hdl">
+        <rdfs:label>HDL</rdfs:label>
+        <rdfs:comment>Unique and persistent identifier for digital objects developed by the Corporation for National Research Initiatives.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="&bf;Identifier" />
+    </owl:Class>
+
+    <owl:Class rdf:about="http://bibframe.org/vocab/Isbn10">
+        <rdfs:label>ISBN-10</rdfs:label>
+        <rdfs:comment>10 digit version of the International Standard Book Number.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="&bf;ISBN" />
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://bibframe.org/vocab/Isbn13">
+        <rdfs:label>ISBN-13</rdfs:label>
+        <rdfs:comment>13 digit version of the International Standard Book Number.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="&bf;ISBN" />
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://bibframe.org/vocab/Ismn">
+        <rdfs:label>ISMN</rdfs:label>
+        <rdfs:comment>International Standard Music Number.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="&bf;Identifier" />
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://bibframe.org/vocab/Iso">
+        <rdfs:label>ISO</rdfs:label>
+        <rdfs:comment>International Organization for Standardization standard number.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="&bf;Identifier" />
+    </owl:Class>
+        
+    <owl:Class rdf:about="http://bibframe.org/vocab/Issn">
+        <rdfs:label>ISSN</rdfs:label>
+        <rdfs:comment>International Standard Serial Number identifier.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="&bf;Identifier" />
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://bibframe.org/vocab/IssnL">
+        <rdfs:label>ISSN-L</rdfs:label>
+        <rdfs:comment>International Standard Serial Number that links together various media versions of a continuing resource.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="&bf;Identifier" />
+    </owl:Class>
+        
+    <owl:Class rdf:about="http://bibframe.org/vocab/Istc">
+        <rdfs:label>ISTC</rdfs:label>
+        <rdfs:comment>International Standard Text code, a numbering system developed to enable the unique identification of textual works.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="&bf;Identifier" />
+    </owl:Class>
+        
+    <owl:Class rdf:about="http://bibframe.org/vocab/Iswc">
+        <rdfs:label>ISWC</rdfs:label>
+        <rdfs:comment>International Standard Musical Work Code, a unique, persistent reference number for the identification of musical works.</rdfs:comment>        
+        <rdfs:subClassOf rdf:resource="&bf;Identifier" />
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://bibframe.org/vocab/IssueNumber">
+        <rdfs:label>Issue number</rdfs:label>
+        <rdfs:comment>Number used to identify the issue designation, or serial identification, assigned by a publisher to a sound recording.</rdfs:comment>        
+        <rdfs:subClassOf rdf:resource="&bf;Identifier" />
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://bibframe.org/vocab/Lccn">
+        <rdfs:label>LCCN</rdfs:label>
+        <rdfs:comment>Library of Congress Control Number, which identifies the resource description.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="&bf;Identifier" />
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://bibframe.org/vocab/LcOverseasAcqNumber">
+        <rdfs:label>LC Overseas Acq Number</rdfs:label>
+        <rdfs:comment>Identification number assigned by the Library of Congress to works acquired through one of its overseas acquisition programs.</rdfs:comment>        
+        <rdfs:subClassOf rdf:resource="&bf;Identifier" />
+    </owl:Class>        
+ 
+    <owl:Class rdf:about="http://bibframe.org/vocab/LegalDeposit">
+        <rdfs:label>Legal deposit</rdfs:label>
+        <rdfs:comment>Number assigned to a copyright or legal deposit, which Identifies a resource description.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="&bf;Identifier" />
+    </owl:Class>
+    
+    <owl:Class rdf:about="http://bibframe.org/vocab/IssueNumber">
+        <rdfs:label>Issue number</rdfs:label>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:subClassOf rdf:resource="&bf;Identifier" />
+    </owl:Class>
+    
+   
     <!-- http://bibframe.org/vocab/Instance -->
 
     <owl:Class rdf:about="http://bibframe.org/vocab/Instance">
