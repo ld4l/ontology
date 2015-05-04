@@ -937,13 +937,14 @@
         <rdfs:subClassOf rdf:resource="&cnt;Content" />
     </owl:Class>
     
-    <rdf:DatatypeProperty rdf:about="http://www.w3.org/2011/content#chars">
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2011/content#chars">
         <rdfs:domain rdf:resource="&cnt;ContentAsText" />
         <rdfs:label xml:lang="en">chars</rdfs:label>
         <rdfs:comment xml:lang="en">The character sequence of the text content.</rdfs:comment>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
-    </rdf:DatatypeProperty>
-    
+    </owl:DatatypeProperty>
+
+
     <!-- http://www.w3.org/ns/oa#hasTarget -->
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/ns/oa#hasTarget">
