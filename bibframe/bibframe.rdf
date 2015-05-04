@@ -68,7 +68,7 @@
 
     
     <owl:ObjectProperty rdf:about="&rdf;value">
-        <rdfs:label>Value</rdfs:label>
+        <rdfs:label>value</rdfs:label>
         <rdfs:comment>Idiomatic property used for structured values.</rdfs:comment>
     </owl:ObjectProperty>    
 
@@ -77,7 +77,7 @@
     <!-- http://bibframe.org/hasCirculationStatus -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/hasCirculationStatus">
-        <rdfs:label>Has circulation status</rdfs:label>
+        <rdfs:label>has circulation status</rdfs:label>
         <rdfs:comment>Circulation status of an item.</rdfs:comment>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/CirculationStatus"/>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Item"/>
@@ -90,7 +90,7 @@
     <!-- http://bibframe.org/vocab/hasAbsorbed -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasAbsorbed">
-        <rdfs:label>Has absorbed</rdfs:label>
+        <rdfs:label>has absorbed</rdfs:label>
         <rdfs:comment>Work that has been incorporated into this Work.</rdfs:comment>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
@@ -103,7 +103,7 @@
     <!-- http://bibframe.org/vocab/absorbedBy -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/absorbedBy">
-        <rdfs:label>Absorbed by</rdfs:label>
+        <rdfs:label>absorbed by</rdfs:label>
         <rdfs:comment>Work that incorporates this Work.</rdfs:comment>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
@@ -116,7 +116,7 @@
     <!-- http://bibframe.org/vocab/accompaniedBy -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/accompaniedBy">
-        <rdfs:label>Accompanied by</rdfs:label>
+        <rdfs:label>accompanied by</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="&dcterms;relation"/>
         <rdfs:comment>Resource that has an accompanying resource which adds to it</rdfs:comment>
         <owl:inverseOf rdf:resource="&bf;accompanies" />
@@ -127,7 +127,7 @@
     <!-- http://bibframe.org/vocab/accompanies -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/accompanies">
-        <rdfs:label>Accompanies</rdfs:label>
+        <rdfs:label>accompanies</rdfs:label>
         <rdfs:comment>Resource that adds to or is issued with the described resource</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="&dcterms;relation"/>
         <owl:inverseOf rdf:resource="&bf;accompaniedBy"/>
@@ -139,7 +139,7 @@
     <!-- http://bibframe.org/vocab/classifiedAs -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/classifiedAs">
-        <rdfs:label>Classified as</rdfs:label>
+        <rdfs:label>classified as</rdfs:label>
         <rdfs:comment>Classification number in any scheme.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="&dcterms;subject"/>
         <rdfs:range rdf:resource="&skos;Concept"/>
@@ -150,7 +150,7 @@
     <!-- http://bibframe.org/vocab/governedBy -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/governedBy">
-        <rdfs:label>Governed by</rdfs:label>
+        <rdfs:label>governed by</rdfs:label>
         <rdfs:comment>Policy set governing an Item</rdfs:comment>
         <rdfs:domain rdf:resource="&bf;Item"/>
         <rdfs:range rdf:resource="&bf;PolicySet"/>
@@ -162,7 +162,7 @@
     <!-- http://bibframe.org/vocab/continuedBy -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/continuedBy">
-        <rdfs:label>Continued by</rdfs:label>
+        <rdfs:label>continued by</rdfs:label>
         <rdfs:comment>Work whose content continues an earlier work under a new title.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
@@ -175,7 +175,7 @@
     <!-- http://bibframe.org/vocab/continues -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/continues">
-        <rdfs:label>Continues</rdfs:label>
+        <rdfs:label>continues</rdfs:label>
         <rdfs:comment>Work that is continued by the content of a later work under a new title.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
@@ -188,7 +188,7 @@
     <!-- http://bibframe.org/vocab/hasCoverArt -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasCoverArt">
-        <rdfs:label>Has cover art</rdfs:label>
+        <rdfs:label>has cover art</rdfs:label>
         <rdfs:comment>Cover art image.</rdfs:comment>
         <rdfs:domain rdf:resource="&bf;Instance"/>   
         <rdfs:subPropertyOf rdf:resource="&dcterms;relation" />
@@ -196,12 +196,12 @@
 
     
     <owl:ObjectProperty rdf:about="http://id.loc.gov/vocabulary/relators/ctb">
-        <rdfs:label>Contributor</rdfs:label>
+        <rdfs:label>contributor</rdfs:label>
         <rdfs:comment>Contributor to a resource.</rdfs:comment>
     </owl:ObjectProperty>
 
     <owl:ObjectProperty rdf:about="http://id.loc.gov/vocabulary/relators/cre">
-        <rdfs:label>Creator</rdfs:label>
+        <rdfs:label>creator</rdfs:label>
         <rdfs:comment>Creator of a resource.</rdfs:comment>
     </owl:ObjectProperty>
 
@@ -209,7 +209,7 @@
     <!-- http://bibframe.org/vocab/derivedFrom -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/derivedFrom">
-        <rdfs:label>Derived from</rdfs:label>
+        <rdfs:label>derived from</rdfs:label>
         <rdfs:comment>Link to the record that was the source of the data, when applicable.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="&bf;succeeds"/>
         <owl:inverseOf rdf:resource="&bf;hasDerivative" />
@@ -226,7 +226,7 @@
     <!-- http://bibframe.org/vocab/producedAt -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/producedAt">
-        <rdfs:label>Produced at</rdfs:label>
+        <rdfs:label>produced at</rdfs:label>
         <rdfs:comment></rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:subPropertyOf rdf:resource="&dcterms;relation" />
@@ -237,7 +237,7 @@
     <!-- http://bibframe.org/vocab/distributedBy -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/distributedBy">
-        <rdfs:label>Distributed by</rdfs:label>
+        <rdfs:label>distributed by</rdfs:label>
         <rdfs:comment>Information relating to distribution of an instance.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:range rdf:resource="&prov;Activity"/>
@@ -250,7 +250,7 @@
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/equivalentTo">
         <rdf:type rdf:resource="&owl;SymmetricProperty"/>
-        <rdfs:label>Equivalent to</rdfs:label>
+        <rdfs:label>equivalent to</rdfs:label>
         <rdfs:comment>Instance embodies the same expression of a work as the resource being described.</rdfs:comment>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
@@ -259,7 +259,7 @@
     
     
     <owl:ObjectProperty rdf:about="&prov;wasAssociatedWith">
-        <rdfs:label>Was associated with</rdfs:label>
+        <rdfs:label>was associated with</rdfs:label>
         <rdfs:comment>Agent that had some (unspecified) responsibility for the occurrence of this prov:Activity.</rdfs:comment>
         <rdfs:range rdf:resource="&prov;Activity"/>
     </owl:ObjectProperty>
@@ -269,7 +269,7 @@
     <!-- http://bibframe.org/vocab/isExpressionOf -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/isExpressionOf">
-        <rdfs:label>Is expression of</rdfs:label>
+        <rdfs:label>is expression of</rdfs:label>
         <rdfs:comment>Expression has a related work. For use to connect Works under FRBR/RDA rules.</rdfs:comment>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
@@ -284,7 +284,7 @@
     <!-- http://bibframe.org/vocab/hasDataSource -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasDataSource">
-        <rdfs:label>Has data source</rdfs:label>
+        <rdfs:label>has data source</rdfs:label>
         <rdfs:comment>Work that is a data source to which the described resource is related. It may contain information about other files, printed sources, or collection procedures.</rdfs:comment>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
@@ -296,7 +296,7 @@
     <!-- http://bibframe.org/vocab/hasDerivative -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasDerivative">
-        <rdfs:label>Has derivative</rdfs:label>
+        <rdfs:label>has derivative</rdfs:label>
         <rdfs:comment>Work has a modification for which it is the source.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
@@ -309,7 +309,7 @@
     <!-- http://bibframe.org/vocab/describedBy -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/describedBy">
-        <rdfs:label>Described by</rdfs:label>
+        <rdfs:label>described by</rdfs:label>
         <owl:inverseOf rdf:resource="&bf;describes"/>
         <rdfs:subPropertyOf rdf:resource="&dcterms;relation"/>
         <rdfs:comment>Related resource that analyzes, comments on, critiques, evaluates, reviews, or otherwise describes the resource.</rdfs:comment>
@@ -320,7 +320,7 @@
     <!-- http://bibframe.org/vocab/hasExpression -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasExpression">
-        <rdfs:label>Has expression</rdfs:label>
+        <rdfs:label>has expression</rdfs:label>
         <rdfs:comment>Work has a related expression. For use to connect Works under FRBR/RDA rules.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
@@ -333,7 +333,7 @@
     <!-- http://bibframe.org/vocab/hasFindingAid -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasFindingAid">
-        <rdfs:label>Has finding aid</rdfs:label>
+        <rdfs:label>has finding aid</rdfs:label>
         <rdfs:comment>Relationship is to a finding aid or similar control materials for archival, visual, and manuscript resources.</rdfs:comment>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
@@ -342,7 +342,7 @@
     </owl:ObjectProperty>
     
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/isFindingAidFor">
-        <rdfs:label>Is finding aid for</rdfs:label>
+        <rdfs:label>is finding aid for</rdfs:label>
         <rdfs:comment>Relationship is from a finding aid or similar control materials to archival, visual, and manuscript resources.</rdfs:comment>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
@@ -353,7 +353,7 @@
     <!-- http://bibframe.org/vocab/hasGenre -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasGenre">
-        <rdfs:label>Has genre</rdfs:label>
+        <rdfs:label>has genre</rdfs:label>
         <rdfs:range rdf:resource="&skos;Concept"/>
         <rdfs:subPropertyOf rdf:resource="&dcterms;relation" />
     </owl:ObjectProperty>
@@ -363,7 +363,7 @@
     <!-- http://bibframe.org/vocab/hasIndex -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasIndex">
-        <rdfs:label xml:lang="en">Has index</rdfs:label>
+        <rdfs:label xml:lang="en">has index</rdfs:label>
         <rdfs:comment>Work has an accompanying index</rdfs:comment>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
@@ -372,7 +372,7 @@
     </owl:ObjectProperty>
     
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/isIndexFor">
-        <rdfs:label xml:lang="en">Is index for</rdfs:label>
+        <rdfs:label xml:lang="en">is index for</rdfs:label>
         <rdfs:comment>Index accompanying a work</rdfs:comment>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
@@ -383,7 +383,7 @@
     <!-- http://bibframe.org/vocab/hasInstance -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasInstance">
-        <rdfs:label>Has instance</rdfs:label>
+        <rdfs:label>has instance</rdfs:label>
         <rdfs:comment>Work has a related Instance/manifestation. For use to connect Works to Instances in the BIBFRAME structure.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Instance"/>   
@@ -396,7 +396,7 @@
     <!-- http://bibframe.org/vocab/hasOriginalVersion -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasOriginalVersion">
-        <rdfs:label>Has original version</rdfs:label>
+        <rdfs:label>has original version</rdfs:label>
         <rdfs:comment>Instance is the original version of which this resource is a reproduction.</rdfs:comment>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
@@ -412,7 +412,7 @@
     <!-- http://bibframe.org/vocab/hasSubseries -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasSubseries">
-        <rdfs:label>Has subseries</rdfs:label>
+        <rdfs:label>has subseries</rdfs:label>
         <rdfs:comment>Work, which is part of another series, in which the part has been issued.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
@@ -425,7 +425,7 @@
     <!-- http://bibframe.org/vocab/hasSupplement -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasSupplement">
-        <rdfs:label>Has supplement</rdfs:label>
+        <rdfs:label>has supplement</rdfs:label>
         <rdfs:comment>Work that updates or otherwise complements the predominant work.</rdfs:comment>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
@@ -434,7 +434,7 @@
     </owl:ObjectProperty>
     
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasSeries">
-        <rdfs:label>Has series</rdfs:label>
+        <rdfs:label>has series</rdfs:label>
         <rdfs:comment>Work in which the part has been issued; the title of the larger work appears on the part.</rdfs:comment>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
@@ -444,7 +444,7 @@
     <!-- http://bibframe.org/vocab/hasTitle -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasTitle">
-        <rdfs:label>Has title</rdfs:label>
+        <rdfs:label>has title</rdfs:label>
         <rdfs:comment>Word, character, or group of words and/or characters that is a name given to a resource.</rdfs:comment>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Title"/>
         <rdfs:subPropertyOf rdf:resource="&dcterms;relation" />
@@ -455,7 +455,7 @@
     <!-- http://bibframe.org/vocab/hasTitleVariant -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasTitleVariant">
-        <rdfs:label>Has title variant</rdfs:label>
+        <rdfs:label>has title variant</rdfs:label>
         <rdfs:comment>Title associated with the resource that is different from the main title.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Title"/>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Title"/>
@@ -467,7 +467,7 @@
     <!-- http://bibframe.org/vocab/heldBy -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/heldBy">
-        <rdfs:label>Held by</rdfs:label>
+        <rdfs:label>held by</rdfs:label>
         <rdfs:comment>Entity holding the item or from which it is available</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Item" />
         <rdfs:range rdf:resource="&foaf;Agent"/>
@@ -479,7 +479,7 @@
     <!-- http://bibframe.org/vocab/holdingFor -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/holdingFor">
-        <rdfs:label>Holding for</rdfs:label>
+        <rdfs:label>holding for</rdfs:label>
         <rdfs:comment>Instance for which holding is reported</rdfs:comment>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:domain rdf:resource="&bf;Item"/>
@@ -488,7 +488,7 @@
     </owl:ObjectProperty>
     
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasHolding">
-        <rdfs:label>Holding for</rdfs:label>
+        <rdfs:label>has holding</rdfs:label>
         <rdfs:comment>Instance for which holding is reported</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:range rdf:resource="&bf;Item"/>
@@ -499,7 +499,7 @@
     <!-- http://bibframe.org/vocab/identifiedBy -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/identifiedBy">
-        <rdfs:label>Identified by</rdfs:label>
+        <rdfs:label>identified by</rdfs:label>
         <rdfs:comment>Number or code that uniquely identifies an entity.</rdfs:comment>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Identifier"/>
         <owl:inverseOf rdf:resource="&bf;identifies" />
@@ -507,7 +507,7 @@
     </owl:ObjectProperty>
     
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/identifies">
-        <rdfs:label>Identifies</rdfs:label>
+        <rdfs:label>identifies</rdfs:label>
         <rdfs:comment>Resource identifed by an Identifier.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Identifier"/>
         <owl:inverseOf rdf:resource="&bf;identifiedBy" />
@@ -520,7 +520,7 @@
     <!-- http://bibframe.org/vocab/isInstanceOf -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/isInstanceOf">
-        <rdfs:label>Is instance of</rdfs:label>
+        <rdfs:label>is instance of</rdfs:label>
         <rdfs:comment>Work this resource instantiates or manifests. For use to connect Instances to Works in the BIBFRAME structure.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
@@ -531,7 +531,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://schema.org/audience">
-        <rdfs:label xml:lang="en">Audience</rdfs:label>
+        <rdfs:label xml:lang="en">audience</rdfs:label>
         <rdfs:range rdf:resource="http://schema.org/Audience"/>
         <rdfs:comment xml:lang="en">The intended audience of the item, i.e. the group for whom the item was created.</rdfs:comment>
     </owl:ObjectProperty>
@@ -545,7 +545,7 @@
     <!-- http://bibframe.org/vocab/issuedWith -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/issuedWith">
-        <rdfs:label>Issued with</rdfs:label>
+        <rdfs:label>issued with</rdfs:label>
         <rdfs:comment>Instance that is issued on the same carrier as the instance being described.</rdfs:comment>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
@@ -555,7 +555,7 @@
 
 
     <owl:ObjectProperty rdf:about="&dcterms;language">
-        <rdfs:label xml:lang="en">Language</rdfs:label>
+        <rdfs:label xml:lang="en">language</rdfs:label>
         <rdfs:comment xml:lang="en">A language of the resource.</rdfs:comment>
         <rdfs:range rdf:resource="http://purl.org/dc/terms/LinguisticSystem"/>
     </owl:ObjectProperty>
@@ -565,7 +565,7 @@
     <!-- http://bibframe.org/vocab/manufacturedBy -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/manufacturedBy">
-        <rdfs:label>Manufactured by</rdfs:label>
+        <rdfs:label>manufactured by</rdfs:label>
         <rdfs:comment>Information relating to the manufacture of an instance.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:subPropertyOf rdf:resource="&bf;providedBy"/>
@@ -577,7 +577,7 @@
     <!-- http://bibframe.org/vocab/mergedToForm -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/mergedToForm">
-        <rdfs:label>Merged to form</rdfs:label>
+        <rdfs:label>merged to form</rdfs:label>
         <rdfs:comment>The work being described is one of two or more works that came together to form a new work.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
@@ -588,7 +588,7 @@
     <!-- http://bibframe.org/vocab/isUnionOf -->
     
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/isUnionOf">
-        <rdfs:label>Is union of</rdfs:label>
+        <rdfs:label>is union of</rdfs:label>
         <rdfs:comment>The work being described was formed from two or more works that come together to form a new work.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
@@ -599,7 +599,7 @@
     <!-- http://bibframe.org/vocab/separatedFrom -->
     
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/separatedFrom">
-        <rdfs:label>Separated from</rdfs:label>
+        <rdfs:label>separated from</rdfs:label>
         <rdfs:comment>The work being described was formed from part of the content of a preceding work.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
@@ -611,7 +611,7 @@
     <!-- http://bibframe.org/vocab/splitInto -->
     
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/splitInto">
-        <rdfs:label>Split into</rdfs:label>
+        <rdfs:label>split into</rdfs:label>
         <rdfs:comment>The work being described split its content into two or more separate works.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
@@ -623,7 +623,7 @@
     <!-- http://bibframe.org/vocab/hasMusicMedium -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasMusicMedium">
-        <rdfs:label>Has music medium</rdfs:label>
+        <rdfs:label>has music medium</rdfs:label>
         <rdfs:comment>Instrumental, vocal, and/or other medium of performance for which a musical resource was originally conceived, written or performed.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="&dcterms;relation" />
     </owl:ObjectProperty>
@@ -633,7 +633,7 @@
     <!-- http://bibframe.org/vocab/hasOriginPlace -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasOriginPlace">
-        <rdfs:label>Has origin place</rdfs:label>
+        <rdfs:label>has origin place</rdfs:label>
         <rdfs:comment>Place from which the creation of the work originated.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:subPropertyOf rdf:resource="&dcterms;relation" />
@@ -644,7 +644,7 @@
     <!-- http://bibframe.org/vocab/hasOtherEdition -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasOtherEdition">
-        <rdfs:label>Has other edition</rdfs:label>
+        <rdfs:label>has other edition</rdfs:label>
         <rdfs:comment>Resource has other available editions, for example simultaneously published language editions or reprints.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
@@ -657,7 +657,7 @@
     <!-- http://bibframe.org/vocab/succeeds -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/succeeds">
-        <rdfs:label>Succeeds</rdfs:label>
+        <rdfs:label>succeeds</rdfs:label>
         <rdfs:comment>Subject follows the object (e.g., is later in time or after in narrative).</rdfs:comment>
         <owl:inverseOf rdf:resource="&bf;precedes"/>
         <rdfs:subPropertyOf rdf:resource="&dcterms;relation"/>
@@ -668,7 +668,7 @@
     <!-- http://bibframe.org/vocab/producedBy -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/producedBy">
-        <rdfs:label>Produced by</rdfs:label>
+        <rdfs:label>produced by</rdfs:label>
         <rdfs:comment>Information relating to production of an instance.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/providedBy"/>
@@ -680,7 +680,7 @@
     <!-- http://bibframe.org/vocab/providedBy -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/providedBy">
-        <rdfs:label>Provided by</rdfs:label>
+        <rdfs:label>provided by</rdfs:label>
         <rdfs:comment>Activity relating to the publication, printing, distribution, issue, release, or production instance.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:range rdf:resource="&prov;Activity"/>
@@ -693,7 +693,7 @@
     <!-- http://bibframe.org/vocab/publishedBy -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/publishedBy">
-        <rdfs:label>Published by</rdfs:label>
+        <rdfs:label>published by</rdfs:label>
         <rdfs:comment>Information relating to publication of an instance.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/providedBy"/>
@@ -703,7 +703,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasReproduction">
-        <rdfs:label xml:lang="en">Has reproduction</rdfs:label>
+        <rdfs:label xml:lang="en">has reproduction</rdfs:label>
         <rdfs:comment>Instance has a reproduction that embodies the same work.</rdfs:comment>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
@@ -715,7 +715,7 @@
     <!-- http://bibframe.org/vocab/reproduces -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/reproduces">
-        <rdfs:label xml:lang="en">Reproduces</rdfs:label>
+        <rdfs:label xml:lang="en">reproduces</rdfs:label>
         <rdfs:comment>Instance that reproduces another Instance embodying the same work.</rdfs:comment>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
@@ -728,7 +728,7 @@
     <!-- http://bibframe.org/vocab/isSubseriesOf -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/isSubseriesOf">
-        <rdfs:label>Is subseries of</rdfs:label>
+        <rdfs:label>is subseries of</rdfs:label>
         <rdfs:comment>Work in which the part consistently appears; the title of the larger work appears on all issues or parts of the subseries).</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
@@ -739,7 +739,7 @@
 
     
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/describes">
-        <rdfs:label>Describes</rdfs:label>
+        <rdfs:label>describes</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="&dcterms;relation"/>
         <rdfs:comment>Related resource that is analyzed, commented upon, critiqued, evaluated, reviewed, or otherwise described by the resource.</rdfs:comment>
         <owl:inverseOf rdf:resource="&bf;describedBy"/>
@@ -748,7 +748,7 @@
     <!-- http://bibframe.org/vocab/precedes -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/precedes">
-        <rdfs:label>Precedes</rdfs:label>
+        <rdfs:label>precedes</rdfs:label>
         <rdfs:comment>Subject precedes the object (e.g., earlier in time or before in a narrative).</rdfs:comment>
         <owl:inverseOf rdf:resource="http://bibframe.org/vocab/succeeds"/>
         <rdfs:subPropertyOf rdf:resource="&dcterms;relation" />
@@ -762,7 +762,7 @@
     <!-- http://bibframe.org/vocab/supersededBy -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/supersededBy">
-        <rdfs:label>Superseded by</rdfs:label>
+        <rdfs:label>superseded by</rdfs:label>
         <rdfs:comment>Later Work used in place of an earlier work, usually because the later work contains updated or new information.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
@@ -775,7 +775,7 @@
     <!-- http://bibframe.org/vocab/supersedes -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/supersedes">
-        <rdfs:label>Supersedes</rdfs:label>
+        <rdfs:label>supersedes</rdfs:label>
         <rdfs:comment>Earlier work whose content has been replaced by a later work, usually because the later work contains updated or new information.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
@@ -788,7 +788,7 @@
     <!-- http://bibframe.org/vocab/isSupplementTo -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/isSupplementTo">
-        <rdfs:label>Is supplement to</rdfs:label>
+        <rdfs:label>is supplement to</rdfs:label>
         <rdfs:comment>Work that is updated or otherwise complemented by the augmenting work.</rdfs:comment>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
@@ -801,9 +801,8 @@
     <!-- http://bibframe.org/vocab/hasTableOfContents -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasTableOfContents">
-        <rdfs:label>Has table of contents</rdfs:label>
+        <rdfs:label>has table of contents</rdfs:label>
         <rdfs:comment>Table of contents of the target work or instance.</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="&bf;hasAnnotation"/>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance" />
         <owl:inverseOf rdf:resource="&bf;isTableOfContentsFor" />
     </owl:ObjectProperty>
@@ -813,9 +812,8 @@
     <!-- http://bibframe.org/vocab/isTableOfContentsFor -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/isTableOfContentsFor">
-        <rdfs:label>Is table of contents for</rdfs:label>
-        <rdfs:comment>Table of contents for a resource.</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="&oa;hasTarget"/>
+        <rdfs:label>is table of contents for</rdfs:label>
+        <rdfs:comment>Table of contents for a resource.</rdfs:comment> 
         <rdfs:range rdf:resource="&bf;Instance"/>
         <owl:inverseOf rdf:resource="&bf;hasTableOfContents" />
     </owl:ObjectProperty>
@@ -825,7 +823,7 @@
     <!-- http://bibframe.org/vocab/translatedAs -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/translatedAs">
-        <rdfs:label xml:lang="en">Translated as</rdfs:label>
+        <rdfs:label xml:lang="en">translated as</rdfs:label>
         <rdfs:comment>Work that translates the text of the source entity into a language different from that of the original.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
@@ -838,7 +836,7 @@
     <!-- http://bibframe.org/vocab/translates -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/translates">
-        <rdfs:label>Translation of</rdfs:label>
+        <rdfs:label>translates</rdfs:label>
         <rdfs:comment>Work that has been translated, i.e., the text expressed in a language different from that of the original work).</rdfs:comment>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
@@ -848,7 +846,7 @@
     
 
     <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/hasFormat">
-        <rdfs:label xml:lang="en">Has format</rdfs:label>
+        <rdfs:label xml:lang="en">has format</rdfs:label>
         <rdfs:comment xml:lang="en">A related resource that is substantially the same as the pre-existing described resource, but in another format.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/relation"/>
     </owl:ObjectProperty>
@@ -857,7 +855,7 @@
     <!-- http://purl.org/dc/terms/hasPart -->
 
     <owl:ObjectProperty rdf:about="&dcterms;hasPart">
-        <rdfs:label xml:lang="en">Has part</rdfs:label>
+        <rdfs:label xml:lang="en">has part</rdfs:label>
         <rdfs:comment xml:lang="en">A related resource that is included either physically or logically in the described resource.</rdfs:comment>
         <owl:inverseOf rdf:resource="&dcterms;isPartOf" />
     </owl:ObjectProperty>
@@ -867,20 +865,20 @@
     <!-- http://purl.org/dc/terms/isPartOf -->
 
     <owl:ObjectProperty rdf:about="&dcterms;isPartOf">
-        <rdfs:label xml:lang="en">Is part of</rdfs:label>
+        <rdfs:label xml:lang="en">is part of</rdfs:label>
         <rdfs:comment xml:lang="en">A related resource in which the described resource is physically or logically included.</rdfs:comment>
         <owl:inverseOf rdf:resource="&dcterms;hasPart"/>
     </owl:ObjectProperty>
     
     <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/subject">
-        <rdfs:label xml:lang="en">Subject</rdfs:label>
+        <rdfs:label xml:lang="en">subject</rdfs:label>
         <rdfs:comment xml:lang="en">The topic of the resource.</rdfs:comment>
     </owl:ObjectProperty>
 
     <!-- http://purl.org/dc/terms/relation -->
 
     <owl:ObjectProperty rdf:about="&dcterms;relation">
-        <rdfs:label xml:lang="en">Relation</rdfs:label>
+        <rdfs:label xml:lang="en">relation</rdfs:label>
         <rdfs:comment xml:lang="en">A related resource.</rdfs:comment>
     </owl:ObjectProperty>
     
@@ -889,14 +887,14 @@
     <!-- http://www.w3.org/2004/02/skos/core#inScheme -->
 
     <owl:ObjectProperty rdf:about="&skos;inScheme">
-        <rdfs:label xml:lang="en">In scheme</rdfs:label>
+        <rdfs:label xml:lang="en">in scheme</rdfs:label>
         <rdfs:comment>Relates a resource (for example a concept) to a concept scheme in which it is included.</rdfs:comment>
     </owl:ObjectProperty>
     
 
 
     <owl:AnnotationProperty rdf:about="&skos;editorialNote">
-        <rdfs:label xml:lang="en">Editorial note</rdfs:label>
+        <rdfs:label xml:lang="en">editorial note</rdfs:label>
         <rdfs:comment xml:lang="en">A note for an editor, translator or maintainer of the vocabulary.</rdfs:comment>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
         <rdfs:subPropertyOf rdf:resource="&skos;note"/>
@@ -906,7 +904,7 @@
     <!-- http://www.w3.org/ns/oa#annotatedBy -->
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/ns/oa#annotatedBy">
-        <rdfs:label xml:lang="en">Annotated by</rdfs:label>
+        <rdfs:label xml:lang="en">annotated by</rdfs:label>
         <rdfs:comment xml:lang="en">The object of the relationship is a resource that identifies the agent responsible for creating the Annotation. This may be either a human or software agent. 
             
             There SHOULD be exactly 1 oa:annotatedBy relationship per Annotation, but MAY be 0 or more than 1, as the Annotation may be anonymous, or multiple agents may have worked together on it.
@@ -920,7 +918,7 @@
     <!-- http://www.w3.org/ns/oa#hasBody -->
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/ns/oa#hasBody">
-        <rdfs:label xml:lang="en">Has body</rdfs:label>
+        <rdfs:label xml:lang="en">has body</rdfs:label>
         <rdfs:comment xml:lang="en">The relationship between oa:Annotation and body. The body is somehow &quot;about&quot; the oa:hasTarget of the annotation.
             
             The Body may be of any media type, and contain any type of content. The Body SHOULD be identified by HTTP URIs unless they are embedded within the Annotation.
@@ -934,14 +932,14 @@
     
     
     <owl:Class rdf:about="http://www.w3.org/2011/content#ContentAsText">
-        <rdfs:label xml:lang="en">Text content</rdfs:label>
+        <rdfs:label xml:lang="en">Content as text</rdfs:label>
         <rdfs:comment xml:lang="en">The text content (can be used for text content).</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&cnt;Content" />
     </owl:Class>
     
     <rdf:DatatypeProperty rdf:about="http://www.w3.org/2011/content#chars">
         <rdfs:domain rdf:resource="&cnt;ContentAsText" />
-        <rdfs:label xml:lang="en">Chars</rdfs:label>
+        <rdfs:label xml:lang="en">chars</rdfs:label>
         <rdfs:comment xml:lang="en">The character sequence of the text content.</rdfs:comment>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal" />
     </rdf:DatatypeProperty>
@@ -949,7 +947,7 @@
     <!-- http://www.w3.org/ns/oa#hasTarget -->
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/ns/oa#hasTarget">
-        <rdfs:label xml:lang="en">Has target</rdfs:label>
+        <rdfs:label xml:lang="en">has target</rdfs:label>
         <rdfs:comment xml:lang="en">The relationship between oa:Annotation and target. The target resource is what the oa:hasBody is somewhat &quot;about&quot;.
             
             The target may be of any media type, and contain any type of content. The target SHOULD be identified by HTTP URIs unless they are embedded within the Annotation.
@@ -963,7 +961,7 @@
     
 
     <owl:ObjectProperty rdf:aboout="http://bibframe.org/vocab/hasAnnotation">
-        <rdfs:label>Has annotation</rdfs:label>
+        <rdfs:label>has annotation</rdfs:label>
         <rdfs:comment>The subject resource is annotated by the object Annotation.</rdfs:comment>
         <owl:inverseOf rdf:resource="&oa;hasTarget" />
         <rdfs:subPropertyOf rdf:resource="&dcterms;relation" />
@@ -972,7 +970,7 @@
     <!-- http://www.w3.org/ns/prov#atLocation -->
 
     <owl:ObjectProperty rdf:about="&prov;atLocation">
-        <rdfs:label>At location</rdfs:label>
+        <rdfs:label>at location</rdfs:label>
         <rdfs:comment xml:lang="en">The location of any resource.</rdfs:comment>
         <rdfs:comment xml:lang="en">Can include electronic locator.</rdfs:comment>
         <rdfs:range rdf:resource="&prov;Location"/>
@@ -984,7 +982,7 @@
     <!-- http://www.w3.org/ns/prov#locationOf -->
 
     <owl:ObjectProperty rdf:about="&prov;locationOf">
-        <rdfs:label>Location of</rdfs:label>
+        <rdfs:label>location of</rdfs:label>
         <owl:inverseOf rdf:resource="&prov;atLocation"/>
         <rdfs:domain rdf:resource="&prov;Location"/>
     </owl:ObjectProperty>
@@ -1002,7 +1000,7 @@
     <!-- http://bibframe.org/vocab/hasAccessCondition -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasAccessCondition">
-        <rdfs:label>Has access condition</rdfs:label>
+        <rdfs:label>has access condition</rdfs:label>
         <rdfs:comment>Allowances and restrictions on access.</rdfs:comment>
         <rdfs:domain rdf:resource="&bf;PolicySet"/>
         <rdfs:range rdf:resource="&bf;Policy"/>
@@ -1014,7 +1012,7 @@
     <!-- http://bibframe.org/vocab/legacy/aspectRatio -->
 
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/legacy/aspectRatio">
-        <rdfs:label>Aspect ratio</rdfs:label>
+        <rdfs:label>aspect ratio</rdfs:label>
         <rdfs:comment>Proportional relationship between an image&apos;s width and its height.</rdfs:comment>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
@@ -1026,7 +1024,7 @@
     <!-- http://bibframe.org/vocab/awardNote -->
 
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/awardNote">
-        <rdfs:label>Award note</rdfs:label>
+        <rdfs:label>award note</rdfs:label>
         <rdfs:comment>Information on awards associated with the described resource.</rdfs:comment>
         <rdfs:domain rdf:resource="&bf;Instance"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
@@ -1037,7 +1035,7 @@
     <!-- http://bibframe.org/vocab/barcode -->
 
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/barcode">
-        <rdfs:label>Barcode</rdfs:label>
+        <rdfs:label>barcode</rdfs:label>
         <rdfs:comment>Identification number of the physical item.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Item"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
@@ -1048,7 +1046,7 @@
     <!-- http://bibframe.org/vocab/cartographicAscensionAndDeclination -->
 
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/cartographicAscensionAndDeclination">
-        <rdfs:label>Cartographic ascension and declination</rdfs:label>
+        <rdfs:label>cartographic ascension and declination</rdfs:label>
         <rdfs:comment>System for identifying the location of a celestial object in the sky covered by the cartographic content of a resource using the angles of right ascension and declination.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
@@ -1059,7 +1057,7 @@
     <!-- http://bibframe.org/vocab/cartographicCoordinates -->
 
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/cartographicCoordinates">
-        <rdfs:label>Cartographic coordinates</rdfs:label>
+        <rdfs:label>cartographic coordinates</rdfs:label>
         <rdfs:comment>Mathematical system for identifying the area covered by the cartographic content of a resource, Expressed either by means of longitude and latitude on the surface of planets or by the angles of right ascension and declination for celestial cartographic content.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
@@ -1070,7 +1068,7 @@
     <!-- http://bibframe.org/vocab/cartographicEquinox -->
 
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/cartographicEquinox">
-        <rdfs:label>Cartographic equinox</rdfs:label>
+        <rdfs:label>cartographic equinox</rdfs:label>
         <rdfs:comment>One of two points of intersection of the ecliptic and the celestial equator, occupied by the sun when its declination is 0 degrees.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
@@ -1081,7 +1079,7 @@
     <!-- http://bibframe.org/vocab/cartographicExclusionGRing -->
 
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/cartographicExclusionGRing">
-        <rdfs:label>Cartographic G ring area excluded</rdfs:label>
+        <rdfs:label>cartographic exclusion G ring</rdfs:label>
         <rdfs:comment>Coordinate pairs that identify the closed non-intersecting boundary of the area contained within the G-polygon outer ring that is excluded.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
@@ -1092,7 +1090,7 @@
     <!-- http://bibframe.org/vocab/cartographicOuterGRing -->
 
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/cartographicOuterGRing">
-        <rdfs:label>Cartographic outer G ring area covered</rdfs:label>
+        <rdfs:label>cartographic outer G ring</rdfs:label>
         <rdfs:comment>Coordinate pairs that identify the closed non-intersecting boundary of the area covered.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
@@ -1103,7 +1101,7 @@
     <!-- http://bibframe.org/vocab/cartographicProjection -->
 
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/cartographicProjection">
-        <rdfs:label>Cartographic projection</rdfs:label>
+        <rdfs:label>cartographic projection</rdfs:label>
         <rdfs:comment>Method or system used to represent the surface of the Earth or of a celestial sphere on a plane.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
@@ -1114,22 +1112,18 @@
     <!-- http://bibframe.org/vocab/cartographicScale -->
 
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/cartographicScale">
-        <rdfs:label>Cartographic scale</rdfs:label>
+        <rdfs:label>cartographic scale</rdfs:label>
         <rdfs:comment>Ratio of the dimensions of a form contained or embodied in a resource to the dimensions of the entity it represents.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
-    <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/legacy/aspectRatio">
-        <rdfs:label>Aspect ratio</rdfs:label>
-        <rdfs:comment>Proportional relationship between an image&apos;s width and its height.</rdfs:comment>
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
-    </owl:DatatypeProperty>
+
 
     <!-- http://bibframe.org/vocab/legacy/colorContent -->
 
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/legacy/colorContent">
-        <rdfs:label>Color content</rdfs:label>
+        <rdfs:label>color content</rdfs:label>
         <rdfs:comment>Color characteristics, e.g. black and white, multicolored, etc.</rdfs:comment>
         <rdfs:domain rdf:resource="&bf;Instance"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
@@ -1138,7 +1132,7 @@
     <!-- http://bibframe.org/vocab/copyrightDate -->
 
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/copyrightDate">
-        <rdfs:label>Copyright date</rdfs:label>
+        <rdfs:label>copyright date</rdfs:label>
         <rdfs:comment>Date associated with a claim of protection under copyright or a similar regime.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
@@ -1149,7 +1143,7 @@
     <!-- http://bibframe.org/vocab/custodialHistory -->
 
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/custodialHistory">
-        <rdfs:label>Custodial history</rdfs:label>
+        <rdfs:label>custodial history</rdfs:label>
         <rdfs:comment>Information about the provenance, such as origin, ownership and custodial history (chain of custody), of a resource.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
@@ -1163,7 +1157,7 @@
     <!-- http://bibframe.org/vocab/legacy/dimensions -->
 
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/legacy/dimensions">
-        <rdfs:label>Dimensions</rdfs:label>
+        <rdfs:label>dimensions</rdfs:label>
         <rdfs:comment>Measurements of the carrier or carriers and/or the container of a resource.</rdfs:comment>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
         <rdfs:domain>
@@ -1181,7 +1175,7 @@
     <!-- http://bibframe.org/vocab/dissertationDegree -->
 
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/dissertationDegree">
-        <rdfs:label>Degree</rdfs:label>
+        <rdfs:label>dissertation degree</rdfs:label>
         <rdfs:comment>Degree for which dissertation author was a candidate.</rdfs:comment>
         <rdfs:comment>Could use enumerated set as range (see VIVO degrees)</rdfs:comment>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
@@ -1193,7 +1187,7 @@
     <!-- http://bibframe.org/vocab/dissertationNote -->
 
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/dissertationNote">
-        <rdfs:label>Dissertation note</rdfs:label>
+        <rdfs:label>dissertation note</rdfs:label>
         <rdfs:comment>Textual information about the dissertation.</rdfs:comment>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
         <rdfs:domain rdf:resource="&bf;Work"/>
@@ -1206,7 +1200,7 @@
     <!-- http://bibframe.org/vocab/dissertationYear -->
 
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/dissertationYear">
-        <rdfs:label>Year degree awarded</rdfs:label>
+        <rdfs:label>dissertation year</rdfs:label>
         <rdfs:comment>Year degree awarded.</rdfs:comment>
         <rdfs:domain rdf:resource="&bf;Work"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
@@ -1219,7 +1213,7 @@
     <!-- http://bibframe.org/vocab/extent -->
 
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/extent">
-        <rdfs:label>Extent</rdfs:label>
+        <rdfs:label>extent</rdfs:label>
         <rdfs:comment>Number and type of units and/or subunits making up a resource.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
@@ -1230,7 +1224,7 @@
     <!-- http://bibframe.org/vocab/extraTitleValue -->
 
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/extraTitleValue">
-        <rdfs:label>Extra value</rdfs:label>
+        <rdfs:label>extra value</rdfs:label>
         <rdfs:comment>Other distinguishing characteristic of a work, such as version, etc.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Title"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
@@ -1242,17 +1236,17 @@
     <!-- http://bibframe.org/vocab/legacy/format -->
 
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/legacy/format">
-        <rdfs:label>Format</rdfs:label>
+        <rdfs:label>format</rdfs:label>
         <rdfs:comment>File format or physical medium of an instance.</rdfs:comment>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://bibframe.org/vocab/legacy/formatOfMusic -->
+    <!-- http://bibframe.org/vocab/legacy/musicFormat -->
 
-    <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/legacy/formatOfMusic">
-        <rdfs:label>Format of music</rdfs:label>
+    <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/legacy/musicFormat">
+        <rdfs:label>music format</rdfs:label>
         <rdfs:comment>Format of a musical composition, e.g. full score, condensed score, vocal score, etc.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
@@ -1263,7 +1257,7 @@
     <!-- http://bibframe.org/vocab/frequency -->
 
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/frequency">
-        <rdfs:label>Frequency</rdfs:label>
+        <rdfs:label>frequency</rdfs:label>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:comment>Intervals at which the issues or parts of a serial or the updates to an integrating resource are issued.</rdfs:comment>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
@@ -1274,7 +1268,7 @@
     <!-- http://bibframe.org/vocab/generationDate -->
 
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/generationDate">
-        <rdfs:label>Generation date</rdfs:label>
+        <rdfs:label>generation date</rdfs:label>
         <rdfs:comment>Date of conversion of the data from another format.</rdfs:comment>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
@@ -1287,7 +1281,7 @@
     <!-- http://bibframe.org/vocab/illustrationNote -->
 
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/illustrationNote">
-        <rdfs:label>Illustrative content note</rdfs:label>
+        <rdfs:label>illustration note</rdfs:label>
         <rdfs:comment>Information about illustrative material in the resource.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
@@ -1298,7 +1292,7 @@
     <!-- http://bibframe.org/vocab/acquisitionNote -->
 
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/acquisitionNote">
-        <rdfs:label>Acquisition note</rdfs:label>
+        <rdfs:label>acquisition note</rdfs:label>
         <rdfs:comment>Information about the circumstances (e.g., source, date, method) under which the resource was directly acquired.</rdfs:comment>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
         <rdfs:domain rdf:resource="&bf;Item"/>
@@ -1308,7 +1302,7 @@
     <!-- http://bibframe.org/vocab/hasLendingPolicy -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasLendingPolicy">
-        <rdfs:label>Has lending policy</rdfs:label>
+        <rdfs:label>has lending policy</rdfs:label>
         <rdfs:comment>Policy statement about whether and with what restrictions the holding may be lent</rdfs:comment>
         <rdfs:domain rdf:resource="&bf;PolicySet"/>
         <rdfs:range rdf:resource="&bf;Policy"/>
@@ -1320,7 +1314,7 @@
     <!-- http://bibframe.org/vocab/legacy/modeOfIssuance -->
 
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/legacy/modeOfIssuance">
-        <rdfs:label>Mode of issuance</rdfs:label>
+        <rdfs:label>mode of issuance</rdfs:label>
         <rdfs:comment>Categorization reflecting whether a resource is issued in one or more parts, the way it is updated, and its intended termination.</rdfs:comment>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
         <rdfs:domain rdf:resource="&bf;Instance"/>
@@ -1331,17 +1325,17 @@
     <!-- http://bibframe.org/vocab/musicNumber -->
 
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/musicNumber">
-        <rdfs:label>Music number</rdfs:label>
+        <rdfs:label>music number</rdfs:label>
         <rdfs:comment>Serial, opus, or thematic number or code for music.</rdfs:comment>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://bibframe.org/vocab/legacy/notation -->
+    <!-- http://bibframe.org/vocab/legacy/notationSystem -->
 
-    <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/legacy/notation">
-        <rdfs:label>Notation system</rdfs:label>
+    <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/legacy/notationSystem">
+        <rdfs:label>notation system</rdfs:label>
         <rdfs:comment>Information on the alphabet, script, or symbol system used to convey the content of the resource, including specialized scripts, typefaces, tactile notation, and musical notation.</rdfs:comment>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
         <rdfs:domain rdf:resource="&bf;Instance"/>
@@ -1352,7 +1346,7 @@
     <!-- http://bibframe.org/vocab/note -->
 
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/note">
-        <rdfs:label>Note</rdfs:label>
+        <rdfs:label>note</rdfs:label>
         <rdfs:comment>General textual information relating to a resource.</rdfs:comment>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
@@ -1362,7 +1356,7 @@
     <!-- http://bibframe.org/vocab/preferredCitation -->
 
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/preferredCitation">
-        <rdfs:label>Preferred citation</rdfs:label>
+        <rdfs:label>preferred citation</rdfs:label>
         <rdfs:comment>Citation to the resource preferred by its custodian.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
@@ -1372,19 +1366,19 @@
 
     <!-- http://bibframe.org/vocab/hasReproductionPolicy -->
 
-    <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/hasReproductionPolicy">
-        <rdfs:label>Has reproduction policy</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasReproductionPolicy">
+        <rdfs:label>has reproduction policy</rdfs:label>
         <rdfs:comment>Policy statement about whether reproductions of the holding can be made</rdfs:comment>
         <rdfs:domain rdf:resource="&bf;PolicySet"/>
         <rdfs:range rdf:resource="&bf;Policy"/>
-    </owl:DatatypeProperty>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://bibframe.org/vocab/responsibilityNote -->
 
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/responsibilityNote">
-        <rdfs:label>Responsibility note</rdfs:label>
+        <rdfs:label>responsibility note</rdfs:label>
         <rdfs:comment>Statement relating to the identification and/or function of any persons, families, or corporate bodies responsible for the creation of, or contributing to the content of a resource.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
@@ -1394,19 +1388,19 @@
 
     <!-- http://bibframe.org/vocab/hasRetentionPolicy -->
 
-    <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/hasRetentionPolicy">
-        <rdfs:label>Has retention policy</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasRetentionPolicy">
+        <rdfs:label>has retention policy</rdfs:label>
         <rdfs:comment>Policy statement about how many and/or how long the holdings are retained</rdfs:comment>
         <rdfs:domain rdf:resource="&bf;PolicySet"/>
         <rdfs:range rdf:resource="&bf;Policy"/>
-    </owl:DatatypeProperty>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://bibframe.org/vocab/hasFirstIssue -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasFirstIssue">
-        <rdfs:label>Serial first issue</rdfs:label>
+        <rdfs:label>has first issue</rdfs:label>
         <rdfs:comment>Beginning date of an instance and/or the sequential designations.</rdfs:comment>
         <rdfs:range rdf:resource="&bf;Instance"/>
         <rdfs:domain rdf:resource="&bf;Instance"/>
@@ -1418,7 +1412,7 @@
     <!-- http://bibframe.org/vocab/hasLastIssue -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasLastIssue">
-        <rdfs:label>Serial last issue</rdfs:label>
+        <rdfs:label>has last issue</rdfs:label>
         <rdfs:comment>Ending date of an instance and/or the sequential designations.</rdfs:comment>
         <rdfs:range rdf:resource="&bf;Instance"/>
         <rdfs:domain rdf:resource="&bf;Instance"/>
@@ -1431,7 +1425,7 @@
     <!-- http://bibframe.org/vocab/producesSound -->
 
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/producesSound">
-        <rdfs:label>Produces sound</rdfs:label>
+        <rdfs:label>produces sound</rdfs:label>
         <rdfs:comment>Indication of whether the production of sound is an integral part of the resource.</rdfs:comment>
         <rdfs:domain rdf:resource="&bf;Instance"/>
         <rdfs:range rdf:datatype="&xsd;boolean"/>
@@ -1442,7 +1436,7 @@
     <!-- http://bibframe.org/vocab/subtitle -->
 
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/subtitle">
-        <rdfs:label>Subtitle</rdfs:label>
+        <rdfs:label>subtitle</rdfs:label>
         <rdfs:comment>Word, character, or group of words and/or characters that contains the remainder of the title information after the main title.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Title"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
@@ -1453,7 +1447,7 @@
     <!-- http://bibframe.org/vocab/legacy/formDesignation -->
 
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/legacy/formDesignation">
-        <rdfs:label>Form designation</rdfs:label>
+        <rdfs:label>form designation</rdfs:label>
         <rdfs:comment>Class or genre to which a Work or Instance belongs.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
@@ -1463,7 +1457,7 @@
     <!-- http://bibframe.org/vocab/legacy/contentsNote -->
 
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/legacy/contentsNote">
-        <rdfs:label>Contents</rdfs:label>
+        <rdfs:label>contents note</rdfs:label>
         <rdfs:comment>List of subunits of the resource.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
@@ -1474,7 +1468,7 @@
     <!-- http://bibframe.org/vocab/legacy/creditsNote -->
 
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/legacy/creditsNote">
-        <rdfs:label>Credits note</rdfs:label>
+        <rdfs:label>credits note</rdfs:label>
         <rdfs:comment>Credits for persons or organizations, other than members of the cast, who have participated in the creation and/or production of the.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/note"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
@@ -1485,7 +1479,7 @@
     <!-- http://bibframe.org/vocab/legacy/duration -->
 
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/legacy/duration">
-        <rdfs:label>Duration</rdfs:label>
+        <rdfs:label>duration</rdfs:label>
         <rdfs:comment>Information about the playing time or duration in an unstructured form, e.g., &quot;2 hours&quot;.</rdfs:comment>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
         <rdfs:domain rdf:resource="&bf;Instance"/>
@@ -1496,7 +1490,7 @@
     <!-- http://bibframe.org/vocab/legacy/findingAidNote -->
 
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/legacy/findingAidNote">
-        <rdfs:label>Index or finding aid note</rdfs:label>
+        <rdfs:label>finding aid note</rdfs:label>
         <rdfs:comment>Note about availability of an index or finding aid.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/note"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
@@ -1509,7 +1503,7 @@
     <!-- http://bibframe.org/vocab/legacy/graphicScaleNote -->
 
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/legacy/graphicScaleNote">
-        <rdfs:label>Graphic scale note</rdfs:label>
+        <rdfs:label>graphic scale note</rdfs:label>
         <rdfs:comment>Textual information about scale, including the scale of graphic material item such as architectural drawings or three-dimensional artifacts.</rdfs:comment>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
         <rdfs:domain rdf:resource="&bf;Instance"/>
@@ -1520,7 +1514,7 @@
     <!-- http://bibframe.org/vocab/legacy/languageNote -->
 
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/legacy/languageNote">
-        <rdfs:label>Language note</rdfs:label>
+        <rdfs:label>language note</rdfs:label>
         <rdfs:comment>Note concerning the language of the material or its parts.</rdfs:comment>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
         <rdfs:domain rdf:resource="&bf;Work"/>
@@ -1531,7 +1525,7 @@
     <!-- http://bibframe.org/vocab/legacy/legalDate -->
 
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/legacy/legalDate">
-        <rdfs:label>Legal date</rdfs:label>
+        <rdfs:label>legal date</rdfs:label>
         <rdfs:comment>Date of legal work, or promulgation of a law, or signing of a treaty.</rdfs:comment>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
@@ -1541,7 +1535,7 @@
     <!-- http://bibframe.org/vocab/legacy/musicKey -->
 
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/legacy/musicKey">
-        <rdfs:label>Music key</rdfs:label>
+        <rdfs:label>music key</rdfs:label>
         <rdfs:comment>Pitch and mode for music.</rdfs:comment>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
@@ -1551,7 +1545,7 @@
     <!-- http://bibframe.org/vocab/legacy/musicMediumNote -->
 
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/legacy/musicMediumNote">
-        <rdfs:label>Music medium note</rdfs:label>
+        <rdfs:label>music medium note</rdfs:label>
         <rdfs:comment>Instrumental, vocal, and/or other medium of performance for which a musical resource was originally conceived, written or performed.</rdfs:comment>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
@@ -1559,7 +1553,7 @@
     <!-- http://bibframe.org/vocab/legacy/geographicCoverageNote -->
     
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/legacy/geographicCoverageNote">
-        <rdfs:label>Geographic coverage</rdfs:label>
+        <rdfs:label>geographic coverage note</rdfs:label>
         <rdfs:comment>Geographic entities covered by the resource.</rdfs:comment>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
@@ -1571,7 +1565,7 @@
     <!-- http://bibframe.org/vocab/legacy/performerNote -->
 
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/legacy/performerNote">
-        <rdfs:label>Performer note</rdfs:label>
+        <rdfs:label>performer note</rdfs:label>
         <rdfs:comment>Information about the participants, players, narrators, presenters, or performers.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/note"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
@@ -1582,18 +1576,8 @@
     <!-- http://bibframe.org/vocab/legacy/providerStatement -->
 
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/legacy/providerStatement">
-        <rdfs:label>Provider statement</rdfs:label>
+        <rdfs:label>provider statement</rdfs:label>
         <rdfs:comment>Transcribed provider statement</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/legacy/responsibility -->
-
-    <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/legacy/responsibility">
-        <rdfs:label>Responsibility</rdfs:label>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
@@ -1603,7 +1587,7 @@
     <!-- http://bibframe.org/vocab/legacy/supplementaryContentNote -->
 
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/legacy/supplementaryContentNote">
-        <rdfs:label>Supplementary content note</rdfs:label>
+        <rdfs:label>supplementary content note</rdfs:label>
         <rdfs:comment>Information on the presence of one or more bibliographies, discographies, filmographies, and/or other bibliographic references in a described resource or in accompanying material.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
@@ -1614,7 +1598,7 @@
     <!-- http://bibframe.org/vocab/legacy/temporalCoverageNote -->
 
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/legacy/temporalCoverageNote">
-        <rdfs:label>Temporal coverage note</rdfs:label>
+        <rdfs:label>temporal coverage note</rdfs:label>
         <rdfs:comment>Time period covered by the resource.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/note"/> 
@@ -1626,7 +1610,7 @@
     <!-- http://bibframe.org/vocab/legacy/treatySignator -->
 
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/legacy/treatySignator">
-        <rdfs:label>Signatory to a treaty</rdfs:label>
+        <rdfs:label>treaty signatory</rdfs:label>
         <rdfs:comment>Government of other party that has formally signed a treaty.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/note"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
@@ -1641,7 +1625,7 @@
     <!-- http://purl.org/dc/terms/created -->
 
     <owl:DatatypeProperty rdf:about="&dcterms;created">
-        <rdfs:label xml:lang="en">Date created</rdfs:label>
+        <rdfs:label xml:lang="en">created</rdfs:label>
         <rdfs:comment xml:lang="en">Date of creation of the resource.</rdfs:comment>
     </owl:DatatypeProperty>
     
@@ -1653,7 +1637,7 @@
     <!-- http://schema.org/accessibilityFeature -->
 
     <owl:DatatypeProperty rdf:about="http://schema.org/accessibilityFeature">
-        <rdfs:label xml:lang="en">Accessibility feature</rdfs:label>
+        <rdfs:label xml:lang="en">accessibility feature</rdfs:label>
         <rdfs:comment xml:lang="en">Content features of the resource, such as accessible media, alternatives and supported enhancements for accessibility (WebSchemas wiki lists possible values).</rdfs:comment>
         <rdfs:range rdf:datatype="&xsd;string"/>
     </owl:DatatypeProperty>
@@ -1665,7 +1649,7 @@
     <!-- http://www.w3.org/ns/prov#startedAtTime -->
 
     <owl:DatatypeProperty rdf:about="&prov;startedAtTime">
-        <rdfs:label>Started at time</rdfs:label>
+        <rdfs:label>started at time</rdfs:label>
         <rdfs:comment xml:lang="en">The time at which an activity started. See also prov:endedAtTime.</rdfs:comment>
         <rdfs:domain rdf:resource="&prov;Activity"/>
     </owl:DatatypeProperty>
@@ -1919,13 +1903,13 @@
         <rdfs:subClassOf rdf:resource="&bf;Identifier" />
     </owl:Class>
 
-    <owl:Class rdf:about="http://bibframe.org/vocab/Isbn10">
+    <owl:Class rdf:about="http://bibframe.org/vocab/Isbn-10">
         <rdfs:label>ISBN-10</rdfs:label>
         <rdfs:comment>10 digit version of the International Standard Book Number.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&bf;ISBN" />
     </owl:Class>
     
-    <owl:Class rdf:about="http://bibframe.org/vocab/Isbn13">
+    <owl:Class rdf:about="http://bibframe.org/vocab/Isbn-13">
         <rdfs:label>ISBN-13</rdfs:label>
         <rdfs:comment>13 digit version of the International Standard Book Number.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&bf;ISBN" />
@@ -1949,7 +1933,7 @@
         <rdfs:subClassOf rdf:resource="&bf;Identifier" />
     </owl:Class>
     
-    <owl:Class rdf:about="http://bibframe.org/vocab/IssnL">
+    <owl:Class rdf:about="http://bibframe.org/vocab/Issn-L">
         <rdfs:label>ISSN-L</rdfs:label>
         <rdfs:comment>International Standard Serial Number that links together various media versions of a continuing resource.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&bf;Identifier" />
@@ -1980,7 +1964,7 @@
     </owl:Class>
     
     <owl:Class rdf:about="http://bibframe.org/vocab/LcOverseasAcqNumber">
-        <rdfs:label>LC Overseas Acq Number</rdfs:label>
+        <rdfs:label>LC overseas acq number</rdfs:label>
         <rdfs:comment>Identification number assigned by the Library of Congress to works acquired through one of its overseas acquisition programs.</rdfs:comment>        
         <rdfs:subClassOf rdf:resource="&bf;Identifier" />
     </owl:Class>        
@@ -1991,11 +1975,7 @@
         <rdfs:subClassOf rdf:resource="&bf;Identifier" />
     </owl:Class>
     
-    <owl:Class rdf:about="http://bibframe.org/vocab/IssueNumber">
-        <rdfs:label>Issue number</rdfs:label>
-        <rdfs:comment></rdfs:comment>
-        <rdfs:subClassOf rdf:resource="&bf;Identifier" />
-    </owl:Class>
+
     
    
     <!-- http://bibframe.org/vocab/Instance -->
@@ -2059,7 +2039,7 @@
     <!-- http://bibframe.org/vocab/Multimedia -->
 
     <owl:Class rdf:about="http://bibframe.org/vocab/Multimedia">
-        <rdfs:label>Software or multimedia</rdfs:label>
+        <rdfs:label>Multimedia</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:comment>Electronic resource that is a computer program (i.e. digitally encoded instructions intended to be processed and performed by a computer) or which consist of multiple media types that are software driven. Examples include videogames and websites.</rdfs:comment>
     </owl:Class>
@@ -2158,14 +2138,14 @@
     <!-- http://bibframe.org/vocab/ThreeDimensionalObject -->
 
     <owl:Class rdf:about="http://bibframe.org/vocab/ThreeDimensionalObject">
-        <rdfs:label>Three-dimensional object</rdfs:label>
+        <rdfs:label>Three dimensional object</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:comment>Resource in a form intended to be perceived visually in three-dimensions.Includes man-made objects such as models, sculptures, clothing, and toys, as well as naturally occurring objects such as specimens mounted for viewing.</rdfs:comment>
     </owl:Class>
     
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/legacy/aspectRatio">
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
-        <rdfs:label>Aspect ratio</rdfs:label>
+        <rdfs:label>aspect ratio</rdfs:label>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment>Proportional relationship between an image's width and its height.</rdfs:comment>
     </owl:DatatypeProperty>
@@ -2193,7 +2173,7 @@
 
     <!-- http://purl.org/dc/terms/LinguisticSystem -->
     <owl:Class rdf:about="http://purl.org/dc/terms/LinguisticSystem">
-        <rdfs:label xml:lang="en">Linguistic System</rdfs:label>
+        <rdfs:label xml:lang="en">Linguistic system</rdfs:label>
         <rdfs:comment xml:lang="en">A system of signs, symbols, sounds, gestures, or rules used in communication.</rdfs:comment>
     </owl:Class>
 
@@ -2258,7 +2238,9 @@
 
     <!-- http://www.loc.gov/mads/rdf/v1#Language -->
 
-    <owl:Class rdf:about="http://www.loc.gov/mads/rdf/v1#Language"/>
+    <owl:Class rdf:about="http://www.loc.gov/mads/rdf/v1#Language">
+        <rdfs:label>Language</rdfs:label>
+    </owl:Class>
     
 
 
@@ -2304,7 +2286,7 @@
     <!-- http://www.w3.org/ns/oa#annotatedAt -->
     
     <owl:DatatypeProperty rdf:about="&oa;annotatedAt">
-        <rdfs:label xml:lang="en">Annotated at time</rdfs:label>
+        <rdfs:label xml:lang="en">annotated at</rdfs:label>
         <rdfs:comment xml:lang="en">The time at which the Annotation was created.</rdfs:comment>           
         <rdfs:range rdf:resource="&xsd;dateTimeStamp"/>
         <rdfs:domain rdf:resource="&oa;Annotation"/>
