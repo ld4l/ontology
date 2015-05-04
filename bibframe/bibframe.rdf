@@ -961,7 +961,7 @@
     </owl:ObjectProperty>
     
 
-    <owl:ObjectProperty rdf:aboout="http://bibframe.org/vocab/hasAnnotation">
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasAnnotation">
         <rdfs:label>has annotation</rdfs:label>
         <rdfs:comment>The subject resource is annotated by the object Annotation.</rdfs:comment>
         <owl:inverseOf rdf:resource="&oa;hasTarget" />
@@ -1907,13 +1907,13 @@
     <owl:Class rdf:about="http://bibframe.org/vocab/Isbn-10">
         <rdfs:label>ISBN-10</rdfs:label>
         <rdfs:comment>10 digit version of the International Standard Book Number.</rdfs:comment>
-        <rdfs:subClassOf rdf:resource="&bf;ISBN" />
+        <rdfs:subClassOf rdf:resource="&bf;Isbn" />
     </owl:Class>
     
     <owl:Class rdf:about="http://bibframe.org/vocab/Isbn-13">
         <rdfs:label>ISBN-13</rdfs:label>
         <rdfs:comment>13 digit version of the International Standard Book Number.</rdfs:comment>
-        <rdfs:subClassOf rdf:resource="&bf;ISBN" />
+        <rdfs:subClassOf rdf:resource="&bf;Isbn" />
     </owl:Class>
     
     <owl:Class rdf:about="http://bibframe.org/vocab/Ismn">
