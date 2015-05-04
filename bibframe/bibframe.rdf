@@ -34,43 +34,14 @@
      xmlns:marcrel="http://id.loc.gov/vocabulary/relators/"
      xmlns:cnt="http://www.w3.org/2011/content#"
      xmlns:vivo="http://vivoweb.org/ontology/core#">
+    
     <owl:Ontology rdf:about="http://bibframe.org/vocab/">
-        <rdfs:label>Bibframe Ontology Proposal</rdfs:label>
+        <rdfs:label>LD4L Proposed Bibframe Ontology</rdfs:label>
         <owl:versionInfo rdf:datatype="&xsd;string">Initially automatically generated.</owl:versionInfo>
         <rdfs:comment rdf:datatype="&xsd;string">Proposed Bibframe ontology based on LD4L recommendations</rdfs:comment>
     </owl:Ontology>
     
 
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotation properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-    <!-- http://www.w3.org/2002/07/owl#inverseOf -->
-
-    <owl:AnnotationProperty rdf:about="&owl;inverseOf"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Object Properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-
-    
-    <owl:ObjectProperty rdf:about="&rdf;value">
-        <rdfs:label>value</rdfs:label>
-        <rdfs:comment>Idiomatic property used for structured values.</rdfs:comment>
-    </owl:ObjectProperty>    
 
 
         
@@ -2316,7 +2287,54 @@
         <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
         <rdfs:comment>A person.</rdfs:comment>
     </owl:Class>
+    
+    <owl:Class rdf:about="&oa;Motivation">
+        <rdfs:label xml:lang="en">Motivation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&skos;Concept"/>
+        <rdfs:comment xml:lang="en">The Motivation for creating an Annotation, indicated with oa:motivatedBy, is a reason for its creation, and might include things like oa:replying to another annotation, oa:commenting on a resource, or oa:linking to a related resource.
+            
+            Each Annotation SHOULD have at least one oa:motivatedBy relationship to an instance of oa:Motivation, which is a subClass of skos:Concept.</rdfs:comment>
+    </owl:Class>
 
+    <!-- http://www.w3.org/ns/oa#motivatedBy -->
+    
+    <owl:ObjectProperty rdf:about="&oa;motivatedBy">
+        <rdfs:label xml:lang="en">motivatedBy</rdfs:label>
+        <rdfs:comment xml:lang="en">The relationship between an Annotation and a Motivation, indicating the reasons why the Annotation was created.
+            
+            Each Annotation SHOULD have at least one oa:motivatedBy relationship, and MAY be more than 1.</rdfs:comment>       
+        <rdfs:domain rdf:resource="&oa;Annotation"/>
+        <rdfs:range rdf:resource="&oa;Motivation"/>
+    </owl:ObjectProperty>
+
+    <!-- http://www.w3.org/ns/oa#motivationScheme -->
+    
+    <owl:NamedIndividual rdf:about="&oa;motivationScheme">
+        <rdf:type rdf:resource="&skos;ConceptScheme"/>
+        <rdfs:label xml:lang="en">motivation scheme</rdfs:label>
+        <rdfs:comment xml:lang="en">The concept scheme for Open Annotation Motivations</rdfs:comment>
+    </owl:NamedIndividual>
+    
+    <owl:Class rdf:about="&skos;ConceptScheme">
+        <rdfs:label xml:lang="en">Concept scheme</rdfs:label>
+        <rdfs:comment xml:lang="en">A set of concepts, optionally including statements about semantic relationships between those concepts.</rdfs:comment>
+        <owl:disjointWith rdf:resource="&skos;Concept"/>
+    </owl:Class>
+    
+    <owl:NamedIndividual rdf:about="&bf;summarizing">
+        <rdf:type rdf:resource="&oa;Motivation"/>
+        <rdfs:comment xml:lang="en">The motivation that represents a summarizing of the target resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">summarizing</rdfs:label>
+        <skos:inScheme rdf:resource="&oa;motivationScheme"/>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="&bf;reviewing">
+        <rdf:type rdf:resource="&oa;Motivation"/>
+        <rdfs:comment xml:lang="en">The motivation that represents a reviewing  of the target resource.</rdfs:comment>
+        <rdfs:label xml:lang="en">reviewing</rdfs:label>
+        <skos:inScheme rdf:resource="&oa;motivationScheme"/>
+    </owl:NamedIndividual>
+    
 </rdf:RDF>
 
 
