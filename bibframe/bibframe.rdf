@@ -1010,13 +1010,7 @@
     
 
 
-    <!-- http://bibframe.org/vocab/legacy/aspectRatio -->
 
-    <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/legacy/aspectRatio">
-        <rdfs:label>aspect ratio</rdfs:label>
-        <rdfs:comment>Proportional relationship between an image&apos;s width and its height.</rdfs:comment>
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
-    </owl:DatatypeProperty>
     
 
     
@@ -1225,8 +1219,8 @@
     <!-- http://bibframe.org/vocab/extraTitleValue -->
 
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/extraTitleValue">
-        <rdfs:label>extra value</rdfs:label>
-        <rdfs:comment>Other distinguishing characteristic of a work, such as version, etc.</rdfs:comment>
+        <rdfs:label>extra title value</rdfs:label>
+        <rdfs:comment>Other distinguishing characteristic of a work included in the title, such as version, etc.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Title"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
@@ -2150,6 +2144,7 @@
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment>Proportional relationship between an image's width and its height.</rdfs:comment>
     </owl:DatatypeProperty>
+
 
     <!-- http://bibframe.org/vocab/Title -->
 
