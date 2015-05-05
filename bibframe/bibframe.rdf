@@ -262,15 +262,6 @@
     </owl:ObjectProperty>
     
 
-
-    <!-- http://bibframe.org/vocab/hasAnnotation -->
-
-    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasAnnotation">
-        <rdfs:label>has annotation</rdfs:label>
-        <rdfs:comment>The subject resource is annotated by the object Annotation.</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="&dcterms;relation"/>
-        <owl:inverseOf rdf:resource="&oa;hasTarget"/>
-    </owl:ObjectProperty>
     
 
 
