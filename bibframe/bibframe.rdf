@@ -1515,7 +1515,7 @@
 
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/legacy/creditsNote">
         <rdfs:label>credits note</rdfs:label>
-        <rdfs:comment>Credits for persons or organizations, other than members of the cast, who have participated in the creation and/or production of the.</rdfs:comment>
+        <rdfs:comment>Credits for persons or organizations, other than members of the cast, who have participated in the creation and/or production of the resource.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/note"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
         <rdfs:subPropertyOf rdf:resource="&bf;note" />
@@ -1523,9 +1523,9 @@
     
 
 
-    <!-- http://bibframe.org/vocab/legacy/dimensions -->
+    <!-- http://bibframe.org/vocab/dimensions -->
 
-    <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/legacy/dimensions">
+    <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/dimensions">
         <rdfs:label>dimensions</rdfs:label>
         <rdfs:comment>Measurements of the carrier or carriers and/or the container of a resource.</rdfs:comment>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
@@ -1641,24 +1641,24 @@
     
 
 
-    <!-- http://bibframe.org/vocab/legacy/musicFormat -->
+    <!-- http://bibframe.org/vocab/formatOfMusic -->
 
-    <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/legacy/musicFormat">
-        <rdfs:label>music format</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/formatOfMusic">
+        <rdfs:label>format of music</rdfs:label>
         <rdfs:comment>Format of a musical composition, e.g. full score, condensed score, vocal score, etc.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
-    </owl:DatatypeProperty>
+        <skos:editorialNote>Need a vocabulary to enumerate values.</skos:editorialNote>
+    </owl:ObjectProperty>
     
 
 
-    <!-- http://bibframe.org/vocab/legacy/musicKey -->
+    <!-- http://bibframe.org/vocab/musicKey -->
 
-    <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/legacy/musicKey">
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/musicKey">
         <rdfs:label>music key</rdfs:label>
         <rdfs:comment>Pitch and mode for music.</rdfs:comment>
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
-    </owl:DatatypeProperty>
+        <skos:editorialNote>Need a vocabulary to enumerate values.</skos:editorialNote>
+    </owl:ObjectProperty>
     
 
 
@@ -1736,7 +1736,7 @@
 
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/legacy/treatySignator">
         <rdfs:label>treaty signatory</rdfs:label>
-        <rdfs:comment>Government of other party that has formally signed a treaty.</rdfs:comment>
+        <rdfs:comment>Government or other party that has formally signed a treaty.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/note"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
