@@ -356,17 +356,6 @@
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Item"/>
     </owl:ObjectProperty>
     
-
-
-    <!-- http://bibframe.org/vocab/hasIndex -->
-
-    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasIndex">
-        <rdfs:label xml:lang="en">has index</rdfs:label>
-        <rdfs:comment>Work has an accompanying index</rdfs:comment>
-        <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
-        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
-        <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/accompaniedBy"/>
-    </owl:ObjectProperty>
     
 
 
@@ -583,19 +572,7 @@
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/accompanies"/>
         <owl:inverseOf rdf:resource="http://bibframe.org/vocab/hasFindingAid"/>
     </owl:ObjectProperty>
-    
 
-
-    <!-- http://bibframe.org/vocab/isIndexFor -->
-
-    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/isIndexFor">
-        <rdfs:label xml:lang="en">is index for</rdfs:label>
-        <rdfs:comment>Index accompanying a work</rdfs:comment>
-        <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
-        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
-        <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/accompanies"/>
-        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/hasIndex"/>
-    </owl:ObjectProperty>
     
 
 
@@ -710,7 +687,6 @@
         <rdfs:label>has origin place</rdfs:label>
         <rdfs:comment>Place from which the creation of the work originated.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
-        <rdfs:subPropertyOf rdf:resource="&dcterms;relation" />
         <rdfs:range rdf:resource="&gn;Feature"/>
     </owl:ObjectProperty>
 
@@ -852,7 +828,6 @@
         <rdfs:comment>Table of contents of the target work or instance.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance" />
         <owl:inverseOf rdf:resource="&bf;isTableOfContentsFor" />
-        <rdfs:subPropertyOf rdf:resource="&dcterms;relation" />
     </owl:ObjectProperty>
     
 
@@ -864,7 +839,6 @@
         <rdfs:comment>Table of contents for a resource.</rdfs:comment> 
         <rdfs:range rdf:resource="&bf;Instance"/>
         <owl:inverseOf rdf:resource="&bf;hasTableOfContents" />
-        <rdfs:subPropertyOf rdf:resource="&dcterms;relation" />
     </owl:ObjectProperty>
     
 
@@ -1289,11 +1263,19 @@
     </owl:DatatypeProperty>
     
 
-
+    <!-- http://bibframe.org/vocab/hasIndex -->
+    
+    <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/hasIndex">
+        <rdfs:label xml:lang="en">has index</rdfs:label>
+        <rdfs:comment>Indicates whether a work or instance contains an internal index</rdfs:comment>
+        <rdfs:range rdf:datatype="&amp;xsd;boolean" />
+    </owl:DatatypeProperty>
+    
+    
     <!-- http://bibframe.org/vocab/subtitle -->
 
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/subtitle">
-        <rdfs:label xml:lang="en">Has subtitle</rdfs:label>
+        <rdfs:label xml:lang="en">subtitle</rdfs:label>
         <rdfs:comment>Word, character, or group of words and/or characters that contains the remainder of the title information after the main title.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Title"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
@@ -1369,7 +1351,6 @@
         <rdfs:comment>Policy statement of unspecified type</rdfs:comment>
         <rdfs:domain rdf:resource="&bf;PolicySet"/>
         <rdfs:range rdf:resource="&bf;Policy"/>
-        <rdfs:subPropertyOf rdf:resource="&dcterms;relation" />
     </owl:ObjectProperty>
 
     <!-- http://bibframe.org/vocab/producesSound -->
@@ -1434,7 +1415,6 @@
         <rdfs:comment>Beginning date of an instance and/or the sequential designations.</rdfs:comment>
         <rdfs:range rdf:resource="&bf;Instance"/>
         <rdfs:domain rdf:resource="&bf;Instance"/>
-        <rdfs:subPropertyOf rdf:resource="&dcterms;relation" />
     </owl:ObjectProperty>
     
 
@@ -1446,7 +1426,6 @@
         <rdfs:comment>Ending date of an instance and/or the sequential designations.</rdfs:comment>
         <rdfs:range rdf:resource="&bf;Instance"/>
         <rdfs:domain rdf:resource="&bf;Instance"/>
-        <rdfs:subPropertyOf rdf:resource="&dcterms;relation" />
     </owl:ObjectProperty>
     
 
@@ -1968,7 +1947,17 @@
     </owl:Class>
     
 
-
+    <!-- http://bibframe.org/vocab/Index -->
+    
+    <owl:Class rdf:about="http://bibframe.org/vocab/Index">
+        <rdfs:label>Index</rdfs:label>
+        <rdfs:comment>The index of a resource.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="&bf;Work" />
+        <skos:editorialNote>Use dcterms:isPartOf to relate Index to Work it is a part of.</skos:editorialNote>
+    </owl:Class>
+    
+    
+    
     <!-- http://bibframe.org/vocab/Instance -->
 
     <owl:Class rdf:about="http://bibframe.org/vocab/Instance">
