@@ -2409,7 +2409,7 @@
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://bibframe.org/vocab/isTranslationOf"/>
-                <owl:someValuesFrom rdf:resource="http://bibframe.org/vocab/Title"/>
+                <owl:allValuesFrom rdf:resource="http://bibframe.org/vocab/Title"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Title"/>
