@@ -1732,7 +1732,11 @@
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
-
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/date">
+        <rdfs:label xml:lang="en">date</rdfs:label>
+        <rdfs:comment xml:lang="en">A point or period of time associated with an event in the lifecycle of the resource.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
 
     <!-- http://purl.org/dc/terms/created -->
 
@@ -2660,7 +2664,9 @@
 
     <!-- http://www.w3.org/2011/content#Content -->
 
-    <owl:Class rdf:about="&cnt;Content"/>
+    <owl:Class rdf:about="&cnt;Content">
+        <rdfs:label>Content</rdfs:label>
+    </owl:Class>
     
 
 
