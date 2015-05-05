@@ -55,12 +55,6 @@
     
 
 
-    <!-- http://www.w3.org/2000/01/rdf-schema#range -->
-
-    <owl:AnnotationProperty rdf:about="&rdfs;range"/>
-    
-
-
     <!-- http://www.w3.org/2004/02/skos/core#editorialNote -->
 
     <owl:AnnotationProperty rdf:about="&skos;editorialNote">
@@ -73,7 +67,10 @@
 
     <!-- http://www.w3.org/2004/02/skos/core#note -->
 
-    <owl:AnnotationProperty rdf:about="&skos;note"/>
+    <owl:AnnotationProperty rdf:about="&skos;note">
+        <rdfs:label>note</rdfs:label>
+        <rdfs:comment>A general note, for any purpose.</rdfs:comment>
+    </owl:AnnotationProperty>
     
 
 
@@ -1506,6 +1503,7 @@
         <rdfs:comment>List of subunits of the resource.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:subPropertyOf rdf:resource="&bf;note" />
     </owl:DatatypeProperty>
     
 
@@ -1517,6 +1515,7 @@
         <rdfs:comment>Credits for persons or organizations, other than members of the cast, who have participated in the creation and/or production of the.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/note"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:subPropertyOf rdf:resource="&bf;note" />
     </owl:DatatypeProperty>
     
 
@@ -1589,6 +1588,7 @@
         <rdfs:comment>Geographic entities covered by the resource.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:subPropertyOf rdf:resource="&bf;note" />
     </owl:DatatypeProperty>
     
 
@@ -1600,6 +1600,7 @@
         <rdfs:comment>Textual information about scale, including the scale of graphic material item such as architectural drawings or three-dimensional artifacts.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:subPropertyOf rdf:resource="&bf;note" />
     </owl:DatatypeProperty>
     
 
@@ -1611,6 +1612,7 @@
         <rdfs:comment>Note concerning the language of the material or its parts.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:subPropertyOf rdf:resource="&bf;note" />
     </owl:DatatypeProperty>
     
 
@@ -1663,6 +1665,7 @@
         <rdfs:label>music medium note</rdfs:label>
         <rdfs:comment>Instrumental, vocal, and/or other medium of performance for which a musical resource was originally conceived, written or performed.</rdfs:comment>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:subPropertyOf rdf:resource="&bf;note" />
     </owl:DatatypeProperty>
     
 
@@ -1685,6 +1688,7 @@
         <rdfs:comment>Information about the participants, players, narrators, presenters, or performers.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/note"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:subPropertyOf rdf:resource="&bf;note" />
     </owl:DatatypeProperty>
     
 
@@ -1696,6 +1700,7 @@
         <rdfs:comment>Transcribed provider statement</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:subPropertyOf rdf:resource="&bf;note" />
     </owl:DatatypeProperty>
     
 
@@ -1707,6 +1712,7 @@
         <rdfs:comment>Information on the presence of one or more bibliographies, discographies, filmographies, and/or other bibliographic references in a described resource or in accompanying material.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:subPropertyOf rdf:resource="&bf;note" />
     </owl:DatatypeProperty>
     
 
@@ -1838,7 +1844,16 @@
         <rdfs:comment xml:lang="en">Caption title, printed at the head of the first page of text.</rdfs:comment>
     </owl:Class>
     
-
+    
+    <!-- http://bibframe.org/vocab/Cartography -->
+    
+    
+    <rdfs:Class rdf:about="http://bibframe.org/vocab/Cartography">
+        <rdfs:label>Cartography</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Work"/>
+        <rdfs:comment>Resource that show spatial information, including maps, atlases, globes,digital maps, and other cartographic items.</rdfs:comment>
+    </rdfs:Class>
+    
 
     <!-- http://bibframe.org/vocab/CirculationStatus -->
 
