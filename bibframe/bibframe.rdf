@@ -263,7 +263,7 @@
     
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasAnnotation">
-        <rdfs:label>Has annotation</rdfs:label>
+        <rdfs:label>has annotation</rdfs:label>
         <rdfs:comment>Resource has an annotation.</rdfs:comment>
         <owl:inverseOf rdf:resource="&oa;hasTarget"/>
         <rdfs:range rdf:resource="&oa;Annotation"/>
@@ -1368,15 +1368,6 @@
         <rdfs:subPropertyOf rdf:resource="&bf;hasPolicy" />
     </owl:ObjectProperty>
     
-
-    <!-- http://bibframe.org/vocab/legacy/modeOfIssuance -->
-
-    <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/legacy/modeOfIssuance">
-        <rdfs:label>mode of issuance</rdfs:label>
-        <rdfs:comment>Categorization reflecting whether a resource is issued in one or more parts, the way it is updated, and its intended termination.</rdfs:comment>
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
-        <rdfs:domain rdf:resource="&bf;Instance"/>
-    </owl:DatatypeProperty>
     
 
 
