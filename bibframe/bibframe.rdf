@@ -262,9 +262,21 @@
     </owl:ObjectProperty>
     
 
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasAnnotation">
+        <rdfs:label>Has annotation</rdfs:label>
+        <rdfs:comment>Resource has an annotation.</rdfs:comment>
+        <owl:inverseOf rdf:resource="&oa;hasTarget"/>
+        <rdfs:range rdf:resource="&oa;Annotation"/>
+    </owl:ObjectProperty>   
+
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/annotatorOf">
+        <rdfs:label>annotator of</rdfs:label>
+        <rdfs:comment>Agent responsible for the annotation.</rdfs:comment>
+        <owl:inverseOf rdf:resource="&oa;annotatedBy"/>
+        <rdfs:range rdf:resource="&oa;Annotation"/>
+        <rdfs:domain rdf:resource="&foaf;Agent"/>
+    </owl:ObjectProperty>   
     
-
-
     <!-- http://bibframe.org/vocab/hasCoverArt -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasCoverArt">
@@ -1054,7 +1066,7 @@
             
             There is no OA class provided for &quot;Target&quot; as a target might be a body in a different annotation. However, there SHOULD be 1 or more content-based classes associated with the target resources of an Annotation, and the dctypes: vocabulary is recommended for this purpose, for instance dctypes:Text to declare textual content.</rdfs:comment>
         <rdfs:domain rdf:resource="&oa;Annotation"/>
-        <owl:inverseOf rdf:resource="&oa;annotatedBy"/>
+        <owl:inverseOf rdf:resource="&bf;hasAnnotation"/>
     </owl:ObjectProperty>
     
 
