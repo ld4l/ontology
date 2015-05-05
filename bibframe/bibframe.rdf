@@ -462,6 +462,15 @@
     
 
 
+    <!-- http://bibframe.org/vocab/hasPreferredTitle -->
+
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasPreferredTitle">
+        <rdfs:label xml:lang="en">has preferred title</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/hasTitle"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://bibframe.org/vocab/hasReproduction -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasReproduction">
@@ -1710,6 +1719,16 @@
     
 
 
+    <!-- http://bibframe.org/vocab/CaptionTitle -->
+
+    <owl:Class rdf:about="http://bibframe.org/vocab/CaptionTitle">
+        <rdfs:label xml:lang="en">Caption title</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Title"/>
+        <rdfs:comment xml:lang="en">Caption title, printed at the head of the first page of text.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://bibframe.org/vocab/CirculationStatus -->
 
     <owl:Class rdf:about="http://bibframe.org/vocab/CirculationStatus">
@@ -2263,6 +2282,16 @@
     
 
 
+    <!-- http://bibframe.org/vocab/SpineTitle -->
+
+    <owl:Class rdf:about="http://bibframe.org/vocab/SpineTitle">
+        <rdfs:label xml:lang="en">Spine title</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Title"/>
+        <rdfs:comment xml:lang="en">Title taken from the spine of a resource.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://bibframe.org/vocab/StillImage -->
 
     <owl:Class rdf:about="http://bibframe.org/vocab/StillImage">
@@ -2639,6 +2668,20 @@
         <rdfs:label xml:lang="en">motivation scheme</rdfs:label>
         <rdfs:comment xml:lang="en">The concept scheme for Open Annotation Motivations</rdfs:comment>
     </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="&xsd;language">
+        <rdfs:comment xml:lang="en">Caption title, printed at the head of the first page of text.</rdfs:comment>
+    </rdf:Description>
 </rdf:RDF>
 
 
