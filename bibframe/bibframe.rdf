@@ -259,9 +259,9 @@
     
 
 
-    <!-- http://bibframe.org/vocab/formedOutOf -->
+    <!-- http://bibframe.org/vocab/formedFrom -->
 
-    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/formedOutOf">
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/formedFrom">
         <rdfs:label>formed out of</rdfs:label>
         <rdfs:comment xml:lang="en">The subject work was formed from the merging of two or more separate works.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
@@ -706,7 +706,6 @@
     </owl:ObjectProperty>
     
 
-
     
     <!-- http://bibframe.org/vocab/isUnionOf -->
     
@@ -885,7 +884,7 @@
         <rdfs:label>split into</rdfs:label>
         <rdfs:comment xml:lang="en">The subject work split its content into two or more separate works.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
-        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/formedOutOf"/>
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/formedFrom"/>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/precedes"/>
     </owl:ObjectProperty>
     
