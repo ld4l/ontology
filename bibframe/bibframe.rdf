@@ -2441,22 +2441,6 @@
     
 
 
-    <!-- http://bibframe.org/vocab/TranslatedTitle -->
-
-    <owl:Class rdf:about="http://bibframe.org/vocab/TranslatedTitle">
-        <rdfs:label xml:lang="en">Translated title</rdfs:label>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://bibframe.org/vocab/isTranslationOf"/>
-                <owl:allValuesFrom rdf:resource="http://bibframe.org/vocab/Title"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Title"/>
-        <rdfs:comment xml:lang="en">Title that serves as a translation of another title.</rdfs:comment>
-    </owl:Class>
-    
-
-
     <!-- http://bibframe.org/vocab/Upc -->
 
     <owl:Class rdf:about="http://bibframe.org/vocab/Upc">
