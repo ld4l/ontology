@@ -16,6 +16,7 @@
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY marcrel "http://id.loc.gov/vocabulary/relators/" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY bf "http://bibframe.org/vocab/" >
 ]>
 
 
@@ -862,9 +863,8 @@
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/separatedFrom">
         <rdfs:label>separated from</rdfs:label>
         <rdfs:comment>The work being described was formed from part of the content of a preceding work.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
-        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/splitInto"/>
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/succeeds"/>
     </owl:ObjectProperty>
     
