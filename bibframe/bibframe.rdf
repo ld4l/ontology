@@ -696,7 +696,24 @@
         <rdfs:label>is union of</rdfs:label>
         <rdfs:comment>The work being described was formed from two or more works that come together to form a new work.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
-        <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
+        <rdfs:range>
+            <owl:Class>
+                <rdf:type rdf:resource="&rdf;Bag"/>
+                <owl:subClassOf>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&rdfs;member"/>
+                        <owl:allValuesFrom rdf:resource="http://bibframe.org/vocab/Work"/>
+                    </owl:Restriction>
+                </owl:subClassOf>
+                <owl:subClassOf>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&rdfs;member"/>
+                        <owl:minCardinality>2</owl:minCardinality>
+                    </owl:Restriction>
+                </owl:subClassOf>
+            </owl:Class>
+
+        </rdfs:range> 
         <owl:inverseOf rdf:resource="http://bibframe.org/vocab/mergedToForm"/>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/succeeds"/>
     </owl:ObjectProperty>
