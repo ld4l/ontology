@@ -758,7 +758,7 @@
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/mergedToForm">
         <rdfs:label>merged to form</rdfs:label>
-        <rdfs:comment>The work being described is one of two or more works that came together to form a new work.</rdfs:comment>
+        <rdfs:comment>The works being described came together to form a new work.</rdfs:comment>
         <rdfs:domain>
             <owl:Class>
                 <rdf:type rdf:resource="&rdf;Bag"/>
@@ -1370,6 +1370,7 @@
         <rdfs:comment>Intervals at which the issues or parts of a serial or the updates to an integrating resource are issued.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <skos:editorialNote>Need to locate an appropriate time interval vocabulary to create NamedIndividuals from.</skos:editorialNote>
     </owl:DatatypeProperty>
     
 
@@ -2542,6 +2543,8 @@
     <owl:Class rdf:about="http://schema.org/Audience">
         <rdfs:label xml:lang="en">Audience</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://schema.org/Intangible"/>
+        <skos:editorialNote>Need to locate an appropriate audience vocabulary to create NamedIndividuals from.</skos:editorialNote>
+        <rdfs:comment>The specific audience or intellectual level for which the content of the resource is considered appropriate.</rdfs:comment>
     </owl:Class>
     
 
