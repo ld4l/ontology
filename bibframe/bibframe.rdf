@@ -150,11 +150,11 @@
     
 
 
-    <!-- http://bibframe.org/vocab/annotatorOf -->
+    <!-- http://bibframe.org/vocab/isAnnotatorOf -->
 
-    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/annotatorOf">
-        <rdfs:label>annotator of</rdfs:label>
-        <rdfs:comment>Agent responsible for the annotation.</rdfs:comment>
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/isAnnotatorOf">
+        <rdfs:label>isAnnotator of</rdfs:label>
+        <rdfs:comment>Agent is the author of the annotation.</rdfs:comment>
         <rdfs:range rdf:resource="&oa;Annotation"/>
         <owl:inverseOf rdf:resource="&oa;annotatedBy"/>
         <rdfs:domain rdf:resource="&foaf;Agent"/>
