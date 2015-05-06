@@ -570,7 +570,7 @@
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasVariantTitle">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
         <rdfs:label xml:lang="en">has variant title</rdfs:label>
-        <rdfs:comment xml:lang="en">Property relating a work or intance to a title different from the main title or relating two titles with variant forms.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Property relating a work or intance to a title different from the main title, or relating two titles with variant forms.</rdfs:comment>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Title"/>
     </owl:ObjectProperty>
     
@@ -842,7 +842,7 @@
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/splitInto">
         <rdfs:label>split into</rdfs:label>
-        <rdfs:comment>The work being described split its content into two or more separate works.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The work being described split its content into two or more separate works.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/precedes"/>
