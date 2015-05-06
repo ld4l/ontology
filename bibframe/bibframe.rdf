@@ -1722,6 +1722,7 @@
     <owl:Class rdf:about="http://bibframe.org/vocab/AbbreviatedTitle">
         <rdfs:label>Abbreviated title</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Title"/>
+        <rdf:value rdf:resource="&rdfs;Literal"/>
         <rdfs:comment>Title as abbreviated for indexing or identification.</rdfs:comment>
     </owl:Class>
     
@@ -1752,6 +1753,7 @@
     <owl:Class rdf:about="http://bibframe.org/vocab/CaptionTitle">
         <rdfs:label xml:lang="en">Caption title</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Title"/>
+        <rdf:value rdf:resource="&rdfs;Literal"/>
         <rdfs:comment xml:lang="en">Caption title, printed at the head of the first page of text.</rdfs:comment>
     </owl:Class>
     
@@ -1809,8 +1811,9 @@
 
     <owl:Class rdf:about="http://bibframe.org/vocab/CoverTitle">
         <rdfs:label xml:lang="en">Cover title</rdfs:label>
-        <rdfs:label xml:lang="en">Cover title that is printed on the original cover of a publication or lettered or stamped on the publisher&apos;s binding.</rdfs:label>
+        <rdfs:comment xml:lang="en">Cover title that is printed on the original cover of a publication or lettered or stamped on the publisher&apos;s binding.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Title"/>
+        <rdf:value rdf:resource="&rdfs;Literal"/>
     </owl:Class>
     
 
@@ -1840,6 +1843,7 @@
     <owl:Class rdf:about="http://bibframe.org/vocab/DistinctiveTitle">
         <rdfs:label xml:lang="en">Distinctive title</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Title"/>
+        <rdf:value rdf:resource="&rdfs;Literal"/>
         <rdfs:comment xml:lang="en">Special title that appears in addition to the regular title on individual issues of an item and by which the issue may be known.</rdfs:comment>
     </owl:Class>
     
@@ -2068,6 +2072,7 @@
     <owl:Class rdf:about="http://bibframe.org/vocab/KeyTitle">
         <rdfs:label>Key title</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Title"/>
+        <rdf:value rdf:resource="&rdfs;Literal"/>
         <rdfs:comment>Unique title for a continuing resource that is assigned by the ISSN International Center in conjunction with an ISSN.</rdfs:comment>
     </owl:Class>
     
@@ -2246,6 +2251,7 @@
     <owl:Class rdf:about="http://bibframe.org/vocab/PortionOfTitle">
         <rdfs:label xml:lang="en">Portion of title</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Title"/>
+        <rdf:value rdf:resource="&rdfs;Literal"/>
         <rdfs:comment xml:lang="en">A portion of a title for which access a title by itself is desired, e.g. &apos;Modern Writing&apos; could serve as a portion of title for &apos;The Berkley book of modern writing&apos;.</rdfs:comment>
     </owl:Class>
     
@@ -2286,6 +2292,7 @@
     <owl:Class rdf:about="http://bibframe.org/vocab/RunningTitle">
         <rdfs:label xml:lang="en">Running title</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Title"/>
+        <rdf:value rdf:resource="&rdfs;Literal"/>
         <rdfs:comment xml:lang="en">Running title, printed on the top or bottom margin of each page of a publication.</rdfs:comment>
     </owl:Class>
     
@@ -2326,6 +2333,7 @@
     <owl:Class rdf:about="http://bibframe.org/vocab/SortTitle">
         <rdfs:label xml:lang="en">Sort title</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Title"/>
+        <rdf:value rdf:resource="&rdfs;Literal"/>
         <rdfs:comment xml:lang="en">A title optimized for sorting, e.g. non-filing characters are removed.</rdfs:comment>
     </owl:Class>
     
@@ -2336,6 +2344,7 @@
     <owl:Class rdf:about="http://bibframe.org/vocab/SpineTitle">
         <rdfs:label xml:lang="en">Spine title</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Title"/>
+        <rdf:value rdf:resource="&rdfs;Literal"/>
         <rdfs:comment xml:lang="en">Title taken from the spine of a resource.</rdfs:comment>
     </owl:Class>
     
@@ -2437,6 +2446,7 @@
     <owl:Class rdf:about="http://bibframe.org/vocab/Title">
         <rdfs:label>Title</rdfs:label>
         <rdfs:comment>Title information relating to a resource: title proper, translated title, or variant form of title.</rdfs:comment>
+        <rdf:value rdf:resource="&rdfs;Literal"/>
     </owl:Class>
     
 
