@@ -1401,23 +1401,25 @@
 
     <!-- http://bibframe.org/vocab/dissertationDegree -->
 
-    <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/dissertationDegree">
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/dissertationDegree">
         <rdfs:label>dissertation degree</rdfs:label>
         <rdfs:comment>Degree for which dissertation author was a candidate.</rdfs:comment>
-        <rdfs:comment>Could use enumerated set as range (see VIVO degrees)</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
-    </owl:DatatypeProperty>
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Dissertation"/>
+        <rdfs:range rdf:resource="vivo;AcademicDegree"/>
+    </owl:ObjectProperty>
     
-
+    <owl:Class rdf:about="http://bibframe.org/vocab/Dissertation">
+        <rdfs:label>Dissertation</rdfs:label>
+        <rdfs:comment>A thesis or disseration written in association with earning an academic degree.</rdfs:comment>
+    </owl:Class>
 
     <!-- http://bibframe.org/vocab/dissertationNote -->
 
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/dissertationNote">
         <rdfs:label>dissertation note</rdfs:label>
-        <rdfs:comment>Textual information about the dissertation.</rdfs:comment>
-        <skos:editorialNote>Include dissertation note as a literal when it can&apos;t be parsed into dissertationYear, dissertationDegree, etc.</skos:editorialNote>
-        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
+        <rdfs:comment>Textual information about the dissertation. A dissertation note differs from a general note in that it includes specific date and year information.</rdfs:comment>
+        <skos:editorialNote>Include dissertation note as a literal when it cannot be parsed into dissertationYear, dissertationDegree, etc.</skos:editorialNote>
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Dissertation"/>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/note"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
@@ -1429,7 +1431,7 @@
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/dissertationYear">
         <rdfs:label>dissertation year</rdfs:label>
         <rdfs:comment>Year degree awarded.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Dissertation"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
@@ -1874,7 +1876,14 @@
         <rdfs:comment>Title as abbreviated for indexing or identification.</rdfs:comment>
     </owl:Class>
     
-
+    <!-- http://vivoweb.org/ontology/core#AcademicDegree -->
+    
+    <owl:Class rdf:about="&vivo;AcademicDegree">
+        <rdfs:label xml:lang="en-us">Academic degree</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">An academic degree at any level, both as reported by individuals for employment and as offered by academic degree programs.</rdfs:comment>
+        <skos:editorialNote>Include a degree vocabulary such as http://vivoweb.org/ontology/degree/.</skos:editorialNote>
+    </owl:Class>
+    
 
     <!-- http://bibframe.org/vocab/Ansi -->
 
