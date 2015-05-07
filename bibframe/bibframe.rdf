@@ -498,6 +498,14 @@
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasPreferredTitle">
         <rdfs:label xml:lang="en">has preferred title</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/hasTitle"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bibframe.org/vocab/Instance"/>
+                    <rdf:Description rdf:about="http://bibframe.org/vocab/Work"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -567,6 +575,14 @@
         <rdfs:comment>Word, character, or group of words and/or characters that is a name given to a resource.</rdfs:comment>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Title"/>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/hasTitleRelationship"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bibframe.org/vocab/Instance"/>
+                    <rdf:Description rdf:about="http://bibframe.org/vocab/Work"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -577,6 +593,15 @@
         <rdfs:label xml:lang="en">Any relationship between a Work and Title, Intance and Title, or between two Titles.</rdfs:label>
         <rdfs:label xml:lang="en">has title relationship</rdfs:label>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Title"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bibframe.org/vocab/Instance"/>
+                    <rdf:Description rdf:about="http://bibframe.org/vocab/Title"/>
+                    <rdf:Description rdf:about="http://bibframe.org/vocab/Work"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:ObjectProperty>
     
 
