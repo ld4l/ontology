@@ -566,6 +566,29 @@
         <rdfs:label>has title</rdfs:label>
         <rdfs:comment>Word, character, or group of words and/or characters that is a name given to a resource.</rdfs:comment>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Title"/>
+        <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/hasTitleRelationship"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bibframe.org/vocab/hasTitleRelationship -->
+
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasTitleRelationship">
+        <rdfs:label xml:lang="en">Any relationship between a Work and Title, Intance and Title, or between two Titles.</rdfs:label>
+        <rdfs:label xml:lang="en">has title relationship</rdfs:label>
+        <rdfs:range rdf:resource="http://bibframe.org/vocab/Title"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bibframe.org/vocab/hasTranslatedTitle -->
+
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasTranslatedTitle">
+        <rdfs:label xml:lang="en">has translated title</rdfs:label>
+        <rdfs:comment xml:lang="en">A title has a translated version to support search in another language</rdfs:comment>
+        <rdfs:range rdf:resource="http://bibframe.org/vocab/Title"/>
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Title"/>
+        <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/hasTitleRelationship"/>
     </owl:ObjectProperty>
     
 
@@ -577,6 +600,8 @@
         <rdfs:label xml:lang="en">has variant title</rdfs:label>
         <rdfs:comment xml:lang="en">Property relating a work or intance to a title different from the main title, or relating two titles with variant forms.</rdfs:comment>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Title"/>
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Title"/>
+        <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/hasTitleRelationship"/>
     </owl:ObjectProperty>
     
 
@@ -706,9 +731,9 @@
     </owl:ObjectProperty>
     
 
-    
+
     <!-- http://bibframe.org/vocab/isUnionOf -->
-    
+
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/isUnionOf">
         <rdfs:label>is union of</rdfs:label>
         <rdfs:comment>The work being described was formed from two or more works that come together to form a new work.</rdfs:comment>
@@ -716,21 +741,23 @@
         <owl:inverseOf rdf:resource="http://bibframe.org/vocab/mergedToForm"/>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/succeeds"/>
         <rdfs:range>
-            <owl:Class>                
+            <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Class rdf:about="&skos;Collection"/>
+                    <rdf:Description rdf:about="&skos;Collection"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&skos;member"/>
-                        <owl:minCardinality>2</owl:minCardinality>
+                        <owl:allValuesFrom rdf:resource="http://bibframe.org/vocab/Work"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&skos;member"/>
-                        <owl:allValuesFrom rdf:resource="http://bibframe.org/vocab/Work"/>                        
+                        <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:minCardinality>
                     </owl:Restriction>
                 </owl:intersectionOf>
-            </owl:Class> 
-        </rdfs:range>       
+            </owl:Class>
+        </rdfs:range>
     </owl:ObjectProperty>
+    
+
 
     <!-- http://bibframe.org/vocab/isVariantOf -->
 
