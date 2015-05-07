@@ -768,7 +768,6 @@
         <rdfs:range>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&skos;Collection"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&skos;member"/>
                         <owl:allValuesFrom rdf:resource="http://bibframe.org/vocab/Work"/>
