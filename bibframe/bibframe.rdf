@@ -545,17 +545,6 @@
     
 
 
-    <!-- http://bibframe.org/vocab/hasSubtitle -->
-
-    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasSubtitle">
-        <rdfs:label xml:lang="en">Subtitle of title</rdfs:label>
-        <rdfs:label xml:lang="en">has subtitle</rdfs:label>
-        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Title"/>
-        <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/hasTitleRelationship"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://bibframe.org/vocab/hasSupplement -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasSupplement">
@@ -1456,17 +1445,6 @@
         <rdfs:label xml:lang="en">has index</rdfs:label>
         <rdfs:range rdf:datatype="&amp;xsd;boolean"></rdfs:range>
         <rdfs:comment>Indicates whether a work or instance contains an internal index</rdfs:comment>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/hasSubtitle -->
-
-    <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/hasSubtitle">
-        <rdfs:label xml:lang="en">Subtitle of title</rdfs:label>
-        <rdfs:label xml:lang="en">has subtitle</rdfs:label>
-        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Title"/>
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
 
