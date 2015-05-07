@@ -9,7 +9,6 @@
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY cnt "http://www.w3.org/2011/content#" >
     <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
-    <!ENTITY gn "http://www.geonames.org/ontology#" >
     <!ENTITY vivo "http://vivoweb.org/ontology/core#" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
@@ -27,7 +26,6 @@
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:cnt="http://www.w3.org/2011/content#"
      xmlns:dcterms="http://purl.org/dc/terms/"
-     xmlns:gn="http://www.geonames.org/ontology#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:oa="http://www.w3.org/ns/oa#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
@@ -468,7 +466,7 @@
         <rdfs:label>has origin place</rdfs:label>
         <rdfs:comment>Place from which the creation of the work originated.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
-        <rdfs:range rdf:resource="&gn;Feature"/>
+        <rdfs:range rdf:resource="&prov;Location"/>
     </owl:ObjectProperty>
     
 
@@ -2678,13 +2676,6 @@
     <!-- http://schema.org/Intangible -->
 
     <owl:Class rdf:about="http://schema.org/Intangible"/>
-    
-
-
-    <!-- http://schema.org/Place -->
-
-    <owl:Class rdf:about="http://schema.org/Place"/>
-    
 
 
     <!-- http://vivoweb.org/ontology/core#Meeting -->
@@ -2693,17 +2684,6 @@
         <rdfs:label xml:lang="en-us">Meeting</rdfs:label>
         <rdfs:comment rdf:datatype="&xsd;string">A gathering of people for a defined purpose, not necessarily public or announced</rdfs:comment>
     </owl:Class>
-    
-
-
-    <!-- http://www.geonames.org/ontology#Feature -->
-
-    <owl:Class rdf:about="&gn;Feature">
-        <rdfs:label xml:lang="en">Feature</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://schema.org/Place"/>
-        <rdfs:comment xml:lang="en">A geographical feature</rdfs:comment>
-    </owl:Class>
-    
 
 
     <!-- http://www.lingvoj.org/ontology#Lingvo -->
@@ -2823,6 +2803,8 @@
 
     <owl:Class rdf:about="&prov;Location">
         <rdfs:label>Location</rdfs:label>
+        <rdfs:comment>A location can be an identifiable geographic place (ISO 19112), but it can also be a non-geographic place such as a directory, row, or column. As such, there are numerous ways in which location can be expressed, such as by a coordinate, address, landmark, and so forth.</rdfs:comment>
+        <skos:editorialNote>Choosing prov:Location over gn:Feature and schema:Place, to include non-physical locations (imaginary, electronic, etc.). We need it anyway as domain/range of prov:atLocation and prov:locationOf.</skos:editorialNote>
     </owl:Class>
     
 
