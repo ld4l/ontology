@@ -93,10 +93,6 @@
     <rdfs:Datatype rdf:about="&amp;xsd;boolean"/>
     
 
-
-    <!-- http://bibframe.org/vocab/&amp;xsd;boolean -->
-
-    <rdfs:Datatype rdf:about="http://bibframe.org/vocab/&amp;xsd;boolean"/>
     
 
 
@@ -1461,7 +1457,7 @@
         <rdfs:label>dissertation degree</rdfs:label>
         <rdfs:comment>Degree for which dissertation author was a candidate.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Dissertation"/>
-        <rdfs:range rdf:resource="vivo;AcademicDegree"/>
+        <rdfs:range rdf:resource="&vivo;AcademicDegree"/>
     </owl:ObjectProperty>
     
     <owl:Class rdf:about="http://bibframe.org/vocab/Dissertation">
@@ -2707,21 +2703,6 @@
     
 
 
-    <!-- http://org.semanticweb.owlapi/error#Error4 -->
-
-    <owl:Class rdf:about="http://org.semanticweb.owlapi/error#Error4"/>
-    
-
-
-    <!-- http://org.semanticweb.owlapi/error#Error5 -->
-
-    <owl:Class rdf:about="http://org.semanticweb.owlapi/error#Error5"/>
-    
-
-
-    <!-- http://org.semanticweb.owlapi/error#Error6 -->
-
-    <owl:Class rdf:about="http://org.semanticweb.owlapi/error#Error6"/>
     
 
 
