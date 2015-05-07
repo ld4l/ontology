@@ -264,7 +264,22 @@
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/formedFrom">
         <rdfs:label>formed out of</rdfs:label>
         <rdfs:comment xml:lang="en">The subject work was formed from the merging of two or more separate works.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
+        <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&skos;member"/>
+                        <owl:allValuesFrom rdf:resource="http://bibframe.org/vocab/Work"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&skos;member"/>
+                        <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:minCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/splitInto"/>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/succeeds"/>
     </owl:ObjectProperty>
     
@@ -821,6 +836,20 @@
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/mergedToForm">
         <rdfs:label>merged to form</rdfs:label>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&skos;member"/>
+                        <owl:allValuesFrom rdf:resource="http://bibframe.org/vocab/Work"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&skos;member"/>
+                        <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:minCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:comment>The works being described came together to form a new work.</rdfs:comment>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/precedes"/>
@@ -936,6 +965,20 @@
         <rdfs:comment xml:lang="en">The subject work split its content into two or more separate works.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
         <owl:inverseOf rdf:resource="http://bibframe.org/vocab/formedFrom"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&skos;member"/>
+                        <owl:allValuesFrom rdf:resource="http://bibframe.org/vocab/Work"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&skos;member"/>
+                        <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:minCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/precedes"/>
     </owl:ObjectProperty>
     
