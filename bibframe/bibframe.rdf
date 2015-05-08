@@ -71,7 +71,7 @@
     <!-- http://www.w3.org/2004/02/skos/core#note -->
 
     <owl:AnnotationProperty rdf:about="&skos;note">
-        <rdfs:label  xml:lang="en-us">note</rdfs:label>
+        <rdfs:label xml:lang="en-us">note</rdfs:label>
         <rdfs:comment xml:lang="en-us">A general note, for any purpose.</rdfs:comment>
     </owl:AnnotationProperty>
     
@@ -93,6 +93,10 @@
     <rdfs:Datatype rdf:about="&amp;xsd;boolean"/>
     
 
+
+    <!-- http://bibframe.org/vocab/&amp;xsd;boolean -->
+
+    <rdfs:Datatype rdf:about="http://bibframe.org/vocab/&amp;xsd;boolean"/>
     
 
 
@@ -104,71 +108,15 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <!-- http://bibframe.org/vocab/received -->
     
-    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/received">
-        <rdfs:label xml:lang="en-us">received</rdfs:label>
-        <rdfs:comment xml:lang="en-us">Relates award recipient (foaf:Agent or bf:Work) to the AwardReceipt.</rdfs:comment>
-        <rdfs:range rdf:resource="http://bibframe.org/vocab/AwardReceipt"/>
-        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/receivedBy"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <owl:Class rdf:about="http://bibframe.org/vocab/Work"/>
-                    <owl:Class rdf:about="&foaf;Agent"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain> 
-    </owl:ObjectProperty>
-    
-    
-    
-    <!-- http://bibframe.org/vocab/receivedBy -->
-    
-    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/receivedBy">
-        <rdfs:label xml:lang="en-us">received by</rdfs:label>
-        <rdfs:comment  xml:lang="en-us">Relates AwardReceipt to the award recipient (foaf:Agent or bf:Work).</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bibframe.org/vocab/AwardReceipt"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <owl:Class rdf:about="http://bibframe.org/vocab/Work"/>
-                    <owl:Class rdf:about="&foaf;Agent"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range> 
-        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/received"/>
-    </owl:ObjectProperty>    
 
-    <!-- http://bibframe.org/vocab/isReceiptOf -->
-    
-    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/isReceiptOf">
-        <rdfs:label xml:lang="en-us">is receipt of</rdfs:label>
-        <rdfs:comment  xml:lang="en-us">Relates an AwardReceipt to an Award.</rdfs:comment>
-        <rdfs:range rdf:resource="http://bibframe.org/vocab/Award"/>
-        <rdfs:domain rdf:resource="http://bibframe.org/vocab/AwardReceipt"/>
-        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/hasReceipt"/>
-    </owl:ObjectProperty>
-    
-    
-    
-    <!-- http://bibframe.org/vocab/hasReceipt -->
-    
-    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasReceipt">
-        <rdfs:label xml:lang="en-us">receipt of</rdfs:label>
-        <rdfs:comment xml:lang="en-us">Relates an Award to the AwardReceipt.</rdfs:comment>
-        <rdfs:range rdf:resource="http://bibframe.org/vocab/Award"/>
-        <rdfs:domain rdf:resource="http://bibframe.org/vocab/AwardReceipt"/>
-        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/isReceiptOf"/>
-    </owl:ObjectProperty>
-    
-    
+
     <!-- http://bibframe.org/hasCirculationStatus -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/hasCirculationStatus">
         <rdfs:label xml:lang="en-us">has circulation status</rdfs:label>
-        <skos:editorialNote xml:lang="en-us">Perhaps a FunctionalProperty, but maybe we want to track circulation status over time.</skos:editorialNote>
         <rdfs:comment xml:lang="en-us">Circulation status of an item.</rdfs:comment>
+        <skos:editorialNote xml:lang="en-us">Perhaps a FunctionalProperty, but maybe we want to track circulation status over time.</skos:editorialNote>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/CirculationStatus"/>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Item"/>
     </owl:ObjectProperty>
@@ -274,6 +222,17 @@
     
 
 
+    <!-- http://bibframe.org/vocab/dissertationDegree -->
+
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/dissertationDegree">
+        <rdfs:label xml:lang="en-us">dissertation degree</rdfs:label>
+        <rdfs:comment xml:lang="en-us">Degree for which dissertation author was a candidate.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Dissertation"/>
+        <rdfs:range rdf:resource="&vivo;AcademicDegree"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://bibframe.org/vocab/distributedBy -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/distributedBy">
@@ -302,8 +261,8 @@
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/formatOfMusic">
         <rdfs:label xml:lang="en-us">format of music</rdfs:label>
-        <skos:editorialNote xml:lang="en-us">Need a vocabulary to enumerate values.</skos:editorialNote>
         <rdfs:comment xml:lang="en-us">Format of a musical composition, e.g. full score, condensed score, vocal score, etc.</rdfs:comment>
+        <skos:editorialNote xml:lang="en-us">Need a vocabulary to enumerate values.</skos:editorialNote>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
     </owl:ObjectProperty>
     
@@ -315,6 +274,8 @@
         <rdfs:label xml:lang="en-us">formed out of</rdfs:label>
         <rdfs:comment xml:lang="en">The subject work was formed from the merging of two or more separate works.</rdfs:comment>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/splitInto"/>
+        <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/succeeds"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -329,8 +290,6 @@
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:domain>
-        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/splitInto"/>
-        <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/succeeds"/>
     </owl:ObjectProperty>
     
 
@@ -575,6 +534,17 @@
     
 
 
+    <!-- http://bibframe.org/vocab/hasReceipt -->
+
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasReceipt">
+        <rdfs:label xml:lang="en-us">receipt of</rdfs:label>
+        <rdfs:comment xml:lang="en-us">Relates an Award to the AwardReceipt.</rdfs:comment>
+        <rdfs:range rdf:resource="http://bibframe.org/vocab/Award"/>
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/AwardReceipt"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://bibframe.org/vocab/hasReproduction -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasReproduction">
@@ -789,6 +759,18 @@
     
 
 
+    <!-- http://bibframe.org/vocab/isReceiptOf -->
+
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/isReceiptOf">
+        <rdfs:label xml:lang="en-us">is receipt of</rdfs:label>
+        <rdfs:comment xml:lang="en-us">Relates an AwardReceipt to an Award.</rdfs:comment>
+        <rdfs:range rdf:resource="http://bibframe.org/vocab/Award"/>
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/AwardReceipt"/>
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/hasReceipt"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://bibframe.org/vocab/isSupplementTo -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/isSupplementTo">
@@ -886,6 +868,9 @@
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/mergedToForm">
         <rdfs:label xml:lang="en-us">merged to form</rdfs:label>
+        <rdfs:comment xml:lang="en-us">The works being described came together to form a new work.</rdfs:comment>
+        <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
+        <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/precedes"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -900,9 +885,6 @@
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:comment xml:lang="en-us">The works being described came together to form a new work.</rdfs:comment>
-        <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
-        <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/precedes"/>
     </owl:ObjectProperty>
     
 
@@ -971,6 +953,43 @@
     
 
 
+    <!-- http://bibframe.org/vocab/received -->
+
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/received">
+        <rdfs:label xml:lang="en-us">received</rdfs:label>
+        <rdfs:comment xml:lang="en-us">Relates award recipient (foaf:Agent or bf:Work) to the AwardReceipt.</rdfs:comment>
+        <rdfs:range rdf:resource="http://bibframe.org/vocab/AwardReceipt"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bibframe.org/vocab/Work"/>
+                    <rdf:Description rdf:about="&foaf;Agent"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bibframe.org/vocab/receivedBy -->
+
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/receivedBy">
+        <rdfs:label xml:lang="en-us">received by</rdfs:label>
+        <rdfs:comment xml:lang="en-us">Relates AwardReceipt to the award recipient (foaf:Agent or bf:Work).</rdfs:comment>
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/AwardReceipt"/>
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/received"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bibframe.org/vocab/Work"/>
+                    <rdf:Description rdf:about="&foaf;Agent"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://bibframe.org/vocab/reproduces -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/reproduces">
@@ -1014,7 +1033,7 @@
         <rdfs:label xml:lang="en-us">split into</rdfs:label>
         <rdfs:comment xml:lang="en">The subject work split its content into two or more separate works.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
-        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/formedFrom"/>
+        <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/precedes"/>
         <rdfs:range>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -1029,7 +1048,6 @@
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:range>
-        <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/precedes"/>
     </owl:ObjectProperty>
     
 
@@ -1451,26 +1469,12 @@
     
 
 
-    <!-- http://bibframe.org/vocab/dissertationDegree -->
-
-    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/dissertationDegree">
-        <rdfs:label xml:lang="en-us">dissertation degree</rdfs:label>
-        <rdfs:comment xml:lang="en-us">Degree for which dissertation author was a candidate.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Dissertation"/>
-        <rdfs:range rdf:resource="&vivo;AcademicDegree"/>
-    </owl:ObjectProperty>
-    
-    <owl:Class rdf:about="http://bibframe.org/vocab/Dissertation">
-        <rdfs:label xml:lang="en-us">Dissertation</rdfs:label>
-        <rdfs:comment xml:lang="en-us">A thesis or disseration written in association with earning an academic degree.</rdfs:comment>
-    </owl:Class>
-
     <!-- http://bibframe.org/vocab/dissertationNote -->
 
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/dissertationNote">
         <rdfs:label xml:lang="en-us">dissertation note</rdfs:label>
-        <rdfs:comment xml:lang="en-us">Textual information about the dissertation. A dissertation note differs from a general note in that it includes specific date and year information.</rdfs:comment>
         <skos:editorialNote xml:lang="en-us">Include dissertation note as a literal when it cannot be parsed into dissertationYear, dissertationDegree, etc.</skos:editorialNote>
+        <rdfs:comment xml:lang="en-us">Textual information about the dissertation. A dissertation note differs from a general note in that it includes specific date and year information.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Dissertation"/>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/note"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
@@ -1865,9 +1869,9 @@
 
     <owl:DatatypeProperty rdf:about="http://schema.org/accessibilityFeature">
         <rdfs:label xml:lang="en">accessibility feature</rdfs:label>
+        <rdfs:comment xml:lang="en">Accessibility feature of the resource, such as accessible media, alternatives and supported enhancements for accessibility (WebSchemas wiki lists possible values).</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
-        <rdfs:comment xml:lang="en">Accessibility feature of the resource, such as accessible media, alternatives and supported enhancements for accessibility (WebSchemas wiki lists possible values).</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1923,14 +1927,7 @@
         <rdfs:comment xml:lang="en-us">Title as abbreviated for indexing or identification.</rdfs:comment>
     </owl:Class>
     
-    <!-- http://vivoweb.org/ontology/core#AcademicDegree -->
-    
-    <owl:Class rdf:about="&vivo;AcademicDegree">
-        <rdfs:label xml:lang="en-us">Academic degree</rdfs:label>
-        <rdfs:comment xml:lang="en-us">An academic degree at any level, both as reported by individuals for employment and as offered by academic degree programs.</rdfs:comment>
-        <skos:editorialNote xml:lang="en-us">Include a degree vocabulary such as http://vivoweb.org/ontology/degree/.</skos:editorialNote>
-    </owl:Class>
-    
+
 
     <!-- http://bibframe.org/vocab/Ansi -->
 
@@ -1951,17 +1948,18 @@
     </owl:Class>
     
 
+
     <!-- http://bibframe.org/vocab/Award -->
-    
+
     <owl:Class rdf:about="http://bibframe.org/vocab/Award">
         <rdfs:label xml:lang="en-us">Award</rdfs:label>
         <rdfs:comment xml:lang="en-us">An award or honor bestowed upon an Agent or Work. The relationship between Award and recipient is mediated by an AwardReceipt, which may contain additional information, such as date.</rdfs:comment>
     </owl:Class>
     
-    
-    
+
+
     <!-- http://bibframe.org/vocab/AwardReceipt -->
-    
+
     <owl:Class rdf:about="http://bibframe.org/vocab/AwardReceipt">
         <rdfs:label xml:lang="en-us">Award receipt</rdfs:label>
         <rdfs:comment xml:lang="en-us">The bestowal of an award, honor, or distinction to an Agent or Work. The award bestowed should be represented with the Award class. The AwardReceipt is a context node between the award and the recipient which may contain further information, such as date.</rdfs:comment>
@@ -2043,6 +2041,15 @@
         <rdfs:label xml:lang="en-us">Dataset</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:comment xml:lang="en-us">Data encoded in a defined structure. Includes numeric data, environmental data,etc., used by applications software to calculate averages, correlations, etc., or to produce models, etc., but not normally displayed in its raw form.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://bibframe.org/vocab/Dissertation -->
+
+    <owl:Class rdf:about="http://bibframe.org/vocab/Dissertation">
+        <rdfs:label xml:lang="en-us">Dissertation</rdfs:label>
+        <rdfs:comment xml:lang="en-us">A thesis or disseration written in association with earning an academic degree.</rdfs:comment>
     </owl:Class>
     
 
@@ -2598,8 +2605,8 @@
     <owl:Class rdf:about="http://bibframe.org/vocab/StudyNumber">
         <rdfs:label xml:lang="en-us">Study number</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Identifier"/>
-        <skos:editorialNote xml:lang="en-us">If &quot;study number&quot; is not a standard term for this, change to DataFileNumber.</skos:editorialNote>
         <rdfs:comment xml:lang="en-us">Identification number for a computer data file.</rdfs:comment>
+        <skos:editorialNote xml:lang="en-us">If &quot;study number&quot; is not a standard term for this, change to DataFileNumber.</skos:editorialNote>
     </owl:Class>
     
 
@@ -2663,6 +2670,15 @@
     
 
 
+    <!-- http://bibframe.org/vocab/Topic -->
+
+    <owl:Class rdf:about="http://bibframe.org/vocab/Topic">
+        <rdfs:label xml:lang="en">Topic</rdfs:label>
+        <rdfs:comment xml:lang="en">Concept or area of knowledge.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://bibframe.org/vocab/Upc -->
 
     <owl:Class rdf:about="http://bibframe.org/vocab/Upc">
@@ -2692,9 +2708,6 @@
     
 
 
-    
-
-
     <!-- http://purl.org/dc/terms/LinguisticSystem -->
 
     <owl:Class rdf:about="&dcterms;LinguisticSystem">
@@ -2709,8 +2722,18 @@
     <owl:Class rdf:about="http://schema.org/Audience">
         <rdfs:label xml:lang="en">Audience</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://schema.org/Intangible"/>
-        <rdfs:comment xml:lang="en-us">The specific audience or intellectual level for which the content of the resource is considered appropriate.</rdfs:comment>
         <skos:editorialNote xml:lang="en-us">Need to locate an appropriate audience vocabulary to create NamedIndividuals from.</skos:editorialNote>
+        <rdfs:comment xml:lang="en-us">The specific audience or intellectual level for which the content of the resource is considered appropriate.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Event -->
+
+    <owl:Class rdf:about="http://schema.org/Event">
+        <rdfs:label xml:lang="en">Event</rdfs:label>
+        <rdfs:comment xml:lang="en">An event happening at a certain time and location, such as a concert, lecture, or festival. Repeated events may be structured as separate Event objects.</rdfs:comment>
+        <skos:editorialNote xml:lang="en">schema:Events are subclasses of schema:Thing, but not adding it to the BIBFRAME ontology</skos:editorialNote>
     </owl:Class>
     
 
@@ -2728,6 +2751,17 @@
     <!-- http://schema.org/Intangible -->
 
     <owl:Class rdf:about="http://schema.org/Intangible"/>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core#AcademicDegree -->
+
+    <owl:Class rdf:about="&vivo;AcademicDegree">
+        <rdfs:label xml:lang="en-us">Academic degree</rdfs:label>
+        <rdfs:comment xml:lang="en-us">An academic degree at any level, both as reported by individuals for employment and as offered by academic degree programs.</rdfs:comment>
+        <skos:editorialNote xml:lang="en-us">Include a degree vocabulary such as http://vivoweb.org/ontology/degree/.</skos:editorialNote>
+    </owl:Class>
+    
 
 
     <!-- http://vivoweb.org/ontology/core#Meeting -->
@@ -2736,6 +2770,7 @@
         <rdfs:label xml:lang="en-us">Meeting</rdfs:label>
         <rdfs:comment xml:lang="en-us">A gathering of people for a defined purpose, not necessarily public or announced</rdfs:comment>
     </owl:Class>
+    
 
 
     <!-- http://www.lingvoj.org/ontology#Lingvo -->
