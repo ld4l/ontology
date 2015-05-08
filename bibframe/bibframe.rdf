@@ -2657,19 +2657,8 @@
     <!-- http://bibframe.org/vocab/Title -->
 
     <owl:Class rdf:about="http://bibframe.org/vocab/Title">
-<<<<<<< Updated upstream
         <rdfs:label xml:lang="en-us">Title</rdfs:label>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&rdf;value"/>
-                <owl:allValuesFrom rdf:resource="&rdfs;Literal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en-us">Title information relating to a resource: title proper, translated title, or variant form of title.</rdfs:comment>
-=======
-        <rdfs:label>Title</rdfs:label>
-        <rdfs:comment>Title information relating to a resource: title proper, translated title, or variant form of title.</rdfs:comment>
->>>>>>> Stashed changes
     </owl:Class>
     
 
