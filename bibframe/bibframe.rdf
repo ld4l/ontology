@@ -1182,6 +1182,18 @@
     <owl:ObjectProperty rdf:about="&dcterms;subject">
         <rdfs:label xml:lang="en">subject</rdfs:label>
         <rdfs:comment xml:lang="en">The topic of the resource.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bibframe.org/vocab/Topic"/>
+                    <rdf:Description rdf:about="http://bibframe.org/vocab/Work"/>
+                    <rdf:Description rdf:about="http://schema.org/Event"/>
+                    <rdf:Description rdf:about="&prov;Location"/>
+                    <rdf:Description rdf:about="&foaf;Agent"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -2732,8 +2744,8 @@
 
     <owl:Class rdf:about="http://schema.org/Event">
         <rdfs:label xml:lang="en">Event</rdfs:label>
-        <rdfs:comment xml:lang="en">An event happening at a certain time and location, such as a concert, lecture, or festival. Repeated events may be structured as separate Event objects.</rdfs:comment>
-        <skos:editorialNote xml:lang="en">schema:Events are subclasses of schema:Thing, but not adding it to the BIBFRAME ontology</skos:editorialNote>
+        <rdfs:comment xml:lang="en">An event happening at a certain time and location, such as a concert, lecture, or festival. Repeated events may be structured as separate Event objects. Can be used for named events, e.g. Battle of Gettsyburg, or un-named date ranges, e.g. 1945- 1950.</rdfs:comment>
+        <skos:editorialNote xml:lang="en">schema:Events are subclasses of schema:Thing, but not schema:Thing to the BIBFRAME ontology</skos:editorialNote>
     </owl:Class>
     
 
