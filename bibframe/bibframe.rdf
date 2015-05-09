@@ -648,7 +648,7 @@
         <rdfs:comment xml:lang="en">A title has a translated version to support search in another language</rdfs:comment>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Title"/>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Title"/>
-        <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/hasTitleRelationship"/>
+        <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/hasVariantTitle"/>
     </owl:ObjectProperty>
     
 
@@ -1182,18 +1182,6 @@
     <owl:ObjectProperty rdf:about="&dcterms;subject">
         <rdfs:label xml:lang="en">subject</rdfs:label>
         <rdfs:comment xml:lang="en">The topic of the resource.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://bibframe.org/vocab/Topic"/>
-                    <rdf:Description rdf:about="http://bibframe.org/vocab/Work"/>
-                    <rdf:Description rdf:about="http://schema.org/Event"/>
-                    <rdf:Description rdf:about="&prov;Location"/>
-                    <rdf:Description rdf:about="&foaf;Agent"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -2307,7 +2295,7 @@
     <!-- http://bibframe.org/vocab/KeyTitle -->
 
     <owl:Class rdf:about="http://bibframe.org/vocab/KeyTitle">
-        <rdfs:label xml:lang="en-us">Key title</rdfs:label>
+        <rdfs:label xml:lang="en">Key title</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Title"/>
         <rdfs:comment xml:lang="en-us">Unique title for a continuing resource that is assigned by the ISSN International Center in conjunction with an ISSN.</rdfs:comment>
     </owl:Class>
