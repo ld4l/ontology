@@ -1336,17 +1336,6 @@
     
 
 
-    <!-- http://bibframe.org/vocab/awardNote -->
-
-    <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/awardNote">
-        <rdfs:label xml:lang="en-us">award note</rdfs:label>
-        <rdfs:comment xml:lang="en-us">Information on awards associated with the described resource.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://bibframe.org/vocab/barcode -->
 
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/barcode">
@@ -1410,8 +1399,8 @@
 
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/cartographicOuterGRingCoordinates">
         <rdfs:label xml:lang="en-us">cartographic outer G ring coordinates</rdfs:label>
-        <rdfs:comment xml:lang="en-us">Coordinate pair that identifies the closed non-intersecting boundary of the area covered.</rdfs:comment>
         <skos:editorialNote xml:lang="en-us">Break the pair up into its individual elements? What would they be named?</skos:editorialNote>
+        <rdfs:comment xml:lang="en-us">Coordinate pair that identifies the closed non-intersecting boundary of the area covered.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Cartography"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
@@ -1699,6 +1688,17 @@
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:label xml:lang="en-us">aspect ratio</rdfs:label>
         <rdfs:comment xml:lang="en-us">Proportional relationship between an image&apos;s width and its height.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://bibframe.org/vocab/legacy/awardNote -->
+
+    <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/legacy/awardNote">
+        <rdfs:label xml:lang="en-us">award note</rdfs:label>
+        <rdfs:comment xml:lang="en-us">Information on awards associated with the described resource.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
@@ -2231,6 +2231,8 @@
 
     <owl:Class rdf:about="http://bibframe.org/vocab/Instance">
         <rdfs:label xml:lang="en-us">Instance</rdfs:label>
+        <owl:disjointWith rdf:resource="http://bibframe.org/vocab/Item"/>
+        <owl:disjointWith rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:comment xml:lang="en-us">Resource reflecting an individual, material embodiment of the Work.</rdfs:comment>
     </owl:Class>
     
@@ -2360,6 +2362,7 @@
 
     <owl:Class rdf:about="http://bibframe.org/vocab/Item">
         <rdfs:label xml:lang="en-us">Item</rdfs:label>
+        <owl:disjointWith rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:comment xml:lang="en-us">A singular physical item that can be held, circulated, etc. Equivalant to the FRBR Item class.</rdfs:comment>
     </owl:Class>
     
