@@ -631,8 +631,8 @@
     <!-- http://bibframe.org/vocab/hasTitleRelationship -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasTitleRelationship">
-        <rdfs:label xml:lang="en-us">Any relationship between a Work and Title, Instance and Title, or between two Titles.</rdfs:label>
         <rdfs:label xml:lang="en-us">has title relationship</rdfs:label>
+        <rdfs:comment xml:lang="en-us">Any relationship between a Work and Title, Instance and Title, or between two Titles.</rdfs:comment>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Title"/>
         <rdfs:domain>
             <owl:Class>
