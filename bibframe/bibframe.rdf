@@ -61,8 +61,8 @@
     <!-- http://www.w3.org/2004/02/skos/core#editorialNote -->
 
     <owl:AnnotationProperty rdf:about="&skos;editorialNote">
-        <rdfs:label xml:lang="en">editorial note</rdfs:label>
-        <rdfs:comment xml:lang="en">A note for an editor, translator or maintainer of the vocabulary.</rdfs:comment>
+        <rdfs:label xml:lang="en-us">editorial note</rdfs:label>
+        <rdfs:comment xml:lang="en-us">A note for an editor, translator or maintainer of the vocabulary.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="&skos;note"/>
     </owl:AnnotationProperty>
     
@@ -91,6 +91,12 @@
     <!-- &amp;xsd;boolean -->
 
     <rdfs:Datatype rdf:about="&amp;xsd;boolean"/>
+    
+
+
+    <!-- http://bibframe.org/vocab/&amp;nonNegativeInteger -->
+
+    <rdfs:Datatype rdf:about="http://bibframe.org/vocab/&amp;nonNegativeInteger"/>
     
 
 
@@ -272,7 +278,7 @@
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/formedFrom">
         <rdfs:label xml:lang="en-us">formed out of</rdfs:label>
-        <rdfs:comment xml:lang="en">The subject work was formed from the merging of two or more separate works.</rdfs:comment>
+        <rdfs:comment xml:lang="en-us">The subject work was formed from the merging of two or more separate works.</rdfs:comment>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
         <owl:inverseOf rdf:resource="http://bibframe.org/vocab/splitInto"/>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/succeeds"/>
@@ -520,7 +526,7 @@
     <!-- http://bibframe.org/vocab/hasPreferredTitle -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasPreferredTitle">
-        <rdfs:label xml:lang="en">has preferred title</rdfs:label>
+        <rdfs:label xml:lang="en-us">has preferred title</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/hasTitle"/>
         <rdfs:domain>
             <owl:Class>
@@ -548,7 +554,7 @@
     <!-- http://bibframe.org/vocab/hasReproduction -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasReproduction">
-        <rdfs:label xml:lang="en">has reproduction</rdfs:label>
+        <rdfs:label xml:lang="en-us">has reproduction</rdfs:label>
         <rdfs:comment xml:lang="en-us">Instance has a reproduction that embodies the same work.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Instance"/>
@@ -625,8 +631,8 @@
     <!-- http://bibframe.org/vocab/hasTitleRelationship -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasTitleRelationship">
-        <rdfs:label xml:lang="en">Any relationship between a Work and Title, Instance and Title, or between two Titles.</rdfs:label>
-        <rdfs:label xml:lang="en">has title relationship</rdfs:label>
+        <rdfs:label xml:lang="en-us">Any relationship between a Work and Title, Instance and Title, or between two Titles.</rdfs:label>
+        <rdfs:label xml:lang="en-us">has title relationship</rdfs:label>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Title"/>
         <rdfs:domain>
             <owl:Class>
@@ -644,8 +650,8 @@
     <!-- http://bibframe.org/vocab/hasTranslatedTitle -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasTranslatedTitle">
-        <rdfs:label xml:lang="en">has translated title</rdfs:label>
-        <rdfs:comment xml:lang="en">A title has a translated version to support search in another language</rdfs:comment>
+        <rdfs:label xml:lang="en-us">has translated title</rdfs:label>
+        <rdfs:comment xml:lang="en-us">A title has a translated version to support search in another language</rdfs:comment>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Title"/>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Title"/>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/hasVariantTitle"/>
@@ -657,8 +663,8 @@
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasVariantTitle">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
-        <rdfs:label xml:lang="en">has variant title</rdfs:label>
-        <rdfs:comment xml:lang="en">Property relating a work or intance to a title different from the main title, or relating two titles with variant forms.</rdfs:comment>
+        <rdfs:label xml:lang="en-us">has variant title</rdfs:label>
+        <rdfs:comment xml:lang="en-us">Property relating a work or intance to a title different from the main title, or relating two titles with variant forms.</rdfs:comment>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Title"/>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Title"/>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/hasTitleRelationship"/>
@@ -797,8 +803,8 @@
     <!-- http://bibframe.org/vocab/isTranslationOf -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/isTranslationOf">
-        <rdfs:label xml:lang="en">is translation of</rdfs:label>
-        <rdfs:comment xml:lang="en">Property relating a title that was translated from another title.</rdfs:comment>
+        <rdfs:label xml:lang="en-us">is translation of</rdfs:label>
+        <rdfs:comment xml:lang="en-us">Property relating a title that was translated from another title.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/isVariantOf"/>
     </owl:ObjectProperty>
     
@@ -833,8 +839,8 @@
     <!-- http://bibframe.org/vocab/isVariantOf -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/isVariantOf">
-        <rdfs:label xml:lang="en">is variant of</rdfs:label>
-        <rdfs:comment xml:lang="en">Property relating two titles to one another.</rdfs:comment>
+        <rdfs:label xml:lang="en-us">is variant of</rdfs:label>
+        <rdfs:comment xml:lang="en-us">Property relating two titles to one another.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -993,7 +999,7 @@
     <!-- http://bibframe.org/vocab/reproduces -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/reproduces">
-        <rdfs:label xml:lang="en">reproduces</rdfs:label>
+        <rdfs:label xml:lang="en-us">reproduces</rdfs:label>
         <rdfs:comment xml:lang="en-us">Instance that reproduces another Instance embodying the same work.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Instance"/>
@@ -1031,7 +1037,7 @@
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/splitInto">
         <rdfs:label xml:lang="en-us">split into</rdfs:label>
-        <rdfs:comment xml:lang="en">The subject work split its content into two or more separate works.</rdfs:comment>
+        <rdfs:comment xml:lang="en-us">The subject work split its content into two or more separate works.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/precedes"/>
         <rdfs:range>
@@ -1090,7 +1096,7 @@
     <!-- http://bibframe.org/vocab/translatedAs -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/translatedAs">
-        <rdfs:label xml:lang="en">translated as</rdfs:label>
+        <rdfs:label xml:lang="en-us">translated as</rdfs:label>
         <rdfs:comment xml:lang="en-us">Work that translates the text of the source entity into a language different from that of the original.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
@@ -1133,8 +1139,8 @@
     <!-- http://purl.org/dc/terms/hasFormat -->
 
     <owl:ObjectProperty rdf:about="&dcterms;hasFormat">
-        <rdfs:label xml:lang="en">has format</rdfs:label>
-        <rdfs:comment xml:lang="en">A related resource that is substantially the same as the pre-existing described resource, but in another format.</rdfs:comment>
+        <rdfs:label xml:lang="en-us">has format</rdfs:label>
+        <rdfs:comment xml:lang="en-us">A related resource that is substantially the same as the pre-existing described resource, but in another format.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -1142,8 +1148,8 @@
     <!-- http://purl.org/dc/terms/hasPart -->
 
     <owl:ObjectProperty rdf:about="&dcterms;hasPart">
-        <rdfs:label xml:lang="en">has part</rdfs:label>
-        <rdfs:comment xml:lang="en">A related resource that is included either physically or logically in the described resource.</rdfs:comment>
+        <rdfs:label xml:lang="en-us">has part</rdfs:label>
+        <rdfs:comment xml:lang="en-us">A related resource that is included either physically or logically in the described resource.</rdfs:comment>
         <owl:inverseOf rdf:resource="&dcterms;isPartOf"/>
     </owl:ObjectProperty>
     
@@ -1152,8 +1158,8 @@
     <!-- http://purl.org/dc/terms/isPartOf -->
 
     <owl:ObjectProperty rdf:about="&dcterms;isPartOf">
-        <rdfs:label xml:lang="en">is part of</rdfs:label>
-        <rdfs:comment xml:lang="en">A related resource in which the described resource is physically or logically included.</rdfs:comment>
+        <rdfs:label xml:lang="en-us">is part of</rdfs:label>
+        <rdfs:comment xml:lang="en-us">A related resource in which the described resource is physically or logically included.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -1161,8 +1167,8 @@
     <!-- http://purl.org/dc/terms/language -->
 
     <owl:ObjectProperty rdf:about="&dcterms;language">
-        <rdfs:label xml:lang="en">language</rdfs:label>
-        <rdfs:comment xml:lang="en">A language of the resource.</rdfs:comment>
+        <rdfs:label xml:lang="en-us">language</rdfs:label>
+        <rdfs:comment xml:lang="en-us">A language of the resource.</rdfs:comment>
         <rdfs:range rdf:resource="&dcterms;LinguisticSystem"/>
     </owl:ObjectProperty>
     
@@ -1171,8 +1177,8 @@
     <!-- http://purl.org/dc/terms/relation -->
 
     <owl:ObjectProperty rdf:about="&dcterms;relation">
-        <rdfs:label xml:lang="en">relation</rdfs:label>
-        <rdfs:comment xml:lang="en">A related resource.</rdfs:comment>
+        <rdfs:label xml:lang="en-us">relation</rdfs:label>
+        <rdfs:comment xml:lang="en-us">A related resource.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -1180,8 +1186,8 @@
     <!-- http://purl.org/dc/terms/subject -->
 
     <owl:ObjectProperty rdf:about="&dcterms;subject">
-        <rdfs:label xml:lang="en">subject</rdfs:label>
-        <rdfs:comment xml:lang="en">The topic of the resource.</rdfs:comment>
+        <rdfs:label xml:lang="en-us">subject</rdfs:label>
+        <rdfs:comment xml:lang="en-us">The topic of the resource.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -1189,8 +1195,8 @@
     <!-- http://schema.org/audience -->
 
     <owl:ObjectProperty rdf:about="http://schema.org/audience">
-        <rdfs:label xml:lang="en">audience</rdfs:label>
-        <rdfs:comment xml:lang="en">The intended audience of the item, i.e. the group for whom the item was created.</rdfs:comment>
+        <rdfs:label xml:lang="en-us">audience</rdfs:label>
+        <rdfs:comment xml:lang="en-us">The intended audience of the item, i.e. the group for whom the item was created.</rdfs:comment>
         <rdfs:range rdf:resource="http://schema.org/Audience"/>
     </owl:ObjectProperty>
     
@@ -1199,7 +1205,7 @@
     <!-- http://www.w3.org/2004/02/skos/core#inScheme -->
 
     <owl:ObjectProperty rdf:about="&skos;inScheme">
-        <rdfs:label xml:lang="en">in scheme</rdfs:label>
+        <rdfs:label xml:lang="en-us">in scheme</rdfs:label>
         <rdfs:comment xml:lang="en-us">Relates a resource (for example a concept) to a concept scheme in which it is included.</rdfs:comment>
     </owl:ObjectProperty>
     
@@ -1208,8 +1214,8 @@
     <!-- http://www.w3.org/2004/02/skos/core#member -->
 
     <owl:ObjectProperty rdf:about="&skos;member">
-        <rdfs:label xml:lang="en">member</rdfs:label>
-        <rdfs:comment xml:lang="en">Relates a collection to one of its members.</rdfs:comment>
+        <rdfs:label xml:lang="en-us">member</rdfs:label>
+        <rdfs:comment xml:lang="en-us">Relates a collection to one of its members.</rdfs:comment>
         <rdfs:domain rdf:resource="&skos;Collection"/>
     </owl:ObjectProperty>
     
@@ -1218,8 +1224,8 @@
     <!-- http://www.w3.org/ns/oa#annotatedBy -->
 
     <owl:ObjectProperty rdf:about="&oa;annotatedBy">
-        <rdfs:label xml:lang="en">annotated by</rdfs:label>
-        <rdfs:comment xml:lang="en">The object of the relationship is a resource that identifies the agent responsible for creating the Annotation. This may be either a human or software agent. 
+        <rdfs:label xml:lang="en-us">annotated by</rdfs:label>
+        <rdfs:comment xml:lang="en-us">The object of the relationship is a resource that identifies the agent responsible for creating the Annotation. This may be either a human or software agent. 
             
             There SHOULD be exactly 1 oa:annotatedBy relationship per Annotation, but MAY be 0 or more than 1, as the Annotation may be anonymous, or multiple agents may have worked together on it.
             
@@ -1232,8 +1238,8 @@
     <!-- http://www.w3.org/ns/oa#hasBody -->
 
     <owl:ObjectProperty rdf:about="&oa;hasBody">
-        <rdfs:label xml:lang="en">has body</rdfs:label>
-        <rdfs:comment xml:lang="en">The relationship between oa:Annotation and body. The body is somehow &quot;about&quot; the oa:hasTarget of the annotation.
+        <rdfs:label xml:lang="en-us">has body</rdfs:label>
+        <rdfs:comment xml:lang="en-us">The relationship between oa:Annotation and body. The body is somehow &quot;about&quot; the oa:hasTarget of the annotation.
             
             The Body may be of any media type, and contain any type of content. The Body SHOULD be identified by HTTP URIs unless they are embedded within the Annotation.
             
@@ -1249,8 +1255,8 @@
     <!-- http://www.w3.org/ns/oa#hasTarget -->
 
     <owl:ObjectProperty rdf:about="&oa;hasTarget">
-        <rdfs:label xml:lang="en">has target</rdfs:label>
-        <rdfs:comment xml:lang="en">The relationship between oa:Annotation and target. The target resource is what the oa:hasBody is somewhat &quot;about&quot;.
+        <rdfs:label xml:lang="en-us">has target</rdfs:label>
+        <rdfs:comment xml:lang="en-us">The relationship between oa:Annotation and target. The target resource is what the oa:hasBody is somewhat &quot;about&quot;.
             
             The target may be of any media type, and contain any type of content. The target SHOULD be identified by HTTP URIs unless they are embedded within the Annotation.
             
@@ -1266,8 +1272,8 @@
     <!-- http://www.w3.org/ns/oa#motivatedBy -->
 
     <owl:ObjectProperty rdf:about="&oa;motivatedBy">
-        <rdfs:label xml:lang="en">motivated by</rdfs:label>
-        <rdfs:comment xml:lang="en">The relationship between an Annotation and a Motivation, indicating the reasons why the Annotation was created.
+        <rdfs:label xml:lang="en-us">motivated by</rdfs:label>
+        <rdfs:comment xml:lang="en-us">The relationship between an Annotation and a Motivation, indicating the reasons why the Annotation was created.
             
             Each Annotation SHOULD have at least one oa:motivatedBy relationship, and MAY be more than 1.</rdfs:comment>
         <rdfs:domain rdf:resource="&oa;Annotation"/>
@@ -1280,8 +1286,8 @@
 
     <owl:ObjectProperty rdf:about="&prov;atLocation">
         <rdfs:label xml:lang="en-us">at location</rdfs:label>
-        <rdfs:comment xml:lang="en">Can include electronic locator.</rdfs:comment>
-        <rdfs:comment xml:lang="en">The location of any resource.</rdfs:comment>
+        <rdfs:comment xml:lang="en-us">Can include electronic locator.</rdfs:comment>
+        <rdfs:comment xml:lang="en-us">The location of any resource.</rdfs:comment>
         <rdfs:range rdf:resource="&prov;Location"/>
     </owl:ObjectProperty>
     
@@ -1346,29 +1352,20 @@
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/barcode">
         <rdfs:label xml:lang="en-us">barcode</rdfs:label>
         <rdfs:comment xml:lang="en-us">Identification number of the physical item.</rdfs:comment>
+        <skos:editorialNote xml:lang="en-us">Probably not a FunctionalProperty: there are both Codabar and Code 39 barcoding systems; could an Item have both? </skos:editorialNote>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Item"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://bibframe.org/vocab/cartographicAscensionAndDeclination -->
+    <!-- http://bibframe.org/vocab/cartographicEasternmostLongitude -->
 
-    <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/cartographicAscensionAndDeclination">
-        <rdfs:label xml:lang="en-us">cartographic ascension and declination</rdfs:label>
-        <rdfs:comment xml:lang="en-us">System for identifying the location of a celestial object in the sky covered by the cartographic content of a resource using the angles of right ascension and declination.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/cartographicCoordinates -->
-
-    <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/cartographicCoordinates">
-        <rdfs:label xml:lang="en-us">cartographic coordinates</rdfs:label>
-        <rdfs:comment xml:lang="en-us">Mathematical system for identifying the area covered by the cartographic content of a resource, Expressed either by means of longitude and latitude on the surface of planets or by the angles of right ascension and declination for celestial cartographic content.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
+    <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/cartographicEasternmostLongitude">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="en-us">cartographic easternmost longitude</rdfs:label>
+        <rdfs:comment xml:lang="en-us">Records easternmost longitudinal coordinate of the geographic entity. The abbreviations for the hemispheres are: N = North, S = South, E = East, W = West. The coordinate may be recorded in the form hdddmmss (hemisphere-degrees-minutes-seconds); however, other forms are also allowed, such as decimal degrees. Unused positions contain zeros.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Cartography"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
@@ -1378,30 +1375,44 @@
 
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/cartographicEquinox">
         <rdfs:label xml:lang="en-us">cartographic equinox</rdfs:label>
-        <rdfs:comment xml:lang="en-us">One of two points of intersection of the ecliptic and the celestial equator, occupied by the sun when its declination is 0 degrees.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
+        <rdfs:comment xml:lang="en-us">Statement of equinox or epoch.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Cartography"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://bibframe.org/vocab/cartographicExclusionGRing -->
+    <!-- http://bibframe.org/vocab/cartographicExclusionGRingCoordinates -->
 
-    <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/cartographicExclusionGRing">
-        <rdfs:label xml:lang="en-us">cartographic exclusion G ring</rdfs:label>
-        <rdfs:comment xml:lang="en-us">Coordinate pairs that identify the closed non-intersecting boundary of the area contained within the G-polygon outer ring that is excluded.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
+    <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/cartographicExclusionGRingCoordinates">
+        <rdfs:label xml:lang="en-us">cartographic exclusion G ring coordinates</rdfs:label>
+        <skos:editorialNote xml:lang="en-us">Break the pair up into its individual elements? What would they be named?</skos:editorialNote>
+        <rdfs:comment xml:lang="en-us">Coordinate pair that identifies the closed non-intersecting boundary of the area contained within the G-polygon outer ring that is excluded.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Cartography"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://bibframe.org/vocab/cartographicOuterGRing -->
+    <!-- http://bibframe.org/vocab/cartographicNorthernmostLatitude -->
 
-    <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/cartographicOuterGRing">
-        <rdfs:label xml:lang="en-us">cartographic outer G ring</rdfs:label>
-        <rdfs:comment xml:lang="en-us">Coordinate pairs that identify the closed non-intersecting boundary of the area covered.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
+    <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/cartographicNorthernmostLatitude">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="en-us">cartographic northernmost latitude</rdfs:label>
+        <rdfs:comment xml:lang="en-us">Records northernmost latitudinal coordinate of the geographic entity. The abbreviations for the hemispheres are: N = North, S = South, E = East, W = West. The coordinate may be recorded in the form hdddmmss (hemisphere-degrees-minutes-seconds); however, other forms are also allowed, such as decimal degrees. Unused positions contain zeros.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Cartography"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://bibframe.org/vocab/cartographicOuterGRingCoordinates -->
+
+    <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/cartographicOuterGRingCoordinates">
+        <rdfs:label xml:lang="en-us">cartographic outer G ring coordinates</rdfs:label>
+        <rdfs:comment xml:lang="en-us">Coordinate pair that identifies the closed non-intersecting boundary of the area covered.</rdfs:comment>
+        <skos:editorialNote xml:lang="en-us">Break the pair up into its individual elements? What would they be named?</skos:editorialNote>
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Cartography"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
@@ -1412,7 +1423,7 @@
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/cartographicProjection">
         <rdfs:label xml:lang="en-us">cartographic projection</rdfs:label>
         <rdfs:comment xml:lang="en-us">Method or system used to represent the surface of the Earth or of a celestial sphere on a plane.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Cartography"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
@@ -1422,8 +1433,44 @@
 
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/cartographicScale">
         <rdfs:label xml:lang="en-us">cartographic scale</rdfs:label>
-        <rdfs:comment xml:lang="en-us">Ratio of the dimensions of a form contained or embodied in a resource to the dimensions of the entity it represents.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
+        <rdfs:comment xml:lang="en-us">Ratio of the dimensions of a form contained or embodied in a resource to the dimensions of the entity it represents. Entire scale statement including any equivalency statements, vertical scales or vertical exaggeration statements for relief models and other three-dimensional items.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Cartography"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://bibframe.org/vocab/cartographicSouthernmostLatitude -->
+
+    <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/cartographicSouthernmostLatitude">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="en-us">cartographic southernmost latitude</rdfs:label>
+        <rdfs:comment xml:lang="en-us">Records southernmost latitudinal coordinate of the geographic entity. The abbreviations for the hemispheres are: N = North, S = South, E = East, W = West. The coordinate may be recorded in the form hdddmmss (hemisphere-degrees-minutes-seconds); however, other forms are also allowed, such as decimal degrees. Unused positions contain zeros.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Cartography"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://bibframe.org/vocab/cartographicWesternmostLongitude -->
+
+    <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/cartographicWesternmostLongitude">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="en-us">cartographic westernmost longitude</rdfs:label>
+        <rdfs:comment xml:lang="en-us">Records westernmost longitudinal coordinate of the geographic entity. The abbreviations for the hemispheres are: N = North, S = South, E = East, W = West. The coordinate may be recorded in the form hdddmmss (hemisphere-degrees-minutes-seconds); however, other forms are also allowed, such as decimal degrees. Unused positions contain zeros.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Cartography"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://bibframe.org/vocab/cartographicZone -->
+
+    <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/cartographicZone">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="en-us">cartographic zone</rdfs:label>
+        <rdfs:comment xml:lang="en-us">Cartographic zone used for celestial charts.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Cartography"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
@@ -1540,7 +1587,7 @@
     <!-- http://bibframe.org/vocab/hasIndex -->
 
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/hasIndex">
-        <rdfs:label xml:lang="en">has index</rdfs:label>
+        <rdfs:label xml:lang="en-us">has index</rdfs:label>
         <rdfs:range rdf:datatype="&amp;xsd;boolean"></rdfs:range>
         <rdfs:comment xml:lang="en-us">Indicates whether a work or instance contains an internal index</rdfs:comment>
     </owl:DatatypeProperty>
@@ -1563,6 +1610,18 @@
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/musicNumber">
         <rdfs:label xml:lang="en-us">music number</rdfs:label>
         <rdfs:comment xml:lang="en-us">Serial, opus, or thematic number or code for music.</rdfs:comment>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://bibframe.org/vocab/northernmostLatitude -->
+
+    <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/northernmostLatitude">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="en-us">northernmost latitude</rdfs:label>
+        <rdfs:comment xml:lang="en-us">Records northernmost latitudinal coordinate of the geographic entity. The abbreviations for the hemispheres are: N = North, S = South, E = East, W = West. The coordinates may be recorded in the form hdddmmss (hemisphere-degrees-minutes-seconds); however, other forms are also allowed, such as decimal degrees. Unused positions contain zeros.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Cartography"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
@@ -1611,10 +1670,22 @@
     
 
 
+    <!-- http://bibframe.org/vocab/southernmostLatitude -->
+
+    <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/southernmostLatitude">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="en-us">southernmost latitude</rdfs:label>
+        <rdfs:comment xml:lang="en-us">Records northernmost latitudinal coordinate of the geographic entity. The abbreviations for the hemispheres are: N = North, S = South, E = East, W = West. The coordinates may be recorded in the form hdddmmss (hemisphere-degrees-minutes-seconds); however, other forms are also allowed, such as decimal degrees. Unused positions contain zeros.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Cartography"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://bibframe.org/vocab/subtitle -->
 
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/subtitle">
-        <rdfs:label xml:lang="en">subtitle</rdfs:label>
+        <rdfs:label xml:lang="en-us">subtitle</rdfs:label>
         <rdfs:comment xml:lang="en-us">Word, character, or group of words and/or characters that contains the remainder of the title information after the main title.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Title"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
@@ -1625,6 +1696,7 @@
     <!-- http://bibframe.org/vocab/legacy/aspectRatio -->
 
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/legacy/aspectRatio">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:label xml:lang="en-us">aspect ratio</rdfs:label>
         <rdfs:comment xml:lang="en-us">Proportional relationship between an image&apos;s width and its height.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
@@ -1850,8 +1922,8 @@
     <!-- http://purl.org/dc/elements/1.1/date -->
 
     <owl:DatatypeProperty rdf:about="&dc;date">
-        <rdfs:label xml:lang="en">date</rdfs:label>
-        <rdfs:comment xml:lang="en">A point or period of time associated with an event in the lifecycle of the resource.</rdfs:comment>
+        <rdfs:label xml:lang="en-us">date</rdfs:label>
+        <rdfs:comment xml:lang="en-us">A point or period of time associated with an event in the lifecycle of the resource.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1859,8 +1931,8 @@
     <!-- http://purl.org/dc/terms/created -->
 
     <owl:DatatypeProperty rdf:about="&dcterms;created">
-        <rdfs:label xml:lang="en">created</rdfs:label>
-        <rdfs:comment xml:lang="en">Date of creation of the resource.</rdfs:comment>
+        <rdfs:label xml:lang="en-us">created</rdfs:label>
+        <rdfs:comment xml:lang="en-us">Date of creation of the resource.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1868,8 +1940,8 @@
     <!-- http://schema.org/accessibilityFeature -->
 
     <owl:DatatypeProperty rdf:about="http://schema.org/accessibilityFeature">
-        <rdfs:label xml:lang="en">accessibility feature</rdfs:label>
-        <rdfs:comment xml:lang="en">Accessibility feature of the resource, such as accessible media, alternatives and supported enhancements for accessibility (WebSchemas wiki lists possible values).</rdfs:comment>
+        <rdfs:label xml:lang="en-us">accessibility feature</rdfs:label>
+        <rdfs:comment xml:lang="en-us">Accessibility feature of the resource, such as accessible media, alternatives and supported enhancements for accessibility (WebSchemas wiki lists possible values).</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
@@ -1879,8 +1951,8 @@
     <!-- http://www.w3.org/2011/content#chars -->
 
     <owl:DatatypeProperty rdf:about="&cnt;chars">
-        <rdfs:label xml:lang="en">chars</rdfs:label>
-        <rdfs:comment xml:lang="en">The character sequence of the text content.</rdfs:comment>
+        <rdfs:label xml:lang="en-us">chars</rdfs:label>
+        <rdfs:comment xml:lang="en-us">The character sequence of the text content.</rdfs:comment>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
         <rdfs:domain rdf:resource="&cnt;ContentAsText"/>
     </owl:DatatypeProperty>
@@ -1890,8 +1962,9 @@
     <!-- http://www.w3.org/ns/oa#annotatedAt -->
 
     <owl:DatatypeProperty rdf:about="&oa;annotatedAt">
-        <rdfs:label xml:lang="en">annotated at</rdfs:label>
-        <rdfs:comment xml:lang="en">The time at which the Annotation was created.</rdfs:comment>
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="en-us">annotated at</rdfs:label>
+        <rdfs:comment xml:lang="en-us">The time at which the Annotation was created.</rdfs:comment>
         <rdfs:range rdf:resource="&xsd;dateTimeStamp"/>
         <rdfs:domain rdf:resource="&oa;Annotation"/>
     </owl:DatatypeProperty>
@@ -1902,7 +1975,7 @@
 
     <owl:DatatypeProperty rdf:about="&prov;startedAtTime">
         <rdfs:label xml:lang="en-us">started at time</rdfs:label>
-        <rdfs:comment xml:lang="en">The time at which an activity started. See also prov:endedAtTime.</rdfs:comment>
+        <rdfs:comment xml:lang="en-us">The time at which an activity started. See also prov:endedAtTime.</rdfs:comment>
         <rdfs:domain rdf:resource="&prov;Activity"/>
     </owl:DatatypeProperty>
     
@@ -1970,9 +2043,9 @@
     <!-- http://bibframe.org/vocab/CaptionTitle -->
 
     <owl:Class rdf:about="http://bibframe.org/vocab/CaptionTitle">
-        <rdfs:label xml:lang="en">Caption title</rdfs:label>
+        <rdfs:label xml:lang="en-us">Caption title</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Title"/>
-        <rdfs:comment xml:lang="en">Caption title, printed at the head of the first page of text.</rdfs:comment>
+        <rdfs:comment xml:lang="en-us">Caption title, printed at the head of the first page of text.</rdfs:comment>
     </owl:Class>
     
 
@@ -2028,9 +2101,9 @@
     <!-- http://bibframe.org/vocab/CoverTitle -->
 
     <owl:Class rdf:about="http://bibframe.org/vocab/CoverTitle">
-        <rdfs:label xml:lang="en">Cover title</rdfs:label>
+        <rdfs:label xml:lang="en-us">Cover title</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Title"/>
-        <rdfs:comment xml:lang="en">Cover title that is printed on the original cover of a publication or lettered or stamped on the publisher&apos;s binding.</rdfs:comment>
+        <rdfs:comment xml:lang="en-us">Cover title that is printed on the original cover of a publication or lettered or stamped on the publisher&apos;s binding.</rdfs:comment>
     </owl:Class>
     
 
@@ -2067,9 +2140,9 @@
     <!-- http://bibframe.org/vocab/DistinctiveTitle -->
 
     <owl:Class rdf:about="http://bibframe.org/vocab/DistinctiveTitle">
-        <rdfs:label xml:lang="en">Distinctive title</rdfs:label>
+        <rdfs:label xml:lang="en-us">Distinctive title</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Title"/>
-        <rdfs:comment xml:lang="en">Special title that appears in addition to the regular title on individual issues of an item and by which the issue may be known.</rdfs:comment>
+        <rdfs:comment xml:lang="en-us">Special title that appears in addition to the regular title on individual issues of an item and by which the issue may be known.</rdfs:comment>
     </owl:Class>
     
 
@@ -2286,8 +2359,8 @@
     <!-- http://bibframe.org/vocab/Item -->
 
     <owl:Class rdf:about="http://bibframe.org/vocab/Item">
-        <rdfs:label xml:lang="en">Item</rdfs:label>
-        <rdfs:comment xml:lang="en">A singular physical item that can be held, circulated, etc. Equivalant to the FRBR Item class.</rdfs:comment>
+        <rdfs:label xml:lang="en-us">Item</rdfs:label>
+        <rdfs:comment xml:lang="en-us">A singular physical item that can be held, circulated, etc. Equivalant to the FRBR Item class.</rdfs:comment>
     </owl:Class>
     
 
@@ -2295,7 +2368,7 @@
     <!-- http://bibframe.org/vocab/KeyTitle -->
 
     <owl:Class rdf:about="http://bibframe.org/vocab/KeyTitle">
-        <rdfs:label xml:lang="en">Key title</rdfs:label>
+        <rdfs:label xml:lang="en-us">Key title</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Title"/>
         <rdfs:comment xml:lang="en-us">Unique title for a continuing resource that is assigned by the ISSN International Center in conjunction with an ISSN.</rdfs:comment>
     </owl:Class>
@@ -2473,9 +2546,9 @@
     <!-- http://bibframe.org/vocab/PortionOfTitle -->
 
     <owl:Class rdf:about="http://bibframe.org/vocab/PortionOfTitle">
-        <rdfs:label xml:lang="en">Portion of title</rdfs:label>
+        <rdfs:label xml:lang="en-us">Portion of title</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Title"/>
-        <rdfs:comment xml:lang="en">A portion of a title for which access a title by itself is desired, e.g. &apos;Modern Writing&apos; could serve as a portion of title for &apos;The Berkley book of modern writing&apos;.</rdfs:comment>
+        <rdfs:comment xml:lang="en-us">A portion of a title for which access a title by itself is desired, e.g. &apos;Modern Writing&apos; could serve as a portion of title for &apos;The Berkley book of modern writing&apos;.</rdfs:comment>
     </owl:Class>
     
 
@@ -2513,9 +2586,9 @@
     <!-- http://bibframe.org/vocab/RunningTitle -->
 
     <owl:Class rdf:about="http://bibframe.org/vocab/RunningTitle">
-        <rdfs:label xml:lang="en">Running title</rdfs:label>
+        <rdfs:label xml:lang="en-us">Running title</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Title"/>
-        <rdfs:comment xml:lang="en">Running title, printed on the top or bottom margin of each page of a publication.</rdfs:comment>
+        <rdfs:comment xml:lang="en-us">Running title, printed on the top or bottom margin of each page of a publication.</rdfs:comment>
     </owl:Class>
     
 
@@ -2533,7 +2606,7 @@
     <!-- http://bibframe.org/vocab/Series -->
 
     <owl:Class rdf:about="http://bibframe.org/vocab/Series">
-        <rdfs:label xml:lang="en">Series</rdfs:label>
+        <rdfs:label xml:lang="en-us">Series</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:comment xml:lang="en-us">A larger work consisting of multiple works.</rdfs:comment>
     </owl:Class>
@@ -2553,9 +2626,9 @@
     <!-- http://bibframe.org/vocab/SortTitle -->
 
     <owl:Class rdf:about="http://bibframe.org/vocab/SortTitle">
-        <rdfs:label xml:lang="en">Sort title</rdfs:label>
+        <rdfs:label xml:lang="en-us">Sort title</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Title"/>
-        <rdfs:comment xml:lang="en">A title optimized for sorting, e.g. non-filing characters are removed.</rdfs:comment>
+        <rdfs:comment xml:lang="en-us">A title optimized for sorting, e.g. non-filing characters are removed.</rdfs:comment>
     </owl:Class>
     
 
@@ -2563,9 +2636,9 @@
     <!-- http://bibframe.org/vocab/SpineTitle -->
 
     <owl:Class rdf:about="http://bibframe.org/vocab/SpineTitle">
-        <rdfs:label xml:lang="en">Spine title</rdfs:label>
+        <rdfs:label xml:lang="en-us">Spine title</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Title"/>
-        <rdfs:comment xml:lang="en">Title taken from the spine of a resource.</rdfs:comment>
+        <rdfs:comment xml:lang="en-us">Title taken from the spine of a resource.</rdfs:comment>
     </owl:Class>
     
 
@@ -2673,8 +2746,8 @@
     <!-- http://bibframe.org/vocab/Topic -->
 
     <owl:Class rdf:about="http://bibframe.org/vocab/Topic">
-        <rdfs:label xml:lang="en">Topic</rdfs:label>
-        <rdfs:comment xml:lang="en">Concept or area of knowledge.</rdfs:comment>
+        <rdfs:label xml:lang="en-us">Topic</rdfs:label>
+        <rdfs:comment xml:lang="en-us">Concept or area of knowledge.</rdfs:comment>
     </owl:Class>
     
 
@@ -2711,8 +2784,8 @@
     <!-- http://purl.org/dc/terms/LinguisticSystem -->
 
     <owl:Class rdf:about="&dcterms;LinguisticSystem">
-        <rdfs:label xml:lang="en">Linguistic system</rdfs:label>
-        <rdfs:comment xml:lang="en">A system of signs, symbols, sounds, gestures, or rules used in communication.</rdfs:comment>
+        <rdfs:label xml:lang="en-us">Linguistic system</rdfs:label>
+        <rdfs:comment xml:lang="en-us">A system of signs, symbols, sounds, gestures, or rules used in communication.</rdfs:comment>
     </owl:Class>
     
 
@@ -2720,7 +2793,7 @@
     <!-- http://schema.org/Audience -->
 
     <owl:Class rdf:about="http://schema.org/Audience">
-        <rdfs:label xml:lang="en">Audience</rdfs:label>
+        <rdfs:label xml:lang="en-us">Audience</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://schema.org/Intangible"/>
         <skos:editorialNote xml:lang="en-us">Need to locate an appropriate audience vocabulary to create NamedIndividuals from.</skos:editorialNote>
         <rdfs:comment xml:lang="en-us">The specific audience or intellectual level for which the content of the resource is considered appropriate.</rdfs:comment>
@@ -2731,9 +2804,9 @@
     <!-- http://schema.org/Event -->
 
     <owl:Class rdf:about="http://schema.org/Event">
-        <rdfs:label xml:lang="en">Event</rdfs:label>
-        <rdfs:comment xml:lang="en">An event happening at a certain time and location, such as a concert, lecture, or festival. Repeated events may be structured as separate Event objects. Can be used for named events, e.g. Battle of Gettsyburg, or un-named date ranges, e.g. 1945- 1950.</rdfs:comment>
-        <skos:editorialNote xml:lang="en">schema:Events are subclasses of schema:Thing, but not schema:Thing to the BIBFRAME ontology</skos:editorialNote>
+        <rdfs:label xml:lang="en-us">Event</rdfs:label>
+        <rdfs:comment xml:lang="en-us">An event happening at a certain time and location, such as a concert, lecture, or festival. Repeated events may be structured as separate Event objects. Can be used for named events, e.g. Battle of Gettsyburg, or un-named date ranges, e.g. 1945- 1950.</rdfs:comment>
+        <skos:editorialNote xml:lang="en-us">schema:Events are subclasses of schema:Thing, but not schema:Thing to the BIBFRAME ontology</skos:editorialNote>
     </owl:Class>
     
 
@@ -2741,9 +2814,9 @@
     <!-- http://schema.org/GovernmentOrganization -->
 
     <owl:Class rdf:about="http://schema.org/GovernmentOrganization">
-        <rdfs:label xml:lang="en">Government organization</rdfs:label>
+        <rdfs:label xml:lang="en-us">Government organization</rdfs:label>
         <rdfs:subClassOf rdf:resource="&foaf;Organization"/>
-        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:comment xml:lang="en-us"></rdfs:comment>
     </owl:Class>
     
 
@@ -2777,7 +2850,7 @@
 
     <owl:Class rdf:about="http://www.lingvoj.org/ontology#Lingvo">
         <rdfs:label xml:lang="de">Sprache</rdfs:label>
-        <rdfs:label xml:lang="en">Language</rdfs:label>
+        <rdfs:label xml:lang="en-us">Language</rdfs:label>
         <rdfs:label xml:lang="eo">Lingvo</rdfs:label>
         <rdfs:label xml:lang="es">Lenguaje</rdfs:label>
         <rdfs:label xml:lang="fi">Kieli</rdfs:label>
@@ -2794,7 +2867,7 @@
         <rdfs:label xml:lang="zh">语言</rdfs:label>
         <rdfs:subClassOf rdf:resource="&dcterms;LinguisticSystem"/>
         <rdfs:subClassOf rdf:resource="http://www.loc.gov/mads/rdf/v1#Language"/>
-        <rdfs:comment xml:lang="en">A language used in spoken or written human communication, or in which a resource is written or recorded. It is recommended to use instances defined on the basis of ISO 639 codes, such as those in examples</rdfs:comment>
+        <rdfs:comment xml:lang="en-us">A language used in spoken or written human communication, or in which a resource is written or recorded. It is recommended to use instances defined on the basis of ISO 639 codes, such as those in examples</rdfs:comment>
         <rdfs:comment xml:lang="es">Una lengua utilizada en la comunicación oral o escrita entre personas, o en la que se escribe o graba un recurso. Se recomienda el uso de las instancias definidas según los códigos ISO 639, como los que aparecen en los ejemplos</rdfs:comment>
         <rdfs:comment xml:lang="fr">Une langue utilisée dans la communication orale ou écrite entre humains, ou dans laquelle une ressource est écrite ou enregistrée. Il est recommandé d&apos;utiliser des instances définies sur la base d&apos;un code ISO 639, comme dans les exemples</rdfs:comment>
         <rdfs:comment xml:lang="nl">Een taal gebruikt in geschreven of gesproken communicatie tussen mensen of in welke een bron is geschreven of opgenomen. Het is aan te raden instanties te gebruiken gedefinieerd op basis van de ISO 630 codes, zoals in deze voorbeelden</rdfs:comment>
@@ -2813,10 +2886,10 @@
     <!-- http://www.w3.org/2004/02/skos/core#Collection -->
 
     <owl:Class rdf:about="&skos;Collection">
-        <rdfs:label xml:lang="en">Collection</rdfs:label>
+        <rdfs:label xml:lang="en-us">Collection</rdfs:label>
         <owl:disjointWith rdf:resource="&skos;Concept"/>
         <owl:disjointWith rdf:resource="&skos;ConceptScheme"/>
-        <rdfs:comment xml:lang="en">A meaningful collection of concepts.</rdfs:comment>
+        <rdfs:comment xml:lang="en-us">A meaningful collection of concepts.</rdfs:comment>
     </owl:Class>
     
 
@@ -2824,7 +2897,7 @@
     <!-- http://www.w3.org/2004/02/skos/core#Concept -->
 
     <owl:Class rdf:about="&skos;Concept">
-        <rdfs:label xml:lang="en">Concept</rdfs:label>
+        <rdfs:label xml:lang="en-us">Concept</rdfs:label>
         <owl:disjointWith rdf:resource="&skos;ConceptScheme"/>
     </owl:Class>
     
@@ -2833,8 +2906,8 @@
     <!-- http://www.w3.org/2004/02/skos/core#ConceptScheme -->
 
     <owl:Class rdf:about="&skos;ConceptScheme">
-        <rdfs:label xml:lang="en">Concept scheme</rdfs:label>
-        <rdfs:comment xml:lang="en">A set of concepts, optionally including statements about semantic relationships between those concepts.</rdfs:comment>
+        <rdfs:label xml:lang="en-us">Concept scheme</rdfs:label>
+        <rdfs:comment xml:lang="en-us">A set of concepts, optionally including statements about semantic relationships between those concepts.</rdfs:comment>
     </owl:Class>
     
 
@@ -2850,9 +2923,9 @@
     <!-- http://www.w3.org/2011/content#ContentAsText -->
 
     <owl:Class rdf:about="&cnt;ContentAsText">
-        <rdfs:label xml:lang="en">Content as text</rdfs:label>
+        <rdfs:label xml:lang="en-us">Content as text</rdfs:label>
         <rdfs:subClassOf rdf:resource="&cnt;Content"/>
-        <rdfs:comment xml:lang="en">The text content (can be used for text content).</rdfs:comment>
+        <rdfs:comment xml:lang="en-us">The text content (can be used for text content).</rdfs:comment>
     </owl:Class>
     
 
@@ -2860,8 +2933,8 @@
     <!-- http://www.w3.org/ns/oa#Annotation -->
 
     <owl:Class rdf:about="&oa;Annotation">
-        <rdfs:label xml:lang="en">Annotation</rdfs:label>
-        <rdfs:comment xml:lang="en">Typically an Annotation has a single Body (oa:hasBody), which is the comment or other descriptive resource, and a single Target (oa:hasTarget) that the Body is somehow &quot;about&quot;. The Body provides the information which is annotating the Target. This &quot;aboutness&quot; may be further clarified or extended to notions such as classifying or identifying with oa:motivatedBy.</rdfs:comment>
+        <rdfs:label xml:lang="en-us">Annotation</rdfs:label>
+        <rdfs:comment xml:lang="en-us">Typically an Annotation has a single Body (oa:hasBody), which is the comment or other descriptive resource, and a single Target (oa:hasTarget) that the Body is somehow &quot;about&quot;. The Body provides the information which is annotating the Target. This &quot;aboutness&quot; may be further clarified or extended to notions such as classifying or identifying with oa:motivatedBy.</rdfs:comment>
     </owl:Class>
     
 
@@ -2869,9 +2942,9 @@
     <!-- http://www.w3.org/ns/oa#Motivation -->
 
     <owl:Class rdf:about="&oa;Motivation">
-        <rdfs:label xml:lang="en">Motivation</rdfs:label>
+        <rdfs:label xml:lang="en-us">Motivation</rdfs:label>
         <rdfs:subClassOf rdf:resource="&skos;Concept"/>
-        <rdfs:comment xml:lang="en">The Motivation for creating an Annotation, indicated with oa:motivatedBy, is a reason for its creation, and might include things like oa:replying to another annotation, oa:commenting on a resource, or oa:linking to a related resource.
+        <rdfs:comment xml:lang="en-us">The Motivation for creating an Annotation, indicated with oa:motivatedBy, is a reason for its creation, and might include things like oa:replying to another annotation, oa:commenting on a resource, or oa:linking to a related resource.
             
             Each Annotation SHOULD have at least one oa:motivatedBy relationship to an instance of oa:Motivation, which is a subClass of skos:Concept.</rdfs:comment>
     </owl:Class>
@@ -2941,8 +3014,8 @@
 
     <owl:NamedIndividual rdf:about="http://bibframe.org/vocab/reviewing">
         <rdf:type rdf:resource="&oa;Motivation"/>
-        <rdfs:label xml:lang="en">reviewing</rdfs:label>
-        <rdfs:comment xml:lang="en">The motivation that represents a reviewing  of the target resource.</rdfs:comment>
+        <rdfs:label xml:lang="en-us">reviewing</rdfs:label>
+        <rdfs:comment xml:lang="en-us">The motivation that represents a reviewing  of the target resource.</rdfs:comment>
         <skos:inScheme rdf:resource="&oa;motivationScheme"/>
     </owl:NamedIndividual>
     
@@ -2952,8 +3025,8 @@
 
     <owl:NamedIndividual rdf:about="http://bibframe.org/vocab/summarizing">
         <rdf:type rdf:resource="&oa;Motivation"/>
-        <rdfs:label xml:lang="en">summarizing</rdfs:label>
-        <rdfs:comment xml:lang="en">The motivation that represents a summarizing of the target resource.</rdfs:comment>
+        <rdfs:label xml:lang="en-us">summarizing</rdfs:label>
+        <rdfs:comment xml:lang="en-us">The motivation that represents a summarizing of the target resource.</rdfs:comment>
         <skos:inScheme rdf:resource="&oa;motivationScheme"/>
     </owl:NamedIndividual>
     
@@ -2963,8 +3036,8 @@
 
     <owl:NamedIndividual rdf:about="&oa;motivationScheme">
         <rdf:type rdf:resource="&skos;ConceptScheme"/>
-        <rdfs:label xml:lang="en">motivation scheme</rdfs:label>
-        <rdfs:comment xml:lang="en">The concept scheme for Open Annotation Motivations</rdfs:comment>
+        <rdfs:label xml:lang="en-us">motivation scheme</rdfs:label>
+        <rdfs:comment xml:lang="en-us">The concept scheme for Open Annotation Motivations</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -2978,7 +3051,7 @@
      -->
 
     <rdf:Description rdf:about="&xsd;language">
-        <rdfs:comment xml:lang="en">Caption title, printed at the head of the first page of text.</rdfs:comment>
+        <rdfs:comment xml:lang="en-us">Caption title, printed at the head of the first page of text.</rdfs:comment>
     </rdf:Description>
 </rdf:RDF>
 
