@@ -1604,18 +1604,6 @@
     
 
 
-    <!-- http://bibframe.org/vocab/northernmostLatitude -->
-
-    <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/northernmostLatitude">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:label xml:lang="en-us">northernmost latitude</rdfs:label>
-        <rdfs:comment xml:lang="en-us">Records northernmost latitudinal coordinate of the geographic entity. The abbreviations for the hemispheres are: N = North, S = South, E = East, W = West. The coordinates may be recorded in the form hdddmmss (hemisphere-degrees-minutes-seconds); however, other forms are also allowed, such as decimal degrees. Unused positions contain zeros.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Cartography"/>
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://bibframe.org/vocab/note -->
 
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/note">
@@ -1654,18 +1642,6 @@
         <rdfs:label xml:lang="en-us">responsibility note</rdfs:label>
         <rdfs:comment xml:lang="en-us">Statement relating to the identification and/or function of any persons, families, or corporate bodies responsible for the creation of, or contributing to the content of a resource.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/southernmostLatitude -->
-
-    <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/southernmostLatitude">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:label xml:lang="en-us">southernmost latitude</rdfs:label>
-        <rdfs:comment xml:lang="en-us">Records northernmost latitudinal coordinate of the geographic entity. The abbreviations for the hemispheres are: N = North, S = South, E = East, W = West. The coordinates may be recorded in the form hdddmmss (hemisphere-degrees-minutes-seconds); however, other forms are also allowed, such as decimal degrees. Unused positions contain zeros.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Cartography"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
