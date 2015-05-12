@@ -427,6 +427,7 @@
     <!-- http://bibframe.org/vocab/hasHolding -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasHolding">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
         <rdfs:label xml:lang="en-us">has holding</rdfs:label>
         <rdfs:comment xml:lang="en-us">Instance for which holding is reported</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
@@ -545,6 +546,7 @@
     <!-- http://bibframe.org/vocab/hasReceipt -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasReceipt">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
         <rdfs:label xml:lang="en-us">has receipt</rdfs:label>
         <rdfs:comment xml:lang="en-us">Relates an Award to the AwardReceipt.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Award"/>
@@ -746,6 +748,7 @@
     <!-- http://bibframe.org/vocab/isHoldingFor -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/isHoldingFor">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:label xml:lang="en-us">is holding for</rdfs:label>
         <rdfs:comment xml:lang="en-us">Instance for which holding is reported</rdfs:comment>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Instance"/>
@@ -965,6 +968,7 @@
     <!-- http://bibframe.org/vocab/received -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/received">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
         <rdfs:label xml:lang="en-us">received</rdfs:label>
         <rdfs:comment xml:lang="en-us">Relates award recipient (foaf:Agent or bf:Work) to the AwardReceipt.</rdfs:comment>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/AwardReceipt"/>
