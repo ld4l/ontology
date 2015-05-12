@@ -806,6 +806,16 @@
     
 
 
+    <!-- http://bibframe.org/vocab/isTitleOf -->
+
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/isTitleOf">
+        <rdfs:label xml:lang="en">is title of</rdfs:label>
+        <rdfs:comment>Relates a Title to a Title, Work, or Instance</rdfs:comment>
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/hasTitle"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://bibframe.org/vocab/isTranslationOf -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/isTranslationOf">
