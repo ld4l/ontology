@@ -543,7 +543,7 @@
     <!-- http://bibframe.org/vocab/hasReceipt -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasReceipt">
-        <rdfs:label xml:lang="en-us">receipt of</rdfs:label>
+        <rdfs:label xml:lang="en-us">has receipt</rdfs:label>
         <rdfs:comment xml:lang="en-us">Relates an Award to the AwardReceipt.</rdfs:comment>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Award"/>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/AwardReceipt"/>
