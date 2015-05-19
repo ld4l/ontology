@@ -2805,8 +2805,8 @@
 
     <owl:Class rdf:about="http://schema.org/Event">
         <rdfs:label xml:lang="en-us">Event</rdfs:label>
+        <skos:editorialNote xml:lang="en">schema:Events are subclasses of schema:Thing.</skos:editorialNote>
         <rdfs:comment xml:lang="en-us">An event happening at a certain time and location, such as a concert, lecture, or festival. Repeated events may be structured as separate Event objects. Can be used for named events, e.g. Battle of Gettsyburg, or un-named date ranges, e.g. 1945- 1950.</rdfs:comment>
-        <skos:editorialNote xml:lang="en-us">schema:Events are subclasses of schema:Thing, but not schema:Thing to the BIBFRAME ontology</skos:editorialNote>
     </owl:Class>
     
 
