@@ -20,19 +20,19 @@
 
 <rdf:RDF xmlns="http://bibframe.org/vocab/"
      xml:base="http://bibframe.org/vocab/"
-     xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:marcrel="http://id.loc.gov/vocabulary/relators/"
-     xmlns:prov="http://www.w3.org/ns/prov#"
-     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:cnt="http://www.w3.org/2011/content#"
-     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:oa="http://www.w3.org/ns/oa#"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:vivo="http://vivoweb.org/ontology/core#">
+     xmlns:marcrel="http://id.loc.gov/vocabulary/relators/"
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:vivo="http://vivoweb.org/ontology/core#"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="http://bibframe.org/vocab/">
         <rdfs:label xml:lang="en-us">LD4L Proposed Bibframe Ontology</rdfs:label>
         <owl:versionInfo xml:lang="en-us">Initially automatically generated.</owl:versionInfo>
@@ -176,8 +176,8 @@
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/continuedBy">
         <rdfs:label xml:lang="en-us">continued by</rdfs:label>
         <rdfs:comment xml:lang="en-us">Work whose content continues an earlier work under a new title.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
         <owl:inverseOf rdf:resource="http://bibframe.org/vocab/continues"/>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/precedes"/>
     </owl:ObjectProperty>
@@ -189,8 +189,8 @@
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/continues">
         <rdfs:label xml:lang="en-us">continues</rdfs:label>
         <rdfs:comment xml:lang="en-us">Work that is continued by the content of a later work under a new title.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/succeeds"/>
     </owl:ObjectProperty>
     
@@ -201,8 +201,8 @@
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/derivedFrom">
         <rdfs:label xml:lang="en-us">derived from</rdfs:label>
         <rdfs:comment xml:lang="en-us">Link to the record that was the source of the data, when applicable.</rdfs:comment>
-        <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
+        <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
         <owl:inverseOf rdf:resource="http://bibframe.org/vocab/hasDerivative"/>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/succeeds"/>
     </owl:ObjectProperty>
@@ -257,8 +257,8 @@
         <rdf:type rdf:resource="&owl;SymmetricProperty"/>
         <rdfs:label xml:lang="en-us">equivalent to</rdfs:label>
         <rdfs:comment xml:lang="en-us">Instance embodies the same expression of a work as the resource being described.</rdfs:comment>
-        <rdfs:range rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
+        <rdfs:range rdf:resource="http://bibframe.org/vocab/Instance"/>
     </owl:ObjectProperty>
     
 
@@ -360,8 +360,8 @@
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasDataSource">
         <rdfs:label xml:lang="en-us">has data source</rdfs:label>
         <rdfs:comment xml:lang="en-us">Work that is a data source to which the described resource is related. It may contain information about other files, printed sources, or collection procedures.</rdfs:comment>
-        <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
+        <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
     </owl:ObjectProperty>
     
 
@@ -383,8 +383,8 @@
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasExpression">
         <rdfs:label xml:lang="en-us">has expression</rdfs:label>
         <rdfs:comment xml:lang="en-us">Work has a related expression. For use to connect Works under FRBR/RDA rules.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
         <owl:inverseOf rdf:resource="http://bibframe.org/vocab/isExpressionOf"/>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/precedes"/>
     </owl:ObjectProperty>
@@ -496,8 +496,8 @@
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasOriginalVersion">
         <rdfs:label xml:lang="en-us">has original version</rdfs:label>
         <rdfs:comment xml:lang="en-us">Instance is the original version of which this resource is a reproduction.</rdfs:comment>
-        <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
+        <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/derivedFrom"/>
     </owl:ObjectProperty>
     
@@ -656,8 +656,8 @@
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasTranslatedTitle">
         <rdfs:label xml:lang="en-us">has translated title</rdfs:label>
         <rdfs:comment xml:lang="en-us">A title has a translated version to support search in another language</rdfs:comment>
-        <rdfs:range rdf:resource="http://bibframe.org/vocab/Title"/>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Title"/>
+        <rdfs:range rdf:resource="http://bibframe.org/vocab/Title"/>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/hasVariantTitle"/>
     </owl:ObjectProperty>
     
@@ -737,8 +737,8 @@
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/isFindingAidFor">
         <rdfs:label xml:lang="en-us">is finding aid for</rdfs:label>
         <rdfs:comment xml:lang="en-us">Relationship is from a finding aid or similar control materials to archival, visual, and manuscript resources.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/accompanies"/>
         <owl:inverseOf rdf:resource="http://bibframe.org/vocab/hasFindingAid"/>
     </owl:ObjectProperty>
@@ -867,8 +867,8 @@
         <rdf:type rdf:resource="&owl;SymmetricProperty"/>
         <rdfs:label xml:lang="en-us">issued with</rdfs:label>
         <rdfs:comment xml:lang="en-us">Instance that is issued on the same carrier as the instance being described.</rdfs:comment>
-        <rdfs:range rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
+        <rdfs:range rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/accompaniedBy"/>
     </owl:ObjectProperty>
     
@@ -1019,8 +1019,8 @@
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/reproduces">
         <rdfs:label xml:lang="en-us">reproduces</rdfs:label>
         <rdfs:comment xml:lang="en-us">Instance that reproduces another Instance embodying the same work.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Instance"/>
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
         <owl:inverseOf rdf:resource="http://bibframe.org/vocab/hasReproduction"/>
     </owl:ObjectProperty>
     
@@ -1031,8 +1031,8 @@
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/separatedFrom">
         <rdfs:label xml:lang="en-us">separated from</rdfs:label>
         <rdfs:comment xml:lang="en-us">The subject work was formed from part of the content of a preceding work.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
         <owl:inverseOf rdf:resource="http://bibframe.org/vocab/separatedInto"/>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/succeeds"/>
     </owl:ObjectProperty>
@@ -1091,8 +1091,8 @@
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/supersededBy">
         <rdfs:label xml:lang="en-us">superseded by</rdfs:label>
         <rdfs:comment xml:lang="en-us">Later Work used in place of an earlier work, usually because the later work contains updated or new information.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/precedes"/>
     </owl:ObjectProperty>
     
@@ -2058,6 +2058,7 @@
 
     <owl:Class rdf:about="http://bibframe.org/vocab/CirculationStatus">
         <rdfs:label xml:lang="en-us">Circulation status</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&skos;Concept"/>
         <skos:editorialNote xml:lang="en-us">TO DO: Enumerate values</skos:editorialNote>
     </owl:Class>
     
@@ -2116,6 +2117,7 @@
 
     <owl:Class rdf:about="http://bibframe.org/vocab/Dissertation">
         <rdfs:label xml:lang="en-us">Dissertation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:comment xml:lang="en-us">A thesis or disseration written in association with earning an academic degree.</rdfs:comment>
     </owl:Class>
     
@@ -2744,6 +2746,7 @@
 
     <owl:Class rdf:about="http://bibframe.org/vocab/Topic">
         <rdfs:label xml:lang="en-us">Topic</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&skos;Concept"/>
         <rdfs:comment xml:lang="en-us">Concept or area of knowledge.</rdfs:comment>
     </owl:Class>
     
@@ -2828,6 +2831,7 @@
 
     <owl:Class rdf:about="&vivo;AcademicDegree">
         <rdfs:label xml:lang="en-us">Academic degree</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&skos;Concept"/>
         <rdfs:comment xml:lang="en-us">An academic degree at any level, both as reported by individuals for employment and as offered by academic degree programs.</rdfs:comment>
         <skos:editorialNote xml:lang="en-us">Include a degree vocabulary such as http://vivoweb.org/ontology/degree/.</skos:editorialNote>
     </owl:Class>
@@ -2838,6 +2842,7 @@
 
     <owl:Class rdf:about="&vivo;Meeting">
         <rdfs:label xml:lang="en-us">Meeting</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://schema.org/Event"/>
         <rdfs:comment xml:lang="en-us">A gathering of people for a defined purpose, not necessarily public or announced</rdfs:comment>
     </owl:Class>
     
@@ -3054,5 +3059,5 @@
 
 
 
-<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
 
