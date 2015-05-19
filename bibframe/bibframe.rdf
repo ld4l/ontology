@@ -589,7 +589,11 @@
     <!-- http://bibframe.org/vocab/hasSourceStatus -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasSourceStatus">
+        <rdfs:label>has source status</rdfs:label>
+        <rdfs:comment>The source status of a Title.</rdfs:comment>
+        <skos:editorialNote>Can this be changed to hasSource?</skos:editorialNote>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/TitleSourceStatus"/>
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/isSourceStatusOf"/>
         <rdfs:domain rdf:resource="http://www.loc.gov/mads/rdf/v1#Title"/>
     </owl:ObjectProperty>
     
@@ -758,6 +762,17 @@
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Award"/>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/AwardReceipt"/>
         <owl:inverseOf rdf:resource="http://bibframe.org/vocab/hasReceipt"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bibframe.org/vocab/isSourceStatusOf -->
+
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/isSourceStatusOf">
+        <rdfs:label>is source status of</rdfs:label>
+        <skos:editorialNote>Can this be changed to isSourceOf?</skos:editorialNote>
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/TitleSourceStatus"/>
+        <rdfs:range rdf:resource="http://www.loc.gov/mads/rdf/v1#Title"/>
     </owl:ObjectProperty>
     
 
