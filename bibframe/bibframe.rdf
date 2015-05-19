@@ -201,8 +201,6 @@
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/derivedFrom">
         <rdfs:label xml:lang="en-us">derived from</rdfs:label>
         <rdfs:comment xml:lang="en-us">Link to the record that was the source of the data, when applicable.</rdfs:comment>
-        <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
-        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
         <owl:inverseOf rdf:resource="http://bibframe.org/vocab/hasDerivative"/>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/succeeds"/>
     </owl:ObjectProperty>
@@ -370,7 +368,7 @@
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasDerivative">
         <rdfs:label xml:lang="en-us">has derivative</rdfs:label>
-        <rdfs:comment xml:lang="en-us">Work has a modification for which it is the source.</rdfs:comment>
+        <rdfs:comment xml:lang="en-us">The resource has a modification for which it is the source. </rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/precedes"/>
     </owl:ObjectProperty>
     
@@ -494,8 +492,6 @@
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasOriginalVersion">
         <rdfs:label xml:lang="en-us">has original version</rdfs:label>
         <rdfs:comment xml:lang="en-us">Instance is the original version of which this resource is a reproduction.</rdfs:comment>
-        <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
-        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/derivedFrom"/>
     </owl:ObjectProperty>
     
@@ -529,6 +525,7 @@
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasPreferredTitle">
         <rdfs:label xml:lang="en-us">has preferred title</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/hasTitle"/>
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/isPreferredTitleOf"/>
         <rdfs:range rdf:resource="http://www.loc.gov/mads/rdf/v1#Title"/>
         <rdfs:domain>
             <owl:Class>
@@ -734,6 +731,24 @@
     
 
 
+    <!-- http://bibframe.org/vocab/isPreferredTitleOf -->
+
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/isPreferredTitleOf">
+        <rdfs:label>is preferred title of</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/isTitleOf"/>
+        <rdfs:domain rdf:resource="http://www.loc.gov/mads/rdf/v1#Title"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bibframe.org/vocab/Instance"/>
+                    <rdf:Description rdf:about="http://bibframe.org/vocab/Work"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://bibframe.org/vocab/isReceiptOf -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/isReceiptOf">
@@ -776,6 +791,16 @@
         <rdfs:label xml:lang="en">is title of</rdfs:label>
         <rdfs:comment>Relates a Title to a Title, Work, or Instance</rdfs:comment>
         <owl:inverseOf rdf:resource="http://bibframe.org/vocab/hasTitle"/>
+        <rdfs:domain rdf:resource="http://www.loc.gov/mads/rdf/v1#Title"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bibframe.org/vocab/Instance"/>
+                    <rdf:Description rdf:about="http://bibframe.org/vocab/Item"/>
+                    <rdf:Description rdf:about="http://bibframe.org/vocab/Work"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -1090,8 +1115,6 @@
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/translates">
         <rdfs:label xml:lang="en-us">translates</rdfs:label>
         <rdfs:comment xml:lang="en-us">Work that has been translated, i.e., the text expressed in a language different from that of the original work).</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
-        <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/derivedFrom"/>
         <owl:inverseOf rdf:resource="http://bibframe.org/vocab/translatedAs"/>
     </owl:ObjectProperty>
