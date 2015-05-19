@@ -2913,7 +2913,7 @@
 
     <owl:Class rdf:about="http://www.loc.gov/mads/rdf/v1#Title">
         <rdfs:label xml:lang="en">Title</rdfs:label>
-        <rdfs:comment rdf:datatype="&xsd;string">The title of a Work, Instance, or Item.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">The title of a Work, Instance, or Item. A resource may have more than one title.</rdfs:comment>
     </owl:Class>
     
 
