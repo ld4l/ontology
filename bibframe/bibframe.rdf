@@ -2020,7 +2020,13 @@
 
     <owl:Class rdf:about="http://bibframe.org/vocab/BinderTitle">
         <rdfs:label>Binder title</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/ItemTitle"/>
+        <rdfs:subClassOf rdf:resource="http://www.loc.gov/mads/rdf/v1#Title"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bibframe.org/vocab/isTitleOf"/>
+                <owl:allValuesFrom rdf:resource="http://bibframe.org/vocab/Item"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment>Title printed on an item&apos;s cover after rebinding.</rdfs:comment>
     </owl:Class>
     
@@ -2031,6 +2037,19 @@
     <owl:Class rdf:about="http://bibframe.org/vocab/CaptionTitle">
         <rdfs:label xml:lang="en-us">Caption title</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.loc.gov/mads/rdf/v1#Title"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bibframe.org/vocab/isTitleOf"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://bibframe.org/vocab/Instance"/>
+                            <rdf:Description rdf:about="http://bibframe.org/vocab/Item"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en-us">Caption title, printed at the head of the first page of text.</rdfs:comment>
     </owl:Class>
     
@@ -2089,8 +2108,20 @@
 
     <owl:Class rdf:about="http://bibframe.org/vocab/ContainerTitle">
         <rdfs:label>Container title</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/InstanceTitle"/>
-        <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/ItemTitle"/>
+        <rdfs:subClassOf rdf:resource="http://www.loc.gov/mads/rdf/v1#Title"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bibframe.org/vocab/isTitleOf"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://bibframe.org/vocab/Instance"/>
+                            <rdf:Description rdf:about="http://bibframe.org/vocab/Item"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment>Title on a case or container, such as a CD case.</rdfs:comment>
     </owl:Class>
     
@@ -2100,8 +2131,20 @@
 
     <owl:Class rdf:about="http://bibframe.org/vocab/CoverTitle">
         <rdfs:label xml:lang="en-us">Cover title</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/InstanceTitle"/>
-        <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/ItemTitle"/>
+        <rdfs:subClassOf rdf:resource="http://www.loc.gov/mads/rdf/v1#Title"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bibframe.org/vocab/isTitleOf"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://bibframe.org/vocab/Instance"/>
+                            <rdf:Description rdf:about="http://bibframe.org/vocab/Item"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en-us">Cover title that is printed on the original cover of a publication or lettered or stamped on the publisher&apos;s binding.</rdfs:comment>
     </owl:Class>
     
@@ -2238,16 +2281,6 @@
     
 
 
-    <!-- http://bibframe.org/vocab/InstanceTitle -->
-
-    <owl:Class rdf:about="http://bibframe.org/vocab/InstanceTitle">
-        <rdfs:label>Instance title</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://www.loc.gov/mads/rdf/v1#Title"/>
-        <rdfs:comment>The title of an Instance.</rdfs:comment>
-    </owl:Class>
-    
-
-
     <!-- http://bibframe.org/vocab/Integrating -->
 
     <owl:Class rdf:about="http://bibframe.org/vocab/Integrating">
@@ -2374,16 +2407,6 @@
         <rdfs:label xml:lang="en-us">Item</rdfs:label>
         <owl:disjointWith rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:comment xml:lang="en-us">A singular physical item that can be held, circulated, etc. Equivalant to the FRBR Item class.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://bibframe.org/vocab/ItemTitle -->
-
-    <owl:Class rdf:about="http://bibframe.org/vocab/ItemTitle">
-        <rdfs:label>Item title</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://www.loc.gov/mads/rdf/v1#Title"/>
-        <rdfs:comment>A title that applies to a single physical item, such as a BinderTitle when the item has been rebound.</rdfs:comment>
     </owl:Class>
     
 
@@ -2548,6 +2571,16 @@
     
 
 
+    <!-- http://bibframe.org/vocab/PartialTitle -->
+
+    <owl:Class rdf:about="http://bibframe.org/vocab/PartialTitle">
+        <rdfs:label xml:lang="en-us">Partial title</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.loc.gov/mads/rdf/v1#Title"/>
+        <rdfs:comment xml:lang="en-us">A portion of a title for which access a title by itself is desired, e.g. &apos;Modern Writing&apos; could serve as a portion of title for &apos;The Berkley book of modern writing&apos;.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://bibframe.org/vocab/Policy -->
 
     <owl:Class rdf:about="http://bibframe.org/vocab/Policy">
@@ -2562,16 +2595,6 @@
     <owl:Class rdf:about="http://bibframe.org/vocab/PolicySet">
         <rdfs:label xml:lang="en-us">Policy set</rdfs:label>
         <rdfs:comment xml:lang="en-us">Find suitable superclass(es) (e.g., Collection)</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://bibframe.org/vocab/PortionOfTitle -->
-
-    <owl:Class rdf:about="http://bibframe.org/vocab/PortionOfTitle">
-        <rdfs:label xml:lang="en-us">Portion of title</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://www.loc.gov/mads/rdf/v1#Title"/>
-        <rdfs:comment xml:lang="en-us">A portion of a title for which access a title by itself is desired, e.g. &apos;Modern Writing&apos; could serve as a portion of title for &apos;The Berkley book of modern writing&apos;.</rdfs:comment>
     </owl:Class>
     
 
@@ -2611,6 +2634,19 @@
     <owl:Class rdf:about="http://bibframe.org/vocab/RunningTitle">
         <rdfs:label xml:lang="en-us">Running title</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.loc.gov/mads/rdf/v1#Title"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bibframe.org/vocab/isTitleOf"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://bibframe.org/vocab/Instance"/>
+                            <rdf:Description rdf:about="http://bibframe.org/vocab/Item"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en-us">Running title, printed on the top or bottom margin of each page of a publication.</rdfs:comment>
     </owl:Class>
     
@@ -2660,8 +2696,20 @@
 
     <owl:Class rdf:about="http://bibframe.org/vocab/SpineTitle">
         <rdfs:label xml:lang="en-us">Spine title</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/InstanceTitle"/>
-        <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/ItemTitle"/>
+        <rdfs:subClassOf rdf:resource="http://www.loc.gov/mads/rdf/v1#Title"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bibframe.org/vocab/isTitleOf"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://bibframe.org/vocab/Instance"/>
+                            <rdf:Description rdf:about="http://bibframe.org/vocab/Item"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en-us">Title taken from the spine of a resource.</rdfs:comment>
     </owl:Class>
     
