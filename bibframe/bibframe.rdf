@@ -205,14 +205,6 @@
         <rdfs:comment xml:lang="en-us">Link to the record that was the source of the data, when applicable.</rdfs:comment>
         <owl:inverseOf rdf:resource="http://bibframe.org/vocab/hasDerivative"/>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/succeeds"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://bibframe.org/vocab/Work"/>
-                    <rdf:Description rdf:about="&madsrdf;Title"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -221,6 +213,14 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bibframe.org/vocab/Work"/>
+                    <rdf:Description rdf:about="&madsrdf;Title"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -293,7 +293,7 @@
     <!-- http://bibframe.org/vocab/formedFrom -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/formedFrom">
-        <rdfs:label xml:lang="en-us">formed out of</rdfs:label>
+        <rdfs:label xml:lang="en-us">formed from</rdfs:label>
         <rdfs:comment xml:lang="en-us">The subject work was formed from the merging of two or more separate works.</rdfs:comment>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
         <owl:inverseOf rdf:resource="http://bibframe.org/vocab/splitInto"/>
@@ -388,14 +388,6 @@
         <rdfs:label xml:lang="en-us">has derivative</rdfs:label>
         <rdfs:comment xml:lang="en-us">The resource has a modification for which it is the source. </rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/precedes"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://bibframe.org/vocab/Work"/>
-                    <rdf:Description rdf:about="&madsrdf;Title"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -404,6 +396,14 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bibframe.org/vocab/Work"/>
+                    <rdf:Description rdf:about="&madsrdf;Title"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -2686,7 +2686,7 @@
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&madsrdf;Title"/> 
+                    <rdf:Description rdf:about="&madsrdf;Title"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://bibframe.org/vocab/isTitleOf"/>
                         <owl:allValuesFrom>
@@ -2697,9 +2697,9 @@
                                 </owl:unionOf>
                             </owl:Class>
                         </owl:allValuesFrom>
-                    </owl:Restriction>                    
+                    </owl:Restriction>
                 </owl:intersectionOf>
-            </owl:Class>           
+            </owl:Class>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en-us">Running title, printed on the top or bottom margin of each page of a publication.</rdfs:comment>
     </owl:Class>
@@ -2753,7 +2753,7 @@
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&madsrdf;Title"/> 
+                    <rdf:Description rdf:about="&madsrdf;Title"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://bibframe.org/vocab/isTitleOf"/>
                         <owl:allValuesFrom>
@@ -2764,9 +2764,9 @@
                                 </owl:unionOf>
                             </owl:Class>
                         </owl:allValuesFrom>
-                    </owl:Restriction>                    
+                    </owl:Restriction>
                 </owl:intersectionOf>
-            </owl:Class>           
+            </owl:Class>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en-us">Title taken from the spine of a resource.</rdfs:comment>
     </owl:Class>
@@ -2930,19 +2930,18 @@
         <rdfs:label xml:lang="en-us">Work</rdfs:label>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://bibframe.org/vocab/hasDerivative"/>
+                <owl:onProperty rdf:resource="http://bibframe.org/vocab/derivedFrom"/>
                 <owl:allValuesFrom rdf:resource="http://bibframe.org/vocab/Work"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://bibframe.org/vocab/derivedFrom"/>
+                <owl:onProperty rdf:resource="http://bibframe.org/vocab/hasDerivative"/>
                 <owl:allValuesFrom rdf:resource="http://bibframe.org/vocab/Work"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en-us">Resource reflecting a conceptual essence of the cataloging resource.</rdfs:comment>
     </owl:Class>
-    
     
 
 
