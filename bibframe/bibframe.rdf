@@ -290,11 +290,11 @@
     
 
 
-    <!-- http://bibframe.org/vocab/formedFrom -->
+    <!-- http://bibframe.org/vocab/formedBySplitting -->
 
-    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/formedFrom">
-        <rdfs:label xml:lang="en-us">formed from</rdfs:label>
-        <rdfs:comment xml:lang="en-us">The subject work was formed from the merging of two or more separate works.</rdfs:comment>
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/formedBySplitting">
+        <rdfs:label xml:lang="en-us">formed by splitting</rdfs:label>
+        <rdfs:comment xml:lang="en-us">The subject works were formed by splitting another work.</rdfs:comment>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
         <owl:inverseOf rdf:resource="http://bibframe.org/vocab/splitInto"/>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/succeeds"/>
@@ -1068,7 +1068,8 @@
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/separatedFrom">
         <rdfs:label xml:lang="en-us">separated from</rdfs:label>
-        <rdfs:comment xml:lang="en-us">The subject work was formed from part of the content of a preceding work.</rdfs:comment>
+        <skos:editorialNote>Similar to bf:formedBySplitting, but here we need specify only one antecedent work.</skos:editorialNote>
+        <rdfs:comment xml:lang="en-us">The subject work was formed from part of the content of a preceding work. </rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
         <owl:inverseOf rdf:resource="http://bibframe.org/vocab/separatedInto"/>
@@ -1081,7 +1082,8 @@
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/separatedInto">
         <rdfs:label xml:lang="en-us">separated into</rdfs:label>
-        <rdfs:comment xml:lang="en-us">A portion of the subject work separated to form the content of a succeeding work.</rdfs:comment>
+        <skos:editorialNote>Similar to bf:splitInto, but here we need specify only a single resulting work, rather than two or more.</skos:editorialNote>
+        <rdfs:comment xml:lang="en-us">A portion of the subject work separated to form the content of a succeeding work. </rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/precedes"/>
