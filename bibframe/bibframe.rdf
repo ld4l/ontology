@@ -229,14 +229,6 @@
         <skos:scopeNote xml:lang="en-us">Titles can be derived from other Titles, and Works can be derived from other Works. Property restrictions on Work and Title prevent linking subjects and objects of different types.</skos:scopeNote>
         <owl:inverseOf rdf:resource="http://bibframe.org/vocab/hasDerivative"/>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/succeeds"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://bibframe.org/vocab/DerivedTitle"/>
-                    <rdf:Description rdf:about="http://bibframe.org/vocab/Work"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -245,6 +237,14 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bibframe.org/vocab/DerivedTitle"/>
+                    <rdf:Description rdf:about="http://bibframe.org/vocab/Work"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -2274,7 +2274,6 @@
         <skos:example>The translation of a base Title is a DerivedTitle.</skos:example>
         <rdfs:comment>A Title that is derived from the base Title of a Work or Instance. </rdfs:comment>
         <skos:editorialNote>If all DerivedTitles are catologer or machine transcribed, and all SourceTitles are transcribed, then we can do away with the TitleSourceStatus class and associated properties and individuals.</skos:editorialNote>
-        <skos:editorialNote>Do Instance Titles also have DerivedTitles, or only directly-associated Titles?</skos:editorialNote>
     </owl:Class>
     
 
