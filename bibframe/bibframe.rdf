@@ -2714,7 +2714,7 @@
     <owl:Class rdf:about="http://bibframe.org/vocab/NotatedMovement">
         <rdfs:label xml:lang="en-us">Notated movement</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Work"/>
-        <rdfs:comment xml:lang="en-us">Graphic, non-realized representations of movement intended to be perceived visually, e.g. dance.</rdfs:comment>
+        <rdfs:comment xml:lang="en-us">Graphic, non-realized representation of movement intended to be perceived visually, e.g. dance.</rdfs:comment>
     </owl:Class>
     
 
@@ -2724,7 +2724,7 @@
     <owl:Class rdf:about="http://bibframe.org/vocab/NotatedMusic">
         <rdfs:label xml:lang="en-us">Notated music</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Work"/>
-        <rdfs:comment xml:lang="en-us">Graphic, non-realized representations of musical works intended to be perceived visually.</rdfs:comment>
+        <rdfs:comment xml:lang="en-us">Graphic, non-realized representation of a musical work intended to be perceived visually.</rdfs:comment>
     </owl:Class>
     
 
@@ -2742,7 +2742,8 @@
 
     <owl:Class rdf:about="http://bibframe.org/vocab/PolicySet">
         <rdfs:label xml:lang="en-us">Policy set</rdfs:label>
-        <rdfs:comment xml:lang="en-us">Find suitable superclass(es) (e.g., Collection)</rdfs:comment>
+        <rdfs:comment>A set of policies governing one or more bibliographic resources.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="&skos;Collection"/>
     </owl:Class>
     
 
@@ -2762,7 +2763,7 @@
     <owl:Class rdf:about="http://bibframe.org/vocab/Print">
         <rdfs:label xml:lang="en-us">Print</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Instance"/>
-        <rdfs:comment xml:lang="en-us">Resource that is printed.</rdfs:comment>
+        <rdfs:comment xml:lang="en-us">A printed resource.</rdfs:comment>
     </owl:Class>
     
 
@@ -2793,6 +2794,7 @@
         <rdfs:label xml:lang="en-us">Serial</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:comment xml:lang="en-us">Multiple unit cataloging resource issued in successive parts that has no predetermined conclusion.</rdfs:comment>
+        <skos:editorialNote>Why is this a subclass of Instance rather than Work?</skos:editorialNote>
     </owl:Class>
     
 
@@ -2822,7 +2824,7 @@
     <owl:Class rdf:about="http://bibframe.org/vocab/SortTitle">
         <rdfs:label xml:lang="en-us">Sort title</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/DerivedTitle"/>
-        <rdfs:comment xml:lang="en-us">A title optimized for sorting, e.g. non-filing characters are removed.</rdfs:comment>
+        <rdfs:comment xml:lang="en-us">A title optimized for sorting; e.g.; non-filing characters are removed.</rdfs:comment>
         <skos:editorialNote>Review the need for a SortTitle. From Steven: I’m questioning the need for a SortTitle, and whether sorting could be handled with Title parts using madsrdf:TitleElements. MADSRDF has a TitleElement subclass NonSortElement. http://www.loc.gov/standards/mads/rdf/v1.html#TitleElement</skos:editorialNote>
     </owl:Class>
     
@@ -2852,7 +2854,6 @@
         </rdfs:subClassOf>
         <rdfs:comment>A SourceTitle is associated directly with an Item or Instance, and is related to its materialization.</rdfs:comment>
         <skos:example>The Title printed on the cover or spine of a book is a SourceTitle.</skos:example>
-        <skos:editorialNote>Do Instances and Items have a &quot;base title&quot; the way Works do, or do they only have SourceTitles?</skos:editorialNote>
         <skos:editorialNote>From Steven: If all DerivedTitles are catologer or machine transcribed, and all SourceTitles are transcribed, then we can do away with the TitleSourceStatus class and associated properties and individuals.</skos:editorialNote>
     </owl:Class>
     
@@ -2894,6 +2895,7 @@
         <rdfs:label xml:lang="en-us">STRN</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Identifier"/>
         <rdfs:comment xml:lang="en-us">Standard Technical Report Number.</rdfs:comment>
+        <skos:editorialNote>See definition of TechnicalReportNumber. Should this be a subclass of it?</skos:editorialNote>
     </owl:Class>
     
 
@@ -2914,7 +2916,7 @@
     <owl:Class rdf:about="http://bibframe.org/vocab/SystemNumber">
         <rdfs:label xml:lang="en-us">System number</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Identifier"/>
-        <rdfs:comment xml:lang="en-us">Control number of a system other than LCCN or NBAN, which Identifies a resource description.</rdfs:comment>
+        <rdfs:comment xml:lang="en-us">Control number of a system other than LCCN or NBAN, which identifies a resource description.</rdfs:comment>
     </owl:Class>
     
 
@@ -2925,6 +2927,7 @@
         <rdfs:label xml:lang="en-us">Tactile</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:comment xml:lang="en-us">Resource that is intended to be perceived by touch.</rdfs:comment>
+        <skos:example>A resource written in braille.</skos:example>
     </owl:Class>
     
 
@@ -2935,6 +2938,7 @@
         <rdfs:label xml:lang="en-us">Technical report number</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Identifier"/>
         <rdfs:comment xml:lang="en-us">Identification number of a report that is not a Standard Technical Report Number.</rdfs:comment>
+        <skos:editorialNote>Should Strn be a subclass of this class?</skos:editorialNote>
     </owl:Class>
     
 
@@ -2964,7 +2968,8 @@
     <owl:Class rdf:about="http://bibframe.org/vocab/TitleSourceStatus">
         <rdfs:label>Title source status</rdfs:label>
         <rdfs:subClassOf rdf:resource="&skos;Concept"/>
-        <rdfs:comment>An individual indicating the source of a title, such as supplied by the cataloger or transcribed from the item. It is related to the title via the property bf:hasSourceStatus and its inverse.</rdfs:comment>
+        <rdfs:comment>The source of a title, such as supplied by the cataloger or transcribed from the item. It is related to the Title via the property bf:hasSourceStatus and its inverse.</rdfs:comment>
+        <skos:editorialNote>From Steven: If all DerivedTitles are catologer or machine transcribed, and all SourceTitles are transcribed, then we can do away with the TitleSourceStatus class and associated properties and individuals.</skos:editorialNote>        
     </owl:Class>
     
 
@@ -2975,6 +2980,7 @@
         <rdfs:label xml:lang="en-us">Topic</rdfs:label>
         <rdfs:subClassOf rdf:resource="&skos;Concept"/>
         <rdfs:comment xml:lang="en-us">Concept or area of knowledge.</rdfs:comment>
+        <skos:editorialNote>Individuals of this type will be derived from existing vocabularies, such as FAST headings. Or would they be subclasses rather than individuals, so that a hierarchy can be developed?</skos:editorialNote>
     </owl:Class>
     
 
@@ -2984,7 +2990,7 @@
     <owl:Class rdf:about="http://bibframe.org/vocab/TranslatedTitle">
         <rdfs:label>Translated title</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/DerivedTitle"/>
-        <rdfs:comment>A title translated from another title. The linking property is bf:translatedAs. </rdfs:comment>
+        <rdfs:comment>A title translated from another title.</rdfs:comment>
     </owl:Class>
     
 
@@ -3068,7 +3074,7 @@
     <owl:Class rdf:about="http://schema.org/Event">
         <rdfs:label xml:lang="en-us">Event</rdfs:label>
         <skos:editorialNote xml:lang="en">schema:Events are subclasses of schema:Thing.</skos:editorialNote>
-        <rdfs:comment xml:lang="en-us">An event happening at a certain time and location, such as a concert, lecture, or festival. Repeated events may be structured as separate Event objects. Can be used for named events, e.g. Battle of Gettsyburg, or un-named date ranges, e.g. 1945- 1950.</rdfs:comment>
+        <rdfs:comment xml:lang="en-us">An event happening at a certain time and location, such as a concert, lecture, or festival. Repeated events may be structured as separate Event objects. Can be used for named events, e.g., Battle of Gettsyburg, or un-named date ranges, e.g., 1945-1950.</rdfs:comment>
     </owl:Class>
     
 
@@ -3078,7 +3084,7 @@
     <owl:Class rdf:about="http://schema.org/GovernmentOrganization">
         <rdfs:label xml:lang="en-us">Government organization</rdfs:label>
         <rdfs:subClassOf rdf:resource="&foaf;Organization"/>
-        <rdfs:comment xml:lang="en-us"></rdfs:comment>
+        <rdfs:comment xml:lang="en-us">A government agency, department, branch, or other organization.</rdfs:comment>
     </owl:Class>
     
 
@@ -3105,7 +3111,7 @@
     <owl:Class rdf:about="&vivo;Meeting">
         <rdfs:label xml:lang="en-us">Meeting</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://schema.org/Event"/>
-        <rdfs:comment xml:lang="en-us">A gathering of people for a defined purpose, not necessarily public or announced</rdfs:comment>
+        <rdfs:comment xml:lang="en-us">A gathering of people for a defined purpose, not necessarily public or announced.</rdfs:comment>
     </owl:Class>
     
 
@@ -3152,7 +3158,7 @@
     <owl:Class rdf:about="&madsrdf;PartNameElement">
         <rdfs:label rdf:datatype="&xsd;string">Part name element</rdfs:label>
         <rdfs:subClassOf rdf:resource="&madsrdf;TitleElement"/>
-        <rdfs:comment xml:lang="en">The portion of a title indicating that it is a  part of another work or sequence of works, such as &quot;Volume 2,&quot; &quot;Fourth Edition,&quot; or &quot;III.&quot; A title may have more than one part name element, in which case they are ordered by bf:precedes. They are also order by bf:precedes with respect to any subtitles; the usual case is that all part name elements would succeed all subtitles.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The portion of a title indicating that it is a part of another work or sequence of works, such as &quot;Volume 2, &quot; &quot;Fourth Edition, &quot; or &quot;III.&quot; A title may have more than one part name element, in which case they are ordered by bf:precedes. They are also order by bf:precedes with respect to any subtitles; the usual case is that all part name elements would succeed all subtitles.</rdfs:comment>
     </owl:Class>
     
 
@@ -3178,7 +3184,6 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="&xsd;string">The title of a Work, Instance, or Item. A resource may have more than one title.</rdfs:comment>
-        <skos:editorialNote>We don&apos;t want the subclass restriction to be inherited by SourceTitles. Seems like we need a WorkTitle class to subsume both &quot;base titles&quot; of Works, and the DerivedTitles, and put the restriction there. Problem is if SortTitles can be both for Works or Instances. </skos:editorialNote>
     </owl:Class>
     
 
@@ -3187,7 +3192,7 @@
 
     <owl:Class rdf:about="&madsrdf;TitleElement">
         <rdfs:label xml:lang="en">Title element</rdfs:label>
-        <rdfs:comment xml:lang="en">Part of a title, such as a subtitle or part name/number.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Part of a title, such as a subtitle or part name.</rdfs:comment>
     </owl:Class>
     
 
@@ -3208,6 +3213,8 @@
     <owl:Class rdf:about="&skos;Concept">
         <rdfs:label xml:lang="en-us">Concept</rdfs:label>
         <owl:disjointWith rdf:resource="&skos;ConceptScheme"/>
+        <owl:disjointWith rdf:resource="&skos;Collection"/>
+        <rdfs:comment>A concept or idea.</rdfs:comment>
     </owl:Class>
     
 
@@ -3216,6 +3223,8 @@
 
     <owl:Class rdf:about="&skos;ConceptScheme">
         <rdfs:label xml:lang="en-us">Concept scheme</rdfs:label>
+        <owl:disjointWith rdf:resource="&skos;Concept"/>
+        <owl:disjointWith rdf:resource="&skos;Collection"/>
         <rdfs:comment xml:lang="en-us">A set of concepts, optionally including statements about semantic relationships between those concepts.</rdfs:comment>
     </owl:Class>
     
@@ -3225,6 +3234,7 @@
 
     <owl:Class rdf:about="&cnt;Content">
         <rdfs:label xml:lang="en-us">Content</rdfs:label>
+        <rdfs:comment>The content of an Annotation.</rdfs:comment>
     </owl:Class>
     
 
@@ -3234,7 +3244,7 @@
     <owl:Class rdf:about="&cnt;ContentAsText">
         <rdfs:label xml:lang="en-us">Content as text</rdfs:label>
         <rdfs:subClassOf rdf:resource="&cnt;Content"/>
-        <rdfs:comment xml:lang="en-us">The text content (can be used for text content).</rdfs:comment>
+        <rdfs:comment xml:lang="en-us">The text content of an Annotation.</rdfs:comment>
     </owl:Class>
     
 
@@ -3366,22 +3376,10 @@
     <owl:NamedIndividual rdf:about="&oa;motivationScheme">
         <rdf:type rdf:resource="&skos;ConceptScheme"/>
         <rdfs:label xml:lang="en-us">motivation scheme</rdfs:label>
-        <rdfs:comment xml:lang="en-us">The concept scheme for Open Annotation Motivations</rdfs:comment>
+        <rdfs:comment xml:lang="en-us">The concept scheme for Open Annotation Motivations.</rdfs:comment>
     </owl:NamedIndividual>
     
 
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotations
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    <rdf:Description rdf:about="&xsd;language">
-        <rdfs:comment xml:lang="en-us">Caption title, printed at the head of the first page of text.</rdfs:comment>
-    </rdf:Description>
 </rdf:RDF>
 
 
