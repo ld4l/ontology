@@ -16,6 +16,8 @@
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY marcrel "http://id.loc.gov/vocabulary/relators/" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY vann "http://purl.org/vocab/vann/" >
+    <!ENTITY vs "http://www.w3.org/2003/06/sw-vocab-status/ns#">
 ]>
 
 
@@ -34,9 +36,13 @@
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
      xmlns:vivo="http://vivoweb.org/ontology/core#">
+    
     <owl:Ontology rdf:about="http://bibframe.org/vocab/">
         <rdfs:label xml:lang="en-us">LD4L Proposed Bibframe Ontology</rdfs:label>
+        <vann:preferredNamespacePrefix>bf</vann:preferredNamespacePrefix>
         <skos:note>Throughout the ontology, skos:editorialNote is used for comments, questions, and to do items that need to be addressed, and indicate points where the ontology is not finalized. The intent is that these should be removed when the issue is resolved. Other AnnotationProperties serve as persistent explanatory notes. skos:definition is used to duplicate rdfs:comment values. The former is more precise, but the latter is widely recognized by applications.</skos:note>
         <owl:versionInfo xml:lang="en-us">Initially automatically generated.</owl:versionInfo>
         <rdfs:comment xml:lang="en-us">Proposed Bibframe ontology based on LD4L recommendations</rdfs:comment>
@@ -63,23 +69,36 @@
 
     <!-- http://www.w3.org/2004/02/skos/core#definition -->
 
-    <owl:AnnotationProperty rdf:about="&skos;definition"/>
+    <owl:AnnotationProperty rdf:about="&skos;definition">
+        <rdfs:label xml:lang="en">definition</rdfs:label>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <skos:definition xml:lang="en">A statement or formal explanation of the meaning of a concept.</skos:definition>
+        <rdfs:subPropertyOf rdf:resource="#note"/>
+    </owl:AnnotationProperty>
     
 
 
     <!-- http://www.w3.org/2004/02/skos/core#editorialNote -->
 
     <owl:AnnotationProperty rdf:about="&skos;editorialNote">
-        <rdfs:label xml:lang="en-us">editorial note</rdfs:label>
-        <skos:definition xml:lang="en-us">A note for an editor, translator or maintainer of the vocabulary.</skos:definition>
+        <rdfs:label xml:lang="en">editorial note</rdfs:label>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <skos:definition xml:lang="en">A note for an editor, translator or maintainer of the vocabulary.</skos:definition>
         <rdfs:subPropertyOf rdf:resource="&skos;note"/>
+        <!-- For non-OWL aware applications -->
+        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
     </owl:AnnotationProperty>
     
 
 
     <!-- http://www.w3.org/2004/02/skos/core#example -->
-
-    <owl:AnnotationProperty rdf:about="&skos;example"/>
+    
+    <owl:AnnotationProperty rdf:about="&skos;example">
+        <rdfs:label xml:lang="en">example</rdfs:label>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <skos:definition xml:lang="en">An example of the use of a concept.</skos:definition>
+        <rdfs:subPropertyOf rdf:resource="&skos;note"/>
+    </owl:AnnotationProperty>
     
 
 
@@ -94,9 +113,28 @@
 
     <!-- http://www.w3.org/2004/02/skos/core#scopeNote -->
 
-    <owl:AnnotationProperty rdf:about="&skos;scopeNote"/>
+    <owl:AnnotationProperty rdf:about="&skos;scopeNote">
+        <rdfs:label xml:lang="en">scope note</rdfs:label>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <skos:definition xml:lang="en">A note that helps to clarify the meaning and/or the use of a concept.</skos:definition>
+        <rdfs:subPropertyOf rdf:resource="&skos;note"/>
+    </owl:AnnotationProperty>
     
-
+    
+    <owl:AnnotationProperty rdf:about="&vann;preferredNamespacePrefix">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+        <rdfs:label xml:lang="en">preferred namespace prefix</rdfs:label>
+        <rdfs:comment xml:lang="en">The preferred namespace prefix to use when using terms from this vocabulary in an XML document.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/vocab/vann/"/>
+    </owl:AnnotationProperty>
+    
+    <rdf:Property rdf:about="&vs;term_status">
+        <rdfs:label>term status</rdfs:label>
+        <rdfs:comment>the status of a vocabulary term, expressed as a short symbolic string; known values include 'unstable','testing', 'stable' and 'archaic'</rdfs:comment>
+        <vs:term_status>unstable</vs:term_status>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2003/06/sw-vocab-status/ns#"/>  
+    </rdf:Property>
+    
 
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -2293,7 +2331,7 @@
     <owl:Class rdf:about="http://bibframe.org/vocab/DissertationIdentifier">
         <rdfs:label xml:lang="en-us">Dissertation identifier</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Identifier"/>
-        <rdfs:comment xml:lang="en-us">Identifier assigned to a dissertation for identification purposes.</rdfs:comment>
+        <rdfs:comment xml:lang="en-us">A local identifier assigned to a dissertation written at that institution.</rdfs:comment>
     </owl:Class>
     
 
@@ -2372,7 +2410,7 @@
 
     <owl:Class rdf:about="http://bibframe.org/vocab/Identifier">
         <rdfs:label xml:lang="en-us">Identifier</rdfs:label>
-        <rdfs:comment xml:lang="en-us">Token or name that is associated with a resource, such as a URI, or an ISBN, etc.</rdfs:comment>
+        <rdfs:comment xml:lang="en-us">Token or name that is associated with a resource, such as a URI or an ISBN.</rdfs:comment>
     </owl:Class>
     
 
@@ -2383,7 +2421,7 @@
         <rdfs:label xml:lang="en-us">Index</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:comment xml:lang="en-us">The index of a resource.</rdfs:comment>
-        <skos:editorialNote xml:lang="en-us">Use dcterms:isPartOf to relate Index to Work it is a part of.</skos:editorialNote>
+        <skos:scopeNote xml:lang="en-us">Use dcterms:isPartOf to relate Index to Work it is a part of.</skos:scopeNote>
     </owl:Class>
     
 
@@ -2998,6 +3036,7 @@
             </owl:Class>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en-us">Resource reflecting a conceptual essence of the cataloging resource.</rdfs:comment>
+        <vs:term_status>stable</vs:term_status>
     </owl:Class>
     
 
