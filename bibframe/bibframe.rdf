@@ -2642,17 +2642,19 @@
     <owl:Class rdf:about="http://bibframe.org/vocab/MovingImage">
         <rdfs:label xml:lang="en-us">Moving image</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Work"/>
-        <rdfs:comment xml:lang="en-us">Images intended to be perceived as moving, including motion pictures (using liveaction and/or animation), film and video recordings of performances, events,etc.</rdfs:comment>
+        <rdfs:comment xml:lang="en-us">Images intended to be perceived as moving, including motion pictures (using liveaction and/or animation); film and video recordings of performances and events; etc.</rdfs:comment>
     </owl:Class>
     
 
 
     <!-- http://bibframe.org/vocab/Multimedia -->
 
-    <owl:Class rdf:about="http://bibframe.org/vocab/Multimedia">
-        <rdfs:label xml:lang="en-us">Multimedia</rdfs:label>
+    <owl:Class rdf:about="http://bibframe.org/vocab/Software">
+        <rdfs:label xml:lang="en-us">Software</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Work"/>
-        <rdfs:comment xml:lang="en-us">Electronic resource that is a computer program (i.e. digitally encoded instructions intended to be processed and performed by a computer) or which consist of multiple media types that are software driven. Examples include videogames and websites.</rdfs:comment>
+        <skos:editorialNote>Changed from Multimedia because it seems more apt, given the definition. Do we also need a Multimedia class that is not related to software?</skos:editorialNote>
+        <rdfs:comment xml:lang="en-us">Electronic resource that is a computer program (i.e. digitally encoded instructions intended to be processed and performed by a computer) or which consists of multiple media types that are software driven.</rdfs:comment>rdfs:comment>
+        <skos:example>Examples include video games and websites.</skos:example>
     </owl:Class>
     
 
