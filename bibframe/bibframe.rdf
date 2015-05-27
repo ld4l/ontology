@@ -279,14 +279,6 @@
         <skos:scopeNote xml:lang="en-us">Titles can be derived from other Titles, and Works can be derived from other Works. Property restrictions on Work and Title prevent linking subjects and objects of different types.</skos:scopeNote>
         <owl:inverseOf rdf:resource="http://bibframe.org/vocab/hasDerivative"/>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/succeeds"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://bibframe.org/vocab/DerivedTitle"/>
-                    <rdf:Description rdf:about="http://bibframe.org/vocab/Work"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -295,6 +287,14 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bibframe.org/vocab/DerivedTitle"/>
+                    <rdf:Description rdf:about="http://bibframe.org/vocab/Work"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -478,14 +478,6 @@
         <skos:scopeNote xml:lang="en-us">The domain and range restrictions ensure that a Work is related to a Work and a Title to a Title.</skos:scopeNote>
         <rdfs:comment xml:lang="en-us">Work or Title that is derived from this Work or Title.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/precedes"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://bibframe.org/vocab/Work"/>
-                    <rdf:Description rdf:about="&madsrdf;Title"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -494,6 +486,14 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bibframe.org/vocab/Work"/>
+                    <rdf:Description rdf:about="&madsrdf;Title"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -1292,7 +1292,7 @@
     <!-- http://id.loc.gov/vocabulary/relators/cre -->
 
     <owl:ObjectProperty rdf:about="&marcrel;cre">
-        <rdfs:label xml:lang="en-us">creator</rdfs:label>
+        <rdfs:label xml:lang="en-us">has creator</rdfs:label>
         <rdfs:comment xml:lang="en-us">Creator of a resource.</rdfs:comment>
     </owl:ObjectProperty>
     
@@ -2791,9 +2791,9 @@
     <owl:Class rdf:about="http://bibframe.org/vocab/Serial">
         <rdfs:label xml:lang="en-us">Serial</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Instance"/>
-        <rdfs:comment xml:lang="en-us">Multiple unit cataloging resource issued in successive parts that has no predetermined conclusion.</rdfs:comment>
+        <skos:example>Charles Dickens&apos;s novels published in serial form.</skos:example>
         <skos:scopeNote>As a subclass of Instance, this refers to the manifestation of a Work which is published as a serial rather than, say, a single volume. Contrast with Series, which is a subclass of Work.</skos:scopeNote>
-        <skos:example>Charles Dickens's novels published in serial form.</skos:example>
+        <rdfs:comment xml:lang="en-us">Multiple unit cataloging resource issued in successive parts that has no predetermined conclusion.</rdfs:comment>
     </owl:Class>
     
 
@@ -2803,9 +2803,9 @@
     <owl:Class rdf:about="http://bibframe.org/vocab/Series">
         <rdfs:label xml:lang="en-us">Series</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Work"/>
+        <skos:example></skos:example>
         <rdfs:comment xml:lang="en-us">A larger work consisting of multiple works.</rdfs:comment>
         <skos:scopeNote>Contrast with Serial, a subclass of Instance, which concerns Works published in serial form rather than, say, a single volume. A Series is a Work consisting of multiple Works. It is related to its component Works through dcterms:hasPart.</skos:scopeNote>
-        <skos:example></skos:example>
     </owl:Class>
     
 
