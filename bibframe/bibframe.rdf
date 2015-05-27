@@ -2233,7 +2233,7 @@
     <owl:Class rdf:about="http://bibframe.org/vocab/Classification">
         <rdfs:label xml:lang="en-us">Classification</rdfs:label>
         <rdfs:subClassOf rdf:resource="&skos;Concept"/>
-        <rdfs:comment xml:lang="en-us">System of coding, assorting and organizing materials according to their subject.</rdfs:comment>
+        <rdfs:comment xml:lang="en-us">System of coding, assorting and organizing materials. It may be according to their subject or other category (e.g. Author Lastname, Specimen name, in the case of art it could be by country of origin or style period).</rdfs:comment>
     </owl:Class>
     
 
