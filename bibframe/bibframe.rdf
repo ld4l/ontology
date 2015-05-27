@@ -2803,7 +2803,7 @@
     <owl:Class rdf:about="http://bibframe.org/vocab/Series">
         <rdfs:label xml:lang="en-us">Series</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Work"/>
-        <skos:example></skos:example>
+        <skos:example>Recent Researches in Music is a Series. Individual volumes in the Series are Recent Researches in the Music of the Renaissance, ecent Researches in the Music of the Baroque Era, etc.</skos:example>
         <rdfs:comment xml:lang="en-us">A larger work consisting of multiple works.</rdfs:comment>
         <skos:scopeNote>Contrast with Serial, a subclass of Instance, which concerns Works published in serial form rather than, say, a single volume. A Series is a Work consisting of multiple Works. It is related to its component Works through dcterms:hasPart.</skos:scopeNote>
     </owl:Class>
