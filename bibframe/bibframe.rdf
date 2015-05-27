@@ -6,6 +6,8 @@
     <!ENTITY dcterms "http://purl.org/dc/terms/" >
     <!ENTITY prov "http://www.w3.org/ns/prov#" >
     <!ENTITY foaf "http://xmlns.com/foaf/0.1/" >
+    <!ENTITY vann "http://purl.org/vocab/vann/" >
+    <!ENTITY vocab "http://bibframe.org/vocab/#" >
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY madsrdf "http://www.loc.gov/mads/rdf/v1#" >
     <!ENTITY cnt "http://www.w3.org/2011/content#" >
@@ -16,8 +18,7 @@
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY marcrel "http://id.loc.gov/vocabulary/relators/" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-    <!ENTITY vann "http://purl.org/vocab/vann/" >
-    <!ENTITY vs "http://www.w3.org/2003/06/sw-vocab-status/ns#">
+    <!ENTITY vs "http://www.w3.org/2003/06/sw-vocab-status/ns#" >
 ]>
 
 
@@ -29,23 +30,23 @@
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:cnt="http://www.w3.org/2011/content#"
      xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
      xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:oa="http://www.w3.org/ns/oa#"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:vocab="http://bibframe.org/vocab/#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:vann="http://purl.org/vocab/vann/"
-     xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
      xmlns:vivo="http://vivoweb.org/ontology/core#">
-    
     <owl:Ontology rdf:about="http://bibframe.org/vocab/">
         <rdfs:label xml:lang="en-us">LD4L Proposed Bibframe Ontology</rdfs:label>
-        <vann:preferredNamespacePrefix>bf</vann:preferredNamespacePrefix>
         <skos:note>Throughout the ontology, skos:editorialNote is used for comments, questions, and to do items that need to be addressed, and indicate points where the ontology is not finalized. The intent is that these should be removed when the issue is resolved. Other AnnotationProperties serve as persistent explanatory notes. skos:definition is used to duplicate rdfs:comment values. The former is more precise, but the latter is widely recognized by applications.</skos:note>
         <owl:versionInfo xml:lang="en-us">Initially automatically generated.</owl:versionInfo>
         <rdfs:comment xml:lang="en-us">Proposed Bibframe ontology based on LD4L recommendations</rdfs:comment>
+        <vann:preferredNamespacePrefix>bf</vann:preferredNamespacePrefix>
     </owl:Ontology>
     
 
@@ -61,9 +62,36 @@
     
 
 
+    <!-- http://bibframe.org/vocab/#note -->
+
+    <owl:AnnotationProperty rdf:about="&vocab;note"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+    <owl:AnnotationProperty rdf:about="&vann;preferredNamespacePrefix">
+        <rdfs:label xml:lang="en">preferred namespace prefix</rdfs:label>
+        <rdfs:comment xml:lang="en">The preferred namespace prefix to use when using terms from this vocabulary in an XML document.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/vocab/vann/"/>
+    </owl:AnnotationProperty>
+    
+
+
     <!-- http://www.w3.org/2000/01/rdf-schema#range -->
 
     <owl:AnnotationProperty rdf:about="&rdfs;range"/>
+    
+
+
+    <!-- http://www.w3.org/2003/06/sw-vocab-status/ns#term_status -->
+
+    <owl:AnnotationProperty rdf:about="&vs;term_status">
+        <rdfs:label>term status</rdfs:label>
+        <rdfs:comment>the status of a vocabulary term, expressed as a short symbolic string; known values include &apos;unstable&apos;,&apos;testing&apos;, &apos;stable&apos; and &apos;archaic&apos;</rdfs:comment>
+        <vs:term_status>unstable</vs:term_status>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2003/06/sw-vocab-status/ns#"/>
+    </owl:AnnotationProperty>
     
 
 
@@ -71,9 +99,9 @@
 
     <owl:AnnotationProperty rdf:about="&skos;definition">
         <rdfs:label xml:lang="en">definition</rdfs:label>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
         <skos:definition xml:lang="en">A statement or formal explanation of the meaning of a concept.</skos:definition>
-        <rdfs:subPropertyOf rdf:resource="#note"/>
+        <rdfs:subPropertyOf rdf:resource="&vocab;note"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
     </owl:AnnotationProperty>
     
 
@@ -82,21 +110,19 @@
 
     <owl:AnnotationProperty rdf:about="&skos;editorialNote">
         <rdfs:label xml:lang="en">editorial note</rdfs:label>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
         <skos:definition xml:lang="en">A note for an editor, translator or maintainer of the vocabulary.</skos:definition>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
         <rdfs:subPropertyOf rdf:resource="&skos;note"/>
-        <!-- For non-OWL aware applications -->
-        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
     </owl:AnnotationProperty>
     
 
 
     <!-- http://www.w3.org/2004/02/skos/core#example -->
-    
+
     <owl:AnnotationProperty rdf:about="&skos;example">
         <rdfs:label xml:lang="en">example</rdfs:label>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
         <skos:definition xml:lang="en">An example of the use of a concept.</skos:definition>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
         <rdfs:subPropertyOf rdf:resource="&skos;note"/>
     </owl:AnnotationProperty>
     
@@ -115,26 +141,12 @@
 
     <owl:AnnotationProperty rdf:about="&skos;scopeNote">
         <rdfs:label xml:lang="en">scope note</rdfs:label>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
         <skos:definition xml:lang="en">A note that helps to clarify the meaning and/or the use of a concept.</skos:definition>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
         <rdfs:subPropertyOf rdf:resource="&skos;note"/>
     </owl:AnnotationProperty>
     
-    
-    <owl:AnnotationProperty rdf:about="&vann;preferredNamespacePrefix">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
-        <rdfs:label xml:lang="en">preferred namespace prefix</rdfs:label>
-        <rdfs:comment xml:lang="en">The preferred namespace prefix to use when using terms from this vocabulary in an XML document.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/vocab/vann/"/>
-    </owl:AnnotationProperty>
-    
-    <rdf:Property rdf:about="&vs;term_status">
-        <rdfs:label>term status</rdfs:label>
-        <rdfs:comment>the status of a vocabulary term, expressed as a short symbolic string; known values include 'unstable','testing', 'stable' and 'archaic'</rdfs:comment>
-        <vs:term_status>unstable</vs:term_status>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2003/06/sw-vocab-status/ns#"/>  
-    </rdf:Property>
-    
+
 
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -267,14 +279,6 @@
         <skos:scopeNote xml:lang="en-us">Titles can be derived from other Titles, and Works can be derived from other Works. Property restrictions on Work and Title prevent linking subjects and objects of different types.</skos:scopeNote>
         <owl:inverseOf rdf:resource="http://bibframe.org/vocab/hasDerivative"/>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/succeeds"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://bibframe.org/vocab/Work"/>
-                    <rdf:Description rdf:about="&madsrdf;Title"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -283,6 +287,14 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bibframe.org/vocab/Work"/>
+                    <rdf:Description rdf:about="&madsrdf;Title"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -466,14 +478,6 @@
         <skos:scopeNote xml:lang="en-us">The domain and range restrictions ensure that a Work is related to a Work and a Title to a Title.</skos:scopeNote>
         <rdfs:comment xml:lang="en-us">Work or Title that is derived from this Work or Title.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/precedes"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://bibframe.org/vocab/DerivedTitle"/>
-                    <rdf:Description rdf:about="http://bibframe.org/vocab/Work"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -482,6 +486,14 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bibframe.org/vocab/DerivedTitle"/>
+                    <rdf:Description rdf:about="http://bibframe.org/vocab/Work"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -2644,18 +2656,6 @@
     
 
 
-    <!-- http://bibframe.org/vocab/Multimedia -->
-
-    <owl:Class rdf:about="http://bibframe.org/vocab/Software">
-        <rdfs:label xml:lang="en-us">Software</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Work"/>
-        <skos:editorialNote>Changed from Multimedia because it seems more apt, given the definition. Do we also need a Multimedia class that is not related to software?</skos:editorialNote>
-        <rdfs:comment xml:lang="en-us">Electronic resource that is a computer program (i.e. digitally encoded instructions intended to be processed and performed by a computer) or which consists of multiple media types that are software driven.</rdfs:comment>
-        <skos:example>Examples include video games and websites.</skos:example>
-    </owl:Class>
-    
-
-
     <!-- http://bibframe.org/vocab/MultipartMonograph -->
 
     <owl:Class rdf:about="http://bibframe.org/vocab/MultipartMonograph">
@@ -2739,8 +2739,8 @@
 
     <owl:Class rdf:about="http://bibframe.org/vocab/PolicySet">
         <rdfs:label xml:lang="en-us">Policy set</rdfs:label>
-        <rdfs:comment>A set of policies governing one or more bibliographic resources.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&skos;Collection"/>
+        <rdfs:comment>A set of policies governing one or more bibliographic resources.</rdfs:comment>
     </owl:Class>
     
 
@@ -2812,6 +2812,18 @@
         <rdfs:label xml:lang="en-us">SICI</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Identifier"/>
         <rdfs:comment xml:lang="en-us">Serial Item and Contribution Identifier.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://bibframe.org/vocab/Software -->
+
+    <owl:Class rdf:about="http://bibframe.org/vocab/Software">
+        <rdfs:label xml:lang="en-us">Software</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Work"/>
+        <rdfs:comment xml:lang="en-us">Electronic resource that is a computer program (i.e. digitally encoded instructions intended to be processed and performed by a computer) or which consists of multiple media types that are software driven.</rdfs:comment>
+        <skos:example>Examples include video games and websites.</skos:example>
+        <skos:editorialNote>Changed from Multimedia because it seems more apt, given the definition. Do we also need a Multimedia class that is not related to software?</skos:editorialNote>
     </owl:Class>
     
 
@@ -2890,8 +2902,8 @@
     <owl:Class rdf:about="http://bibframe.org/vocab/Strn">
         <rdfs:label xml:lang="en-us">STRN</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Identifier"/>
-        <rdfs:comment xml:lang="en-us">Standard Technical Report Number.</rdfs:comment>
         <skos:editorialNote>See definition of TechnicalReportNumber. Should this be a subclass of it?</skos:editorialNote>
+        <rdfs:comment xml:lang="en-us">Standard Technical Report Number.</rdfs:comment>
     </owl:Class>
     
 
@@ -2922,8 +2934,8 @@
     <owl:Class rdf:about="http://bibframe.org/vocab/Tactile">
         <rdfs:label xml:lang="en-us">Tactile</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Instance"/>
-        <rdfs:comment xml:lang="en-us">Resource that is intended to be perceived by touch.</rdfs:comment>
         <skos:example>A resource written in braille.</skos:example>
+        <rdfs:comment xml:lang="en-us">Resource that is intended to be perceived by touch.</rdfs:comment>
     </owl:Class>
     
 
@@ -3208,7 +3220,6 @@
     <owl:Class rdf:about="&skos;Concept">
         <rdfs:label xml:lang="en-us">Concept</rdfs:label>
         <owl:disjointWith rdf:resource="&skos;ConceptScheme"/>
-        <owl:disjointWith rdf:resource="&skos;Collection"/>
         <rdfs:comment>A concept or idea.</rdfs:comment>
     </owl:Class>
     
@@ -3218,8 +3229,6 @@
 
     <owl:Class rdf:about="&skos;ConceptScheme">
         <rdfs:label xml:lang="en-us">Concept scheme</rdfs:label>
-        <owl:disjointWith rdf:resource="&skos;Concept"/>
-        <owl:disjointWith rdf:resource="&skos;Collection"/>
         <rdfs:comment xml:lang="en-us">A set of concepts, optionally including statements about semantic relationships between those concepts.</rdfs:comment>
     </owl:Class>
     
@@ -3269,6 +3278,7 @@
 
     <owl:Class rdf:about="&prov;Activity">
         <rdfs:label xml:lang="en-us">Activity</rdfs:label>
+        <rdfs:comment xml:lang="en">An activity is something that occurs over a period of time and acts upon or with entities; it may include consuming, processing, transforming, modifying, relocating, using, or generating entities.</rdfs:comment>
     </owl:Class>
     
 
@@ -3373,8 +3383,6 @@
         <rdfs:label xml:lang="en-us">motivation scheme</rdfs:label>
         <rdfs:comment xml:lang="en-us">The concept scheme for Open Annotation Motivations.</rdfs:comment>
     </owl:NamedIndividual>
-    
-
 </rdf:RDF>
 
 
