@@ -43,7 +43,7 @@
      xmlns:vivo="http://vivoweb.org/ontology/core#">
     <owl:Ontology rdf:about="http://bibframe.org/vocab/">
         <rdfs:label xml:lang="en-us">LD4L Proposed Bibframe Ontology</rdfs:label>
-        <skos:note>Throughout the ontology, skos:editorialNote is used for comments, questions, and to do items that need to be addressed, and indicate points where the ontology is not finalized. The intent is that these should be removed when the issue is resolved. Other AnnotationProperties serve as persistent explanatory notes. skos:definition is used to duplicate rdfs:comment values. The former is more precise, but the latter is widely recognized by applications.</skos:note>
+        <skos:note>The ontology observes the following conventions on the use of annotation properties: (1) rdfs:comment contains the definition of the term. This is a widely-observed convention to which applications are attuned, though skos:definition would be preferable. Duplicating the rdfs:comment in skos:definition is avoided because it creates a maintenance problem. (2) skos:example, skos:scopeNote, and skos:note are used as described in the skos vocabulary. (3) skos:editorialNote is used for two distinct purposes: (a) to-do items or questions intended to be resolved and removed; and (b) persistent notes about choices made, motivating factors, etc.</skos:note>
         <owl:versionInfo xml:lang="en-us">Initially automatically generated.</owl:versionInfo>
         <rdfs:comment xml:lang="en-us">Proposed Bibframe ontology based on LD4L recommendations</rdfs:comment>
         <vann:preferredNamespacePrefix>bf</vann:preferredNamespacePrefix>
@@ -279,14 +279,6 @@
         <skos:scopeNote xml:lang="en-us">Titles can be derived from other Titles, and Works can be derived from other Works. Property restrictions on Work and Title prevent linking subjects and objects of different types.</skos:scopeNote>
         <owl:inverseOf rdf:resource="http://bibframe.org/vocab/hasDerivative"/>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/succeeds"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://bibframe.org/vocab/Work"/>
-                    <rdf:Description rdf:about="&madsrdf;Title"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -295,6 +287,14 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bibframe.org/vocab/Work"/>
+                    <rdf:Description rdf:about="&madsrdf;Title"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -682,13 +682,21 @@
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasPreferredTitle">
         <rdfs:label xml:lang="en-us">has preferred title</rdfs:label>
-        <skos:editorialNote>Fix range so that it&apos;s the intersection of Title and the complement of DerivedTitle</skos:editorialNote>
-        <skos:editorialNote>Can an Instance have multiple basic titles the way a Work can?</skos:editorialNote>
+        <skos:scopeNote>A resource (Work or Instance) may have multiple directly linked (non-derived) Titles, among which this is the preferred Title.</skos:scopeNote>
         <rdfs:comment>The preferred Title of this resource.</rdfs:comment>
-        <skos:scopeNote>A resource may have multiple directly linked (non-derived) Titles, among which this is the preferred Title.</skos:scopeNote>
+        <skos:editorialNote>Is the intersection of Title and the complement of DerivedTitle equivalent to SourceTitle, or are there Titles which belong to neither subclass? That is, do DerivedTitle and SourceTitle exhaustively partition the parent class Title?</skos:editorialNote>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/hasTitle"/>
         <owl:inverseOf rdf:resource="http://bibframe.org/vocab/isPreferredTitleOf"/>
-        <rdfs:range rdf:resource="&madsrdf;Title"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bibframe.org/vocab/Title"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://bibframe.org/vocab/DerivedTitle"/>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -2803,8 +2811,8 @@
     <owl:Class rdf:about="http://bibframe.org/vocab/Series">
         <rdfs:label xml:lang="en-us">Series</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Work"/>
-        <skos:example>Recent Researches in Music is a Series. Individual volumes in the Series are Recent Researches in the Music of the Renaissance, ecent Researches in the Music of the Baroque Era, etc.</skos:example>
         <rdfs:comment xml:lang="en-us">A larger work consisting of multiple works.</rdfs:comment>
+        <skos:example>Recent Researches in Music is a Series. Individual volumes in the Series are Recent Researches in the Music of the Renaissance, ecent Researches in the Music of the Baroque Era, etc.</skos:example>
         <skos:scopeNote>Contrast with Serial, a subclass of Instance, which concerns Works published in serial form rather than, say, a single volume. A Series is a Work consisting of multiple Works. It is related to its component Works through dcterms:hasPart.</skos:scopeNote>
     </owl:Class>
     
@@ -2972,6 +2980,12 @@
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:comment xml:lang="en-us">Resource in a form intended to be perceived visually in three-dimensions.Includes man-made objects such as models, sculptures, clothing, and toys, as well as naturally occurring objects such as specimens mounted for viewing.</rdfs:comment>
     </owl:Class>
+    
+
+
+    <!-- http://bibframe.org/vocab/Title -->
+
+    <owl:Class rdf:about="http://bibframe.org/vocab/Title"/>
     
 
 
