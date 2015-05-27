@@ -2791,7 +2791,7 @@
     <owl:Class rdf:about="http://bibframe.org/vocab/Serial">
         <rdfs:label xml:lang="en-us">Serial</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Instance"/>
-        <skos:example>Charles Dickens&apos;s novels published in serial form.</skos:example>
+        <skos:example>Charles Dickens&apos; novels published in serial form.</skos:example>
         <skos:scopeNote>As a subclass of Instance, this refers to the manifestation of a Work which is published as a serial rather than, say, a single volume. Contrast with Series, which is a subclass of Work.</skos:scopeNote>
         <rdfs:comment xml:lang="en-us">Multiple unit cataloging resource issued in successive parts that has no predetermined conclusion.</rdfs:comment>
     </owl:Class>
@@ -3001,6 +3001,8 @@
     <owl:Class rdf:about="http://bibframe.org/vocab/TranslatedTitle">
         <rdfs:label>Translated title</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/DerivedTitle"/>
+        <skos:scopeNote>The derived TranslatedTitle should be distinguished from two other cases. First, if a Work is translated into another language, the translated Work has a Title. This Title is linked directly to the translated Work and is not a DerivedTitle; that is, it is the Title of a translation, rather than the translation of a Title. Second, a Work may have multiple titles in different languages, though none of the titles are the source of the others; examples might be a musical composition or a bilingual book. For example, an Arabic language textbook has the Arabic title &quot;&quot;, literally &quot;Arabic of the People,&quot; and the English title &quot;Living Arabic&quot;; neither is a translation of the other. These Titles are also linked directly to the Work, and the language of each Title is denoted through its dcterms:language value.</skos:scopeNote>
+        <skos:example>The film title &quot;Bella Martha&quot; is translated into English as &quot;Mostly Martha.&quot;</skos:example>
         <rdfs:comment>A title translated from another title.</rdfs:comment>
     </owl:Class>
     
