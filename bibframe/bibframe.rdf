@@ -2792,7 +2792,8 @@
         <rdfs:label xml:lang="en-us">Serial</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:comment xml:lang="en-us">Multiple unit cataloging resource issued in successive parts that has no predetermined conclusion.</rdfs:comment>
-        <skos:editorialNote>Why is this a subclass of Instance rather than Work?</skos:editorialNote>
+        <skos:scopeNote>As a subclass of Instance, this refers to the manifestation of a Work which is published as a serial rather than, say, a single volume. Contrast with Series, which is a subclass of Work.</skos:scopeNote>
+        <skos:example>Charles Dickens's novels published in serial form.</skos:example>
     </owl:Class>
     
 
@@ -2803,6 +2804,8 @@
         <rdfs:label xml:lang="en-us">Series</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:comment xml:lang="en-us">A larger work consisting of multiple works.</rdfs:comment>
+        <skos:scopeNote>Contrast with Serial, a subclass of Instance, which concerns Works published in serial form rather than, say, a single volume. A Series is a Work consisting of multiple Works. It is related to its component Works through dcterms:hasPart.</skos:scopeNote>
+        <skos:example></skos:example>
     </owl:Class>
     
 
