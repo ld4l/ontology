@@ -239,7 +239,7 @@
         <rdfs:label xml:lang="en-us">classified as</rdfs:label>
         <rdfs:comment xml:lang="en-us">Classification in any scheme.</rdfs:comment>
         <skos:scopeNote xml:lang="en-us">The skos:Concept that is the object of this property would be part of a skos:ConceptScheme.</skos:scopeNote>
-        <rdfs:subPropertyOf rdf:resource="&dcterms;subject"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
         <rdfs:range rdf:resource="&skos;Concept"/>
     </owl:ObjectProperty>
     
