@@ -271,6 +271,17 @@
     
 
 
+    <!-- http://bibframe.org/vocab/createdForDegree -->
+
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/createdForDegree">
+        <rdfs:label xml:lang="en-us">dissertation degree</rdfs:label>
+        <rdfs:comment xml:lang="en-us">This work was created in partial fulfillment of the requirements of the degree.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
+        <rdfs:range rdf:resource="&vivo;AcademicDegree"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://bibframe.org/vocab/derivedFrom -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/derivedFrom">
@@ -319,17 +330,6 @@
     
 
 
-    <!-- http://bibframe.org/vocab/dissertationDegree -->
-
-    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/dissertationDegree">
-        <rdfs:label xml:lang="en-us">dissertation degree</rdfs:label>
-        <rdfs:comment xml:lang="en-us">This dissertation was written in partial fulfillment of the requirements of the degree.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Dissertation"/>
-        <rdfs:range rdf:resource="&vivo;AcademicDegree"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://bibframe.org/vocab/distributedBy -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/distributedBy">
@@ -355,16 +355,16 @@
     
 
 
-    <!-- http://bibframe.org/vocab/formatOfMusic -->
+    <!-- http://bibframe.org/vocab/legacy/formatOfMusic -->
 
-    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/formatOfMusic">
+    <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/legacy/formatOfMusic">
         <rdfs:label xml:lang="en-us">format of music</rdfs:label>
         <rdfs:comment xml:lang="en-us">Format of a musical composition, e.g. full score, condensed score, vocal score, etc.</rdfs:comment>
         <skos:editorialNote xml:lang="en-us">Need a vocabulary to enumerate values.</skos:editorialNote>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
-    </owl:ObjectProperty>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
     
-
 
     <!-- http://bibframe.org/vocab/formedBySplitting -->
 
