@@ -479,14 +479,6 @@
         <skos:scopeNote xml:lang="en-us">The domain and range restrictions ensure that a Work is related to a Work and a Title to a Title.</skos:scopeNote>
         <rdfs:comment xml:lang="en-us">Work or Title that is derived from this Work or Title.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/precedes"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://bibframe.org/vocab/Work"/>
-                    <rdf:Description rdf:about="&madsrdf;Title"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -495,6 +487,14 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bibframe.org/vocab/Work"/>
+                    <rdf:Description rdf:about="&madsrdf;Title"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -1360,7 +1360,7 @@
 
     <owl:ObjectProperty rdf:about="&marcrel;cre">
         <rdfs:label xml:lang="en-us">has creator</rdfs:label>
-        <rdfs:comment xml:lang="en-us">Creator of a resource.</rdfs:comment>
+        <rdfs:comment xml:lang="en-us">A person or organization responsible for the intellectual or artistic content of a resource</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -1368,8 +1368,8 @@
     <!-- http://id.loc.gov/vocabulary/relators/ctb -->
 
     <owl:ObjectProperty rdf:about="&marcrel;ctb">
-        <rdfs:label xml:lang="en-us">contributor</rdfs:label>
-        <rdfs:comment xml:lang="en-us">Contributor to a resource.</rdfs:comment>
+        <rdfs:label xml:lang="en-us">has contributor</rdfs:label>
+        <rdfs:comment xml:lang="en-us">A person, family or organization responsible for making contributions to the resource. This includes those whose work has been contributed to a larger work, such as an anthology, serial publication, or other compilation of individual works. If a more specific role is available, prefer that, e.g. editor, compiler, illustrator</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -1433,7 +1433,7 @@
     <!-- http://schema.org/audience -->
 
     <owl:ObjectProperty rdf:about="http://schema.org/audience">
-        <rdfs:label xml:lang="en-us">audience</rdfs:label>
+        <rdfs:label xml:lang="en-us">has intended audience</rdfs:label>
         <rdfs:comment xml:lang="en-us">The intended audience of the item, i.e. the group for whom the item was created.</rdfs:comment>
         <rdfs:range rdf:resource="http://schema.org/Audience"/>
     </owl:ObjectProperty>
