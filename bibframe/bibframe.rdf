@@ -239,6 +239,7 @@
         <rdfs:label xml:lang="en-us">classified as</rdfs:label>
         <rdfs:comment xml:lang="en-us">Classification in any scheme.</rdfs:comment>
         <skos:scopeNote xml:lang="en-us">The skos:Concept that is the object of this property would be part of a skos:ConceptScheme.</skos:scopeNote>
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/isClassificationFor"/>
         <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
         <rdfs:range rdf:resource="&skos;Concept"/>
     </owl:ObjectProperty>
@@ -856,6 +857,16 @@
         <rdfs:range rdf:resource="&oa;Annotation"/>
         <owl:inverseOf rdf:resource="&oa;annotatedBy"/>
         <rdfs:domain rdf:resource="&foaf;Agent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bibframe.org/vocab/isClassificationFor -->
+
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/isClassificationFor">
+        <rdfs:label xml:lang="en">is classification for</rdfs:label>
+        <rdfs:comment xml:lang="en">A resource that is classified according to a particular scheme</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/performanceOf"/>
     </owl:ObjectProperty>
     
 
