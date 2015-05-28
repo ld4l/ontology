@@ -687,14 +687,6 @@
         <skos:editorialNote>Is the intersection of Title and the complement of DerivedTitle equivalent to SourceTitle, or are there Titles which belong to neither subclass? That is, do DerivedTitle and SourceTitle exhaustively partition the parent class Title?</skos:editorialNote>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/hasTitle"/>
         <owl:inverseOf rdf:resource="http://bibframe.org/vocab/isPreferredTitleOf"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://bibframe.org/vocab/Instance"/>
-                    <rdf:Description rdf:about="http://bibframe.org/vocab/Work"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -705,6 +697,14 @@
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:range>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bibframe.org/vocab/Instance"/>
+                    <rdf:Description rdf:about="http://bibframe.org/vocab/Work"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -1075,6 +1075,31 @@
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bibframe.org/vocab/performanceOf -->
+
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/performanceOf">
+        <rdfs:label xml:lang="en">An event including a performance of a work</rdfs:label>
+        <rdfs:label xml:lang="en">performance of</rdfs:label>
+        <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
+        <owl:propertyDisjointWith rdf:resource="http://bibframe.org/vocab/recordedIn"/>
+        <rdfs:domain rdf:resource="http://schema.org/Event"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bibframe.org/vocab/performedAt -->
+
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/performedAt">
+        <rdfs:label xml:lang="en">performed at</rdfs:label>
+        <rdfs:comment xml:lang="en">A work performed at an event</rdfs:comment>
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/performanceOf"/>
+        <owl:propertyDisjointWith rdf:resource="http://bibframe.org/vocab/recordedAt"/>
+        <rdfs:range rdf:resource="http://schema.org/Event"/>
     </owl:ObjectProperty>
     
 
@@ -2835,8 +2860,8 @@
         <rdfs:label xml:lang="en-us">Series</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:comment xml:lang="en-us">A larger work consisting of multiple works.</rdfs:comment>
-        <skos:example>Recent Researches in the Music of the Baroque Era is a Series. Individual volumes in the Series include Telemann: Forty-eight Chorale Preludes, Vivaldi: Cantatas for Soprano, etc.</skos:example>
         <skos:scopeNote>Contrast with Serial, a subclass of Instance, which concerns Works published in serial form rather than, say, a single volume. A Series is a Work consisting of multiple Works. It is related to its component Works through dcterms:hasPart.</skos:scopeNote>
+        <skos:example>Recent Researches in the Music of the Baroque Era is a Series. Individual volumes in the Series include Telemann: Forty-eight Chorale Preludes, Vivaldi: Cantatas for Soprano, etc.</skos:example>
     </owl:Class>
     
 
