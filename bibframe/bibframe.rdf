@@ -478,14 +478,6 @@
         <skos:scopeNote xml:lang="en-us">The domain and range restrictions ensure that a Work is related to a Work and a Title to a Title.</skos:scopeNote>
         <rdfs:comment xml:lang="en-us">Work or Title that is derived from this Work or Title.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/precedes"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://bibframe.org/vocab/DerivedTitle"/>
-                    <rdf:Description rdf:about="http://bibframe.org/vocab/Work"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -494,6 +486,14 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bibframe.org/vocab/DerivedTitle"/>
+                    <rdf:Description rdf:about="http://bibframe.org/vocab/Work"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -687,6 +687,14 @@
         <skos:editorialNote>Is the intersection of Title and the complement of DerivedTitle equivalent to SourceTitle, or are there Titles which belong to neither subclass? That is, do DerivedTitle and SourceTitle exhaustively partition the parent class Title?</skos:editorialNote>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/hasTitle"/>
         <owl:inverseOf rdf:resource="http://bibframe.org/vocab/isPreferredTitleOf"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bibframe.org/vocab/Instance"/>
+                    <rdf:Description rdf:about="http://bibframe.org/vocab/Work"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -697,14 +705,6 @@
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:range>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://bibframe.org/vocab/Instance"/>
-                    <rdf:Description rdf:about="http://bibframe.org/vocab/Work"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -1169,6 +1169,29 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bibframe.org/vocab/recordedAt -->
+
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/recordedAt">
+        <rdfs:label xml:lang="en">recorded at</rdfs:label>
+        <rdfs:comment xml:lang="en">A work recorded at an event.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
+        <rdfs:range rdf:resource="http://schema.org/Event"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bibframe.org/vocab/recordedIn -->
+
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/recordedIn">
+        <rdfs:label xml:lang="en">recorded in</rdfs:label>
+        <rdfs:comment xml:lang="en">An event recorded in a Work.</rdfs:comment>
+        <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/recordedAt"/>
+        <rdfs:domain rdf:resource="http://schema.org/Event"/>
     </owl:ObjectProperty>
     
 
