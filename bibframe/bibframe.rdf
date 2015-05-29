@@ -500,19 +500,9 @@
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasFirstIssue">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:label xml:lang="en-us">has first issue</rdfs:label>
-        <rdfs:comment xml:lang="en-us">First issue of an Instance of a Series.</rdfs:comment>
+        <rdfs:comment xml:lang="en-us">First issue of a Serial.</rdfs:comment>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Instance"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://bibframe.org/vocab/Instance"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://bibframe.org/vocab/isInstanceOf"/>
-                        <owl:allValuesFrom rdf:resource="http://bibframe.org/vocab/Series"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:domain>
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Serial"/>
     </owl:ObjectProperty>
     
 
@@ -555,19 +545,9 @@
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasLastIssue">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:label xml:lang="en-us">has last issue</rdfs:label>
-        <rdfs:comment xml:lang="en-us">Last issue of an Instance of a Series.</rdfs:comment>
+        <rdfs:comment xml:lang="en-us">Last issue of a Serial.</rdfs:comment>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Instance"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://bibframe.org/vocab/Instance"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://bibframe.org/vocab/isInstanceOf"/>
-                        <owl:allValuesFrom rdf:resource="http://bibframe.org/vocab/Series"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:domain>
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Serial"/>
     </owl:ObjectProperty>
     
 
@@ -656,17 +636,15 @@
         <rdfs:label xml:lang="en-us">has preferred title</rdfs:label>
         <skos:scopeNote>A resource (Work or Instance) may have multiple directly linked (non-derived) Titles, among which this is the preferred Title.</skos:scopeNote>
         <rdfs:comment>The preferred Title of this resource.</rdfs:comment>
-        <skos:editorialNote>Is the intersection of Title and the complement of DerivedTitle equivalent to SourceTitle, or are there Titles which belong to neither subclass? That is, do DerivedTitle and SourceTitle exhaustively partition the parent class Title?</skos:editorialNote>
+        <skos:editorialNote>Range is a Title that is not a DerivedTitle. If all Titles are either SourceTitles or DerivedTitles, we can just state range as SourceTitle.</skos:editorialNote>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/hasTitle"/>
         <owl:inverseOf rdf:resource="http://bibframe.org/vocab/isPreferredTitleOf"/>
         <rdfs:range>
             <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&madsrdf;Title"/>
-                    <owl:Class>
-                        <owl:complementOf rdf:resource="http://bibframe.org/vocab/DerivedTitle"/>
-                    </owl:Class>
-                </owl:intersectionOf>
+                <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Title"/>
+                <owl:complementOf>
+                    <owl:Class rdf:about="http://bibframe.org/vocab/DerivedTitle"/>
+                </owl:complementOf>
             </owl:Class>
         </rdfs:range>
         <rdfs:domain>
@@ -686,7 +664,7 @@
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasReceipt">
         <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
         <rdfs:label xml:lang="en-us">has receipt</rdfs:label>
-        <skos:editorialNote>This property links an Award node to a context node that is then linked to the award recipient. The use of the context node allows the receipt to have properties such as date, place, etc.</skos:editorialNote>
+        <skos:scopeNote>This property links an Award node to a context node that is then linked to the award recipient. The use of the context node allows the receipt to have properties such as date, place, etc.</skos:scopeNote>
         <rdfs:comment xml:lang="en-us">An AwardReceipt for this Award.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Award"/>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/AwardReceipt"/>
@@ -771,10 +749,17 @@
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasTitle">
         <rdfs:label xml:lang="en-us">has title</rdfs:label>
-        <skos:editorialNote>Fix range so that it&apos;s the intersection of Title and the complement of DerivedTitle</skos:editorialNote>
+        <skos:editorialNote>Range is a Title that is not a DerivedTitle. If all Titles are either SourceTitles or DerivedTitles, we can just state range as SourceTitle.</skos:editorialNote>
         <skos:scopeNote>A Work, Instance, or Item can have a Title.</skos:scopeNote>
         <rdfs:comment xml:lang="en-us">Word, character, or group of words and/or characters that is a name given to this resource.</rdfs:comment>
-        <rdfs:range rdf:resource="&madsrdf;Title"/>
+        <rdfs:range>
+            <owl:Class>
+                <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Title"/>
+                <owl:complementOf>
+                    <owl:Class rdf:about="http://bibframe.org/vocab/DerivedTitle"/>
+                </owl:complementOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -916,10 +901,16 @@
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/isPreferredTitleOf">
         <rdfs:label>is preferred title of</rdfs:label>
         <skos:scopeNote>A resource may have multiple directly linked (non-derived) Titles, among which this is the preferred Title.</skos:scopeNote>
-        <skos:editorialNote>Can an Instance have multiple basic titles the way a Work can?</skos:editorialNote>
         <rdfs:comment>This Title is the preferred Title of the resource.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/isTitleOf"/>
-        <rdfs:domain rdf:resource="&madsrdf;Title"/>
+        <rdfs:domain>
+            <owl:Class>
+                <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Title"/>
+                <owl:complementOf>
+                    <owl:Class rdf:about="http://bibframe.org/vocab/DerivedTitle"/>
+                </owl:complementOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -928,6 +919,7 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
+        <skos:editorialNote>Domain is a Title that is not a DerivedTitle. If all Titles are either SourceTitles or DerivedTitles, we can just state range as SourceTitle.</skos:editorialNote>       
     </owl:ObjectProperty>
     
 
@@ -987,7 +979,15 @@
         <rdfs:label xml:lang="en">is title of</rdfs:label>
         <rdfs:comment>Relates a Title to an Item, Work, or Instance.</rdfs:comment>
         <owl:inverseOf rdf:resource="http://bibframe.org/vocab/hasTitle"/>
-        <rdfs:domain rdf:resource="&madsrdf;Title"/>
+        <rdfs:domain>
+            <owl:Class>
+                <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Title"/>
+                <owl:complementOf>
+                    <owl:Class rdf:about="http://bibframe.org/vocab/DerivedTitle"/>
+                </owl:complementOf>
+            </owl:Class>
+        </rdfs:domain>
+        <skos:editorialNote>Domain is a Title that is not a DerivedTitle. If all Titles are either SourceTitles or DerivedTitles, we can just state range as SourceTitle.</skos:editorialNote>       
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -1109,8 +1109,8 @@
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/precedes">
         <rdfs:label xml:lang="en-us">precedes</rdfs:label>
-        <skos:editorialNote>Does it make sense to conflate spatial and temporal precedence in a single property? English is certainly ambiguous in this regard, but should the fuzziness of natural language be carried into a formal ontology? We cannot know which sense applies to any given usage.</skos:editorialNote>
-        <rdfs:comment xml:lang="en-us">Subject precedes the object (e.g., earlier in time or space, orbefore in a narrative).</rdfs:comment>
+        <skos:editorialNote>Does it make sense to conflate spatial and temporal precedence into a single property? English is certainly ambiguous in this regard, but should the fuzziness of natural language be carried into a formal ontology? We cannot know which sense applies to any given usage.</skos:editorialNote>
+        <rdfs:comment xml:lang="en-us">Subject precedes the object (e.g., earlier in time or space, or before in a narrative).</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -1238,7 +1238,7 @@
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/separatedFrom">
         <rdfs:label xml:lang="en-us">separated from</rdfs:label>
-        <skos:editorialNote>Similar to bf:formedBySplitting, but here we need specify only one antecedent work.</skos:editorialNote>
+        <skos:scopeNote>Similar to bf:formedBySplitting, but here we need specify only one antecedent work.</skos:scopeNote>
         <rdfs:comment xml:lang="en-us">The subject work was formed from part of the content of a preceding work. </rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
@@ -1252,7 +1252,7 @@
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/separatedInto">
         <rdfs:label xml:lang="en-us">separated into</rdfs:label>
-        <skos:editorialNote>Similar to bf:splitInto, but here we need specify only a single resulting work, rather than two or more.</skos:editorialNote>
+        <skos:scopeNote>Similar to bf:splitInto, but here we need specify only a single resulting work, rather than two or more.</skos:scopeNote>
         <rdfs:comment xml:lang="en-us">A portion of the subject work separated to form the content of a succeeding work. </rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
@@ -1751,7 +1751,7 @@
 
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/dissertationNote">
         <rdfs:label xml:lang="en-us">dissertation note</rdfs:label>
-        <skos:editorialNote xml:lang="en-us">Include dissertation note as a literal when it cannot be parsed into dissertationYear, dissertationDegree, etc.</skos:editorialNote>
+        <skos:scopeNote xml:lang="en-us">Include dissertation note as a literal when it cannot be parsed into dissertationYear, dissertationDegree, etc.</skos:scopeNote>
         <rdfs:comment xml:lang="en-us">Textual information about the dissertation. A dissertation note differs from a general note in that it includes specific date and year information.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Dissertation"/>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/note"/>
@@ -2293,7 +2293,7 @@
     <owl:Class rdf:about="http://bibframe.org/vocab/CirculationStatus">
         <rdfs:label xml:lang="en-us">Circulation status</rdfs:label>
         <rdfs:subClassOf rdf:resource="&skos;Concept"/>
-        <skos:editorialNote xml:lang="en-us">TO DO: Enumerate values</skos:editorialNote>
+        <skos:editorialNote xml:lang="en-us">Need a vocabulary to numerate values</skos:editorialNote>
     </owl:Class>
     
 
@@ -2389,9 +2389,8 @@
             </owl:Class>
         </rdfs:subClassOf>
         <skos:scopeNote>A DerivedTitle is associated with a Work or Instance only through the base Title that is directly related to the Work or Instance. A DerivedTitle must always be associated with a single Title.</skos:scopeNote>
-        <skos:example>The translation of a base Title is a DerivedTitle.</skos:example>
-        <rdfs:comment>A Title that is derived from the base Title of a Work or Instance. </rdfs:comment>
-        <skos:editorialNote>If all DerivedTitles are catologer or machine transcribed, and all SourceTitles are transcribed, then we can do away with the TitleSourceStatus class and associated properties and individuals.</skos:editorialNote>
+        <skos:example>The translation of a Title is a DerivedTitle.</skos:example>
+        <rdfs:comment>A Title that is derived from the Title of a Work or Instance. </rdfs:comment>
     </owl:Class>
     
 
@@ -2900,18 +2899,6 @@
     </owl:Class>
     
 
-
-    <!-- http://bibframe.org/vocab/SortTitle -->
-
-    <owl:Class rdf:about="http://bibframe.org/vocab/SortTitle">
-        <rdfs:label xml:lang="en-us">Sort title</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/DerivedTitle"/>
-        <rdfs:comment xml:lang="en-us">A title optimized for sorting; e.g.; non-filing characters are removed.</rdfs:comment>
-        <skos:editorialNote>Review the need for a SortTitle. From Steven: I’m questioning the need for a SortTitle, and whether sorting could be handled with Title parts using madsrdf:TitleElements. MADSRDF has a TitleElement subclass NonSortElement. http://www.loc.gov/standards/mads/rdf/v1.html#TitleElement</skos:editorialNote>
-    </owl:Class>
-    
-
-
     <!-- http://bibframe.org/vocab/SourceTitle -->
 
     <owl:Class rdf:about="http://bibframe.org/vocab/SourceTitle">
@@ -3156,7 +3143,7 @@
 
     <owl:Class rdf:about="http://schema.org/Event">
         <rdfs:label xml:lang="en-us">Event</rdfs:label>
-        <skos:editorialNote xml:lang="en">schema:Events are subclasses of schema:Thing.</skos:editorialNote>
+        <skos:editorialNote xml:lang="en">Schema:Events are subclasses of schema:Thing.</skos:editorialNote>
         <rdfs:comment xml:lang="en-us">An event happening at a certain time and location, such as a concert, lecture, or festival. Repeated events may be structured as separate Event objects. Can be used for named events, e.g., Battle of Gettsyburg, or un-named date ranges, e.g., 1945-1950.</rdfs:comment>
     </owl:Class>
     
