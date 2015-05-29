@@ -2890,14 +2890,13 @@
     
 
 
-    <!-- http://bibframe.org/vocab/Software -->
+    <!-- http://bibframe.org/vocab/Multimedia -->
 
     <owl:Class rdf:about="http://bibframe.org/vocab/Software">
-        <rdfs:label xml:lang="en-us">Software</rdfs:label>
+        <rdfs:label xml:lang="en-us">Multimedia</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:comment xml:lang="en-us">Electronic resource that is a computer program (i.e. digitally encoded instructions intended to be processed and performed by a computer) or which consists of multiple media types that are software driven.</rdfs:comment>
         <skos:example>Examples include video games and websites.</skos:example>
-        <skos:editorialNote>Changed from Multimedia because it seems more apt, given the definition. Do we also need a Multimedia class that is not related to software?</skos:editorialNote>
     </owl:Class>
     
 
@@ -3047,9 +3046,19 @@
 
     <!-- http://bibframe.org/vocab/Title -->
 
-    <owl:Class rdf:about="http://bibframe.org/vocab/Title"/>
-    
-
+    <owl:Class rdf:about="http://bibframe.org/vocab/Title">
+        <rdfs:label>Title</rdfs:label>
+        <rdfs:comment>Title of a Work, Instance, or Item.</rdfs:comment>
+        <skos:scopeNote>Some Titles (DirectTitles) are directly related to a Work, Instance, or Item. Others (DerivedTitles) are derived from a DirectTitle. A resource may have more than one DirectTitle, and multiple DerivedTitles through the DirectTitle.</skos:scopeNote>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bibframe.org/vocab/hasDerivative"/>
+                <owl:allValuesFrom rdf:resource="http://bibframe.org/vocab/DerivedTitle"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:editorialNote>Using new predicate in Bibframe namespace, since madsrdf:Title is a subclass of madsrdf:Authority.</skos:editorialNote>
+    </owl:Class>
+   
 
     <!-- http://bibframe.org/vocab/TitleSourceStatus -->
 
