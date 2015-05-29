@@ -3070,8 +3070,8 @@
     <owl:Class rdf:about="http://bibframe.org/vocab/TranslatedTitle">
         <rdfs:label>Translated title</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/DerivedTitle"/>
-        <skos:scopeNote>The derived TranslatedTitle should be distinguished from two other cases. First, if a Work is translated into another language, the translated Work has a Title. This Title is linked directly to the translated Work and is not a DerivedTitle; that is, it is the Title of a translation, rather than the translation of a Title. Second, a Work may have multiple titles in different languages, though none of the titles are the source of the others; examples might be a musical composition or a bilingual book. For example, an Arabic language textbook has the Arabic title &quot;&quot;, literally &quot;Arabic of the People,&quot; and the English title &quot;Living Arabic&quot;; neither is a translation of the other. These Titles are also linked directly to the Work, and the language of each Title is denoted through its dcterms:language value.</skos:scopeNote>
-        <skos:example>The film title &quot;Bella Martha&quot; is translated into English as &quot;Mostly Martha.&quot;</skos:example>
+        <skos:scopeNote>The derived TranslatedTitle should be distinguished from two other cases. First, if a Work is translated into another language, the translated Work has a Title. This Title is linked directly to the translated Work and is not a DerivedTitle; that is, it is the Title of a translation, rather than the translation of a Title. Second, a Work may have multiple titles in different languages, though none of the titles are the source of the others; examples might be a musical composition or a bilingual book. For example, an Arabic language textbook has the Arabic title &quot;عربيّة الناس&quot;, literally &quot;Arabic of the People,&quot; and the English title &quot;Living Arabic&quot;; neither is a translation of the other. These Titles are also linked directly to the Work, and the language of each Title is denoted through its dcterms:language value.</skos:scopeNote>
+        <skos:example>The film title &quot;Bella Martha&quot; is translated into English as &quot;Mostly Martha&quot;.</skos:example>
         <rdfs:comment>A title translated from another title.</rdfs:comment>
     </owl:Class>
     
@@ -3083,6 +3083,7 @@
         <rdfs:label>Transliterated title</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/DerivedTitle"/>
         <rdfs:comment>A title transliterated from another title.</rdfs:comment>
+        <skos:example>The Arabic title "عربيّة الناس" is tranliterated into Roman orthography as "9arabiyyat il-naas".</skos:example>
     </owl:Class>
     
 
@@ -3243,7 +3244,15 @@
         <rdfs:comment xml:lang="en">The portion of a title indicating that it is a part of another work or sequence of works, such as &quot;Volume 2, &quot; &quot;Fourth Edition, &quot; or &quot;III.&quot; A title may have more than one part name element, in which case they are ordered by bf:precedes. They are also order by bf:precedes with respect to any subtitles; the usual case is that all part name elements would succeed all subtitles.</rdfs:comment>
     </owl:Class>
     
-
+    <!-- http://www.loc.gov/mads/rdf/v1#NonSortElement -->
+    
+    <owl:Class rdf:about="&madsrdf;NonSortElement">
+        <rdfs:label rdf:datatype="&xsd;string">Non-sort element</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&madsrdf;TitleElement"/>
+        <rdfs:comment xml:lang="en">The initial portion of a title that is removed for sorting.</rdfs:comment>
+        <skos:example xml:lang="en">Title "A Tree Grows in Brooklyn" has NonSortElement with rdfs:label "A " and MainTitleElement with rdfs:label "Tree Grows in Brooklyn".</skos:example>
+    </owl:Class>
+    
 
     <!-- http://www.loc.gov/mads/rdf/v1#SubTitleElement -->
 
