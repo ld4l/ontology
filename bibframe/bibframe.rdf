@@ -196,6 +196,7 @@
         <rdfs:comment xml:lang="en-us">The circulation status of an item.</rdfs:comment>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/CirculationStatus"/>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Item"/>
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/isCirculationStatusFor"/>
     </owl:ObjectProperty>
     
 
@@ -837,6 +838,15 @@
         <rdfs:label xml:lang="en">is body of</rdfs:label>
         <rdfs:comment xml:lang="en">The resource is the body of an annotation.</rdfs:comment>
         <rdfs:range rdf:resource="&oa;Annotation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bibframe.org/vocab/isCirculationStatusFor -->
+
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/isCirculationStatusFor">
+        <rdfs:label xml:lang="en">The item has a circulation status.</rdfs:label>
+        <rdfs:label xml:lang="en">is circulation status for</rdfs:label>
     </owl:ObjectProperty>
     
 
