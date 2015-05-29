@@ -3083,7 +3083,7 @@
         <rdfs:label>Transliterated title</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/DerivedTitle"/>
         <rdfs:comment>A title transliterated from another title.</rdfs:comment>
-        <skos:example>The Arabic title "عربيّة الناس" is tranliterated into Roman orthography as "9arabiyyat il-naas".</skos:example>
+        <skos:example>The Arabic title "عربيّة الناس" is tranliterated into Roman orthography as "‘Arabiyyat al-Naas".</skos:example>
     </owl:Class>
     
 
