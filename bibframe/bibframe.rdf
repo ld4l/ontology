@@ -831,6 +831,16 @@
     
 
 
+    <!-- http://bibframe.org/vocab/isBodyOf -->
+
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/isBodyOf">
+        <rdfs:label xml:lang="en">is body of</rdfs:label>
+        <rdfs:comment xml:lang="en">The resource is the body of an annotation.</rdfs:comment>
+        <rdfs:range rdf:resource="&oa;Annotation"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://bibframe.org/vocab/isClassificationFor -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/isClassificationFor">
@@ -1455,6 +1465,7 @@
             
             There is no OA class provided for &quot;Body&quot; as a body might be a target of a different annotation. However, there SHOULD be 1 or more content-based classes associated with the body resources of an Annotation, and the dctypes: vocabulary is recommended for this purpose, for instance dctypes:Text to declare textual content.
         </rdfs:comment>
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/isBodyOf"/>
         <rdfs:domain rdf:resource="&oa;Annotation"/>
     </owl:ObjectProperty>
     
