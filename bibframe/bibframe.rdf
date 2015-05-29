@@ -311,25 +311,6 @@
     
 
 
-    <!-- http://bibframe.org/vocab/describedBy -->
-
-    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/describedBy">
-        <rdfs:label xml:lang="en-us">described by</rdfs:label>
-        <rdfs:comment xml:lang="en-us">This resource is analyzed, commented on, critiqued, evaluated, reviewed, or otherwise described by another resource.</rdfs:comment>
-        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/describes"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://bibframe.org/vocab/describes -->
-
-    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/describes">
-        <rdfs:label xml:lang="en-us">describes</rdfs:label>
-        <rdfs:comment xml:lang="en-us">This resource analyzes, comments on, critiques, evaluates, reviewes, or otherwise describes another resource.</rdfs:comment>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://bibframe.org/vocab/distributedBy -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/distributedBy">
@@ -354,17 +335,6 @@
     </owl:ObjectProperty>
     
 
-
-    <!-- http://bibframe.org/vocab/legacy/formatOfMusic -->
-
-    <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/legacy/formatOfMusic">
-        <rdfs:label xml:lang="en-us">format of music</rdfs:label>
-        <rdfs:comment xml:lang="en-us">Format of a musical composition, e.g. full score, condensed score, vocal score, etc.</rdfs:comment>
-        <skos:editorialNote xml:lang="en-us">Need a vocabulary to enumerate values.</skos:editorialNote>
-        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
-    </owl:DatatypeProperty>
-    
 
     <!-- http://bibframe.org/vocab/formedBySplitting -->
 
@@ -1982,6 +1952,18 @@
     <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/legacy/format">
         <rdfs:label xml:lang="en-us">format</rdfs:label>
         <rdfs:comment xml:lang="en-us">File format or physical medium of an instance.</rdfs:comment>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://bibframe.org/vocab/legacy/formatOfMusic -->
+
+    <owl:DatatypeProperty rdf:about="http://bibframe.org/vocab/legacy/formatOfMusic">
+        <rdfs:label xml:lang="en-us">format of music</rdfs:label>
+        <rdfs:comment xml:lang="en-us">Format of a musical composition, e.g. full score, condensed score, vocal score, etc.</rdfs:comment>
+        <skos:editorialNote xml:lang="en-us">Need a vocabulary to enumerate values.</skos:editorialNote>
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Instance"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
