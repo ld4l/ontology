@@ -16,16 +16,16 @@
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
-    <!ENTITY marcrel "http://id.loc.gov/vocabulary/relators/" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
     <!ENTITY vs "http://www.w3.org/2003/06/sw-vocab-status/ns#" >
+    <!ENTITY rdau "http://rdaregistry.info/Elements/u/" >
+    
 ]>
 
 
 <rdf:RDF xmlns="http://bibframe.org/vocab/"
      xml:base="http://bibframe.org/vocab/"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:marcrel="http://id.loc.gov/vocabulary/relators/"
      xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:cnt="http://www.w3.org/2011/content#"
@@ -40,6 +40,7 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:vocab="http://bibframe.org/vocab/#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:rdau="http://rdaregistry.info/Elements/u/" 
      xmlns:vivo="http://vivoweb.org/ontology/core#">
     <owl:Ontology rdf:about="http://bibframe.org/vocab/">
         <rdfs:label xml:lang="en-us">LD4L Proposed Bibframe Ontology</rdfs:label>
@@ -468,6 +469,34 @@
         </rdfs:domain>
     </owl:ObjectProperty>
     
+    <owl:ObjectProperty rdf:about="http://rdaregistry.info/Elements/u/P60447">
+        <rdfs:label xml:lang="en">has creator</rdfs:label>
+        <rdfs:comment xml:lang="en">Relates a resource to an agent responsible for the creation of a resource.</rdfs:comment>
+        <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60672" />
+    </owl:ObjectProperty>
+    
+
+    <owl:ObjectProperty rdf:about="http://rdaregistry.info/Elements/u/P60672">
+        <rdfs:label xml:lang="en">is creator of</rdfs:label>
+        <rdfs:comment xml:lang="en">Relates an agent responsible for the creation of a resource to the resource.</rdfs:comment>
+        <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60447" />
+    </owl:ObjectProperty>
+
+    <!--Property: has contributor-->
+    <owl:ObjectProperty rdf:about="http://rdaregistry.info/Elements/u/P60398">
+        <rdfs:label xml:lang="en">has contributor</rdfs:label>
+        <skos:scopeNote xml:lang="en">Contributors include editors, translators, arrangers of music, performers, etc.</skos:scopeNote>
+        <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60626" />
+    </owl:ObjectProperty>
+
+    
+    
+    <!--Property: is contributor of-->
+    <owl:ObjectProperty rdf:about="http://rdaregistry.info/Elements/u/P60626">
+        <rdfs:label xml:lang="en">is contributor of</rdfs:label>
+        <rdfs:comment xml:lang="en">Relates an agent contributing to an expression to the resource.</rdfs:comment>
+        <owl:inverseOf rdf:resource="http://rdaregistry.info/Elements/u/P60398" />
+    </owl:ObjectProperty>
 
 
     <!-- http://bibframe.org/vocab/hasExpression -->
@@ -1314,22 +1343,6 @@
     
 
 
-    <!-- http://id.loc.gov/vocabulary/relators/cre -->
-
-    <owl:ObjectProperty rdf:about="&marcrel;cre">
-        <rdfs:label xml:lang="en-us">has creator</rdfs:label>
-        <rdfs:comment xml:lang="en-us">A person or organization responsible for the intellectual or artistic content of a resource</rdfs:comment>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://id.loc.gov/vocabulary/relators/ctb -->
-
-    <owl:ObjectProperty rdf:about="&marcrel;ctb">
-        <rdfs:label xml:lang="en-us">has contributor</rdfs:label>
-        <rdfs:comment xml:lang="en-us">A person, family or organization responsible for making contributions to the resource. This includes those whose work has been contributed to a larger work, such as an anthology, serial publication, or other compilation of individual works. If a more specific role is available, prefer that, e.g. editor, compiler, illustrator</rdfs:comment>
-    </owl:ObjectProperty>
-    
 
 
     <!-- http://purl.org/dc/terms/hasFormat -->
