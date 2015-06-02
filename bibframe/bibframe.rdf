@@ -649,6 +649,7 @@
         </rdfs:domain>
         <rdfs:range>
             <owl:Class>
+                <rdfs:subClassOf rdf:resource="&madsrdf;Title" />
                 <owl:complementOf rdf:resource="http://bibframe.org/vocab/DerivedTitle"/>
             </owl:Class>
         </rdfs:range>
@@ -760,6 +761,7 @@
         </rdfs:domain>
         <rdfs:range>
             <owl:Class>
+                <rdfs:subClassOf rdf:resource="&madsrdf;Title" />
                 <owl:complementOf rdf:resource="http://bibframe.org/vocab/DerivedTitle"/>
             </owl:Class>
         </rdfs:range>
@@ -908,6 +910,7 @@
         </rdfs:range>
         <rdfs:domain>
             <owl:Class>
+                <rdfs:subClassOf rdf:resource="&madsrdf;Title" />
                 <owl:complementOf rdf:resource="http://bibframe.org/vocab/DerivedTitle"/>
             </owl:Class>
         </rdfs:domain>
@@ -982,6 +985,7 @@
         </rdfs:range>
         <rdfs:domain>
             <owl:Class>
+                <rdfs:subClassOf rdf:resource="&madsrdf;Title" />
                 <owl:complementOf rdf:resource="http://bibframe.org/vocab/DerivedTitle"/>
             </owl:Class>
         </rdfs:domain>
