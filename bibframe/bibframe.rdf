@@ -2361,6 +2361,14 @@
     
 
 
+    <!-- http://bibframe.org/vocab/DdcClassification -->
+
+    <owl:Class rdf:about="http://bibframe.org/vocab/DdcClassification">
+        <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Classification"/>
+    </owl:Class>
+    
+
+
     <!-- http://bibframe.org/vocab/DerivedTitle -->
 
     <owl:Class rdf:about="http://bibframe.org/vocab/DerivedTitle">
@@ -2658,6 +2666,14 @@
     
 
 
+    <!-- http://bibframe.org/vocab/LccClassification -->
+
+    <owl:Class rdf:about="http://bibframe.org/vocab/LccClassification">
+        <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Classification"/>
+    </owl:Class>
+    
+
+
     <!-- http://bibframe.org/vocab/Lccn -->
 
     <owl:Class rdf:about="http://bibframe.org/vocab/Lccn">
@@ -2764,6 +2780,14 @@
         <rdfs:label xml:lang="en-us">NBN</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Identifier"/>
         <rdfs:comment xml:lang="en-us">National Bibliography Number, which identifies the resource description.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://bibframe.org/vocab/NlmClassification -->
+
+    <owl:Class rdf:about="http://bibframe.org/vocab/NlmClassification">
+        <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Classification"/>
     </owl:Class>
     
 
@@ -3064,6 +3088,14 @@
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/DerivedTitle"/>
         <rdfs:comment>A title transliterated from another title.</rdfs:comment>
         <skos:example>The Arabic title &quot;عربيّة الناس&quot; is tranliterated into Roman orthography as &quot;‘Arabiyyat al-Naas&quot;.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://bibframe.org/vocab/UdcClassification -->
+
+    <owl:Class rdf:about="http://bibframe.org/vocab/UdcClassification">
+        <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Classification"/>
     </owl:Class>
     
 
@@ -3453,6 +3485,21 @@
         <rdfs:label xml:lang="en-us">motivation scheme</rdfs:label>
         <rdfs:comment xml:lang="en-us">The concept scheme for Open Annotation Motivations.</rdfs:comment>
     </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:Class>
+        <rdfs:subClassOf rdf:resource="&madsrdf;Title"/>
+        <owl:complementOf rdf:resource="http://bibframe.org/vocab/DerivedTitle"/>
+    </owl:Class>
 </rdf:RDF>
 
 
