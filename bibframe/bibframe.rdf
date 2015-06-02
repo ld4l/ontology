@@ -295,7 +295,7 @@
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://bibframe.org/vocab/DerivedTitle"/>
+                    <rdf:Description rdf:about="&madsrdf;Title"/>
                     <rdf:Description rdf:about="http://bibframe.org/vocab/Work"/>
                 </owl:unionOf>
             </owl:Class>
@@ -453,7 +453,7 @@
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://bibframe.org/vocab/DerivedTitle"/>
+                    <rdf:Description rdf:about="&madsrdf;Title"/>
                     <rdf:Description rdf:about="http://bibframe.org/vocab/Work"/>
                 </owl:unionOf>
             </owl:Class>
@@ -634,9 +634,8 @@
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasPreferredTitle">
         <rdfs:label xml:lang="en-us">has preferred title</rdfs:label>
-        <skos:scopeNote>A resource (Work or Instance) may have multiple directly linked (non-derived) Titles, among which this is the preferred Title.</skos:scopeNote>
+        <skos:scopeNote>A resource (Work or Instance) may have multiple directly linked Titles, among which this is the preferred Title.</skos:scopeNote>
         <rdfs:comment>The preferred Title of this resource.</rdfs:comment>
-        <skos:editorialNote>Range is a Title that is not a DerivedTitle. If all Titles are either SourceTitles or DerivedTitles, we can just state range as SourceTitle.</skos:editorialNote>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/hasTitle"/>
         <owl:inverseOf rdf:resource="http://bibframe.org/vocab/isPreferredTitleOf"/>
         <rdfs:domain>
@@ -647,12 +646,7 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range>
-            <owl:Class>
-                <rdfs:subClassOf rdf:resource="&madsrdf;Title" />
-                <owl:complementOf rdf:resource="http://bibframe.org/vocab/DerivedTitle"/>
-            </owl:Class>
-        </rdfs:range>
+        <rdfs:range rdf:resource="&madsrdf;Title"/>
     </owl:ObjectProperty>
     
 
@@ -748,7 +742,6 @@
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasTitle">
         <rdfs:label xml:lang="en-us">has title</rdfs:label>
         <skos:scopeNote>A Work, Instance, or Item can have a Title.</skos:scopeNote>
-        <skos:editorialNote>Range is a Title that is not a DerivedTitle. If all Titles are either SourceTitles or DerivedTitles, we can just state range as SourceTitle.</skos:editorialNote>
         <rdfs:comment xml:lang="en-us">Word, character, or group of words and/or characters that is a name given to this resource.</rdfs:comment>
         <rdfs:domain>
             <owl:Class>
@@ -759,12 +752,7 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range>
-            <owl:Class>
-                <rdfs:subClassOf rdf:resource="&madsrdf;Title" />
-                <owl:complementOf rdf:resource="http://bibframe.org/vocab/DerivedTitle"/>
-            </owl:Class>
-        </rdfs:range>
+        <rdfs:range rdf:resource="&madsrdf;Title"/>
     </owl:ObjectProperty>
     
 
@@ -896,9 +884,8 @@
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/isPreferredTitleOf">
         <rdfs:label>is preferred title of</rdfs:label>
-        <skos:scopeNote>A resource may have multiple directly linked (non-derived) Titles, among which this is the preferred Title.</skos:scopeNote>
+        <skos:scopeNote>A resource may have multiple directly-linked Titles, among which this is the preferred Title.</skos:scopeNote>
         <rdfs:comment>This Title is the preferred Title of the resource.</rdfs:comment>
-        <skos:editorialNote>Domain is a Title that is not a DerivedTitle. If all Titles are either SourceTitles or DerivedTitles, we can just state range as SourceTitle.</skos:editorialNote>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/isTitleOf"/>
         <rdfs:range>
             <owl:Class>
@@ -908,12 +895,7 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
-        <rdfs:domain>
-            <owl:Class>
-                <rdfs:subClassOf rdf:resource="&madsrdf;Title" />
-                <owl:complementOf rdf:resource="http://bibframe.org/vocab/DerivedTitle"/>
-            </owl:Class>
-        </rdfs:domain>
+        <rdfs:domain rdf:resource="&madsrdf;Title"/>
     </owl:ObjectProperty>
     
 
@@ -971,9 +953,9 @@
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/isTitleOf">
         <rdfs:label xml:lang="en">is title of</rdfs:label>
-        <skos:editorialNote>Domain is a Title that is not a DerivedTitle. If all Titles are either SourceTitles or DerivedTitles, we can just state range as SourceTitle.</skos:editorialNote>
         <rdfs:comment>Relates a Title to an Item, Work, or Instance.</rdfs:comment>
         <owl:inverseOf rdf:resource="http://bibframe.org/vocab/hasTitle"/>
+        <rdfs:domain rdf:resource="&madsrdf;Title"/>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -983,12 +965,6 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
-        <rdfs:domain>
-            <owl:Class>
-                <rdfs:subClassOf rdf:resource="&madsrdf;Title" />
-                <owl:complementOf rdf:resource="http://bibframe.org/vocab/DerivedTitle"/>
-            </owl:Class>
-        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -2196,7 +2172,7 @@
 
     <owl:Class rdf:about="http://bibframe.org/vocab/AbbreviatedTitle">
         <rdfs:label xml:lang="en-us">Abbreviated title</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/DerivedTitle"/>
+        <rdfs:subClassOf rdf:resource="&madsrdf;Title"/>
         <rdfs:comment xml:lang="en-us">Title as abbreviated for indexing or identification.</rdfs:comment>
     </owl:Class>
     
@@ -2244,17 +2220,7 @@
 
     <owl:Class rdf:about="http://bibframe.org/vocab/BinderTitle">
         <rdfs:label>Binder title</rdfs:label>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://bibframe.org/vocab/SourceTitle"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://bibframe.org/vocab/isTitleOf"/>
-                        <owl:allValuesFrom rdf:resource="http://bibframe.org/vocab/Item"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="&madsrdf;Title"/>
         <rdfs:comment>Title printed on an item&apos;s cover after rebinding.</rdfs:comment>
     </owl:Class>
     
@@ -2264,7 +2230,7 @@
 
     <owl:Class rdf:about="http://bibframe.org/vocab/CaptionTitle">
         <rdfs:label xml:lang="en-us">Caption title</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/SourceTitle"/>
+        <rdfs:subClassOf rdf:resource="&madsrdf;Title"/>
         <rdfs:comment xml:lang="en-us">Caption title, printed at the head of the first page of text.</rdfs:comment>
     </owl:Class>
     
@@ -2324,7 +2290,7 @@
 
     <owl:Class rdf:about="http://bibframe.org/vocab/ConciseTitle">
         <rdfs:label xml:lang="en-us">Concise title</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/DerivedTitle"/>
+        <rdfs:subClassOf rdf:resource="&madsrdf;Title"/>
         <skos:example>&apos;Modern Writing&apos; could serve as the concise title for &apos;The Berkley book of modern writing&apos;.</skos:example>
         <rdfs:comment xml:lang="en-us">The concise version of a Title.</rdfs:comment>
     </owl:Class>
@@ -2335,7 +2301,7 @@
 
     <owl:Class rdf:about="http://bibframe.org/vocab/ContainerTitle">
         <rdfs:label>Container title</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/SourceTitle"/>
+        <rdfs:subClassOf rdf:resource="&madsrdf;Title"/>
         <rdfs:comment>Title on a case or container, such as a CD case.</rdfs:comment>
     </owl:Class>
     
@@ -2345,7 +2311,7 @@
 
     <owl:Class rdf:about="http://bibframe.org/vocab/CoverTitle">
         <rdfs:label xml:lang="en-us">Cover title</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/SourceTitle"/>
+        <rdfs:subClassOf rdf:resource="&madsrdf;Title"/>
         <rdfs:comment xml:lang="en-us">Cover title that is printed on the original cover of a publication or lettered or stamped on the publisher&apos;s binding.</rdfs:comment>
     </owl:Class>
     
@@ -2364,37 +2330,10 @@
     <!-- http://bibframe.org/vocab/DdcClassification -->
 
     <owl:Class rdf:about="http://bibframe.org/vocab/DdcClassification">
+        <rdfs:label>DDC classification</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Classification"/>
         <rdfs:comment>Dewey Decimal Classification number used for subject access.</rdfs:comment>
-        <rdfs:label>DDC classification</rdfs:label>
     </owl:Class>
-    
-
-
-    <!-- http://bibframe.org/vocab/DerivedTitle -->
-
-    <owl:Class rdf:about="http://bibframe.org/vocab/DerivedTitle">
-        <rdfs:label>Derived title</rdfs:label>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&madsrdf;Title"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://bibframe.org/vocab/derivedFrom"/>
-                        <owl:allValuesFrom rdf:resource="&madsrdf;Title"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://bibframe.org/vocab/derivedFrom"/>
-                        <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <skos:example>The translation of a Title is a DerivedTitle.</skos:example>
-        <skos:scopeNote>A DerivedTitle is associated with a Work or Instance only through the base Title that is directly related to the Work or Instance. A DerivedTitle must always be associated with a single Title.</skos:scopeNote>
-        <rdfs:comment>A Title that is derived from the Title of a Work or Instance. </rdfs:comment>
-    </owl:Class>
-    
 
 
     <!-- http://bibframe.org/vocab/Dissertation -->
@@ -2421,7 +2360,7 @@
 
     <owl:Class rdf:about="http://bibframe.org/vocab/DistinctiveTitle">
         <rdfs:label xml:lang="en-us">Distinctive title</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/DerivedTitle"/>
+        <rdfs:subClassOf rdf:resource="&madsrdf;Title"/>
         <rdfs:comment xml:lang="en-us">Special title that appears in addition to the regular title on individual issues of a work and by which the issue may be known.</rdfs:comment>
     </owl:Class>
     
@@ -2652,7 +2591,7 @@
 
     <owl:Class rdf:about="http://bibframe.org/vocab/KeyTitle">
         <rdfs:label xml:lang="en-us">Key title</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/DerivedTitle"/>
+        <rdfs:subClassOf rdf:resource="&madsrdf;Title"/>
         <rdfs:comment xml:lang="en-us">Unique title for a continuing resource that is assigned by the ISSN International Center in conjunction with an ISSN.</rdfs:comment>
     </owl:Class>
     
@@ -2671,9 +2610,9 @@
     <!-- http://bibframe.org/vocab/LccClassification -->
 
     <owl:Class rdf:about="http://bibframe.org/vocab/LccClassification">
+        <rdfs:label>LCC classification</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Classification"/>
         <rdfs:comment>Library of Congress Classification number used for subject access.</rdfs:comment>
-        <rdfs:label>LCC classification</rdfs:label>
     </owl:Class>
     
 
@@ -2791,9 +2730,9 @@
     <!-- http://bibframe.org/vocab/NlmClassification -->
 
     <owl:Class rdf:about="http://bibframe.org/vocab/NlmClassification">
+        <rdfs:label>NLM classification</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Classification"/>
         <rdfs:comment>National Library of Medicine Classification number used for subject access.</rdfs:comment>
-        <rdfs:label>NLM classification</rdfs:label>
     </owl:Class>
     
 
@@ -2871,7 +2810,7 @@
 
     <owl:Class rdf:about="http://bibframe.org/vocab/RunningTitle">
         <rdfs:label xml:lang="en-us">Running title</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/SourceTitle"/>
+        <rdfs:subClassOf rdf:resource="&madsrdf;Title"/>
         <rdfs:comment xml:lang="en-us">Running title, printed on the top or bottom margin of each page of a publication.</rdfs:comment>
     </owl:Class>
     
@@ -2922,39 +2861,11 @@
     
 
 
-    <!-- http://bibframe.org/vocab/SourceTitle -->
-
-    <owl:Class rdf:about="http://bibframe.org/vocab/SourceTitle">
-        <rdfs:label>Source title</rdfs:label>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&madsrdf;Title"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://bibframe.org/vocab/isTitleOf"/>
-                        <owl:allValuesFrom>
-                            <owl:Class>
-                                <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://bibframe.org/vocab/Instance"/>
-                                    <rdf:Description rdf:about="http://bibframe.org/vocab/Item"/>
-                                </owl:unionOf>
-                            </owl:Class>
-                        </owl:allValuesFrom>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:comment>A SourceTitle is associated directly with an Item or Instance, and is related to its materialization.</rdfs:comment>
-        <skos:example>The Title printed on the cover or spine of a book is a SourceTitle.</skos:example>
-    </owl:Class>
-    
-
-
     <!-- http://bibframe.org/vocab/SpineTitle -->
 
     <owl:Class rdf:about="http://bibframe.org/vocab/SpineTitle">
         <rdfs:label xml:lang="en-us">Spine title</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/SourceTitle"/>
+        <rdfs:subClassOf rdf:resource="&madsrdf;Title"/>
         <rdfs:comment xml:lang="en-us">Title taken from the spine of a resource.</rdfs:comment>
     </owl:Class>
     
@@ -3079,8 +2990,8 @@
 
     <owl:Class rdf:about="http://bibframe.org/vocab/TranslatedTitle">
         <rdfs:label>Translated title</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/DerivedTitle"/>
-        <skos:scopeNote>The derived TranslatedTitle should be distinguished from two other cases. First, if a Work is translated into another language, the translated Work has a Title. This Title is linked directly to the translated Work and is not a DerivedTitle; that is, it is the Title of a translation, rather than the translation of a Title. Second, a Work may have multiple titles in different languages, though none of the titles are the source of the others; examples might be a musical composition or a bilingual book. For example, an Arabic language textbook has the Arabic title &quot;عربيّة الناس&quot;, literally &quot;Arabic of the People,&quot; and the English title &quot;Living Arabic&quot;; neither is a translation of the other. These Titles are also linked directly to the Work, and the language of each Title is denoted through its dcterms:language value.</skos:scopeNote>
+        <rdfs:subClassOf rdf:resource="&madsrdf;Title"/>
+        <skos:scopeNote>The TranslatedTitle should be distinguished from two other cases. First, if a Work is translated into another language, the translated Work has a Title. This Title is linked directly to the translated Work rather than to a Title; that is, it is the Title of a translation, rather than the translation of a Title. Second, a Work may have multiple titles in different languages, though none of the titles are the source of the others; examples might be a musical composition or a bilingual book. For example, an Arabic language textbook has the Arabic title &quot;عربيّة الناس&quot;, literally &quot;Arabic of the People,&quot; and the English title &quot;Living Arabic&quot;; neither is a translation of the other. These Titles are also linked directly to the Work, and the language of each Title is denoted through its dcterms:language value.</skos:scopeNote>
         <rdfs:comment>A title translated from another title.</rdfs:comment>
         <skos:example>The film title &quot;Bella Martha&quot; is translated into English as &quot;Mostly Martha&quot;.</skos:example>
     </owl:Class>
@@ -3091,7 +3002,7 @@
 
     <owl:Class rdf:about="http://bibframe.org/vocab/TransliteratedTitle">
         <rdfs:label>Transliterated title</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/DerivedTitle"/>
+        <rdfs:subClassOf rdf:resource="&madsrdf;Title"/>
         <rdfs:comment>A title transliterated from another title.</rdfs:comment>
         <skos:example>The Arabic title &quot;عربيّة الناس&quot; is tranliterated into Roman orthography as &quot;‘Arabiyyat al-Naas&quot;.</skos:example>
     </owl:Class>
@@ -3101,9 +3012,9 @@
     <!-- http://bibframe.org/vocab/UdcClassification -->
 
     <owl:Class rdf:about="http://bibframe.org/vocab/UdcClassification">
+        <rdfs:label>UDC classification</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Classification"/>
         <rdfs:comment>Universal Decimal Classification number used for subject access.</rdfs:comment>
-        <rdfs:label>UDC classification</rdfs:label>
     </owl:Class>
     
 
@@ -3292,15 +3203,24 @@
     <owl:Class rdf:about="&madsrdf;Title">
         <rdfs:label>Title</rdfs:label>
         <rdfs:label xml:lang="en">Title</rdfs:label>
+        <rdfs:label xml:lang="en-us">Work</rdfs:label>
         <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://bibframe.org/vocab/hasDerivative"/>
-                <owl:allValuesFrom rdf:resource="http://bibframe.org/vocab/DerivedTitle"/>
-            </owl:Restriction>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bibframe.org/vocab/derivedFrom"/>
+                        <owl:allValuesFrom rdf:resource="&madsrdf;Title"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://bibframe.org/vocab/hasDerivative"/>
+                        <owl:allValuesFrom rdf:resource="&madsrdf;Title"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="&xsd;string">The title of a Work, Instance, or Item.</rdfs:comment>
         <rdfs:comment>Title of a Work, Instance, or Item.</rdfs:comment>
-        <skos:scopeNote>Some Titles (DirectTitles) are directly related to a Work, Instance, or Item. Others (DerivedTitles) are derived from a DirectTitle. A resource may have more than one DirectTitle, and multiple DerivedTitles through the DirectTitle.</skos:scopeNote>
+        <skos:scopeNote>Some Titles are directly related to a Work, Instance, or Item. Others are derived from a Title. A resource may be directly linked to more than one Title, and each Title may be linked to multiple Titles.</skos:scopeNote>
     </owl:Class>
     
 
@@ -3504,10 +3424,6 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <owl:Class>
-        <rdfs:subClassOf rdf:resource="&madsrdf;Title"/>
-        <owl:complementOf rdf:resource="http://bibframe.org/vocab/DerivedTitle"/>
-    </owl:Class>
 </rdf:RDF>
 
 
