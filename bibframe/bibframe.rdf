@@ -734,11 +734,10 @@
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasSourceStatus">
         <rdfs:label>has source status</rdfs:label>
-        <skos:editorialNote>&quot;Source status&quot; is clumsy and inaccurate. Should think of a better name.</skos:editorialNote>
-        <rdfs:comment>The source status (either supplied or transcribed) of this Title.</rdfs:comment>
-        <rdfs:range rdf:resource="http://bibframe.org/vocab/TitleSourceStatus"/>
+        <rdfs:comment>The source status (either supplied or transcribed) of the resource.</rdfs:comment>
+        <rdfs:range rdf:resource="http://bibframe.org/vocab/SourceStatus"/>
         <owl:inverseOf rdf:resource="http://bibframe.org/vocab/isSourceStatusOf"/>
-        <rdfs:domain rdf:resource="&madsrdf;Title"/>
+        <skos:scopeNote>Applies to Titles, but could apply to other resources as well.</skos:scopeNote>
     </owl:ObjectProperty>
     
 
@@ -947,10 +946,9 @@
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/isSourceStatusOf">
         <rdfs:label>is source status of</rdfs:label>
-        <skos:editorialNote>&quot;Source status&quot; is clumsy and inaccurate. Should think of a better name.</skos:editorialNote>
-        <rdfs:comment>This source status (either supplied or transcribed) pertains to the Title.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bibframe.org/vocab/TitleSourceStatus"/>
-        <rdfs:range rdf:resource="&madsrdf;Title"/>
+        <rdfs:comment>This source status (either supplied or transcribed) pertains to the resource.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/SourceStatus"/>
+        <skos:scopeNote>Applies to Titles, but could apply to other resources as well.</skos:scopeNote>
     </owl:ObjectProperty>
     
 
@@ -2978,12 +2976,12 @@
     
 
 
-    <!-- http://bibframe.org/vocab/TitleSourceStatus -->
+    <!-- http://bibframe.org/vocab/SourceStatus -->
 
-    <owl:Class rdf:about="http://bibframe.org/vocab/TitleSourceStatus">
+    <owl:Class rdf:about="http://bibframe.org/vocab/SourceStatus">
         <rdfs:label>Title source status</rdfs:label>
         <rdfs:subClassOf rdf:resource="&skos;Concept"/>
-        <rdfs:comment>The source of a title, such as supplied by the cataloger or transcribed from the item. It is related to the Title via the property bf:hasSourceStatus and its inverse.</rdfs:comment>
+        <rdfs:comment>The source of information, such as supplied by the cataloger or transcribed from the item. It is related to the resource it describes via the property bf:hasSourceStatus and its inverse.</rdfs:comment>
     </owl:Class>
     
 
@@ -3398,9 +3396,9 @@
     <!-- http://bibframe.org/vocab/supplied -->
 
     <owl:NamedIndividual rdf:about="http://bibframe.org/vocab/supplied">
-        <rdf:type rdf:resource="http://bibframe.org/vocab/TitleSourceStatus"/>
+        <rdf:type rdf:resource="http://bibframe.org/vocab/SourceStatus"/>
         <rdfs:label>supplied</rdfs:label>
-        <rdfs:comment>Title has been supplied by the cataloger.</rdfs:comment>
+        <rdfs:comment>Information has been supplied by the cataloger.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -3408,9 +3406,9 @@
     <!-- http://bibframe.org/vocab/transcribed -->
 
     <owl:NamedIndividual rdf:about="http://bibframe.org/vocab/transcribed">
-        <rdf:type rdf:resource="http://bibframe.org/vocab/TitleSourceStatus"/>
+        <rdf:type rdf:resource="http://bibframe.org/vocab/SourceStatus"/>
         <rdfs:label>transcribed</rdfs:label>
-        <rdfs:comment>Title has been transcribed from the item.</rdfs:comment>
+        <rdfs:comment>Information has been transcribed from the item.</rdfs:comment>
     </owl:NamedIndividual>
     
 
