@@ -3043,20 +3043,18 @@
 
     <owl:Class rdf:about="http://bibframe.org/vocab/Work">
         <rdfs:label xml:lang="en-us">Work</rdfs:label>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://bibframe.org/vocab/derivedFrom"/>
-                        <owl:allValuesFrom rdf:resource="http://bibframe.org/vocab/Work"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://bibframe.org/vocab/hasDerivative"/>
-                        <owl:allValuesFrom rdf:resource="http://bibframe.org/vocab/Work"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bibframe.org/vocab/derivedFrom"/>
+                <owl:allValuesFrom rdf:resource="http://bibframe.org/vocab/Work"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bibframe.org/vocab/hasDerivative"/>
+                <owl:allValuesFrom rdf:resource="http://bibframe.org/vocab/Work"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:comment xml:lang="en-us">Resource reflecting a conceptual essence of the cataloging resource.</rdfs:comment>
         <vs:term_status>stable</vs:term_status>
     </owl:Class>
@@ -3204,20 +3202,18 @@
         <rdfs:label>Title</rdfs:label>
         <rdfs:label xml:lang="en">Title</rdfs:label>
         <rdfs:label xml:lang="en-us">Work</rdfs:label>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://bibframe.org/vocab/derivedFrom"/>
-                        <owl:allValuesFrom rdf:resource="&madsrdf;Title"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://bibframe.org/vocab/hasDerivative"/>
-                        <owl:allValuesFrom rdf:resource="&madsrdf;Title"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bibframe.org/vocab/derivedFrom"/>
+                <owl:allValuesFrom rdf:resource="&madsrdf;Title"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bibframe.org/vocab/hasDerivative"/>
+                <owl:allValuesFrom rdf:resource="&madsrdf;Title"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:comment rdf:datatype="&xsd;string">The title of a Work, Instance, or Item.</rdfs:comment>
         <rdfs:comment>Title of a Work, Instance, or Item.</rdfs:comment>
         <skos:scopeNote>Some Titles are directly related to a Work, Instance, or Item. Others are derived from a Title. A resource may be directly linked to more than one Title, and each Title may be linked to multiple Titles.</skos:scopeNote>
