@@ -2365,6 +2365,8 @@
 
     <owl:Class rdf:about="http://bibframe.org/vocab/DdcClassification">
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Classification"/>
+        <rdfs:comment>Dewey Decimal Classification number used for subject access.</rdfs:comment>
+        <rdfs:label>DDC classification</rdfs:label>
     </owl:Class>
     
 
@@ -2670,6 +2672,8 @@
 
     <owl:Class rdf:about="http://bibframe.org/vocab/LccClassification">
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Classification"/>
+        <rdfs:comment>Library of Congress Classification number used for subject access.</rdfs:comment>
+        <rdfs:label>LCC classification</rdfs:label>
     </owl:Class>
     
 
@@ -2788,6 +2792,8 @@
 
     <owl:Class rdf:about="http://bibframe.org/vocab/NlmClassification">
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Classification"/>
+        <rdfs:comment>National Library of Medicine Classification number used for subject access.</rdfs:comment>
+        <rdfs:label>NLM classification</rdfs:label>
     </owl:Class>
     
 
@@ -3096,6 +3102,8 @@
 
     <owl:Class rdf:about="http://bibframe.org/vocab/UdcClassification">
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Classification"/>
+        <rdfs:comment>Universal Decimal Classification number used for subject access.</rdfs:comment>
+        <rdfs:label>UDC classification</rdfs:label>
     </owl:Class>
     
 
