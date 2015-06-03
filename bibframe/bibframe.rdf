@@ -18,6 +18,7 @@
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
     <!ENTITY vs "http://www.w3.org/2003/06/sw-vocab-status/ns#" >
+    <!ENTITY iana "http://www.iana.org/assignments/relation/" >
     <!ENTITY rdau "http://rdaregistry.info/Elements/u/" >
     
 ]>
@@ -41,6 +42,7 @@
      xmlns:vocab="http://bibframe.org/vocab/#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:rdau="http://rdaregistry.info/Elements/u/" 
+     xmlns:iana="http://www.iana.org/assignments/relation/"
      xmlns:vivo="http://vivoweb.org/ontology/core#">
     <owl:Ontology rdf:about="http://bibframe.org/vocab/">
         <rdfs:label xml:lang="en-us">LD4L Proposed Bibframe Ontology</rdfs:label>
@@ -186,9 +188,20 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    <owl:ObjectProperty rdf:about="&iana;next">
+        <rdfs:label>next</rdfs:label>
+        <rdfs:comment>Links an individual in a sequence to the individual that follows it in the sequence.</rdfs:comment>
+        <skos:example>A MainTitleElement is linked to a SubTitleElement with iana:next.</skos:example>
+        <owl:inverseOf rdf:resource="&iana;prev"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="&iana;prev">
+        <rdfs:label>prev</rdfs:label>
+        <rdfs:comment>Links an individual in a sequence to the individual that precedes it in the sequence.</rdfs:comment>
+        <skos:example>A SubTitleElement is linked to a MainTitleElement with iana:prev</skos:example>
+        <owl:inverseOf rdf:resource="&iana;next"/>
+    </owl:ObjectProperty>
     
-
-
     <!-- http://bibframe.org/hasCirculationStatus -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/hasCirculationStatus">
@@ -3199,6 +3212,7 @@
         <rdfs:label rdf:datatype="&xsd;string">Main title element</rdfs:label>
         <rdfs:subClassOf rdf:resource="&madsrdf;TitleElement"/>      
         <rdfs:comment xml:lang="en">The initial portion of a title that is removed for sorting.</rdfs:comment>
+        <skos:scopeNote>The MainTitleElement follows (iana:prev) a NonSortElement and precedes (iana:next) any SubTitleElements and PartNumberElements.</skos:scopeNote>
         <skos:example xml:lang="en">Title &quot;A Tree Grows in Brooklyn&quot; has NonSortElement with rdfs:label &quot;A &quot; and MainTitleElement with rdfs:label &quot;Tree Grows in Brooklyn&quot;.</skos:example>
     </owl:Class>
 
@@ -3208,6 +3222,7 @@
         <rdfs:label rdf:datatype="&xsd;string">Non-sort element</rdfs:label>
         <rdfs:subClassOf rdf:resource="&madsrdf;TitleElement"/>
         <rdfs:comment xml:lang="en">The initial portion of a title that is removed for sorting.</rdfs:comment>
+        <skos:scopeNote>The NonSortElement is linked to the MainTitleElement via iana:next.</skos:scopeNote>
     </owl:Class>
     
 
@@ -3222,7 +3237,7 @@
         <skos:example>Fourth Edition</skos:example>
         <skos:example>III</skos:example>
         <skos:editorialNote>We do not use madsrdf:PartNumberElement, since so frequently this is not an integer but a string, as in the example.</skos:editorialNote>
-        <skos:scopeNote>A title may have more than one part name element, in which case they are ordered by bf:precedes. They are also order by bf:precedes with respect to any subtitles; the usual case is that all part name elements would succeed all subtitles.</skos:scopeNote>
+        <skos:scopeNote>A title may have more than one part name element, in which case they are ordered by iana:next and iana:prev. They are also order by iana:prev with respect to any subtitles; the usual case is that all part name elements would follow all subtitles.</skos:scopeNote>
     </owl:Class>
     
 
@@ -3232,7 +3247,8 @@
     <owl:Class rdf:about="&madsrdf;SubTitleElement">
         <rdfs:label rdf:datatype="&xsd;string">Subtitle element</rdfs:label>
         <rdfs:subClassOf rdf:resource="&madsrdf;TitleElement"/>
-        <rdfs:comment xml:lang="en">The subtitle portion of a title. A title may have more than one subtitle, in which case they are ordered by bf:precedes. They are also ordered by bf:precedes with respect to any part name elements of the title.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The subtitle portion of a title.</rdfs:comment>
+        <skos:scopeNote>A title may have more than one subtitle, in which case they are ordered by iana:next and iana:prev. A SubTitleElement is ordered by iana:next with respect to a following PartNameElement, and by iana:prev with respect to the MainTitleElement.</skos:scopeNote>
     </owl:Class>
     
 
