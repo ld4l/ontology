@@ -2473,6 +2473,9 @@
     <owl:Class rdf:about="http://bibframe.org/vocab/Integrating">
         <rdfs:label xml:lang="en-us">Integrating</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Instance"/>
+        <skos:example>Final print edition of AACR2 published in a binder.</skos:example>
+        <skos:example>A loose-leaf manual that is updated by means of replacement pages</skos:example> 
+        <skos:example>A website that is updated continuously.</skos:example>
         <rdfs:comment xml:lang="en-us">Cataloging resource that is added to or changed by means of updates that do not remain discrete but are integrated into the whole.</rdfs:comment>
     </owl:Class>
     
@@ -2693,7 +2696,10 @@
     <owl:Class rdf:about="http://bibframe.org/vocab/MultipartMonograph">
         <rdfs:label xml:lang="en-us">Multipart monograph</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Instance"/>
-        <rdfs:comment xml:lang="en-us">Multiple unit cataloging resource that is complete or intended to be completed within a finite number of parts.</rdfs:comment>
+        <skos:example>The Lord of the Rings.</skos:example> 
+        <skos:example>A dictionary in two volumes.</skos:example>
+        <skos:example>Three audiocassettes issued as a set.</skos:example>
+        <rdfs:comment xml:lang="en-us">RDA definition: A resource issued in two or more parts (either simultaneously or successively) that is complete or intended to be completed within a finite number of parts.</rdfs:comment>
     </owl:Class>
     
 
@@ -2833,11 +2839,23 @@
         <rdfs:label xml:lang="en-us">Serial</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Instance"/>
         <skos:example>Charles Dickens&apos; novels published in serial form.</skos:example>
+        <skos:example>A periodical or journal.</skos:example>
+        <skos:editorialNote>This needs attention. The Dickens example is an Instance case, but a journal or periodical is a Work. Do we need two classes, one a subtype of Work and one of Instance?</skos:editorialNote>
         <skos:scopeNote>As a subclass of Instance, this refers to the manifestation of a Work which is published as a serial rather than, say, a single volume. Contrast with Series, which is a subclass of Work.</skos:scopeNote>
+        <skos:scopeNote>A Serial is related to its component Issues via dcterms:hasPart and inverse dcterms:isPartOf.</skos:scopeNote>       
         <rdfs:comment xml:lang="en-us">Multiple unit cataloging resource issued in successive parts that has no predetermined conclusion.</rdfs:comment>
     </owl:Class>
     
-
+    <!-- http://bibframe.org/vocab/Issue -->
+    
+    <owl:Class rdf:about="http://bibframe.org/vocab/Issue">
+        <rdfs:label xml:lang="en-us">Issue</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Instance"/>
+        <rdfs:comment>One member of a Serial.</rdfs:comment>
+        <skos:editorialNote>This needs attention. If there are two kinds of Serials (Work and Instance) there should also be two kinds of Issues. Issue may not be the right term.</skos:editorialNote>
+        <rdfs:comment xml:lang="en-us">One unit of a Serial.</rdfs:comment>
+        <skos:scopeNote>An Issue is related to the enclosing Serial via dcterms:isPartOf and inverse dcterms:hasPart.</skos:scopeNote>
+    </owl:Class>
 
     <!-- http://bibframe.org/vocab/Series -->
 
@@ -2846,6 +2864,7 @@
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:comment xml:lang="en-us">A larger work consisting of multiple works.</rdfs:comment>
         <skos:scopeNote>Contrast with Serial, a subclass of Instance, which concerns Works published in serial form rather than, say, a single volume. A Series is a Work consisting of multiple Works. It is related to its component Works through dcterms:hasPart.</skos:scopeNote>
+        <skos:editorialNote>We do not need a separate class for the parts of a Series. In themselves they are not distinct from the general Work class.</skos:editorialNote>
         <skos:example>Recent Researches in the Music of the Baroque Era is a Series. Individual volumes in the Series include Telemann: Forty-eight Chorale Preludes, Vivaldi: Cantatas for Soprano, etc.</skos:example>
     </owl:Class>
     
@@ -3174,7 +3193,14 @@
         <rdfs:label xml:lang="en-us">Language</rdfs:label>
     </owl:Class>
     
-
+    <!-- http://www.loc.gov/mads/rdf/v1#MainTitleElement -->
+    
+    <owl:Class rdf:about="&madsrdf;MainTitleElement">
+        <rdfs:label rdf:datatype="&xsd;string">Main title element</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&madsrdf;TitleElement"/>      
+        <rdfs:comment xml:lang="en">The initial portion of a title that is removed for sorting.</rdfs:comment>
+        <skos:example xml:lang="en">Title &quot;A Tree Grows in Brooklyn&quot; has NonSortElement with rdfs:label &quot;A &quot; and MainTitleElement with rdfs:label &quot;Tree Grows in Brooklyn&quot;.</skos:example>
+    </owl:Class>
 
     <!-- http://www.loc.gov/mads/rdf/v1#NonSortElement -->
 
@@ -3182,7 +3208,6 @@
         <rdfs:label rdf:datatype="&xsd;string">Non-sort element</rdfs:label>
         <rdfs:subClassOf rdf:resource="&madsrdf;TitleElement"/>
         <rdfs:comment xml:lang="en">The initial portion of a title that is removed for sorting.</rdfs:comment>
-        <skos:example xml:lang="en">Title &quot;A Tree Grows in Brooklyn&quot; has NonSortElement with rdfs:label &quot;A &quot; and MainTitleElement with rdfs:label &quot;Tree Grows in Brooklyn&quot;.</skos:example>
     </owl:Class>
     
 
@@ -3192,7 +3217,12 @@
     <owl:Class rdf:about="&madsrdf;PartNameElement">
         <rdfs:label rdf:datatype="&xsd;string">Part name element</rdfs:label>
         <rdfs:subClassOf rdf:resource="&madsrdf;TitleElement"/>
-        <rdfs:comment xml:lang="en">The portion of a title indicating that it is a part of another work or sequence of works, such as &quot;Volume 2, &quot; &quot;Fourth Edition, &quot; or &quot;III.&quot; A title may have more than one part name element, in which case they are ordered by bf:precedes. They are also order by bf:precedes with respect to any subtitles; the usual case is that all part name elements would succeed all subtitles.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The portion of a title indicating that it is a part of another work or sequence of works.</rdfs:comment>
+        <skos:example>Volume 2</skos:example>
+        <skos:example>Fourth Edition</skos:example>
+        <skos:example>III</skos:example>
+        <skos:editorialNote>We do not use madsrdf:PartNumberElement, since so frequently this is not an integer but a string, as in the example.</skos:editorialNote>
+        <skos:scopeNote>A title may have more than one part name element, in which case they are ordered by bf:precedes. They are also order by bf:precedes with respect to any subtitles; the usual case is that all part name elements would succeed all subtitles.</skos:scopeNote>
     </owl:Class>
     
 
