@@ -3313,6 +3313,13 @@
                 <owl:allValuesFrom rdf:resource="&madsrdf;Title"/>
             </owl:Restriction>
         </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&dcterms;hasPart" />
+                <owl:allValuesFrom rdf:resource="&madsrdf;TitleElement "/>               
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <skos:editorialNote>Make sure the restriction on dcterms:hasPart is correct.</skos:editorialNote>
         <rdfs:comment rdf:datatype="&xsd;string">The title of a Work, Instance, or Item.</rdfs:comment>
         <rdfs:comment>Title of a Work, Instance, or Item.</rdfs:comment>
         <skos:scopeNote>Titles are not reusable resources.</skos:scopeNote>
@@ -3327,6 +3334,13 @@
         <rdfs:label xml:lang="en">Title element</rdfs:label>
         <rdfs:comment xml:lang="en">Part of a title, such as a subtitle or part name.</rdfs:comment>
         <skos:scopeNote>TitleElements are not reusable resources.</skos:scopeNote>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&dcterms;isPartOf" />
+                <owl:allValuesFrom rdf:resource="&madsrdf;Title "/>               
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <skos:editorialNote>Make sure the restriction on dcterms:isPartOf is correct.</skos:editorialNote>
     </owl:Class>
     
 
