@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:relators="http://id.loc.gov/vocabulary/relators/" xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#" xmlns:bf2="http://bibframe.org/vocab2/" xmlns:bf="http://bibframe.org/vocab/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <bf:Work rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/1413966">
+    <rdf:type rdf:resource="http://bibframe.org/vocab/Text"/>
+    <bf:authorizedAccessPoint>Kennedy, Charles W. (Charles William), 1882-1969. Beowulf</bf:authorizedAccessPoint>
+    <madsrdf:authoritativeLabel>Beowulf.</madsrdf:authoritativeLabel>
+    <bf:workTitle rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/1413966title6"/>
+    <bf:contributor rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/1413966person7"/>
+    <bf:language rdf:resource="http://id.loc.gov/vocabulary/languages/eng"/>
+    <bf:language rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/1413966language9"/>
+    <bf:classificationLcc rdf:resource="http://id.loc.gov/authorities/classification/PR1583"/>
+    <bf:classificationDdc rdf:resource="http://dewey.info/class/829.3/about"/>
+    <bf:derivedFrom rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/1413966.marcxml.xml"/>
+    <bf:authorizedAccessPoint xml:lang="x-bf-hash">kennedycharlesw18821969beowulfengworktext</bf:authorizedAccessPoint>
+  </bf:Work>
+  <bf:Instance rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/1413966instance15">
+    <rdf:type rdf:resource="http://bibframe.org/vocab/Monograph"/>
+    <bf:instanceTitle rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/1413966title18"/>
+    <bf:publication>
+      <bf:Provider>
+        <bf:providerName>
+          <bf:Organization>
+            <bf:label>Oxford university press</bf:label>
+          </bf:Organization>
+        </bf:providerName>
+        <bf:providerPlace>
+          <bf:Place>
+            <bf:label>New York</bf:label>
+          </bf:Place>
+        </bf:providerPlace>
+        <bf:providerDate>1940</bf:providerDate>
+      </bf:Provider>
+    </bf:publication>
+    <bf:modeOfIssuance>single unit</bf:modeOfIssuance>
+    <bf:extent>lxv, 121 p.</bf:extent>
+    <bf:dimensions>21 cm.</bf:dimensions>
+    <bf:illustrationNote>front. (facsim.)</bf:illustrationNote>
+    <bf:titleStatement>Beowulf, the oldest English epic;</bf:titleStatement>
+    <bf:providerStatement>New York, London etc. Oxford university press, 1940.</bf:providerStatement>
+    <bf:supplementaryContentNote>"A selected bibliography": p. [103]-111.</bf:supplementaryContentNote>
+    <bf:lccn>
+      <bf:Identifier>
+        <bf:identifierValue>40011376</bf:identifierValue>
+        <bf:identifierScheme rdf:resource="http://id.loc.gov/vocabulary/identifiers/lccn"/>
+      </bf:Identifier>
+    </bf:lccn>
+    <bf:systemNumber>
+      <bf:Identifier>
+        <bf:identifierValue>(CStRLIN)NYCXA0009800B</bf:identifierValue>
+        <bf:identifierScheme rdf:resource="http://id.loc.gov/vocabulary/identifiers/systemNumber"/>
+      </bf:Identifier>
+    </bf:systemNumber>
+    <bf:systemNumber>
+      <bf:Identifier>
+        <bf:identifierValue>(NIC)notisAGM8694</bf:identifierValue>
+        <bf:identifierScheme rdf:resource="http://id.loc.gov/vocabulary/identifiers/systemNumber"/>
+      </bf:Identifier>
+    </bf:systemNumber>
+    <bf:systemNumber rdf:resource="http://www.worldcat.org/oclc/2613949"/>
+    <bf:systemNumber>
+      <bf:Identifier>
+        <bf:identifierValue>1413966</bf:identifierValue>
+        <bf:identifierScheme rdf:resource="http://id.loc.gov/vocabulary/identifiers/systemNumber"/>
+      </bf:Identifier>
+    </bf:systemNumber>
+    <bf:derivedFrom rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/1413966.marcxml.xml"/>
+    <bf:instanceOf rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/1413966"/>
+  </bf:Instance>
+  <bf:Annotation rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/1413966annotation14">
+    <bf:derivedFrom rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/1413966.marcxml.xml"/>
+    <bf:descriptionModifier rdf:resource="http://id.loc.gov/vocabulary/organizations/nic"/>
+    <bf:descriptionConventions rdf:resource="http://id.loc.gov/vocabulary/descriptionConventions/nonisbd"/>
+    <bf:generationProcess>DLC transform-tool:2015-04-27-T11:00:00</bf:generationProcess>
+    <bf:changeDate>2014-08-26T18:36</bf:changeDate>
+    <bf:annotates rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/1413966"/>
+  </bf:Annotation>
+  <bf:HeldItem rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/1413966helditem34">
+    <bf:label>PR1583 .K4</bf:label>
+    <bf:shelfMarkLcc>PR1583 .K4</bf:shelfMarkLcc>
+    <bf:holdingFor rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/1413966instance15"/>
+  </bf:HeldItem>
+  <bf:Title rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/1413966title6">
+    <bf:titleValue>Beowulf.</bf:titleValue>
+  </bf:Title>
+  <bf:Person rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/1413966person7">
+    <bf:label>Kennedy, Charles W. (Charles William), 1882-1969.</bf:label>
+    <bf:authorizedAccessPoint>Kennedy, Charles W. (Charles William), 1882-1969.</bf:authorizedAccessPoint>
+    <bf:hasAuthority>
+      <madsrdf:Authority>
+        <madsrdf:authoritativeLabel>Kennedy, Charles W. (Charles William), 1882-1969.</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </bf:hasAuthority>
+  </bf:Person>
+  <bf:Language rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/1413966language9">
+    <bf:resourcePart>original</bf:resourcePart>
+    <bf:languageOfPartUri rdf:resource="http://id.loc.gov/vocabulary/languages/ang"/>
+  </bf:Language>
+  <bf:Title rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/1413966title18">
+    <bf:titleValue>Beowulf, the oldest English epic;</bf:titleValue>
+  </bf:Title>
+</rdf:RDF>

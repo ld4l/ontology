@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:relators="http://id.loc.gov/vocabulary/relators/" xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#" xmlns:bf2="http://bibframe.org/vocab2/" xmlns:bf="http://bibframe.org/vocab/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <bf:Work rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/264406">
+    <rdf:type rdf:resource="http://bibframe.org/vocab/Text"/>
+    <bf:authorizedAccessPoint>Foundations of language</bf:authorizedAccessPoint>
+    <bf:workTitle rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/264406title5"/>
+    <bf:language rdf:resource="http://id.loc.gov/vocabulary/languages/eng"/>
+    <bf:subject rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/264406topic7"/>
+    <bf:subject rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/264406topic8"/>
+    <bf:subject rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/264406topic9"/>
+    <bf:subject rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/264406topic10"/>
+    <bf:subject rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/264406topic11"/>
+    <bf:classificationLcc rdf:resource="http://id.loc.gov/authorities/classification/P1.A1"/>
+    <bf:classificationDdc rdf:resource="http://dewey.info/class/410%2F.5/about"/>
+    <bf:issnL>
+      <bf:Identifier>
+        <bf:identifierScheme rdf:resource="http://id.loc.gov/vocabulary/identifiers/issnL"/>
+        <bf:identifierValue/>
+      </bf:Identifier>
+    </bf:issnL>
+    <bf:supersededBy rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/264406work15"/>
+    <bf:supplement rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/264406work16"/>
+    <bf:derivedFrom rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/264406.marcxml.xml"/>
+    <bf:authorizedAccessPoint xml:lang="x-bf-hash">foundationsoflanguageengworktext</bf:authorizedAccessPoint>
+  </bf:Work>
+  <bf:Work rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/264406work15">
+    <bf:title>Studies in language</bf:title>
+    <bf:authorizedAccessPoint>Studies in language</bf:authorizedAccessPoint>
+  </bf:Work>
+  <bf:Work rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/264406work16">
+    <bf:title>Foundations of language. Supplementary series</bf:title>
+    <bf:authorizedAccessPoint>Foundations of language. Supplementary series</bf:authorizedAccessPoint>
+  </bf:Work>
+  <bf:Instance rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/264406instance20">
+    <rdf:type rdf:resource="http://bibframe.org/vocab/Serial"/>
+    <bf:keyTitle rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/264406title23"/>
+    <bf:instanceTitle rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/264406title24"/>
+    <bf:publication>
+      <bf:Provider>
+        <bf:providerName>
+          <bf:Organization>
+            <bf:label>D. Reidel Pub. Co</bf:label>
+          </bf:Organization>
+        </bf:providerName>
+        <bf:providerPlace>
+          <bf:Place>
+            <bf:label>Dordrecht</bf:label>
+          </bf:Place>
+        </bf:providerPlace>
+      </bf:Provider>
+    </bf:publication>
+    <bf:modeOfIssuance>serial</bf:modeOfIssuance>
+    <bf:extent>14 v.</bf:extent>
+    <bf:dimensions>25 cm.</bf:dimensions>
+    <bf:titleStatement>Foundations of language.</bf:titleStatement>
+    <bf:providerStatement>Dordrecht, Boston, D. Reidel Pub. Co.</bf:providerStatement>
+    <bf:frequencyNote>Bimonthly &lt;, Jan. 1975- &gt;</bf:frequencyNote>
+    <bf:note>"International journal of language and philosophy."</bf:note>
+    <bf:lccn>
+      <bf:Identifier>
+        <bf:identifierValue>68005459</bf:identifierValue>
+        <bf:identifierScheme rdf:resource="http://id.loc.gov/vocabulary/identifiers/lccn"/>
+      </bf:Identifier>
+    </bf:lccn>
+    <bf:issn>
+      <bf:Identifier>
+        <bf:identifierScheme rdf:resource="http://id.loc.gov/vocabulary/identifiers/issn"/>
+        <bf:identifierValue>0015-900X</bf:identifierValue>
+      </bf:Identifier>
+    </bf:issn>
+    <bf:systemNumber>
+      <bf:Identifier>
+        <bf:identifierValue>(CStRLIN)NYCX1313337S</bf:identifierValue>
+        <bf:identifierScheme rdf:resource="http://id.loc.gov/vocabulary/identifiers/systemNumber"/>
+      </bf:Identifier>
+    </bf:systemNumber>
+    <bf:systemNumber>
+      <bf:Identifier>
+        <bf:identifierValue>(NIC)notisABC9706</bf:identifierValue>
+        <bf:identifierScheme rdf:resource="http://id.loc.gov/vocabulary/identifiers/systemNumber"/>
+      </bf:Identifier>
+    </bf:systemNumber>
+    <bf:systemNumber rdf:resource="http://www.worldcat.org/oclc/1313337"/>
+    <bf:systemNumber>
+      <bf:Identifier>
+        <bf:identifierValue>264406</bf:identifierValue>
+        <bf:identifierScheme rdf:resource="http://id.loc.gov/vocabulary/identifiers/systemNumber"/>
+      </bf:Identifier>
+    </bf:systemNumber>
+    <bf:serialFirstIssue>v.1</bf:serialFirstIssue>
+    <bf:serialLastIssue>14; Jan. 1965-76.</bf:serialLastIssue>
+    <bf:derivedFrom rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/264406.marcxml.xml"/>
+    <bf:instanceOf rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/264406"/>
+  </bf:Instance>
+  <bf:Annotation rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/264406annotation19">
+    <bf:derivedFrom rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/264406.marcxml.xml"/>
+    <bf:descriptionSource rdf:resource="http://id.loc.gov/vocabulary/organizations/fguls"/>
+    <bf:descriptionModifier rdf:resource="http://id.loc.gov/vocabulary/organizations/cty"/>
+    <bf:descriptionModifier rdf:resource="http://id.loc.gov/vocabulary/organizations/ocolc"/>
+    <bf:descriptionModifier rdf:resource="http://id.loc.gov/vocabulary/organizations/cty"/>
+    <bf:descriptionModifier rdf:resource="http://id.loc.gov/vocabulary/organizations/nic"/>
+    <bf:descriptionModifier rdf:resource="http://id.loc.gov/vocabulary/organizations/cstrlin"/>
+    <bf:descriptionConventions rdf:resource="http://id.loc.gov/vocabulary/descriptionConventions/nonisbd"/>
+    <bf:generationProcess>DLC transform-tool:2015-04-27-T11:00:00</bf:generationProcess>
+    <bf:changeDate>2015-01-28T08:52</bf:changeDate>
+    <bf:annotates rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/264406"/>
+  </bf:Annotation>
+  <bf:HeldItem rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/264406helditem43">
+    <bf:label>P1.A1 F6</bf:label>
+    <bf:shelfMarkLcc>P1.A1 F6</bf:shelfMarkLcc>
+    <bf:holdingFor rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/264406instance20"/>
+  </bf:HeldItem>
+  <bf:Title rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/264406title5">
+    <bf:titleValue>Foundations of language</bf:titleValue>
+  </bf:Title>
+  <bf:Topic rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/264406topic7">
+    <bf:authorizedAccessPoint>Linguistics--Periodicals</bf:authorizedAccessPoint>
+    <bf:label>Linguistics--Periodicals</bf:label>
+    <bf:hasAuthority>
+      <madsrdf:Authority>
+        <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+        <madsrdf:authoritativeLabel>Linguistics--Periodicals</madsrdf:authoritativeLabel>
+        <madsrdf:isMemberOfMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+      </madsrdf:Authority>
+    </bf:hasAuthority>
+  </bf:Topic>
+  <bf:Topic rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/264406topic8">
+    <bf:authorizedAccessPoint>Language and languages--Philosophy--Periodicals</bf:authorizedAccessPoint>
+    <bf:label>Language and languages--Philosophy--Periodicals</bf:label>
+    <bf:hasAuthority>
+      <madsrdf:Authority>
+        <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+        <madsrdf:authoritativeLabel>Language and languages--Philosophy--Periodicals</madsrdf:authoritativeLabel>
+        <madsrdf:isMemberOfMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+      </madsrdf:Authority>
+    </bf:hasAuthority>
+  </bf:Topic>
+  <bf:Topic rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/264406topic9">
+    <bf:authorizedAccessPoint>Language and languages--Philosophy</bf:authorizedAccessPoint>
+    <bf:label>Language and languages--Philosophy</bf:label>
+    <bf:hasAuthority>
+      <madsrdf:Authority>
+        <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+        <madsrdf:authoritativeLabel>Language and languages--Philosophy</madsrdf:authoritativeLabel>
+        <madsrdf:isMemberOfMADSScheme rdf:resource="http://id.loc.gov/vocabulary/subjectSchemes/fast"/>
+      </madsrdf:Authority>
+    </bf:hasAuthority>
+    <bf:authoritySource>http://id.loc.gov/vocabulary/subjectSchemes/fast</bf:authoritySource>
+    <bf:systemNumber>
+      <bf:Identifier>
+        <bf:identifierValue>(OCoLC)fst00992193</bf:identifierValue>
+      </bf:Identifier>
+    </bf:systemNumber>
+  </bf:Topic>
+  <bf:Topic rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/264406topic10">
+    <bf:authorizedAccessPoint>Linguistics</bf:authorizedAccessPoint>
+    <bf:label>Linguistics</bf:label>
+    <bf:hasAuthority>
+      <madsrdf:Authority>
+        <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Topic"/>
+        <madsrdf:authoritativeLabel>Linguistics</madsrdf:authoritativeLabel>
+        <madsrdf:isMemberOfMADSScheme rdf:resource="http://id.loc.gov/vocabulary/subjectSchemes/fast"/>
+      </madsrdf:Authority>
+    </bf:hasAuthority>
+    <bf:authoritySource>http://id.loc.gov/vocabulary/subjectSchemes/fast</bf:authoritySource>
+    <bf:systemNumber>
+      <bf:Identifier>
+        <bf:identifierValue>(OCoLC)fst00999202</bf:identifierValue>
+      </bf:Identifier>
+    </bf:systemNumber>
+  </bf:Topic>
+  <bf:Topic rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/264406topic11">
+    <bf:authorizedAccessPoint>Periodicals</bf:authorizedAccessPoint>
+    <bf:label>Periodicals</bf:label>
+    <bf:hasAuthority>
+      <madsrdf:Authority>
+        <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#GenreForm"/>
+        <madsrdf:authoritativeLabel>Periodicals</madsrdf:authoritativeLabel>
+        <madsrdf:isMemberOfMADSScheme rdf:resource="http://id.loc.gov/vocabulary/subjectSchemes/fast"/>
+      </madsrdf:Authority>
+    </bf:hasAuthority>
+    <bf:authoritySource>http://id.loc.gov/vocabulary/subjectSchemes/fast</bf:authoritySource>
+    <bf:systemNumber>
+      <bf:Identifier>
+        <bf:identifierValue>(OCoLC)fst01411641</bf:identifierValue>
+      </bf:Identifier>
+    </bf:systemNumber>
+  </bf:Topic>
+  <bf:Title rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/264406title23">
+    <bf:titleValue>Foundations of language</bf:titleValue>
+  </bf:Title>
+  <bf:Title rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/264406title24">
+    <bf:titleValue>Foundations of language</bf:titleValue>
+  </bf:Title>
+</rdf:RDF>

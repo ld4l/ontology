@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:relators="http://id.loc.gov/vocabulary/relators/" xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#" xmlns:bf2="http://bibframe.org/vocab2/" xmlns:bf="http://bibframe.org/vocab/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <bf:Work rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/7757848">
+    <rdf:type rdf:resource="http://bibframe.org/vocab/MixedMaterial"/>
+    <bf:authorizedAccessPoint>Douglass, Frederick, 1818-1895. Frederick Douglass letter to Charles J. Langdon,</bf:authorizedAccessPoint>
+    <bf:workTitle rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/7757848title5"/>
+    <bf:creator rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/7757848person6"/>
+    <bf:temporalCoverageNote>1865 - 1877</bf:temporalCoverageNote>
+    <bf:language rdf:resource="http://id.loc.gov/vocabulary/languages/eng"/>
+    <bf:subject rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/7757848person11"/>
+    <bf:subject rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/7757848person12"/>
+    <bf:subject rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/7757848person13"/>
+    <bf:subject rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/7757848person14"/>
+    <bf:subject rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/7757848temporal15"/>
+    <bf:subject rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/7757848topic16"/>
+    <bf:derivedFrom rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/7757848.marcxml.xml"/>
+    <bf:authorizedAccessPoint xml:lang="x-bf-hash">douglassfrederick18181895frederickdouglasslettertocharlesjlangdonengworkmixedmaterial</bf:authorizedAccessPoint>
+  </bf:Work>
+  <bf:Instance rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/7757848instance20">
+    <rdf:type rdf:resource="http://bibframe.org/vocab/Archival"/>
+    <rdf:type rdf:resource="http://bibframe.org/vocab/Collection"/>
+    <bf:instanceTitle rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/7757848title24"/>
+    <bf:modeOfIssuance>monographic</bf:modeOfIssuance>
+    <bf:extent>1 item.</bf:extent>
+    <bf:titleStatement>Frederick Douglass letter to Charles J. Langdon</bf:titleStatement>
+    <bf:languageNote>In English.</bf:languageNote>
+    <bf:preferredCitation>Frederick Douglass Letter to Charles J. Langdon, #198m. Division of Rare and Manuscript Collections, Cornell University Library.</bf:preferredCitation>
+    <bf:note>Letter to Mr. Langdon about President Grant's failure to invite him to dinner.</bf:note>
+    <bf:note>Background information from The Life and Writings of Frederick Douglass, Vol. IV, Reconstruction and After, by Philip S. Foner, New York: International Publishers, 1955.</bf:note>
+    <bf:systemNumber rdf:resource="http://www.worldcat.org/oclc/801199450"/>
+    <bf:systemNumber>
+      <bf:Identifier>
+        <bf:identifierValue>7757848</bf:identifierValue>
+        <bf:identifierScheme rdf:resource="http://id.loc.gov/vocabulary/identifiers/systemNumber"/>
+      </bf:Identifier>
+    </bf:systemNumber>
+    <bf:derivedFrom rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/7757848.marcxml.xml"/>
+    <bf:instanceOf rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/7757848"/>
+  </bf:Instance>
+  <bf:Annotation rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/7757848annotation19">
+    <bf:derivedFrom rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/7757848.marcxml.xml"/>
+    <bf:descriptionSource rdf:resource="http://id.loc.gov/vocabulary/organizations/nic"/>
+    <bf:descriptionConventions rdf:resource="http://id.loc.gov/vocabulary/descriptionConventions/dacs"/>
+    <bf:descriptionConventions rdf:resource="http://id.loc.gov/vocabulary/descriptionConventions/aacr2"/>
+    <bf:generationProcess>DLC transform-tool:2015-04-27-T11:00:00</bf:generationProcess>
+    <bf:changeDate>2015-01-02T10:53</bf:changeDate>
+    <bf:annotates rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/7757848"/>
+  </bf:Annotation>
+  <bf:Summary rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/7757848summary9">
+    <rdf:type rdf:resource="http://bibframe.org/vocab/Summary"/>
+    <bf:label>Summary</bf:label>
+    <bf:annotationAssertedBy rdf:resource="http://id.loc.gov/vocabulary/organizations/dlc"/>
+    <bf:annotationBody>Letter to Mr. Langdon about President Grant's failure to invite him to dinner.</bf:annotationBody>
+    <bf:summaryOf rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/7757848"/>
+  </bf:Summary>
+  <bf:Summary rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/7757848summary10">
+    <rdf:type rdf:resource="http://bibframe.org/vocab/Summary"/>
+    <bf:label>Summary</bf:label>
+    <bf:annotationAssertedBy rdf:resource="http://id.loc.gov/vocabulary/organizations/dlc"/>
+    <bf:annotationBody>Background information from The Life and Writings of Frederick Douglass, Vol. IV, Reconstruction and After, by Philip S. Foner, New York: International Publishers, 1955.</bf:annotationBody>
+    <bf:summaryOf rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/7757848"/>
+  </bf:Summary>
+  <bf:Title rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/7757848title5">
+    <bf:titleValue>Frederick Douglass letter to Charles J. Langdon,</bf:titleValue>
+  </bf:Title>
+  <bf:Person rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/7757848person6">
+    <bf:label>Douglass, Frederick, 1818-1895.</bf:label>
+    <bf:authorizedAccessPoint>Douglass, Frederick, 1818-1895.</bf:authorizedAccessPoint>
+    <bf:hasAuthority>
+      <madsrdf:Authority>
+        <madsrdf:authoritativeLabel>Douglass, Frederick, 1818-1895.</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </bf:hasAuthority>
+  </bf:Person>
+  <bf:Person rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/7757848person11">
+    <bf:authorizedAccessPoint>Langdon, Charles J.</bf:authorizedAccessPoint>
+    <bf:label>Langdon, Charles J.</bf:label>
+    <bf:hasAuthority>
+      <madsrdf:Authority>
+        <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#PersonalName"/>
+        <madsrdf:authoritativeLabel>Langdon, Charles J.</madsrdf:authoritativeLabel>
+        <madsrdf:isMemberOfMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+      </madsrdf:Authority>
+    </bf:hasAuthority>
+  </bf:Person>
+  <bf:Person rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/7757848person12">
+    <bf:authorizedAccessPoint>Grant, Ulysses Simpson, 1822-1885.</bf:authorizedAccessPoint>
+    <bf:label>Grant, Ulysses Simpson, 1822-1885.</bf:label>
+    <bf:hasAuthority>
+      <madsrdf:Authority>
+        <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#PersonalName"/>
+        <madsrdf:authoritativeLabel>Grant, Ulysses Simpson, 1822-1885.</madsrdf:authoritativeLabel>
+        <madsrdf:isMemberOfMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+      </madsrdf:Authority>
+    </bf:hasAuthority>
+  </bf:Person>
+  <bf:Person rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/7757848person13">
+    <bf:authorizedAccessPoint>Grant, Ulysses Simpson, 1822-1885</bf:authorizedAccessPoint>
+    <bf:label>Grant, Ulysses Simpson, 1822-1885</bf:label>
+    <bf:hasAuthority>
+      <madsrdf:Authority>
+        <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#PersonalName"/>
+        <madsrdf:authoritativeLabel>Grant, Ulysses Simpson, 1822-1885</madsrdf:authoritativeLabel>
+        <madsrdf:isMemberOfMADSScheme rdf:resource="http://id.loc.gov/vocabulary/subjectSchemes/fast/NIC/NAC"/>
+      </madsrdf:Authority>
+    </bf:hasAuthority>
+    <bf:authoritySource>http://id.loc.gov/vocabulary/subjectSchemes/fast/NIC/NAC</bf:authoritySource>
+  </bf:Person>
+  <bf:Person rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/7757848person14">
+    <bf:authorizedAccessPoint>Langdon, Charles J.</bf:authorizedAccessPoint>
+    <bf:label>Langdon, Charles J.</bf:label>
+    <bf:hasAuthority>
+      <madsrdf:Authority>
+        <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#PersonalName"/>
+        <madsrdf:authoritativeLabel>Langdon, Charles J.</madsrdf:authoritativeLabel>
+        <madsrdf:isMemberOfMADSScheme rdf:resource="http://id.loc.gov/vocabulary/subjectSchemes/fast/NIC/NAC"/>
+      </madsrdf:Authority>
+    </bf:hasAuthority>
+    <bf:authoritySource>http://id.loc.gov/vocabulary/subjectSchemes/fast/NIC/NAC</bf:authoritySource>
+  </bf:Person>
+  <bf:Temporal rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/7757848temporal15">
+    <bf:authorizedAccessPoint>1865 - 1877</bf:authorizedAccessPoint>
+    <bf:label>1865 - 1877</bf:label>
+    <bf:hasAuthority>
+      <madsrdf:Authority>
+        <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Temporal"/>
+        <madsrdf:authoritativeLabel>1865 - 1877</madsrdf:authoritativeLabel>
+        <madsrdf:isMemberOfMADSScheme rdf:resource="http://id.loc.gov/vocabulary/subjectSchemes/fast"/>
+      </madsrdf:Authority>
+    </bf:hasAuthority>
+    <bf:authoritySource>http://id.loc.gov/vocabulary/subjectSchemes/fast</bf:authoritySource>
+  </bf:Temporal>
+  <bf:Topic rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/7757848topic16">
+    <bf:authorizedAccessPoint>Political science</bf:authorizedAccessPoint>
+    <bf:label>Political science</bf:label>
+    <bf:hasAuthority>
+      <madsrdf:Authority>
+        <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Topic"/>
+        <madsrdf:authoritativeLabel>Political science</madsrdf:authoritativeLabel>
+        <madsrdf:isMemberOfMADSScheme rdf:resource="http://id.loc.gov/vocabulary/subjectSchemes/fast"/>
+      </madsrdf:Authority>
+    </bf:hasAuthority>
+    <bf:authoritySource>http://id.loc.gov/vocabulary/subjectSchemes/fast</bf:authoritySource>
+    <bf:systemNumber>
+      <bf:Identifier>
+        <bf:identifierValue>(OCoLC)fst01069781</bf:identifierValue>
+      </bf:Identifier>
+    </bf:systemNumber>
+  </bf:Topic>
+  <bf:Title rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/7757848title24">
+    <bf:titleValue>Frederick Douglass letter to Charles J. Langdon,</bf:titleValue>
+  </bf:Title>
+</rdf:RDF>

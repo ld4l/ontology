@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:relators="http://id.loc.gov/vocabulary/relators/" xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#" xmlns:bf2="http://bibframe.org/vocab2/" xmlns:bf="http://bibframe.org/vocab/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <bf:Work rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/1709520">
+    <rdf:type rdf:resource="http://bibframe.org/vocab/Text"/>
+    <bf:authorizedAccessPoint>Twain, Mark, 1835-1910. Adventures of Huckleberry Finn</bf:authorizedAccessPoint>
+    <madsrdf:authoritativeLabel>Adventures of Huckleberry Finn</madsrdf:authoritativeLabel>
+    <bf:workTitle rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/1709520title6"/>
+    <bf:creator rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/1709520person7"/>
+    <bf:contributor rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/1709520person8"/>
+    <bf:language rdf:resource="http://id.loc.gov/vocabulary/languages/eng"/>
+    <bf:classificationLcc rdf:resource="http://id.loc.gov/authorities/classification/PZ3.C59"/>
+    <bf:series rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/1709520work11"/>
+    <bf:derivedFrom rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/1709520.marcxml.xml"/>
+    <bf:authorizedAccessPoint xml:lang="x-bf-hash">lynnkennethschuylertwainmark18351910adventuresofhuckleberryfinnengworktext</bf:authorizedAccessPoint>
+  </bf:Work>
+  <bf:Work rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/1709520work11">
+    <bf:title>Harbrace sourcebooks</bf:title>
+    <bf:authorizedAccessPoint>Harbrace sourcebooks</bf:authorizedAccessPoint>
+  </bf:Work>
+  <bf:Instance rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/1709520instance15">
+    <rdf:type rdf:resource="http://bibframe.org/vocab/Monograph"/>
+    <bf:instanceTitle rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/1709520title18"/>
+    <bf:publication>
+      <bf:Provider>
+        <bf:providerName>
+          <bf:Organization>
+            <bf:label>Harcourt, Brace &amp; World</bf:label>
+          </bf:Organization>
+        </bf:providerName>
+        <bf:providerPlace>
+          <bf:Place>
+            <bf:label>New York</bf:label>
+          </bf:Place>
+        </bf:providerPlace>
+        <bf:providerDate>[1961]</bf:providerDate>
+      </bf:Provider>
+    </bf:publication>
+    <bf:modeOfIssuance>single unit</bf:modeOfIssuance>
+    <bf:extent>218 p.</bf:extent>
+    <bf:dimensions>24 cm.</bf:dimensions>
+    <bf:titleStatement>Huckleberry Finn; text, sources, and criticism.</bf:titleStatement>
+    <bf:providerStatement>New York, Harcourt, Brace &amp; World 1961</bf:providerStatement>
+    <bf:lccn>
+      <bf:Identifier>
+        <bf:identifierValue>61009261/L/r842</bf:identifierValue>
+        <bf:identifierScheme rdf:resource="http://id.loc.gov/vocabulary/identifiers/lccn"/>
+      </bf:Identifier>
+    </bf:lccn>
+    <bf:systemNumber>
+      <bf:Identifier>
+        <bf:identifierValue>(CStRLIN)NYCX89B42317</bf:identifierValue>
+        <bf:identifierScheme rdf:resource="http://id.loc.gov/vocabulary/identifiers/systemNumber"/>
+      </bf:Identifier>
+    </bf:systemNumber>
+    <bf:systemNumber>
+      <bf:Identifier>
+        <bf:identifierValue>(NIC)notisAHZ8837</bf:identifierValue>
+        <bf:identifierScheme rdf:resource="http://id.loc.gov/vocabulary/identifiers/systemNumber"/>
+      </bf:Identifier>
+    </bf:systemNumber>
+    <bf:systemNumber rdf:resource="http://www.worldcat.org/oclc/964924"/>
+    <bf:systemNumber>
+      <bf:Identifier>
+        <bf:identifierValue>1709520</bf:identifierValue>
+        <bf:identifierScheme rdf:resource="http://id.loc.gov/vocabulary/identifiers/systemNumber"/>
+      </bf:Identifier>
+    </bf:systemNumber>
+    <bf:derivedFrom rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/1709520.marcxml.xml"/>
+    <bf:instanceOf rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/1709520"/>
+  </bf:Instance>
+  <bf:Annotation rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/1709520annotation14">
+    <bf:derivedFrom rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/1709520.marcxml.xml"/>
+    <bf:descriptionModifier rdf:resource="http://id.loc.gov/vocabulary/organizations/nic"/>
+    <bf:descriptionConventions rdf:resource="http://id.loc.gov/vocabulary/descriptionConventions/nonisbd"/>
+    <bf:generationProcess>DLC transform-tool:2015-04-27-T11:00:00</bf:generationProcess>
+    <bf:changeDate>2014-08-23T18:49</bf:changeDate>
+    <bf:annotates rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/1709520"/>
+  </bf:Annotation>
+  <bf:HeldItem rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/1709520helditem32">
+    <bf:label>PZ3.C59 A66</bf:label>
+    <bf:shelfMarkLcc>PZ3.C59 A66</bf:shelfMarkLcc>
+    <bf:holdingFor rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/1709520instance15"/>
+  </bf:HeldItem>
+  <bf:Title rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/1709520title6">
+    <bf:titleValue>Adventures of Huckleberry Finn</bf:titleValue>
+  </bf:Title>
+  <bf:Person rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/1709520person7">
+    <bf:label>Twain, Mark, 1835-1910.</bf:label>
+    <bf:authorizedAccessPoint>Twain, Mark, 1835-1910.</bf:authorizedAccessPoint>
+    <bf:hasAuthority>
+      <madsrdf:Authority>
+        <madsrdf:authoritativeLabel>Twain, Mark, 1835-1910.</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </bf:hasAuthority>
+  </bf:Person>
+  <bf:Person rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/1709520person8">
+    <bf:label>Lynn, Kenneth Schuyler.</bf:label>
+    <bf:authorizedAccessPoint>Lynn, Kenneth Schuyler.</bf:authorizedAccessPoint>
+    <bf:hasAuthority>
+      <madsrdf:Authority>
+        <madsrdf:authoritativeLabel>Lynn, Kenneth Schuyler.</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </bf:hasAuthority>
+  </bf:Person>
+  <bf:Title rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/1709520title18">
+    <bf:titleValue>Huckleberry Finn; text, sources, and criticism</bf:titleValue>
+  </bf:Title>
+</rdf:RDF>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:relators="http://id.loc.gov/vocabulary/relators/" xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#" xmlns:bf2="http://bibframe.org/vocab2/" xmlns:bf="http://bibframe.org/vocab/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <bf:Work rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/1520701">
+    <rdf:type rdf:resource="http://bibframe.org/vocab/NotatedMusic"/>
+    <bf:authorizedAccessPoint>Bach, Johann Sebastian, 1685-1750. Die Kunst der Fuge The art of fugue BWV 1080</bf:authorizedAccessPoint>
+    <bf:workTitle rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/1520701title5"/>
+    <bf:title xml:lang="x-bf-sort">Kunst der Fuge </bf:title>
+    <bf:workTitle rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/1520701title7"/>
+    <bf:creator rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/1520701person8"/>
+    <bf:contributor rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/1520701person9"/>
+    <bf:subject rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/1520701topic10"/>
+    <bf:classificationLcc rdf:resource="http://id.loc.gov/authorities/classification/M25"/>
+    <bf:relatedWork rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/1520701work12"/>
+    <bf:derivedFrom rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/1520701.marcxml.xml"/>
+    <bf:authorizedAccessPoint xml:lang="x-bf-hash">bachjohannsebastian16851750wolffchristophkunstderfugetheartoffuguebwv1080worknotatedmusic</bf:authorizedAccessPoint>
+  </bf:Work>
+  <bf:Work rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/1520701work12">
+    <bf:title>Art of fugue.</bf:title>
+    <bf:authorizedAccessPoint>Art of fugue.</bf:authorizedAccessPoint>
+  </bf:Work>
+  <bf:Instance rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/1520701instance16">
+    <rdf:type rdf:resource="http://bibframe.org/vocab/Monograph"/>
+    <bf:instanceTitle rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/1520701title19"/>
+    <bf:title xml:lang="x-bf-sort">Kunst der Fuge </bf:title>
+    <bf:instanceTitle rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/1520701title21"/>
+    <bf:publication>
+      <bf:Provider>
+        <bf:providerName>
+          <bf:Organization>
+            <bf:label>C.F. Peters</bf:label>
+          </bf:Organization>
+        </bf:providerName>
+        <bf:providerPlace>
+          <bf:Place>
+            <bf:label>Frankfurt </bf:label>
+          </bf:Place>
+        </bf:providerPlace>
+        <bf:copyrightDate>c1987.</bf:copyrightDate>
+      </bf:Provider>
+    </bf:publication>
+    <bf:modeOfIssuance>single unit</bf:modeOfIssuance>
+    <bf:extent>2 v. of music ;</bf:extent>
+    <bf:dimensions>31 cm.</bf:dimensions>
+    <bf:titleStatement>Die Kunst der Fuge = The art of fugue : BWV 1080</bf:titleStatement>
+    <bf:providerStatement>Frankfurt ; New York : C.F. Peters, c1987.</bf:providerStatement>
+    <bf:contentsNote>Bd. 1. Fr?here Fassung der autographen Partitur = Earlier version of the autograph score -- Bd. 2. Sp?tere Fassung des Originaldrucks = Later version of the original print.</bf:contentsNote>
+    <bf:note>Originally without instrumental specification, but probably intended to be played on harpsichord.</bf:note>
+    <bf:note>"Erstausgabe" (Bd. 1).</bf:note>
+    <bf:note>Publisher's no.: Edition Peters Nr. 8586a-8586b.</bf:note>
+    <bf:note>Pl. no.: 31562-31563.</bf:note>
+    <bf:systemNumber rdf:resource="http://www.worldcat.org/oclc/63928113"/>
+    <bf:systemNumber>
+      <bf:Identifier>
+        <bf:identifierValue>1520701</bf:identifierValue>
+        <bf:identifierScheme rdf:resource="http://id.loc.gov/vocabulary/identifiers/systemNumber"/>
+      </bf:Identifier>
+    </bf:systemNumber>
+    <bf:musicPublisherNumber>
+      <bf:Identifier>
+        <bf:identifierScheme rdf:resource="http://id.loc.gov/vocabulary/identifiers/musicPublisherNumber"/>
+        <bf:identifierValue>Edition Peters Nr. 8586a</bf:identifierValue>
+        <bf:identifierAssigner>C.F. Peters</bf:identifierAssigner>
+      </bf:Identifier>
+    </bf:musicPublisherNumber>
+    <bf:musicPublisherNumber>
+      <bf:Identifier>
+        <bf:identifierScheme rdf:resource="http://id.loc.gov/vocabulary/identifiers/musicPublisherNumber"/>
+        <bf:identifierValue>Edition Peters Nr. 8586b</bf:identifierValue>
+        <bf:identifierAssigner>C.F. Peters</bf:identifierAssigner>
+      </bf:Identifier>
+    </bf:musicPublisherNumber>
+    <bf:musicPlate>
+      <bf:Identifier>
+        <bf:identifierScheme rdf:resource="http://id.loc.gov/vocabulary/identifiers/musicPlate"/>
+        <bf:identifierValue>Litolff/Peters 31562</bf:identifierValue>
+        <bf:identifierAssigner>C.F. Peters</bf:identifierAssigner>
+      </bf:Identifier>
+    </bf:musicPlate>
+    <bf:musicPlate>
+      <bf:Identifier>
+        <bf:identifierScheme rdf:resource="http://id.loc.gov/vocabulary/identifiers/musicPlate"/>
+        <bf:identifierValue>Litolff/Peters 31563</bf:identifierValue>
+        <bf:identifierAssigner>C.F. Peters</bf:identifierAssigner>
+      </bf:Identifier>
+    </bf:musicPlate>
+    <bf:derivedFrom rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/1520701.marcxml.xml"/>
+    <bf:instanceOf rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/1520701"/>
+  </bf:Instance>
+  <bf:Annotation rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/1520701annotation15">
+    <bf:derivedFrom rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/1520701.marcxml.xml"/>
+    <bf:descriptionConventions rdf:resource="http://id.loc.gov/vocabulary/descriptionConventions/aacr2"/>
+    <bf:generationProcess>DLC transform-tool:2015-04-27-T11:00:00</bf:generationProcess>
+    <bf:changeDate>2015-05-30T15:19</bf:changeDate>
+    <bf:annotates rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/1520701"/>
+  </bf:Annotation>
+  <bf:HeldItem rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/1520701helditem41">
+    <bf:label>M25 .B</bf:label>
+    <bf:shelfMarkLcc>M25 .B</bf:shelfMarkLcc>
+    <bf:holdingFor rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/1520701instance16"/>
+  </bf:HeldItem>
+  <bf:Title rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/1520701title5">
+    <bf:titleValue>Die Kunst der Fuge </bf:titleValue>
+    <bf:subtitle>The art of fugue BWV 1080 </bf:subtitle>
+  </bf:Title>
+  <bf:Title rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/1520701title7">
+    <bf:titleValue>The art of fugue BWV 1080 </bf:titleValue>
+    <bf:titleType>parallel</bf:titleType>
+  </bf:Title>
+  <bf:Person rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/1520701person8">
+    <bf:label>Bach, Johann Sebastian, 1685-1750.</bf:label>
+    <bf:authorizedAccessPoint>Bach, Johann Sebastian, 1685-1750.</bf:authorizedAccessPoint>
+    <bf:hasAuthority>
+      <madsrdf:Authority>
+        <madsrdf:authoritativeLabel>Bach, Johann Sebastian, 1685-1750.</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </bf:hasAuthority>
+  </bf:Person>
+  <bf:Person rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/1520701person9">
+    <bf:label>Wolff, Christoph.</bf:label>
+    <bf:authorizedAccessPoint>Wolff, Christoph.</bf:authorizedAccessPoint>
+    <bf:hasAuthority>
+      <madsrdf:Authority>
+        <madsrdf:authoritativeLabel>Wolff, Christoph.</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </bf:hasAuthority>
+  </bf:Person>
+  <bf:Topic rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/1520701topic10">
+    <bf:authorizedAccessPoint>Canons, fugues, etc. (Harpsichord)</bf:authorizedAccessPoint>
+    <bf:label>Canons, fugues, etc. (Harpsichord)</bf:label>
+    <bf:hasAuthority>
+      <madsrdf:Authority>
+        <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Topic"/>
+        <madsrdf:authoritativeLabel>Canons, fugues, etc. (Harpsichord)</madsrdf:authoritativeLabel>
+        <madsrdf:isMemberOfMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+      </madsrdf:Authority>
+    </bf:hasAuthority>
+  </bf:Topic>
+  <bf:Title rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/1520701title19">
+    <bf:titleValue>Die Kunst der Fuge </bf:titleValue>
+    <bf:subtitle>The art of fugue BWV 1080 </bf:subtitle>
+  </bf:Title>
+  <bf:Title rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/1520701title21">
+    <bf:titleValue>The art of fugue BWV 1080 </bf:titleValue>
+    <bf:titleType>parallel</bf:titleType>
+  </bf:Title>
+</rdf:RDF>
