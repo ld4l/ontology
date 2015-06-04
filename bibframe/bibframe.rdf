@@ -3316,7 +3316,7 @@
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&dcterms;hasPart" />
-                <owl:allValuesFrom rdf:resource="&madsrdf;TitleElement "/>               
+                <owl:allValuesFrom rdf:resource="&madsrdf;TitleElement"/>               
             </owl:Restriction>
         </owl:equivalentClass>
         <skos:editorialNote>Make sure the restriction on dcterms:hasPart is correct.</skos:editorialNote>
