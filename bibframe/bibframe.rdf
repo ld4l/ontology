@@ -3301,24 +3301,18 @@
         <rdfs:label>Title</rdfs:label>
         <rdfs:label xml:lang="en">Title</rdfs:label>
         <rdfs:label xml:lang="en-us">Work</rdfs:label>
-        <owl:equivalentClass>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://bibframe.org/vocab/derivedFrom"/>
                 <owl:allValuesFrom rdf:resource="&madsrdf;Title"/>
             </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://bibframe.org/vocab/hasDerivative"/>
                 <owl:allValuesFrom rdf:resource="&madsrdf;Title"/>
             </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&dcterms;hasPart" />
-                <owl:allValuesFrom rdf:resource="&madsrdf;TitleElement"/>               
-            </owl:Restriction>
-        </owl:equivalentClass>
+        </rdfs:subClassOf>
         <skos:editorialNote>Make sure the restriction on dcterms:hasPart is correct.</skos:editorialNote>
         <rdfs:comment rdf:datatype="&xsd;string">The title of a Work, Instance, or Item.</rdfs:comment>
         <rdfs:comment>Title of a Work, Instance, or Item.</rdfs:comment>
@@ -3340,6 +3334,12 @@
                 <owl:allValuesFrom rdf:resource="&madsrdf;Title"/>               
             </owl:Restriction>
         </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&dcterms;isPartOf"/>
+                <owl:cardinality>1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <skos:editorialNote>Make sure the restriction on dcterms:isPartOf is correct.</skos:editorialNote>
     </owl:Class>
     
