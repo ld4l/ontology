@@ -3236,7 +3236,7 @@
         <rdfs:label rdf:datatype="&xsd;string">Main title element</rdfs:label>
         <rdfs:subClassOf rdf:resource="&madsrdf;TitleElement"/>
         <skos:scopeNote>The MainTitleElement follows (iana:prev) a NonSortElement and precedes (iana:next) any SubTitleElements and PartNumberElements.</skos:scopeNote>
-        <rdfs:comment xml:lang="en">The initial portion of a title that is removed for sorting.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The main portion of a title.</rdfs:comment>
         <skos:example xml:lang="en">Title &quot;A Tree Grows in Brooklyn&quot; has NonSortElement with rdfs:label &quot;A &quot; and MainTitleElement with rdfs:label &quot;Tree Grows in Brooklyn&quot;.</skos:example>
     </owl:Class>
     
