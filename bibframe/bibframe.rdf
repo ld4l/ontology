@@ -3235,6 +3235,10 @@
     <owl:Class rdf:about="&madsrdf;MainTitleElement">
         <rdfs:label rdf:datatype="&xsd;string">Main title element</rdfs:label>
         <rdfs:subClassOf rdf:resource="&madsrdf;TitleElement"/>
+        <owl:disjointWith rdf:resource="&madsrdf;NonSortElement" />
+        <owl:disjointWith rdf:resource="&madsrdf;SubTitleElement" />
+        <owl:disjointWith rdf:resource="&madsrdf;PartNameElement" />
+        <skos:editorialNote>Since TitleElements are not re-used, but apply only to a single resource, we can correctly assert disjointness with the other TitleElement types</skos:editorialNote>
         <skos:scopeNote>The MainTitleElement follows (iana:prev) a NonSortElement and precedes (iana:next) any SubTitleElements and PartNumberElements.</skos:scopeNote>
         <rdfs:comment xml:lang="en">The main portion of a title.</rdfs:comment>
         <skos:example xml:lang="en">Title &quot;A Tree Grows in Brooklyn&quot; has NonSortElement with rdfs:label &quot;A &quot; and MainTitleElement with rdfs:label &quot;Tree Grows in Brooklyn&quot;.</skos:example>
@@ -3247,6 +3251,10 @@
     <owl:Class rdf:about="&madsrdf;NonSortElement">
         <rdfs:label rdf:datatype="&xsd;string">Non-sort element</rdfs:label>
         <rdfs:subClassOf rdf:resource="&madsrdf;TitleElement"/>
+        <owl:disjointWith rdf:resource="&madsrdf;MainTitleElement" />
+        <owl:disjointWith rdf:resource="&madsrdf;SubTitleElement" />
+        <owl:disjointWith rdf:resource="&madsrdf;PartNameElement" />
+        <skos:editorialNote>Since TitleElements are not re-used, but apply only to a single resource, we can correctly assert disjointness with the other TitleElement types</skos:editorialNote>
         <skos:scopeNote>The NonSortElement is linked to the MainTitleElement via iana:next.</skos:scopeNote>
         <rdfs:comment xml:lang="en">The initial portion of a title that is removed for sorting.</rdfs:comment>
     </owl:Class>
@@ -3258,6 +3266,10 @@
     <owl:Class rdf:about="&madsrdf;PartNameElement">
         <rdfs:label rdf:datatype="&xsd;string">Part name element</rdfs:label>
         <rdfs:subClassOf rdf:resource="&madsrdf;TitleElement"/>
+        <owl:disjointWith rdf:resource="&madsrdf;NonSortElement" />
+        <owl:disjointWith rdf:resource="&madsrdf;SubTitleElement" />
+        <owl:disjointWith rdf:resource="&madsrdf;MainTitleElement" />
+        <skos:editorialNote>Since TitleElements are not re-used, but apply only to a single resource, we can correctly assert disjointness with the other TitleElement types</skos:editorialNote>
         <skos:example>III</skos:example>
         <skos:scopeNote>A title may have more than one part name element, in which case they are ordered by iana:next and iana:prev. They are also order by iana:prev with respect to any subtitles; the usual case is that all part name elements would follow all subtitles.</skos:scopeNote>
         <skos:editorialNote>We do not use madsrdf:PartNumberElement, since so frequently this is not an integer but a string, as in the example.</skos:editorialNote>
@@ -3273,6 +3285,10 @@
     <owl:Class rdf:about="&madsrdf;SubTitleElement">
         <rdfs:label rdf:datatype="&xsd;string">Subtitle element</rdfs:label>
         <rdfs:subClassOf rdf:resource="&madsrdf;TitleElement"/>
+        <owl:disjointWith rdf:resource="&madsrdf;NonSortElement" />
+        <owl:disjointWith rdf:resource="&madsrdf;MainTitleElement" />
+        <owl:disjointWith rdf:resource="&madsrdf;PartNameElement" />
+        <skos:editorialNote>Since TitleElements are not re-used, but apply only to a single resource, we can correctly assert disjointness with the other TitleElement types</skos:editorialNote>
         <skos:scopeNote>A title may have more than one subtitle, in which case they are ordered by iana:next and iana:prev. A SubTitleElement is ordered by iana:next with respect to a following PartNameElement, and by iana:prev with respect to the MainTitleElement.</skos:scopeNote>
         <rdfs:comment xml:lang="en">The subtitle portion of a title.</rdfs:comment>
     </owl:Class>
@@ -3299,6 +3315,7 @@
         </owl:equivalentClass>
         <rdfs:comment rdf:datatype="&xsd;string">The title of a Work, Instance, or Item.</rdfs:comment>
         <rdfs:comment>Title of a Work, Instance, or Item.</rdfs:comment>
+        <skos:scopeNote>Titles are not reusable resources.</skos:scopeNote>
         <skos:scopeNote>Some Titles are directly related to a Work, Instance, or Item. Others are derived from a Title. A resource may be directly linked to more than one Title, and each Title may be linked to multiple Titles.</skos:scopeNote>
     </owl:Class>
     
@@ -3309,6 +3326,7 @@
     <owl:Class rdf:about="&madsrdf;TitleElement">
         <rdfs:label xml:lang="en">Title element</rdfs:label>
         <rdfs:comment xml:lang="en">Part of a title, such as a subtitle or part name.</rdfs:comment>
+        <skos:scopeNote>TitleElements are not reusable resources.</skos:scopeNote>
     </owl:Class>
     
 
