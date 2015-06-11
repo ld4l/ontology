@@ -294,14 +294,6 @@
         <skos:scopeNote xml:lang="en-us">Titles can be derived from other Titles, and Works can be derived from other Works. Property restrictions on Work and Title prevent linking subjects and objects of different types.</skos:scopeNote>
         <owl:inverseOf rdf:resource="http://bibframe.org/vocab/hasDerivative"/>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/succeeds"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://bibframe.org/vocab/Work"/>
-                    <rdf:Description rdf:about="&madsrdf;Title"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -310,6 +302,14 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bibframe.org/vocab/Work"/>
+                    <rdf:Description rdf:about="&madsrdf;Title"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -1077,8 +1077,18 @@
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/precedes">
         <rdfs:label xml:lang="en-us">precedes</rdfs:label>
-        <skos:editorialNote>Does it make sense to conflate spatial and temporal precedence into a single property? English is certainly ambiguous in this regard, but should the fuzziness of natural language be carried into a formal ontology? We cannot know which sense applies to any given usage.</skos:editorialNote>
-        <rdfs:comment xml:lang="en-us">Subject precedes the object (e.g., earlier in time or space, or before in a narrative).</rdfs:comment>
+        <skos:scopeNote>Generally one of the subproperties should be used to specify the exact relationship. This will be used only when the precise relationship is unknown.</skos:scopeNote>
+        <rdfs:comment xml:lang="en-us">Subject precedes the object (e.g., earlier in time or before in a narrative).</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bibframe.org/vocab/precedesInNarrative -->
+
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/precedesInNarrative">
+        <rdfs:label>precedes in narrative</rdfs:label>
+        <rdfs:comment>This Work narratively precedes another work in the same MultipartMonograph.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/precedes"/>
     </owl:ObjectProperty>
     
 
@@ -1258,8 +1268,18 @@
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/succeeds">
         <rdfs:label xml:lang="en-us">succeeds</rdfs:label>
+        <skos:scopeNote>Generally one of the subproperties should be used to specify the exact relationship. This will be used only when the precise relationship is unknown.</skos:scopeNote>
         <rdfs:comment xml:lang="en-us">Subject follows the object (e.g., is later in time or after in narrative).</rdfs:comment>
         <owl:inverseOf rdf:resource="http://bibframe.org/vocab/precedes"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bibframe.org/vocab/succeedsInNarrative -->
+
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/succeedsInNarrative">
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/precedesInNarrative"/>
+        <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/succeeds"/>
     </owl:ObjectProperty>
     
 
