@@ -3486,6 +3486,17 @@
     
 
 
+    <!-- http://bibframe.org/vocab/stackViewScoring -->
+
+    <owl:NamedIndividual rdf:about="http://bibframe.org/vocab/stackViewScoring">
+        <rdf:type rdf:resource="&oa;Motivation"/>
+        <rdfs:label xml:lang="en-us">stack view scoring</rdfs:label>
+        <rdfs:comment xml:lang="en-us">The motivation that represents assigning a stack view score to the target resource.</rdfs:comment>
+        <skos:inScheme rdf:resource="&oa;motivationScheme"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://bibframe.org/vocab/summarizing -->
 
     <owl:NamedIndividual rdf:about="http://bibframe.org/vocab/summarizing">
@@ -3495,15 +3506,7 @@
         <skos:inScheme rdf:resource="&oa;motivationScheme"/>
     </owl:NamedIndividual>
     
-    <!-- http://bibframe.org/vocab/stackViewScoring -->
-    
-    <owl:NamedIndividual rdf:about="http://bibframe.org/vocab/stackViewScoring">
-        <rdf:type rdf:resource="&oa;Motivation"/>
-        <rdfs:label xml:lang="en-us">stack view scoring</rdfs:label>
-        <rdfs:comment xml:lang="en-us">The motivation that represents assigning a stack view score to the target resource.</rdfs:comment>
-        <skos:inScheme rdf:resource="&oa;motivationScheme"/>
-    </owl:NamedIndividual>
-    
+
 
     <!-- http://bibframe.org/vocab/supplied -->
 
