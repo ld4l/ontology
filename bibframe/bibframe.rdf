@@ -249,26 +249,26 @@
     
 
 
-    <!-- http://bibframe.org/vocab/continuedBy -->
+    <!-- http://bibframe.org/vocab/continuedUnderNewTitleBy -->
 
-    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/continuedBy">
-        <rdfs:label xml:lang="en-us">continued by</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/continuedUnderNewTitleBy">
+        <rdfs:label xml:lang="en-us">continued under new title by</rdfs:label>
         <rdfs:comment xml:lang="en-us">The content of this Work is continued by a later work under a new title.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
-        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/continues"/>
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/continuesUnderNewTitle"/>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/precedes"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://bibframe.org/vocab/continues -->
+    <!-- http://bibframe.org/vocab/continuesUnderNewTitle -->
 
-    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/continues">
-        <rdfs:label xml:lang="en-us">continues</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/continuesUnderNewTitle">
+        <rdfs:label xml:lang="en-us">continues under new title</rdfs:label>
         <rdfs:comment xml:lang="en-us">This Work continues the content of an earlier Work under a new title.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/succeeds"/>
     </owl:ObjectProperty>
     
