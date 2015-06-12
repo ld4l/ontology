@@ -452,14 +452,6 @@
         <skos:scopeNote xml:lang="en-us">The domain and range restrictions ensure that a Work is related to a Work and a Title to a Title.</skos:scopeNote>
         <rdfs:comment xml:lang="en-us">Work or Title that is derived from this Work or Title.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/precedes"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://bibframe.org/vocab/Work"/>
-                    <rdf:Description rdf:about="&madsrdf;Title"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -468,6 +460,14 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bibframe.org/vocab/Work"/>
+                    <rdf:Description rdf:about="&madsrdf;Title"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -497,17 +497,43 @@
     
 
 
-    <!-- http://bibframe.org/vocab/hasFirstIssue -->
+    <!-- http://bibframe.org/vocab/hasFirst -->
 
-    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasFirstIssue">
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasFirst">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:label xml:lang="en-us">has first issue</rdfs:label>
-        <rdfs:comment xml:lang="en-us">First issue of a Serial.</rdfs:comment>
-        <rdfs:range rdf:resource="http://bibframe.org/vocab/Instance"/>
-        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Serial"/>
+        <rdfs:label xml:lang="en-us">has first</rdfs:label>
+        <rdfs:comment xml:lang="en-us">First part (issue, volume, etc.) of this Serial or Series.</rdfs:comment>
+        <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bibframe.org/vocab/Serial"/>
+                    <rdf:Description rdf:about="http://bibframe.org/vocab/Series"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <skos:scopeNote>Used to determine the run of a Series or Serial, which by nature are ongoing.</skos:scopeNote>
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/isFirstOf"/>
     </owl:ObjectProperty>
     
-
+    
+    
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/isFirstOf">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:label xml:lang="en-us">is first of</rdfs:label>
+        <rdfs:comment xml:lang="en-us">This part (issue, volume, etc.) of a Serial or Series is the first part.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bibframe.org/vocab/Serial"/>
+                    <rdf:Description rdf:about="http://bibframe.org/vocab/Series"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/hasFirst"/>
+        <skos:scopeNote>Used to determine the run of a Series or Serial, which by nature are ongoing.</skos:scopeNote>
+    </owl:ObjectProperty>
 
     <!-- http://bibframe.org/vocab/hasGenre -->
 
@@ -542,18 +568,45 @@
     
 
 
-    <!-- http://bibframe.org/vocab/hasLastIssue -->
-
-    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasLastIssue">
+    <!-- http://bibframe.org/vocab/hasLast -->
+    
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasLast">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:label xml:lang="en-us">has last issue</rdfs:label>
-        <rdfs:comment xml:lang="en-us">Last issue of a Serial.</rdfs:comment>
-        <rdfs:range rdf:resource="http://bibframe.org/vocab/Instance"/>
-        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Serial"/>
+        <rdfs:label xml:lang="en-us">has last</rdfs:label>
+        <rdfs:comment xml:lang="en-us">Last part (issue, volume, etc.) of this Serial or Series.</rdfs:comment>
+        <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bibframe.org/vocab/Serial"/>
+                    <rdf:Description rdf:about="http://bibframe.org/vocab/Series"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <skos:scopeNote>Used to determine the run of a Series or Serial, which by nature are ongoing.</skos:scopeNote>
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/isLastOf"/>
     </owl:ObjectProperty>
     
-
-
+    
+    
+    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/isLastOf">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:label xml:lang="en-us">is last of</rdfs:label>
+        <rdfs:comment xml:lang="en-us">This part (issue, volume, etc.) of a Serial or Series is the last part.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bibframe.org/vocab/Serial"/>
+                    <rdf:Description rdf:about="http://bibframe.org/vocab/Series"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/hasLast"/>
+        <skos:scopeNote>Used to determine the run of a Series or Serial, which by nature are ongoing.</skos:scopeNote>
+    </owl:ObjectProperty>
+ 
+ 
     <!-- http://bibframe.org/vocab/hasLendingPolicy -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/hasLendingPolicy">
@@ -1087,6 +1140,7 @@
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/precedesInNarrative">
         <rdfs:label>precedes in narrative</rdfs:label>
+        <skos:example>The Fellowship of the Ring precedes The Two Towers in The Lord of the Rings narrative.</skos:example>
         <rdfs:comment>This Work narratively precedes another work.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
@@ -1280,7 +1334,11 @@
     <!-- http://bibframe.org/vocab/succeedsInNarrative -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/succeedsInNarrative">
-        <owl:inverseOf rdf:resource="http://bibframe.org/vocab/precedesInNarrative"/>
+        <rdfs:label>succeeds in narrative</rdfs:label>
+        <skos:example>The Two Towers succeeds The Fellowship of the Ring in The Lord of the Rings narrative.</skos:example>
+        <rdfs:comment>This Work narratively succeeds another work.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
+        <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/succeeds"/>
     </owl:ObjectProperty>
     
