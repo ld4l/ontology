@@ -2706,7 +2706,7 @@
 
     <owl:Class rdf:about="http://bibframe.org/vocab/Manuscript">
         <rdfs:label xml:lang="en-us">Manuscript</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Instance"/>
+        <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Item"/>
         <rdfs:comment xml:lang="en-us">Resource that is written in handwriting or typescript. These are generally unique resources.</rdfs:comment>
     </owl:Class>
     
