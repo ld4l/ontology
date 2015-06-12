@@ -2612,19 +2612,6 @@
     
 
 
-    <!-- http://bibframe.org/vocab/Issue -->
-
-    <owl:Class rdf:about="http://bibframe.org/vocab/Issue">
-        <rdfs:label xml:lang="en-us">Issue</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Instance"/>
-        <skos:scopeNote>An Issue is related to the enclosing Serial via dcterms:isPartOf and inverse dcterms:hasPart.</skos:scopeNote>
-        <rdfs:comment>One member of a Serial.</rdfs:comment>
-        <skos:editorialNote>This needs attention. If there are two kinds of Serials (Work and Instance) there should also be two kinds of Issues. Issue may not be the right term.</skos:editorialNote>
-        <rdfs:comment xml:lang="en-us">One unit of a Serial.</rdfs:comment>
-    </owl:Class>
-    
-
-
     <!-- http://bibframe.org/vocab/IssueNumber -->
 
     <owl:Class rdf:about="http://bibframe.org/vocab/IssueNumber">
@@ -2908,6 +2895,19 @@
         <rdfs:comment xml:lang="en-us">Multiple unit cataloging resource issued in successive parts that has no predetermined conclusion.</rdfs:comment>
         <skos:editorialNote>This needs attention. The Dickens example is an Instance case, but a journal or periodical is a Work. Do we need two classes, one a subtype of Work and one of Instance?</skos:editorialNote>
         <skos:scopeNote>A Serial is related to its component Issues via dcterms:hasPart and inverse dcterms:isPartOf.</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- http://bibframe.org/vocab/SerialPart -->
+
+    <owl:Class rdf:about="http://bibframe.org/vocab/SerialPart">
+        <rdfs:label xml:lang="en-us">Part of a serial</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Work"/>
+        <skos:editorialNote>This needs attention. If there are two kinds of Serials (Work and Instance) there should also be two kinds of Issues. Issue may not be the right term.</skos:editorialNote>
+        <rdfs:comment>One member of a Serial.</rdfs:comment>
+        <skos:scopeNote>An Issue is related to the enclosing Serial via dcterms:isPartOf and inverse dcterms:hasPart.</skos:scopeNote>
+        <rdfs:comment xml:lang="en-us">One unit of a Serial.</rdfs:comment>
     </owl:Class>
     
 
