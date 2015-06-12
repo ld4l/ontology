@@ -2726,7 +2726,7 @@
 
     <owl:Class rdf:about="http://bibframe.org/vocab/Monograph">
         <rdfs:label xml:lang="en-us">Monograph</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Instance"/>
+        <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:comment xml:lang="en-us">Single unit cataloging resource.</rdfs:comment>
     </owl:Class>
     
@@ -2746,7 +2746,7 @@
 
     <owl:Class rdf:about="http://bibframe.org/vocab/MultipartMonograph">
         <rdfs:label xml:lang="en-us">Multipart monograph</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Instance"/>
+        <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Work"/>
         <skos:example>Three audiocassettes issued as a set.</skos:example>
         <skos:example>A dictionary in two volumes.</skos:example>
         <rdfs:comment xml:lang="en-us">RDA definition: A resource issued in two or more parts (either simultaneously or successively) that is complete or intended to be completed within a finite number of parts.</rdfs:comment>
