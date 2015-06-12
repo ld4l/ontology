@@ -1087,7 +1087,7 @@
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/precedesInNarrative">
         <rdfs:label>precedes in narrative</rdfs:label>
-        <rdfs:comment>This Work narratively precedes another work in the same MultipartMonograph.</rdfs:comment>
+        <rdfs:comment>This Work narratively precedes another work.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:range rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/precedes"/>
