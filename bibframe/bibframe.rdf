@@ -2523,7 +2523,7 @@
 
     <owl:Class rdf:about="http://bibframe.org/vocab/Integrating">
         <rdfs:label xml:lang="en-us">Integrating</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Instance"/>
+        <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Work"/>
         <skos:example>A loose-leaf manual that is updated by means of replacement pages</skos:example>
         <skos:example>A website that is updated continuously.</skos:example>
         <rdfs:comment xml:lang="en-us">Cataloging resource that is added to or changed by means of updates that do not remain discrete but are integrated into the whole.</rdfs:comment>
