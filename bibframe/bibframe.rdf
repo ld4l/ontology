@@ -2901,7 +2901,7 @@
 
     <owl:Class rdf:about="http://bibframe.org/vocab/Serial">
         <rdfs:label xml:lang="en-us">Serial</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Instance"/>
+        <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Work"/>
         <skos:example>A periodical or journal.</skos:example>
         <skos:example>Charles Dickens&apos; novels published in serial form.</skos:example>
         <skos:scopeNote>As a subclass of Instance, this refers to the manifestation of a Work which is published as a serial rather than, say, a single volume. Contrast with Series, which is a subclass of Work.</skos:scopeNote>
@@ -3130,13 +3130,13 @@
         <rdfs:label xml:lang="en-us">Work</rdfs:label>
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://bibframe.org/vocab/derivedFrom"/>
+                <owl:onProperty rdf:resource="http://bibframe.org/vocab/hasDerivative"/>
                 <owl:allValuesFrom rdf:resource="http://bibframe.org/vocab/Work"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://bibframe.org/vocab/hasDerivative"/>
+                <owl:onProperty rdf:resource="http://bibframe.org/vocab/derivedFrom"/>
                 <owl:allValuesFrom rdf:resource="http://bibframe.org/vocab/Work"/>
             </owl:Restriction>
         </owl:equivalentClass>
@@ -3317,13 +3317,13 @@
         <rdfs:label xml:lang="en-us">Work</rdfs:label>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://bibframe.org/vocab/hasDerivative"/>
+                <owl:onProperty rdf:resource="http://bibframe.org/vocab/derivedFrom"/>
                 <owl:allValuesFrom rdf:resource="&madsrdf;Title"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://bibframe.org/vocab/derivedFrom"/>
+                <owl:onProperty rdf:resource="http://bibframe.org/vocab/hasDerivative"/>
                 <owl:allValuesFrom rdf:resource="&madsrdf;Title"/>
             </owl:Restriction>
         </rdfs:subClassOf>
