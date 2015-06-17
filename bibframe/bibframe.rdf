@@ -294,14 +294,6 @@
         <skos:scopeNote xml:lang="en-us">Titles can be derived from other Titles, and Works can be derived from other Works. Property restrictions on Work and Title prevent linking subjects and objects of different types.</skos:scopeNote>
         <owl:inverseOf rdf:resource="http://bibframe.org/vocab/hasDerivative"/>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/succeeds"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://bibframe.org/vocab/Work"/>
-                    <rdf:Description rdf:about="&madsrdf;Title"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -310,6 +302,14 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bibframe.org/vocab/Work"/>
+                    <rdf:Description rdf:about="&madsrdf;Title"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -452,14 +452,6 @@
         <skos:scopeNote xml:lang="en-us">The domain and range restrictions ensure that a Work is related to a Work and a Title to a Title.</skos:scopeNote>
         <rdfs:comment xml:lang="en-us">Work or Title that is derived from this Work or Title.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/precedes"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://bibframe.org/vocab/Work"/>
-                    <rdf:Description rdf:about="&madsrdf;Title"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -468,6 +460,14 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bibframe.org/vocab/Work"/>
+                    <rdf:Description rdf:about="&madsrdf;Title"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -2584,15 +2584,17 @@
     
 
 
-    <!-- http://bibframe.org/vocab/Integrating -->
+    <!-- http://bibframe.org/vocab/IntegratingResource -->
 
-    <owl:Class rdf:about="http://bibframe.org/vocab/Integrating">
-        <rdfs:label xml:lang="en-us">Integrating</rdfs:label>
+    <owl:Class rdf:about="http://bibframe.org/vocab/IntegratingResource">
+        <rdfs:label xml:lang="en-us">Integrating resource</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Work"/>
-        <skos:example>A loose-leaf manual that is updated by means of replacement pages</skos:example>
+        <owl:disjointWith rdf:resource="http://bibframe.org/vocab/Monograph"/>
+        <owl:disjointWith rdf:resource="http://bibframe.org/vocab/Serial"/>
         <skos:example>A website that is updated continuously.</skos:example>
         <rdfs:comment xml:lang="en-us">Cataloging resource that is added to or changed by means of updates that do not remain discrete but are integrated into the whole.</rdfs:comment>
         <skos:example>Final print edition of AACR2 published in a binder.</skos:example>
+        <skos:example>A loose-leaf manual that is updated by means of replacement pages</skos:example>
     </owl:Class>
     
 
@@ -2792,7 +2794,8 @@
     <owl:Class rdf:about="http://bibframe.org/vocab/Monograph">
         <rdfs:label xml:lang="en-us">Monograph</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Work"/>
-        <rdfs:comment xml:lang="en-us">Single unit cataloging resource.</rdfs:comment>
+        <owl:disjointWith rdf:resource="http://bibframe.org/vocab/Serial"/>
+        <rdfs:comment xml:lang="en-us">A resource that is complete in one part or intended to be complete within a finite number of parts.</rdfs:comment>
     </owl:Class>
     
 
@@ -2811,13 +2814,13 @@
 
     <owl:Class rdf:about="http://bibframe.org/vocab/MultipartMonograph">
         <rdfs:label xml:lang="en-us">Multipart monograph</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Work"/>
+        <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Monograph"/>
         <skos:example>Three audiocassettes issued as a set.</skos:example>
-        <skos:example>A dictionary in two volumes.</skos:example>
-        <skos:scopeNote>A MultipartMonograph may or may not have a continuous narrative. If it does, the components are linked using the predicates bf:precedesInNarrative and bf:succeedsInNarrative.</skos:scopeNote>
-        <rdfs:comment xml:lang="en-us">RDA definition: A resource issued in two or more parts (either simultaneously or successively) that is complete or intended to be completed within a finite number of parts.</rdfs:comment>
-        <skos:example>The Lord of the Rings is a MultipartMonograph with a continuous narrative.</skos:example>
         <skos:example>The television series Cosmos is a MultipartMonograph (having a defined endpoint) with no continuous narrative.</skos:example>
+        <skos:example>A dictionary in two volumes.</skos:example>
+        <rdfs:comment xml:lang="en-us">A resource issued in two or more parts (either simultaneously or successively) that is complete or intended to be completed within a finite number of parts.</rdfs:comment>
+        <skos:example>The Lord of the Rings is a MultipartMonograph with a continuous narrative.</skos:example>
+        <skos:scopeNote>A MultipartMonograph may or may not have a continuous narrative. If it does, the components are linked using the predicates bf:precedesInNarrative and bf:succeedsInNarrative.</skos:scopeNote>
     </owl:Class>
     
 
@@ -2892,6 +2895,52 @@
     
 
 
+    <!-- http://bibframe.org/vocab/Periodical -->
+
+    <owl:Class rdf:about="http://bibframe.org/vocab/Periodical">
+        <rdfs:label>Periodical</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&dcterms;hasPart"/>
+                <owl:allValuesFrom rdf:resource="http://bibframe.org/vocab/PeriodicalPart"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Serial"/>
+        <owl:disjointWith rdf:resource="http://bibframe.org/vocab/Series"/>
+        <rdfs:comment>In a Periodical, as opposed to a Series (the other main subclass of Serial), the Periodical itself is the primary focus and has the primary identity; the parts (issues) are not stand-alone works.  The parts usually look alike, being distinguished from one another by number and date designations.</rdfs:comment>
+        <skos:example>Linguistic Inquiry (academic journal)</skos:example>
+        <skos:example>The New York Times (newspaper)</skos:example>
+        <skos:scopeNote>A Periodical is related to its parts via the predicate dcterms:hasPart.</skos:scopeNote>
+        <skos:example>The New Yorker (magazine)</skos:example>
+        <skos:editorialNote>Subclasses such as Journal, Magazine, Newspaper, and so on could be defined.</skos:editorialNote>
+    </owl:Class>
+    
+
+
+    <!-- http://bibframe.org/vocab/PeriodicalPart -->
+
+    <owl:Class rdf:about="http://bibframe.org/vocab/PeriodicalPart">
+        <rdfs:label xml:lang="en-us">Periodical part</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&dcterms;isPartOf"/>
+                <owl:minCardinality>1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf> 
+        <rdfs:subClassOfs>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&dcterms;isPartOf"/>
+                <owl:allValuesFrom rdf:resource="http://bibframe.org/vocab/Periodical"/>
+            </owl:Restriction>
+        </rdfs:subClassOfs>
+        <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Work"/>
+        <skos:scopeNote>A PeriodicalPart is related to the enclosing Periodical via dcterms:isPartOf and inverse dcterms:hasPart. If a Periodical contains other PeriodicalParts, such as a periodical volume that contains issues, these are also related using dcterms:hasPart.</skos:scopeNote>
+        <skos:example>The June 1, 2015 issue of The New Yorker</skos:example>
+        <rdfs:comment xml:lang="en-us">One unit or member of a Periodical. Can be a volume, issue, part, etc.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://bibframe.org/vocab/Policy -->
 
     <owl:Class rdf:about="http://bibframe.org/vocab/Policy">
@@ -2956,27 +3005,12 @@
     <owl:Class rdf:about="http://bibframe.org/vocab/Serial">
         <rdfs:label xml:lang="en-us">Serial</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Work"/>
-        <skos:example>A periodical or journal.</skos:example>
-        <skos:example>The New Yorker</skos:example>
-        <skos:example>Linguistic Inquiry</skos:example>
-        <rdfs:comment xml:lang="en-us">Multiple unit cataloging resource issued in successive parts that has no predetermined conclusion.</rdfs:comment>
-        <skos:scopeNote>A Serial may or may not have a continuous narrative. If it does, the members are linked by the properties bf:precedesInNarrative and bf:succeedsInNarrative. Members may be sequenced even when there is no continuous narrative.</skos:scopeNote>
-        <skos:scopeNote>A Serial is distinguished from a Series by the types of its members: a Series has Monograph members, whereas a Serial has issues, volumes, and the like as members.</skos:scopeNote>
-        <skos:scopeNote>A Serial is related to its component SerialParts via dcterms:hasPart and inverse dcterms:isPartOf.</skos:scopeNote>
-        <skos:editorialNote>But what are the criteria distinguishing a Monograph from a SerialPart? Is this circular?</skos:editorialNote>
-    </owl:Class>
-    
-
-
-    <!-- http://bibframe.org/vocab/SerialPart -->
-
-    <owl:Class rdf:about="http://bibframe.org/vocab/SerialPart">
-        <rdfs:label xml:lang="en-us">Serial part</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Work"/>
-        <skos:scopeNote>A SerialPart is related to the enclosing Serial via dcterms:isPartOf and inverse dcterms:hasPart. If a SerialPart contains other SerialParts, such as a periodical volume that contains issues, these are also related using dcterms:hasPart. If the Serial contains a continuous narrative, the SerialParts are related by bf:precedesInNarrative and bf:succeedsInNarrative.</skos:scopeNote>
-        <rdfs:comment xml:lang="en-us">One unit or member of a Serial. Can be a volume, issue, part, etc.</rdfs:comment>
-        <skos:example>The June 1, 2015 issue of The New Yorker</skos:example>
-
+        <rdfs:comment xml:lang="en-us">A resource issued in successive parts, usually having numbering, that has or is intended to have no predetermined conclusion, such as a periodical, journal, monographic series, or newspaper.</rdfs:comment>
+        <skos:example>Linguistic Inquiry (academic journal)</skos:example>
+        <skos:example>The New York Times (newspaper)</skos:example>
+        <skos:example>The New Yorker (magazine)</skos:example>
+        <skos:example>Synthesis Lecture on the Semantic Web: Theory and Technology (monographic series)</skos:example>
+        <skos:editorialNote>While it's true that intent can be subjective, there are usually clear indications, such as a stated frequency of "monthly."</skos:editorialNote>
     </owl:Class>
     
 
@@ -2985,15 +3019,14 @@
 
     <owl:Class rdf:about="http://bibframe.org/vocab/Series">
         <rdfs:label xml:lang="en-us">Series</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Work"/>
-        <rdfs:comment xml:lang="en-us">A larger work consisting of multiple works.</rdfs:comment>
-        <skos:scopeNote>While both Series and MultipartMonograph have Mongographs as members, they are distinguished from one another in that the former is ongoing, while the latter is finite and has a defined endpoint.</skos:scopeNote>
-        <skos:scopeNote>A Series is distinguished from a Serial by the types of its members: a Series has Monograph members, whereas a Serial has issues, volumes, and the like as members.</skos:scopeNote>
-        <skos:scopeNote>A Series is related to its component Monographs via dcterms:hasPart and inverse dcterms:isPartOf.</skos:scopeNote>   
-        <skos:scopeNote>A Series may or may not have a continuous narrative. If it does, the members are linked by the properties bf:precedesInNarrative and bf:succeedsInNarrative. Members may be sequenced even when there is no continuous narrative.</skos:scopeNote>
-        <skos:scopeNote>A Serial is related to its component SerialParts via dcterms:hasPart and inverse dcterms:isPartOf.</skos:scopeNote>
-        <skos:editorialNote>But what are the criteria distinguishing a Monograph from a SerialPart? Is this circular?</skos:editorialNote>
+        <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Serial"/>
+        <owl:disjointWith rdf:resource="http://bibframe.org/vocab/Periodical"/>
+        <rdfs:comment>A group of separate resources related to one another by the fact that each resource bears, in addition to its own title proper, a collective title applying to the group as a whole. The individual resources may or may not be numbered.</rdfs:comment>
+        <skos:scopeNote>While both Series and MultipartMonograph have Monographs as members, they are distinguished from one another in that a Series is ongoing, while a MultipartMonograph has or is intended to have a predefined endpoint.</skos:scopeNote>
         <skos:example>Synthesis Lectures on The Semantic Web; Theory and Techology. Its members are monographs such as Linked Data: Evolving the Web into a Global Data Space; VIVO: A Semantic Approach to Scholarly Networking and Discovery.</skos:example>
+        <skos:scopeNote>A Series contrasts with a Periodical, the other main subclass of Serial, in that in a Series the parts are the primary focus and are stand-alone works. The Series title mostly exists to tie these separate resources together, often for marketing purposes.</skos:scopeNote>
+        <skos:scopeNote>The parts of a Series are either Monographs or Serials.</skos:scopeNote>
+        <skos:scopeNote>A Series is related to its component parts via dcterms:hasPart.</skos:scopeNote>
     </owl:Class>
     
 
@@ -3203,13 +3236,13 @@
         <rdfs:label xml:lang="en-us">Work</rdfs:label>
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://bibframe.org/vocab/hasDerivative"/>
+                <owl:onProperty rdf:resource="http://bibframe.org/vocab/derivedFrom"/>
                 <owl:allValuesFrom rdf:resource="http://bibframe.org/vocab/Work"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://bibframe.org/vocab/derivedFrom"/>
+                <owl:onProperty rdf:resource="http://bibframe.org/vocab/hasDerivative"/>
                 <owl:allValuesFrom rdf:resource="http://bibframe.org/vocab/Work"/>
             </owl:Restriction>
         </owl:equivalentClass>
@@ -3390,13 +3423,13 @@
         <rdfs:label xml:lang="en-us">Work</rdfs:label>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://bibframe.org/vocab/hasDerivative"/>
+                <owl:onProperty rdf:resource="http://bibframe.org/vocab/derivedFrom"/>
                 <owl:allValuesFrom rdf:resource="&madsrdf;Title"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://bibframe.org/vocab/derivedFrom"/>
+                <owl:onProperty rdf:resource="http://bibframe.org/vocab/hasDerivative"/>
                 <owl:allValuesFrom rdf:resource="&madsrdf;Title"/>
             </owl:Restriction>
         </rdfs:subClassOf>
