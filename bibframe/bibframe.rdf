@@ -452,14 +452,6 @@
         <skos:scopeNote xml:lang="en-us">The domain and range restrictions ensure that a Work is related to a Work and a Title to a Title.</skos:scopeNote>
         <rdfs:comment xml:lang="en-us">Work or Title that is derived from this Work or Title.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://bibframe.org/vocab/precedes"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://bibframe.org/vocab/Work"/>
-                    <rdf:Description rdf:about="&madsrdf;Title"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -468,6 +460,14 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bibframe.org/vocab/Work"/>
+                    <rdf:Description rdf:about="&madsrdf;Title"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -2594,8 +2594,8 @@
         <skos:example>A website that is updated continuously.</skos:example>
         <rdfs:comment xml:lang="en-us">Cataloging resource that is added to or changed by means of updates that do not remain discrete but are integrated into the whole.</rdfs:comment>
         <skos:example>Final print edition of AACR2 published in a binder.</skos:example>
-        <skos:example>A loose-leaf manual that is updated by means of replacement pages</skos:example>
         <skos:scopeNote>An IntegratingResource may be either finite (having a predetermined conclusion) or continuous.</skos:scopeNote>
+        <skos:example>A loose-leaf manual that is updated by means of replacement pages</skos:example>
     </owl:Class>
     
 
@@ -2821,7 +2821,7 @@
         <skos:example>A dictionary in two volumes.</skos:example>
         <rdfs:comment xml:lang="en-us">A resource issued in two or more parts (either simultaneously or successively) that is complete or intended to be completed within a finite number of parts.</rdfs:comment>
         <skos:example>The Lord of the Rings is a MultipartMonograph with a continuous narrative.</skos:example>
-        <skos:scopeNote>A MultipartMonograph may or may not have a continuous narrative. If it does, the components are linked using the predicates bf:precedesInNarrative and bf:succeedsInNarrative.</skos:scopeNote>
+        <skos:scopeNote>A MultipartMonograph has a continuous narrative. The component Monographs are linked using the predicates bf:precedesInNarrative and bf:succeedsInNarrative.</skos:scopeNote>
     </owl:Class>
     
 
@@ -2900,13 +2900,13 @@
 
     <owl:Class rdf:about="http://bibframe.org/vocab/Periodical">
         <rdfs:label>Periodical</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Serial"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&dcterms;hasPart"/>
                 <owl:allValuesFrom rdf:resource="http://bibframe.org/vocab/PeriodicalPart"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Serial"/>
         <owl:disjointWith rdf:resource="http://bibframe.org/vocab/Series"/>
         <rdfs:comment>In a Periodical, as opposed to a Series (the other main subclass of Serial), the Periodical itself is the primary focus and has the primary identity; the parts (issues) are not stand-alone works.  The parts usually look alike, being distinguished from one another by number and date designations.</rdfs:comment>
         <skos:example>Linguistic Inquiry (academic journal)</skos:example>
@@ -2922,19 +2922,13 @@
 
     <owl:Class rdf:about="http://bibframe.org/vocab/PeriodicalPart">
         <rdfs:label xml:lang="en-us">Periodical part</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Work"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&dcterms;isPartOf"/>
-                <owl:minCardinality>1</owl:minCardinality>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
             </owl:Restriction>
-        </rdfs:subClassOf> 
-        <rdfs:subClassOfs>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&dcterms;isPartOf"/>
-                <owl:allValuesFrom rdf:resource="http://bibframe.org/vocab/Periodical"/>
-            </owl:Restriction>
-        </rdfs:subClassOfs>
-        <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Work"/>
+        </rdfs:subClassOf>
         <skos:scopeNote>A PeriodicalPart is related to the enclosing Periodical via dcterms:isPartOf and inverse dcterms:hasPart. If a Periodical contains other PeriodicalParts, such as a periodical volume that contains issues, these are also related using dcterms:hasPart.</skos:scopeNote>
         <skos:example>The June 1, 2015 issue of The New Yorker</skos:example>
         <rdfs:comment xml:lang="en-us">One unit or member of a Periodical. Can be a volume, issue, part, etc.</rdfs:comment>
@@ -3010,8 +3004,8 @@
         <skos:example>Linguistic Inquiry (academic journal)</skos:example>
         <skos:example>The New York Times (newspaper)</skos:example>
         <skos:example>The New Yorker (magazine)</skos:example>
+        <skos:editorialNote>While it&apos;s true that intent can be subjective, there are usually clear indications, such as a stated frequency of &quot;monthly.&quot;</skos:editorialNote>
         <skos:example>Synthesis Lecture on the Semantic Web: Theory and Technology (monographic series)</skos:example>
-        <skos:editorialNote>While it's true that intent can be subjective, there are usually clear indications, such as a stated frequency of "monthly."</skos:editorialNote>
     </owl:Class>
     
 
@@ -3021,7 +3015,6 @@
     <owl:Class rdf:about="http://bibframe.org/vocab/Series">
         <rdfs:label xml:lang="en-us">Series</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Serial"/>
-        <owl:disjointWith rdf:resource="http://bibframe.org/vocab/Periodical"/>
         <rdfs:comment>A group of separate resources related to one another by the fact that each resource bears, in addition to its own title proper, a collective title applying to the group as a whole. The individual resources may or may not be numbered.</rdfs:comment>
         <skos:scopeNote>While both Series and MultipartMonograph have Monographs as members, they are distinguished from one another in that a Series is ongoing, while a MultipartMonograph has or is intended to have a predefined endpoint.</skos:scopeNote>
         <skos:example>Synthesis Lectures on The Semantic Web; Theory and Techology. Its members are monographs such as Linked Data: Evolving the Web into a Global Data Space; VIVO: A Semantic Approach to Scholarly Networking and Discovery.</skos:example>
