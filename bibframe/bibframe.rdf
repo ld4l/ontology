@@ -2595,6 +2595,7 @@
         <rdfs:comment xml:lang="en-us">Cataloging resource that is added to or changed by means of updates that do not remain discrete but are integrated into the whole.</rdfs:comment>
         <skos:example>Final print edition of AACR2 published in a binder.</skos:example>
         <skos:example>A loose-leaf manual that is updated by means of replacement pages</skos:example>
+        <skos:scopeNote>An IntegratingResource may be either finite (having a predetermined conclusion) or continuous.</skos:scopeNote>
     </owl:Class>
     
 
