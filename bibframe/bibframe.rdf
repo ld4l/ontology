@@ -48,7 +48,7 @@
     <owl:Ontology rdf:about="http://bibframe.org/vocab/">
         <rdfs:label xml:lang="en-us">LD4L Proposed Bibframe Ontology</rdfs:label>
         <skos:note>The ontology observes the following conventions on the use of annotation properties: (1) rdfs:comment contains the definition of the term. This is a widely-observed convention to which applications are attuned, though skos:definition would be preferable. Duplicating the rdfs:comment in skos:definition is avoided because it creates a maintenance problem. (2) skos:example, skos:scopeNote, and skos:note are used as described in the skos vocabulary. (3) skos:editorialNote is used for two distinct purposes: (a) to-do items or questions intended to be resolved and removed; and (b) persistent notes about choices made, motivating factors, etc.</skos:note>
-        <owl:versionInfo xml:lang="en-us">Initially automatically generated.</owl:versionInfo>
+        <owl:versionInfo xml:lang="en-us">Version 0.1</owl:versionInfo>
         <rdfs:comment xml:lang="en-us">Proposed Bibframe ontology based on LD4L recommendations</rdfs:comment>
         <vann:preferredNamespacePrefix>bf</vann:preferredNamespacePrefix>
     </owl:Ontology>
