@@ -2461,7 +2461,7 @@
 
     <owl:Class rdf:about="http://bibframe.org/vocab/Dissertation">
         <rdfs:label xml:lang="en-us">Dissertation</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Work"/>
+        <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/FiniteResource"/>
         <rdfs:comment xml:lang="en-us">A thesis or disseration written in association with earning an academic degree.</rdfs:comment>
     </owl:Class>
     
@@ -2941,7 +2941,7 @@
 
     <owl:Class rdf:about="http://bibframe.org/vocab/PeriodicalPart">
         <rdfs:label xml:lang="en-us">Periodical part</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Work"/>
+        <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/FiniteResource"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&dcterms;isPartOf"/>
