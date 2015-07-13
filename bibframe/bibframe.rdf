@@ -286,12 +286,6 @@
     
 
 
-    <!-- http://bibframe.org/vocab/dcterms;hasPart -->
-
-    <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/dcterms;hasPart"/>
-    
-
-
     <!-- http://bibframe.org/vocab/derivedFrom -->
 
     <owl:ObjectProperty rdf:about="http://bibframe.org/vocab/derivedFrom">
@@ -2950,14 +2944,14 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&dcterms;isPartOf"/>
-                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+                <owl:onProperty rdf:resource="&dcterms;hasPart"/>
+                <owl:allValuesFrom rdf:resource="http://bibframe.org/vocab/PeriodicalPart"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&dcterms;hasPart"/>
-                <owl:allValuesFrom rdf:resource="http://bibframe.org/vocab/PeriodicalPart"/>
+                <owl:onProperty rdf:resource="&dcterms;isPartOf"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <skos:editorialNote>We may want to define subclasses Volume, Issue, Part, etc. if these have distinct properties. Otherwise, they can simply be identified by their rdfs:labels.</skos:editorialNote>
@@ -3051,19 +3045,6 @@
     <owl:Class rdf:about="http://bibframe.org/vocab/Series">
         <rdfs:label xml:lang="en-us">Series</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bibframe.org/vocab/Serial"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://bibframe.org/vocab/dcterms;hasPart"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://bibframe.org/vocab/Monograph"/>
-                            <rdf:Description rdf:about="http://bibframe.org/vocab/Serial"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <skos:editorialNote>Possibly we can assert the disjointness of Series and Periodical, but there may be edge cases that are categorized as both.</skos:editorialNote>
         <rdfs:comment>A group of separate resources related to one another by the fact that each resource bears, in addition to its own title proper, a collective title applying to the group as a whole. The individual resources may or may not be numbered.</rdfs:comment>
         <skos:scopeNote>A Series contrasts with a Periodical, the other main subclass of Serial, in that in a Series the parts are the primary focus and are stand-alone works. The Series title mostly exists to tie these separate resources together, often for marketing purposes. A Periodical typically has regularly recurring parts, which are generally numbered, though may also bear individual titles.</skos:scopeNote>
@@ -3491,13 +3472,13 @@
         <rdfs:label xml:lang="en-us">Work</rdfs:label>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://bibframe.org/vocab/derivedFrom"/>
+                <owl:onProperty rdf:resource="http://bibframe.org/vocab/hasDerivative"/>
                 <owl:allValuesFrom rdf:resource="&madsrdf;Title"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://bibframe.org/vocab/hasDerivative"/>
+                <owl:onProperty rdf:resource="http://bibframe.org/vocab/derivedFrom"/>
                 <owl:allValuesFrom rdf:resource="&madsrdf;Title"/>
             </owl:Restriction>
         </rdfs:subClassOf>
