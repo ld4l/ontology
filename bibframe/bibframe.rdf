@@ -168,16 +168,7 @@
     <rdfs:Datatype rdf:about="&amp;xsd;boolean"/>
     
 
-
-    <!-- http://bibframe.org/vocab/&amp;nonNegativeInteger -->
-
-    <rdfs:Datatype rdf:about="http://bibframe.org/vocab/&amp;nonNegativeInteger"/>
     
-
-
-    <!-- http://bibframe.org/vocab/&amp;xsd;boolean -->
-
-    <rdfs:Datatype rdf:about="http://bibframe.org/vocab/&amp;xsd;boolean"/>
     
 
 
