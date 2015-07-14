@@ -1614,8 +1614,8 @@
 
     <owl:ObjectProperty rdf:about="&prov;wasAssociatedWith">
         <rdfs:label xml:lang="en-us">was associated with</rdfs:label>
-        <rdfs:comment xml:lang="en-us">An activity association is an assignment of responsibility to an agent for an activity, indicating that the agent had a role in the activity. It further allows for a plan to be specified, which is the plan intended by the agent to achieve some goals in the context of this activity.</rdfs:comment>
-        <skos:editorialNote xml:lang="en-us">Prov specifies range as prov:Agent. We will use with instances of foaf:Agent. This allows the inference that those agents are also prov:Agents, but doesn&apos;t say anything more general about the relationship between the classes themselves.</skos:editorialNote>
+        <rdfs:comment xml:lang="en-us">Agent associated with this Activity. An activity association is an assignment of responsibility to an agent for an activity, indicating that the agent had a role in the activity. It further allows for a plan to be specified, which is the plan intended by the agent to achieve some goals in the context of this activity.</rdfs:comment>
+        <skos:editorialNote xml:lang="en-us">Prov specifies range as prov:Agent. We will use with objects of type foaf:Agent. This allows the inference that those agents are also prov:Agents, but doesn&apos;t say anything more general about the relationship between the classes themselves.</skos:editorialNote>
         <rdfs:domain rdf:resource="&prov;Activity"/>
     </owl:ObjectProperty>
     
@@ -2939,7 +2939,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&dcterms;isPartOf"/>
-                <owl:allValuesFrom rdf:resource="http://bibframe.org/vocab/Periodical"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2951,7 +2951,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&dcterms;isPartOf"/>
-                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+                <owl:allValuesFrom rdf:resource="http://bibframe.org/vocab/Periodical"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <skos:editorialNote>We may want to define subclasses Volume, Issue, Part, etc. if these have distinct properties. Otherwise, they can simply be identified by their rdfs:labels.</skos:editorialNote>
@@ -3252,13 +3252,13 @@
         <rdfs:label xml:lang="en-us">Work</rdfs:label>
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://bibframe.org/vocab/hasDerivative"/>
+                <owl:onProperty rdf:resource="http://bibframe.org/vocab/derivedFrom"/>
                 <owl:allValuesFrom rdf:resource="http://bibframe.org/vocab/Work"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://bibframe.org/vocab/derivedFrom"/>
+                <owl:onProperty rdf:resource="http://bibframe.org/vocab/hasDerivative"/>
                 <owl:allValuesFrom rdf:resource="http://bibframe.org/vocab/Work"/>
             </owl:Restriction>
         </owl:equivalentClass>
@@ -3472,13 +3472,13 @@
         <rdfs:label xml:lang="en-us">Work</rdfs:label>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://bibframe.org/vocab/hasDerivative"/>
+                <owl:onProperty rdf:resource="http://bibframe.org/vocab/derivedFrom"/>
                 <owl:allValuesFrom rdf:resource="&madsrdf;Title"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://bibframe.org/vocab/derivedFrom"/>
+                <owl:onProperty rdf:resource="http://bibframe.org/vocab/hasDerivative"/>
                 <owl:allValuesFrom rdf:resource="&madsrdf;Title"/>
             </owl:Restriction>
         </rdfs:subClassOf>
