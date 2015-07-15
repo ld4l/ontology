@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:relators="http://id.loc.gov/vocabulary/relators/" xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#" xmlns:bf2="http://bibframe.org/vocab2/" xmlns:bf="http://bibframe.org/vocab/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <bf:Work rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/5063101">
+    <rdf:type rdf:resource="http://bibframe.org/vocab/Cartography"/>
+    <bf:authorizedAccessPoint>National Geographic Society (U.S.). Cartographic Division. Battlefields of the Civil War with descriptive notes</bf:authorizedAccessPoint>
+    <bf:workTitle rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/5063101title5"/>
+    <bf:creator rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/5063101organization6"/>
+    <bf:contributor rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/5063101person7"/>
+    <bf:temporalCoverageNote>1861 - 1865</bf:temporalCoverageNote>
+    <bf:language rdf:resource="http://id.loc.gov/vocabulary/languages/eng"/>
+    <bf:cartographicScale>Scale 1:2,851,200. 45 miles to the inch ;</bf:cartographicScale>
+    <bf:cartographicProjection>polyconic proj.</bf:cartographicProjection>
+    <bf:cartographicCoordinates>(W 94⁰--W 76⁰/N 40⁰--N 30⁰).</bf:cartographicCoordinates>
+    <bf:subject rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/5063101meeting13"/>
+    <bf:subject rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/5063101temporal14"/>
+    <bf:subject rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/5063101topic15"/>
+    <bf:subject rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/5063101topic16"/>
+    <bf:subject rdf:resource="http://id.loc.gov/vocabulary/geographicAreas/n-usu"/>
+    <bf:classificationLcc rdf:resource="http://id.loc.gov/authorities/classification/G3701"/>
+    <bf:classification rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/5063101classification19"/>
+    <bf:relatedWork rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/5063101work20"/>
+    <bf:series rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/5063101work21"/>
+    <bf:derivedFrom rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/5063101.marcxml.xml"/>
+    <bf:authorizedAccessPoint xml:lang="x-bf-hash">darleyjamesmnationalgeographicsocietyuscartographicdivisionbattlefieldsofthecivilwarwithdescriptivenotesengworkcartography</bf:authorizedAccessPoint>
+  </bf:Work>
+  <bf:Work rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/5063101work20">
+    <bf:title>Civil War.</bf:title>
+    <bf:authorizedAccessPoint>Civil War.</bf:authorizedAccessPoint>
+  </bf:Work>
+  <bf:Work rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/5063101work21">
+    <bf:title>Atlas plate ; 14</bf:title>
+    <bf:authorizedAccessPoint>Atlas plate ; 14</bf:authorizedAccessPoint>
+  </bf:Work>
+  <bf:Instance rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/5063101instance25">
+    <rdf:type rdf:resource="http://bibframe.org/vocab/Monograph"/>
+    <bf:instanceTitle rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/5063101title28"/>
+    <bf:publication>
+      <bf:Provider>
+        <bf:providerName>
+          <bf:Organization>
+            <bf:label>The Society</bf:label>
+          </bf:Organization>
+        </bf:providerName>
+        <bf:providerPlace>
+          <bf:Place>
+            <bf:label>Washington </bf:label>
+          </bf:Place>
+        </bf:providerPlace>
+        <bf:providerDate>1961</bf:providerDate>
+      </bf:Provider>
+    </bf:publication>
+    <bf:cartographicScale>Linear scale</bf:cartographicScale>
+    <bf:cartographicScale>2851200</bf:cartographicScale>
+    <bf:cartographicScale>Scale 1:2,851,200. 45 miles to the inch ;</bf:cartographicScale>
+    <bf:cartographicProjection>polyconic proj.</bf:cartographicProjection>
+    <bf:cartographicCoordinates>(W 94⁰--W 76⁰/N 40⁰--N 30⁰).</bf:cartographicCoordinates>
+    <bf:cartographicCoordinates>W0940000° W0760000° N0400000° N0300000°</bf:cartographicCoordinates>
+    <bf:modeOfIssuance>single unit</bf:modeOfIssuance>
+    <bf:extent>1 map :</bf:extent>
+    <bf:dimensions>49 x 64 cm.</bf:dimensions>
+    <bf:illustrationNote>col. ;</bf:illustrationNote>
+    <bf:titleStatement>Battlefields of the Civil War with descriptive notes</bf:titleStatement>
+    <bf:formDesignation>cartographic material</bf:formDesignation>
+    <bf:providerStatement>Washington : The Society, 1961.</bf:providerStatement>
+    <bf:note>Relief shown by shading and spot heights.</bf:note>
+    <bf:note>On verso: 10 detail maps.</bf:note>
+    <bf:note>Inset: "Major offensives."</bf:note>
+    <bf:note>Supplement to National Geographic magazine, April, 1961.</bf:note>
+    <bf:systemNumber>
+      <bf:Identifier>
+        <bf:identifierValue>5063101</bf:identifierValue>
+        <bf:identifierScheme rdf:resource="http://id.loc.gov/vocabulary/identifiers/systemNumber"/>
+      </bf:Identifier>
+    </bf:systemNumber>
+    <bf:systemNumber rdf:resource="http://www.worldcat.org/oclc/6638960"/>
+    <bf:derivedFrom rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/5063101.marcxml.xml"/>
+    <bf:instanceOf rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/5063101"/>
+  </bf:Instance>
+  <bf:Annotation rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/5063101annotation24">
+    <bf:derivedFrom rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/5063101.marcxml.xml"/>
+    <bf:descriptionSource rdf:resource="http://id.loc.gov/vocabulary/organizations/jna"/>
+    <bf:descriptionModifier rdf:resource="http://id.loc.gov/vocabulary/organizations/ocl"/>
+    <bf:descriptionModifier rdf:resource="http://id.loc.gov/vocabulary/organizations/spi"/>
+    <bf:descriptionModifier rdf:resource="http://id.loc.gov/vocabulary/organizations/ocl"/>
+    <bf:descriptionModifier rdf:resource="http://id.loc.gov/vocabulary/organizations/nic"/>
+    <bf:descriptionConventions rdf:resource="http://id.loc.gov/vocabulary/descriptionConventions/aacr2"/>
+    <bf:generationProcess>DLC transform-tool:2015-04-27-T11:00:00</bf:generationProcess>
+    <bf:changeDate>2014-12-28T12:44</bf:changeDate>
+    <bf:annotates rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/5063101"/>
+  </bf:Annotation>
+  <bf:Title rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/5063101title5">
+    <bf:titleValue>Battlefields of the Civil War with descriptive notes</bf:titleValue>
+  </bf:Title>
+  <bf:Organization rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/5063101organization6">
+    <bf:label>National Geographic Society (U.S.). Cartographic Division.</bf:label>
+    <bf:authorizedAccessPoint>National Geographic Society (U.S.). Cartographic Division.</bf:authorizedAccessPoint>
+    <bf:hasAuthority>
+      <madsrdf:Authority>
+        <madsrdf:authoritativeLabel>National Geographic Society (U.S.). Cartographic Division.</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </bf:hasAuthority>
+  </bf:Organization>
+  <bf:Person rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/5063101person7">
+    <bf:label>Darley, James M. (James Morrison)</bf:label>
+    <bf:authorizedAccessPoint>Darley, James M. (James Morrison)</bf:authorizedAccessPoint>
+    <bf:hasAuthority>
+      <madsrdf:Authority>
+        <madsrdf:authoritativeLabel>Darley, James M. (James Morrison)</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </bf:hasAuthority>
+  </bf:Person>
+  <bf:Meeting rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/5063101meeting13">
+    <bf:authorizedAccessPoint>American Civil War (1861-1865)</bf:authorizedAccessPoint>
+    <bf:label>American Civil War (1861-1865)</bf:label>
+    <bf:hasAuthority>
+      <madsrdf:Authority>
+        <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ConferenceName"/>
+        <madsrdf:authoritativeLabel>American Civil War (1861-1865)</madsrdf:authoritativeLabel>
+        <madsrdf:isMemberOfMADSScheme rdf:resource="http://id.loc.gov/vocabulary/subjectSchemes/fast"/>
+      </madsrdf:Authority>
+    </bf:hasAuthority>
+    <bf:authoritySource>http://id.loc.gov/vocabulary/subjectSchemes/fast</bf:authoritySource>
+    <bf:systemNumber>
+      <bf:Identifier>
+        <bf:identifierValue>(OCoLC)fst01351658</bf:identifierValue>
+      </bf:Identifier>
+    </bf:systemNumber>
+  </bf:Meeting>
+  <bf:Temporal rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/5063101temporal14">
+    <bf:authorizedAccessPoint>1861 - 1865</bf:authorizedAccessPoint>
+    <bf:label>1861 - 1865</bf:label>
+    <bf:hasAuthority>
+      <madsrdf:Authority>
+        <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Temporal"/>
+        <madsrdf:authoritativeLabel>1861 - 1865</madsrdf:authoritativeLabel>
+        <madsrdf:isMemberOfMADSScheme rdf:resource="http://id.loc.gov/vocabulary/subjectSchemes/fast"/>
+      </madsrdf:Authority>
+    </bf:hasAuthority>
+    <bf:authoritySource>http://id.loc.gov/vocabulary/subjectSchemes/fast</bf:authoritySource>
+  </bf:Temporal>
+  <bf:Topic rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/5063101topic15">
+    <bf:authorizedAccessPoint>History</bf:authorizedAccessPoint>
+    <bf:label>History</bf:label>
+    <bf:hasAuthority>
+      <madsrdf:Authority>
+        <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#GenreForm"/>
+        <madsrdf:authoritativeLabel>History</madsrdf:authoritativeLabel>
+        <madsrdf:isMemberOfMADSScheme rdf:resource="http://id.loc.gov/vocabulary/subjectSchemes/fast"/>
+      </madsrdf:Authority>
+    </bf:hasAuthority>
+    <bf:authoritySource>http://id.loc.gov/vocabulary/subjectSchemes/fast</bf:authoritySource>
+    <bf:systemNumber>
+      <bf:Identifier>
+        <bf:identifierValue>(OCoLC)fst01411628</bf:identifierValue>
+      </bf:Identifier>
+    </bf:systemNumber>
+  </bf:Topic>
+  <bf:Topic rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/5063101topic16">
+    <bf:authorizedAccessPoint>Maps</bf:authorizedAccessPoint>
+    <bf:label>Maps</bf:label>
+    <bf:hasAuthority>
+      <madsrdf:Authority>
+        <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#GenreForm"/>
+        <madsrdf:authoritativeLabel>Maps</madsrdf:authoritativeLabel>
+        <madsrdf:isMemberOfMADSScheme rdf:resource="http://id.loc.gov/vocabulary/subjectSchemes/fast"/>
+      </madsrdf:Authority>
+    </bf:hasAuthority>
+    <bf:authoritySource>http://id.loc.gov/vocabulary/subjectSchemes/fast</bf:authoritySource>
+    <bf:systemNumber>
+      <bf:Identifier>
+        <bf:identifierValue>(OCoLC)fst01423704</bf:identifierValue>
+      </bf:Identifier>
+    </bf:systemNumber>
+  </bf:Topic>
+  <bf:Classification rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/5063101classification19">
+    <bf:classificationNumber>G3701.S5 1961</bf:classificationNumber>
+    <bf:classificationScheme/>
+  </bf:Classification>
+  <bf:Title rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/5063101title28">
+    <bf:titleValue>Battlefields of the Civil War with descriptive notes</bf:titleValue>
+  </bf:Title>
+</rdf:RDF>

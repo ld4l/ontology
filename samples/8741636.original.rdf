@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:relators="http://id.loc.gov/vocabulary/relators/" xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#" xmlns:bf2="http://bibframe.org/vocab2/" xmlns:bf="http://bibframe.org/vocab/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <bf:Work rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/8741636">
+    <rdf:type rdf:resource="http://bibframe.org/vocab/Text"/>
+    <bf:authorizedAccessPoint>Habernal, Ivan. Text, Speech, and Dialogue16th International Conference, TSD 2013, Pilsen, Czech Republic, September 1-5, 2013. Proceedings</bf:authorizedAccessPoint>
+    <bf:workTitle rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/8741636title5"/>
+    <relators:edt rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/8741636person6"/>
+    <relators:edt rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/8741636person7"/>
+    <bf:contributor rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/8741636organization8"/>
+    <bf:contentCategory rdf:resource="http://id.loc.gov/vocabulary/contentTypes/txt"/>
+    <bf:language rdf:resource="http://id.loc.gov/vocabulary/languages/eng"/>
+    <bf:subject rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/8741636topic12"/>
+    <bf:subject rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/8741636topic13"/>
+    <bf:subject rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/8741636topic14"/>
+    <bf:subject rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/8741636topic15"/>
+    <bf:subject rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/8741636topic16"/>
+    <bf:subject rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/8741636topic17"/>
+    <bf:subject rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/8741636topic18"/>
+    <bf:subject rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/8741636topic19"/>
+    <bf:subject rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/8741636topic20"/>
+    <bf:subject rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/8741636topic21"/>
+    <bf:subject rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/8741636topic22"/>
+    <bf:subject rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/8741636topic23"/>
+    <bf:subject rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/8741636topic24"/>
+    <bf:classificationLcc rdf:resource="http://id.loc.gov/authorities/classification/TJ210.2-211.495"/>
+    <bf:classification rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/8741636classification26"/>
+    <bf:series rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/8741636work27"/>
+    <bf:partOf rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/8741636work28"/>
+    <bf:derivedFrom rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/8741636.marcxml.xml"/>
+    <bf:authorizedAccessPoint xml:lang="x-bf-hash">habernalivanmatoušekváclavspringerlinkonlineservicetextspeechanddialogue16thinternationalconferencetsd2013pilsenczechrepublicseptember152013proceedingsengworktext</bf:authorizedAccessPoint>
+  </bf:Work>
+  <bf:Work rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/8741636work27">
+    <bf:title>Lecture Notes in Computer Science, 8082</bf:title>
+    <bf:authorizedAccessPoint>Lecture Notes in Computer Science, 8082</bf:authorizedAccessPoint>
+    <bf:issn rdf:resource="urn:issn:0302-9743;"/>
+  </bf:Work>
+  <bf:Work rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/8741636work28">
+    <bf:title>Springer eBooks</bf:title>
+    <bf:authorizedAccessPoint>Springer eBooks</bf:authorizedAccessPoint>
+  </bf:Work>
+  <bf:Instance rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/8741636instance32">
+    <bf:isbn10 rdf:resource="http://isbn.example.org/3642405851"/>
+    <bf:isbn13 rdf:resource="http://isbn.example.org/9783642405853"/>
+    <rdf:type rdf:resource="http://bibframe.org/vocab/Electronic"/>
+    <rdf:type rdf:resource="http://bibframe.org/vocab/Monograph"/>
+    <bf:instanceTitle rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/8741636title38"/>
+    <bf:publication>
+      <bf:Provider>
+        <bf:providerName>
+          <bf:Organization>
+            <bf:label>Springer Berlin Heidelberg </bf:label>
+          </bf:Organization>
+        </bf:providerName>
+        <bf:providerPlace>
+          <bf:Place>
+            <bf:label>Berlin, Heidelberg </bf:label>
+          </bf:Place>
+        </bf:providerPlace>
+        <bf:providerDate>2013</bf:providerDate>
+      </bf:Provider>
+    </bf:publication>
+    <bf:publication>
+      <bf:Provider>
+        <bf:providerName>
+          <bf:Organization>
+            <bf:label>Imprint: Springer</bf:label>
+          </bf:Organization>
+        </bf:providerName>
+        <bf:providerDate>2013</bf:providerDate>
+      </bf:Provider>
+    </bf:publication>
+    <bf:modeOfIssuance>single unit</bf:modeOfIssuance>
+    <bf:otherPhysicalFormat rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/8741636instance42"/>
+    <bf:extent>1 online resource.</bf:extent>
+    <bf:titleStatement>Text, Speech, and Dialogue 16th International Conference, TSD 2013, Pilsen, Czech Republic, September 1-5, 2013. Proceedings</bf:titleStatement>
+    <bf:formDesignation>electronic resource :</bf:formDesignation>
+    <bf:providerStatement>Berlin, Heidelberg : Springer Berlin Heidelberg : Imprint: Springer, 2013.</bf:providerStatement>
+    <bf:contentsNote>Invited Talks -- Corpora of the Russian Language -- Long, Deep and Wide Artificial Neural Nets for Dealing with Unexpected Noise in Machine Recognition of Speech -- Multilingual Media Monitoring and Text Analysis - Challenges for Highly Inflected Languages -- Spoken Dialogs with Children for Science Learning and Literacy -- Statecharts and SCXML for Dialogue Management -- Conference Papers -- A Comparison of Deep Neural Network Training Methods for Large Vocabulary Speech Recognition -- A Comparison of Two Approaches to Bilingual HMM-based Speech Synthesis -- A Direct Criterion Minimization Based fMLLR via Gradient Descend -- A Machine Learning Based Approach for Vocabulary Selection for Speech Transcription -- A New State-Of-The-Art Czech Named Entity Recognizer -- Algorithms for Dysfluency Detection in Symbolic Sequences Using Suffix Arrays -- Analysis and Combination of Forward and Backward Based Decoders for Improved Speech Transcription -- Annotating Signs of Syntactic Complexity to Support Sentence Simplification -- Application of LSTM Neural Networks in Language Modelling -- Automatic Laughter Detection in Spontaneous Speech Using GMM-SVM Method -- Automatic Machine Translation Evaluation with Part-of-Speech Information -- Automatic Extraction of Polish Language Errors from Text Edition History -- Bilingual Voice Conversion by Weighted Frequency Warping Based on Formant Space -- Building a Hybrid: Chatterbot - Dialog System -- CRF-based Czech Named Entity Recognizer and Consolidation of Czech NER Research -- Comparison and Analysis of Several Phonetic Decoding Approaches -- Concatenation Artifact Detection Trained from Listeners Evaluations -- Configuring TTS Evaluation Method Based on Unit Cost Outlier Detection -- Development and Evaluation of Spoken Dialog Systems with One or Two Agents Through Two Domains -- Distant Supervision Learning of DBPedia Relations -- Downdating Lexicon and Language Model for Automatic Transcription of Czech Historical Spoken Documents -- Dynamic Threshold Selection Method for Multi-label Newspaper Topic Identification -- Efficiency of Multi-tap Text Entry Method on Interactive Television -- English Nominal Compound Detection with Wikipedia-Based Methods -- Evaluating Voice Quality and Speech Synthesis Using Crowdsourcing -- Experiment with Evaluation of Quality of the Synthetic Speech by the GMM Classifier -- Experiments on Reducing Footprint of Unit Selection TTS System -- Expressive Speech Synthesis for Urgent Warning Messages Generation in Romani and Slovak -- Extracting Relations Between Arabic Named Entities -- Foot Detection in Czech Using Pitch Information and HMM -- Improved Hungarian Morphological Disambiguation with Tagger Combination -- Improving Dependency Parsing by Filtering Linguistic Noise -- Improving Speech Recognition by Detecting Foreign Inclusions and Generating Pronunciations -- Intensifying verb prefix patterns in Czech and Russian -- K-component Adaptive Recurrent Neural Network Language Models -- LIUM ASR System for ETAPE French Evaluation Campaign: Experiments on System Combination Using Open-source Recognizers -- Lexical Stress-based Morphological Decomposition and Its Application for Ukrainian Speech Recognition -- Motion Event in Croatian, English, German and Italian Concerning Path Prefixes and Prepositions -- Multi-label Document Classification in Czech -- On Behaviour of PLDA Models in the Task of Speaker Recognition -- On the Quantitative and Qualitative Speech Changes of the Czech Radio Broadcasts News within Years 1969-2005 -- On the Use of Phoneme Lattices in Spoken Language Understanding -- Online Speaker Adaptation of an Acoustic Model Using Face Recognition -- Ontology of Rhetorical Figures for Serbian -- Phoneme Set and Pronouncing Dictionary Creation for Large Vocabulary Continuous Speech Recognition of Vietnamese -- Phonetic Spoken Term Detection in Large Audio Archive Using the WFST Framework -- Ranking Machine Translation Systems via Post-Editing -- Recursive Part-of-Speech Tagging Using Word Structures -- Resolving Ambiguities in Sentence Boundary Detection in Russian Spontaneous Speech -- Revealing Prevailing Semantic Contents of Clusters Generated from Untagged Freely Written Text Documents in Natural Languages -- Robust Methodology for TTS Enhancement Evaluation -- Romanian Syllabication Using Machine Learning -- SVM-Based Detection of Misannotated Words in Read Speech Corpora -- Scratching the Surface of Possible Translations -- Selecting and Weighting N-Grams to Identify 1100 Languages -- Semantic Spaces for Sentiment Analysis -- Semi-automatic Verb Valence Frame Assignment Through VerbNet Classification -- Speaker-specific Pronunciation for Speech Synthesis -- Structuring a Multimedia Tri-dialectal Dictionary -- Stylistic Changes for Temporal Text Classification -- SummEC: A Summarization Engine for Czech -- Text-to-Speech Alignment for Imperfect Transcriptions -- The CNG Corpus of European Portuguese Children's Speech -- The Joint Optimization of Spectro-Temporal Features and Neural Net Classifiers -- Three Syntactic Formalisms for Data-Driven Dependency Parsing of Croatian -- Topic Models for Comparative Summarization -- Using Low-Cost Annotation to Train a Reliable Czech Shallow Parser -- Verb Subcategorisation Acquisition for Estonian Based on Morphological Information -- Whispered Speech Database: Design, Processing and Application.</bf:contentsNote>
+    <bf:accessCondition>License restrictions may limit access.</bf:accessCondition>
+    <bf:note>This book constitutes the refereed proceedings of the 16th International Conference on Text, Speech and Dialogue, TSD 2013, held in Pilsen, Czech Republic, in September 2013. The 65 papers presented together with 5 invited talks were carefully reviewed and selected from 148 submissions. The main topics of this year's conference was corpora, texts and transcription, speech analysis, recognition and synthesis, and their intertwining within NL dialogue systems. The topics also included speech recognition, corpora and language resources, speech and spoken language generation, tagging, classification and parsing of text and speech, semantic processing of text and speech, integrating applications of text and speech processing, as well as automatic dialogue systems, and multimodal techniques and modelling.</bf:note>
+    <bf:systemNumber>
+      <bf:Identifier>
+        <bf:identifierValue>(WaSeSS)OCM1ssj0000988299</bf:identifierValue>
+        <bf:identifierScheme rdf:resource="http://id.loc.gov/vocabulary/identifiers/systemNumber"/>
+      </bf:Identifier>
+    </bf:systemNumber>
+    <bf:systemNumber rdf:resource="http://www.worldcat.org/oclc/859208159"/>
+    <bf:systemNumber>
+      <bf:Identifier>
+        <bf:identifierValue>8741636</bf:identifierValue>
+        <bf:identifierScheme rdf:resource="http://id.loc.gov/vocabulary/identifiers/systemNumber"/>
+      </bf:Identifier>
+    </bf:systemNumber>
+    <bf:doi>
+      <bf:Identifier>
+        <bf:identifierScheme rdf:resource="http://id.loc.gov/vocabulary/identifiers/doi"/>
+        <bf:identifierValue>10.1007/978-3-642-40585-3</bf:identifierValue>
+      </bf:Identifier>
+    </bf:doi>
+    <bf:mediaCategory rdf:resource="http://id.loc.gov/vocabulary/mediaTypes/c"/>
+    <bf:carrierCategory rdf:resource="http://id.loc.gov/vocabulary/carriers/cr"/>
+    <bf:derivedFrom rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/8741636.marcxml.xml"/>
+    <bf:instanceOf rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/8741636"/>
+  </bf:Instance>
+  <bf:Instance rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/8741636instance42">
+    <bf:title/>
+    <bf:isbn>
+      <bf:Identifier>
+        <bf:identifierValue>9783642405846</bf:identifierValue>
+        <bf:identifierScheme rdf:resource="http://id.loc.gov/vocabulary/identifiers/isbn"/>
+      </bf:Identifier>
+    </bf:isbn>
+  </bf:Instance>
+  <bf:Instance rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/8741636instance33">
+    <rdf:type rdf:resource="http://bibframe.org/vocab/Electronic"/>
+    <bf:label>Full text available from SpringerLINK Lecture Notes in Computer Science Contemporary (1997-present)</bf:label>
+    <bf:uri rdf:resource="http://proxy.library.cornell.edu/login?url=http://link.springer.com/openurl?genre=book&amp;isbn=978-3-642-40584-6"/>
+    <bf:instanceOf rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/8741636"/>
+  </bf:Instance>
+  <bf:Annotation rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/8741636annotation31">
+    <bf:derivedFrom rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/8741636.marcxml.xml"/>
+    <bf:descriptionModifier rdf:resource="http://id.loc.gov/vocabulary/organizations/wasess"/>
+    <bf:descriptionConventions rdf:resource="http://id.loc.gov/vocabulary/descriptionConventions/isbd"/>
+    <bf:generationProcess>DLC transform-tool:2015-04-27-T11:00:00</bf:generationProcess>
+    <bf:changeDate>2015-05-12T08:33</bf:changeDate>
+    <bf:annotates rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/8741636"/>
+  </bf:Annotation>
+  <bf:Summary rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/8741636summary11">
+    <rdf:type rdf:resource="http://bibframe.org/vocab/Summary"/>
+    <bf:label>Summary</bf:label>
+    <bf:annotationAssertedBy rdf:resource="http://id.loc.gov/vocabulary/organizations/dlc"/>
+    <bf:annotationBody>This book constitutes the refereed proceedings of the 16th International Conference on Text, Speech and Dialogue, TSD 2013, held in Pilsen, Czech Republic, in September 2013. The 65 papers presented together with 5 invited talks were carefully reviewed and selected from 148 submissions. The main topics of this year's conference was corpora, texts and transcription, speech analysis, recognition and synthesis, and their intertwining within NL dialogue systems. The topics also included speech recognition, corpora and language resources, speech and spoken language generation, tagging, classification and parsing of text and speech, semantic processing of text and speech, integrating applications of text and speech processing, as well as automatic dialogue systems, and multimodal techniques and modelling.</bf:annotationBody>
+    <bf:summaryOf rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/8741636"/>
+  </bf:Summary>
+  <bf:Title rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/8741636title5">
+    <bf:titleValue>Text, Speech, and Dialogue</bf:titleValue>
+    <bf:subtitle>16th International Conference, TSD 2013, Pilsen, Czech Republic, September 1-5, 2013. Proceedings </bf:subtitle>
+  </bf:Title>
+  <bf:Person rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/8741636person6">
+    <bf:label>Habernal, Ivan.</bf:label>
+    <bf:authorizedAccessPoint>Habernal, Ivan.</bf:authorizedAccessPoint>
+    <bf:hasAuthority>
+      <madsrdf:Authority>
+        <madsrdf:authoritativeLabel>Habernal, Ivan.</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </bf:hasAuthority>
+  </bf:Person>
+  <bf:Person rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/8741636person7">
+    <bf:label>Matoušek, Václav.</bf:label>
+    <bf:authorizedAccessPoint>Matoušek, Václav.</bf:authorizedAccessPoint>
+    <bf:hasAuthority>
+      <madsrdf:Authority>
+        <madsrdf:authoritativeLabel>Matoušek, Václav.</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </bf:hasAuthority>
+  </bf:Person>
+  <bf:Organization rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/8741636organization8">
+    <bf:label>SpringerLink (Online service)</bf:label>
+    <bf:authorizedAccessPoint>SpringerLink (Online service)</bf:authorizedAccessPoint>
+    <bf:hasAuthority>
+      <madsrdf:Authority>
+        <madsrdf:authoritativeLabel>SpringerLink (Online service)</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </bf:hasAuthority>
+  </bf:Organization>
+  <bf:Topic rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/8741636topic12">
+    <bf:authorizedAccessPoint>Computer science</bf:authorizedAccessPoint>
+    <bf:label>Computer science</bf:label>
+    <bf:hasAuthority>
+      <madsrdf:Authority>
+        <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Topic"/>
+        <madsrdf:authoritativeLabel>Computer science</madsrdf:authoritativeLabel>
+        <madsrdf:isMemberOfMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+      </madsrdf:Authority>
+    </bf:hasAuthority>
+  </bf:Topic>
+  <bf:Topic rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/8741636topic13">
+    <bf:authorizedAccessPoint>Database management</bf:authorizedAccessPoint>
+    <bf:label>Database management</bf:label>
+    <bf:hasAuthority>
+      <madsrdf:Authority>
+        <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Topic"/>
+        <madsrdf:authoritativeLabel>Database management</madsrdf:authoritativeLabel>
+        <madsrdf:isMemberOfMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+      </madsrdf:Authority>
+    </bf:hasAuthority>
+  </bf:Topic>
+  <bf:Topic rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/8741636topic14">
+    <bf:authorizedAccessPoint>Data mining</bf:authorizedAccessPoint>
+    <bf:label>Data mining</bf:label>
+    <bf:hasAuthority>
+      <madsrdf:Authority>
+        <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Topic"/>
+        <madsrdf:authoritativeLabel>Data mining</madsrdf:authoritativeLabel>
+        <madsrdf:isMemberOfMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+      </madsrdf:Authority>
+    </bf:hasAuthority>
+  </bf:Topic>
+  <bf:Topic rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/8741636topic15">
+    <bf:authorizedAccessPoint>Information storage and retrieval systems</bf:authorizedAccessPoint>
+    <bf:label>Information storage and retrieval systems</bf:label>
+    <bf:hasAuthority>
+      <madsrdf:Authority>
+        <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Topic"/>
+        <madsrdf:authoritativeLabel>Information storage and retrieval systems</madsrdf:authoritativeLabel>
+        <madsrdf:isMemberOfMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+      </madsrdf:Authority>
+    </bf:hasAuthority>
+  </bf:Topic>
+  <bf:Topic rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/8741636topic16">
+    <bf:authorizedAccessPoint>Artificial intelligence</bf:authorizedAccessPoint>
+    <bf:label>Artificial intelligence</bf:label>
+    <bf:hasAuthority>
+      <madsrdf:Authority>
+        <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Topic"/>
+        <madsrdf:authoritativeLabel>Artificial intelligence</madsrdf:authoritativeLabel>
+        <madsrdf:isMemberOfMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+      </madsrdf:Authority>
+    </bf:hasAuthority>
+  </bf:Topic>
+  <bf:Topic rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/8741636topic17">
+    <bf:authorizedAccessPoint>Optical pattern recognition</bf:authorizedAccessPoint>
+    <bf:label>Optical pattern recognition</bf:label>
+    <bf:hasAuthority>
+      <madsrdf:Authority>
+        <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Topic"/>
+        <madsrdf:authoritativeLabel>Optical pattern recognition</madsrdf:authoritativeLabel>
+        <madsrdf:isMemberOfMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+      </madsrdf:Authority>
+    </bf:hasAuthority>
+  </bf:Topic>
+  <bf:Topic rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/8741636topic18">
+    <bf:authorizedAccessPoint>Computer Science</bf:authorizedAccessPoint>
+    <bf:label>Computer Science</bf:label>
+    <bf:hasAuthority>
+      <madsrdf:Authority>
+        <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Topic"/>
+        <madsrdf:authoritativeLabel>Computer Science</madsrdf:authoritativeLabel>
+        <madsrdf:isMemberOfMADSScheme rdf:resource=""/>
+      </madsrdf:Authority>
+    </bf:hasAuthority>
+  </bf:Topic>
+  <bf:Topic rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/8741636topic19">
+    <bf:authorizedAccessPoint>Artificial Intelligence (incl. Robotics)</bf:authorizedAccessPoint>
+    <bf:label>Artificial Intelligence (incl. Robotics)</bf:label>
+    <bf:hasAuthority>
+      <madsrdf:Authority>
+        <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Topic"/>
+        <madsrdf:authoritativeLabel>Artificial Intelligence (incl. Robotics)</madsrdf:authoritativeLabel>
+        <madsrdf:isMemberOfMADSScheme rdf:resource=""/>
+      </madsrdf:Authority>
+    </bf:hasAuthority>
+  </bf:Topic>
+  <bf:Topic rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/8741636topic20">
+    <bf:authorizedAccessPoint>Information Systems Applications (incl. Internet)</bf:authorizedAccessPoint>
+    <bf:label>Information Systems Applications (incl. Internet)</bf:label>
+    <bf:hasAuthority>
+      <madsrdf:Authority>
+        <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Topic"/>
+        <madsrdf:authoritativeLabel>Information Systems Applications (incl. Internet)</madsrdf:authoritativeLabel>
+        <madsrdf:isMemberOfMADSScheme rdf:resource=""/>
+      </madsrdf:Authority>
+    </bf:hasAuthority>
+  </bf:Topic>
+  <bf:Topic rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/8741636topic21">
+    <bf:authorizedAccessPoint>Information Storage and Retrieval</bf:authorizedAccessPoint>
+    <bf:label>Information Storage and Retrieval</bf:label>
+    <bf:hasAuthority>
+      <madsrdf:Authority>
+        <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Topic"/>
+        <madsrdf:authoritativeLabel>Information Storage and Retrieval</madsrdf:authoritativeLabel>
+        <madsrdf:isMemberOfMADSScheme rdf:resource=""/>
+      </madsrdf:Authority>
+    </bf:hasAuthority>
+  </bf:Topic>
+  <bf:Topic rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/8741636topic22">
+    <bf:authorizedAccessPoint>Database Management</bf:authorizedAccessPoint>
+    <bf:label>Database Management</bf:label>
+    <bf:hasAuthority>
+      <madsrdf:Authority>
+        <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Topic"/>
+        <madsrdf:authoritativeLabel>Database Management</madsrdf:authoritativeLabel>
+        <madsrdf:isMemberOfMADSScheme rdf:resource=""/>
+      </madsrdf:Authority>
+    </bf:hasAuthority>
+  </bf:Topic>
+  <bf:Topic rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/8741636topic23">
+    <bf:authorizedAccessPoint>Pattern Recognition</bf:authorizedAccessPoint>
+    <bf:label>Pattern Recognition</bf:label>
+    <bf:hasAuthority>
+      <madsrdf:Authority>
+        <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Topic"/>
+        <madsrdf:authoritativeLabel>Pattern Recognition</madsrdf:authoritativeLabel>
+        <madsrdf:isMemberOfMADSScheme rdf:resource=""/>
+      </madsrdf:Authority>
+    </bf:hasAuthority>
+  </bf:Topic>
+  <bf:Topic rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/8741636topic24">
+    <bf:authorizedAccessPoint>Data Mining and Knowledge Discovery</bf:authorizedAccessPoint>
+    <bf:label>Data Mining and Knowledge Discovery</bf:label>
+    <bf:hasAuthority>
+      <madsrdf:Authority>
+        <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Topic"/>
+        <madsrdf:authoritativeLabel>Data Mining and Knowledge Discovery</madsrdf:authoritativeLabel>
+        <madsrdf:isMemberOfMADSScheme rdf:resource=""/>
+      </madsrdf:Authority>
+    </bf:hasAuthority>
+  </bf:Topic>
+  <bf:Classification rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/8741636classification26">
+    <bf:classificationScheme rdf:resource="http://id.loc.gov/authorities/classSchemes/ddc"/>
+    <bf:classificationNumber>006.3</bf:classificationNumber>
+    <bf:label>006.3</bf:label>
+    <bf:classificationEdition>full</bf:classificationEdition>
+    <bf:classificationEdition>23</bf:classificationEdition>
+  </bf:Classification>
+  <bf:Title rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/8741636title38">
+    <bf:titleValue>Text, Speech, and Dialogue</bf:titleValue>
+    <bf:subtitle>16th International Conference, TSD 2013, Pilsen, Czech Republic, September 1-5, 2013. Proceedings </bf:subtitle>
+  </bf:Title>
+</rdf:RDF>

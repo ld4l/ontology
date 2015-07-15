@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:relators="http://id.loc.gov/vocabulary/relators/" xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#" xmlns:bf2="http://bibframe.org/vocab2/" xmlns:bf="http://bibframe.org/vocab/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <bf:Work rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/102063">
+    <rdf:type rdf:resource="http://bibframe.org/vocab/Text"/>
+    <bf:authorizedAccessPoint>Gordon, Burgess L. (Burgess Lee), 1892- Clinical cardiopulmonary physiology</bf:authorizedAccessPoint>
+    <bf:workTitle rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/102063title5"/>
+    <bf:contributor rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/102063person6"/>
+    <bf:contributor rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/102063organization7"/>
+    <bf:language rdf:resource="http://id.loc.gov/vocabulary/languages/eng"/>
+    <bf:subject rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/102063topic9"/>
+    <bf:subject rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/102063topic10"/>
+    <bf:classificationLcc rdf:resource="http://id.loc.gov/authorities/classification/RC941"/>
+    <bf:classificationDdc rdf:resource="http://dewey.info/class/616.2/about"/>
+    <bf:derivedFrom rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/102063.marcxml.xml"/>
+    <bf:authorizedAccessPoint xml:lang="x-bf-hash">gordonburgessl1892americancollegeofchestphysiciansclinicalcardiopulmonaryphysiologyengworktext</bf:authorizedAccessPoint>
+  </bf:Work>
+  <bf:Instance rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/102063instance16">
+    <rdf:type rdf:resource="http://bibframe.org/vocab/Monograph"/>
+    <bf:instanceTitle rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/102063title19"/>
+    <bf:publication>
+      <bf:Provider>
+        <bf:providerName>
+          <bf:Organization>
+            <bf:label>Grune &amp; Stratton</bf:label>
+          </bf:Organization>
+        </bf:providerName>
+        <bf:providerPlace>
+          <bf:Place>
+            <bf:label>New York</bf:label>
+          </bf:Place>
+        </bf:providerPlace>
+        <bf:providerDate>1957</bf:providerDate>
+      </bf:Provider>
+    </bf:publication>
+    <bf:modeOfIssuance>single unit</bf:modeOfIssuance>
+    <bf:extent>759 p.</bf:extent>
+    <bf:dimensions>27 cm.</bf:dimensions>
+    <bf:illustrationNote>illus.</bf:illustrationNote>
+    <bf:titleStatement>Clinical cardiopulmonary physiology.</bf:titleStatement>
+    <bf:providerStatement>New York, Grune &amp; Stratton, 1957.</bf:providerStatement>
+    <bf:supplementaryContentNote>Includes bibliography.</bf:supplementaryContentNote>
+    <bf:lccn>
+      <bf:Identifier>
+        <bf:identifierValue>56010158/L</bf:identifierValue>
+        <bf:identifierScheme rdf:resource="http://id.loc.gov/vocabulary/identifiers/lccn"/>
+      </bf:Identifier>
+    </bf:lccn>
+    <bf:systemNumber>
+      <bf:Identifier>
+        <bf:identifierValue>(CStRLIN)NYCX86B63464</bf:identifierValue>
+        <bf:identifierScheme rdf:resource="http://id.loc.gov/vocabulary/identifiers/systemNumber"/>
+      </bf:Identifier>
+    </bf:systemNumber>
+    <bf:systemNumber>
+      <bf:Identifier>
+        <bf:identifierValue>(NIC)notisAAL3258</bf:identifierValue>
+        <bf:identifierScheme rdf:resource="http://id.loc.gov/vocabulary/identifiers/systemNumber"/>
+      </bf:Identifier>
+    </bf:systemNumber>
+    <bf:systemNumber rdf:resource="http://www.worldcat.org/oclc/1345399"/>
+    <bf:systemNumber>
+      <bf:Identifier>
+        <bf:identifierValue>102063</bf:identifierValue>
+        <bf:identifierScheme rdf:resource="http://id.loc.gov/vocabulary/identifiers/systemNumber"/>
+      </bf:Identifier>
+    </bf:systemNumber>
+    <bf:derivedFrom rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/102063.marcxml.xml"/>
+    <bf:instanceOf rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/102063"/>
+  </bf:Instance>
+  <bf:Annotation rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/102063annotation15">
+    <bf:derivedFrom rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/102063.marcxml.xml"/>
+    <bf:descriptionModifier rdf:resource="http://id.loc.gov/vocabulary/organizations/nic"/>
+    <bf:descriptionConventions rdf:resource="http://id.loc.gov/vocabulary/descriptionConventions/nonisbd"/>
+    <bf:generationProcess>DLC transform-tool:2015-04-27-T11:00:00</bf:generationProcess>
+    <bf:changeDate>2014-10-19T19:17</bf:changeDate>
+    <bf:annotates rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/102063"/>
+  </bf:Annotation>
+  <bf:HeldItem rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/102063helditem35">
+    <bf:label>RC941 .C6</bf:label>
+    <bf:shelfMarkLcc>RC941 .C6</bf:shelfMarkLcc>
+    <bf:holdingFor rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/102063instance16"/>
+  </bf:HeldItem>
+  <bf:Title rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/102063title5">
+    <bf:titleValue>Clinical cardiopulmonary physiology</bf:titleValue>
+  </bf:Title>
+  <bf:Person rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/102063person6">
+    <bf:label>Gordon, Burgess L. (Burgess Lee), 1892-</bf:label>
+    <bf:authorizedAccessPoint>Gordon, Burgess L. (Burgess Lee), 1892-</bf:authorizedAccessPoint>
+    <bf:hasAuthority>
+      <madsrdf:Authority>
+        <madsrdf:authoritativeLabel>Gordon, Burgess L. (Burgess Lee), 1892-</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </bf:hasAuthority>
+  </bf:Person>
+  <bf:Organization rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/102063organization7">
+    <bf:label>American College of Chest Physicians.</bf:label>
+    <bf:authorizedAccessPoint>American College of Chest Physicians.</bf:authorizedAccessPoint>
+    <bf:hasAuthority>
+      <madsrdf:Authority>
+        <madsrdf:authoritativeLabel>American College of Chest Physicians.</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </bf:hasAuthority>
+  </bf:Organization>
+  <bf:Topic rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/102063topic9">
+    <bf:authorizedAccessPoint>Chest--Diseases</bf:authorizedAccessPoint>
+    <bf:label>Chest--Diseases</bf:label>
+    <bf:hasAuthority>
+      <madsrdf:Authority>
+        <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+        <madsrdf:authoritativeLabel>Chest--Diseases</madsrdf:authoritativeLabel>
+        <madsrdf:isMemberOfMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+      </madsrdf:Authority>
+    </bf:hasAuthority>
+  </bf:Topic>
+  <bf:Topic rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/102063topic10">
+    <bf:authorizedAccessPoint>Chest--Diseases</bf:authorizedAccessPoint>
+    <bf:label>Chest--Diseases</bf:label>
+    <bf:hasAuthority>
+      <madsrdf:Authority>
+        <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+        <madsrdf:authoritativeLabel>Chest--Diseases</madsrdf:authoritativeLabel>
+        <madsrdf:isMemberOfMADSScheme rdf:resource="http://id.loc.gov/vocabulary/subjectSchemes/fast"/>
+      </madsrdf:Authority>
+    </bf:hasAuthority>
+    <bf:authoritySource>http://id.loc.gov/vocabulary/subjectSchemes/fast</bf:authoritySource>
+    <bf:systemNumber>
+      <bf:Identifier>
+        <bf:identifierValue>(OCoLC)fst00853831</bf:identifierValue>
+      </bf:Identifier>
+    </bf:systemNumber>
+  </bf:Topic>
+  <bf:Title rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/102063title19">
+    <bf:titleValue>Clinical cardiopulmonary physiology</bf:titleValue>
+  </bf:Title>
+</rdf:RDF>

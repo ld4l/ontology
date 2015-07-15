@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:relators="http://id.loc.gov/vocabulary/relators/" xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#" xmlns:bf2="http://bibframe.org/vocab2/" xmlns:bf="http://bibframe.org/vocab/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <bf:Work rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/7107063">
+    <rdf:type rdf:resource="http://bibframe.org/vocab/Text"/>
+    <bf:authorizedAccessPoint>Darwin, Charles, 1809-1882. On the origin of species</bf:authorizedAccessPoint>
+    <madsrdf:authoritativeLabel>On the origin of species. German</madsrdf:authoritativeLabel>
+    <bf:workTitle rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/7107063title6"/>
+    <bf:language rdf:resource="http://id.loc.gov/vocabulary/languages/ger"/>
+    <bf:translationOf rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/7107063work8"/>
+    <bf:creator rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/7107063person9"/>
+    <bf:contributor rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/7107063person10"/>
+    <bf:contributor rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/7107063organization11"/>
+    <bf:language rdf:resource="http://id.loc.gov/vocabulary/languages/ger"/>
+    <bf:language rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/7107063language13"/>
+    <bf:subject rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/7107063topic14"/>
+    <bf:subject rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/7107063topic15"/>
+    <bf:subject rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/7107063topic16"/>
+    <bf:subject rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/7107063topic17"/>
+    <bf:subject rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/7107063topic18"/>
+    <bf:subject rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/7107063topic19"/>
+    <bf:classificationLcc rdf:resource="http://id.loc.gov/authorities/classification/QH365"/>
+    <bf:derivedFrom rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/7107063.marcxml.xml"/>
+    <bf:authorizedAccessPoint xml:lang="x-bf-hash">carusjuliusvictor18231903williambprovinecollectiononevolutionandgeneticsdarwincharles18091882ontheoriginofspeciesgermangerworktext</bf:authorizedAccessPoint>
+  </bf:Work>
+  <bf:Work rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/7107063work8">
+    <bf:title>On the origin of species.</bf:title>
+    <madsrdf:authoritativeLabel>On the origin of species.</madsrdf:authoritativeLabel>
+    <bf:authorizedAccessPoint>On the origin of species.</bf:authorizedAccessPoint>
+    <bf:creator rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/7107063agent13"/>
+  </bf:Work>
+  <bf:Instance rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/7107063instance24">
+    <rdf:type rdf:resource="http://bibframe.org/vocab/Monograph"/>
+    <bf:instanceTitle rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/7107063title27"/>
+    <bf:title xml:lang="x-bf-sort">Entstehung der Arten durch natürliche Zuchtwahl, oder, Die Erhaltung der begünstigten Rassen im Kampfe ums Dasein</bf:title>
+    <bf:titleVariation rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/7107063title29"/>
+    <bf:publication>
+      <bf:Provider>
+        <bf:providerName>
+          <bf:Organization>
+            <bf:label>A. Kröner</bf:label>
+          </bf:Organization>
+        </bf:providerName>
+        <bf:providerPlace>
+          <bf:Place>
+            <bf:label>Stuttgart </bf:label>
+          </bf:Place>
+        </bf:providerPlace>
+        <bf:providerDate>[1906]</bf:providerDate>
+      </bf:Provider>
+    </bf:publication>
+    <bf:modeOfIssuance>single unit</bf:modeOfIssuance>
+    <bf:extent>iv, 297 p. ;</bf:extent>
+    <bf:dimensions>23 cm.</bf:dimensions>
+    <bf:titleStatement>Die Entstehung der Arten durch natürliche Zuchtwahl, oder, Die Erhaltung der begünstigten Rassen im Kampfe ums Dasein</bf:titleStatement>
+    <bf:edition>Volks-ausg.</bf:edition>
+    <bf:editionResponsibility>11.-15. tausend.</bf:editionResponsibility>
+    <bf:providerStatement>Stuttgart : A. Kröner 1906</bf:providerStatement>
+    <bf:immediateAcquisition>History of Science copy 1: From the library of Prof. William B. Provine.</bf:immediateAcquisition>
+    <bf:note>History of Science copy 1: Freeman, R. B.  Darwin (2nd ed.),</bf:note>
+    <bf:systemNumber rdf:resource="http://www.worldcat.org/oclc/9655582"/>
+    <bf:systemNumber>
+      <bf:Identifier>
+        <bf:identifierValue>7107063</bf:identifierValue>
+        <bf:identifierScheme rdf:resource="http://id.loc.gov/vocabulary/identifiers/systemNumber"/>
+      </bf:Identifier>
+    </bf:systemNumber>
+    <bf:derivedFrom rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/7107063.marcxml.xml"/>
+    <bf:instanceOf rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/7107063"/>
+  </bf:Instance>
+  <bf:Annotation rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/7107063annotation23">
+    <bf:derivedFrom rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/7107063.marcxml.xml"/>
+    <bf:descriptionSource rdf:resource="http://id.loc.gov/vocabulary/organizations/nic"/>
+    <bf:descriptionConventions rdf:resource="http://id.loc.gov/vocabulary/descriptionConventions/aacr2"/>
+    <bf:generationProcess>DLC transform-tool:2015-04-27-T11:00:00</bf:generationProcess>
+    <bf:changeDate>2015-01-02T02:59</bf:changeDate>
+    <bf:annotates rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/7107063"/>
+  </bf:Annotation>
+  <bf:HeldItem rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/7107063helditem44">
+    <bf:label>QH365 .O213 1906</bf:label>
+    <bf:shelfMarkLcc>QH365 .O213 1906</bf:shelfMarkLcc>
+    <bf:holdingFor rdf:resource="http://ld4l.library.cornell.edu/ld4l-vitro/individual/7107063instance24"/>
+  </bf:HeldItem>
+  <bf:Title rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/7107063title6">
+    <bf:titleValue>On the origin of species.</bf:titleValue>
+  </bf:Title>
+  <bf:Agent rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/7107063agent13">
+    <bf:label>Darwin, Charles,</bf:label>
+  </bf:Agent>
+  <bf:Person rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/7107063person9">
+    <bf:label>Darwin, Charles, 1809-1882.</bf:label>
+    <bf:authorizedAccessPoint>Darwin, Charles, 1809-1882.</bf:authorizedAccessPoint>
+    <bf:hasAuthority>
+      <madsrdf:Authority>
+        <madsrdf:authoritativeLabel>Darwin, Charles, 1809-1882.</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </bf:hasAuthority>
+  </bf:Person>
+  <bf:Person rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/7107063person10">
+    <bf:label>Carus, Julius Victor, 1823-1903</bf:label>
+    <bf:authorizedAccessPoint>Carus, Julius Victor, 1823-1903</bf:authorizedAccessPoint>
+    <bf:hasAuthority>
+      <madsrdf:Authority>
+        <madsrdf:authoritativeLabel>Carus, Julius Victor, 1823-1903</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </bf:hasAuthority>
+  </bf:Person>
+  <bf:Organization rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/7107063organization11">
+    <bf:label>William B. Provine Collection on Evolution and Genetics.</bf:label>
+    <bf:authorizedAccessPoint>William B. Provine Collection on Evolution and Genetics.</bf:authorizedAccessPoint>
+    <bf:hasAuthority>
+      <madsrdf:Authority>
+        <madsrdf:authoritativeLabel>William B. Provine Collection on Evolution and Genetics.</madsrdf:authoritativeLabel>
+      </madsrdf:Authority>
+    </bf:hasAuthority>
+  </bf:Organization>
+  <bf:Language rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/7107063language13">
+    <bf:resourcePart>original</bf:resourcePart>
+    <bf:languageOfPartUri rdf:resource="http://id.loc.gov/vocabulary/languages/eng"/>
+  </bf:Language>
+  <bf:Topic rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/7107063topic14">
+    <bf:authorizedAccessPoint>Evolution</bf:authorizedAccessPoint>
+    <bf:label>Evolution</bf:label>
+    <bf:hasAuthority>
+      <madsrdf:Authority>
+        <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Topic"/>
+        <madsrdf:authoritativeLabel>Evolution</madsrdf:authoritativeLabel>
+        <madsrdf:isMemberOfMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+      </madsrdf:Authority>
+    </bf:hasAuthority>
+  </bf:Topic>
+  <bf:Topic rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/7107063topic15">
+    <bf:authorizedAccessPoint>Evolution (Biology)</bf:authorizedAccessPoint>
+    <bf:label>Evolution (Biology)</bf:label>
+    <bf:hasAuthority>
+      <madsrdf:Authority>
+        <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Topic"/>
+        <madsrdf:authoritativeLabel>Evolution (Biology)</madsrdf:authoritativeLabel>
+        <madsrdf:isMemberOfMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+      </madsrdf:Authority>
+    </bf:hasAuthority>
+  </bf:Topic>
+  <bf:Topic rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/7107063topic16">
+    <bf:authorizedAccessPoint>Natural selection</bf:authorizedAccessPoint>
+    <bf:label>Natural selection</bf:label>
+    <bf:hasAuthority>
+      <madsrdf:Authority>
+        <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Topic"/>
+        <madsrdf:authoritativeLabel>Natural selection</madsrdf:authoritativeLabel>
+        <madsrdf:isMemberOfMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+      </madsrdf:Authority>
+    </bf:hasAuthority>
+  </bf:Topic>
+  <bf:Topic rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/7107063topic17">
+    <bf:authorizedAccessPoint>Evolution</bf:authorizedAccessPoint>
+    <bf:label>Evolution</bf:label>
+    <bf:hasAuthority>
+      <madsrdf:Authority>
+        <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Topic"/>
+        <madsrdf:authoritativeLabel>Evolution</madsrdf:authoritativeLabel>
+        <madsrdf:isMemberOfMADSScheme rdf:resource="http://id.loc.gov/vocabulary/subjectSchemes/fast"/>
+      </madsrdf:Authority>
+    </bf:hasAuthority>
+    <bf:authoritySource>http://id.loc.gov/vocabulary/subjectSchemes/fast</bf:authoritySource>
+    <bf:systemNumber>
+      <bf:Identifier>
+        <bf:identifierValue>(OCoLC)fst00917265</bf:identifierValue>
+      </bf:Identifier>
+    </bf:systemNumber>
+  </bf:Topic>
+  <bf:Topic rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/7107063topic18">
+    <bf:authorizedAccessPoint>Evolution (Biology)</bf:authorizedAccessPoint>
+    <bf:label>Evolution (Biology)</bf:label>
+    <bf:hasAuthority>
+      <madsrdf:Authority>
+        <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Topic"/>
+        <madsrdf:authoritativeLabel>Evolution (Biology)</madsrdf:authoritativeLabel>
+        <madsrdf:isMemberOfMADSScheme rdf:resource="http://id.loc.gov/vocabulary/subjectSchemes/fast"/>
+      </madsrdf:Authority>
+    </bf:hasAuthority>
+    <bf:authoritySource>http://id.loc.gov/vocabulary/subjectSchemes/fast</bf:authoritySource>
+    <bf:systemNumber>
+      <bf:Identifier>
+        <bf:identifierValue>(OCoLC)fst00917302</bf:identifierValue>
+      </bf:Identifier>
+    </bf:systemNumber>
+  </bf:Topic>
+  <bf:Topic rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/7107063topic19">
+    <bf:authorizedAccessPoint>Natural selection</bf:authorizedAccessPoint>
+    <bf:label>Natural selection</bf:label>
+    <bf:hasAuthority>
+      <madsrdf:Authority>
+        <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Topic"/>
+        <madsrdf:authoritativeLabel>Natural selection</madsrdf:authoritativeLabel>
+        <madsrdf:isMemberOfMADSScheme rdf:resource="http://id.loc.gov/vocabulary/subjectSchemes/fast"/>
+      </madsrdf:Authority>
+    </bf:hasAuthority>
+    <bf:authoritySource>http://id.loc.gov/vocabulary/subjectSchemes/fast</bf:authoritySource>
+    <bf:systemNumber>
+      <bf:Identifier>
+        <bf:identifierValue>(OCoLC)fst01034520</bf:identifierValue>
+      </bf:Identifier>
+    </bf:systemNumber>
+  </bf:Topic>
+  <bf:Title rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/7107063title27">
+    <bf:titleValue>Die Entstehung der Arten durch natürliche Zuchtwahl, oder, Die Erhaltung der begünstigten Rassen im Kampfe ums Dasein</bf:titleValue>
+  </bf:Title>
+  <bf:Title rdf:about="http://ld4l.library.cornell.edu/ld4l-vitro/individual/7107063title29">
+    <bf:titleType>portion</bf:titleType>
+    <bf:titleValue>Erhaltung der begünstigten Rassen im Kampfe ums Dasein</bf:titleValue>
+  </bf:Title>
+</rdf:RDF>
