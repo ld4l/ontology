@@ -1,4 +1,26 @@
-ontology
-========
+This bibliographic ontology is based on Rob Sanderson's and LD4L's 
+recommended changes to BIBFRAME to better reflect best practices in the Linked 
+Data domain. It is LD4L’s hope that derivations from BIBFRAME found in this 
+ontology will be folded into the official BIBFRAME namespace. Efforts have been 
+made to consider each class and property, but this ontology is largely untested. 
+LD4L may provide revised/expanded versions in future as we identify new use 
+cases and begin to test the ontology with instance data. The proposed changes 
+include, but are not limited to, the following conventions:
 
-This repository is for working drafts of LD4L ontology.  Typical practice will be to check in the OWL files of existing ontologies and remove unwanted classes and properties to follow the minimum information to reference an external ontology term (MIREOT) practice described at http://obi-ontology.org/page/MIREOT. These reduced files can either then become imports to an LD4L master OWL file or be included within it, depending on size and complexity.  Should we wish to import an ontology entirety, that is also an option.
+* Reuse stable pre-existing classes and properties from external ontologies 
+rather than declaring new ones within the BIBFRAME namespace.
+
+* Use URIs rather than strings to identify resources.
+
+* Replace the bf:Authority classes with Real World Entity classes for people, 
+places, things, etc. 
+
+* Define only one pattern to model one feature of the knowledge domain.
+
+* Clarify the directionality of properties via naming, definitions, and, where 
+applicable, domain and range constraints, and add inverse properties where 
+appropriate. 
+
+* Name terms consistently, and make the distinction between classes, object 
+properties, and datatype properties clear through standard naming conventions.
+
