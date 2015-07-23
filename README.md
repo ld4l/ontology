@@ -1,3 +1,5 @@
+# LD4L Proposed Bibframe Ontology
+
 This bibliographic ontology is based on Rob Sanderson's and LD4L's 
 recommended changes to BIBFRAME to better reflect best practices in the Linked 
 Data domain. It is LD4L’s hope that derivations from BIBFRAME found in this 
@@ -6,7 +8,6 @@ made to consider each class and property, but this ontology is largely untested.
 LD4L may provide revised/expanded versions in future as we identify new use 
 cases and begin to test the ontology with instance data. The proposed changes 
 include, but are not limited to, the following conventions:
-#LD4L Proposed Bibframe Ontology
 
 1. Reuse stable pre-existing classes and properties from external ontologies 
 rather than declaring new ones within the BIBFRAME namespace.
