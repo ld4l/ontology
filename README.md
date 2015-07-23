@@ -26,5 +26,5 @@ appropriate.
 6. Name terms consistently, and make the distinction between classes, object 
 properties, and datatype properties clear through standard naming conventions.
 
-Documentation of the ontology terms is provided in 
+Documentation of the ontology is provided in 
 documentation/LODE/bibframe.ld4l.lode.html.
