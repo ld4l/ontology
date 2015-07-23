@@ -7,7 +7,7 @@ ontology will be folded into the official BIBFRAME namespace. Efforts have been
 made to consider each class and property, but this ontology is largely untested. 
 LD4L may provide revised/expanded versions in future as we identify new use 
 cases and begin to test the ontology with instance data. The proposed changes 
-include, but are not limited to, the following conventions:
+include, but are not limited to, incorporation of the following conventions:
 
 1. Reuse stable pre-existing classes and properties from external ontologies 
 rather than declaring new ones within the BIBFRAME namespace.
