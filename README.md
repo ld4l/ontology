@@ -6,21 +6,22 @@ made to consider each class and property, but this ontology is largely untested.
 LD4L may provide revised/expanded versions in future as we identify new use 
 cases and begin to test the ontology with instance data. The proposed changes 
 include, but are not limited to, the following conventions:
+#LD4L Proposed Bibframe Ontology
 
-* Reuse stable pre-existing classes and properties from external ontologies 
+1. Reuse stable pre-existing classes and properties from external ontologies 
 rather than declaring new ones within the BIBFRAME namespace.
 
-* Use URIs rather than strings to identify resources.
+2. Use URIs rather than strings to identify resources.
 
-* Replace the bf:Authority classes with Real World Entity classes for people, 
+3. Replace the bf:Authority classes with Real World Entity classes for people, 
 places, things, etc. 
 
-* Define only one pattern to model one feature of the knowledge domain.
+4. Define only one pattern to model one feature of the knowledge domain.
 
-* Clarify the directionality of properties via naming, definitions, and, where 
+5. Clarify the directionality of properties via naming, definitions, and, where 
 applicable, domain and range constraints, and add inverse properties where 
 appropriate. 
 
-* Name terms consistently, and make the distinction between classes, object 
+6. Name terms consistently, and make the distinction between classes, object 
 properties, and datatype properties clear through standard naming conventions.
 
