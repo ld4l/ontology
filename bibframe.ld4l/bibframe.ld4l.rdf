@@ -334,11 +334,11 @@
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&skos;member"/>
+                        <owl:onProperty rdf:resource="&dcterms;hasPart"/>
                         <owl:allValuesFrom rdf:resource="http://bibframe.ld4l.org/ontology/Work"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&skos;member"/>
+                        <owl:onProperty rdf:resource="&dcterms;hasPart"/>
                         <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:minCardinality>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -1006,11 +1006,11 @@
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&skos;member"/>
+                        <owl:onProperty rdf:resource="&dcterms;hasPart"/>
                         <owl:allValuesFrom rdf:resource="http://bibframe.ld4l.org/ontology/Work"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&skos;member"/>
+                        <owl:onProperty rdf:resource="&dcterms;hasPart"/>
                         <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:minCardinality>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -1058,11 +1058,11 @@
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&skos;member"/>
+                        <owl:onProperty rdf:resource="&dcterms;hasPart"/>
                         <owl:allValuesFrom rdf:resource="http://bibframe.ld4l.org/ontology/Work"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&skos;member"/>
+                        <owl:onProperty rdf:resource="&dcterms;hasPart"/>
                         <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:minCardinality>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -1278,11 +1278,11 @@
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&skos;member"/>
+                        <owl:onProperty rdf:resource="&dcterms;hasPart"/>
                         <owl:allValuesFrom rdf:resource="http://bibframe.ld4l.org/ontology/Work"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&skos;member"/>
+                        <owl:onProperty rdf:resource="&dcterms;hasPart"/>
                         <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:minCardinality>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -1497,17 +1497,6 @@
         <rdfs:label xml:lang="en-us">in scheme</rdfs:label>
         <rdfs:comment xml:lang="en-us">Relates a resource (for example a concept) to a concept scheme in which it is included.</rdfs:comment>
     </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.w3.org/2004/02/skos/core#member -->
-
-    <owl:ObjectProperty rdf:about="&skos;member">
-        <rdfs:label xml:lang="en-us">member</rdfs:label>
-        <rdfs:comment xml:lang="en-us">Relates a collection to one of its members.</rdfs:comment>
-        <rdfs:domain rdf:resource="&skos;Collection"/>
-    </owl:ObjectProperty>
-    
 
 
     <!-- http://www.w3.org/ns/oa#annotatedBy -->
