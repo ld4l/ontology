@@ -3273,18 +3273,18 @@
 
     <owl:Class rdf:about="http://bibframe.ld4l.org/ontology/Work">
         <rdfs:label xml:lang="en-us">Work</rdfs:label>
-        <owl:equivalentClass>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://bibframe.ld4l.org/ontology/hasDerivative"/>
                 <owl:allValuesFrom rdf:resource="http://bibframe.ld4l.org/ontology/Work"/>
             </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://bibframe.ld4l.org/ontology/derivedFrom"/>
                 <owl:allValuesFrom rdf:resource="http://bibframe.ld4l.org/ontology/Work"/>
             </owl:Restriction>
-        </owl:equivalentClass>
+        </rdfs:subClassOf>
         <vs:term_status>stable</vs:term_status>
         <rdfs:comment xml:lang="en-us">Resource reflecting a conceptual essence of the cataloging resource.</rdfs:comment>
     </owl:Class>
