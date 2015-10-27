@@ -184,7 +184,28 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    <!-- http://www.loc.gov/mads/rdf/v1#identifiesRWO -->
     
+    <owl:ObjectProperty rdf:about="http://www.loc.gov/mads/rdf/v1#identifiesRWO">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Associates a madsrdf:Authority with the Real World Object that is the subject of the authority's label.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">identifies RWO</rdfs:label>
+        <rdfs:range rdf:resource="http://www.loc.gov/mads/rdf/v1#RWO"/>
+        <owl:inverseOf rdf:resource="http://www.loc.gov/mads/rdf/v1#isIdentifiedByAuthority"/>
+    </owl:ObjectProperty>
+ 
+ 
+ 
+    <!-- http://www.loc.gov/mads/rdf/v1#isIdentifiedByAuthority -->
+    
+    <owl:ObjectProperty rdf:about="http://www.loc.gov/mads/rdf/v1#isIdentifiedByAuthority">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Associates a Real World Object with its Authority description.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.loc.gov/mads/rdf/v1#RWO"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is identified by authority</rdfs:label>
+        <rdfs:range rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+        <owl:inverseOf rdf:resource="http://www.loc.gov/mads/rdf/v1#identifiesRWO"/>
+    </owl:ObjectProperty>
+
 
 
     <!-- http://bibframe.ld4l.org/ontology/absorbedBy -->
