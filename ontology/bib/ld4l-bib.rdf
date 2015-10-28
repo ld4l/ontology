@@ -9,7 +9,7 @@
     <!ENTITY vann "http://purl.org/vocab/vann/" >
     <!ENTITY fabio "http://purl.org/spar/fabio/" >
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
-    <!ENTITY vocab "http://bib.ld4l.org/ontology/#" >
+    <!ENTITY vocab "http://ld4l.org/ontology/bib/#" >
     <!ENTITY madsrdf "http://www.loc.gov/mads/rdf/v1#" >
     <!ENTITY cnt "http://www.w3.org/2011/content#" >
     <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
@@ -24,8 +24,8 @@
 ]>
 
 
-<rdf:RDF xmlns="http://bib.ld4l.org/ontology/"
-     xml:base="http://bib.ld4l.org/ontology/"
+<rdf:RDF xmlns="http://ld4l.org/ontology/bib/"
+     xml:base="http://ld4l.org/ontology/bib/"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
@@ -42,10 +42,10 @@
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:vocab="http://bib.ld4l.org/ontology/#"
+     xmlns:vocab="http://ld4l.org/ontology/bib/#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:vivo="http://vivoweb.org/ontology/core#">
-    <owl:Ontology rdf:about="http://bib.ld4l.org/ontology/">
+    <owl:Ontology rdf:about="http://ld4l.org/ontology/bib/">
         <rdfs:label xml:lang="en-us">LD4L Proposed Bibframe Ontology</rdfs:label>
         <dcterms:modified>2015-07-23</dcterms:modified>
         <dcterms:issued>2015-07-23</dcterms:issued>
@@ -67,7 +67,7 @@
     
 
 
-    <!-- http://bib.ld4l.org/ontology/#note -->
+    <!-- http://ld4l.org/ontology/bib/#note -->
 
     <owl:AnnotationProperty rdf:about="&vocab;note"/>
     
@@ -170,9 +170,9 @@
     
 
 
-    <!-- http://bib.ld4l.org/ontology/&amp;xsd;boolean -->
+    <!-- http://ld4l.org/ontology/bib/&amp;xsd;boolean -->
 
-    <rdfs:Datatype rdf:about="http://bib.ld4l.org/ontology/&amp;xsd;boolean"/>
+    <rdfs:Datatype rdf:about="http://ld4l.org/ontology/bib/&amp;xsd;boolean"/>
     
 
 
@@ -208,32 +208,32 @@
 
 
 
-    <!-- http://bib.ld4l.org/ontology/absorbedBy -->
+    <!-- http://ld4l.org/ontology/bib/absorbedBy -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/absorbedBy">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/absorbedBy">
         <rdfs:label xml:lang="en-us">absorbed by</rdfs:label>
         <rdfs:comment xml:lang="en-us">This Work has been incorporated into another Work.</rdfs:comment>
-        <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Work"/>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Work"/>
-        <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/precedes"/>
+        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/Work"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Work"/>
+        <rdfs:subPropertyOf rdf:resource="http://ld4l.org/ontology/bib/precedes"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/accompaniedBy -->
+    <!-- http://ld4l.org/ontology/bib/accompaniedBy -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/accompaniedBy">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/accompaniedBy">
         <rdfs:label xml:lang="en-us">accompanied by</rdfs:label>
         <skos:example xml:lang="en-us">An encyclopedia is accompanied by an index in a separate volume.</skos:example>
         <rdfs:comment xml:lang="en-us">This resource is accompanied by another resource that adds to it.</rdfs:comment>
-        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/accompanies"/>
+        <owl:inverseOf rdf:resource="http://ld4l.org/ontology/bib/accompanies"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/accompanies -->
+    <!-- http://ld4l.org/ontology/bib/accompanies -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/accompanies">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/accompanies">
         <rdfs:label xml:lang="en-us">accompanies</rdfs:label>
         <skos:example xml:lang="en-us">An index in a separate volume accompanies an encyclopedia.</skos:example>
         <rdfs:comment xml:lang="en-us">This resource adds to or is issued with another resource.</rdfs:comment>
@@ -241,67 +241,67 @@
     
 
 
-    <!-- http://bib.ld4l.org/ontology/classifiedAs -->
+    <!-- http://ld4l.org/ontology/bib/classifiedAs -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/classifiedAs">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/classifiedAs">
         <rdfs:label xml:lang="en-us">classified as</rdfs:label>
         <rdfs:comment xml:lang="en-us">Classification of this resource in some scheme.</rdfs:comment>
         <skos:scopeNote xml:lang="en-us">The skos:Concept that is the object of this property would be part of a skos:ConceptScheme.</skos:scopeNote>
-        <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Classification"/>
-        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/isClassificationFor"/>
+        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/Classification"/>
+        <owl:inverseOf rdf:resource="http://ld4l.org/ontology/bib/isClassificationFor"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/continuedUnderNewTitleBy -->
+    <!-- http://ld4l.org/ontology/bib/continuedUnderNewTitleBy -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/continuedUnderNewTitleBy">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/continuedUnderNewTitleBy">
         <rdfs:label xml:lang="en-us">continued under new title by</rdfs:label>
         <rdfs:comment xml:lang="en-us">The content of this Work is continued by a later work under a new title.</rdfs:comment>
-        <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Work"/>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Work"/>
-        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/continuesUnderNewTitle"/>
-        <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/precedes"/>
+        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/Work"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Work"/>
+        <owl:inverseOf rdf:resource="http://ld4l.org/ontology/bib/continuesUnderNewTitle"/>
+        <rdfs:subPropertyOf rdf:resource="http://ld4l.org/ontology/bib/precedes"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/continuesUnderNewTitle -->
+    <!-- http://ld4l.org/ontology/bib/continuesUnderNewTitle -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/continuesUnderNewTitle">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/continuesUnderNewTitle">
         <rdfs:label xml:lang="en-us">continues under new title</rdfs:label>
         <rdfs:comment xml:lang="en-us">This Work continues the content of an earlier Work under a new title.</rdfs:comment>
-        <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Work"/>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Work"/>
-        <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/succeeds"/>
+        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/Work"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Work"/>
+        <rdfs:subPropertyOf rdf:resource="http://ld4l.org/ontology/bib/succeeds"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/createdForDegree -->
+    <!-- http://ld4l.org/ontology/bib/createdForDegree -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/createdForDegree">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/createdForDegree">
         <rdfs:label xml:lang="en-us">dissertation degree</rdfs:label>
         <rdfs:comment xml:lang="en-us">This work was created in partial fulfillment of the requirements of the specified degree.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Work"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Work"/>
         <rdfs:range rdf:resource="&vivo;AcademicDegree"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/derivedFrom -->
+    <!-- http://ld4l.org/ontology/bib/derivedFrom -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/derivedFrom">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/derivedFrom">
         <rdfs:label xml:lang="en-us">derived from</rdfs:label>
         <skos:example xml:lang="en-us">A translated Title is derived from an original Title. A translated Work is derived from an original Work.</skos:example>
         <rdfs:comment xml:lang="en-us">This resource was derived from another resource.</rdfs:comment>
         <skos:scopeNote xml:lang="en-us">Titles can be derived from other Titles, and Works can be derived from other Works. Property restrictions on Work and Title prevent linking subjects and objects of different types.</skos:scopeNote>
-        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/hasDerivative"/>
-        <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/succeeds"/>
+        <owl:inverseOf rdf:resource="http://ld4l.org/ontology/bib/hasDerivative"/>
+        <rdfs:subPropertyOf rdf:resource="http://ld4l.org/ontology/bib/succeeds"/>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://bib.ld4l.org/ontology/Work"/>
+                    <rdf:Description rdf:about="http://ld4l.org/ontology/bib/Work"/>
                     <rdf:Description rdf:about="&madsrdf;Title"/>
                 </owl:unionOf>
             </owl:Class>
@@ -309,7 +309,7 @@
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://bib.ld4l.org/ontology/Work"/>
+                    <rdf:Description rdf:about="http://ld4l.org/ontology/bib/Work"/>
                     <rdf:Description rdf:about="&madsrdf;Title"/>
                 </owl:unionOf>
             </owl:Class>
@@ -318,45 +318,45 @@
     
 
 
-    <!-- http://bib.ld4l.org/ontology/distributedBy -->
+    <!-- http://ld4l.org/ontology/bib/distributedBy -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/distributedBy">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/distributedBy">
         <rdfs:label xml:lang="en-us">distributed by</rdfs:label>
         <skos:scopeNote xml:lang="en-us">The distribution Activity is related to an Agent that performed or performs the distribution via prov:wasAssociatedWith.</skos:scopeNote>
         <rdfs:comment xml:lang="en-us">This Instance was or is distributed by the specified Activity.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
-        <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/providedBy"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Instance"/>
+        <rdfs:subPropertyOf rdf:resource="http://ld4l.org/ontology/bib/providedBy"/>
         <rdfs:range rdf:resource="&prov;Activity"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/equivalentTo -->
+    <!-- http://ld4l.org/ontology/bib/equivalentTo -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/equivalentTo">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/equivalentTo">
         <rdf:type rdf:resource="&owl;SymmetricProperty"/>
         <rdfs:label xml:lang="en-us">equivalent to</rdfs:label>
         <rdfs:comment xml:lang="en-us">This Instance embodies the same expression of a work as the specified Instance.</rdfs:comment>
-        <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
+        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/Instance"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Instance"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/formedBySplitting -->
+    <!-- http://ld4l.org/ontology/bib/formedBySplitting -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/formedBySplitting">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/formedBySplitting">
         <rdfs:label xml:lang="en-us">formed by splitting</rdfs:label>
         <rdfs:comment xml:lang="en-us">The subject works were formed by splitting another work.</rdfs:comment>
-        <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Work"/>
-        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/splitInto"/>
-        <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/succeeds"/>
+        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/Work"/>
+        <owl:inverseOf rdf:resource="http://ld4l.org/ontology/bib/splitInto"/>
+        <rdfs:subPropertyOf rdf:resource="http://ld4l.org/ontology/bib/succeeds"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&dcterms;hasPart"/>
-                        <owl:allValuesFrom rdf:resource="http://bib.ld4l.org/ontology/Work"/>
+                        <owl:allValuesFrom rdf:resource="http://ld4l.org/ontology/bib/Work"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&dcterms;hasPart"/>
@@ -369,58 +369,58 @@
     
 
 
-    <!-- http://bib.ld4l.org/ontology/governedBy -->
+    <!-- http://ld4l.org/ontology/bib/governedBy -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/governedBy">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/governedBy">
         <rdfs:label xml:lang="en-us">governed by</rdfs:label>
         <rdfs:comment xml:lang="en-us">This Item is governed by the specified PolicySet.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Item"/>
-        <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/PolicySet"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Item"/>
+        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/PolicySet"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/governs -->
+    <!-- http://ld4l.org/ontology/bib/governs -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/governs">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/governs">
         <rdfs:label xml:lang="en-us">governeds</rdfs:label>
         <rdfs:comment xml:lang="en-us">This PolicySet governs the Item.</rdfs:comment>
-        <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Item"/>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/PolicySet"/>
-        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/governedBy"/>
+        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/Item"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/PolicySet"/>
+        <owl:inverseOf rdf:resource="http://ld4l.org/ontology/bib/governedBy"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/hasAbsorbed -->
+    <!-- http://ld4l.org/ontology/bib/hasAbsorbed -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/hasAbsorbed">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/hasAbsorbed">
         <rdfs:label xml:lang="en-us">has absorbed</rdfs:label>
         <rdfs:comment xml:lang="en-us">This Work has absorbed or incorporated another Work.</rdfs:comment>
-        <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Work"/>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Work"/>
-        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/absorbedBy"/>
-        <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/succeeds"/>
+        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/Work"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Work"/>
+        <owl:inverseOf rdf:resource="http://ld4l.org/ontology/bib/absorbedBy"/>
+        <rdfs:subPropertyOf rdf:resource="http://ld4l.org/ontology/bib/succeeds"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/hasAccessPolicy -->
+    <!-- http://ld4l.org/ontology/bib/hasAccessPolicy -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/hasAccessPolicy">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/hasAccessPolicy">
         <rdfs:label xml:lang="en-us">has access policy</rdfs:label>
         <skos:scopeNote>Items (holdings) are related to this PolicySet via ld4l:governedBy.</skos:scopeNote>
         <rdfs:comment xml:lang="en-us">Policy statement belonging to this PolicySet specifying allowances and restrictions on access to the related holdings.</rdfs:comment>
-        <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Policy"/>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/PolicySet"/>
-        <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/hasPolicy"/>
+        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/Policy"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/PolicySet"/>
+        <rdfs:subPropertyOf rdf:resource="http://ld4l.org/ontology/bib/hasPolicy"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/hasAnnotation -->
+    <!-- http://ld4l.org/ontology/bib/hasAnnotation -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/hasAnnotation">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/hasAnnotation">
         <rdfs:label xml:lang="en-us">has annotation</rdfs:label>
         <rdfs:comment xml:lang="en-us">Annotation of this resource.</rdfs:comment>
         <rdfs:range rdf:resource="&oa;Annotation"/>
@@ -428,51 +428,51 @@
     
 
 
-    <!-- http://bib.ld4l.org/ontology/hasCirculationStatus -->
+    <!-- http://ld4l.org/ontology/bib/hasCirculationStatus -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/hasCirculationStatus">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/hasCirculationStatus">
         <rdfs:label xml:lang="en-us">has circulation status</rdfs:label>
         <skos:editorialNote xml:lang="en-us">Might be a FunctionalProperty, but possibly we want to track circulation status over time.</skos:editorialNote>
         <rdfs:comment xml:lang="en-us">The circulation status of this item.</rdfs:comment>
-        <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/CirculationStatus"/>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Item"/>
-        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/isCirculationStatusFor"/>
+        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/CirculationStatus"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Item"/>
+        <owl:inverseOf rdf:resource="http://ld4l.org/ontology/bib/isCirculationStatusFor"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/hasCoverArt -->
+    <!-- http://ld4l.org/ontology/bib/hasCoverArt -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/hasCoverArt">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/hasCoverArt">
         <rdfs:label xml:lang="en-us">has cover art</rdfs:label>
         <rdfs:comment xml:lang="en-us">Cover art for this Instance.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Instance"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/hasDataSource -->
+    <!-- http://ld4l.org/ontology/bib/hasDataSource -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/hasDataSource">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/hasDataSource">
         <rdfs:label xml:lang="en-us">has data source</rdfs:label>
         <rdfs:comment xml:lang="en-us">Work that is a data source for this resource. It may contain information about other files, printed sources, or collection procedures.</rdfs:comment>
-        <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Work"/>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Work"/>
+        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/Work"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Work"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/hasDerivative -->
+    <!-- http://ld4l.org/ontology/bib/hasDerivative -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/hasDerivative">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/hasDerivative">
         <rdfs:label xml:lang="en-us">has derivative</rdfs:label>
         <skos:scopeNote xml:lang="en-us">The domain and range restrictions ensure that a Work is related to a Work and a Title to a Title.</skos:scopeNote>
         <rdfs:comment xml:lang="en-us">Work or Title that is derived from this Work or Title.</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/precedes"/>
+        <rdfs:subPropertyOf rdf:resource="http://ld4l.org/ontology/bib/precedes"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://bib.ld4l.org/ontology/Work"/>
+                    <rdf:Description rdf:about="http://ld4l.org/ontology/bib/Work"/>
                     <rdf:Description rdf:about="&madsrdf;Title"/>
                 </owl:unionOf>
             </owl:Class>
@@ -480,7 +480,7 @@
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://bib.ld4l.org/ontology/Work"/>
+                    <rdf:Description rdf:about="http://ld4l.org/ontology/bib/Work"/>
                     <rdf:Description rdf:about="&madsrdf;Title"/>
                 </owl:unionOf>
             </owl:Class>
@@ -489,48 +489,48 @@
     
 
 
-    <!-- http://bib.ld4l.org/ontology/hasExpression -->
+    <!-- http://ld4l.org/ontology/bib/hasExpression -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/hasExpression">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/hasExpression">
         <rdfs:label xml:lang="en-us">has expression</rdfs:label>
         <rdfs:comment xml:lang="en-us">This Work has a related expression. For use to connect Works under FRBR/RDA rules.</rdfs:comment>
-        <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Work"/>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Work"/>
-        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/isExpressionOf"/>
-        <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/precedes"/>
+        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/Work"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Work"/>
+        <owl:inverseOf rdf:resource="http://ld4l.org/ontology/bib/isExpressionOf"/>
+        <rdfs:subPropertyOf rdf:resource="http://ld4l.org/ontology/bib/precedes"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/hasFindingAid -->
+    <!-- http://ld4l.org/ontology/bib/hasFindingAid -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/hasFindingAid">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/hasFindingAid">
         <rdfs:label xml:lang="en-us">has finding aid</rdfs:label>
         <rdfs:comment xml:lang="en-us">This Work has a finding aid or similar control material for archival, visual, and manuscript resources.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Work"/>
-        <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Work"/>
-        <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/accompaniedBy"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Work"/>
+        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/Work"/>
+        <rdfs:subPropertyOf rdf:resource="http://ld4l.org/ontology/bib/accompaniedBy"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/hasFirst -->
+    <!-- http://ld4l.org/ontology/bib/hasFirst -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/hasFirst">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/hasFirst">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:label xml:lang="en-us">has first</rdfs:label>
         <rdfs:comment xml:lang="en-us">First part (issue, volume, etc.) of this Serial.</rdfs:comment>
         <skos:scopeNote>Used to determine the run of Serial, which by nature is ongoing.</skos:scopeNote>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Serial"/>
-        <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Work"/>
-        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/isFirstOf"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Serial"/>
+        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/Work"/>
+        <owl:inverseOf rdf:resource="http://ld4l.org/ontology/bib/isFirstOf"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/hasGenre -->
+    <!-- http://ld4l.org/ontology/bib/hasGenre -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/hasGenre">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/hasGenre">
         <rdfs:label xml:lang="en-us">has genre</rdfs:label>
         <rdfs:comment xml:lang="en-us">Genre of this resource.</rdfs:comment>
         <rdfs:range rdf:resource="&skos;Concept"/>
@@ -538,58 +538,58 @@
     
 
 
-    <!-- http://bib.ld4l.org/ontology/hasHolding -->
+    <!-- http://ld4l.org/ontology/bib/hasHolding -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/hasHolding">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/hasHolding">
         <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
         <rdfs:label xml:lang="en-us">has holding</rdfs:label>
         <rdfs:comment xml:lang="en-us">Holding reported for this Instance.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
-        <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Item"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Instance"/>
+        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/Item"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/hasInstance -->
+    <!-- http://ld4l.org/ontology/bib/hasInstance -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/hasInstance">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/hasInstance">
         <rdfs:label xml:lang="en-us">has instance</rdfs:label>
         <rdfs:comment xml:lang="en-us">This Work has a related Instance/manifestation. For use to connect Works to Instances in the BIBFRAME structure.</rdfs:comment>
-        <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Work"/>
+        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/Instance"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Work"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/hasLast -->
+    <!-- http://ld4l.org/ontology/bib/hasLast -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/hasLast">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/hasLast">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:label xml:lang="en-us">has last</rdfs:label>
         <skos:scopeNote>Used to determine the run of a Serial, which by nature is ongoing.</skos:scopeNote>
         <rdfs:comment xml:lang="en-us">Last part (issue, volume, etc.) of this Serial.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Serial"/>
-        <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Work"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Serial"/>
+        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/Work"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/hasLendingPolicy -->
+    <!-- http://ld4l.org/ontology/bib/hasLendingPolicy -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/hasLendingPolicy">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/hasLendingPolicy">
         <rdfs:label xml:lang="en-us">has lending policy</rdfs:label>
         <skos:scopeNote>Items (holdings) are related to this PolicySet via ld4l:governedBy.</skos:scopeNote>
         <rdfs:comment xml:lang="en-us">Policy statement belonging to this PolicySet specifying whether and with what restrictions the related holdings may be lent.</rdfs:comment>
-        <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Policy"/>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/PolicySet"/>
-        <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/hasPolicy"/>
+        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/Policy"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/PolicySet"/>
+        <rdfs:subPropertyOf rdf:resource="http://ld4l.org/ontology/bib/hasPolicy"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/hasMusicKey -->
+    <!-- http://ld4l.org/ontology/bib/hasMusicKey -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/hasMusicKey">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/hasMusicKey">
         <rdfs:label xml:lang="en-us">music key</rdfs:label>
         <skos:editorialNote xml:lang="en-us">Need a vocabulary to enumerate music key individuals.</skos:editorialNote>
         <rdfs:comment xml:lang="en-us">Pitch and mode for this musical resource.</rdfs:comment>
@@ -597,9 +597,9 @@
     
 
 
-    <!-- http://bib.ld4l.org/ontology/hasMusicMedium -->
+    <!-- http://ld4l.org/ontology/bib/hasMusicMedium -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/hasMusicMedium">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/hasMusicMedium">
         <rdfs:label xml:lang="en-us">has music medium</rdfs:label>
         <skos:editorialNote>Need a vocabulary to enumerate music medium individuals.</skos:editorialNote>
         <rdfs:comment xml:lang="en-us">Instrumental, vocal, and/or other medium of performance for which this musical resource was originally conceived, written or performed.</rdfs:comment>
@@ -608,64 +608,64 @@
     
 
 
-    <!-- http://bib.ld4l.org/ontology/hasOriginPlace -->
+    <!-- http://ld4l.org/ontology/bib/hasOriginPlace -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/hasOriginPlace">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/hasOriginPlace">
         <rdfs:label xml:lang="en-us">has origin place</rdfs:label>
         <rdfs:comment xml:lang="en-us">Place from which the creation of this Work originated.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Work"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Work"/>
         <rdfs:range rdf:resource="&prov;Location"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/hasOriginalVersion -->
+    <!-- http://ld4l.org/ontology/bib/hasOriginalVersion -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/hasOriginalVersion">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/hasOriginalVersion">
         <rdfs:label xml:lang="en-us">has original version</rdfs:label>
         <rdfs:comment xml:lang="en-us">Instance is the original version of which this resource is a reproduction.</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/derivedFrom"/>
+        <rdfs:subPropertyOf rdf:resource="http://ld4l.org/ontology/bib/derivedFrom"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/hasOtherEdition -->
+    <!-- http://ld4l.org/ontology/bib/hasOtherEdition -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/hasOtherEdition">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/hasOtherEdition">
         <rdf:type rdf:resource="&owl;SymmetricProperty"/>
         <rdfs:label xml:lang="en-us">has other edition</rdfs:label>
         <rdfs:comment xml:lang="en-us">This Work has another available edition, for example a simultaneously published language edition or reprint.</rdfs:comment>
-        <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Work"/>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Work"/>
+        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/Work"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Work"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/hasPolicy -->
+    <!-- http://ld4l.org/ontology/bib/hasPolicy -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/hasPolicy">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/hasPolicy">
         <rdfs:label xml:lang="en-us">has policy</rdfs:label>
         <rdfs:comment xml:lang="en-us">Policy statement of unspecified type belonging to this PolicySet.</rdfs:comment>
-        <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Policy"/>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/PolicySet"/>
+        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/Policy"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/PolicySet"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/hasPreferredTitle -->
+    <!-- http://ld4l.org/ontology/bib/hasPreferredTitle -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/hasPreferredTitle">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/hasPreferredTitle">
         <rdfs:label xml:lang="en-us">has preferred title</rdfs:label>
         <rdfs:comment>The preferred Title of this resource.</rdfs:comment>
         <skos:scopeNote>A resource (Work or Instance) may have multiple directly linked Titles, among which this is the preferred Title.</skos:scopeNote>
-        <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/hasTitle"/>
-        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/isPreferredTitleOf"/>
+        <rdfs:subPropertyOf rdf:resource="http://ld4l.org/ontology/bib/hasTitle"/>
+        <owl:inverseOf rdf:resource="http://ld4l.org/ontology/bib/isPreferredTitleOf"/>
         <rdfs:range rdf:resource="&madsrdf;Title"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://bib.ld4l.org/ontology/Instance"/>
-                    <rdf:Description rdf:about="http://bib.ld4l.org/ontology/Work"/>
+                    <rdf:Description rdf:about="http://ld4l.org/ontology/bib/Instance"/>
+                    <rdf:Description rdf:about="http://ld4l.org/ontology/bib/Work"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -673,92 +673,92 @@
     
 
 
-    <!-- http://bib.ld4l.org/ontology/hasReceipt -->
+    <!-- http://ld4l.org/ontology/bib/hasReceipt -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/hasReceipt">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/hasReceipt">
         <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
         <rdfs:label xml:lang="en-us">has receipt</rdfs:label>
         <rdfs:comment xml:lang="en-us">An AwardReceipt for this Award.</rdfs:comment>
         <skos:scopeNote>This property links an Award node to a context node that is then linked to the award recipient. The use of the context node allows the receipt to have properties such as date, place, etc.</skos:scopeNote>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Award"/>
-        <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/AwardReceipt"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Award"/>
+        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/AwardReceipt"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/hasReproduction -->
+    <!-- http://ld4l.org/ontology/bib/hasReproduction -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/hasReproduction">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/hasReproduction">
         <rdfs:label xml:lang="en-us">has reproduction</rdfs:label>
         <rdfs:comment xml:lang="en-us">This Instance has a reproduction that embodies the same Work.</rdfs:comment>
-        <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
+        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/Instance"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Instance"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/hasReproductionPolicy -->
+    <!-- http://ld4l.org/ontology/bib/hasReproductionPolicy -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/hasReproductionPolicy">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/hasReproductionPolicy">
         <rdfs:label xml:lang="en-us">has reproduction policy</rdfs:label>
         <rdfs:comment xml:lang="en-us">Policy statement belonging to this PolicySet specifying whether reproductions of the related holdings may be made.</rdfs:comment>
-        <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Policy"/>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/PolicySet"/>
-        <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/hasPolicy"/>
+        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/Policy"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/PolicySet"/>
+        <rdfs:subPropertyOf rdf:resource="http://ld4l.org/ontology/bib/hasPolicy"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/hasRetentionPolicy -->
+    <!-- http://ld4l.org/ontology/bib/hasRetentionPolicy -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/hasRetentionPolicy">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/hasRetentionPolicy">
         <rdfs:label xml:lang="en-us">has retention policy</rdfs:label>
         <rdfs:comment xml:lang="en-us">Policy statement belonging to this PolicySet specifying how many and/or how long the related holdings may be retained.</rdfs:comment>
-        <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Policy"/>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/PolicySet"/>
-        <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/hasPolicy"/>
+        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/Policy"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/PolicySet"/>
+        <rdfs:subPropertyOf rdf:resource="http://ld4l.org/ontology/bib/hasPolicy"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/hasSourceStatus -->
+    <!-- http://ld4l.org/ontology/bib/hasSourceStatus -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/hasSourceStatus">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/hasSourceStatus">
         <rdfs:label>has source status</rdfs:label>
         <skos:scopeNote>Applies to Titles, but could apply to other resources as well.</skos:scopeNote>
         <rdfs:comment>The source status (either supplied or transcribed) of this resource.</rdfs:comment>
-        <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/SourceStatus"/>
-        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/isSourceStatusOf"/>
+        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/SourceStatus"/>
+        <owl:inverseOf rdf:resource="http://ld4l.org/ontology/bib/isSourceStatusOf"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/hasSupplement -->
+    <!-- http://ld4l.org/ontology/bib/hasSupplement -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/hasSupplement">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/hasSupplement">
         <rdfs:label xml:lang="en-us">has supplement</rdfs:label>
         <rdfs:comment xml:lang="en-us">Work that updates or otherwise complements this Work.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Work"/>
-        <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Work"/>
-        <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/accompaniedBy"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Work"/>
+        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/Work"/>
+        <rdfs:subPropertyOf rdf:resource="http://ld4l.org/ontology/bib/accompaniedBy"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/hasTableOfContents -->
+    <!-- http://ld4l.org/ontology/bib/hasTableOfContents -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/hasTableOfContents">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/hasTableOfContents">
         <rdfs:label xml:lang="en-us">has table of contents</rdfs:label>
         <rdfs:comment xml:lang="en-us">Table of contents of this Instance.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
-        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/isTableOfContentsFor"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Instance"/>
+        <owl:inverseOf rdf:resource="http://ld4l.org/ontology/bib/isTableOfContentsFor"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/hasTitle -->
+    <!-- http://ld4l.org/ontology/bib/hasTitle -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/hasTitle">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/hasTitle">
         <rdfs:label xml:lang="en-us">has title</rdfs:label>
         <skos:scopeNote>A Work, Instance, or Item can have a Title.</skos:scopeNote>
         <rdfs:comment xml:lang="en-us">Word, character, or group of words and/or characters that is a name given to this resource.</rdfs:comment>
@@ -766,9 +766,9 @@
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://bib.ld4l.org/ontology/Instance"/>
-                    <rdf:Description rdf:about="http://bib.ld4l.org/ontology/Item"/>
-                    <rdf:Description rdf:about="http://bib.ld4l.org/ontology/Work"/>
+                    <rdf:Description rdf:about="http://ld4l.org/ontology/bib/Instance"/>
+                    <rdf:Description rdf:about="http://ld4l.org/ontology/bib/Item"/>
+                    <rdf:Description rdf:about="http://ld4l.org/ontology/bib/Work"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -776,41 +776,41 @@
     
 
 
-    <!-- http://bib.ld4l.org/ontology/heldBy -->
+    <!-- http://ld4l.org/ontology/bib/heldBy -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/heldBy">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/heldBy">
         <rdfs:label xml:lang="en-us">held by</rdfs:label>
         <rdfs:comment xml:lang="en-us">Agent holding this Item or from which it is available.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Item"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Item"/>
         <rdfs:range rdf:resource="&foaf;Agent"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/identifiedBy -->
+    <!-- http://ld4l.org/ontology/bib/identifiedBy -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/identifiedBy">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/identifiedBy">
         <rdfs:label xml:lang="en-us">identified by</rdfs:label>
         <rdfs:comment xml:lang="en-us">Number or code that uniquely identifies this resource.</rdfs:comment>
-        <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Identifier"/>
-        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/identifies"/>
+        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/Identifier"/>
+        <owl:inverseOf rdf:resource="http://ld4l.org/ontology/bib/identifies"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/identifies -->
+    <!-- http://ld4l.org/ontology/bib/identifies -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/identifies">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/identifies">
         <rdfs:label xml:lang="en-us">identifies</rdfs:label>
         <rdfs:comment xml:lang="en-us">Resource identifed by this Identifier.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Identifier"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Identifier"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/isAnnotatorOf -->
+    <!-- http://ld4l.org/ontology/bib/isAnnotatorOf -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/isAnnotatorOf">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/isAnnotatorOf">
         <rdfs:label xml:lang="en-us">isAnnotator of</rdfs:label>
         <rdfs:comment xml:lang="en-us">This Agent is the author of the Annotation.</rdfs:comment>
         <rdfs:range rdf:resource="&oa;Annotation"/>
@@ -820,9 +820,9 @@
     
 
 
-    <!-- http://bib.ld4l.org/ontology/isBodyOf -->
+    <!-- http://ld4l.org/ontology/bib/isBodyOf -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/isBodyOf">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/isBodyOf">
         <rdfs:label xml:lang="en">is body of</rdfs:label>
         <rdfs:comment xml:lang="en">This resource is the body of an annotation.</rdfs:comment>
         <rdfs:range rdf:resource="&oa;Annotation"/>
@@ -830,115 +830,115 @@
     
 
 
-    <!-- http://bib.ld4l.org/ontology/isCirculationStatusFor -->
+    <!-- http://ld4l.org/ontology/bib/isCirculationStatusFor -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/isCirculationStatusFor">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/isCirculationStatusFor">
         <rdfs:label xml:lang="en">is circulation status for</rdfs:label>
         <rdfs:comment xml:lang="en">An item has this circulation status.</rdfs:comment>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/isClassificationFor -->
+    <!-- http://ld4l.org/ontology/bib/isClassificationFor -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/isClassificationFor">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/isClassificationFor">
         <rdfs:label xml:lang="en">is classification for</rdfs:label>
         <rdfs:comment xml:lang="en">This Classification pertains to the resource.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Classification"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Classification"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/isExpressionOf -->
+    <!-- http://ld4l.org/ontology/bib/isExpressionOf -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/isExpressionOf">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/isExpressionOf">
         <rdfs:label xml:lang="en-us">is expression of</rdfs:label>
         <rdfs:comment xml:lang="en-us">This Work is an expression of another Work. For use to connect Works under FRBR/RDA rules.</rdfs:comment>
-        <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Work"/>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Work"/>
-        <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/succeeds"/>
+        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/Work"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Work"/>
+        <rdfs:subPropertyOf rdf:resource="http://ld4l.org/ontology/bib/succeeds"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/isFindingAidFor -->
+    <!-- http://ld4l.org/ontology/bib/isFindingAidFor -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/isFindingAidFor">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/isFindingAidFor">
         <rdfs:label xml:lang="en-us">is finding aid for</rdfs:label>
         <rdfs:comment xml:lang="en-us">This Work is a finding aid or similar control material for archival, visual, and manuscript resources.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Work"/>
-        <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Work"/>
-        <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/accompanies"/>
-        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/hasFindingAid"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Work"/>
+        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/Work"/>
+        <rdfs:subPropertyOf rdf:resource="http://ld4l.org/ontology/bib/accompanies"/>
+        <owl:inverseOf rdf:resource="http://ld4l.org/ontology/bib/hasFindingAid"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/isFirstOf -->
+    <!-- http://ld4l.org/ontology/bib/isFirstOf -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/isFirstOf">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/isFirstOf">
         <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
         <rdfs:label xml:lang="en-us">is first of</rdfs:label>
         <skos:scopeNote>Used to determine the run of a Serial, which by nature are ongoing.</skos:scopeNote>
         <rdfs:comment xml:lang="en-us">This part (issue, volume, etc.) of a Serial is the first part.</rdfs:comment>
-        <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Serial"/>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Work"/>
+        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/Serial"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Work"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/isHoldingFor -->
+    <!-- http://ld4l.org/ontology/bib/isHoldingFor -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/isHoldingFor">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/isHoldingFor">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:label xml:lang="en-us">is holding for</rdfs:label>
         <rdfs:comment xml:lang="en-us">Instance for which this Item is a holding.</rdfs:comment>
-        <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Item"/>
-        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/hasHolding"/>
+        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/Instance"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Item"/>
+        <owl:inverseOf rdf:resource="http://ld4l.org/ontology/bib/hasHolding"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/isInstanceOf -->
+    <!-- http://ld4l.org/ontology/bib/isInstanceOf -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/isInstanceOf">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/isInstanceOf">
         <rdfs:label xml:lang="en-us">is instance of</rdfs:label>
         <rdfs:comment xml:lang="en-us">Work this Instance instantiates or manifests. For use to connect Instances to Works in the BIBFRAME structure.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
-        <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Work"/>
-        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/hasInstance"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Instance"/>
+        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/Work"/>
+        <owl:inverseOf rdf:resource="http://ld4l.org/ontology/bib/hasInstance"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/isLastOf -->
+    <!-- http://ld4l.org/ontology/bib/isLastOf -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/isLastOf">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/isLastOf">
         <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
         <rdfs:label xml:lang="en-us">is last of</rdfs:label>
         <skos:scopeNote>Used to determine the run of a Serial, which by nature is ongoing.</skos:scopeNote>
         <rdfs:comment xml:lang="en-us">This part (issue, volume, etc.) of a Serial is the last part.</rdfs:comment>
-        <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Serial"/>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Work"/>
-        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/hasLast"/>
+        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/Serial"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Work"/>
+        <owl:inverseOf rdf:resource="http://ld4l.org/ontology/bib/hasLast"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/isPreferredTitleOf -->
+    <!-- http://ld4l.org/ontology/bib/isPreferredTitleOf -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/isPreferredTitleOf">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/isPreferredTitleOf">
         <rdfs:label>is preferred title of</rdfs:label>
         <skos:scopeNote>A resource may have multiple directly-linked Titles, among which this is the preferred Title.</skos:scopeNote>
         <rdfs:comment>This Title is the preferred Title of the resource.</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/isTitleOf"/>
+        <rdfs:subPropertyOf rdf:resource="http://ld4l.org/ontology/bib/isTitleOf"/>
         <rdfs:domain rdf:resource="&madsrdf;Title"/>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://bib.ld4l.org/ontology/Instance"/>
-                    <rdf:Description rdf:about="http://bib.ld4l.org/ontology/Work"/>
+                    <rdf:Description rdf:about="http://ld4l.org/ontology/bib/Instance"/>
+                    <rdf:Description rdf:about="http://ld4l.org/ontology/bib/Work"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
@@ -946,67 +946,67 @@
     
 
 
-    <!-- http://bib.ld4l.org/ontology/isReceiptOf -->
+    <!-- http://ld4l.org/ontology/bib/isReceiptOf -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/isReceiptOf">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/isReceiptOf">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:label xml:lang="en-us">is receipt of</rdfs:label>
         <skos:scopeNote>This property links an AwardReceipt context node to an Award; the AwardReceipt is linked to the Award recipient by ld4l:receivedBy. The use of the context node allows the receipt to have properties such as date, place, etc.</skos:scopeNote>
         <rdfs:comment xml:lang="en-us">The Award involved in this AwardReceipt.</rdfs:comment>
-        <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Award"/>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/AwardReceipt"/>
-        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/hasReceipt"/>
+        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/Award"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/AwardReceipt"/>
+        <owl:inverseOf rdf:resource="http://ld4l.org/ontology/bib/hasReceipt"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/isSourceStatusOf -->
+    <!-- http://ld4l.org/ontology/bib/isSourceStatusOf -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/isSourceStatusOf">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/isSourceStatusOf">
         <rdfs:label>is source status of</rdfs:label>
         <skos:scopeNote>Applies to Titles, but could apply to other resources as well.</skos:scopeNote>
         <rdfs:comment>This source status (either supplied or transcribed) pertains to the resource.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/SourceStatus"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/SourceStatus"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/isSupplementTo -->
+    <!-- http://ld4l.org/ontology/bib/isSupplementTo -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/isSupplementTo">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/isSupplementTo">
         <rdfs:label xml:lang="en-us">is supplement to</rdfs:label>
         <rdfs:comment xml:lang="en-us">This Work updates or otherwise complements the augmented work.</rdfs:comment>
-        <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Work"/>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Work"/>
-        <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/accompanies"/>
-        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/hasSupplement"/>
+        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/Work"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Work"/>
+        <rdfs:subPropertyOf rdf:resource="http://ld4l.org/ontology/bib/accompanies"/>
+        <owl:inverseOf rdf:resource="http://ld4l.org/ontology/bib/hasSupplement"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/isTableOfContentsFor -->
+    <!-- http://ld4l.org/ontology/bib/isTableOfContentsFor -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/isTableOfContentsFor">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/isTableOfContentsFor">
         <rdfs:label xml:lang="en-us">is table of contents for</rdfs:label>
         <rdfs:comment xml:lang="en-us">The Instance for which this resource is the table of contents.</rdfs:comment>
-        <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
+        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/Instance"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/isTitleOf -->
+    <!-- http://ld4l.org/ontology/bib/isTitleOf -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/isTitleOf">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/isTitleOf">
         <rdfs:label xml:lang="en">is title of</rdfs:label>
         <rdfs:comment>This Title is the title of the specified resource.</rdfs:comment>
-        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/hasTitle"/>
+        <owl:inverseOf rdf:resource="http://ld4l.org/ontology/bib/hasTitle"/>
         <rdfs:domain rdf:resource="&madsrdf;Title"/>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://bib.ld4l.org/ontology/Instance"/>
-                    <rdf:Description rdf:about="http://bib.ld4l.org/ontology/Item"/>
-                    <rdf:Description rdf:about="http://bib.ld4l.org/ontology/Work"/>
+                    <rdf:Description rdf:about="http://ld4l.org/ontology/bib/Instance"/>
+                    <rdf:Description rdf:about="http://ld4l.org/ontology/bib/Item"/>
+                    <rdf:Description rdf:about="http://ld4l.org/ontology/bib/Work"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
@@ -1014,21 +1014,21 @@
     
 
 
-    <!-- http://bib.ld4l.org/ontology/isUnionOf -->
+    <!-- http://ld4l.org/ontology/bib/isUnionOf -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/isUnionOf">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/isUnionOf">
         <rdfs:label xml:lang="en-us">is union of</rdfs:label>
         <skos:scopeNote>The range of this property is a collection of two or more Works. The individual Works relate to the collection via skos:member. The collection may be an anonymous resource without independent existence or significance.</skos:scopeNote>
         <rdfs:comment xml:lang="en-us">This Work was formed from two or more Works that came together.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Work"/>
-        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/mergedToForm"/>
-        <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/succeeds"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Work"/>
+        <owl:inverseOf rdf:resource="http://ld4l.org/ontology/bib/mergedToForm"/>
+        <rdfs:subPropertyOf rdf:resource="http://ld4l.org/ontology/bib/succeeds"/>
         <rdfs:range>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&dcterms;hasPart"/>
-                        <owl:allValuesFrom rdf:resource="http://bib.ld4l.org/ontology/Work"/>
+                        <owl:allValuesFrom rdf:resource="http://ld4l.org/ontology/bib/Work"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&dcterms;hasPart"/>
@@ -1041,46 +1041,46 @@
     
 
 
-    <!-- http://bib.ld4l.org/ontology/issuedWith -->
+    <!-- http://ld4l.org/ontology/bib/issuedWith -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/issuedWith">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/issuedWith">
         <rdf:type rdf:resource="&owl;SymmetricProperty"/>
         <rdfs:label xml:lang="en-us">issued with</rdfs:label>
         <skos:editorialNote>Is it correct to type this an owl:SymmetricProperty? Are the two Instances of equivalent status, or does one primary and the other secondary, as is the case with the parent property ld4l:accompaniedBy? Since ld4l:accompaniedBy is not symmetric, this property could as well be the subproperty of its inverse, ld4l:accompanies.</skos:editorialNote>
         <rdfs:comment xml:lang="en-us">Instance that is issued on the same carrier as this Instance.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
-        <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
-        <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/accompaniedBy"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Instance"/>
+        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/Instance"/>
+        <rdfs:subPropertyOf rdf:resource="http://ld4l.org/ontology/bib/accompaniedBy"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/manufacturedBy -->
+    <!-- http://ld4l.org/ontology/bib/manufacturedBy -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/manufacturedBy">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/manufacturedBy">
         <rdfs:label xml:lang="en-us">manufactured by</rdfs:label>
         <rdfs:comment xml:lang="en-us">Activity resulting in the manufacture of this Instance.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
-        <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/providedBy"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Instance"/>
+        <rdfs:subPropertyOf rdf:resource="http://ld4l.org/ontology/bib/providedBy"/>
         <rdfs:range rdf:resource="&prov;Activity"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/mergedToForm -->
+    <!-- http://ld4l.org/ontology/bib/mergedToForm -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/mergedToForm">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/mergedToForm">
         <rdfs:label xml:lang="en-us">merged to form</rdfs:label>
         <skos:scopeNote>The domain of this property is a collection of two or more Works. The individual Works relate to the collection via skos:member. The collection may be an anonymous resource without independent existence or significance.</skos:scopeNote>
         <rdfs:comment xml:lang="en-us">This collection of two or more Works came together to form a new work.</rdfs:comment>
-        <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Work"/>
-        <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/precedes"/>
+        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/Work"/>
+        <rdfs:subPropertyOf rdf:resource="http://ld4l.org/ontology/bib/precedes"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&dcterms;hasPart"/>
-                        <owl:allValuesFrom rdf:resource="http://bib.ld4l.org/ontology/Work"/>
+                        <owl:allValuesFrom rdf:resource="http://ld4l.org/ontology/bib/Work"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&dcterms;hasPart"/>
@@ -1093,35 +1093,35 @@
     
 
 
-    <!-- http://bib.ld4l.org/ontology/performanceOf -->
+    <!-- http://ld4l.org/ontology/bib/performanceOf -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/performanceOf">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/performanceOf">
         <rdfs:label xml:lang="en">performance of</rdfs:label>
         <skos:scopeNote>Constrasts with recordedIn. In this case, the Event constitutes a performance of the Work, as distinct from the Event being recorded in the Work (i.e., the Work is about the Event).</skos:scopeNote>
         <rdfs:comment xml:lang="en">This Event was a performance of the specified Work</rdfs:comment>
-        <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Work"/>
-        <owl:propertyDisjointWith rdf:resource="http://bib.ld4l.org/ontology/recordedIn"/>
+        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/Work"/>
+        <owl:propertyDisjointWith rdf:resource="http://ld4l.org/ontology/bib/recordedIn"/>
         <rdfs:domain rdf:resource="http://schema.org/Event"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/performedAt -->
+    <!-- http://ld4l.org/ontology/bib/performedAt -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/performedAt">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/performedAt">
         <rdfs:label xml:lang="en">performed at</rdfs:label>
         <rdfs:comment xml:lang="en">This Work was performed at the specified Event.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Work"/>
-        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/performanceOf"/>
-        <owl:propertyDisjointWith rdf:resource="http://bib.ld4l.org/ontology/recordedAt"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Work"/>
+        <owl:inverseOf rdf:resource="http://ld4l.org/ontology/bib/performanceOf"/>
+        <owl:propertyDisjointWith rdf:resource="http://ld4l.org/ontology/bib/recordedAt"/>
         <rdfs:range rdf:resource="http://schema.org/Event"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/precedes -->
+    <!-- http://ld4l.org/ontology/bib/precedes -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/precedes">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/precedes">
         <rdfs:label xml:lang="en-us">precedes</rdfs:label>
         <skos:scopeNote>Generally one of the subproperties should be used to specify the exact relationship. This will be used only when the precise relationship is unknown.</skos:scopeNote>
         <rdfs:comment xml:lang="en-us">Subject precedes the object (e.g., earlier in time or before in a narrative).</rdfs:comment>
@@ -1129,75 +1129,75 @@
     
 
 
-    <!-- http://bib.ld4l.org/ontology/precedesInNarrative -->
+    <!-- http://ld4l.org/ontology/bib/precedesInNarrative -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/precedesInNarrative">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/precedesInNarrative">
         <rdfs:label>precedes in narrative</rdfs:label>
         <skos:example>The Fellowship of the Ring precedes The Two Towers in The Lord of the Rings narrative.</skos:example>
         <rdfs:comment>This Work narratively precedes another work.</rdfs:comment>
-        <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Work"/>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Work"/>
-        <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/precedes"/>
+        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/Work"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Work"/>
+        <rdfs:subPropertyOf rdf:resource="http://ld4l.org/ontology/bib/precedes"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/producedAt -->
+    <!-- http://ld4l.org/ontology/bib/producedAt -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/producedAt">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/producedAt">
         <rdfs:label xml:lang="en-us">produced at</rdfs:label>
         <rdfs:comment xml:lang="en-us"></rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Work"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Work"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/producedBy -->
+    <!-- http://ld4l.org/ontology/bib/producedBy -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/producedBy">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/producedBy">
         <rdfs:label xml:lang="en-us">produced by</rdfs:label>
         <rdfs:comment xml:lang="en-us">Activity resulting in the production of this Instance.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
-        <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/providedBy"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Instance"/>
+        <rdfs:subPropertyOf rdf:resource="http://ld4l.org/ontology/bib/providedBy"/>
         <rdfs:range rdf:resource="&prov;Activity"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/providedBy -->
+    <!-- http://ld4l.org/ontology/bib/providedBy -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/providedBy">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/providedBy">
         <rdfs:label xml:lang="en-us">provided by</rdfs:label>
         <rdfs:comment xml:lang="en-us">Activity relating to the publication, printing, distribution, issue, release, or production instance.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Instance"/>
         <rdfs:range rdf:resource="&prov;Activity"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/publishedBy -->
+    <!-- http://ld4l.org/ontology/bib/publishedBy -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/publishedBy">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/publishedBy">
         <rdfs:label xml:lang="en-us">published by</rdfs:label>
         <rdfs:comment xml:lang="en-us">Information relating to publication of an instance.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
-        <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/providedBy"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Instance"/>
+        <rdfs:subPropertyOf rdf:resource="http://ld4l.org/ontology/bib/providedBy"/>
         <rdfs:range rdf:resource="&prov;Activity"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/received -->
+    <!-- http://ld4l.org/ontology/bib/received -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/received">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/received">
         <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
         <rdfs:label xml:lang="en-us">received</rdfs:label>
         <rdfs:comment xml:lang="en-us">This award recipient (foaf:Agent or ld4l:Work) received the specified AwardReceipt.</rdfs:comment>
-        <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/AwardReceipt"/>
+        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/AwardReceipt"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://bib.ld4l.org/ontology/Work"/>
+                    <rdf:Description rdf:about="http://ld4l.org/ontology/bib/Work"/>
                     <rdf:Description rdf:about="&foaf;Agent"/>
                 </owl:unionOf>
             </owl:Class>
@@ -1206,18 +1206,18 @@
     
 
 
-    <!-- http://bib.ld4l.org/ontology/receivedBy -->
+    <!-- http://ld4l.org/ontology/bib/receivedBy -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/receivedBy">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/receivedBy">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:label xml:lang="en-us">received by</rdfs:label>
         <rdfs:comment xml:lang="en-us">This AwardReceipt was received by the specified award recipient (foaf:Agent or ld4l:Work).</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/AwardReceipt"/>
-        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/received"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/AwardReceipt"/>
+        <owl:inverseOf rdf:resource="http://ld4l.org/ontology/bib/received"/>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://bib.ld4l.org/ontology/Work"/>
+                    <rdf:Description rdf:about="http://ld4l.org/ontology/bib/Work"/>
                     <rdf:Description rdf:about="&foaf;Agent"/>
                 </owl:unionOf>
             </owl:Class>
@@ -1226,81 +1226,81 @@
     
 
 
-    <!-- http://bib.ld4l.org/ontology/recordedAt -->
+    <!-- http://ld4l.org/ontology/bib/recordedAt -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/recordedAt">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/recordedAt">
         <rdfs:label xml:lang="en">recorded at</rdfs:label>
         <rdfs:comment xml:lang="en">This Work was recorded at the specified Event.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Work"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Work"/>
         <rdfs:range rdf:resource="http://schema.org/Event"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/recordedIn -->
+    <!-- http://ld4l.org/ontology/bib/recordedIn -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/recordedIn">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/recordedIn">
         <rdfs:label xml:lang="en">recorded in</rdfs:label>
         <rdfs:comment xml:lang="en">This Event was recorded in the specified Work.</rdfs:comment>
-        <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Work"/>
-        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/recordedAt"/>
+        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/Work"/>
+        <owl:inverseOf rdf:resource="http://ld4l.org/ontology/bib/recordedAt"/>
         <rdfs:domain rdf:resource="http://schema.org/Event"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/reproduces -->
+    <!-- http://ld4l.org/ontology/bib/reproduces -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/reproduces">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/reproduces">
         <rdfs:label xml:lang="en-us">reproduces</rdfs:label>
         <rdfs:comment xml:lang="en-us">This Instance reproduces another Instance embodying the same Wsork.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
-        <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
-        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/hasReproduction"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Instance"/>
+        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/Instance"/>
+        <owl:inverseOf rdf:resource="http://ld4l.org/ontology/bib/hasReproduction"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/separatedFrom -->
+    <!-- http://ld4l.org/ontology/bib/separatedFrom -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/separatedFrom">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/separatedFrom">
         <rdfs:label xml:lang="en-us">separated from</rdfs:label>
         <skos:scopeNote>Similar to ld4l:formedBySplitting, but here we need specify only one antecedent work.</skos:scopeNote>
         <rdfs:comment xml:lang="en-us">This Work was formed from part of the content of a preceding work. </rdfs:comment>
-        <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Work"/>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Work"/>
-        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/separatedInto"/>
-        <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/succeeds"/>
+        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/Work"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Work"/>
+        <owl:inverseOf rdf:resource="http://ld4l.org/ontology/bib/separatedInto"/>
+        <rdfs:subPropertyOf rdf:resource="http://ld4l.org/ontology/bib/succeeds"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/separatedInto -->
+    <!-- http://ld4l.org/ontology/bib/separatedInto -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/separatedInto">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/separatedInto">
         <rdfs:label xml:lang="en-us">separated into</rdfs:label>
         <rdfs:comment xml:lang="en-us">A portion of this Work separated to form the content of a succeeding Work.</rdfs:comment>
         <skos:scopeNote>Similar to ld4l:splitInto, but here we need specify only a single resulting work, rather than two or more.</skos:scopeNote>
-        <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Work"/>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Work"/>
-        <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/precedes"/>
+        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/Work"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Work"/>
+        <rdfs:subPropertyOf rdf:resource="http://ld4l.org/ontology/bib/precedes"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/splitInto -->
+    <!-- http://ld4l.org/ontology/bib/splitInto -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/splitInto">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/splitInto">
         <rdfs:label xml:lang="en-us">split into</rdfs:label>
         <rdfs:comment xml:lang="en-us">This Work split its content into two or more separate Works.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Work"/>
-        <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/precedes"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Work"/>
+        <rdfs:subPropertyOf rdf:resource="http://ld4l.org/ontology/bib/precedes"/>
         <rdfs:range>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&dcterms;hasPart"/>
-                        <owl:allValuesFrom rdf:resource="http://bib.ld4l.org/ontology/Work"/>
+                        <owl:allValuesFrom rdf:resource="http://ld4l.org/ontology/bib/Work"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&dcterms;hasPart"/>
@@ -1313,76 +1313,76 @@
     
 
 
-    <!-- http://bib.ld4l.org/ontology/succeeds -->
+    <!-- http://ld4l.org/ontology/bib/succeeds -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/succeeds">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/succeeds">
         <rdfs:label xml:lang="en-us">succeeds</rdfs:label>
         <skos:scopeNote>Generally one of the subproperties should be used to specify the exact relationship. This will be used only when the precise relationship is unknown.</skos:scopeNote>
         <rdfs:comment xml:lang="en-us">This resource follows the specified resource (e.g., is later in time or after in narrative).</rdfs:comment>
-        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/precedes"/>
+        <owl:inverseOf rdf:resource="http://ld4l.org/ontology/bib/precedes"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/succeedsInNarrative -->
+    <!-- http://ld4l.org/ontology/bib/succeedsInNarrative -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/succeedsInNarrative">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/succeedsInNarrative">
         <rdfs:label>succeeds in narrative</rdfs:label>
         <rdfs:comment>This Work narratively follows another Work.</rdfs:comment>
         <skos:example>The Two Towers succeeds The Fellowship of the Ring in The Lord of the Rings narrative.</skos:example>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Work"/>
-        <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Work"/>
-        <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/succeeds"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Work"/>
+        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/Work"/>
+        <rdfs:subPropertyOf rdf:resource="http://ld4l.org/ontology/bib/succeeds"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/supersededBy -->
+    <!-- http://ld4l.org/ontology/bib/supersededBy -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/supersededBy">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/supersededBy">
         <rdfs:label xml:lang="en-us">superseded by</rdfs:label>
         <rdfs:comment xml:lang="en-us">Later Work used in place of this Work, usually because the later work contains updated or new information.</rdfs:comment>
-        <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Work"/>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Work"/>
-        <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/precedes"/>
+        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/Work"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Work"/>
+        <rdfs:subPropertyOf rdf:resource="http://ld4l.org/ontology/bib/precedes"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/supersedes -->
+    <!-- http://ld4l.org/ontology/bib/supersedes -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/supersedes">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/supersedes">
         <rdfs:label xml:lang="en-us">supersedes</rdfs:label>
         <rdfs:comment xml:lang="en-us">The content of this Work has replaced the content of an earlier Work, usually because the later work contains updated or new information.</rdfs:comment>
-        <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Work"/>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Work"/>
-        <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/succeeds"/>
-        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/supersededBy"/>
+        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/Work"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Work"/>
+        <rdfs:subPropertyOf rdf:resource="http://ld4l.org/ontology/bib/succeeds"/>
+        <owl:inverseOf rdf:resource="http://ld4l.org/ontology/bib/supersededBy"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/translatedAs -->
+    <!-- http://ld4l.org/ontology/bib/translatedAs -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/translatedAs">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/translatedAs">
         <rdfs:label xml:lang="en-us">translated as</rdfs:label>
         <rdfs:comment xml:lang="en-us">Work that translates the text of this Work into a language different from that of the original.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Work"/>
-        <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Work"/>
-        <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/hasDerivative"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Work"/>
+        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/Work"/>
+        <rdfs:subPropertyOf rdf:resource="http://ld4l.org/ontology/bib/hasDerivative"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/translates -->
+    <!-- http://ld4l.org/ontology/bib/translates -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/translates">
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/translates">
         <rdfs:label xml:lang="en-us">translates</rdfs:label>
         <rdfs:comment xml:lang="en-us">This Work translates the specified Work into a language different from that of the original.</rdfs:comment>
-        <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Work"/>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Work"/>
-        <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/derivedFrom"/>
-        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/translatedAs"/>
+        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/Work"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Work"/>
+        <rdfs:subPropertyOf rdf:resource="http://ld4l.org/ontology/bib/derivedFrom"/>
+        <owl:inverseOf rdf:resource="http://ld4l.org/ontology/bib/translatedAs"/>
     </owl:ObjectProperty>
     
 
@@ -1568,7 +1568,7 @@
             
             There is no OA class provided for &quot;Body&quot; as a body might be a target of a different annotation. However, there SHOULD be 1 or more content-based classes associated with the body resources of an Annotation, and the dctypes: vocabulary is recommended for this purpose, for instance dctypes:Text to declare textual content.
         </rdfs:comment>
-        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/isBodyOf"/>
+        <owl:inverseOf rdf:resource="http://ld4l.org/ontology/bib/isBodyOf"/>
         <rdfs:domain rdf:resource="&oa;Annotation"/>
     </owl:ObjectProperty>
     
@@ -1585,7 +1585,7 @@
             Embedded targets SHOULD be instances of cnt:ContentAsText and embed their content with cnt:chars. They SHOULD declare their media type with dc:format, and MAY indicate their language using dc:language and a RFC-3066 language tag. 
             
             There is no OA class provided for &quot;Target&quot; as a target might be a body in a different annotation. However, there SHOULD be 1 or more content-based classes associated with the target resources of an Annotation, and the dctypes: vocabulary is recommended for this purpose, for instance dctypes:Text to declare textual content.</rdfs:comment>
-        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/hasAnnotation"/>
+        <owl:inverseOf rdf:resource="http://ld4l.org/ontology/bib/hasAnnotation"/>
         <rdfs:domain rdf:resource="&oa;Annotation"/>
     </owl:ObjectProperty>
     
@@ -1710,180 +1710,180 @@
     
 
 
-    <!-- http://bib.ld4l.org/ontology/acquisitionNote -->
+    <!-- http://ld4l.org/ontology/bib/acquisitionNote -->
 
-    <owl:DatatypeProperty rdf:about="http://bib.ld4l.org/ontology/acquisitionNote">
+    <owl:DatatypeProperty rdf:about="http://ld4l.org/ontology/bib/acquisitionNote">
         <rdfs:label xml:lang="en-us">acquisition note</rdfs:label>
         <rdfs:comment xml:lang="en-us">Information about the circumstances (e.g., source, date, method) under which the resource was directly acquired.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Item"/>
-        <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/note"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Item"/>
+        <rdfs:subPropertyOf rdf:resource="http://ld4l.org/ontology/bib/note"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/barcode -->
+    <!-- http://ld4l.org/ontology/bib/barcode -->
 
-    <owl:DatatypeProperty rdf:about="http://bib.ld4l.org/ontology/barcode">
+    <owl:DatatypeProperty rdf:about="http://ld4l.org/ontology/bib/barcode">
         <rdfs:label xml:lang="en-us">barcode</rdfs:label>
         <rdfs:comment xml:lang="en-us">Identification number of the physical item.</rdfs:comment>
         <skos:editorialNote xml:lang="en-us">Probably not a FunctionalProperty: there are both Codabar and Code 39 barcoding systems; could an Item have both? </skos:editorialNote>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Item"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Item"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/cartographicEasternmostLongitude -->
+    <!-- http://ld4l.org/ontology/bib/cartographicEasternmostLongitude -->
 
-    <owl:DatatypeProperty rdf:about="http://bib.ld4l.org/ontology/cartographicEasternmostLongitude">
+    <owl:DatatypeProperty rdf:about="http://ld4l.org/ontology/bib/cartographicEasternmostLongitude">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:label xml:lang="en-us">cartographic easternmost longitude</rdfs:label>
         <rdfs:comment xml:lang="en-us">Records easternmost longitudinal coordinate of the geographic entity. The abbreviations for the hemispheres are: N = North, S = South, E = East, W = West. The coordinate may be recorded in the form hdddmmss (hemisphere-degrees-minutes-seconds); however, other forms are also allowed, such as decimal degrees. Unused positions contain zeros.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Cartography"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Cartography"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/cartographicEquinox -->
+    <!-- http://ld4l.org/ontology/bib/cartographicEquinox -->
 
-    <owl:DatatypeProperty rdf:about="http://bib.ld4l.org/ontology/cartographicEquinox">
+    <owl:DatatypeProperty rdf:about="http://ld4l.org/ontology/bib/cartographicEquinox">
         <rdfs:label xml:lang="en-us">cartographic equinox</rdfs:label>
         <rdfs:comment xml:lang="en-us">Statement of equinox or epoch.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Cartography"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Cartography"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/cartographicExclusionGRingCoordinates -->
+    <!-- http://ld4l.org/ontology/bib/cartographicExclusionGRingCoordinates -->
 
-    <owl:DatatypeProperty rdf:about="http://bib.ld4l.org/ontology/cartographicExclusionGRingCoordinates">
+    <owl:DatatypeProperty rdf:about="http://ld4l.org/ontology/bib/cartographicExclusionGRingCoordinates">
         <rdfs:label xml:lang="en-us">cartographic exclusion G ring coordinates</rdfs:label>
         <skos:editorialNote xml:lang="en-us">Break the pair up into its individual elements? What would they be named?</skos:editorialNote>
         <rdfs:comment xml:lang="en-us">Coordinate pair that identifies the closed non-intersecting boundary of the area contained within the G-polygon outer ring that is excluded.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Cartography"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Cartography"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/cartographicNorthernmostLatitude -->
+    <!-- http://ld4l.org/ontology/bib/cartographicNorthernmostLatitude -->
 
-    <owl:DatatypeProperty rdf:about="http://bib.ld4l.org/ontology/cartographicNorthernmostLatitude">
+    <owl:DatatypeProperty rdf:about="http://ld4l.org/ontology/bib/cartographicNorthernmostLatitude">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:label xml:lang="en-us">cartographic northernmost latitude</rdfs:label>
         <rdfs:comment xml:lang="en-us">Records northernmost latitudinal coordinate of the geographic entity. The abbreviations for the hemispheres are: N = North, S = South, E = East, W = West. The coordinate may be recorded in the form hdddmmss (hemisphere-degrees-minutes-seconds); however, other forms are also allowed, such as decimal degrees. Unused positions contain zeros.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Cartography"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Cartography"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/cartographicOuterGRingCoordinates -->
+    <!-- http://ld4l.org/ontology/bib/cartographicOuterGRingCoordinates -->
 
-    <owl:DatatypeProperty rdf:about="http://bib.ld4l.org/ontology/cartographicOuterGRingCoordinates">
+    <owl:DatatypeProperty rdf:about="http://ld4l.org/ontology/bib/cartographicOuterGRingCoordinates">
         <rdfs:label xml:lang="en-us">cartographic outer G ring coordinates</rdfs:label>
         <skos:editorialNote xml:lang="en-us">Break the pair up into its individual elements? What would they be named?</skos:editorialNote>
         <rdfs:comment xml:lang="en-us">Coordinate pair that identifies the closed non-intersecting boundary of the area covered.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Cartography"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Cartography"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/cartographicProjection -->
+    <!-- http://ld4l.org/ontology/bib/cartographicProjection -->
 
-    <owl:DatatypeProperty rdf:about="http://bib.ld4l.org/ontology/cartographicProjection">
+    <owl:DatatypeProperty rdf:about="http://ld4l.org/ontology/bib/cartographicProjection">
         <rdfs:label xml:lang="en-us">cartographic projection</rdfs:label>
         <rdfs:comment xml:lang="en-us">Method or system used to represent the surface of the Earth or of a celestial sphere on a plane.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Cartography"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Cartography"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/cartographicScale -->
+    <!-- http://ld4l.org/ontology/bib/cartographicScale -->
 
-    <owl:DatatypeProperty rdf:about="http://bib.ld4l.org/ontology/cartographicScale">
+    <owl:DatatypeProperty rdf:about="http://ld4l.org/ontology/bib/cartographicScale">
         <rdfs:label xml:lang="en-us">cartographic scale</rdfs:label>
         <rdfs:comment xml:lang="en-us">Ratio of the dimensions of a form contained or embodied in a resource to the dimensions of the entity it represents. Entire scale statement including any equivalency statements, vertical scales or vertical exaggeration statements for relief models and other three-dimensional items.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Cartography"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Cartography"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/cartographicSouthernmostLatitude -->
+    <!-- http://ld4l.org/ontology/bib/cartographicSouthernmostLatitude -->
 
-    <owl:DatatypeProperty rdf:about="http://bib.ld4l.org/ontology/cartographicSouthernmostLatitude">
+    <owl:DatatypeProperty rdf:about="http://ld4l.org/ontology/bib/cartographicSouthernmostLatitude">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:label xml:lang="en-us">cartographic southernmost latitude</rdfs:label>
         <rdfs:comment xml:lang="en-us">Records southernmost latitudinal coordinate of the geographic entity. The abbreviations for the hemispheres are: N = North, S = South, E = East, W = West. The coordinate may be recorded in the form hdddmmss (hemisphere-degrees-minutes-seconds); however, other forms are also allowed, such as decimal degrees. Unused positions contain zeros.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Cartography"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Cartography"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/cartographicWesternmostLongitude -->
+    <!-- http://ld4l.org/ontology/bib/cartographicWesternmostLongitude -->
 
-    <owl:DatatypeProperty rdf:about="http://bib.ld4l.org/ontology/cartographicWesternmostLongitude">
+    <owl:DatatypeProperty rdf:about="http://ld4l.org/ontology/bib/cartographicWesternmostLongitude">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:label xml:lang="en-us">cartographic westernmost longitude</rdfs:label>
         <rdfs:comment xml:lang="en-us">Records westernmost longitudinal coordinate of the geographic entity. The abbreviations for the hemispheres are: N = North, S = South, E = East, W = West. The coordinate may be recorded in the form hdddmmss (hemisphere-degrees-minutes-seconds); however, other forms are also allowed, such as decimal degrees. Unused positions contain zeros.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Cartography"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Cartography"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/cartographicZone -->
+    <!-- http://ld4l.org/ontology/bib/cartographicZone -->
 
-    <owl:DatatypeProperty rdf:about="http://bib.ld4l.org/ontology/cartographicZone">
+    <owl:DatatypeProperty rdf:about="http://ld4l.org/ontology/bib/cartographicZone">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:label xml:lang="en-us">cartographic zone</rdfs:label>
         <rdfs:comment xml:lang="en-us">Cartographic zone used for celestial charts.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Cartography"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Cartography"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/copyrightDate -->
+    <!-- http://ld4l.org/ontology/bib/copyrightDate -->
 
-    <owl:DatatypeProperty rdf:about="http://bib.ld4l.org/ontology/copyrightDate">
+    <owl:DatatypeProperty rdf:about="http://ld4l.org/ontology/bib/copyrightDate">
         <rdfs:label xml:lang="en-us">copyright date</rdfs:label>
         <rdfs:comment xml:lang="en-us">Date associated with a claim of protection under copyright or a similar regime.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Instance"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/custodialHistory -->
+    <!-- http://ld4l.org/ontology/bib/custodialHistory -->
 
-    <owl:DatatypeProperty rdf:about="http://bib.ld4l.org/ontology/custodialHistory">
+    <owl:DatatypeProperty rdf:about="http://ld4l.org/ontology/bib/custodialHistory">
         <rdfs:label xml:lang="en-us">custodial history</rdfs:label>
         <rdfs:comment xml:lang="en-us">Information about the provenance, such as origin, ownership and custodial history (chain of custody), of a resource.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Instance"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/dimensions -->
+    <!-- http://ld4l.org/ontology/bib/dimensions -->
 
-    <owl:DatatypeProperty rdf:about="http://bib.ld4l.org/ontology/dimensions">
+    <owl:DatatypeProperty rdf:about="http://ld4l.org/ontology/bib/dimensions">
         <rdfs:label xml:lang="en-us">dimensions</rdfs:label>
         <rdfs:comment xml:lang="en-us">Measurements of the carrier or carriers and/or the container of a resource.</rdfs:comment>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://bib.ld4l.org/ontology/Instance"/>
-                    <rdf:Description rdf:about="http://bib.ld4l.org/ontology/Item"/>
+                    <rdf:Description rdf:about="http://ld4l.org/ontology/bib/Instance"/>
+                    <rdf:Description rdf:about="http://ld4l.org/ontology/bib/Item"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -1891,57 +1891,57 @@
     
 
 
-    <!-- http://bib.ld4l.org/ontology/dissertationNote -->
+    <!-- http://ld4l.org/ontology/bib/dissertationNote -->
 
-    <owl:DatatypeProperty rdf:about="http://bib.ld4l.org/ontology/dissertationNote">
+    <owl:DatatypeProperty rdf:about="http://ld4l.org/ontology/bib/dissertationNote">
         <rdfs:label xml:lang="en-us">dissertation note</rdfs:label>
         <skos:editorialNote xml:lang="en-us">Include dissertation note as a literal when it cannot be parsed into dissertationYear, dissertationDegree, etc.</skos:editorialNote>
         <rdfs:comment xml:lang="en-us">Textual information about the dissertation. A dissertation note differs from a general note in that it includes specific date and year information.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Dissertation"/>
-        <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/note"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Dissertation"/>
+        <rdfs:subPropertyOf rdf:resource="http://ld4l.org/ontology/bib/note"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/dissertationYear -->
+    <!-- http://ld4l.org/ontology/bib/dissertationYear -->
 
-    <owl:DatatypeProperty rdf:about="http://bib.ld4l.org/ontology/dissertationYear">
+    <owl:DatatypeProperty rdf:about="http://ld4l.org/ontology/bib/dissertationYear">
         <rdfs:label xml:lang="en-us">dissertation year</rdfs:label>
         <rdfs:comment xml:lang="en-us">Year degree awarded.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Dissertation"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Dissertation"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/extent -->
+    <!-- http://ld4l.org/ontology/bib/extent -->
 
-    <owl:DatatypeProperty rdf:about="http://bib.ld4l.org/ontology/extent">
+    <owl:DatatypeProperty rdf:about="http://ld4l.org/ontology/bib/extent">
         <rdfs:label xml:lang="en-us">extent</rdfs:label>
         <rdfs:comment xml:lang="en-us">Number and type of units and/or subunits making up a resource.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Instance"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/frequency -->
+    <!-- http://ld4l.org/ontology/bib/frequency -->
 
-    <owl:DatatypeProperty rdf:about="http://bib.ld4l.org/ontology/frequency">
+    <owl:DatatypeProperty rdf:about="http://ld4l.org/ontology/bib/frequency">
         <rdfs:label xml:lang="en-us">frequency</rdfs:label>
         <skos:scopeNote>Frequency refers to intended rather than actual frequency, so that a Serial that rarelly meets deadlines is still a Periodical, and a Series that appears regularly but does not promise to do so does not thereby turn into a Periodical.</skos:scopeNote>
         <rdfs:comment xml:lang="en-us">Intervals at which the issues or parts of a serial or the updates to an integrating resource are issued.</rdfs:comment>
         <skos:editorialNote xml:lang="en-us">Need to locate an appropriate time interval vocabulary to create NamedIndividuals from. Then this would change  from a DatatypeProperty to an ObjectProperty.</skos:editorialNote>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Work"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Work"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/generationDate -->
+    <!-- http://ld4l.org/ontology/bib/generationDate -->
 
-    <owl:DatatypeProperty rdf:about="http://bib.ld4l.org/ontology/generationDate">
+    <owl:DatatypeProperty rdf:about="http://ld4l.org/ontology/bib/generationDate">
         <rdfs:label xml:lang="en-us">generation date</rdfs:label>
         <rdfs:comment xml:lang="en-us">Date of conversion of the data from another format.</rdfs:comment>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
@@ -1949,9 +1949,9 @@
     
 
 
-    <!-- http://bib.ld4l.org/ontology/hasIndex -->
+    <!-- http://ld4l.org/ontology/bib/hasIndex -->
 
-    <owl:DatatypeProperty rdf:about="http://bib.ld4l.org/ontology/hasIndex">
+    <owl:DatatypeProperty rdf:about="http://ld4l.org/ontology/bib/hasIndex">
         <rdfs:label xml:lang="en-us">has index</rdfs:label>
         <rdfs:range rdf:datatype="&amp;xsd;boolean"></rdfs:range>
         <rdfs:comment xml:lang="en-us">Indicates whether a work or instance contains an internal index</rdfs:comment>
@@ -1959,20 +1959,20 @@
     
 
 
-    <!-- http://bib.ld4l.org/ontology/illustrationNote -->
+    <!-- http://ld4l.org/ontology/bib/illustrationNote -->
 
-    <owl:DatatypeProperty rdf:about="http://bib.ld4l.org/ontology/illustrationNote">
+    <owl:DatatypeProperty rdf:about="http://ld4l.org/ontology/bib/illustrationNote">
         <rdfs:label xml:lang="en-us">illustration note</rdfs:label>
         <rdfs:comment xml:lang="en-us">Information about illustrative material in the resource.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Instance"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/musicNumber -->
+    <!-- http://ld4l.org/ontology/bib/musicNumber -->
 
-    <owl:DatatypeProperty rdf:about="http://bib.ld4l.org/ontology/musicNumber">
+    <owl:DatatypeProperty rdf:about="http://ld4l.org/ontology/bib/musicNumber">
         <rdfs:label xml:lang="en-us">music number</rdfs:label>
         <rdfs:comment xml:lang="en-us">Serial, opus, or thematic number or code for music.</rdfs:comment>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
@@ -1980,9 +1980,9 @@
     
 
 
-    <!-- http://bib.ld4l.org/ontology/note -->
+    <!-- http://ld4l.org/ontology/bib/note -->
 
-    <owl:DatatypeProperty rdf:about="http://bib.ld4l.org/ontology/note">
+    <owl:DatatypeProperty rdf:about="http://ld4l.org/ontology/bib/note">
         <rdfs:label xml:lang="en-us">note</rdfs:label>
         <rdfs:comment xml:lang="en-us">General textual information relating to a resource.</rdfs:comment>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
@@ -1990,132 +1990,132 @@
     
 
 
-    <!-- http://bib.ld4l.org/ontology/preferredCitation -->
+    <!-- http://ld4l.org/ontology/bib/preferredCitation -->
 
-    <owl:DatatypeProperty rdf:about="http://bib.ld4l.org/ontology/preferredCitation">
+    <owl:DatatypeProperty rdf:about="http://ld4l.org/ontology/bib/preferredCitation">
         <rdfs:label xml:lang="en-us">preferred citation</rdfs:label>
         <rdfs:comment xml:lang="en-us">Citation to the resource preferred by its custodian.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Instance"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/producesSound -->
+    <!-- http://ld4l.org/ontology/bib/producesSound -->
 
-    <owl:DatatypeProperty rdf:about="http://bib.ld4l.org/ontology/producesSound">
+    <owl:DatatypeProperty rdf:about="http://ld4l.org/ontology/bib/producesSound">
         <rdfs:label xml:lang="en-us">produces sound</rdfs:label>
         <rdfs:range rdf:datatype="&xsd;boolean">false</rdfs:range>
         <rdfs:comment xml:lang="en-us">Indication of whether the production of sound is an integral part of the resource.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Instance"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/responsibilityNote -->
+    <!-- http://ld4l.org/ontology/bib/responsibilityNote -->
 
-    <owl:DatatypeProperty rdf:about="http://bib.ld4l.org/ontology/responsibilityNote">
+    <owl:DatatypeProperty rdf:about="http://ld4l.org/ontology/bib/responsibilityNote">
         <rdfs:label xml:lang="en-us">responsibility note</rdfs:label>
         <rdfs:comment xml:lang="en-us">Statement relating to the identification and/or function of any persons, families, or corporate bodies responsible for the creation of, or contributing to the content of a resource.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Instance"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/legacy/aspectRatio -->
+    <!-- http://ld4l.org/ontology/bib/legacy/aspectRatio -->
 
-    <owl:DatatypeProperty rdf:about="http://bib.ld4l.org/ontology/legacy/aspectRatio">
+    <owl:DatatypeProperty rdf:about="http://ld4l.org/ontology/bib/legacy/aspectRatio">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:label xml:lang="en-us">aspect ratio</rdfs:label>
         <rdfs:comment xml:lang="en-us">Proportional relationship between an image&apos;s width and its height.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Instance"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/legacy/awardNote -->
+    <!-- http://ld4l.org/ontology/bib/legacy/awardNote -->
 
-    <owl:DatatypeProperty rdf:about="http://bib.ld4l.org/ontology/legacy/awardNote">
+    <owl:DatatypeProperty rdf:about="http://ld4l.org/ontology/bib/legacy/awardNote">
         <rdfs:label xml:lang="en-us">award note</rdfs:label>
         <rdfs:comment xml:lang="en-us">Information on awards associated with the described resource.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Instance"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/legacy/colorContent -->
+    <!-- http://ld4l.org/ontology/bib/legacy/colorContent -->
 
-    <owl:DatatypeProperty rdf:about="http://bib.ld4l.org/ontology/legacy/colorContent">
+    <owl:DatatypeProperty rdf:about="http://ld4l.org/ontology/bib/legacy/colorContent">
         <rdfs:label xml:lang="en-us">color content</rdfs:label>
         <rdfs:comment xml:lang="en-us">Color characteristics, e.g. black and white, multicolored, etc.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Instance"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/legacy/contentsNote -->
+    <!-- http://ld4l.org/ontology/bib/legacy/contentsNote -->
 
-    <owl:DatatypeProperty rdf:about="http://bib.ld4l.org/ontology/legacy/contentsNote">
+    <owl:DatatypeProperty rdf:about="http://ld4l.org/ontology/bib/legacy/contentsNote">
         <rdfs:label xml:lang="en-us">contents note</rdfs:label>
         <rdfs:comment xml:lang="en-us">List of subunits of the resource.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
-        <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/note"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Instance"/>
+        <rdfs:subPropertyOf rdf:resource="http://ld4l.org/ontology/bib/note"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/legacy/creditsNote -->
+    <!-- http://ld4l.org/ontology/bib/legacy/creditsNote -->
 
-    <owl:DatatypeProperty rdf:about="http://bib.ld4l.org/ontology/legacy/creditsNote">
+    <owl:DatatypeProperty rdf:about="http://ld4l.org/ontology/bib/legacy/creditsNote">
         <rdfs:label xml:lang="en-us">credits note</rdfs:label>
         <rdfs:comment xml:lang="en-us">Credits for persons or organizations, other than members of the cast, who have participated in the creation and/or production of the resource.</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/note"/>
+        <rdfs:subPropertyOf rdf:resource="http://ld4l.org/ontology/bib/note"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/legacy/duration -->
+    <!-- http://ld4l.org/ontology/bib/legacy/duration -->
 
-    <owl:DatatypeProperty rdf:about="http://bib.ld4l.org/ontology/legacy/duration">
+    <owl:DatatypeProperty rdf:about="http://ld4l.org/ontology/bib/legacy/duration">
         <rdfs:label xml:lang="en-us">duration</rdfs:label>
         <rdfs:comment xml:lang="en-us">Information about the playing time or duration in an unstructured form, e.g., &quot;2 hours&quot;.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Instance"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/legacy/findingAidNote -->
+    <!-- http://ld4l.org/ontology/bib/legacy/findingAidNote -->
 
-    <owl:DatatypeProperty rdf:about="http://bib.ld4l.org/ontology/legacy/findingAidNote">
+    <owl:DatatypeProperty rdf:about="http://ld4l.org/ontology/bib/legacy/findingAidNote">
         <rdfs:label xml:lang="en-us">finding aid note</rdfs:label>
         <rdfs:comment xml:lang="en-us">Note about availability of an index or finding aid.</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/note"/>
+        <rdfs:subPropertyOf rdf:resource="http://ld4l.org/ontology/bib/note"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/legacy/formDesignation -->
+    <!-- http://ld4l.org/ontology/bib/legacy/formDesignation -->
 
-    <owl:DatatypeProperty rdf:about="http://bib.ld4l.org/ontology/legacy/formDesignation">
+    <owl:DatatypeProperty rdf:about="http://ld4l.org/ontology/bib/legacy/formDesignation">
         <rdfs:label xml:lang="en-us">form designation</rdfs:label>
         <rdfs:comment xml:lang="en-us">Class or genre to which a Work or Instance belongs.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Instance"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/legacy/format -->
+    <!-- http://ld4l.org/ontology/bib/legacy/format -->
 
-    <owl:DatatypeProperty rdf:about="http://bib.ld4l.org/ontology/legacy/format">
+    <owl:DatatypeProperty rdf:about="http://ld4l.org/ontology/bib/legacy/format">
         <rdfs:label xml:lang="en-us">format</rdfs:label>
         <rdfs:comment xml:lang="en-us">File format or physical medium of an instance.</rdfs:comment>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
@@ -2123,57 +2123,57 @@
     
 
 
-    <!-- http://bib.ld4l.org/ontology/legacy/formatOfMusic -->
+    <!-- http://ld4l.org/ontology/bib/legacy/formatOfMusic -->
 
-    <owl:DatatypeProperty rdf:about="http://bib.ld4l.org/ontology/legacy/formatOfMusic">
+    <owl:DatatypeProperty rdf:about="http://ld4l.org/ontology/bib/legacy/formatOfMusic">
         <rdfs:label xml:lang="en-us">format of music</rdfs:label>
         <rdfs:comment xml:lang="en-us">Format of a musical composition, e.g. full score, condensed score, vocal score, etc.</rdfs:comment>
         <skos:editorialNote xml:lang="en-us">Need a vocabulary to enumerate values.</skos:editorialNote>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Instance"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/legacy/geographicCoverageNote -->
+    <!-- http://ld4l.org/ontology/bib/legacy/geographicCoverageNote -->
 
-    <owl:DatatypeProperty rdf:about="http://bib.ld4l.org/ontology/legacy/geographicCoverageNote">
+    <owl:DatatypeProperty rdf:about="http://ld4l.org/ontology/bib/legacy/geographicCoverageNote">
         <rdfs:label xml:lang="en-us">geographic coverage note</rdfs:label>
         <rdfs:comment xml:lang="en-us">Geographic entities covered by the resource.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Work"/>
-        <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/note"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Work"/>
+        <rdfs:subPropertyOf rdf:resource="http://ld4l.org/ontology/bib/note"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/legacy/graphicScaleNote -->
+    <!-- http://ld4l.org/ontology/bib/legacy/graphicScaleNote -->
 
-    <owl:DatatypeProperty rdf:about="http://bib.ld4l.org/ontology/legacy/graphicScaleNote">
+    <owl:DatatypeProperty rdf:about="http://ld4l.org/ontology/bib/legacy/graphicScaleNote">
         <rdfs:label xml:lang="en-us">graphic scale note</rdfs:label>
         <rdfs:comment xml:lang="en-us">Textual information about scale, including the scale of graphic material item such as architectural drawings or three-dimensional artifacts.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
-        <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/note"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Instance"/>
+        <rdfs:subPropertyOf rdf:resource="http://ld4l.org/ontology/bib/note"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/legacy/languageNote -->
+    <!-- http://ld4l.org/ontology/bib/legacy/languageNote -->
 
-    <owl:DatatypeProperty rdf:about="http://bib.ld4l.org/ontology/legacy/languageNote">
+    <owl:DatatypeProperty rdf:about="http://ld4l.org/ontology/bib/legacy/languageNote">
         <rdfs:label xml:lang="en-us">language note</rdfs:label>
         <rdfs:comment xml:lang="en-us">Note concerning the language of the material or its parts.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Work"/>
-        <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/note"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Work"/>
+        <rdfs:subPropertyOf rdf:resource="http://ld4l.org/ontology/bib/note"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/legacy/legalDate -->
+    <!-- http://ld4l.org/ontology/bib/legacy/legalDate -->
 
-    <owl:DatatypeProperty rdf:about="http://bib.ld4l.org/ontology/legacy/legalDate">
+    <owl:DatatypeProperty rdf:about="http://ld4l.org/ontology/bib/legacy/legalDate">
         <rdfs:label xml:lang="en-us">legal date</rdfs:label>
         <rdfs:comment xml:lang="en-us">Date of legal work, or promulgation of a law, or signing of a treaty.</rdfs:comment>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
@@ -2181,92 +2181,92 @@
     
 
 
-    <!-- http://bib.ld4l.org/ontology/legacy/modeOfIssuance -->
+    <!-- http://ld4l.org/ontology/bib/legacy/modeOfIssuance -->
 
-    <owl:DatatypeProperty rdf:about="http://bib.ld4l.org/ontology/legacy/modeOfIssuance">
+    <owl:DatatypeProperty rdf:about="http://ld4l.org/ontology/bib/legacy/modeOfIssuance">
         <rdfs:label xml:lang="en-us">mode of issuance</rdfs:label>
         <rdfs:comment xml:lang="en-us">Categorization reflecting whether a resource is issued in one or more parts, the way it is updated, and its intended termination.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Instance"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/legacy/musicMediumNote -->
+    <!-- http://ld4l.org/ontology/bib/legacy/musicMediumNote -->
 
-    <owl:DatatypeProperty rdf:about="http://bib.ld4l.org/ontology/legacy/musicMediumNote">
+    <owl:DatatypeProperty rdf:about="http://ld4l.org/ontology/bib/legacy/musicMediumNote">
         <rdfs:label xml:lang="en-us">music medium note</rdfs:label>
         <rdfs:comment xml:lang="en-us">Instrumental, vocal, and/or other medium of performance for which a musical resource was originally conceived, written or performed.</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/note"/>
+        <rdfs:subPropertyOf rdf:resource="http://ld4l.org/ontology/bib/note"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/legacy/notationSystem -->
+    <!-- http://ld4l.org/ontology/bib/legacy/notationSystem -->
 
-    <owl:DatatypeProperty rdf:about="http://bib.ld4l.org/ontology/legacy/notationSystem">
+    <owl:DatatypeProperty rdf:about="http://ld4l.org/ontology/bib/legacy/notationSystem">
         <rdfs:label xml:lang="en-us">notation system</rdfs:label>
         <rdfs:comment xml:lang="en-us">Information on the alphabet, script, or symbol system used to convey the content of the resource, including specialized scripts, typefaces, tactile notation, and musical notation.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Instance"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/legacy/performerNote -->
+    <!-- http://ld4l.org/ontology/bib/legacy/performerNote -->
 
-    <owl:DatatypeProperty rdf:about="http://bib.ld4l.org/ontology/legacy/performerNote">
+    <owl:DatatypeProperty rdf:about="http://ld4l.org/ontology/bib/legacy/performerNote">
         <rdfs:label xml:lang="en-us">performer note</rdfs:label>
         <rdfs:comment xml:lang="en-us">Information about the participants, players, narrators, presenters, or performers.</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/note"/>
+        <rdfs:subPropertyOf rdf:resource="http://ld4l.org/ontology/bib/note"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/legacy/providerStatement -->
+    <!-- http://ld4l.org/ontology/bib/legacy/providerStatement -->
 
-    <owl:DatatypeProperty rdf:about="http://bib.ld4l.org/ontology/legacy/providerStatement">
+    <owl:DatatypeProperty rdf:about="http://ld4l.org/ontology/bib/legacy/providerStatement">
         <rdfs:label xml:lang="en-us">provider statement</rdfs:label>
         <rdfs:comment xml:lang="en-us">Transcribed provider statement</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
-        <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/note"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Instance"/>
+        <rdfs:subPropertyOf rdf:resource="http://ld4l.org/ontology/bib/note"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/legacy/supplementaryContentNote -->
+    <!-- http://ld4l.org/ontology/bib/legacy/supplementaryContentNote -->
 
-    <owl:DatatypeProperty rdf:about="http://bib.ld4l.org/ontology/legacy/supplementaryContentNote">
+    <owl:DatatypeProperty rdf:about="http://ld4l.org/ontology/bib/legacy/supplementaryContentNote">
         <rdfs:label xml:lang="en-us">supplementary content note</rdfs:label>
         <rdfs:comment xml:lang="en-us">Information on the presence of one or more bibliographies, discographies, filmographies, and/or other bibliographic references in a described resource or in accompanying material.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
-        <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/note"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Instance"/>
+        <rdfs:subPropertyOf rdf:resource="http://ld4l.org/ontology/bib/note"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/legacy/temporalCoverageNote -->
+    <!-- http://ld4l.org/ontology/bib/legacy/temporalCoverageNote -->
 
-    <owl:DatatypeProperty rdf:about="http://bib.ld4l.org/ontology/legacy/temporalCoverageNote">
+    <owl:DatatypeProperty rdf:about="http://ld4l.org/ontology/bib/legacy/temporalCoverageNote">
         <rdfs:label xml:lang="en-us">temporal coverage note</rdfs:label>
         <rdfs:comment xml:lang="en-us">Time period covered by the resource.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Work"/>
-        <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/note"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Work"/>
+        <rdfs:subPropertyOf rdf:resource="http://ld4l.org/ontology/bib/note"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/legacy/treatySignator -->
+    <!-- http://ld4l.org/ontology/bib/legacy/treatySignator -->
 
-    <owl:DatatypeProperty rdf:about="http://bib.ld4l.org/ontology/legacy/treatySignator">
+    <owl:DatatypeProperty rdf:about="http://ld4l.org/ontology/bib/legacy/treatySignator">
         <rdfs:label xml:lang="en-us">treaty signatory</rdfs:label>
         <rdfs:comment xml:lang="en-us">Government or other party that has formally signed a treaty.</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/note"/>
+        <rdfs:subPropertyOf rdf:resource="http://ld4l.org/ontology/bib/note"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
@@ -2295,7 +2295,7 @@
     <owl:DatatypeProperty rdf:about="http://schema.org/accessibilityFeature">
         <rdfs:label xml:lang="en-us">accessibility feature</rdfs:label>
         <rdfs:comment xml:lang="en-us">Accessibility feature of the resource, such as accessible media, alternatives and supported enhancements for accessibility (WebSchemas wiki lists possible values).</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
+        <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Instance"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
@@ -2357,9 +2357,9 @@
     
 
 
-    <!-- http://bib.ld4l.org/ontology/AbbreviatedTitle -->
+    <!-- http://ld4l.org/ontology/bib/AbbreviatedTitle -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/AbbreviatedTitle">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/AbbreviatedTitle">
         <rdfs:label xml:lang="en-us">Abbreviated title</rdfs:label>
         <rdfs:subClassOf rdf:resource="&madsrdf;Title"/>
         <rdfs:comment xml:lang="en-us">Title as abbreviated for indexing or identification.</rdfs:comment>
@@ -2367,47 +2367,47 @@
     
 
 
-    <!-- http://bib.ld4l.org/ontology/Ansi -->
+    <!-- http://ld4l.org/ontology/bib/Ansi -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/Ansi">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/Ansi">
         <rdfs:label xml:lang="en-us">ANSI</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Identifier"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Identifier"/>
         <rdfs:comment xml:lang="en-us">American National Standards Institute identifier.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/Audio -->
+    <!-- http://ld4l.org/ontology/bib/Audio -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/Audio">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/Audio">
         <rdfs:label xml:lang="en-us">Audio</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Work"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Work"/>
         <rdfs:comment xml:lang="en-us">Resources expressed in an audible form, including music or other sounds.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/Award -->
+    <!-- http://ld4l.org/ontology/bib/Award -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/Award">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/Award">
         <rdfs:label xml:lang="en-us">Award</rdfs:label>
         <rdfs:comment xml:lang="en-us">An award or honor bestowed upon an Agent or Work. The relationship between Award and recipient is mediated by an AwardReceipt, which may contain additional information, such as date.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/AwardReceipt -->
+    <!-- http://ld4l.org/ontology/bib/AwardReceipt -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/AwardReceipt">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/AwardReceipt">
         <rdfs:label xml:lang="en-us">Award receipt</rdfs:label>
         <rdfs:comment xml:lang="en-us">The bestowal of an award, honor, or distinction to an Agent or Work. The award bestowed should be represented with the Award class. The AwardReceipt is a context node between the award and the recipient which may contain further information, such as date.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/BinderTitle -->
+    <!-- http://ld4l.org/ontology/bib/BinderTitle -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/BinderTitle">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/BinderTitle">
         <rdfs:label>Binder title</rdfs:label>
         <rdfs:subClassOf rdf:resource="&madsrdf;Title"/>
         <rdfs:comment>Title printed on an item&apos;s cover after rebinding.</rdfs:comment>
@@ -2415,9 +2415,9 @@
     
 
 
-    <!-- http://bib.ld4l.org/ontology/CaptionTitle -->
+    <!-- http://ld4l.org/ontology/bib/CaptionTitle -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/CaptionTitle">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/CaptionTitle">
         <rdfs:label xml:lang="en-us">Caption title</rdfs:label>
         <rdfs:subClassOf rdf:resource="&madsrdf;Title"/>
         <rdfs:comment xml:lang="en-us">Caption title, printed at the head of the first page of text.</rdfs:comment>
@@ -2425,19 +2425,19 @@
     
 
 
-    <!-- http://bib.ld4l.org/ontology/Cartography -->
+    <!-- http://ld4l.org/ontology/bib/Cartography -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/Cartography">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/Cartography">
         <rdfs:label xml:lang="en-us">Cartography</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Work"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Work"/>
         <rdfs:comment xml:lang="en-us">Resource that show spatial information, including maps, atlases, globes,digital maps, and other cartographic items.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/CirculationStatus -->
+    <!-- http://ld4l.org/ontology/bib/CirculationStatus -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/CirculationStatus">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/CirculationStatus">
         <rdfs:label xml:lang="en-us">Circulation status</rdfs:label>
         <rdfs:subClassOf rdf:resource="&skos;Concept"/>
         <skos:editorialNote xml:lang="en-us">Need a vocabulary to numerate values</skos:editorialNote>
@@ -2445,9 +2445,9 @@
     
 
 
-    <!-- http://bib.ld4l.org/ontology/Classification -->
+    <!-- http://ld4l.org/ontology/bib/Classification -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/Classification">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/Classification">
         <rdfs:label xml:lang="en-us">Classification</rdfs:label>
         <rdfs:subClassOf rdf:resource="&skos;Concept"/>
         <rdfs:comment xml:lang="en-us">System of coding, assorting and organizing materials. It may be according to their subject or other category (e.g. Author Lastname, Specimen name, in the case of art it could be by country of origin or style period).</rdfs:comment>
@@ -2455,29 +2455,29 @@
     
 
 
-    <!-- http://bib.ld4l.org/ontology/Coden -->
+    <!-- http://ld4l.org/ontology/bib/Coden -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/Coden">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/Coden">
         <rdfs:label xml:lang="en-us">CODEN</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Identifier"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Identifier"/>
         <rdfs:comment xml:lang="en-us">Identifier for scientific and technical periodical titles assigned by the International CODEN Section of Chemical Abstracts Service.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/Collection -->
+    <!-- http://ld4l.org/ontology/bib/Collection -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/Collection">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/Collection">
         <rdfs:label xml:lang="en-us">Collection</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Work"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Work"/>
         <rdfs:comment xml:lang="en-us">Aggregation of resources, generally gathered together artificially. A Collection is generally gathered at the receiving end, while a Series is gathered together at the publishing end.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/ConciseTitle -->
+    <!-- http://ld4l.org/ontology/bib/ConciseTitle -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/ConciseTitle">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/ConciseTitle">
         <rdfs:label xml:lang="en-us">Concise title</rdfs:label>
         <rdfs:subClassOf rdf:resource="&madsrdf;Title"/>
         <skos:example>&apos;Modern Writing&apos; could serve as the concise title for &apos;The Berkley Book of Modern Writing&apos;.</skos:example>
@@ -2486,9 +2486,9 @@
     
 
 
-    <!-- http://bib.ld4l.org/ontology/ContainerTitle -->
+    <!-- http://ld4l.org/ontology/bib/ContainerTitle -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/ContainerTitle">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/ContainerTitle">
         <rdfs:label>Container title</rdfs:label>
         <rdfs:subClassOf rdf:resource="&madsrdf;Title"/>
         <rdfs:comment>Title on a case or container, such as a CD case.</rdfs:comment>
@@ -2496,12 +2496,12 @@
     
 
 
-    <!-- http://bib.ld4l.org/ontology/ContinuingResource -->
+    <!-- http://ld4l.org/ontology/bib/ContinuingResource -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/ContinuingResource">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/ContinuingResource">
         <rdfs:label>Continuing resource</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Work"/>
-        <owl:disjointWith rdf:resource="http://bib.ld4l.org/ontology/FiniteResource"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Work"/>
+        <owl:disjointWith rdf:resource="http://ld4l.org/ontology/bib/FiniteResource"/>
         <skos:example>The New York Times (newspaper)</skos:example>
         <skos:scopeNote>Constrasts with FiniteResource.</skos:scopeNote>
         <skos:example>Linguistic Inquiry (academic journal)</skos:example>
@@ -2511,9 +2511,9 @@
     
 
 
-    <!-- http://bib.ld4l.org/ontology/CoverTitle -->
+    <!-- http://ld4l.org/ontology/bib/CoverTitle -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/CoverTitle">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/CoverTitle">
         <rdfs:label xml:lang="en-us">Cover title</rdfs:label>
         <rdfs:subClassOf rdf:resource="&madsrdf;Title"/>
         <rdfs:comment xml:lang="en-us">Cover title that is printed on the original cover of a publication or lettered or stamped on the publisher&apos;s binding.</rdfs:comment>
@@ -2521,49 +2521,49 @@
     
 
 
-    <!-- http://bib.ld4l.org/ontology/Dataset -->
+    <!-- http://ld4l.org/ontology/bib/Dataset -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/Dataset">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/Dataset">
         <rdfs:label xml:lang="en-us">Dataset</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Work"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Work"/>
         <rdfs:comment xml:lang="en-us">Data encoded in a defined structure. Includes numeric data, environmental data,etc., used by applications software to calculate averages, correlations, etc., or to produce models, etc., but not normally displayed in its raw form.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/DdcClassification -->
+    <!-- http://ld4l.org/ontology/bib/DdcClassification -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/DdcClassification">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/DdcClassification">
         <rdfs:label>DDC classification</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Classification"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Classification"/>
         <rdfs:comment>Dewey Decimal Classification number used for subject access.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/Dissertation -->
+    <!-- http://ld4l.org/ontology/bib/Dissertation -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/Dissertation">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/Dissertation">
         <rdfs:label xml:lang="en-us">Dissertation</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/FiniteResource"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/FiniteResource"/>
         <rdfs:comment xml:lang="en-us">A thesis or disseration written in association with earning an academic degree.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/DissertationIdentifier -->
+    <!-- http://ld4l.org/ontology/bib/DissertationIdentifier -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/DissertationIdentifier">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/DissertationIdentifier">
         <rdfs:label xml:lang="en-us">Dissertation identifier</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Identifier"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Identifier"/>
         <rdfs:comment xml:lang="en-us">A local identifier assigned to a dissertation written at that institution.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/DistinctiveTitle -->
+    <!-- http://ld4l.org/ontology/bib/DistinctiveTitle -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/DistinctiveTitle">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/DistinctiveTitle">
         <rdfs:label xml:lang="en-us">Distinctive title</rdfs:label>
         <rdfs:subClassOf rdf:resource="&madsrdf;Title"/>
         <rdfs:comment xml:lang="en-us">Special title that appears in addition to the regular title on individual issues of a work and by which the issue may be known.</rdfs:comment>
@@ -2571,39 +2571,39 @@
     
 
 
-    <!-- http://bib.ld4l.org/ontology/Doi -->
+    <!-- http://ld4l.org/ontology/bib/Doi -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/Doi">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/Doi">
         <rdfs:label xml:lang="en-us">DOI</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Identifier"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Identifier"/>
         <rdfs:comment xml:lang="en-us">Digital Object Identifier.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/Ean -->
+    <!-- http://ld4l.org/ontology/bib/Ean -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/Ean">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/Ean">
         <rdfs:label xml:lang="en-us">EAN</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Identifier"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Identifier"/>
         <rdfs:comment xml:lang="en-us">International Article Number.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/Electronic -->
+    <!-- http://ld4l.org/ontology/bib/Electronic -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/Electronic">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/Electronic">
         <rdfs:label xml:lang="en-us">Electronic</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Instance"/>
         <rdfs:comment xml:lang="en-us">Resource that is intended for manipulation by a computer, residing in a carrier accessed either directly or remotely.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/Family -->
+    <!-- http://ld4l.org/ontology/bib/Family -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/Family">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/Family">
         <rdfs:label xml:lang="en-us">Family</rdfs:label>
         <rdfs:subClassOf rdf:resource="&foaf;Agent"/>
         <rdfs:comment xml:lang="en-us">Two or more persons related by birth, marriage, adoption, civil union, or similar legal status, or who otherwise present themselves as a family.</rdfs:comment>
@@ -2611,21 +2611,21 @@
     
 
 
-    <!-- http://bib.ld4l.org/ontology/Fingerprint -->
+    <!-- http://ld4l.org/ontology/bib/Fingerprint -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/Fingerprint">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/Fingerprint">
         <rdfs:label xml:lang="en-us">Fingerprint</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Identifier"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Identifier"/>
         <rdfs:comment xml:lang="en-us">Identifier that is used to assist in the identification of antiquarian books by recording information comprising groups of characters taken from specified positions on specified pages of the book.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/FiniteResource -->
+    <!-- http://ld4l.org/ontology/bib/FiniteResource -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/FiniteResource">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/FiniteResource">
         <rdfs:label>Finite resource</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Work"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Work"/>
         <rdfs:comment>A resource that is conceived and planned to have a defined endpoint. It may consist of a single part or multiple parts (e.g., a MultipartMonograph).</rdfs:comment>
         <skos:scopeNote>Constrasts with a ContinuingResource, which is conceived and planned to be ongoing with no defined endpoint.</skos:scopeNote>
         <skos:example>Pride and Prejudice</skos:example>
@@ -2634,54 +2634,54 @@
     
 
 
-    <!-- http://bib.ld4l.org/ontology/Hdl -->
+    <!-- http://ld4l.org/ontology/bib/Hdl -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/Hdl">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/Hdl">
         <rdfs:label xml:lang="en-us">HDL</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Identifier"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Identifier"/>
         <rdfs:comment xml:lang="en-us">Unique and persistent identifier for digital objects developed by the Corporation for National Research Initiatives.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/Identifier -->
+    <!-- http://ld4l.org/ontology/bib/Identifier -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/Identifier">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/Identifier">
         <rdfs:label xml:lang="en-us">Identifier</rdfs:label>
         <rdfs:comment xml:lang="en-us">Token or name that is associated with a resource, such as a URI or an ISBN.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/Index -->
+    <!-- http://ld4l.org/ontology/bib/Index -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/Index">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/Index">
         <rdfs:label xml:lang="en-us">Index</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Work"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Work"/>
         <rdfs:comment xml:lang="en-us">The index of a resource.</rdfs:comment>
         <skos:scopeNote xml:lang="en-us">Use dcterms:isPartOf to relate Index to Work it is a part of.</skos:scopeNote>
     </owl:Class>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/Instance -->
+    <!-- http://ld4l.org/ontology/bib/Instance -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/Instance">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/Instance">
         <rdfs:label xml:lang="en-us">Instance</rdfs:label>
-        <owl:disjointWith rdf:resource="http://bib.ld4l.org/ontology/Item"/>
-        <owl:disjointWith rdf:resource="http://bib.ld4l.org/ontology/Work"/>
+        <owl:disjointWith rdf:resource="http://ld4l.org/ontology/bib/Item"/>
+        <owl:disjointWith rdf:resource="http://ld4l.org/ontology/bib/Work"/>
         <rdfs:comment xml:lang="en-us">Resource reflecting an individual, material embodiment of the Work.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/IntegratingResource -->
+    <!-- http://ld4l.org/ontology/bib/IntegratingResource -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/IntegratingResource">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/IntegratingResource">
         <rdfs:label xml:lang="en-us">Integrating resource</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Work"/>
-        <owl:disjointWith rdf:resource="http://bib.ld4l.org/ontology/Monograph"/>
-        <owl:disjointWith rdf:resource="http://bib.ld4l.org/ontology/Serial"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Work"/>
+        <owl:disjointWith rdf:resource="http://ld4l.org/ontology/bib/Monograph"/>
+        <owl:disjointWith rdf:resource="http://ld4l.org/ontology/bib/Serial"/>
         <skos:example>Final print edition of AACR2 published in a binder.</skos:example>
         <skos:scopeNote>An IntegratingResource may be either finite (having a predetermined conclusion) or continuous. The class itself is therefore not a subclass of FiniteResource or ContinuingResource, but a specific member would belong to one of these two classes.</skos:scopeNote>
         <skos:example>A website that is updated continuously.</skos:example>
@@ -2691,129 +2691,129 @@
     
 
 
-    <!-- http://bib.ld4l.org/ontology/Isan -->
+    <!-- http://ld4l.org/ontology/bib/Isan -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/Isan">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/Isan">
         <rdfs:label xml:lang="en-us">ISAN</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Identifier"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Identifier"/>
         <rdfs:comment xml:lang="en-us">International Standard Audiovisual Number.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/Isbn -->
+    <!-- http://ld4l.org/ontology/bib/Isbn -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/Isbn">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/Isbn">
         <rdfs:label xml:lang="en-us">ISBN</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Identifier"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Identifier"/>
         <rdfs:comment xml:lang="en-us">International Standard Book Number.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/Isbn-10 -->
+    <!-- http://ld4l.org/ontology/bib/Isbn-10 -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/Isbn-10">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/Isbn-10">
         <rdfs:label xml:lang="en-us">ISBN-10</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Isbn"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Isbn"/>
         <rdfs:comment xml:lang="en-us">10 digit version of the International Standard Book Number.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/Isbn-13 -->
+    <!-- http://ld4l.org/ontology/bib/Isbn-13 -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/Isbn-13">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/Isbn-13">
         <rdfs:label xml:lang="en-us">ISBN-13</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Isbn"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Isbn"/>
         <rdfs:comment xml:lang="en-us">13 digit version of the International Standard Book Number.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/Ismn -->
+    <!-- http://ld4l.org/ontology/bib/Ismn -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/Ismn">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/Ismn">
         <rdfs:label xml:lang="en-us">ISMN</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Identifier"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Identifier"/>
         <rdfs:comment xml:lang="en-us">International Standard Music Number.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/Iso -->
+    <!-- http://ld4l.org/ontology/bib/Iso -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/Iso">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/Iso">
         <rdfs:label xml:lang="en-us">ISO</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Identifier"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Identifier"/>
         <rdfs:comment xml:lang="en-us">International Organization for Standardization standard number.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/Issn -->
+    <!-- http://ld4l.org/ontology/bib/Issn -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/Issn">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/Issn">
         <rdfs:label xml:lang="en-us">ISSN</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Identifier"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Identifier"/>
         <rdfs:comment xml:lang="en-us">International Standard Serial Number identifier.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/Issn-L -->
+    <!-- http://ld4l.org/ontology/bib/Issn-L -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/Issn-L">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/Issn-L">
         <rdfs:label xml:lang="en-us">ISSN-L</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Identifier"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Identifier"/>
         <rdfs:comment xml:lang="en-us">International Standard Serial Number that links together various media versions of a continuing resource.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/IssueNumber -->
+    <!-- http://ld4l.org/ontology/bib/IssueNumber -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/IssueNumber">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/IssueNumber">
         <rdfs:label xml:lang="en-us">Issue number</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Identifier"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Identifier"/>
         <rdfs:comment xml:lang="en-us">Number used to identify the issue designation, or serial identification, assigned by a publisher to a sound recording.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/Istc -->
+    <!-- http://ld4l.org/ontology/bib/Istc -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/Istc">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/Istc">
         <rdfs:label xml:lang="en-us">ISTC</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Identifier"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Identifier"/>
         <rdfs:comment xml:lang="en-us">International Standard Text code, a numbering system developed to enable the unique identification of textual works.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/Iswc -->
+    <!-- http://ld4l.org/ontology/bib/Iswc -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/Iswc">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/Iswc">
         <rdfs:label xml:lang="en-us">ISWC</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Identifier"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Identifier"/>
         <rdfs:comment xml:lang="en-us">International Standard Musical Work Code, a unique, persistent reference number for the identification of musical works.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/Item -->
+    <!-- http://ld4l.org/ontology/bib/Item -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/Item">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/Item">
         <rdfs:label xml:lang="en-us">Item</rdfs:label>
-        <owl:disjointWith rdf:resource="http://bib.ld4l.org/ontology/Work"/>
+        <owl:disjointWith rdf:resource="http://ld4l.org/ontology/bib/Work"/>
         <rdfs:comment xml:lang="en-us">A singular physical item that can be held, circulated, etc. Equivalant to the FRBR Item class.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/KeyTitle -->
+    <!-- http://ld4l.org/ontology/bib/KeyTitle -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/KeyTitle">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/KeyTitle">
         <rdfs:label xml:lang="en-us">Key title</rdfs:label>
         <rdfs:subClassOf rdf:resource="&madsrdf;Title"/>
         <rdfs:comment xml:lang="en-us">Unique title for a continuing resource that is assigned by the ISSN International Center in conjunction with an ISSN.</rdfs:comment>
@@ -2821,103 +2821,103 @@
     
 
 
-    <!-- http://bib.ld4l.org/ontology/LcOverseasAcqNumber -->
+    <!-- http://ld4l.org/ontology/bib/LcOverseasAcqNumber -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/LcOverseasAcqNumber">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/LcOverseasAcqNumber">
         <rdfs:label xml:lang="en-us">LC overseas acq number</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Identifier"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Identifier"/>
         <rdfs:comment xml:lang="en-us">Identification number assigned by the Library of Congress to works acquired through one of its overseas acquisition programs.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/LccClassification -->
+    <!-- http://ld4l.org/ontology/bib/LccClassification -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/LccClassification">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/LccClassification">
         <rdfs:label>LCC classification</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Classification"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Classification"/>
         <rdfs:comment>Library of Congress Classification number used for subject access.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/Lccn -->
+    <!-- http://ld4l.org/ontology/bib/Lccn -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/Lccn">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/Lccn">
         <rdfs:label xml:lang="en-us">LCCN</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Identifier"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Identifier"/>
         <rdfs:comment xml:lang="en-us">Library of Congress Control Number, which identifies the resource description.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/LegalDeposit -->
+    <!-- http://ld4l.org/ontology/bib/LegalDeposit -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/LegalDeposit">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/LegalDeposit">
         <rdfs:label xml:lang="en-us">Legal deposit</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Identifier"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Identifier"/>
         <rdfs:comment xml:lang="en-us">Number assigned to a copyright or legal deposit, which Identifies a resource description.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/Manuscript -->
+    <!-- http://ld4l.org/ontology/bib/Manuscript -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/Manuscript">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/Manuscript">
         <rdfs:label xml:lang="en-us">Manuscript</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Item"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Item"/>
         <rdfs:comment xml:lang="en-us">Resource that is written in handwriting or typescript. These are generally unique resources.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/MatrixNumber -->
+    <!-- http://ld4l.org/ontology/bib/MatrixNumber -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/MatrixNumber">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/MatrixNumber">
         <rdfs:label xml:lang="en-us">Matrix number</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Identifier"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Identifier"/>
         <rdfs:comment xml:lang="en-us">Matrix number from the master from which a specific sound recording was pressed.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/Monograph -->
+    <!-- http://ld4l.org/ontology/bib/Monograph -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/Monograph">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/Monograph">
         <rdfs:label xml:lang="en-us">Monograph</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/FiniteResource"/>
-        <owl:disjointWith rdf:resource="http://bib.ld4l.org/ontology/Serial"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/FiniteResource"/>
+        <owl:disjointWith rdf:resource="http://ld4l.org/ontology/bib/Serial"/>
         <rdfs:comment xml:lang="en-us">A resource that is complete in one part or intended to be complete within a finite number of parts.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/MovingImage -->
+    <!-- http://ld4l.org/ontology/bib/MovingImage -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/MovingImage">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/MovingImage">
         <rdfs:label xml:lang="en-us">Moving image</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Work"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Work"/>
         <rdfs:comment xml:lang="en-us">Images intended to be perceived as moving, including motion pictures (using liveaction and/or animation); film and video recordings of performances and events; etc.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/Multimedia -->
+    <!-- http://ld4l.org/ontology/bib/Multimedia -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/Multimedia">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/Multimedia">
         <rdfs:label xml:lang="en-us">Multimedia</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Work"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Work"/>
         <rdfs:comment xml:lang="en-us">Electronic resource that is a computer program (i.e. digitally encoded instructions intended to be processed and performed by a computer) or which consists of multiple media types that are software driven.</rdfs:comment>
         <skos:example>Examples include video games and websites.</skos:example>
     </owl:Class>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/MultipartMonograph -->
+    <!-- http://ld4l.org/ontology/bib/MultipartMonograph -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/MultipartMonograph">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/MultipartMonograph">
         <rdfs:label xml:lang="en-us">Multipart monograph</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Monograph"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Monograph"/>
         <skos:example>A dictionary in two volumes.</skos:example>
         <skos:scopeNote>A MultipartMonograph often has a continuous narrative. The component Monographs can then be linked using the predicates ld4l:precedesInNarrative and ld4l:succeedsInNarrative, especially if there is no PartNameElement of the Title to indicate sequencing.</skos:scopeNote>
         <rdfs:comment xml:lang="en-us">A resource issued in two or more parts (either simultaneously or successively) that is complete or intended to be completed within a finite number of parts.</rdfs:comment>
@@ -2928,85 +2928,85 @@
     
 
 
-    <!-- http://bib.ld4l.org/ontology/MusicPlate -->
+    <!-- http://ld4l.org/ontology/bib/MusicPlate -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/MusicPlate">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/MusicPlate">
         <rdfs:label xml:lang="en-us">Music plate</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Identifier"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Identifier"/>
         <rdfs:comment xml:lang="en-us">Number assigned by a music publisher to a specific music publication.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/MusicPublisherNumber -->
+    <!-- http://ld4l.org/ontology/bib/MusicPublisherNumber -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/MusicPublisherNumber">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/MusicPublisherNumber">
         <rdfs:label xml:lang="en-us">Music publisher number</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Identifier"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Identifier"/>
         <rdfs:comment xml:lang="en-us">Number assigned to a music publication other than an issue, matrix, or plate number</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/Nban -->
+    <!-- http://ld4l.org/ontology/bib/Nban -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/Nban">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/Nban">
         <rdfs:label xml:lang="en-us">NBAN</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Identifier"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Identifier"/>
         <rdfs:comment xml:lang="en-us">National Bibliography Agency Number, which identifies the resource description.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/Nbn -->
+    <!-- http://ld4l.org/ontology/bib/Nbn -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/Nbn">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/Nbn">
         <rdfs:label xml:lang="en-us">NBN</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Identifier"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Identifier"/>
         <rdfs:comment xml:lang="en-us">National Bibliography Number, which identifies the resource description.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/NlmClassification -->
+    <!-- http://ld4l.org/ontology/bib/NlmClassification -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/NlmClassification">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/NlmClassification">
         <rdfs:label>NLM classification</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Classification"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Classification"/>
         <rdfs:comment>National Library of Medicine Classification number used for subject access.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/NotatedMovement -->
+    <!-- http://ld4l.org/ontology/bib/NotatedMovement -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/NotatedMovement">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/NotatedMovement">
         <rdfs:label xml:lang="en-us">Notated movement</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Work"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Work"/>
         <rdfs:comment xml:lang="en-us">Graphic, non-realized representation of movement intended to be perceived visually, e.g. dance.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/NotatedMusic -->
+    <!-- http://ld4l.org/ontology/bib/NotatedMusic -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/NotatedMusic">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/NotatedMusic">
         <rdfs:label xml:lang="en-us">Notated music</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Work"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Work"/>
         <rdfs:comment xml:lang="en-us">Graphic, non-realized representation of a musical work intended to be perceived visually.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/Periodical -->
+    <!-- http://ld4l.org/ontology/bib/Periodical -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/Periodical">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/Periodical">
         <rdfs:label>Periodical</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Serial"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Serial"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&dcterms;hasPart"/>
-                <owl:allValuesFrom rdf:resource="http://bib.ld4l.org/ontology/PeriodicalPart"/>
+                <owl:allValuesFrom rdf:resource="http://ld4l.org/ontology/bib/PeriodicalPart"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>A continuing resource, typically issued at regular intervals, in which the identity of the whole predominates over the identity of the parts. The parts usually look alike, being distinguished from one another by number and date designations, though they may also have individual titles. </rdfs:comment>
@@ -3021,15 +3021,15 @@
     
 
 
-    <!-- http://bib.ld4l.org/ontology/PeriodicalPart -->
+    <!-- http://ld4l.org/ontology/bib/PeriodicalPart -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/PeriodicalPart">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/PeriodicalPart">
         <rdfs:label xml:lang="en-us">Periodical part</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/FiniteResource"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/FiniteResource"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&dcterms;isPartOf"/>
-                <owl:allValuesFrom rdf:resource="http://bib.ld4l.org/ontology/Periodical"/>
+                <owl:allValuesFrom rdf:resource="http://ld4l.org/ontology/bib/Periodical"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -3041,7 +3041,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&dcterms;hasPart"/>
-                <owl:allValuesFrom rdf:resource="http://bib.ld4l.org/ontology/PeriodicalPart"/>
+                <owl:allValuesFrom rdf:resource="http://ld4l.org/ontology/bib/PeriodicalPart"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <skos:example>The June 1, 2015 issue of The New Yorker</skos:example>
@@ -3055,18 +3055,18 @@
     
 
 
-    <!-- http://bib.ld4l.org/ontology/Policy -->
+    <!-- http://ld4l.org/ontology/bib/Policy -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/Policy">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/Policy">
         <rdfs:label xml:lang="en-us">Policy</rdfs:label>
         <rdfs:comment xml:lang="en-us">Document specifying a single policy.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/PolicySet -->
+    <!-- http://ld4l.org/ontology/bib/PolicySet -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/PolicySet">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/PolicySet">
         <rdfs:label xml:lang="en-us">Policy set</rdfs:label>
         <rdfs:subClassOf rdf:resource="&skos;Collection"/>
         <rdfs:comment>A set of policies governing one or more bibliographic resources.</rdfs:comment>
@@ -3074,39 +3074,39 @@
     
 
 
-    <!-- http://bib.ld4l.org/ontology/PostalRegistrationNumber -->
+    <!-- http://ld4l.org/ontology/bib/PostalRegistrationNumber -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/PostalRegistrationNumber">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/PostalRegistrationNumber">
         <rdfs:label xml:lang="en-us">Postal registration number</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Identifier"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Identifier"/>
         <rdfs:comment xml:lang="en-us">Number assigned to a publication for which the specified postal service permits the use of a special mailing class privilege. </rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/Print -->
+    <!-- http://ld4l.org/ontology/bib/Print -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/Print">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/Print">
         <rdfs:label xml:lang="en-us">Print</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Instance"/>
         <rdfs:comment xml:lang="en-us">A printed resource.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/PublisherNumber -->
+    <!-- http://ld4l.org/ontology/bib/PublisherNumber -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/PublisherNumber">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/PublisherNumber">
         <rdfs:label xml:lang="en-us">Publisher number</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Identifier"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Identifier"/>
         <rdfs:comment xml:lang="en-us">Number assigned by a publisher that is not one of the specific defined types.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/RunningTitle -->
+    <!-- http://ld4l.org/ontology/bib/RunningTitle -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/RunningTitle">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/RunningTitle">
         <rdfs:label xml:lang="en-us">Running title</rdfs:label>
         <rdfs:subClassOf rdf:resource="&madsrdf;Title"/>
         <rdfs:comment xml:lang="en-us">Running title, printed on the top or bottom margin of each page of a publication.</rdfs:comment>
@@ -3114,11 +3114,11 @@
     
 
 
-    <!-- http://bib.ld4l.org/ontology/Serial -->
+    <!-- http://ld4l.org/ontology/bib/Serial -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/Serial">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/Serial">
         <rdfs:label xml:lang="en-us">Serial</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/ContinuingResource"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/ContinuingResource"/>
         <skos:example>The New Yorker (magazine)</skos:example>
         <rdfs:comment xml:lang="en-us">A resource issued in successive parts, usually having numbering, that is intended to have no predetermined conclusion, such as a periodical, journal, monographic series, or newspaper.</rdfs:comment>
         <skos:example>Linguistic Inquiry (academic journal)</skos:example>
@@ -3130,11 +3130,11 @@
     
 
 
-    <!-- http://bib.ld4l.org/ontology/Series -->
+    <!-- http://ld4l.org/ontology/bib/Series -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/Series">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/Series">
         <rdfs:label xml:lang="en-us">Series</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Serial"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Serial"/>
         <skos:editorialNote>Possibly we can assert the disjointness of Series and Periodical, but there may be edge cases that are categorized as both.</skos:editorialNote>
         <rdfs:comment>A group of separate resources related to one another by the fact that each resource bears, in addition to its own title proper, a collective title applying to the group as a whole. The individual resources may or may not be numbered.</rdfs:comment>
         <skos:scopeNote>A Series may have a ld4l:frequency value to identify its periodicity, though this is less characteristic of a Series than a Periodical.</skos:scopeNote>
@@ -3147,19 +3147,19 @@
     
 
 
-    <!-- http://bib.ld4l.org/ontology/Sici -->
+    <!-- http://ld4l.org/ontology/bib/Sici -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/Sici">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/Sici">
         <rdfs:label xml:lang="en-us">SICI</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Identifier"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Identifier"/>
         <rdfs:comment xml:lang="en-us">Serial Item and Contribution Identifier.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/SourceStatus -->
+    <!-- http://ld4l.org/ontology/bib/SourceStatus -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/SourceStatus">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/SourceStatus">
         <rdfs:label>Source status</rdfs:label>
         <rdfs:subClassOf rdf:resource="&skos;Concept"/>
         <skos:editorialNote>Are there values other than supplied or transcribed? If not, we can limit the class membership using owl:oneOf.</skos:editorialNote>
@@ -3168,9 +3168,9 @@
     
 
 
-    <!-- http://bib.ld4l.org/ontology/SpineTitle -->
+    <!-- http://ld4l.org/ontology/bib/SpineTitle -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/SpineTitle">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/SpineTitle">
         <rdfs:label xml:lang="en-us">Spine title</rdfs:label>
         <rdfs:subClassOf rdf:resource="&madsrdf;Title"/>
         <rdfs:comment xml:lang="en-us">Title taken from the spine of a resource.</rdfs:comment>
@@ -3178,103 +3178,103 @@
     
 
 
-    <!-- http://bib.ld4l.org/ontology/StillImage -->
+    <!-- http://ld4l.org/ontology/bib/StillImage -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/StillImage">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/StillImage">
         <rdfs:label xml:lang="en-us">Still image</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Work"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Work"/>
         <rdfs:comment xml:lang="en-us">Resource expressed through line, shape, shading, etc., intended to be perceived visually as a still image or images in two dimensions. Includes two-dimensional images and slides and transparencies.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/StockNumber -->
+    <!-- http://ld4l.org/ontology/bib/StockNumber -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/StockNumber">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/StockNumber">
         <rdfs:label xml:lang="en-us">Stock number</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Identifier"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Identifier"/>
         <rdfs:comment xml:lang="en-us">Identification number such as distributor, publisher, or vendor number.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/Strn -->
+    <!-- http://ld4l.org/ontology/bib/Strn -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/Strn">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/Strn">
         <rdfs:label xml:lang="en-us">STRN</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Identifier"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Identifier"/>
         <skos:editorialNote>See definition of TechnicalReportNumber. Should this be a subclass of it?</skos:editorialNote>
         <rdfs:comment xml:lang="en-us">Standard Technical Report Number.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/StudyNumber -->
+    <!-- http://ld4l.org/ontology/bib/StudyNumber -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/StudyNumber">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/StudyNumber">
         <rdfs:label xml:lang="en-us">Study number</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Identifier"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Identifier"/>
         <rdfs:comment xml:lang="en-us">Identification number for a computer data file.</rdfs:comment>
         <skos:editorialNote xml:lang="en-us">If &quot;study number&quot; is not a standard term for this, change to DataFileNumber.</skos:editorialNote>
     </owl:Class>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/SystemNumber -->
+    <!-- http://ld4l.org/ontology/bib/SystemNumber -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/SystemNumber">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/SystemNumber">
         <rdfs:label xml:lang="en-us">System number</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Identifier"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Identifier"/>
         <rdfs:comment xml:lang="en-us">Control number of a system other than LCCN or NBAN, which identifies a resource description.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/Tactile -->
+    <!-- http://ld4l.org/ontology/bib/Tactile -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/Tactile">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/Tactile">
         <rdfs:label xml:lang="en-us">Tactile</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Instance"/>
         <skos:example>A resource written in braille.</skos:example>
         <rdfs:comment xml:lang="en-us">Resource that is intended to be perceived by touch.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/TechnicalReportNumber -->
+    <!-- http://ld4l.org/ontology/bib/TechnicalReportNumber -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/TechnicalReportNumber">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/TechnicalReportNumber">
         <rdfs:label xml:lang="en-us">Technical report number</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Identifier"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Identifier"/>
         <skos:editorialNote>Should Strn be a subclass of this class?</skos:editorialNote>
         <rdfs:comment xml:lang="en-us">Identification number of a report that is not a Standard Technical Report Number.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/Text -->
+    <!-- http://ld4l.org/ontology/bib/Text -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/Text">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/Text">
         <rdfs:label xml:lang="en-us">Text</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Work"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Work"/>
         <rdfs:comment xml:lang="en-us">Form of notation for language intended to be perceived visually and understood through the use of language in written or spoken form.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/ThreeDimensionalObject -->
+    <!-- http://ld4l.org/ontology/bib/ThreeDimensionalObject -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/ThreeDimensionalObject">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/ThreeDimensionalObject">
         <rdfs:label xml:lang="en-us">Three dimensional object</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Work"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Work"/>
         <rdfs:comment xml:lang="en-us">Resource in a form intended to be perceived visually in three-dimensions.Includes man-made objects such as models, sculptures, clothing, and toys, as well as naturally occurring objects such as specimens mounted for viewing.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/Topic -->
+    <!-- http://ld4l.org/ontology/bib/Topic -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/Topic">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/Topic">
         <rdfs:label xml:lang="en-us">Topic</rdfs:label>
         <rdfs:subClassOf rdf:resource="&skos;Concept"/>
         <skos:editorialNote>Individuals of this type will be derived from existing vocabularies, such as FAST headings. Or would they be subclasses rather than individuals, so that a hierarchy can be developed?</skos:editorialNote>
@@ -3283,9 +3283,9 @@
     
 
 
-    <!-- http://bib.ld4l.org/ontology/TranslatedTitle -->
+    <!-- http://ld4l.org/ontology/bib/TranslatedTitle -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/TranslatedTitle">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/TranslatedTitle">
         <rdfs:label>Translated title</rdfs:label>
         <rdfs:subClassOf rdf:resource="&madsrdf;Title"/>
         <skos:example>The film title &quot;Bella Martha&quot; is translated into English as &quot;Mostly Martha&quot;.</skos:example>
@@ -3295,9 +3295,9 @@
     
 
 
-    <!-- http://bib.ld4l.org/ontology/TransliteratedTitle -->
+    <!-- http://ld4l.org/ontology/bib/TransliteratedTitle -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/TransliteratedTitle">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/TransliteratedTitle">
         <rdfs:label>Transliterated title</rdfs:label>
         <rdfs:subClassOf rdf:resource="&madsrdf;Title"/>
         <skos:example>The Arabic title &quot;عربيّة الناس&quot; is tranliterated into Roman orthography as &quot;‘Arabiyyat al-Naas&quot;.</skos:example>
@@ -3306,50 +3306,50 @@
     
 
 
-    <!-- http://bib.ld4l.org/ontology/UdcClassification -->
+    <!-- http://ld4l.org/ontology/bib/UdcClassification -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/UdcClassification">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/UdcClassification">
         <rdfs:label>UDC classification</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Classification"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Classification"/>
         <rdfs:comment>Universal Decimal Classification number used for subject access.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/Upc -->
+    <!-- http://ld4l.org/ontology/bib/Upc -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/Upc">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/Upc">
         <rdfs:label xml:lang="en-us">UPC</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Identifier"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Identifier"/>
         <rdfs:comment xml:lang="en-us">Universal Product Code.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/VideoRecordingNumber -->
+    <!-- http://ld4l.org/ontology/bib/VideoRecordingNumber -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/VideoRecordingNumber">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/VideoRecordingNumber">
         <rdfs:label xml:lang="en-us">Video recording number</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Identifier"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Identifier"/>
         <rdfs:comment xml:lang="en-us">Number assigned by a publisher to a videorecording.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/Work -->
+    <!-- http://ld4l.org/ontology/bib/Work -->
 
-    <owl:Class rdf:about="http://bib.ld4l.org/ontology/Work">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/Work">
         <rdfs:label xml:lang="en-us">Work</rdfs:label>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://bib.ld4l.org/ontology/derivedFrom"/>
-                <owl:allValuesFrom rdf:resource="http://bib.ld4l.org/ontology/Work"/>
+                <owl:onProperty rdf:resource="http://ld4l.org/ontology/bib/derivedFrom"/>
+                <owl:allValuesFrom rdf:resource="http://ld4l.org/ontology/bib/Work"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://bib.ld4l.org/ontology/hasDerivative"/>
-                <owl:allValuesFrom rdf:resource="http://bib.ld4l.org/ontology/Work"/>
+                <owl:onProperty rdf:resource="http://ld4l.org/ontology/bib/hasDerivative"/>
+                <owl:allValuesFrom rdf:resource="http://ld4l.org/ontology/bib/Work"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <vs:term_status>stable</vs:term_status>
@@ -3371,7 +3371,7 @@
 
     <owl:Class rdf:about="&fabio;Journal">
         <rdfs:label>Journal</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Periodical"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Periodical"/>
         <skos:example>Linguistic Inquiry</skos:example>
         <skos:editorialNote>Since this class is a descendant of both ld4l:Work and fabio:Expression, it can be inferred from the existence of an individual of this type that these classes are not disjoint.</skos:editorialNote>
     </owl:Class>
@@ -3382,7 +3382,7 @@
 
     <owl:Class rdf:about="&fabio;Magazine">
         <rdfs:label>Magazine</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Periodical"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Periodical"/>
         <skos:editorialNote>Since this class is a descendant of both ld4l:Work and fabio:Expression, it can be inferred from the existence of an individual of this type that these classes are not disjoint.</skos:editorialNote>
         <skos:example>The New Yorker</skos:example>
     </owl:Class>
@@ -3393,7 +3393,7 @@
 
     <owl:Class rdf:about="&fabio;Newspaper">
         <rdfs:label>Newspaper</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Periodical"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Periodical"/>
         <skos:editorialNote>Since this class is a descendant of both ld4l:Work and fabio:Expression, it can be inferred from the existence of an individual of this type that these classes are not disjoint.</skos:editorialNote>
         <skos:example>The New York Times</skos:example>
     </owl:Class>
@@ -3574,13 +3574,13 @@
         <rdfs:label xml:lang="en-us">Work</rdfs:label>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://bib.ld4l.org/ontology/hasDerivative"/>
+                <owl:onProperty rdf:resource="http://ld4l.org/ontology/bib/hasDerivative"/>
                 <owl:allValuesFrom rdf:resource="&madsrdf;Title"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://bib.ld4l.org/ontology/derivedFrom"/>
+                <owl:onProperty rdf:resource="http://ld4l.org/ontology/bib/derivedFrom"/>
                 <owl:allValuesFrom rdf:resource="&madsrdf;Title"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -3765,9 +3765,9 @@
     
 
 
-    <!-- http://bib.ld4l.org/ontology/reviewing -->
+    <!-- http://ld4l.org/ontology/bib/reviewing -->
 
-    <owl:NamedIndividual rdf:about="http://bib.ld4l.org/ontology/reviewing">
+    <owl:NamedIndividual rdf:about="http://ld4l.org/ontology/bib/reviewing">
         <rdf:type rdf:resource="&oa;Motivation"/>
         <rdfs:label xml:lang="en-us">reviewing</rdfs:label>
         <rdfs:comment xml:lang="en-us">The motivation that represents a reviewing  of the target resource.</rdfs:comment>
@@ -3776,9 +3776,9 @@
     
 
 
-    <!-- http://bib.ld4l.org/ontology/stackViewScoring -->
+    <!-- http://ld4l.org/ontology/bib/stackViewScoring -->
 
-    <owl:NamedIndividual rdf:about="http://bib.ld4l.org/ontology/stackViewScoring">
+    <owl:NamedIndividual rdf:about="http://ld4l.org/ontology/bib/stackViewScoring">
         <rdf:type rdf:resource="&oa;Motivation"/>
         <rdfs:label xml:lang="en-us">stack view scoring</rdfs:label>
         <rdfs:comment xml:lang="en-us">The motivation that represents assigning a stack view score to the target resource.</rdfs:comment>
@@ -3787,9 +3787,9 @@
     
 
 
-    <!-- http://bib.ld4l.org/ontology/summarizing -->
+    <!-- http://ld4l.org/ontology/bib/summarizing -->
 
-    <owl:NamedIndividual rdf:about="http://bib.ld4l.org/ontology/summarizing">
+    <owl:NamedIndividual rdf:about="http://ld4l.org/ontology/bib/summarizing">
         <rdf:type rdf:resource="&oa;Motivation"/>
         <rdfs:label xml:lang="en-us">summarizing</rdfs:label>
         <rdfs:comment xml:lang="en-us">The motivation that represents a summarizing of the target resource.</rdfs:comment>
@@ -3798,20 +3798,20 @@
     
 
 
-    <!-- http://bib.ld4l.org/ontology/supplied -->
+    <!-- http://ld4l.org/ontology/bib/supplied -->
 
-    <owl:NamedIndividual rdf:about="http://bib.ld4l.org/ontology/supplied">
-        <rdf:type rdf:resource="http://bib.ld4l.org/ontology/SourceStatus"/>
+    <owl:NamedIndividual rdf:about="http://ld4l.org/ontology/bib/supplied">
+        <rdf:type rdf:resource="http://ld4l.org/ontology/bib/SourceStatus"/>
         <rdfs:label>supplied</rdfs:label>
         <rdfs:comment>Information has been supplied by the cataloger.</rdfs:comment>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://bib.ld4l.org/ontology/transcribed -->
+    <!-- http://ld4l.org/ontology/bib/transcribed -->
 
-    <owl:NamedIndividual rdf:about="http://bib.ld4l.org/ontology/transcribed">
-        <rdf:type rdf:resource="http://bib.ld4l.org/ontology/SourceStatus"/>
+    <owl:NamedIndividual rdf:about="http://ld4l.org/ontology/bib/transcribed">
+        <rdf:type rdf:resource="http://ld4l.org/ontology/bib/SourceStatus"/>
         <rdfs:label>transcribed</rdfs:label>
         <rdfs:comment>Information has been transcribed from the item.</rdfs:comment>
     </owl:NamedIndividual>
