@@ -8,8 +8,8 @@
     <!ENTITY foaf "http://xmlns.com/foaf/0.1/" >
     <!ENTITY vann "http://purl.org/vocab/vann/" >
     <!ENTITY fabio "http://purl.org/spar/fabio/" >
-    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY vocab "http://ld4l.org/ontology/bib/#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY madsrdf "http://www.loc.gov/mads/rdf/v1#" >
     <!ENTITY cnt "http://www.w3.org/2011/content#" >
     <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
@@ -50,8 +50,8 @@
         <dcterms:modified>2015-07-23</dcterms:modified>
         <dcterms:issued>2015-07-23</dcterms:issued>
         <rdfs:comment xml:lang="en-us">This bibliographic ontology is based on Rob Sanderson&apos;s and LD4L&apos;s recommended changes to BIBFRAME to better reflect best practices in the Linked Data domain. It is LD4L’s hope that derivations from BIBFRAME found in this ontology will be folded into the official BIBFRAME namespace. Efforts have been made to consider each class and property, but this ontology is largely untested. LD4L may provide revised/expanded versions in future as we identify new use cases and begin to test the ontology with instance data. The proposed changes include, but are not limited to, incorporation of the following conventions: (1) Reuse stable pre-existing classes and properties from external ontologies rather than declaring new ones within the BIBFRAME namespace. (2) Use URIs rather than strings to identify resources. (3) Replace the bf:Authority classes with Real World Entity classes for people, places, things, etc. (4) Define only one pattern to model one feature of the knowledge domain. (5) Clarify the directionality of properties via naming, definitions, and, where applicable, domain and range constraints, and add inverse properties where appropriate. (6) Name terms consistently and make the distinction between classes, object properties, and datatype properties clear through standard naming conventions.</rdfs:comment>
-        <vann:preferredNamespacePrefix>ld4l</vann:preferredNamespacePrefix>
         <owl:versionInfo xml:lang="en-us">Version 1.0</owl:versionInfo>
+        <vann:preferredNamespacePrefix>ld4l</vann:preferredNamespacePrefix>
     </owl:Ontology>
     
 
@@ -184,28 +184,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <!-- http://www.loc.gov/mads/rdf/v1#identifiesRWO -->
     
-    <owl:ObjectProperty rdf:about="http://www.loc.gov/mads/rdf/v1#identifiesRWO">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Associates a madsrdf:Authority with the Real World Object that is the subject of the authority's label.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">identifies RWO</rdfs:label>
-        <rdfs:range rdf:resource="http://www.loc.gov/mads/rdf/v1#RWO"/>
-        <owl:inverseOf rdf:resource="http://www.loc.gov/mads/rdf/v1#isIdentifiedByAuthority"/>
-    </owl:ObjectProperty>
- 
- 
- 
-    <!-- http://www.loc.gov/mads/rdf/v1#isIdentifiedByAuthority -->
-    
-    <owl:ObjectProperty rdf:about="http://www.loc.gov/mads/rdf/v1#isIdentifiedByAuthority">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Associates a Real World Object with its Authority description.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://www.loc.gov/mads/rdf/v1#RWO"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is identified by authority</rdfs:label>
-        <rdfs:range rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
-        <owl:inverseOf rdf:resource="http://www.loc.gov/mads/rdf/v1#identifiesRWO"/>
-    </owl:ObjectProperty>
-
 
 
     <!-- http://ld4l.org/ontology/bib/absorbedBy -->
@@ -213,8 +192,8 @@
     <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/absorbedBy">
         <rdfs:label xml:lang="en-us">absorbed by</rdfs:label>
         <rdfs:comment xml:lang="en-us">This Work has been incorporated into another Work.</rdfs:comment>
-        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/Work"/>
         <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Work"/>
+        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/Work"/>
         <rdfs:subPropertyOf rdf:resource="http://ld4l.org/ontology/bib/precedes"/>
     </owl:ObjectProperty>
     
@@ -258,8 +237,8 @@
     <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/continuedUnderNewTitleBy">
         <rdfs:label xml:lang="en-us">continued under new title by</rdfs:label>
         <rdfs:comment xml:lang="en-us">The content of this Work is continued by a later work under a new title.</rdfs:comment>
-        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/Work"/>
         <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Work"/>
+        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/Work"/>
         <owl:inverseOf rdf:resource="http://ld4l.org/ontology/bib/continuesUnderNewTitle"/>
         <rdfs:subPropertyOf rdf:resource="http://ld4l.org/ontology/bib/precedes"/>
     </owl:ObjectProperty>
@@ -271,8 +250,8 @@
     <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/continuesUnderNewTitle">
         <rdfs:label xml:lang="en-us">continues under new title</rdfs:label>
         <rdfs:comment xml:lang="en-us">This Work continues the content of an earlier Work under a new title.</rdfs:comment>
-        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/Work"/>
         <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Work"/>
+        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/Work"/>
         <rdfs:subPropertyOf rdf:resource="http://ld4l.org/ontology/bib/succeeds"/>
     </owl:ObjectProperty>
     
@@ -298,14 +277,6 @@
         <skos:scopeNote xml:lang="en-us">Titles can be derived from other Titles, and Works can be derived from other Works. Property restrictions on Work and Title prevent linking subjects and objects of different types.</skos:scopeNote>
         <owl:inverseOf rdf:resource="http://ld4l.org/ontology/bib/hasDerivative"/>
         <rdfs:subPropertyOf rdf:resource="http://ld4l.org/ontology/bib/succeeds"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://ld4l.org/ontology/bib/Work"/>
-                    <rdf:Description rdf:about="&madsrdf;Title"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -314,6 +285,14 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ld4l.org/ontology/bib/Work"/>
+                    <rdf:Description rdf:about="&madsrdf;Title"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -337,8 +316,8 @@
         <rdf:type rdf:resource="&owl;SymmetricProperty"/>
         <rdfs:label xml:lang="en-us">equivalent to</rdfs:label>
         <rdfs:comment xml:lang="en-us">This Instance embodies the same expression of a work as the specified Instance.</rdfs:comment>
-        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/Instance"/>
         <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Instance"/>
+        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/Instance"/>
     </owl:ObjectProperty>
     
 
@@ -397,8 +376,8 @@
     <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/hasAbsorbed">
         <rdfs:label xml:lang="en-us">has absorbed</rdfs:label>
         <rdfs:comment xml:lang="en-us">This Work has absorbed or incorporated another Work.</rdfs:comment>
-        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/Work"/>
         <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Work"/>
+        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/Work"/>
         <owl:inverseOf rdf:resource="http://ld4l.org/ontology/bib/absorbedBy"/>
         <rdfs:subPropertyOf rdf:resource="http://ld4l.org/ontology/bib/succeeds"/>
     </owl:ObjectProperty>
@@ -456,8 +435,8 @@
     <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/hasDataSource">
         <rdfs:label xml:lang="en-us">has data source</rdfs:label>
         <rdfs:comment xml:lang="en-us">Work that is a data source for this resource. It may contain information about other files, printed sources, or collection procedures.</rdfs:comment>
-        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/Work"/>
         <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Work"/>
+        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/Work"/>
     </owl:ObjectProperty>
     
 
@@ -494,8 +473,8 @@
     <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/hasExpression">
         <rdfs:label xml:lang="en-us">has expression</rdfs:label>
         <rdfs:comment xml:lang="en-us">This Work has a related expression. For use to connect Works under FRBR/RDA rules.</rdfs:comment>
-        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/Work"/>
         <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Work"/>
+        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/Work"/>
         <owl:inverseOf rdf:resource="http://ld4l.org/ontology/bib/isExpressionOf"/>
         <rdfs:subPropertyOf rdf:resource="http://ld4l.org/ontology/bib/precedes"/>
     </owl:ObjectProperty>
@@ -601,8 +580,8 @@
 
     <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/hasMusicMedium">
         <rdfs:label xml:lang="en-us">has music medium</rdfs:label>
-        <skos:editorialNote>Need a vocabulary to enumerate music medium individuals.</skos:editorialNote>
         <rdfs:comment xml:lang="en-us">Instrumental, vocal, and/or other medium of performance for which this musical resource was originally conceived, written or performed.</rdfs:comment>
+        <skos:editorialNote>Need a vocabulary to enumerate music medium individuals.</skos:editorialNote>
         <skos:scopeNote>Unparseable string values should be stored in the legacy DatatypeProperty musicMediumNote.</skos:scopeNote>
     </owl:ObjectProperty>
     
@@ -635,8 +614,8 @@
         <rdf:type rdf:resource="&owl;SymmetricProperty"/>
         <rdfs:label xml:lang="en-us">has other edition</rdfs:label>
         <rdfs:comment xml:lang="en-us">This Work has another available edition, for example a simultaneously published language edition or reprint.</rdfs:comment>
-        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/Work"/>
         <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Work"/>
+        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/Work"/>
     </owl:ObjectProperty>
     
 
@@ -879,8 +858,8 @@
     <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/isFirstOf">
         <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
         <rdfs:label xml:lang="en-us">is first of</rdfs:label>
-        <skos:scopeNote>Used to determine the run of a Serial, which by nature are ongoing.</skos:scopeNote>
         <rdfs:comment xml:lang="en-us">This part (issue, volume, etc.) of a Serial is the first part.</rdfs:comment>
+        <skos:scopeNote>Used to determine the run of a Serial, which by nature are ongoing.</skos:scopeNote>
         <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/Serial"/>
         <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Work"/>
     </owl:ObjectProperty>
@@ -976,8 +955,8 @@
     <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/isSupplementTo">
         <rdfs:label xml:lang="en-us">is supplement to</rdfs:label>
         <rdfs:comment xml:lang="en-us">This Work updates or otherwise complements the augmented work.</rdfs:comment>
-        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/Work"/>
         <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Work"/>
+        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/Work"/>
         <rdfs:subPropertyOf rdf:resource="http://ld4l.org/ontology/bib/accompanies"/>
         <owl:inverseOf rdf:resource="http://ld4l.org/ontology/bib/hasSupplement"/>
     </owl:ObjectProperty>
@@ -1133,10 +1112,10 @@
 
     <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/precedesInNarrative">
         <rdfs:label>precedes in narrative</rdfs:label>
-        <skos:example>The Fellowship of the Ring precedes The Two Towers in The Lord of the Rings narrative.</skos:example>
         <rdfs:comment>This Work narratively precedes another work.</rdfs:comment>
-        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/Work"/>
+        <skos:example>The Fellowship of the Ring precedes The Two Towers in The Lord of the Rings narrative.</skos:example>
         <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Work"/>
+        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/Work"/>
         <rdfs:subPropertyOf rdf:resource="http://ld4l.org/ontology/bib/precedes"/>
     </owl:ObjectProperty>
     
@@ -1279,8 +1258,8 @@
 
     <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/separatedInto">
         <rdfs:label xml:lang="en-us">separated into</rdfs:label>
-        <rdfs:comment xml:lang="en-us">A portion of this Work separated to form the content of a succeeding Work.</rdfs:comment>
         <skos:scopeNote>Similar to ld4l:splitInto, but here we need specify only a single resulting work, rather than two or more.</skos:scopeNote>
+        <rdfs:comment xml:lang="en-us">A portion of this Work separated to form the content of a succeeding Work.</rdfs:comment>
         <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/Work"/>
         <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Work"/>
         <rdfs:subPropertyOf rdf:resource="http://ld4l.org/ontology/bib/precedes"/>
@@ -1379,8 +1358,8 @@
     <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/translates">
         <rdfs:label xml:lang="en-us">translates</rdfs:label>
         <rdfs:comment xml:lang="en-us">This Work translates the specified Work into a language different from that of the original.</rdfs:comment>
-        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/Work"/>
         <rdfs:domain rdf:resource="http://ld4l.org/ontology/bib/Work"/>
+        <rdfs:range rdf:resource="http://ld4l.org/ontology/bib/Work"/>
         <rdfs:subPropertyOf rdf:resource="http://ld4l.org/ontology/bib/derivedFrom"/>
         <owl:inverseOf rdf:resource="http://ld4l.org/ontology/bib/translatedAs"/>
     </owl:ObjectProperty>
@@ -1517,6 +1496,7 @@
     <owl:ObjectProperty rdf:about="&madsrdf;identifiesRWO">
         <rdfs:label rdf:datatype="&xsd;string">identifies RWO</rdfs:label>
         <rdfs:comment rdf:datatype="&xsd;string">Associates a madsrdf:Authority with the Real World Object that is the subject of the authority&apos;s label.</rdfs:comment>
+        <rdfs:domain rdf:resource="&madsrdf;Authority"/>
         <rdfs:range rdf:resource="&madsrdf;RWO"/>
     </owl:ObjectProperty>
     
@@ -1528,6 +1508,7 @@
         <rdfs:label rdf:datatype="&xsd;string">is identified by authority</rdfs:label>
         <rdfs:comment rdf:datatype="&xsd;string">Associates a Real World Object with its Authority description.</rdfs:comment>
         <rdfs:range rdf:resource="&madsrdf;Authority"/>
+        <rdfs:domain rdf:resource="&madsrdf;RWO"/>
         <owl:inverseOf rdf:resource="&madsrdf;identifiesRWO"/>
     </owl:ObjectProperty>
     
@@ -2503,10 +2484,10 @@
         <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Work"/>
         <owl:disjointWith rdf:resource="http://ld4l.org/ontology/bib/FiniteResource"/>
         <skos:example>The New York Times (newspaper)</skos:example>
+        <rdfs:comment>A resource that is conceived and planned to be ongoing and have no defined endpoint.</rdfs:comment>
+        <skos:scopeNote>A ContinuingResource may have an actual end due to unplanned circumstances, but the intent at the time of creation was for it to be ongoing.</skos:scopeNote>
         <skos:scopeNote>Constrasts with FiniteResource.</skos:scopeNote>
         <skos:example>Linguistic Inquiry (academic journal)</skos:example>
-        <skos:scopeNote>A ContinuingResource may have an actual end due to unplanned circumstances, but the intent at the time of creation was for it to be ongoing.</skos:scopeNote>
-        <rdfs:comment>A resource that is conceived and planned to be ongoing and have no defined endpoint.</rdfs:comment>
     </owl:Class>
     
 
@@ -2627,9 +2608,9 @@
         <rdfs:label>Finite resource</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Work"/>
         <rdfs:comment>A resource that is conceived and planned to have a defined endpoint. It may consist of a single part or multiple parts (e.g., a MultipartMonograph).</rdfs:comment>
-        <skos:scopeNote>Constrasts with a ContinuingResource, which is conceived and planned to be ongoing with no defined endpoint.</skos:scopeNote>
         <skos:example>Pride and Prejudice</skos:example>
         <skos:example>The Lord of the Rings trilogy</skos:example>
+        <skos:scopeNote>Constrasts with a ContinuingResource, which is conceived and planned to be ongoing with no defined endpoint.</skos:scopeNote>
     </owl:Class>
     
 
@@ -2682,10 +2663,10 @@
         <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Work"/>
         <owl:disjointWith rdf:resource="http://ld4l.org/ontology/bib/Monograph"/>
         <owl:disjointWith rdf:resource="http://ld4l.org/ontology/bib/Serial"/>
-        <skos:example>Final print edition of AACR2 published in a binder.</skos:example>
-        <skos:scopeNote>An IntegratingResource may be either finite (having a predetermined conclusion) or continuous. The class itself is therefore not a subclass of FiniteResource or ContinuingResource, but a specific member would belong to one of these two classes.</skos:scopeNote>
         <skos:example>A website that is updated continuously.</skos:example>
         <skos:example>A loose-leaf manual that is updated by means of replacement pages.</skos:example>
+        <skos:example>Final print edition of AACR2 published in a binder.</skos:example>
+        <skos:scopeNote>An IntegratingResource may be either finite (having a predetermined conclusion) or continuous. The class itself is therefore not a subclass of FiniteResource or ContinuingResource, but a specific member would belong to one of these two classes.</skos:scopeNote>
         <rdfs:comment xml:lang="en-us">Cataloging resource that is added to or changed by means of updates that do not remain discrete but are integrated into the whole.</rdfs:comment>
     </owl:Class>
     
@@ -2919,11 +2900,11 @@
         <rdfs:label xml:lang="en-us">Multipart monograph</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Monograph"/>
         <skos:example>A dictionary in two volumes.</skos:example>
-        <skos:scopeNote>A MultipartMonograph often has a continuous narrative. The component Monographs can then be linked using the predicates ld4l:precedesInNarrative and ld4l:succeedsInNarrative, especially if there is no PartNameElement of the Title to indicate sequencing.</skos:scopeNote>
-        <rdfs:comment xml:lang="en-us">A resource issued in two or more parts (either simultaneously or successively) that is complete or intended to be completed within a finite number of parts.</rdfs:comment>
         <skos:example>Three audiocassettes issued as a set.</skos:example>
-        <skos:example>The Lord of the Rings is a MultipartMonograph with a continuous narrative.</skos:example>
         <skos:example>The television series Cosmos is a MultipartMonograph (having a defined endpoint) with no continuous narrative.</skos:example>
+        <rdfs:comment xml:lang="en-us">A resource issued in two or more parts (either simultaneously or successively) that is complete or intended to be completed within a finite number of parts.</rdfs:comment>
+        <skos:example>The Lord of the Rings is a MultipartMonograph with a continuous narrative.</skos:example>
+        <skos:scopeNote>A MultipartMonograph often has a continuous narrative. The component Monographs can then be linked using the predicates ld4l:precedesInNarrative and ld4l:succeedsInNarrative, especially if there is no PartNameElement of the Title to indicate sequencing.</skos:scopeNote>
     </owl:Class>
     
 
@@ -3009,14 +2990,14 @@
                 <owl:allValuesFrom rdf:resource="http://ld4l.org/ontology/bib/PeriodicalPart"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>A continuing resource, typically issued at regular intervals, in which the identity of the whole predominates over the identity of the parts. The parts usually look alike, being distinguished from one another by number and date designations, though they may also have individual titles. </rdfs:comment>
-        <skos:example>The New Yorker (magazine)</skos:example>
-        <skos:editorialNote>Possibly we can assert the disjointness of Series and Periodical, but there may be edge cases that are categorized as both.</skos:editorialNote>
-        <skos:example>The New York Times (newspaper)</skos:example>
-        <skos:example>Linguistic Inquiry (academic journal)</skos:example>
-        <skos:scopeNote>A Periodical will typically have a ld4l:frequency value to identify its intended periodicity. While it&apos;s true that intent can be subjective, there are usually clear indications, such as a stated frequency of &quot;monthly.&quot;</skos:scopeNote>
-        <skos:scopeNote>In a Periodical, as opposed to a Series (the other main subclass of Serial), the Periodical itself is the primary focus and has the primary identity; the parts are not stand-alone works.</skos:scopeNote>
         <skos:scopeNote>A Periodical is related to its parts via the predicate dcterms:hasPart.</skos:scopeNote>
+        <skos:scopeNote>In a Periodical, as opposed to a Series (the other main subclass of Serial), the Periodical itself is the primary focus and has the primary identity; the parts are not stand-alone works.</skos:scopeNote>
+        <skos:example>The New Yorker (magazine)</skos:example>
+        <skos:example>Linguistic Inquiry (academic journal)</skos:example>
+        <skos:editorialNote>Possibly we can assert the disjointness of Series and Periodical, but there may be edge cases that are categorized as both.</skos:editorialNote>
+        <skos:scopeNote>A Periodical will typically have a ld4l:frequency value to identify its intended periodicity. While it&apos;s true that intent can be subjective, there are usually clear indications, such as a stated frequency of &quot;monthly.&quot;</skos:scopeNote>
+        <rdfs:comment>A continuing resource, typically issued at regular intervals, in which the identity of the whole predominates over the identity of the parts. The parts usually look alike, being distinguished from one another by number and date designations, though they may also have individual titles. </rdfs:comment>
+        <skos:example>The New York Times (newspaper)</skos:example>
     </owl:Class>
     
 
@@ -3034,23 +3015,23 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&dcterms;isPartOf"/>
-                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&dcterms;hasPart"/>
                 <owl:allValuesFrom rdf:resource="http://ld4l.org/ontology/bib/PeriodicalPart"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&dcterms;isPartOf"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:example>Volume 3</skos:example>
+        <skos:editorialNote>We may want to define subclasses Volume, Issue, Part, etc. if these have distinct properties. Otherwise, they can simply be identified by their rdfs:labels.</skos:editorialNote>
         <skos:example>The June 1, 2015 issue of The New Yorker</skos:example>
         <skos:example>July 31, 2015</skos:example>
-        <rdfs:comment xml:lang="en-us">One unit or member of a Periodical. Can be a volume, issue, part, etc.</rdfs:comment>
-        <skos:editorialNote>We may want to define subclasses Volume, Issue, Part, etc. if these have distinct properties. Otherwise, they can simply be identified by their rdfs:labels.</skos:editorialNote>
-        <skos:scopeNote>A PeriodicalPart is related to the enclosing Periodical via dcterms:isPartOf and inverse dcterms:hasPart. If a PeriodicalPart contains other PeriodicalParts, such as a Periodical volume that contains issues, these are also related using dcterms:hasPart.</skos:scopeNote>
         <skos:example>Issue 12</skos:example>
-        <skos:example>Volume 3</skos:example>
+        <skos:scopeNote>A PeriodicalPart is related to the enclosing Periodical via dcterms:isPartOf and inverse dcterms:hasPart. If a PeriodicalPart contains other PeriodicalParts, such as a Periodical volume that contains issues, these are also related using dcterms:hasPart.</skos:scopeNote>
+        <rdfs:comment xml:lang="en-us">One unit or member of a Periodical. Can be a volume, issue, part, etc.</rdfs:comment>
     </owl:Class>
     
 
@@ -3094,6 +3075,14 @@
     
 
 
+    <!-- http://ld4l.org/ontology/bib/Provision -->
+
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/Provision">
+        <rdfs:label xml:lang="en">Provision</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://ld4l.org/ontology/bib/PublisherNumber -->
 
     <owl:Class rdf:about="http://ld4l.org/ontology/bib/PublisherNumber">
@@ -3119,13 +3108,13 @@
     <owl:Class rdf:about="http://ld4l.org/ontology/bib/Serial">
         <rdfs:label xml:lang="en-us">Serial</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/ContinuingResource"/>
-        <skos:example>The New Yorker (magazine)</skos:example>
-        <rdfs:comment xml:lang="en-us">A resource issued in successive parts, usually having numbering, that is intended to have no predetermined conclusion, such as a periodical, journal, monographic series, or newspaper.</rdfs:comment>
-        <skos:example>Linguistic Inquiry (academic journal)</skos:example>
         <skos:example>The New York Times (newspaper)</skos:example>
-        <skos:scopeNote>A Serial may have a ld4l:frequency value to identify its periodicity. This is more typical of the Periodical subclass than the Series subclass.</skos:scopeNote>
-        <skos:scopeNote>There is some ambiguity with other recurring publications, such as conference proceedings. However, a conference proceedings may be a singular item, since not all conferences recur. Even when the conference does recur, the recurrence of the proceedings is an artifact of the recurrence of the conference, rather than an inherent characteristic of the proceedings itself.</skos:scopeNote>
+        <skos:example>The New Yorker (magazine)</skos:example>
+        <skos:example>Linguistic Inquiry (academic journal)</skos:example>
         <skos:example>Synthesis Lecture on the Semantic Web: Theory and Technology (monographic series)</skos:example>
+        <skos:scopeNote>There is some ambiguity with other recurring publications, such as conference proceedings. However, a conference proceedings may be a singular item, since not all conferences recur. Even when the conference does recur, the recurrence of the proceedings is an artifact of the recurrence of the conference, rather than an inherent characteristic of the proceedings itself.</skos:scopeNote>
+        <skos:scopeNote>A Serial may have a ld4l:frequency value to identify its periodicity. This is more typical of the Periodical subclass than the Series subclass.</skos:scopeNote>
+        <rdfs:comment xml:lang="en-us">A resource issued in successive parts, usually having numbering, that is intended to have no predetermined conclusion, such as a periodical, journal, monographic series, or newspaper.</rdfs:comment>
     </owl:Class>
     
 
@@ -3135,12 +3124,12 @@
     <owl:Class rdf:about="http://ld4l.org/ontology/bib/Series">
         <rdfs:label xml:lang="en-us">Series</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Serial"/>
-        <skos:editorialNote>Possibly we can assert the disjointness of Series and Periodical, but there may be edge cases that are categorized as both.</skos:editorialNote>
-        <rdfs:comment>A group of separate resources related to one another by the fact that each resource bears, in addition to its own title proper, a collective title applying to the group as a whole. The individual resources may or may not be numbered.</rdfs:comment>
-        <skos:scopeNote>A Series may have a ld4l:frequency value to identify its periodicity, though this is less characteristic of a Series than a Periodical.</skos:scopeNote>
-        <skos:example>Synthesis Lectures on The Semantic Web; Theory and Techology. Its members are monographs such as Linked Data: Evolving the Web into a Global Data Space; VIVO: A Semantic Approach to Scholarly Networking and Discovery.</skos:example>
         <skos:scopeNote>While both Series and MultipartMonographs have Monographs as members, they are distinguished from one another in that a Series is ongoing, while a MultipartMonograph has or is intended to have a predefined endpoint.</skos:scopeNote>
+        <skos:editorialNote>Possibly we can assert the disjointness of Series and Periodical, but there may be edge cases that are categorized as both.</skos:editorialNote>
+        <skos:scopeNote>A Series may have a ld4l:frequency value to identify its periodicity, though this is less characteristic of a Series than a Periodical.</skos:scopeNote>
         <skos:scopeNote>The parts of a Series are either Monographs or Serials. A Series is related to its component parts via dcterms:hasPart.</skos:scopeNote>
+        <rdfs:comment>A group of separate resources related to one another by the fact that each resource bears, in addition to its own title proper, a collective title applying to the group as a whole. The individual resources may or may not be numbered.</rdfs:comment>
+        <skos:example>Synthesis Lectures on The Semantic Web; Theory and Techology. Its members are monographs such as Linked Data: Evolving the Web into a Global Data Space; VIVO: A Semantic Approach to Scholarly Networking and Discovery.</skos:example>
         <skos:editorialNote>The current definition of a Series includes MultipartMonographs, so that a Series could be either a FiniteResource or a ContinuingResource. This proposal redefines Series as a type of ContinuingResource.</skos:editorialNote>
         <skos:scopeNote>A Series contrasts with a Periodical, the other main subclass of Serial, in that in a Series the parts are the primary focus and are stand-alone works. The Series title mostly exists to tie these separate resources together, often for marketing purposes. A Periodical typically has regularly recurring parts, which are generally numbered, though may also bear individual titles.</skos:scopeNote>
     </owl:Class>
@@ -3162,8 +3151,8 @@
     <owl:Class rdf:about="http://ld4l.org/ontology/bib/SourceStatus">
         <rdfs:label>Source status</rdfs:label>
         <rdfs:subClassOf rdf:resource="&skos;Concept"/>
-        <skos:editorialNote>Are there values other than supplied or transcribed? If not, we can limit the class membership using owl:oneOf.</skos:editorialNote>
         <rdfs:comment>The source of information, such as supplied by the cataloger or transcribed from the item. It is related to the resource it describes via the property ld4l:hasSourceStatus and its inverse.</rdfs:comment>
+        <skos:editorialNote>Are there values other than supplied or transcribed? If not, we can limit the class membership using owl:oneOf.</skos:editorialNote>
     </owl:Class>
     
 
@@ -3246,8 +3235,8 @@
     <owl:Class rdf:about="http://ld4l.org/ontology/bib/TechnicalReportNumber">
         <rdfs:label xml:lang="en-us">Technical report number</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Identifier"/>
-        <skos:editorialNote>Should Strn be a subclass of this class?</skos:editorialNote>
         <rdfs:comment xml:lang="en-us">Identification number of a report that is not a Standard Technical Report Number.</rdfs:comment>
+        <skos:editorialNote>Should Strn be a subclass of this class?</skos:editorialNote>
     </owl:Class>
     
 
@@ -3277,8 +3266,8 @@
     <owl:Class rdf:about="http://ld4l.org/ontology/bib/Topic">
         <rdfs:label xml:lang="en-us">Topic</rdfs:label>
         <rdfs:subClassOf rdf:resource="&skos;Concept"/>
-        <skos:editorialNote>Individuals of this type will be derived from existing vocabularies, such as FAST headings. Or would they be subclasses rather than individuals, so that a hierarchy can be developed?</skos:editorialNote>
         <rdfs:comment xml:lang="en-us">Concept or area of knowledge.</rdfs:comment>
+        <skos:editorialNote>Individuals of this type will be derived from existing vocabularies, such as FAST headings. Or would they be subclasses rather than individuals, so that a hierarchy can be developed?</skos:editorialNote>
     </owl:Class>
     
 
@@ -3288,9 +3277,9 @@
     <owl:Class rdf:about="http://ld4l.org/ontology/bib/TranslatedTitle">
         <rdfs:label>Translated title</rdfs:label>
         <rdfs:subClassOf rdf:resource="&madsrdf;Title"/>
+        <rdfs:comment>A title translated from another title.</rdfs:comment>
         <skos:example>The film title &quot;Bella Martha&quot; is translated into English as &quot;Mostly Martha&quot;.</skos:example>
         <skos:scopeNote>The TranslatedTitle should be distinguished from two other cases. First, if a Work is translated into another language, the translated Work has a Title. This Title is linked directly to the translated Work rather than to a Title; that is, it is the Title of a translation, rather than the translation of a Title. Second, a Work may have multiple titles in different languages, though none of the titles are the source of the others; examples might be a musical composition or a bilingual book. For example, an Arabic language textbook has the Arabic title &quot;عربيّة الناس&quot;, literally &quot;Arabic of the People,&quot; and the English title &quot;Living Arabic&quot;; neither is a translation of the other. These Titles are also linked directly to the Work, and the language of each Title is denoted through its dcterms:language value.</skos:scopeNote>
-        <rdfs:comment>A title translated from another title.</rdfs:comment>
     </owl:Class>
     
 
@@ -3300,8 +3289,8 @@
     <owl:Class rdf:about="http://ld4l.org/ontology/bib/TransliteratedTitle">
         <rdfs:label>Transliterated title</rdfs:label>
         <rdfs:subClassOf rdf:resource="&madsrdf;Title"/>
-        <skos:example>The Arabic title &quot;عربيّة الناس&quot; is tranliterated into Roman orthography as &quot;‘Arabiyyat al-Naas&quot;.</skos:example>
         <rdfs:comment>A title transliterated from another title.</rdfs:comment>
+        <skos:example>The Arabic title &quot;عربيّة الناس&quot; is tranliterated into Roman orthography as &quot;‘Arabiyyat al-Naas&quot;.</skos:example>
     </owl:Class>
     
 
@@ -3342,18 +3331,18 @@
         <rdfs:label xml:lang="en-us">Work</rdfs:label>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ld4l.org/ontology/bib/derivedFrom"/>
+                <owl:onProperty rdf:resource="http://ld4l.org/ontology/bib/hasDerivative"/>
                 <owl:allValuesFrom rdf:resource="http://ld4l.org/ontology/bib/Work"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ld4l.org/ontology/bib/hasDerivative"/>
+                <owl:onProperty rdf:resource="http://ld4l.org/ontology/bib/derivedFrom"/>
                 <owl:allValuesFrom rdf:resource="http://ld4l.org/ontology/bib/Work"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <vs:term_status>stable</vs:term_status>
         <rdfs:comment xml:lang="en-us">Resource reflecting a conceptual essence of the cataloging resource.</rdfs:comment>
+        <vs:term_status>stable</vs:term_status>
     </owl:Class>
     
 
@@ -3574,13 +3563,13 @@
         <rdfs:label xml:lang="en-us">Work</rdfs:label>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ld4l.org/ontology/bib/hasDerivative"/>
+                <owl:onProperty rdf:resource="http://ld4l.org/ontology/bib/derivedFrom"/>
                 <owl:allValuesFrom rdf:resource="&madsrdf;Title"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ld4l.org/ontology/bib/derivedFrom"/>
+                <owl:onProperty rdf:resource="http://ld4l.org/ontology/bib/hasDerivative"/>
                 <owl:allValuesFrom rdf:resource="&madsrdf;Title"/>
             </owl:Restriction>
         </rdfs:subClassOf>
