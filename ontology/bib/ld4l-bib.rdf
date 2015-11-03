@@ -103,7 +103,7 @@
     <owl:AnnotationProperty rdf:about="&skos;definition">
         <rdfs:label xml:lang="en">definition</rdfs:label>
         <skos:definition xml:lang="en">A statement or formal explanation of the meaning of a concept.</skos:definition>
-        <rdfs:subPropertyOf rdf:resource="&vocab;note"/>
+        <rdfs:subPropertyOf rdf:resource="http://ld4l.org/ontology/bib/note"/>
         <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
     </owl:AnnotationProperty>
     
