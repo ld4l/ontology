@@ -8,7 +8,6 @@
     <!ENTITY foaf "http://xmlns.com/foaf/0.1/" >
     <!ENTITY vann "http://purl.org/vocab/vann/" >
     <!ENTITY fabio "http://purl.org/spar/fabio/" >
-    <!ENTITY vocab "http://ld4l.org/ontology/bib/#" >
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY madsrdf "http://www.loc.gov/mads/rdf/v1#" >
     <!ENTITY cnt "http://www.w3.org/2011/content#" >
@@ -42,7 +41,6 @@
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:vocab="http://ld4l.org/ontology/bib/#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:vivo="http://vivoweb.org/ontology/core#">
     <owl:Ontology rdf:about="http://ld4l.org/ontology/bib/">
@@ -67,9 +65,9 @@
     
 
 
-    <!-- http://ld4l.org/ontology/bib/#note -->
+    <!-- http://ld4l.org/ontology/bib/note -->
 
-    <owl:AnnotationProperty rdf:about="&vocab;note"/>
+    <owl:AnnotationProperty rdf:about="http://ld4l.org/ontology/bib/note"/>
     
 
 
