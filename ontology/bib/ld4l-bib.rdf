@@ -2399,6 +2399,16 @@
     
 
 
+    <!-- http://ld4l.org/ontology/bib/AuthorContribution -->
+
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/AuthorContribution">
+        <rdfs:label xml:lang="en">Author Contribution</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Contribution"/>
+        <rdfs:comment xml:lang="en">An author contribution to a work by an agent.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://ld4l.org/ontology/bib/Award -->
 
     <owl:Class rdf:about="http://ld4l.org/ontology/bib/Award">
@@ -2558,6 +2568,16 @@
         <rdfs:label>DDC classification</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Classification"/>
         <rdfs:comment>Dewey Decimal Classification number used for subject access.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ld4l.org/ontology/bib/DdcShelfMark -->
+
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/DdcShelfMark">
+        <rdfs:label>DDC shelf mark</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/ShelfMark"/>
+        <rdfs:comment>Shelf mark based on Dewey Decimal Classification.</rdfs:comment>
     </owl:Class>
     
 
@@ -2862,6 +2882,16 @@
     
 
 
+    <!-- http://ld4l.org/ontology/bib/LccShelfMark -->
+
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/LccShelfMark">
+        <rdfs:label>LCC shelf mark</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/ShelfMark"/>
+        <rdfs:comment>Shelf mark based on Library of Congress Classification.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://ld4l.org/ontology/bib/Lccn -->
 
     <owl:Class rdf:about="http://ld4l.org/ontology/bib/Lccn">
@@ -2999,6 +3029,16 @@
     
 
 
+    <!-- http://ld4l.org/ontology/bib/NlmShelfMark -->
+
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/NlmShelfMark">
+        <rdfs:label>NLM shelf mark</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/ShelfMark"/>
+        <rdfs:comment>Shelf mark based on National Library of Medicine Classification.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://ld4l.org/ontology/bib/NotatedMovement -->
 
     <owl:Class rdf:about="http://ld4l.org/ontology/bib/NotatedMovement">
@@ -3049,12 +3089,6 @@
         <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/FiniteResource"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&dcterms;isPartOf"/>
-                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&dcterms;hasPart"/>
                 <owl:allValuesFrom rdf:resource="http://ld4l.org/ontology/bib/PeriodicalPart"/>
             </owl:Restriction>
@@ -3063,6 +3097,12 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&dcterms;isPartOf"/>
                 <owl:allValuesFrom rdf:resource="http://ld4l.org/ontology/bib/Periodical"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&dcterms;isPartOf"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <skos:example>Volume 3</skos:example>
@@ -3181,34 +3221,12 @@
 
     <owl:Class rdf:about="http://ld4l.org/ontology/bib/ShelfMark">
         <rdfs:label>Shelf mark</rdfs:label>
-        <rdfs:comment>The shelf mark of an item</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Classification"/>
+        <rdfs:comment>The shelf mark of an item</rdfs:comment>
     </owl:Class>
     
-    <owl:Class rdf:about="http://ld4l.org/ontology/bib/LccShelfMark">
-        <rdfs:label>LCC shelf mark</rdfs:label>
-        <rdfs:comment>Shelf mark based on Library of Congress Classification.</rdfs:comment>
-        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/ShelfMark"/>
-    </owl:Class>
 
-    <owl:Class rdf:about="http://ld4l.org/ontology/bib/DdcShelfMark">
-        <rdfs:label>DDC shelf mark</rdfs:label>
-        <rdfs:comment>Shelf mark based on Dewey Decimal Classification.</rdfs:comment>
-        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/ShelfMark"/>
-    </owl:Class>
-    
-    <owl:Class rdf:about="http://ld4l.org/ontology/bib/NlmShelfMark">
-        <rdfs:label>NLM shelf mark</rdfs:label>
-        <rdfs:comment>Shelf mark based on National Library of Medicine Classification.</rdfs:comment>
-        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/ShelfMark"/>
-    </owl:Class>
-    
-    <owl:Class rdf:about="http://ld4l.org/ontology/bib/UdcShelfMark">
-        <rdfs:label>UDC shelf mark</rdfs:label>
-        <rdfs:comment>Shelf mark based on Universal Decimal Classification.</rdfs:comment>
-        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/ShelfMark"/>
-    </owl:Class>
-    
+
     <!-- http://ld4l.org/ontology/bib/Sici -->
 
     <owl:Class rdf:about="http://ld4l.org/ontology/bib/Sici">
@@ -3378,6 +3396,16 @@
     
 
 
+    <!-- http://ld4l.org/ontology/bib/UdcShelfMark -->
+
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/UdcShelfMark">
+        <rdfs:label>UDC shelf mark</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/ShelfMark"/>
+        <rdfs:comment>Shelf mark based on Universal Decimal Classification.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://ld4l.org/ontology/bib/Upc -->
 
     <owl:Class rdf:about="http://ld4l.org/ontology/bib/Upc">
@@ -3404,13 +3432,13 @@
         <rdfs:label xml:lang="en-us">Work</rdfs:label>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ld4l.org/ontology/bib/hasDerivative"/>
+                <owl:onProperty rdf:resource="http://ld4l.org/ontology/bib/derivedFrom"/>
                 <owl:allValuesFrom rdf:resource="http://ld4l.org/ontology/bib/Work"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ld4l.org/ontology/bib/derivedFrom"/>
+                <owl:onProperty rdf:resource="http://ld4l.org/ontology/bib/hasDerivative"/>
                 <owl:allValuesFrom rdf:resource="http://ld4l.org/ontology/bib/Work"/>
             </owl:Restriction>
         </rdfs:subClassOf>
