@@ -2508,6 +2508,15 @@
     
 
 
+    <!-- http://ld4l.org/ontology/bib/Conference -->
+
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/Conference">
+        <rdfs:label>Conference</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&vivo;Meeting"/>
+    </owl:Class>
+    
+
+
     <!-- http://ld4l.org/ontology/bib/ContainerTitle -->
 
     <owl:Class rdf:about="http://ld4l.org/ontology/bib/ContainerTitle">
@@ -3096,13 +3105,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&dcterms;isPartOf"/>
-                <owl:allValuesFrom rdf:resource="http://ld4l.org/ontology/bib/Periodical"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&dcterms;isPartOf"/>
-                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+                <owl:allValuesFrom rdf:resource="http://ld4l.org/ontology/bib/Periodical"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <skos:example>Volume 3</skos:example>
@@ -3664,13 +3673,13 @@
         <rdfs:label xml:lang="en-us">Work</rdfs:label>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ld4l.org/ontology/bib/derivedFrom"/>
+                <owl:onProperty rdf:resource="http://ld4l.org/ontology/bib/hasDerivative"/>
                 <owl:allValuesFrom rdf:resource="&madsrdf;Title"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ld4l.org/ontology/bib/hasDerivative"/>
+                <owl:onProperty rdf:resource="http://ld4l.org/ontology/bib/derivedFrom"/>
                 <owl:allValuesFrom rdf:resource="&madsrdf;Title"/>
             </owl:Restriction>
         </rdfs:subClassOf>
