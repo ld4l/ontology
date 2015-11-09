@@ -2641,6 +2641,16 @@
     
 
 
+    <!-- http://ld4l.org/ontology/bib/DistributorProvision -->
+
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/DistributorProvision">
+        <rdfs:label xml:lang="en">Distributor Provision</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Provision"/>
+        <rdfs:comment xml:lang="en">A distributor provision of an instance by an agent.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://ld4l.org/ontology/bib/Doi -->
 
     <owl:Class rdf:about="http://ld4l.org/ontology/bib/Doi">
@@ -3218,7 +3228,7 @@
 
     <owl:Class rdf:about="http://ld4l.org/ontology/bib/Provision">
         <rdfs:label xml:lang="en">Provision</rdfs:label>
-        <rdfs:comment xml:lang="en">A provision of an instance by a provider agent, e.g. when and where a book was published by a publisher.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A provision of an instance by an agent, e.g. when and where a book was published by a publisher.</rdfs:comment>
     </owl:Class>
     
 
@@ -3229,6 +3239,16 @@
         <rdfs:label xml:lang="en-us">Publisher number</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Identifier"/>
         <rdfs:comment xml:lang="en-us">Number assigned by a publisher that is not one of the specific defined types.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ld4l.org/ontology/bib/PublisherProvision -->
+
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/PublisherProvision">
+        <rdfs:label xml:lang="en">Publisher Provision</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Provision"/>
+        <rdfs:comment xml:lang="en">A publisher provision of an instance by an agent.</rdfs:comment>
     </owl:Class>
     
 
