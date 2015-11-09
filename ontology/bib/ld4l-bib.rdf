@@ -2366,6 +2366,13 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+
+    <!-- http://www.w3.org/TR/owl-time/TemporalEntity -->
+    
+    <owl:Class rdf:about="http://www.w3.org/TR/owl-time/TemporalEntity">
+        <rdfs:label xml:lang="en-us">Temporal entity</rdfs:label>
+        <rdfs:comment xml:lang="en-us">A temporal instant or interval.</rdfs:comment>
+    </owl:Class>
     
 
 
