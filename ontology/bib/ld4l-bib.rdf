@@ -2504,6 +2504,16 @@
     
 
 
+    <!-- http://ld4l.org/ontology/bib/ComposerContribution -->
+
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/ComposerContribution">
+        <rdfs:label xml:lang="en">Composer Contribution</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Contribution"/>
+        <rdfs:comment xml:lang="en">A composer contribution to a work by an agent.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://ld4l.org/ontology/bib/ConciseTitle -->
 
     <owl:Class rdf:about="http://ld4l.org/ontology/bib/ConciseTitle">
@@ -2511,6 +2521,16 @@
         <rdfs:subClassOf rdf:resource="&madsrdf;Title"/>
         <skos:example>&apos;Modern Writing&apos; could serve as the concise title for &apos;The Berkley Book of Modern Writing&apos;.</skos:example>
         <rdfs:comment xml:lang="en-us">The concise version of a Title.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ld4l.org/ontology/bib/ConductorContribution -->
+
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/ConductorContribution">
+        <rdfs:label xml:lang="en">Conductor Contribution</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Contribution"/>
+        <rdfs:comment xml:lang="en">A musical conductor contribution to a work by an agent.</rdfs:comment>
     </owl:Class>
     
 
@@ -2628,6 +2648,16 @@
     
 
 
+    <!-- http://ld4l.org/ontology/bib/DistributorProvision -->
+
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/DistributorProvision">
+        <rdfs:label xml:lang="en">Distributor Provision</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Provision"/>
+        <rdfs:comment xml:lang="en">A distributor provision of an instance by an agent.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://ld4l.org/ontology/bib/Doi -->
 
     <owl:Class rdf:about="http://ld4l.org/ontology/bib/Doi">
@@ -2644,6 +2674,16 @@
         <rdfs:label xml:lang="en-us">EAN</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Identifier"/>
         <rdfs:comment xml:lang="en-us">International Article Number.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ld4l.org/ontology/bib/EditorContribution -->
+
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/EditorContribution">
+        <rdfs:label xml:lang="en">Editor Contribution</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Contribution"/>
+        <rdfs:comment xml:lang="en">A editor contribution to a work by an agent.</rdfs:comment>
     </owl:Class>
     
 
@@ -3015,6 +3055,16 @@
     
 
 
+    <!-- http://ld4l.org/ontology/bib/NarratorContribution -->
+
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/NarratorContribution">
+        <rdfs:label xml:lang="en">Narrator Contribution</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Contribution"/>
+        <rdfs:comment xml:lang="en">A narrator contribution to a work by an agent.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://ld4l.org/ontology/bib/Nban -->
 
     <owl:Class rdf:about="http://ld4l.org/ontology/bib/Nban">
@@ -3071,6 +3121,16 @@
         <rdfs:label xml:lang="en-us">Notated music</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Work"/>
         <rdfs:comment xml:lang="en-us">Graphic, non-realized representation of a musical work intended to be perceived visually.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ld4l.org/ontology/bib/PerformerContribution -->
+
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/PerformerContribution">
+        <rdfs:label xml:lang="en">Performer Contribution</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Contribution"/>
+        <rdfs:comment xml:lang="en">A performer contribution to a work by an agent.</rdfs:comment>
     </owl:Class>
     
 
@@ -3175,7 +3235,7 @@
 
     <owl:Class rdf:about="http://ld4l.org/ontology/bib/Provision">
         <rdfs:label xml:lang="en">Provision</rdfs:label>
-        <rdfs:comment xml:lang="en">A provision of an instance by a provider agent, e.g. when and where a book was published by a publisher.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A provision of an instance by an agent, e.g. when and where a book was published by a publisher.</rdfs:comment>
     </owl:Class>
     
 
@@ -3186,6 +3246,16 @@
         <rdfs:label xml:lang="en-us">Publisher number</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Identifier"/>
         <rdfs:comment xml:lang="en-us">Number assigned by a publisher that is not one of the specific defined types.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ld4l.org/ontology/bib/PublisherProvision -->
+
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/PublisherProvision">
+        <rdfs:label xml:lang="en">Publisher Provision</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Provision"/>
+        <rdfs:comment xml:lang="en">A publisher provision of an instance by an agent.</rdfs:comment>
     </owl:Class>
     
 
@@ -3680,13 +3750,13 @@
         <rdfs:label xml:lang="en-us">Work</rdfs:label>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ld4l.org/ontology/bib/hasDerivative"/>
+                <owl:onProperty rdf:resource="http://ld4l.org/ontology/bib/derivedFrom"/>
                 <owl:allValuesFrom rdf:resource="&madsrdf;Title"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ld4l.org/ontology/bib/derivedFrom"/>
+                <owl:onProperty rdf:resource="http://ld4l.org/ontology/bib/hasDerivative"/>
                 <owl:allValuesFrom rdf:resource="&madsrdf;Title"/>
             </owl:Restriction>
         </rdfs:subClassOf>
