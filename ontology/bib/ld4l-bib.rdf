@@ -2409,7 +2409,7 @@
     <!-- http://ld4l.org/ontology/bib/AuthorContribution -->
 
     <owl:Class rdf:about="http://ld4l.org/ontology/bib/AuthorContribution">
-        <rdfs:label xml:lang="en">Author Contribution</rdfs:label>
+        <rdfs:label xml:lang="en">Author contribution</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Contribution"/>
         <rdfs:comment xml:lang="en">An author contribution to a work by an agent.</rdfs:comment>
     </owl:Class>
@@ -2507,7 +2507,7 @@
     <!-- http://ld4l.org/ontology/bib/ComposerContribution -->
 
     <owl:Class rdf:about="http://ld4l.org/ontology/bib/ComposerContribution">
-        <rdfs:label xml:lang="en">Composer Contribution</rdfs:label>
+        <rdfs:label xml:lang="en">Composer contribution</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Contribution"/>
         <rdfs:comment xml:lang="en">A composer contribution to a work by an agent.</rdfs:comment>
     </owl:Class>
@@ -2528,7 +2528,7 @@
     <!-- http://ld4l.org/ontology/bib/ConductorContribution -->
 
     <owl:Class rdf:about="http://ld4l.org/ontology/bib/ConductorContribution">
-        <rdfs:label xml:lang="en">Conductor Contribution</rdfs:label>
+        <rdfs:label xml:lang="en">Conductor contribution</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Contribution"/>
         <rdfs:comment xml:lang="en">A musical conductor contribution to a work by an agent.</rdfs:comment>
     </owl:Class>
@@ -2651,12 +2651,27 @@
     <!-- http://ld4l.org/ontology/bib/DistributorProvision -->
 
     <owl:Class rdf:about="http://ld4l.org/ontology/bib/DistributorProvision">
-        <rdfs:label xml:lang="en">Distributor Provision</rdfs:label>
+        <rdfs:label xml:lang="en">Distributor provision</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Provision"/>
         <rdfs:comment xml:lang="en">A distributor provision of an instance by an agent.</rdfs:comment>
     </owl:Class>
     
-
+    <!-- http://ld4l.org/ontology/bib/ProducerProvision -->
+    
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/ProducerProvision">
+        <rdfs:label xml:lang="en">Producer provision</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Provision"/>
+        <rdfs:comment xml:lang="en">A producer provision of an instance by an agent.</rdfs:comment>
+    </owl:Class>
+    
+    <!-- http://ld4l.org/ontology/bib/ManufacturerProvision -->
+    
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/ManufacturerProvision">
+        <rdfs:label xml:lang="en">Manufacturer provision</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Provision"/>
+        <rdfs:comment xml:lang="en">A manufacturer provision of an instance by an agent.</rdfs:comment>
+    </owl:Class>
+    
 
     <!-- http://ld4l.org/ontology/bib/Doi -->
 
@@ -2681,7 +2696,7 @@
     <!-- http://ld4l.org/ontology/bib/EditorContribution -->
 
     <owl:Class rdf:about="http://ld4l.org/ontology/bib/EditorContribution">
-        <rdfs:label xml:lang="en">Editor Contribution</rdfs:label>
+        <rdfs:label xml:lang="en">Editor contribution</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Contribution"/>
         <rdfs:comment xml:lang="en">A editor contribution to a work by an agent.</rdfs:comment>
     </owl:Class>
@@ -3058,7 +3073,7 @@
     <!-- http://ld4l.org/ontology/bib/NarratorContribution -->
 
     <owl:Class rdf:about="http://ld4l.org/ontology/bib/NarratorContribution">
-        <rdfs:label xml:lang="en">Narrator Contribution</rdfs:label>
+        <rdfs:label xml:lang="en">Narrator contribution</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Contribution"/>
         <rdfs:comment xml:lang="en">A narrator contribution to a work by an agent.</rdfs:comment>
     </owl:Class>
@@ -3128,7 +3143,7 @@
     <!-- http://ld4l.org/ontology/bib/PerformerContribution -->
 
     <owl:Class rdf:about="http://ld4l.org/ontology/bib/PerformerContribution">
-        <rdfs:label xml:lang="en">Performer Contribution</rdfs:label>
+        <rdfs:label xml:lang="en">Performer contribution</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Contribution"/>
         <rdfs:comment xml:lang="en">A performer contribution to a work by an agent.</rdfs:comment>
     </owl:Class>
@@ -3253,7 +3268,7 @@
     <!-- http://ld4l.org/ontology/bib/PublisherProvision -->
 
     <owl:Class rdf:about="http://ld4l.org/ontology/bib/PublisherProvision">
-        <rdfs:label xml:lang="en">Publisher Provision</rdfs:label>
+        <rdfs:label xml:lang="en">Publisher provision</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Provision"/>
         <rdfs:comment xml:lang="en">A publisher provision of an instance by an agent.</rdfs:comment>
     </owl:Class>
