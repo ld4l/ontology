@@ -242,6 +242,16 @@
     
 
 
+    <!-- http://ld4l.org/ontology/bib/agent -->
+
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/agent">
+        <rdfs:label xml:lang="en">has agent</rdfs:label>
+        <rdfs:comment xml:lang="en">Agent associated with a resource</rdfs:comment>
+        <rdfs:range rdf:resource="&foaf;Agent"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://ld4l.org/ontology/bib/classifiedAs -->
 
     <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/classifiedAs">
@@ -299,14 +309,6 @@
         <skos:scopeNote xml:lang="en-us">Titles can be derived from other Titles, and Works can be derived from other Works. Property restrictions on Work and Title prevent linking subjects and objects of different types.</skos:scopeNote>
         <owl:inverseOf rdf:resource="http://ld4l.org/ontology/bib/hasDerivative"/>
         <rdfs:subPropertyOf rdf:resource="http://ld4l.org/ontology/bib/succeeds"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://ld4l.org/ontology/bib/Work"/>
-                    <rdf:Description rdf:about="&madsrdf;Title"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -315,6 +317,14 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ld4l.org/ontology/bib/Work"/>
+                    <rdf:Description rdf:about="&madsrdf;Title"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -481,14 +491,6 @@
         <skos:scopeNote xml:lang="en-us">The domain and range restrictions ensure that a Work is related to a Work and a Title to a Title.</skos:scopeNote>
         <rdfs:comment xml:lang="en-us">Work or Title that is derived from this Work or Title.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://ld4l.org/ontology/bib/precedes"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://ld4l.org/ontology/bib/Work"/>
-                    <rdf:Description rdf:about="&madsrdf;Title"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -497,6 +499,14 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ld4l.org/ontology/bib/Work"/>
+                    <rdf:Description rdf:about="&madsrdf;Title"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -1629,16 +1639,6 @@
     
 
 
-    <!-- http://www.w3.org/ns/prov#agent -->
-
-    <owl:ObjectProperty rdf:about="&prov;agent">
-        <rdfs:label xml:lang="en-us">agent</rdfs:label>
-        <rdfs:comment xml:lang="en-us">The prov:agent property references an prov:Agent which influenced a resource. This property applies to an prov:AgentInfluence (the LD4L ontology currently uses only the prov:Attribution subclass of prov:AgentInfluence), which is given by a subproperty of prov:qualifiedInfluence from the influenced prov:Entity, prov:Activity or prov:Agent.</rdfs:comment>
-        <rdfs:range rdf:resource="&prov;Agent"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://www.w3.org/ns/prov#atLocation -->
 
     <owl:ObjectProperty rdf:about="&prov;atLocation">
@@ -2366,13 +2366,6 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
-    <!-- http://www.w3.org/TR/owl-time/TemporalEntity -->
-    
-    <owl:Class rdf:about="http://www.w3.org/TR/owl-time/TemporalEntity">
-        <rdfs:label xml:lang="en-us">Temporal entity</rdfs:label>
-        <rdfs:comment xml:lang="en-us">A temporal instant or interval.</rdfs:comment>
-    </owl:Class>
     
 
 
@@ -2656,22 +2649,7 @@
         <rdfs:comment xml:lang="en">A distributor provision of an instance by an agent.</rdfs:comment>
     </owl:Class>
     
-    <!-- http://ld4l.org/ontology/bib/ProducerProvision -->
-    
-    <owl:Class rdf:about="http://ld4l.org/ontology/bib/ProducerProvision">
-        <rdfs:label xml:lang="en">Producer provision</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Provision"/>
-        <rdfs:comment xml:lang="en">A producer provision of an instance by an agent.</rdfs:comment>
-    </owl:Class>
-    
-    <!-- http://ld4l.org/ontology/bib/ManufacturerProvision -->
-    
-    <owl:Class rdf:about="http://ld4l.org/ontology/bib/ManufacturerProvision">
-        <rdfs:label xml:lang="en">Manufacturer provision</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Provision"/>
-        <rdfs:comment xml:lang="en">A manufacturer provision of an instance by an agent.</rdfs:comment>
-    </owl:Class>
-    
+
 
     <!-- http://ld4l.org/ontology/bib/Doi -->
 
@@ -2983,6 +2961,16 @@
     
 
 
+    <!-- http://ld4l.org/ontology/bib/ManufacturerProvision -->
+
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/ManufacturerProvision">
+        <rdfs:label xml:lang="en">Manufacturer provision</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Provision"/>
+        <rdfs:comment xml:lang="en">A manufacturer provision of an instance by an agent.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://ld4l.org/ontology/bib/Manuscript -->
 
     <owl:Class rdf:about="http://ld4l.org/ontology/bib/Manuscript">
@@ -3187,13 +3175,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&dcterms;isPartOf"/>
-                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+                <owl:allValuesFrom rdf:resource="http://ld4l.org/ontology/bib/Periodical"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&dcterms;isPartOf"/>
-                <owl:allValuesFrom rdf:resource="http://ld4l.org/ontology/bib/Periodical"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <skos:example>Volume 3</skos:example>
@@ -3242,6 +3230,16 @@
         <rdfs:label xml:lang="en-us">Print</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Instance"/>
         <rdfs:comment xml:lang="en-us">A printed resource.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ld4l.org/ontology/bib/ProducerProvision -->
+
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/ProducerProvision">
+        <rdfs:label xml:lang="en">Producer provision</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Provision"/>
+        <rdfs:comment xml:lang="en">A producer provision of an instance by an agent.</rdfs:comment>
     </owl:Class>
     
 
@@ -3533,13 +3531,13 @@
         <rdfs:label xml:lang="en-us">Work</rdfs:label>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ld4l.org/ontology/bib/derivedFrom"/>
+                <owl:onProperty rdf:resource="http://ld4l.org/ontology/bib/hasDerivative"/>
                 <owl:allValuesFrom rdf:resource="http://ld4l.org/ontology/bib/Work"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ld4l.org/ontology/bib/hasDerivative"/>
+                <owl:onProperty rdf:resource="http://ld4l.org/ontology/bib/derivedFrom"/>
                 <owl:allValuesFrom rdf:resource="http://ld4l.org/ontology/bib/Work"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -3765,13 +3763,13 @@
         <rdfs:label xml:lang="en-us">Work</rdfs:label>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ld4l.org/ontology/bib/derivedFrom"/>
+                <owl:onProperty rdf:resource="http://ld4l.org/ontology/bib/hasDerivative"/>
                 <owl:allValuesFrom rdf:resource="&madsrdf;Title"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ld4l.org/ontology/bib/hasDerivative"/>
+                <owl:onProperty rdf:resource="http://ld4l.org/ontology/bib/derivedFrom"/>
                 <owl:allValuesFrom rdf:resource="&madsrdf;Title"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -3854,6 +3852,15 @@
     
 
 
+    <!-- http://www.w3.org/TR/owl-time/TemporalEntity -->
+
+    <owl:Class rdf:about="http://www.w3.org/TR/owl-time/TemporalEntity">
+        <rdfs:label xml:lang="en-us">Temporal entity</rdfs:label>
+        <rdfs:comment xml:lang="en-us">A temporal instant or interval.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3.org/ns/oa#Annotation -->
 
     <owl:Class rdf:about="&oa;Annotation">
@@ -3881,12 +3888,6 @@
         <rdfs:label xml:lang="en-us">Activity</rdfs:label>
         <rdfs:comment xml:lang="en">An activity is something that occurs over a period of time and acts upon or with entities; it may include consuming, processing, transforming, modifying, relocating, using, or generating entities.</rdfs:comment>
     </owl:Class>
-    
-
-
-    <!-- http://www.w3.org/ns/prov#Agent -->
-
-    <owl:Class rdf:about="&prov;Agent"/>
     
 
 
