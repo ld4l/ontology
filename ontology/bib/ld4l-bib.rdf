@@ -1722,14 +1722,6 @@
      -->
 
     
-    <!-- http://vivoweb.org/ontology/core#rank -->
-    
-    <owl:DatatypeProperty rdf:about="http://vivoweb.org/ontology/core#rank">
-        <rdfs:label>rank</rdfs:label>
-        <rdfs:comment>An integer indicating the position of an entity in a list.</rdfs:comment>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-    </owl:DatatypeProperty>
-    
 
 
     <!-- http://ld4l.org/ontology/bib/acquisitionNote -->
