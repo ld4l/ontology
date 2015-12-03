@@ -309,14 +309,6 @@
         <skos:scopeNote xml:lang="en-us">Titles can be derived from other Titles, and Works can be derived from other Works. Property restrictions on Work and Title prevent linking subjects and objects of different types.</skos:scopeNote>
         <owl:inverseOf rdf:resource="http://ld4l.org/ontology/bib/hasDerivative"/>
         <rdfs:subPropertyOf rdf:resource="http://ld4l.org/ontology/bib/succeeds"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://ld4l.org/ontology/bib/Work"/>
-                    <rdf:Description rdf:about="&madsrdf;Title"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -325,6 +317,14 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ld4l.org/ontology/bib/Work"/>
+                    <rdf:Description rdf:about="&madsrdf;Title"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -491,14 +491,6 @@
         <skos:scopeNote xml:lang="en-us">The domain and range restrictions ensure that a Work is related to a Work and a Title to a Title.</skos:scopeNote>
         <rdfs:comment xml:lang="en-us">Work or Title that is derived from this Work or Title.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://ld4l.org/ontology/bib/precedes"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://ld4l.org/ontology/bib/Work"/>
-                    <rdf:Description rdf:about="&madsrdf;Title"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -507,6 +499,14 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ld4l.org/ontology/bib/Work"/>
+                    <rdf:Description rdf:about="&madsrdf;Title"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -3168,6 +3168,12 @@
         <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/FiniteResource"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&dcterms;isPartOf"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&dcterms;hasPart"/>
                 <owl:allValuesFrom rdf:resource="http://ld4l.org/ontology/bib/PeriodicalPart"/>
             </owl:Restriction>
@@ -3176,12 +3182,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&dcterms;isPartOf"/>
                 <owl:allValuesFrom rdf:resource="http://ld4l.org/ontology/bib/Periodical"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&dcterms;isPartOf"/>
-                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <skos:example>Volume 3</skos:example>
@@ -3531,13 +3531,13 @@
         <rdfs:label xml:lang="en-us">Work</rdfs:label>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ld4l.org/ontology/bib/hasDerivative"/>
+                <owl:onProperty rdf:resource="http://ld4l.org/ontology/bib/derivedFrom"/>
                 <owl:allValuesFrom rdf:resource="http://ld4l.org/ontology/bib/Work"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ld4l.org/ontology/bib/derivedFrom"/>
+                <owl:onProperty rdf:resource="http://ld4l.org/ontology/bib/hasDerivative"/>
                 <owl:allValuesFrom rdf:resource="http://ld4l.org/ontology/bib/Work"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -3593,7 +3593,6 @@
 
     <owl:Class rdf:about="http://schema.org/Audience">
         <rdfs:label xml:lang="en-us">Audience</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://schema.org/Intangible"/>
         <skos:editorialNote xml:lang="en-us">Need to locate an appropriate audience vocabulary to create NamedIndividuals of this type.</skos:editorialNote>
         <rdfs:comment xml:lang="en-us">The specific audience or intellectual level for which the content of the resource is considered appropriate.</rdfs:comment>
     </owl:Class>
@@ -3617,12 +3616,6 @@
         <rdfs:subClassOf rdf:resource="&foaf;Organization"/>
         <rdfs:comment xml:lang="en-us">A government agency, department, branch, or other organization.</rdfs:comment>
     </owl:Class>
-    
-
-
-    <!-- http://schema.org/Intangible -->
-
-    <owl:Class rdf:about="http://schema.org/Intangible"/>
     
 
 
@@ -3763,13 +3756,13 @@
         <rdfs:label xml:lang="en-us">Work</rdfs:label>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ld4l.org/ontology/bib/hasDerivative"/>
+                <owl:onProperty rdf:resource="http://ld4l.org/ontology/bib/derivedFrom"/>
                 <owl:allValuesFrom rdf:resource="&madsrdf;Title"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ld4l.org/ontology/bib/derivedFrom"/>
+                <owl:onProperty rdf:resource="http://ld4l.org/ontology/bib/hasDerivative"/>
                 <owl:allValuesFrom rdf:resource="&madsrdf;Title"/>
             </owl:Restriction>
         </rdfs:subClassOf>
