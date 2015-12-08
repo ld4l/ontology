@@ -2278,7 +2278,7 @@
 
     <owl:Class rdf:about="http://ld4l.org/ontology/bib/AuthorContribution">
         <rdfs:label xml:lang="en">Author contribution</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Contribution"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/CreatorContribution"/>
         <rdfs:comment xml:lang="en">An author contribution to a work by an agent.</rdfs:comment>
     </owl:Class>
     
@@ -2376,11 +2376,19 @@
 
     <owl:Class rdf:about="http://ld4l.org/ontology/bib/ComposerContribution">
         <rdfs:label xml:lang="en">Composer contribution</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Contribution"/>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/CreatorContribution"/>
         <rdfs:comment xml:lang="en">A composer contribution to a work by an agent.</rdfs:comment>
     </owl:Class>
     
-
+    <!-- http://ld4l.org/ontology/bib/CreatorContribution -->
+    
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/CreatorContribution">
+        <rdfs:label xml:lang="en">Creator contribution</rdfs:label>
+        <skos:scopeNote>Used when the exact nature of the creative contribution (composer, author, illustrator, etc.) is unknown.</skos:scopeNote>
+        <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Contribution"/>
+        <rdfs:comment xml:lang="en">A creator contribution to a work by an agent.</rdfs:comment>
+    </owl:Class>
+    
 
     <!-- http://ld4l.org/ontology/bib/ConciseTitle -->
 
