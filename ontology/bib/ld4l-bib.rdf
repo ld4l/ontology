@@ -478,14 +478,6 @@
         <skos:scopeNote xml:lang="en-us">The domain and range restrictions ensure that a Work is related to a Work and a Title to a Title.</skos:scopeNote>
         <rdfs:comment xml:lang="en-us">Work or Title that is derived from this Work or Title.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://ld4l.org/ontology/bib/precedes"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://ld4l.org/ontology/bib/Work"/>
-                    <rdf:Description rdf:about="&madsrdf;Title"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -494,6 +486,14 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://ld4l.org/ontology/bib/Work"/>
+                    <rdf:Description rdf:about="&madsrdf;Title"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:ObjectProperty>
     
 
@@ -1464,27 +1464,6 @@
     
 
 
-    <!-- http://www.iana.org/assignments/relation/next -->
-
-    <owl:ObjectProperty rdf:about="&iana;next">
-        <rdfs:label>next</rdfs:label>
-        <skos:example>A MainTitleElement is linked to a SubTitleElement with iana:next.</skos:example>
-        <rdfs:comment>Links an individual in a sequence to the individual that follows it in the sequence.</rdfs:comment>
-        <owl:inverseOf rdf:resource="&iana;prev"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.iana.org/assignments/relation/prev -->
-
-    <owl:ObjectProperty rdf:about="&iana;prev">
-        <rdfs:label>prev</rdfs:label>
-        <skos:example>A SubTitleElement is linked to a MainTitleElement with iana:prev</skos:example>
-        <rdfs:comment>Links an individual in a sequence to the individual that precedes it in the sequence.</rdfs:comment>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://www.loc.gov/mads/rdf/v1#identifiesRWO -->
 
     <owl:ObjectProperty rdf:about="&madsrdf;identifiesRWO">
@@ -1617,14 +1596,6 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-    <!-- http://vivoweb.org/ontology/core#rank -->
-    
-    <owl:DatatypeProperty rdf:about="http://vivoweb.org/ontology/core#rank">
-        <rdfs:label>rank</rdfs:label>
-        <rdfs:comment>An integer indicating the position of an entity in a list.</rdfs:comment>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-    </owl:DatatypeProperty>
     
 
 
@@ -2226,6 +2197,16 @@
     <!-- http://schema.org/deathDate -->
 
     <owl:DatatypeProperty rdf:about="http://schema.org/deathDate"/>
+    
+
+
+    <!-- http://vivoweb.org/ontology/core#rank -->
+
+    <owl:DatatypeProperty rdf:about="&vivo;rank">
+        <rdfs:label>rank</rdfs:label>
+        <rdfs:comment>An integer indicating the position of an entity in a list.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
     
 
 
