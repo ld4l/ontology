@@ -17,7 +17,6 @@
     <!ENTITY rdau "http://rdaregistry.info/Elements/u/" >
     <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
-    <!ENTITY iana "http://www.iana.org/assignments/relation/" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
     <!ENTITY vs "http://www.w3.org/2003/06/sw-vocab-status/ns#" >
 ]>
@@ -31,7 +30,6 @@
      xmlns:cnt="http://www.w3.org/2011/content#"
      xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#"
      xmlns:vann="http://purl.org/vocab/vann/"
-     xmlns:iana="http://www.iana.org/assignments/relation/"
      xmlns:fabio="http://purl.org/spar/fabio/"
      xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
      xmlns:dcterms="http://purl.org/dc/terms/"
@@ -1286,10 +1284,10 @@
     
 
 
-    <!-- http://ld4l.org/ontology/bib/subjectOf -->
+    <!-- http://ld4l.org/ontology/bib/isSubjectOf -->
 
-    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/subjectOf">
-        <rdfs:label xml:lang="en">subject of</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/isSubjectOf">
+        <rdfs:label xml:lang="en">is subject of</rdfs:label>
         <rdfs:comment xml:lang="en">This entity is the topic of another entity.</rdfs:comment>
         <owl:inverseOf rdf:resource="&dcterms;subject"/>
     </owl:ObjectProperty>
