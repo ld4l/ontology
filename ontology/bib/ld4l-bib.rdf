@@ -1286,6 +1286,16 @@
     
 
 
+    <!-- http://ld4l.org/ontology/bib/subjectOf -->
+
+    <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/subjectOf">
+        <rdfs:label xml:lang="en">subject of</rdfs:label>
+        <rdfs:comment xml:lang="en">This entity is the topic of another entity.</rdfs:comment>
+        <owl:inverseOf rdf:resource="&dcterms;subject"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://ld4l.org/ontology/bib/succeeds -->
 
     <owl:ObjectProperty rdf:about="http://ld4l.org/ontology/bib/succeeds">
