@@ -2695,9 +2695,9 @@
     
 
 
-    <!-- http://ld4l.org/ontology/bib/Isbn-10 -->
+    <!-- http://ld4l.org/ontology/bib/Isbn10 -->
 
-    <owl:Class rdf:about="http://ld4l.org/ontology/bib/Isbn-10">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/Isbn10">
         <rdfs:label xml:lang="en-us">ISBN-10</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Isbn"/>
         <rdfs:comment xml:lang="en-us">10 digit version of the International Standard Book Number.</rdfs:comment>
@@ -2705,9 +2705,9 @@
     
 
 
-    <!-- http://ld4l.org/ontology/bib/Isbn-13 -->
+    <!-- http://ld4l.org/ontology/bib/Isbn13 -->
 
-    <owl:Class rdf:about="http://ld4l.org/ontology/bib/Isbn-13">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/Isbn13">
         <rdfs:label xml:lang="en-us">ISBN-13</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Isbn"/>
         <rdfs:comment xml:lang="en-us">13 digit version of the International Standard Book Number.</rdfs:comment>
@@ -2747,7 +2747,7 @@
 
     <!-- http://ld4l.org/ontology/bib/Issn-L -->
 
-    <owl:Class rdf:about="http://ld4l.org/ontology/bib/Issn-L">
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/IssnL">
         <rdfs:label xml:lang="en-us">ISSN-L</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Identifier"/>
         <rdfs:comment xml:lang="en-us">International Standard Serial Number that links together various media versions of a continuing resource.</rdfs:comment>
