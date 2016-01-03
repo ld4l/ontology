@@ -2942,10 +2942,10 @@
     
 
 
-    <!-- http://ld4l.org/ontology/bib/MusicPlate -->
+    <!-- http://ld4l.org/ontology/bib/MusicPlateNumber -->
 
-    <owl:Class rdf:about="http://ld4l.org/ontology/bib/MusicPlate">
-        <rdfs:label xml:lang="en-us">Music plate</rdfs:label>
+    <owl:Class rdf:about="http://ld4l.org/ontology/bib/MusicPlateNumber">
+        <rdfs:label xml:lang="en-us">Music plate number</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://ld4l.org/ontology/bib/Identifier"/>
         <rdfs:comment xml:lang="en-us">Number assigned by a music publisher to a specific music publication.</rdfs:comment>
     </owl:Class>
