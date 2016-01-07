@@ -1900,7 +1900,7 @@
 
     <owl:DatatypeProperty rdf:about="http://bib.ld4l.org/ontology/producesSound">
         <rdfs:label xml:lang="en-us">produces sound</rdfs:label>
-        <rdfs:range rdf:datatype="&xsd;boolean">false</rdfs:range>
+        <rdfs:range rdf:datatype="&xsd;boolean"/>
         <rdfs:comment xml:lang="en-us">Indication of whether the production of sound is an integral part of the resource.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
     </owl:DatatypeProperty>
