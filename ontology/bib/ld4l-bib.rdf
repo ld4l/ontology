@@ -2002,7 +2002,14 @@
     <owl:DatatypeProperty rdf:about="http://bib.ld4l.org/ontology/legacy/formDesignation">
         <rdfs:label xml:lang="en-us">form designation</rdfs:label>
         <rdfs:comment xml:lang="en-us">Class or genre to which a Work or Instance belongs.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bib.ld4l.org/ontology/Work"/>
+                    <rdf:Description rdf:about="http://bib.ld4l.org/ontology/Instance"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
