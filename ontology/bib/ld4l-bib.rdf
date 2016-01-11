@@ -621,12 +621,21 @@
     <!-- http://bib.ld4l.org/ontology/hasMusicKey -->
 
     <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/hasMusicKey">
-        <rdfs:label xml:lang="en-us">music key</rdfs:label>
-        <skos:editorialNote xml:lang="en-us">Need a vocabulary to enumerate music key individuals.</skos:editorialNote>
+        <rdfs:label xml:lang="en-us">has music key</rdfs:label>
+        <skos:editorialNote xml:lang="en-us">Consider replacing with http://purl.org/ontology/mo/key, with range http://purl.org/NET/c4dm/keys.owl#Key.</skos:editorialNote>
+        <skos:editorialNote xml:lang="en-us">Need a vocabulary to enumerate music key individuals. Consider http://motools.sourceforge.net/keys/keys.owl#Key.</skos:editorialNote>
         <rdfs:comment xml:lang="en-us">Pitch and mode for this musical resource.</rdfs:comment>
     </owl:ObjectProperty>
     
-
+    <!-- http://bib.ld4l.org/ontology/hasMusicKey -->
+    
+    <owl:DatatypeProperty rdf:about="http://bib.ld4l.org/ontology/legacy/musicKey">
+        <rdfs:label xml:lang="en-us">music key</rdfs:label>
+        <skos:editorialNote xml:lang="en-us">Keep literal value in legacy property until an appropriate vocabulary has been identified. See comments on http://bib.ld4l.org/ontology/hasMusicKey.</skos:editorialNote>
+        <skos:editorialNote xml:lang="en-us">Need a vocabulary to enumerate music key individuals. Consider http://motools.sourceforge.net/keys/keys.owl#Key.</skos:editorialNote>
+        <rdfs:comment xml:lang="en-us">Pitch and mode for this musical resource.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
 
     <!-- http://bib.ld4l.org/ontology/hasMusicMedium -->
 
