@@ -3471,10 +3471,6 @@
                 <owl:allValuesFrom rdf:resource="http://bib.ld4l.org/ontology/Work"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-<<<<<<< HEAD:bibframe.ld4l/bibframe.ld4l.rdf
-        <vs:term_status>stable</vs:term_status>
-=======
->>>>>>> dev:bib/ontology/ld4l-bib.rdf
         <rdfs:comment xml:lang="en-us">Resource reflecting a conceptual essence of the cataloging resource.</rdfs:comment>
         <vs:term_status>stable</vs:term_status>
     </owl:Class>
