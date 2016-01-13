@@ -1,4 +1,4 @@
-# LD4L Proposed Bibframe Ontology
+# LD4L Proposed Bibliographic Ontology
 
 This bibliographic ontology is based on Rob Sanderson's and LD4L's 
 recommended changes to BIBFRAME to better reflect best practices in the Linked 
