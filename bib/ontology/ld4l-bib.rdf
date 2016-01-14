@@ -627,7 +627,7 @@
         <rdfs:comment xml:lang="en-us">Pitch and mode for this musical resource.</rdfs:comment>
     </owl:ObjectProperty>
     
-    <!-- http://bib.ld4l.org/ontology/hasMusicKey -->
+    <!-- http://bib.ld4l.org/ontology/legacy/musicKey -->
     
     <owl:DatatypeProperty rdf:about="http://bib.ld4l.org/ontology/legacy/musicKey">
         <rdfs:label xml:lang="en-us">music key</rdfs:label>
