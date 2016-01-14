@@ -958,6 +958,7 @@
         <rdfs:comment xml:lang="en-us">Work this Instance instantiates or manifests. For use to connect Instances to Works in the BIBFRAME structure.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
         <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Work"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/hasInstance"/>
     </owl:ObjectProperty>
     
