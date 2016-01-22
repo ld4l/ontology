@@ -61,35 +61,6 @@
      -->
 
     
-
-
-    <!-- http://bib.ld4l.org/ontology/acquisitionNote -->
-
-    <owl:AnnotationProperty rdf:about="http://bib.ld4l.org/ontology/acquisitionNote">
-        <rdfs:label xml:lang="en-us">acquisition note</rdfs:label>
-        <rdfs:comment xml:lang="en-us">Information about the circumstances (e.g., source, date, method) under which the resource was directly acquired.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Item"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bib.ld4l.org/ontology/dissertationNote -->
-
-    <owl:AnnotationProperty rdf:about="http://bib.ld4l.org/ontology/dissertationNote">
-        <rdfs:label xml:lang="en-us">dissertation note</rdfs:label>
-        <skos:editorialNote xml:lang="en-us">Include dissertation note as a literal when it cannot be parsed into dissertationYear, dissertationDegree, etc.</skos:editorialNote>
-        <rdfs:comment xml:lang="en-us">Textual information about the dissertation. A dissertation note differs from a general note in that it includes specific date and year information.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Dissertation"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://bib.ld4l.org/ontology/note -->
-
-    <owl:AnnotationProperty rdf:about="http://bib.ld4l.org/ontology/note">
-        <rdfs:label xml:lang="en-us">note</rdfs:label>
-        <rdfs:comment xml:lang="en-us">General textual information relating to a resource.</rdfs:comment>
-    </owl:AnnotationProperty>
     
 
 
@@ -125,7 +96,6 @@
     <owl:AnnotationProperty rdf:about="&skos;definition">
         <rdfs:label xml:lang="en">definition</rdfs:label>
         <skos:definition xml:lang="en">A statement or formal explanation of the meaning of a concept.</skos:definition>
-        <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/note"/>
         <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
     </owl:AnnotationProperty>
     
