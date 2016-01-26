@@ -1872,6 +1872,7 @@
         <rdfs:comment xml:lang="en-us">Proportional relationship between an image&apos;s width and its height.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/note"/>
     </owl:DatatypeProperty>
     
 
@@ -1895,6 +1896,7 @@
         <rdfs:comment xml:lang="en-us">Color characteristics, e.g. black and white, multicolored, etc.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/note"/>
     </owl:DatatypeProperty>
     
 
@@ -1929,6 +1931,7 @@
         <rdfs:comment xml:lang="en-us">Information about the playing time or duration in an unstructured form, e.g., &quot;2 hours&quot;.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/note"/>
     </owl:DatatypeProperty>
     
 
@@ -1958,6 +1961,7 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/note"/>
     </owl:DatatypeProperty>
     
 
@@ -1968,6 +1972,7 @@
         <rdfs:label xml:lang="en-us">format</rdfs:label>
         <rdfs:comment xml:lang="en-us">File format or physical medium of an instance.</rdfs:comment>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/note"/>
     </owl:DatatypeProperty>
     
 
@@ -1980,6 +1985,7 @@
         <skos:editorialNote xml:lang="en-us">Need a vocabulary to enumerate values.</skos:editorialNote>
         <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/note"/>
     </owl:DatatypeProperty>
     
 
@@ -2026,6 +2032,7 @@
         <rdfs:label xml:lang="en-us">legal date</rdfs:label>
         <rdfs:comment xml:lang="en-us">Date of legal work, or promulgation of a law, or signing of a treaty.</rdfs:comment>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/note"/>
     </owl:DatatypeProperty>
     
 
@@ -2037,6 +2044,7 @@
         <rdfs:comment xml:lang="en-us">Categorization reflecting whether a resource is issued in one or more parts, the way it is updated, and its intended termination.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/note"/>
     </owl:DatatypeProperty>
     
 
@@ -2048,6 +2056,7 @@
         <skos:editorialNote xml:lang="en-us">Keep literal value in legacy property until an appropriate vocabulary has been identified. See comments on http://bib.ld4l.org/ontology/hasMusicKey.</skos:editorialNote>
         <skos:editorialNote xml:lang="en-us">Need a vocabulary to enumerate music key individuals. Consider http://motools.sourceforge.net/keys/keys.owl#Key.</skos:editorialNote>
         <rdfs:comment xml:lang="en-us">Pitch and mode for this musical resource.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/note"/>
     </owl:DatatypeProperty>
     
 
