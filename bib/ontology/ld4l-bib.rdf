@@ -1805,6 +1805,7 @@
         <rdfs:comment xml:lang="en-us">Information about illustrative material in the resource.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/note"/>
     </owl:DatatypeProperty>
     
 
@@ -1857,6 +1858,7 @@
         <rdfs:label xml:lang="en-us">responsibility note</rdfs:label>
         <rdfs:comment xml:lang="en-us">Statement relating to the identification and/or function of any persons, families, or corporate bodies responsible for the creation of, or contributing to the content of a resource.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
+        <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/note" />
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
@@ -1881,6 +1883,7 @@
         <rdfs:comment xml:lang="en-us">Information on awards associated with the described resource.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/note"/>
     </owl:DatatypeProperty>
     
 
@@ -2066,6 +2069,7 @@
         <rdfs:label xml:lang="en-us">notation system</rdfs:label>
         <rdfs:comment xml:lang="en-us">Information on the alphabet, script, or symbol system used to convey the content of the resource, including specialized scripts, typefaces, tactile notation, and musical notation.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
+        <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/note"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
