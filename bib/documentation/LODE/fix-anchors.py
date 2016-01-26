@@ -28,7 +28,8 @@ seen_anchors = set()
 for m in re.findall(r'''<a href="#([0-9a-f]+)" title="([^"]+)"''',html):
     anchor = m[0]
     uri = m[1]
-    # Only want URIs in this ontology or in the http://bib.ld4l.org/ontology/legacy/ namespace
+    # Only want URIs in this namespace or the http://bib.ld4l.org/ontology/legacy/ namespace
+    # Only works assuming no term is in both namespaces, which is true
     lmatch = re.match(prefix+r'''(legacy/)?(\w+)$''', uri)
     if (lmatch):
         term = lmatch.group(2)
