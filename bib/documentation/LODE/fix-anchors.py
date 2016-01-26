@@ -28,13 +28,15 @@ seen_anchors = set()
 for m in re.findall(r'''<a href="#([0-9a-f]+)" title="([^"]+)"''',html):
     anchor = m[0]
     uri = m[1]
-    # Only want URIs in this ontology
-    lmatch = re.match(prefix+r'''(\w+)$''', uri)
+    # Only want URIs in this ontology or in the http://bib.ld4l.org/ontology/legacy/ namespace
+    lmatch = re.match(prefix+r'''(legacy/)?(\w+)$''', uri)
     if (lmatch):
-        term = lmatch.group(1)
-        if (term in terms):
+        term = lmatch.group(2)
+        ns = prefix if (not lmatch.group(1)) else prefix + lmatch.group(1)
+        if (term in terms):            
             if (terms[term] != anchor and anchor not in seen_anchors):
-                print "Ignoring additional anchor %s, already have %s for %s%s" % (anchor, terms[term], prefix, term)
+                ns = prefix if (not lmatch.group(1)) else prefix + lmatch.group(1)
+                print "Ignoring additional anchor %s, already have %s for %s%s" % (anchor, terms[term], ns, term)
                 seen_anchors.add(anchor)
         else:
             terms[term] = anchor
