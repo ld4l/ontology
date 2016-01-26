@@ -41,6 +41,7 @@ for m in re.findall(r'''<a href="#([0-9a-f]+)" title="([^"]+)"''',html):
 
 ## Pass 2 - implement changes
 for term, anchor in terms.items():
+    print "Replacing anchor %s with %s" % (anchor, term)
     html = re.sub(' id="'+anchor+'"',' id="'+term+'"',html)
     html = re.sub(' href="#'+anchor+'"',' href="#'+term+'"',html)
 
