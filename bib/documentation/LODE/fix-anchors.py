@@ -48,4 +48,4 @@ for term, anchor in terms.items():
     html = re.sub(' id="'+anchor+'"',' id="'+term+'"',html)
     html = re.sub(' href="#'+anchor+'"',' href="#'+term+'"',html)
 
-open('ld4l-bib-anchors.html','w').write(html)
+open('ontology.html','w').write(html)
