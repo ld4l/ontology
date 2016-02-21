@@ -13,11 +13,9 @@ ontology.html.
 http://bib.ld4l.org/ontology.rdf
 - Add link to ld4l.org site in first line of abstract:
 This bibliographic ontology is based on Rob Sanderson's and 
-<a href="http://ld4l.org/>LD4L</a>'s recommended changes...
+<a href="http://ld4l.org/">LD4L</a>'s recommended changes...
 
-5. Commit both files to git (though actually only ontology.html is needed).
-ld4l-bib.html
-ontology.html
+5. Commit ontology.html to git.
 
 6. scp ontology.html to the bib.ld4l.org server into the directory
 /libweb/sites/bib.ld4l.org/htdocs. Presumably you will also be copying the 
