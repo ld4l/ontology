@@ -17,6 +17,11 @@ This bibliographic ontology is based on Rob Sanderson's and
 
 5. Commit ontology.html to git.
 
-6. scp ontology.html to the bib.ld4l.org server into the directory
+6a. scp ontology.html to the bib.ld4l.org server into the directory
 /libweb/sites/bib.ld4l.org/htdocs. Presumably you will also be copying the 
 ontology source to /libweb/sites/bib.ld4l.org/htdocs/ontology.rdf.
+
+Or
+
+6b. Check out the ld4l-ontology repository from github and update to get the 
+latest version. Then copy the file to the directory in 6a.
