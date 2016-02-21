@@ -424,6 +424,16 @@
         <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Work"/>
     </owl:ObjectProperty>
     
+    <!-- http://bib.ld4l.org/ontology/contributedTo -->
+    
+    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/contributedTo">
+        <rdfs:label xml:lang="en">contributed to</rdfs:label>
+        <rdfs:comment xml:lang="en">A contribution to a work.</rdfs:comment>
+        <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Work"/>
+        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Contribution"/>
+        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/hasContribution"/>
+    </owl:ObjectProperty>
+    
 
 
     <!-- http://bib.ld4l.org/ontology/hasCoverArt -->
@@ -668,7 +678,15 @@
         <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Provision"/>
     </owl:ObjectProperty>
     
-
+    <!-- http://bib.ld4l.org/ontology/madeAvailable -->
+    
+    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/madeAvailable">
+        <rdfs:label xml:lang="en">made available</rdfs:label>
+        <rdfs:comment xml:lang="en">This provision made the instance available through activity such as publishing, distribution, manufacture, etc.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Provision"/>
+        <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
+        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/hasProvision"/>
+    </owl:ObjectProperty>
 
     <!-- http://bib.ld4l.org/ontology/hasReceipt -->
 
