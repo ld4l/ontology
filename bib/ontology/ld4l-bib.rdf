@@ -1852,7 +1852,16 @@
         <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/note"/>
     </owl:DatatypeProperty>
     
-
+    <!-- http://bib.ld4l.org/ontology/legacy/titleType -->
+    
+    <owl:DatatypeProperty rdf:about="http://bib.ld4l.org/ontology/legacy/titleType">
+        <rdfs:label xml:lang="en-us">title type</rdfs:label>
+        <rdfs:comment xml:lang="en-us">Variant title type.</rdfs:comment>
+        <skos:editorialNote>The Bibframe rdfs:comment on this property is: "Type of title variation, e.g., acronym, cover, spine." These sorts of variants should be handled with subtypes of the Title class. However, in reality the data shows many arbitrary strings that cannot be captured in a class hierarchy, or would require parsing to place them into the class hierarchy, so for the time being they are retained as legacy values.</skos:editorialNote>
+        <skos:example>"Title in pinyin on p. 4 of cover." Should be converted to a CoverTitle, but requires string parsing, and even so would be lossy.</skos:example>
+        <skos:example>"Title also in English, June 1935- :"</skos:example>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
 
     <!-- http://bib.ld4l.org/ontology/legacy/awardNote -->
 
