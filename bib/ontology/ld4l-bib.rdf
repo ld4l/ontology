@@ -3576,9 +3576,11 @@
         <owl:disjointWith rdf:resource="&madsrdf;NonSortElement"/>
         <owl:disjointWith rdf:resource="&madsrdf;PartNameElement"/>
         <owl:disjointWith rdf:resource="&madsrdf;SubTitleElement"/>
+        <owl:disjointWith rdf:resource="&madsrdf;PartNumberElement"/>
         <skos:scopeNote>The MainTitleElement follows (ld4l:follows) a NonSortElement and precedes (ld4l:precedes) any SubTitleElements and PartNumberElements.</skos:scopeNote>
         <skos:editorialNote>Since TitleElements are not re-used, but apply only to a single resource, we can correctly assert disjointness with the other TitleElement types</skos:editorialNote>
         <rdfs:comment xml:lang="en">The main portion of a title.</rdfs:comment>
+        <skos:example>"inland lakes of Wisconsin" in "The inland lakes of Wisconsin. The plankton. I. Its quantity and chemical composition"</skos:example>
         <skos:example xml:lang="en">Title &quot;A Tree Grows in Brooklyn&quot; has NonSortElement with rdfs:label &quot;A &quot; and MainTitleElement with rdfs:label &quot;Tree Grows in Brooklyn&quot;.</skos:example>
     </owl:Class>
     
@@ -3591,9 +3593,11 @@
         <rdfs:subClassOf rdf:resource="&madsrdf;TitleElement"/>
         <owl:disjointWith rdf:resource="&madsrdf;PartNameElement"/>
         <owl:disjointWith rdf:resource="&madsrdf;SubTitleElement"/>
-        <skos:editorialNote>Since TitleElements are not re-used, but apply only to a single resource, we can correctly assert disjointness with the other TitleElement types</skos:editorialNote>
+        <owl:disjointWith rdf:resource="&madsrdf;PartNumberElement"/>
+        <owl:disjointWith rdf:resource="&madsrdf;MainTitleElement"/>
         <skos:scopeNote>The NonSortElement is linked to the MainTitleElement via ld4l:precedes.</skos:scopeNote>
         <rdfs:comment xml:lang="en">The initial portion of a title that is removed for sorting.</rdfs:comment>
+        <skos:example>"The" in "The inland lakes of Wisconsin. The plankton. I. Its quantity and chemical composition"</skos:example>
     </owl:Class>
     
 
@@ -3604,15 +3608,24 @@
         <rdfs:label rdf:datatype="&xsd;string">Part name element</rdfs:label>
         <rdfs:subClassOf rdf:resource="&madsrdf;TitleElement"/>
         <owl:disjointWith rdf:resource="&madsrdf;SubTitleElement"/>
-        <skos:editorialNote>Since TitleElements are not re-used, but apply only to a single resource, we can correctly assert disjointness with the other TitleElement types</skos:editorialNote>
-        <skos:example>III</skos:example>
-        <skos:editorialNote>We do not use madsrdf:PartNumberElement, since so frequently this is not an integer but a string, as in the example.</skos:editorialNote>
-        <skos:scopeNote>A title may have more than one part name element, in which case they are ordered by ld4l:precedes and ld4l:follows. They are also order with respect to any subtitles; the usual case is that all part name elements would follow all subtitles.</skos:scopeNote>
-        <skos:example>Fourth Edition</skos:example>
-        <rdfs:comment xml:lang="en">The portion of a title indicating that it is a part of another work or sequence of works.</rdfs:comment>
-        <skos:example>Volume 2</skos:example>
+        <owl:disjointWith rdf:resource="&madsrdf;PartNumberElement"/>
+        <owl:disjointWith rdf:resource="&madsrdf;NonSortElement"/>
+        <owl:disjointWith rdf:resource="&madsrdf;MainTitleElement"/>
+        <skos:example>"Its quantity and chemical composition" in "The inland lakes of Wisconsin. The plankton. I. Its quantity and chemical composition"</skos:example>
+        <rdfs:comment xml:lang="en">The part name portion of a title indicating that it is a part of another work or sequence of works.</rdfs:comment>
     </owl:Class>
     
+
+    <owl:Class rdf:about="http://www.loc.gov/mads/rdf/v1#PartNumberElement">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Part number element</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&madsrdf;TitleElement"/>
+        <owl:disjointWith rdf:resource="&madsrdf;NonSortElement"/>
+        <owl:disjointWith rdf:resource="&madsrdf;PartNameElement"/>
+        <owl:disjointWith rdf:resource="&madsrdf;SubTitleElement"/>
+        <owl:disjointWith rdf:resource="&madsrdf;MainTitleElement"/>
+        <skos:example>"I" in "The inland lakes of Wisconsin. The plankton. I. Its quantity and chemical composition"</skos:example>
+        <rdfs:comment xml:lang="en">The numeric or semi-numeric portion of a title indicating that it is a part of another work or sequence of works.</rdfs:comment>
+    </owl:Class>
 
 
     <!-- http://www.loc.gov/mads/rdf/v1#RWO -->
@@ -3626,9 +3639,9 @@
     <owl:Class rdf:about="&madsrdf;SubTitleElement">
         <rdfs:label rdf:datatype="&xsd;string">Subtitle element</rdfs:label>
         <rdfs:subClassOf rdf:resource="&madsrdf;TitleElement"/>
-        <skos:editorialNote>Since TitleElements are not re-used, but apply only to a single resource, we can correctly assert disjointness with the other TitleElement types</skos:editorialNote>
         <skos:scopeNote>A title may have more than one subtitle, in which case they are ordered by ld4l:precedes and ld4l:follows. A SubTitleElement is ordered by ld4l:precedes with respect to a following PartNameElement, and by ld4l:follows with respect to the MainTitleElement.</skos:scopeNote>
         <rdfs:comment xml:lang="en">The subtitle portion of a title.</rdfs:comment>
+        <skos:example>"The plankton" in "The inland lakes of Wisconsin. The plankton. I. Its quantity and chemical composition"</skos:example>
     </owl:Class>
     
 
