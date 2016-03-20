@@ -178,7 +178,6 @@
         <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Work"/>
         <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/precedes"/>
     </owl:ObjectProperty>
-    
 
 
     <!-- http://bib.ld4l.org/ontology/accompaniedBy -->
@@ -756,8 +755,7 @@
         <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/accompaniedBy"/>
     </owl:ObjectProperty>
     
-
-
+    
     <!-- http://bib.ld4l.org/ontology/hasTableOfContents -->
 
     <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/hasTableOfContents">
@@ -995,10 +993,10 @@
     
 
 
-    <!-- http://bib.ld4l.org/ontology/isSupplementTo -->
+    <!-- http://bib.ld4l.org/ontology/supplements -->
 
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/isSupplementTo">
-        <rdfs:label xml:lang="en-us">is supplement to</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/supplements">
+        <rdfs:label xml:lang="en-us">supplements</rdfs:label>
         <rdfs:comment xml:lang="en-us">This Work updates or otherwise complements the augmented work.</rdfs:comment>
         <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Work"/>
         <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Work"/>
