@@ -2701,17 +2701,24 @@
     <owl:Class rdf:about="http://bib.ld4l.org/ontology/Iso">
         <rdfs:label xml:lang="en-us">ISO</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Identifier"/>
-        <rdfs:comment xml:lang="en-us">International Organization for Standardization standard number.</rdfs:comment>
+        <rdfs:comment xml:lang="en-us">International Organization for Standardization identifier.</rdfs:comment>
     </owl:Class>
     
-
+    <!-- http://bib.ld4l.org/ontology/Isrc -->
+    
+    <owl:Class rdf:about="http://bib.ld4l.org/ontology/Isrc">
+        <rdfs:label xml:lang="en-us">ISRC</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Identifier"/>
+        <rdfs:comment xml:lang="en-us">International Standard Recording Code.</rdfs:comment>
+    </owl:Class>
+    
 
     <!-- http://bib.ld4l.org/ontology/Issn -->
 
     <owl:Class rdf:about="http://bib.ld4l.org/ontology/Issn">
         <rdfs:label xml:lang="en-us">ISSN</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Identifier"/>
-        <rdfs:comment xml:lang="en-us">International Standard Serial Number identifier.</rdfs:comment>
+        <rdfs:comment xml:lang="en-us">International Standard Serial Number.</rdfs:comment>
     </owl:Class>
     
 
@@ -2741,7 +2748,7 @@
     <owl:Class rdf:about="http://bib.ld4l.org/ontology/Istc">
         <rdfs:label xml:lang="en-us">ISTC</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Identifier"/>
-        <rdfs:comment xml:lang="en-us">International Standard Text code, a numbering system developed to enable the unique identification of textual works.</rdfs:comment>
+        <rdfs:comment xml:lang="en-us">International Standard Text Code, a numbering system developed to enable the unique identification of textual works.</rdfs:comment>
     </owl:Class>
     
 
