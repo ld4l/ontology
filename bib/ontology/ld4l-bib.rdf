@@ -43,8 +43,8 @@
         <rdfs:label xml:lang="en-us">LD4L Proposed Bibliographic Ontology</rdfs:label>
         <dcterms:modified>2016-01-26</dcterms:modified>
         <dcterms:issued>2015-07-23</dcterms:issued>
-        <vann:preferredNamespacePrefix>ld4l</vann:preferredNamespacePrefix>
         <rdfs:comment xml:lang="en-us">This bibliographic ontology is based on Rob Sanderson&apos;s and LD4L&apos;s recommended changes to BIBFRAME to better reflect best practices in the Linked Data domain. It is LD4L’s hope that derivations from BIBFRAME found in this ontology will be folded into the official BIBFRAME namespace. Efforts have been made to consider each class and property, but this ontology is largely untested. LD4L may provide revised/expanded versions in future as we identify new use cases and begin to test the ontology with instance data. The proposed changes include, but are not limited to, incorporation of the following principles and conventions: (1) Reuse stable pre-existing classes and properties from external ontologies rather than declaring new ones within the BIBFRAME namespace. (2) Use URIs rather than strings to identify resources. (3) Replace the bf:Authority classes with Real World Entity classes for people, places, things, etc. (4) Define only one pattern to model one feature of the knowledge domain. (5) Clarify the directionality of properties via naming, definitions, and, where applicable, domain and range constraints, and add inverse properties where appropriate. (6) Name terms consistently and make the distinction between classes, object properties, and datatype properties clear through standard naming conventions. See http://ld4l.org/ontology/ for more on the LD4L Ontology development process.</rdfs:comment>
+        <vann:preferredNamespacePrefix>ld4l</vann:preferredNamespacePrefix>
         <owl:versionInfo xml:lang="en-us">Version 1.0</owl:versionInfo>
     </owl:Ontology>
     
@@ -58,7 +58,6 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
     
 
 
@@ -178,6 +177,7 @@
         <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Work"/>
         <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/precedes"/>
     </owl:ObjectProperty>
+    
 
 
     <!-- http://bib.ld4l.org/ontology/accompaniedBy -->
@@ -234,6 +234,18 @@
         <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Work"/>
         <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Work"/>
         <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/follows"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bib.ld4l.org/ontology/contributedTo -->
+
+    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/contributedTo">
+        <rdfs:label xml:lang="en">contributed to</rdfs:label>
+        <rdfs:comment xml:lang="en">A contribution to a work.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Contribution"/>
+        <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Work"/>
+        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/hasContribution"/>
     </owl:ObjectProperty>
     
 
@@ -419,16 +431,6 @@
         <rdfs:comment xml:lang="en">This work was contributed to through this contribution.</rdfs:comment>
         <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Contribution"/>
         <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Work"/>
-    </owl:ObjectProperty>
-    
-    <!-- http://bib.ld4l.org/ontology/contributedTo -->
-    
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/contributedTo">
-        <rdfs:label xml:lang="en">contributed to</rdfs:label>
-        <rdfs:comment xml:lang="en">A contribution to a work.</rdfs:comment>
-        <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Work"/>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Contribution"/>
-        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/hasContribution"/>
     </owl:ObjectProperty>
     
 
@@ -617,6 +619,8 @@
     <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/hasOriginalVersion">
         <rdfs:label xml:lang="en-us">has original version</rdfs:label>
         <rdfs:comment xml:lang="en-us">Instance is the original version of which this resource is a reproduction.</rdfs:comment>
+        <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Work"/>
+        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Work"/>
         <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/derivedFrom"/>
     </owl:ObjectProperty>
     
@@ -675,15 +679,7 @@
         <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Provision"/>
     </owl:ObjectProperty>
     
-    <!-- http://bib.ld4l.org/ontology/madeAvailable -->
-    
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/madeAvailable">
-        <rdfs:label xml:lang="en">made available</rdfs:label>
-        <rdfs:comment xml:lang="en">This provision made the instance available through activity such as publishing, distribution, manufacture, etc.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Provision"/>
-        <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
-        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/hasProvision"/>
-    </owl:ObjectProperty>
+
 
     <!-- http://bib.ld4l.org/ontology/hasReceipt -->
 
@@ -755,7 +751,8 @@
         <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/accompaniedBy"/>
     </owl:ObjectProperty>
     
-    
+
+
     <!-- http://bib.ld4l.org/ontology/hasTableOfContents -->
 
     <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/hasTableOfContents">
@@ -993,19 +990,6 @@
     
 
 
-    <!-- http://bib.ld4l.org/ontology/supplements -->
-
-    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/supplements">
-        <rdfs:label xml:lang="en-us">supplements</rdfs:label>
-        <rdfs:comment xml:lang="en-us">This Work updates or otherwise complements the augmented work.</rdfs:comment>
-        <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Work"/>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Work"/>
-        <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/accompanies"/>
-        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/hasSupplement"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://bib.ld4l.org/ontology/isTableOfContentsFor -->
 
     <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/isTableOfContentsFor">
@@ -1073,6 +1057,18 @@
         <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
         <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
         <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/accompaniedBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bib.ld4l.org/ontology/madeAvailable -->
+
+    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/madeAvailable">
+        <rdfs:label xml:lang="en">made available</rdfs:label>
+        <rdfs:comment xml:lang="en">This provision made the instance available through activity such as publishing, distribution, manufacture, etc.</rdfs:comment>
+        <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
+        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Provision"/>
+        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/hasProvision"/>
     </owl:ObjectProperty>
     
 
@@ -1313,6 +1309,19 @@
     
 
 
+    <!-- http://bib.ld4l.org/ontology/supplements -->
+
+    <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/supplements">
+        <rdfs:label xml:lang="en-us">supplements</rdfs:label>
+        <rdfs:comment xml:lang="en-us">This Work updates or otherwise complements the augmented work.</rdfs:comment>
+        <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/Work"/>
+        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Work"/>
+        <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/accompanies"/>
+        <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/hasSupplement"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://bib.ld4l.org/ontology/translatedAs -->
 
     <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/translatedAs">
@@ -1392,6 +1401,7 @@
         <rdfs:comment xml:lang="en-us">The topic of the described resource.</rdfs:comment>
     </owl:ObjectProperty>
     
+
 
     <!-- http://schema.org/audience -->
 
@@ -1779,8 +1789,8 @@
         <rdfs:label xml:lang="en-us">illustration note</rdfs:label>
         <rdfs:comment xml:lang="en-us">Information about illustrative material in the resource.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
         <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/note"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
 
@@ -1833,7 +1843,7 @@
         <rdfs:label xml:lang="en-us">responsibility note</rdfs:label>
         <rdfs:comment xml:lang="en-us">Statement relating to the identification and/or function of any persons, families, or corporate bodies responsible for the creation of, or contributing to the content of a resource.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
-        <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/note" />
+        <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/note"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
@@ -1846,20 +1856,11 @@
         <rdfs:label xml:lang="en-us">aspect ratio</rdfs:label>
         <rdfs:comment xml:lang="en-us">Proportional relationship between an image&apos;s width and its height.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
         <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/note"/>
-    </owl:DatatypeProperty>
-    
-    <!-- http://bib.ld4l.org/ontology/legacy/titleType -->
-    
-    <owl:DatatypeProperty rdf:about="http://bib.ld4l.org/ontology/legacy/titleType">
-        <rdfs:label xml:lang="en-us">title type</rdfs:label>
-        <rdfs:comment xml:lang="en-us">Variant title type.</rdfs:comment>
-        <skos:editorialNote>The Bibframe rdfs:comment on this property is: "Type of title variation, e.g., acronym, cover, spine." These sorts of variants should be handled with subtypes of the Title class. However, in reality the data shows many arbitrary strings that cannot be captured in a class hierarchy, or would require parsing to place them into the class hierarchy, so for the time being they are retained as legacy values.</skos:editorialNote>
-        <skos:example>"Title in pinyin on p. 4 of cover." Should be converted to a CoverTitle, but requires string parsing, and even so would be lossy.</skos:example>
-        <skos:example>"Title also in English, June 1935- :"</skos:example>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
+    
+
 
     <!-- http://bib.ld4l.org/ontology/legacy/awardNote -->
 
@@ -1867,8 +1868,8 @@
         <rdfs:label xml:lang="en-us">award note</rdfs:label>
         <rdfs:comment xml:lang="en-us">Information on awards associated with the described resource.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
         <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/note"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
 
@@ -1879,8 +1880,8 @@
         <rdfs:label xml:lang="en-us">color content</rdfs:label>
         <rdfs:comment xml:lang="en-us">Color characteristics, e.g. black and white, multicolored, etc.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
         <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/note"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
 
@@ -1914,8 +1915,8 @@
         <rdfs:label xml:lang="en-us">duration</rdfs:label>
         <rdfs:comment xml:lang="en-us">Information about the playing time or duration in an unstructured form, e.g., &quot;2 hours&quot;.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
         <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/note"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
 
@@ -1936,6 +1937,7 @@
     <owl:DatatypeProperty rdf:about="http://bib.ld4l.org/ontology/legacy/formDesignation">
         <rdfs:label xml:lang="en-us">form designation</rdfs:label>
         <rdfs:comment xml:lang="en-us">Class or genre to which a Work or Instance belongs.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/note"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
         <rdfs:domain>
             <owl:Class>
@@ -1945,7 +1947,6 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/note"/>
     </owl:DatatypeProperty>
     
 
@@ -1955,8 +1956,8 @@
     <owl:DatatypeProperty rdf:about="http://bib.ld4l.org/ontology/legacy/format">
         <rdfs:label xml:lang="en-us">format</rdfs:label>
         <rdfs:comment xml:lang="en-us">File format or physical medium of an instance.</rdfs:comment>
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
         <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/note"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
 
@@ -1968,8 +1969,8 @@
         <rdfs:comment xml:lang="en-us">Format of a musical composition, e.g. full score, condensed score, vocal score, etc.</rdfs:comment>
         <skos:editorialNote xml:lang="en-us">Need a vocabulary to enumerate values.</skos:editorialNote>
         <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
         <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/note"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
 
@@ -2015,8 +2016,8 @@
     <owl:DatatypeProperty rdf:about="http://bib.ld4l.org/ontology/legacy/legalDate">
         <rdfs:label xml:lang="en-us">legal date</rdfs:label>
         <rdfs:comment xml:lang="en-us">Date of legal work, or promulgation of a law, or signing of a treaty.</rdfs:comment>
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
         <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/note"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
 
@@ -2027,8 +2028,8 @@
         <rdfs:label xml:lang="en-us">mode of issuance</rdfs:label>
         <rdfs:comment xml:lang="en-us">Categorization reflecting whether a resource is issued in one or more parts, the way it is updated, and its intended termination.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
-        <rdfs:range rdf:resource="&rdfs;Literal"/>
         <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/note"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
 
@@ -2110,6 +2111,19 @@
         <rdfs:comment xml:lang="en-us">Time period covered by the resource.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Work"/>
         <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/note"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://bib.ld4l.org/ontology/legacy/titleType -->
+
+    <owl:DatatypeProperty rdf:about="http://bib.ld4l.org/ontology/legacy/titleType">
+        <rdfs:label xml:lang="en-us">title type</rdfs:label>
+        <skos:example>&quot;Title in pinyin on p. 4 of cover.&quot; Should be converted to a CoverTitle, but requires string parsing, and even so would be lossy.</skos:example>
+        <skos:example>&quot;Title also in English, June 1935- :&quot;</skos:example>
+        <skos:editorialNote>The Bibframe rdfs:comment on this property is: &quot;Type of title variation, e.g., acronym, cover, spine.&quot; These sorts of variants should be handled with subtypes of the Title class. However, in reality the data shows many arbitrary strings that cannot be captured in a class hierarchy, or would require parsing to place them into the class hierarchy, so for the time being they are retained as legacy values.</skos:editorialNote>
+        <rdfs:comment xml:lang="en-us">Variant title type.</rdfs:comment>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
     
@@ -2702,14 +2716,17 @@
         <rdfs:comment xml:lang="en-us">International Organization for Standardization identifier.</rdfs:comment>
     </owl:Class>
     
+
+
     <!-- http://bib.ld4l.org/ontology/Isrc -->
-    
+
     <owl:Class rdf:about="http://bib.ld4l.org/ontology/Isrc">
         <rdfs:label xml:lang="en-us">ISRC</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://bib.ld4l.org/ontology/Identifier"/>
         <rdfs:comment xml:lang="en-us">International Standard Recording Code.</rdfs:comment>
     </owl:Class>
     
+
 
     <!-- http://bib.ld4l.org/ontology/Issn -->
 
@@ -3065,13 +3082,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&dcterms;isPartOf"/>
-                <owl:allValuesFrom rdf:resource="http://bib.ld4l.org/ontology/Periodical"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&dcterms;isPartOf"/>
-                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+                <owl:allValuesFrom rdf:resource="http://bib.ld4l.org/ontology/Periodical"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <skos:example>The June 1, 2015 issue of The New Yorker</skos:example>
@@ -3580,12 +3597,12 @@
         <rdfs:subClassOf rdf:resource="&madsrdf;TitleElement"/>
         <owl:disjointWith rdf:resource="&madsrdf;NonSortElement"/>
         <owl:disjointWith rdf:resource="&madsrdf;PartNameElement"/>
-        <owl:disjointWith rdf:resource="&madsrdf;SubTitleElement"/>
         <owl:disjointWith rdf:resource="&madsrdf;PartNumberElement"/>
+        <owl:disjointWith rdf:resource="&madsrdf;SubTitleElement"/>
         <skos:scopeNote>The MainTitleElement follows (ld4l:follows) a NonSortElement and precedes (ld4l:precedes) any SubTitleElements and PartNumberElements.</skos:scopeNote>
+        <skos:example>&quot;inland lakes of Wisconsin&quot; in &quot;The inland lakes of Wisconsin. The plankton. I. Its quantity and chemical composition&quot;</skos:example>
         <skos:editorialNote>Since TitleElements are not re-used, but apply only to a single resource, we can correctly assert disjointness with the other TitleElement types</skos:editorialNote>
         <rdfs:comment xml:lang="en">The main portion of a title.</rdfs:comment>
-        <skos:example>"inland lakes of Wisconsin" in "The inland lakes of Wisconsin. The plankton. I. Its quantity and chemical composition"</skos:example>
         <skos:example xml:lang="en">Title &quot;A Tree Grows in Brooklyn&quot; has NonSortElement with rdfs:label &quot;A &quot; and MainTitleElement with rdfs:label &quot;Tree Grows in Brooklyn&quot;.</skos:example>
     </owl:Class>
     
@@ -3597,12 +3614,11 @@
         <rdfs:label rdf:datatype="&xsd;string">Non-sort element</rdfs:label>
         <rdfs:subClassOf rdf:resource="&madsrdf;TitleElement"/>
         <owl:disjointWith rdf:resource="&madsrdf;PartNameElement"/>
-        <owl:disjointWith rdf:resource="&madsrdf;SubTitleElement"/>
         <owl:disjointWith rdf:resource="&madsrdf;PartNumberElement"/>
-        <owl:disjointWith rdf:resource="&madsrdf;MainTitleElement"/>
+        <owl:disjointWith rdf:resource="&madsrdf;SubTitleElement"/>
+        <skos:example>&quot;The&quot; in &quot;The inland lakes of Wisconsin. The plankton. I. Its quantity and chemical composition&quot;</skos:example>
         <skos:scopeNote>The NonSortElement is linked to the MainTitleElement via ld4l:precedes.</skos:scopeNote>
         <rdfs:comment xml:lang="en">The initial portion of a title that is removed for sorting.</rdfs:comment>
-        <skos:example>"The" in "The inland lakes of Wisconsin. The plankton. I. Its quantity and chemical composition"</skos:example>
     </owl:Class>
     
 
@@ -3612,25 +3628,24 @@
     <owl:Class rdf:about="&madsrdf;PartNameElement">
         <rdfs:label rdf:datatype="&xsd;string">Part name element</rdfs:label>
         <rdfs:subClassOf rdf:resource="&madsrdf;TitleElement"/>
-        <owl:disjointWith rdf:resource="&madsrdf;SubTitleElement"/>
         <owl:disjointWith rdf:resource="&madsrdf;PartNumberElement"/>
-        <owl:disjointWith rdf:resource="&madsrdf;NonSortElement"/>
-        <owl:disjointWith rdf:resource="&madsrdf;MainTitleElement"/>
-        <skos:example>"Its quantity and chemical composition" in "The inland lakes of Wisconsin. The plankton. I. Its quantity and chemical composition"</skos:example>
+        <owl:disjointWith rdf:resource="&madsrdf;SubTitleElement"/>
+        <skos:example>&quot;Its quantity and chemical composition&quot; in &quot;The inland lakes of Wisconsin. The plankton. I. Its quantity and chemical composition&quot;</skos:example>
         <rdfs:comment xml:lang="en">The part name portion of a title indicating that it is a part of another work or sequence of works.</rdfs:comment>
     </owl:Class>
     
 
-    <owl:Class rdf:about="http://www.loc.gov/mads/rdf/v1#PartNumberElement">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Part number element</rdfs:label>
+
+    <!-- http://www.loc.gov/mads/rdf/v1#PartNumberElement -->
+
+    <owl:Class rdf:about="&madsrdf;PartNumberElement">
+        <rdfs:label rdf:datatype="&xsd;string">Part number element</rdfs:label>
         <rdfs:subClassOf rdf:resource="&madsrdf;TitleElement"/>
-        <owl:disjointWith rdf:resource="&madsrdf;NonSortElement"/>
-        <owl:disjointWith rdf:resource="&madsrdf;PartNameElement"/>
         <owl:disjointWith rdf:resource="&madsrdf;SubTitleElement"/>
-        <owl:disjointWith rdf:resource="&madsrdf;MainTitleElement"/>
-        <skos:example>"I" in "The inland lakes of Wisconsin. The plankton. I. Its quantity and chemical composition"</skos:example>
+        <skos:example>&quot;I&quot; in &quot;The inland lakes of Wisconsin. The plankton. I. Its quantity and chemical composition&quot;</skos:example>
         <rdfs:comment xml:lang="en">The numeric or semi-numeric portion of a title indicating that it is a part of another work or sequence of works.</rdfs:comment>
     </owl:Class>
+    
 
 
     <!-- http://www.loc.gov/mads/rdf/v1#RWO -->
@@ -3645,8 +3660,8 @@
         <rdfs:label rdf:datatype="&xsd;string">Subtitle element</rdfs:label>
         <rdfs:subClassOf rdf:resource="&madsrdf;TitleElement"/>
         <skos:scopeNote>A title may have more than one subtitle, in which case they are ordered by ld4l:precedes and ld4l:follows. A SubTitleElement is ordered by ld4l:precedes with respect to a following PartNameElement, and by ld4l:follows with respect to the MainTitleElement.</skos:scopeNote>
+        <skos:example>&quot;The plankton&quot; in &quot;The inland lakes of Wisconsin. The plankton. I. Its quantity and chemical composition&quot;</skos:example>
         <rdfs:comment xml:lang="en">The subtitle portion of a title.</rdfs:comment>
-        <skos:example>"The plankton" in "The inland lakes of Wisconsin. The plankton. I. Its quantity and chemical composition"</skos:example>
     </owl:Class>
     
 
