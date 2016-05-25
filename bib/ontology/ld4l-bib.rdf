@@ -2,43 +2,48 @@
 
 
 <!DOCTYPE rdf:RDF [
-    <!ENTITY oa "http://www.w3.org/ns/oa#" >
-    <!ENTITY dcterms "http://purl.org/dc/terms/" >
-    <!ENTITY prov "http://www.w3.org/ns/prov#" >
-    <!ENTITY foaf "http://xmlns.com/foaf/0.1/" >
-    <!ENTITY vann "http://purl.org/vocab/vann/" >
-    <!ENTITY fabio "http://purl.org/spar/fabio/" >
-    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
-    <!ENTITY madsrdf "http://www.loc.gov/mads/rdf/v1#" >
     <!ENTITY cnt "http://www.w3.org/2011/content#" >
     <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
-    <!ENTITY vivo "http://vivoweb.org/ontology/core#" >
-    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
-    <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
-    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY dcterms "http://purl.org/dc/terms/" >
+    <!ENTITY fabio "http://purl.org/spar/fabio/" >
+    <!ENTITY foaf "http://xmlns.com/foaf/0.1/" >                
+    <!ENTITY lingvo "http://www.lingvoj.org/ontology#" >
+    <!ENTITY madsrdf "http://www.loc.gov/mads/rdf/v1#" >
+    <!ENTITY oa "http://www.w3.org/ns/oa#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >   
+    <!ENTITY prov "http://www.w3.org/ns/prov#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY schema "http://schema.org" >
+    <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >    
+    <!ENTITY vann "http://purl.org/vocab/vann/" >
+    <!ENTITY vivo "http://vivoweb.org/ontology/core#" >
     <!ENTITY vs "http://www.w3.org/2003/06/sw-vocab-status/ns#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
 ]>
 
 
 <rdf:RDF xmlns="http://bib.ld4l.org/ontology/"
      xml:base="http://bib.ld4l.org/ontology/"
-     xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:prov="http://www.w3.org/ns/prov#"
-     xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:cnt="http://www.w3.org/2011/content#"
-     xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#"
-     xmlns:vann="http://purl.org/vocab/vann/"
-     xmlns:fabio="http://purl.org/spar/fabio/"
-     xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:dcterms="http://purl.org/dc/terms/"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:fabio="http://purl.org/spar/fabio/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:lingvo="http://www.lingvoj.org/ontology#"
+     xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#"
      xmlns:oa="http://www.w3.org/ns/oa#"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"     
+     xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:schema="http://schema.org"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:vivo="http://vivoweb.org/ontology/core#">
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:vivo="http://vivoweb.org/ontology/core#"
+     xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#" >
+
     <owl:Ontology rdf:about="http://bib.ld4l.org/ontology/">
         <rdfs:label xml:lang="en-us">LD4L Proposed Bibliographic Ontology</rdfs:label>
         <dcterms:modified>2016-01-26</dcterms:modified>
