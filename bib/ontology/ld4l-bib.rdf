@@ -14,7 +14,7 @@
     <!ENTITY prov "http://www.w3.org/ns/prov#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
-    <!ENTITY schema "http://schema.org" >
+    <!ENTITY schema "http://schema.org/" >
     <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >    
     <!ENTITY vann "http://purl.org/vocab/vann/" >
     <!ENTITY vivo "http://vivoweb.org/ontology/core#" >
@@ -37,7 +37,7 @@
      xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:schema="http://schema.org"
+     xmlns:schema="http://schema.org/"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:vivo="http://vivoweb.org/ontology/core#"
