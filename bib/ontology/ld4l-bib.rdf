@@ -258,7 +258,7 @@
     <!-- http://bib.ld4l.org/ontology/createdForDegree -->
 
     <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/createdForDegree">
-        <rdfs:label xml:lang="en-us">dissertation degree</rdfs:label>
+        <rdfs:label xml:lang="en-us">created for degree</rdfs:label>
         <rdfs:comment xml:lang="en-us">This work was created in partial fulfillment of the requirements of the specified degree.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Work"/>
         <rdfs:range rdf:resource="&vivo;AcademicDegree"/>
