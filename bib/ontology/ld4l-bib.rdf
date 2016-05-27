@@ -1854,7 +1854,7 @@
     <owl:DatatypeProperty rdf:about="http://bib.ld4l.org/ontology/responsibilityNote">
         <rdfs:label xml:lang="en-us">responsibility note</rdfs:label>
         <rdfs:comment xml:lang="en-us">Statement relating to the identification and/or function of any persons, families, or corporate bodies responsible for the creation of, or contributing to the content of a resource.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
+        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Work"/>
         <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/note"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
