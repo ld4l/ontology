@@ -1793,7 +1793,14 @@
     <owl:DatatypeProperty rdf:about="http://bib.ld4l.org/ontology/illustrationNote">
         <rdfs:label xml:lang="en-us">illustration note</rdfs:label>
         <rdfs:comment xml:lang="en-us">Information about illustrative material in the resource.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bib.ld4l.org/ontology/Instance" />
+                    <rdf:Description rdf:about="http://bib.ld4l.org/ontology/Work" />
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/note"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
