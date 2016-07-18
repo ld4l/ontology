@@ -1816,6 +1816,12 @@
     </owl:DatatypeProperty>
     
 
+    <!-- http://xmlns.com/foaf/0.1/name -->
+    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/name">
+        <rdfs:label xml:lang="en-us">name</rdfs:label>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>  
+    
 
     <!-- http://bib.ld4l.org/ontology/note -->
 
