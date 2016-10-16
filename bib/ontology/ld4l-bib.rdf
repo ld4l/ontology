@@ -723,6 +723,7 @@
         <rdfs:label>has source status</rdfs:label>
         <skos:scopeNote>Applies to Titles, but could apply to other resources as well.</skos:scopeNote>
         <rdfs:comment>The source status (either supplied or transcribed) of this resource.</rdfs:comment>
+        <skos:editorialNote>Are there values other than supplied or transcribed? If not, we can limit the class membership using owl:oneOf.</skos:editorialNote>
         <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/SourceStatus"/>
         <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/isSourceStatusOf"/>
     </owl:ObjectProperty>
@@ -3249,7 +3250,6 @@
     <owl:Class rdf:about="http://bib.ld4l.org/ontology/SourceStatus">
         <rdfs:label>Source status</rdfs:label>
         <rdfs:subClassOf rdf:resource="&skos;Concept"/>
-        <skos:editorialNote>Are there values other than supplied or transcribed? If not, we can limit the class membership using owl:oneOf.</skos:editorialNote>
         <rdfs:comment>The source of information, such as supplied by the cataloger or transcribed from the item. It is related to the resource it describes via the property ld4l:hasSourceStatus and its inverse.</rdfs:comment>
     </owl:Class>
     
