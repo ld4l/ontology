@@ -2,50 +2,57 @@
 
 
 <!DOCTYPE rdf:RDF [
-    <!ENTITY oa "http://www.w3.org/ns/oa#" >
-    <!ENTITY dcterms "http://purl.org/dc/terms/" >
-    <!ENTITY prov "http://www.w3.org/ns/prov#" >
-    <!ENTITY foaf "http://xmlns.com/foaf/0.1/" >
-    <!ENTITY vann "http://purl.org/vocab/vann/" >
-    <!ENTITY fabio "http://purl.org/spar/fabio/" >
-    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
-    <!ENTITY madsrdf "http://www.loc.gov/mads/rdf/v1#" >
     <!ENTITY cnt "http://www.w3.org/2011/content#" >
     <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
-    <!ENTITY vivo "http://vivoweb.org/ontology/core#" >
-    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
-    <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
-    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY dcterms "http://purl.org/dc/terms/" >
+    <!ENTITY fabio "http://purl.org/spar/fabio/" >
+    <!ENTITY foaf "http://xmlns.com/foaf/0.1/" >                
+    <!ENTITY lingvo "http://www.lingvoj.org/ontology#" >
+    <!ENTITY madsrdf "http://www.loc.gov/mads/rdf/v1#" >
+    <!ENTITY oa "http://www.w3.org/ns/oa#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >   
+    <!ENTITY prov "http://www.w3.org/ns/prov#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY schema "http://schema.org/" >
+    <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >    
+    <!ENTITY vann "http://purl.org/vocab/vann/" >
+    <!ENTITY vivo "http://vivoweb.org/ontology/core#" >
     <!ENTITY vs "http://www.w3.org/2003/06/sw-vocab-status/ns#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
 ]>
 
 
 <rdf:RDF xmlns="http://bib.ld4l.org/ontology/"
      xml:base="http://bib.ld4l.org/ontology/"
-     xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:prov="http://www.w3.org/ns/prov#"
-     xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:cnt="http://www.w3.org/2011/content#"
-     xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#"
-     xmlns:vann="http://purl.org/vocab/vann/"
-     xmlns:fabio="http://purl.org/spar/fabio/"
-     xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:dcterms="http://purl.org/dc/terms/"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:fabio="http://purl.org/spar/fabio/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:lingvo="http://www.lingvoj.org/ontology#"
+     xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#"
      xmlns:oa="http://www.w3.org/ns/oa#"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"     
+     xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:schema="http://schema.org/"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:vivo="http://vivoweb.org/ontology/core#">
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:vivo="http://vivoweb.org/ontology/core#"
+     xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#" >
+
     <owl:Ontology rdf:about="http://bib.ld4l.org/ontology/">
         <rdfs:label xml:lang="en-us">LD4L Proposed Bibliographic Ontology</rdfs:label>
-        <dcterms:modified>2016-01-26</dcterms:modified>
+        <dcterms:modified>2015-11-28</dcterms:modified>
         <dcterms:issued>2015-07-23</dcterms:issued>
+        <skos:note xml:lang="en">PLEASE NOTE: This ontology was developed during the LD4L 2014-2016 project and is now deprecated. Please refer to http://bibliotek-o.org for the ontology developed jointly by the LD4L Labs and LD4P 2016-2018 projects.</skos:note>  
         <rdfs:comment xml:lang="en-us">This bibliographic ontology is based on Rob Sanderson&apos;s and LD4L&apos;s recommended changes to BIBFRAME to better reflect best practices in the Linked Data domain. It is LD4L’s hope that derivations from BIBFRAME found in this ontology will be folded into the official BIBFRAME namespace. Efforts have been made to consider each class and property, but this ontology is largely untested. LD4L may provide revised/expanded versions in future as we identify new use cases and begin to test the ontology with instance data. The proposed changes include, but are not limited to, incorporation of the following principles and conventions: (1) Reuse stable pre-existing classes and properties from external ontologies rather than declaring new ones within the BIBFRAME namespace. (2) Use URIs rather than strings to identify resources. (3) Replace the bf:Authority classes with Real World Entity classes for people, places, things, etc. (4) Define only one pattern to model one feature of the knowledge domain. (5) Clarify the directionality of properties via naming, definitions, and, where applicable, domain and range constraints, and add inverse properties where appropriate. (6) Name terms consistently and make the distinction between classes, object properties, and datatype properties clear through standard naming conventions. See http://ld4l.org/ontology/ for more on the LD4L Ontology development process.</rdfs:comment>
         <vann:preferredNamespacePrefix>ld4l</vann:preferredNamespacePrefix>
         <owl:versionInfo xml:lang="en-us">Version 1.0</owl:versionInfo>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Ontology>
     
 
@@ -137,23 +144,6 @@
         <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
         <rdfs:subPropertyOf rdf:resource="&skos;note"/>
     </owl:AnnotationProperty>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Datatypes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://bib.ld4l.org/ontology/&amp;xsd;boolean -->
-
-    <rdfs:Datatype rdf:about="http://bib.ld4l.org/ontology/&amp;xsd;boolean"/>
     
 
 
@@ -253,7 +243,7 @@
     <!-- http://bib.ld4l.org/ontology/createdForDegree -->
 
     <owl:ObjectProperty rdf:about="http://bib.ld4l.org/ontology/createdForDegree">
-        <rdfs:label xml:lang="en-us">dissertation degree</rdfs:label>
+        <rdfs:label xml:lang="en-us">created for degree</rdfs:label>
         <rdfs:comment xml:lang="en-us">This work was created in partial fulfillment of the requirements of the specified degree.</rdfs:comment>
         <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Work"/>
         <rdfs:range rdf:resource="&vivo;AcademicDegree"/>
@@ -735,6 +725,7 @@
         <rdfs:label>has source status</rdfs:label>
         <skos:scopeNote>Applies to Titles, but could apply to other resources as well.</skos:scopeNote>
         <rdfs:comment>The source status (either supplied or transcribed) of this resource.</rdfs:comment>
+        <skos:editorialNote>Are there values other than supplied or transcribed? If not, we can limit the class membership using owl:oneOf.</skos:editorialNote>
         <rdfs:range rdf:resource="http://bib.ld4l.org/ontology/SourceStatus"/>
         <owl:inverseOf rdf:resource="http://bib.ld4l.org/ontology/isSourceStatusOf"/>
     </owl:ObjectProperty>
@@ -1788,7 +1779,14 @@
     <owl:DatatypeProperty rdf:about="http://bib.ld4l.org/ontology/illustrationNote">
         <rdfs:label xml:lang="en-us">illustration note</rdfs:label>
         <rdfs:comment xml:lang="en-us">Information about illustrative material in the resource.</rdfs:comment>
-        <rdfs:domain rdf:resource="http://bib.ld4l.org/ontology/Instance"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://bib.ld4l.org/ontology/Instance" />
+                    <rdf:Description rdf:about="http://bib.ld4l.org/ontology/Work" />
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:subPropertyOf rdf:resource="http://bib.ld4l.org/ontology/note"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
     </owl:DatatypeProperty>
@@ -1804,6 +1802,12 @@
     </owl:DatatypeProperty>
     
 
+    <!-- http://xmlns.com/foaf/0.1/name -->
+    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/name">
+        <rdfs:label xml:lang="en-us">name</rdfs:label>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>  
+    
 
     <!-- http://bib.ld4l.org/ontology/note -->
 
@@ -3248,7 +3252,6 @@
     <owl:Class rdf:about="http://bib.ld4l.org/ontology/SourceStatus">
         <rdfs:label>Source status</rdfs:label>
         <rdfs:subClassOf rdf:resource="&skos;Concept"/>
-        <skos:editorialNote>Are there values other than supplied or transcribed? If not, we can limit the class membership using owl:oneOf.</skos:editorialNote>
         <rdfs:comment>The source of information, such as supplied by the cataloger or transcribed from the item. It is related to the resource it describes via the property ld4l:hasSourceStatus and its inverse.</rdfs:comment>
     </owl:Class>
     

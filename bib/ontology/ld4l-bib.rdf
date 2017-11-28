@@ -46,11 +46,13 @@
 
     <owl:Ontology rdf:about="http://bib.ld4l.org/ontology/">
         <rdfs:label xml:lang="en-us">LD4L Proposed Bibliographic Ontology</rdfs:label>
-        <dcterms:modified>2016-05-25</dcterms:modified>
+        <dcterms:modified>2015-11-28</dcterms:modified>
         <dcterms:issued>2015-07-23</dcterms:issued>
+        <skos:note xml:lang="en">PLEASE NOTE: This ontology was developed during the LD4L 2014-2016 project and is now deprecated. Please refer to http://bibliotek-o.org for the ontology developed jointly by the LD4L Labs and LD4P 2016-2018 projects.</skos:note>  
         <rdfs:comment xml:lang="en-us">This bibliographic ontology is based on Rob Sanderson&apos;s and LD4L&apos;s recommended changes to BIBFRAME to better reflect best practices in the Linked Data domain. It is LD4L’s hope that derivations from BIBFRAME found in this ontology will be folded into the official BIBFRAME namespace. Efforts have been made to consider each class and property, but this ontology is largely untested. LD4L may provide revised/expanded versions in future as we identify new use cases and begin to test the ontology with instance data. The proposed changes include, but are not limited to, incorporation of the following principles and conventions: (1) Reuse stable pre-existing classes and properties from external ontologies rather than declaring new ones within the BIBFRAME namespace. (2) Use URIs rather than strings to identify resources. (3) Replace the bf:Authority classes with Real World Entity classes for people, places, things, etc. (4) Define only one pattern to model one feature of the knowledge domain. (5) Clarify the directionality of properties via naming, definitions, and, where applicable, domain and range constraints, and add inverse properties where appropriate. (6) Name terms consistently and make the distinction between classes, object properties, and datatype properties clear through standard naming conventions. See http://ld4l.org/ontology/ for more on the LD4L Ontology development process.</rdfs:comment>
         <vann:preferredNamespacePrefix>ld4l</vann:preferredNamespacePrefix>
         <owl:versionInfo xml:lang="en-us">Version 1.0</owl:versionInfo>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Ontology>
     
 
