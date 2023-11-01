@@ -28,3 +28,8 @@ properties, and datatype properties clear through standard naming conventions.
 
 Documentation of the ontology is provided in 
 documentation/LODE/bibframe.ld4l.lode.html.
+
+## Status
+
+* 2015-07-23 - This ontology was developed during the LD4L 2014-2016 project and is now **deprecated**.
+* 2023-11-01 - Archiving this repository and discontinuing support for redirects from `http://bib.ld4l.org/`
